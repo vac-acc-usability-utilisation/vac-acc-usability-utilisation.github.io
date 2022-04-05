@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 mva front-end
 
 ### Prototypes: 
@@ -7,3 +8,6 @@ mva front-end
 *  [MVA home page (dashboard) SOURCE CODE](public/mva/home-en.html)
 
 *  [MVA home page (dashboard) MARK-UP DOC](docs/home-tiles.md)
+=======
+mva front-end
+>>>>>>> master

@@ -10829,14 +10829,12 @@ Miscellaneous Utiliy CSS
   width: 100%; }
 
 #wb-bnr {
-  background-color: #f5f5f5;
-  /*
   background: #114f7a;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#ccc));
-  background: linear-gradient(#f9f9f9, #ccc); */}
+  background: -webkit-gradient(linear, left top, left bottom, from(#176ca7), to(#114f7a));
+  background: linear-gradient(#176ca7, #114f7a); }
 
 #wb-bar {
-  background: #f9f9f9;
+  background: #474747;
   border-bottom: 1px solid #fff;
   color: #fff;
   min-height: 2.2em;
@@ -10866,8 +10864,8 @@ Miscellaneous Utiliy CSS
       border-left: 0; }
   #wb-lng ul a,
   #wb-glb-mn .pnl-btn a {
-    color: #1c578a;
-    text-decoration: underline; }
+    color: #fff;
+    text-decoration: none; }
 
 #wb-glb-mn .pnl-btn {
   position: relative;
@@ -10886,11 +10884,11 @@ Miscellaneous Utiliy CSS
     top: 0; }
 
 #wb-sttl a {
-  color: #0b3048;
-  text-decoration: none; }
-
-#wb-sttl a:hover, #wb-sttl a:focus {
-  color: #1c578a; }
+  color: #fff;
+  font-size: 1.9em;
+  line-height: normal;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #333; }
 
 #wb-sttl small {
   display: block;
