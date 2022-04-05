@@ -10970,7 +10970,6 @@ MVA Home page / dashboard
 
 #mva-dashboard summary p {
   margin: 0 16px 16px;
-
 }
 
 #mva-dashboard .cardsRow {
@@ -10984,7 +10983,7 @@ MVA Home page / dashboard
   padding-bottom: 0;
 }
 
-#mva-dashboard ul.list-group {
+#mva-dashboard ul.list-group, #mva-dashboard div.list-group, #mva-dashboard details[open] > summary {
   margin-bottom: 0;
 }
 
