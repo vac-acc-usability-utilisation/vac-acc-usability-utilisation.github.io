@@ -10954,7 +10954,6 @@ main {
 /*
 MVA Home page / dashboard 
 */
-#mva-dashboard h1,
 #mva-dashboard h2 {
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
@@ -10975,6 +10974,7 @@ MVA Home page / dashboard
 }
 
 #mva-dashboard .cardsRow {
+  margin-top: 18px;
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
