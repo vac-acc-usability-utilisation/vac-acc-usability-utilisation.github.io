@@ -160,7 +160,7 @@ html {
   -webkit-text-size-adjust: 100%; }
 
 body {
-  margin: 0; }
+  margin: 0;  }
 
 article,
 aside,
@@ -5413,6 +5413,7 @@ a.label:hover, a.label:focus {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
+  margin-left: 3px;
   font-size: 14px;
   font-weight: bold;
   line-height: 1;
@@ -6928,6 +6929,10 @@ button.close {
     background: #fff;
     padding: 1em 0 0; }
 
+    span.wb-so-uname {
+      font-weight:bold;
+    }
+
 /*
  Plugins
  */
@@ -7762,8 +7767,9 @@ body.wb-modal .modal-dialog summary {
  * Menu Sass
  */
 .expicon {
-  font-size: .7em;
-  margin: 0 -.35em 0 .7em; }
+  font-size: .6em;
+  margin: 0 -.35em 0 .5em; 
+  }
 
 .wb-menu .sm {
   display: none;
@@ -7793,7 +7799,7 @@ body.wb-modal .modal-dialog summary {
     padding: 0; }
     .wb-menu .menu > li a {
       display: block;
-      padding: 1em;
+      padding: 1em 0.9em;
       text-align: center; }
       .wb-menu .menu > li a[aria-haspopup]:hover, .wb-menu .menu > li a[aria-haspopup]:focus {
         cursor: default; }
@@ -8450,7 +8456,7 @@ ol.linenums {
 .provisional.wb-steps {
   counter-reset: fieldset_counter; }
   .provisional.wb-steps .wb-tggle-fildst > legend:before {
-    content: counter(fieldset_counter) ". ";
+    content: counter(fieldset_counter) ". ";
     counter-increment: fieldset_counter; }
   .provisional.wb-steps .wb-tggle-fildst > legend.wb-steps-active {
     color: #1c578a; }
@@ -10829,12 +10835,14 @@ Miscellaneous Utiliy CSS
   width: 100%; }
 
 #wb-bnr {
+  background-color: #f5f5f5;
+  /*
   background: #114f7a;
-  background: -webkit-gradient(linear, left top, left bottom, from(#176ca7), to(#114f7a));
-  background: linear-gradient(#176ca7, #114f7a); }
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#ccc));
+  background: linear-gradient(#f9f9f9, #ccc); */}
 
 #wb-bar {
-  background: #474747;
+  background: #f9f9f9;
   border-bottom: 1px solid #fff;
   color: #fff;
   min-height: 2.2em;
@@ -10864,8 +10872,8 @@ Miscellaneous Utiliy CSS
       border-left: 0; }
   #wb-lng ul a,
   #wb-glb-mn .pnl-btn a {
-    color: #fff;
-    text-decoration: none; }
+    color: #1c578a;
+    text-decoration: underline; }
 
 #wb-glb-mn .pnl-btn {
   position: relative;
@@ -10884,11 +10892,11 @@ Miscellaneous Utiliy CSS
     top: 0; }
 
 #wb-sttl a {
-  color: #fff;
-  font-size: 1.9em;
-  line-height: normal;
-  text-decoration: none;
-  text-shadow: 1px 1px 1px #333; }
+  color: #0b3048;
+  text-decoration: none; }
+
+#wb-sttl a:hover, #wb-sttl a:focus {
+  color: #1c578a; }
 
 #wb-sttl small {
   display: block;
@@ -10935,8 +10943,9 @@ language-bar
   margin: 5px 0;
   text-align: right; }
 
-#wb-lng .curr { display: block; } 
-/* removed background sprite used */
+#wb-lng .curr {  
+  
+  display: block; }
 
 /*
  Main Element
@@ -10950,8 +10959,9 @@ main {
   padding-bottom: 5px; }
 
 /*
-MVA Home page / dashboard 
+ Dashboard navigation element
 */
+#mva-dashboard h1,
 #mva-dashboard h2 {
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
@@ -10968,10 +10978,10 @@ MVA Home page / dashboard
 
 #mva-dashboard summary p {
   margin: 0 16px 16px;
+
 }
 
 #mva-dashboard .cardsRow {
-  margin-top: 18px;
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
@@ -10981,7 +10991,7 @@ MVA Home page / dashboard
   padding-bottom: 0;
 }
 
-#mva-dashboard ul.list-group, #mva-dashboard div.list-group, #mva-dashboard details[open] > summary {
+#mva-dashboard ul.list-group {
   margin-bottom: 0;
 }
 
