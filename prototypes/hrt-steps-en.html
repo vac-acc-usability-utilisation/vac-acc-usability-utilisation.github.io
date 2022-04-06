@@ -111,9 +111,10 @@
 						<fieldset class="subfields col-xs-12">
 							<legend><span class="field-name">Did you attend more than one appointment?</span></legend>
 							<div class="radio">
-								<label for="multi-appt-yes"><input type="radio" class="revealNextFieldset" name="multi-appt" value="multi-appt-yes" id="multi-appt-yes">&#160;Yes</label>&#160;
-								<label for="multi-appt-no"><input type="radio" class="revealNextFieldset" name="multi-appt" value="multi-appt-no" id="multi-appt-no"
-									 checked>&#160;No</label>&#160;
+								<label for="multi-appt-yes"><input type="radio" class="revealNextFieldset" name="multi-appt" value="multi-appt-yes"
+									 id="multi-appt-yes">&#160;Yes</label>&#160;
+								<label for="multi-appt-no"><input type="radio" class="revealNextFieldset" name="multi-appt" value="multi-appt-no"
+									 id="multi-appt-no" checked>&#160;No</label>&#160;
 							</div>
 						</fieldset>
 						<fieldset class="subfields col-xs-12 hidden">
@@ -136,8 +137,8 @@
 							<div class="radio">
 								<label for="transportation-expenses-yes"><input type="radio" name="transportation-expenses" value="transportation-expenses-yes"
 									 id="transportation-expenses-yes" checked>&#160;Yes</label>&#160;
-								<label for="transportation-expenses-no" class="revealNextFieldset"><input type="radio" name="transportation-expenses" value="transportation-expenses-no"
-									 id="transportation-expenses-no" class="revealNextFieldset">&#160;No</label>&#160;
+								<label for="transportation-expenses-no" class="revealNextFieldset"><input type="radio" name="transportation-expenses"
+									 value="transportation-expenses-no" id="transportation-expenses-no" class="revealNextFieldset">&#160;No</label>&#160;
 							</div>
 						</fieldset>
 						<fieldset id="meals" class="subfields col-xs-12">
@@ -174,22 +175,90 @@
 						</fieldset>
 					</div>
 				</fieldset>
-				<fieldset id="contact">
-					<legend>Contact Information</legend>
+				<fieldset id="hp-details">
+					<legend>Health-professional details</legend>
 					<div>
 						<div class="form-group">
-							<label for="preferredNumber" class="required">Preferred: <span class="field-name">Phone Number</span></label>
-							<input class="form-control" id="preferredNumber" name="preferredNumber" type="tel" data-rule-phoneus="true"
-							 required="required">
+							<p>prev saved hp</p>
 						</div>
-						<div class="form-group">
-							<label for="secondaryNumber">Secondary: <span class="field-name">Phone Number</span></label>
-							<input class="form-control" id="secondaryNumber" name="secondaryNumber" type="tel" data-rule-phoneus="true">
-						</div>
-						<div class="form-group">
-							<label for="email"><span class="field-name">Email Address</span> (test@domain)</label>
-							<input class="form-control" id="email" name="email" type="email">
-						</div>
+						<fieldset id="hp-contact" class="subfields col-xs-12">
+							<legend>
+								Health professional contact information
+							</legend>
+
+							<div class="form-group">
+								<!-- name -->
+								<label for="hp-name" class="required"><span class="field-name">Name</span> <strong class="required">(required)</strong></label>
+								<input class="form-control" id="hp-name" name="hp-name" type="text" autocomplete="name" data-rule-required="true"
+								 data-rule-letterswithbasicpunc="true" data-rule-rangelength="[2,35]" />
+							</div>
+							<div class="form-group">
+								<!-- orgnization name -->
+								<label for="hp-organization"><span class="field-name">Clinic or practice name</span></label>
+								<input class="form-control" id="hp-organization" name="hp-organization" type="text" autocomplete="organization"
+								 data-rule-rangelength="[1,50]" />
+							</div>
+							<div class="form-group">
+								<!-- tel number -->
+								<label for="hp-tel" class="required"><span class="field-name">Phone Number (including area code)</span> <strong
+									 class="required">(required)</strong></label>
+								<input class="form-control" id="hp-tel" name="hp-tel" type="tel" autocomplete="tel-national" data-rule-phoneus="true"
+								 data-rule-required="true">
+							</div>
+							<div class="form-group">
+								<!-- street name -->
+								<label for="hp-street" class="required"><span class="field-name">Street address</span> <strong class="required">(required)</strong></label>
+								<input class="form-control" id="hp-street" name="hp-street" type="text" autocomplete="address-line1"
+								 data-rule-required="true" data-rule-rangelength="[1,35]" />
+							</div>
+							<div class="form-group">
+								<!-- apt unit -->
+								<label for="hp-unit"><span class="field-name">Apartment, unit, suite, or floor #</span> </label>
+								<input class="form-control" id="hp-unit" name="hp-unit" type="text" autocomplete="address-line2"
+								 data-rule-rangelength="[1,35]" />
+							</div>
+							<div class="form-group">
+								<!-- city/town/village -->
+								<label for="hp-street" class="required"><span class="field-name">City/town/village</span> <strong class="required">(required)</strong></label>
+								<input class="form-control" id="hp-street" name="hp-street" type="text" autocomplete="address-level2"
+								 data-rule-required="true" data-rule-rangelength="[1,25]" />
+							</div>
+							<div class="form-group">
+								<!-- province -->
+								<label for="hp-province" class="required"><span class="field-name">Province/territory</span> <strong class="required">(required)</strong></label>
+								<select class="form-control" id="hp-province" name="hp-province" autocomplete="address-level1"
+								 data-rule-required="true">
+									<option label="Select a province/territory"></option>
+									<option value="AB">Alberta</option>
+									<option value="BC">British Columbia</option>
+									<option value="MB">Manitoba</option>
+									<option value="NB">New Brunswick</option>
+									<option value="NL">Newfoundland and Labrador</option>
+									<option value="NS">Nova Scotia</option>
+									<option value="ON">Ontario</option>
+									<option value="PE">Prince Edward Island</option>
+									<option value="QC">Quebec</option>
+									<option value="SK">Saskatchewan</option>
+									<option value="NT">Northwest Territories</option>
+									<option value="NU">Nunavut</option>
+									<option value="YT">Yukon</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<!-- title -->
+								<label for="country" class="required"><span class="field-name">Country</span> <strong class="required">(required)</strong></label>
+								<select class="form-control" id="country" name="country" autocomplete="country-name" data-rule-required="true"
+								 disabled>
+									<option value="canada" selected>Canada</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<!-- postal code -->
+								<label for="pcodeca1" class="required"><span class="field-name">Postal code</span> <strong class="required">(required)</strong></label>
+								<input class="form-control" id="pcodeca1" name="pcodeca1" type="text" autocomplete="postal-code" size="7"
+								 maxlength="7" data-rule-required="true" data-rule-postalCodeCA="true" />
+							</div>
+						</fieldset>
 					</div>
 				</fieldset>
 				<input type="submit" name="submit" value="Submit" class="btn btn-primary">
@@ -241,10 +310,10 @@
 	<script>
 		// reveal or hide next fieldset
 		$(document).on('change', 'input.revealNextFieldset', function () {
-			var nextFieldset = $(this).nextUntil('fieldset');
-			if(nextFieldset.hasClass('hidden') || nextFieldset.hasClass('show')) {
+			var nextFieldset = $(this).closest('fieldset').next('fieldset');
+			if (nextFieldset.hasClass('hidden') || nextFieldset.hasClass('show')) {
 				nextFieldset.toggleClass('hidden show');
-			} else {return;}
+			} else { return; }
 		});
 
 		// time picker init and settings
@@ -254,10 +323,10 @@
 			minuteStep: 15
 		});
 
-	    // dollars	 and cents decimal mask
-	    $(document).on('input', '.finance-input', function (event) {
-	    	this.value = parseFloat(this.value.replace(/(.*){1}/, '0$1').replace(/[^\d]/g, '').replace(/(\d\d?)$/, '.$1')).toFixed(2);
-	    });
+		// dollars	 and cents decimal mask
+		$(document).on('input', '.finance-input', function (event) {
+			this.value = parseFloat(this.value.replace(/(.*){1}/, '0$1').replace(/[^\d]/g, '').replace(/(\d\d?)$/, '.$1')).toFixed(2);
+		});
 
 	</script>
 </body>
