@@ -241,7 +241,10 @@
 	<script>
 		// reveal or hide next fieldset
 		$(document).on('change', 'input.revealNextFieldset', function () {
-			$(this).closest('fieldset').next('fieldset').toggleClass('hidden show');
+			var nextFieldset = $(this).nextUntil('fieldset');
+			if(nextFieldset.hasClass('hidden') || nextFieldset.hasClass('show')) {
+				nextFieldset.toggleClass('hidden show');
+			} else {return;}
 		});
 
 		// time picker init and settings
@@ -251,7 +254,7 @@
 			minuteStep: 15
 		});
 
-	    // dollars and cents decimal mask
+	    // dollars	 and cents decimal mask
 	    $(document).on('input', '.finance-input', function (event) {
 	    	this.value = parseFloat(this.value.replace(/(.*){1}/, '0$1').replace(/[^\d]/g, '').replace(/(\d\d?)$/, '.$1')).toFixed(2);
 	    });
