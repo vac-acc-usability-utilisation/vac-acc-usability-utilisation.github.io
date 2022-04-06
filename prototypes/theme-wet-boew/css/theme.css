@@ -10976,7 +10976,6 @@ main {
   display: inline-block;
 }
 
-
 /*
  Home page (Dashboard) tiles
 */
@@ -10991,19 +10990,6 @@ main {
   margin: 0 16px 16px;
 }
 
-#mva-dashboard details {
-  padding-bottom: 0;
-}
-
-#mva-dashboard ul.list-group {
-  margin-bottom: 0;
-}
-
-#mva-dashboard div.panel-body {
-  padding: 0;
-  margin: 0 -18px;
-}
-
 /* Home page (dashboard) tiles - Extra-small view and under */
 @media screen and (max-width: 767px) {
   #mva-dashboard div.cardsRow div details {
@@ -11012,6 +10998,19 @@ main {
 
 }
 
+/* Home page */ 
+#mva-dashboard details {
+  padding-bottom: 0;
+}
+
+#mva-dashboard .list-group {
+  margin-bottom: 0;
+}
+
+#mva-dashboard div.panel-body {
+  padding: 0;
+  margin: 0 -18px;
+}
 
 
 /*
