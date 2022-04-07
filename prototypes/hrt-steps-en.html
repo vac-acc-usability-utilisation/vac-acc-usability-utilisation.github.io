@@ -78,12 +78,13 @@
 				<fieldset id="travel-details">
 					<legend>Travel details</legend>
 					<div>
+
 						<fieldset class="subfields col-xs-12">
 							<legend><span class="field-name">When did you depart home?</span></legend>
+							
 							<div class="form-group col-xs-6 col-md-3">
 								<label for="deptDate" class="required">Departure date <span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
-								<input class="form-control full-width mrgn-rght-md" type="date" id="deptDate" name="deptDate" min="" max=""
-								 required />
+								<input class="form-control full-width mrgn-rght-md" type="date" id="deptDate" name="deptDate" min="" max="" data-rule-required="true" />
 							</div>
 							<div class="form-group col-xs-6 col-md-3">
 								<label for="deptTime" class="required">Departure time <span class="datepicker-format"> (<abbr title="24-hour clock, 2 digits for hours, 2 digits for minutes">HH-MM</abbr>)</span></label>
@@ -97,8 +98,7 @@
 							<legend><span class="field-name">When did you return home?</span></legend>
 							<div class="form-group col-xs-6 col-md-3">
 								<label for="returnDate" class="required">Return date <span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
-								<input class="form-control full-width mrgn-rght-md" type="date" id="returnDate" name="returnDate" min="" max=""
-								 required />
+								<input class="form-control full-width mrgn-rght-md" type="date" id="returnDate" name="returnDate" min="" max="" data-rule-required="true" />
 							</div>
 							<div class="form-group col-xs-6 col-md-3">
 								<label for="returnTime" class="required">Return time <span class="datepicker-format"> (<abbr title="24-hour clock, 2 digits for hours, 2 digits for minutes">HH-MM</abbr>)</span></label>
@@ -180,6 +180,13 @@
 					<div>
 						<fieldset class="subfields col-xs-12">
 							<legend><span class="field-name">When did your appointment begin?</span></legend>
+							<!-- wb-inv apptdatetime field for validation to compare against other appt dates and times
+							notEqualTo https://github.com/wet-boew/wet-boew/issues/6436#issuecomment-69939772 
+							<div class="form-group-col-xs-6 col-md-3">
+									<label for="deptDateTime">Departure date time</label>
+									<input type="date-time" id="deptDateTime" name="deptDateTime" data-rule-notEqualTo="#returnDateTime" disabled>
+
+							</div> -->
 							<div class="form-group col-xs-6 col-md-3">
 								<label for="deptDate" class="required">Appointment date <span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
 								<input class="form-control full-width mrgn-rght-md" type="date" id="deptDate" name="deptDate" min="" max=""
@@ -199,22 +206,22 @@
 								<span class="field-name">Health care professional</span>
 							</legend>
 							<div>
-									<div class="form-group col-sm-6">
-											<!-- name -->
-											<label for="hp-name" class="required"><span class="field-name">Name of health professional</span> <strong
-												 class="required">(required)</strong></label>
-											<input class="form-control" id="hp-name" name="hp-name" type="text" list="hp-stored" autocomplete="name"
-											 data-rule-required="true" data-rule-letterswithbasicpunc="true" data-rule-rangelength="[2,35]" />
-										</div>
+								<div class="form-group col-sm-6">
+									<!-- name -->
+									<label for="hp-name" class="required"><span class="field-name">Name of health professional</span> <strong
+										 class="required">(required)</strong></label>
+									<input class="form-control" id="hp-name" name="hp-name" type="text" list="hp-stored" autocomplete="name"
+									 data-rule-required="true" data-rule-letterswithbasicpunc="true" data-rule-rangelength="[2,35]" />
+								</div>
 							</div>
 						</fieldset>
 						<fieldset id="hp-contact" class="subfields col-xs-12">
 							<legend>
 								<span class="field-name">Health care professional</span>
-								
+
 							</legend>
 							<div>
-								
+
 								<div class="form-group col-sm-6">
 									<!-- orgnization name -->
 									<label for="hp-organization"><span class="field-name">Clinic or practice name</span></label>
@@ -272,7 +279,7 @@
 									<!-- title -->
 									<label for="country" class="required"><span class="field-name">Country</span> <strong class="required">(required)</strong></label>
 									<select class="form-control" id="country" name="country" autocomplete="country-name" data-rule-required="true"
-									 disabled>
+									 readonly>
 										<option value="canada" selected>Canada</option>
 									</select>
 								</div>
@@ -352,28 +359,36 @@
 	</footer>-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="wet-boew/js/wet-boew.min.js"></script>
-
 	<script src="wet-boew/js/bootstrap-timepicker.min.js"></script>
 	<script>
-		// reveal or hide next fieldset
-		$(document).on('change', 'input.revealNextFieldset', function () {
-			var nextFieldset = $(this).closest('fieldset').next('fieldset');
-			if (nextFieldset.hasClass('hidden') || nextFieldset.hasClass('show')) {
-				nextFieldset.toggleClass('hidden show');
-			} else { return; }
+		$(document).on("wb-ready.wb", function (event) {
+
+			// reveal or hide next fieldset
+			$(document).on('change', 'input.revealNextFieldset', function () {
+				var nextFieldset = $(this).closest('fieldset').next('fieldset');
+				if (nextFieldset.hasClass('hidden') || nextFieldset.hasClass('show')) {
+					nextFieldset.toggleClass('hidden show');
+				} else { return; }
+			});
+
+			// time picker init and settings
+			$('#deptTime, #returnTime, #appt-time').timepicker({
+				defaultTime: false,
+				showMeridian: false,
+				minuteStep: 15
+			});
+
+
+			// dollars and cents decimal mask
+			$(document).on('input', '.finance-input', function () {
+				this.value = parseFloat(this.value.replace(/(.*){1}/, '0$1').replace(/[^\d]/g, '').replace(/(\d\d?)$/, '.$1')).toFixed(2);
+			});
+
+
 		});
 
-		// time picker init and settings
-		$('#deptTime, #returnTime, #appt-time').timepicker({
-			defaultTime: false,
-			showMeridian: false,
-			minuteStep: 15
-		});
 
-		// dollars	 and cents decimal mask
-		$(document).on('input', '.finance-input', function (event) {
-			this.value = parseFloat(this.value.replace(/(.*){1}/, '0$1').replace(/[^\d]/g, '').replace(/(\d\d?)$/, '.$1')).toFixed(2);
-		});
+
 
 	</script>
 </body>
