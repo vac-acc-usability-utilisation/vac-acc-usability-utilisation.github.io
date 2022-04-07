@@ -9212,6 +9212,7 @@ var componentName = "wb-frmvld",
 
 					} ); /* end of validate() */
 
+
 					/* fixes validation issue (see PR #7913) */
 					$form.on( "change", "input[type=date], input[type=file], select", function() {
 						$form.validate().element( this );

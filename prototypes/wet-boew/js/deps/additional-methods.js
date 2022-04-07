@@ -1138,9 +1138,29 @@ $.validator.addMethod( "notEqualTo", function( value, element, param ) {
 	return this.optional( element ) || !$.validator.methods.equalTo.call( this, value, element, param );
 }, "Please enter a different value, values must not be the same." );
 
+$.validator.addMethod( "notEqualToGroup", function( value, element, param ) {
+	//return this.optional( element ) || console.log("notEqualToGroup function"); 
+	//console.log(this.optional( element )); 
+	
+	// Bind to the blur event of the target in order to revalidate whenever the target field is updated
+	
+	var target = $( param ); 
+	console.log(target);
+	
+	// get all the elements  with the same class
+    var elems = $(element).parents('form').find(target);
+	console.log(elems);
+
+    // the value of the current element
+	var valueToCompare = value;
+	console.log(valueToCompare);
+
+});
+
 $.validator.addMethod( "nowhitespace", function( value, element ) {
 	return this.optional( element ) || /^\S+$/i.test( value );
 }, "No white space please" );
+
 
 /**
 * Return true if the field value matches the given format RegExp

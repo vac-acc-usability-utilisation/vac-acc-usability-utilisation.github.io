@@ -80,32 +80,46 @@
 					<div>
 
 						<fieldset class="subfields col-xs-12">
-							<legend><span class="field-name">When did you depart home?</span></legend>
-							
+							<legend>When did you depart home?</legend>
+
 							<div class="form-group col-xs-6 col-md-3">
-								<label for="deptDate" class="required">Departure date <span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
-								<input class="form-control full-width mrgn-rght-md" type="date" id="deptDate" name="deptDate" min="" max="" data-rule-required="true" />
+								<label for="deptDate" class="required"><span class="field-name">Departure date</span> <span class="datepicker-format">
+										(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+								<input class="form-control full-width mrgn-rght-md" type="date" id="deptDate" name="deptDate" min="" max=""
+								 data-rule-required="true" />
 							</div>
 							<div class="form-group col-xs-6 col-md-3">
-								<label for="deptTime" class="required">Departure time <span class="datepicker-format"> (<abbr title="24-hour clock, 2 digits for hours, 2 digits for minutes">HH-MM</abbr>)</span></label>
+								<label for="deptTime" class="required"><span class="field-name">Departure time</span> <span class="datepicker-format">
+										(<abbr title="24-hour clock, 2 digits for hours, 2 digits for minutes">HH-MM</abbr>)</span></label>
 								<div class="input-group bootstrap-timepicker timepicker">
 									<input id="deptTime" name="deptTime" type="text" class="form-control" data-rule-required="true">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
 								</div>
 							</div>
+							<div class="form-group">
+								<input type="datetime" id="deptDateTime" class="wb-inv" readonly>
+								<span class="hidden"></span>
+							</div>
 						</fieldset>
 						<fieldset class="subfields col-xs-12">
-							<legend><span class="field-name">When did you return home?</span></legend>
+							<legend>When did you return home?</legend>
 							<div class="form-group col-xs-6 col-md-3">
-								<label for="returnDate" class="required">Return date <span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
-								<input class="form-control full-width mrgn-rght-md" type="date" id="returnDate" name="returnDate" min="" max="" data-rule-required="true" />
+								<label for="returnDate" class="required"><span class="field-name">Return date</span> <span class="datepicker-format">
+										(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+								<input class="form-control full-width mrgn-rght-md" type="date" id="returnDate" name="returnDate" min="" max=""
+								 data-rule-required="true" />
 							</div>
 							<div class="form-group col-xs-6 col-md-3">
-								<label for="returnTime" class="required">Return time <span class="datepicker-format"> (<abbr title="24-hour clock, 2 digits for hours, 2 digits for minutes">HH-MM</abbr>)</span></label>
+								<label for="returnTime" class="required"><span class="field-name">Return time</span> <span class="datepicker-format">
+										(<abbr title="24-hour clock, 2 digits for hours, 2 digits for minutes">HH-MM</abbr>)</span></label>
 								<div class="input-group bootstrap-timepicker timepicker">
 									<input id="returnTime" name="returnTime" type="text" class="form-control" data-rule-required="true">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
 								</div>
+							</div>
+							<div class="form-group">
+								<input type="datetime" id="returnDateTime" class="datetime-inv hidden" readonly>
+								<span class="hidden"></span>
 							</div>
 						</fieldset>
 						<fieldset class="subfields col-xs-12">
@@ -118,7 +132,7 @@
 							</div>
 						</fieldset>
 						<fieldset class="subfields col-xs-12 hidden">
-							<legend><span class="field-name">How many appointments did you attend?</span></legend>
+							<legend>How many appointments did you attend?</legend>
 							<div class="form-group">
 								<label for="appt-quantity" class="required"><span class="field-name">Number of appointments</span> <strong
 									 class="required">
@@ -179,26 +193,26 @@
 					<legend>Appointment details</legend>
 					<div>
 						<fieldset class="subfields col-xs-12">
-							<legend><span class="field-name">When did your appointment begin?</span></legend>
-							<!-- wb-inv apptdatetime field for validation to compare against other appt dates and times
-							notEqualTo https://github.com/wet-boew/wet-boew/issues/6436#issuecomment-69939772 
-							<div class="form-group-col-xs-6 col-md-3">
-									<label for="deptDateTime">Departure date time</label>
-									<input type="date-time" id="deptDateTime" name="deptDateTime" data-rule-notEqualTo="#returnDateTime" disabled>
+							<legend>When did your appointment begin?</legend>
 
-							</div> -->
 							<div class="form-group col-xs-6 col-md-3">
-								<label for="deptDate" class="required">Appointment date <span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
-								<input class="form-control full-width mrgn-rght-md" type="date" id="deptDate" name="deptDate" min="" max=""
-								 required />
+								<label for="apptDate" class="required"><span class="field-name">Appointment date</span> <span class="datepicker-format">
+										(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+								<input class="form-control full-width mrgn-rght-md .distinct-dates" type="date" id="apptDate" name="apptDate"
+								 min="" max="" data-rule-required="true" data-rule-notEqualToGroup=".distinct-dates" />
 							</div>
 							<div class="form-group col-xs-6 col-md-3">
-								<label for="deptTime" class="required">Appointment time <span class="datepicker-format"> (<abbr title="24-hour clock, 2 digits for hours, 2 digits for minutes">HH-MM</abbr>)</span></label>
+								<label for="apptTime" class="required"><span class="field-name">Appointment time</span> <span class="datepicker-format">
+										(<abbr title="24-hour clock, 2 digits for hours, 2 digits for minutes">HH-MM</abbr>)</span></label>
 								<div class="input-group bootstrap-timepicker timepicker">
-									<input id="deptTime" name="deptTime" type="text" class="form-control" data-rule-required="true">
+									<input id="apptTime" name="apptTime" type="text" class="form-control" data-rule-required="true">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
 								</div>
 							</div>
+							<div class="form-group">
+									<input type="datetime" id="apptDateTime" class="wb-inv" readonly>
+									<span class="hidden"></span>
+								</div>
 						</fieldset>
 
 						<fieldset id="hp" class="subfields col-xs-12">
@@ -278,10 +292,7 @@
 								<div class="form-group col-sm-6" col-sm-6>
 									<!-- title -->
 									<label for="country" class="required"><span class="field-name">Country</span> <strong class="required">(required)</strong></label>
-									<select class="form-control" id="country" name="country" autocomplete="country-name" data-rule-required="true"
-									 readonly>
-										<option value="canada" selected>Canada</option>
-									</select>
+									<input class="form-control" id="hp-country" name="hp-country" type="text" value="Canada" readonly>
 								</div>
 								<div class="form-group col-sm-6">
 									<!-- postal code -->
@@ -359,6 +370,8 @@
 	</footer>-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="wet-boew/js/wet-boew.min.js"></script>
+
+	<script src="wet-boew/js/moment.min.js"></script>
 	<script src="wet-boew/js/bootstrap-timepicker.min.js"></script>
 	<script>
 		$(document).on("wb-ready.wb", function (event) {
@@ -372,16 +385,62 @@
 			});
 
 			// time picker init and settings
-			$('#deptTime, #returnTime, #appt-time').timepicker({
-				defaultTime: false,
+			$('#deptTime, #returnTime, #apptTime').timepicker({
+				defaultTime: '12:00',
 				showMeridian: false,
 				minuteStep: 15
 			});
 
-
 			// dollars and cents decimal mask
-			$(document).on('input', '.finance-input', function () {
+			$(document).on('input', '.finance-mask', function () {
 				this.value = parseFloat(this.value.replace(/(.*){1}/, '0$1').replace(/[^\d]/g, '').replace(/(\d\d?)$/, '.$1')).toFixed(2);
+			});
+
+			// update invisible datetime fields used for validating and comparing appointment dates/times
+			$(document).on('change', 'input[type=date], div.timepicker > input', function () {
+				var startDate = $('#deptDate').val();
+				var startTime = $('#deptTime').val();
+				var endDate = $('#returnDate').val();
+				var endTime = $('#returnTime').val();
+				var apptDate = $('#apptDate').val();
+				var apptTime = $('#apptTime').val();
+
+				if (startDate && startTime) {
+					var startDateTime = new Date(startDate + 'T' + startTime);
+					$('#deptDateTime').val(startDateTime);
+
+					var startDateTimeFormat = moment(startDateTime).format('MMMM Do YYYY, h:mm a');
+					// empty and unhide span.hidden
+					$('#deptDateTime').next('span').empty();
+					$('#deptDateTime').next('span.hidden').removeClass('hidden');
+					// append span
+					$('#deptDateTime').next('span').append('<time datetime="' + startDateTime + '">' + startDateTimeFormat + '</time>');
+					//<time datetime="2020-01-27 07:00Z">Monday, Jan 27, 2020, 7:00am EST</time>]
+				}
+
+				if (endDate && endTime) {
+					var endDateTime = new Date(endDate + 'T' + endTime);
+					$('#returnDateTime').val(endDateTime);
+
+					var endDateTimeFormat = moment(endDateTime).format('MMMM Do YYYY, h:mm a');
+					// empty and unhide span.hidden
+					$('#returnDateTime').next('span').empty();
+					$('#returnDateTime').next('span.hidden').removeClass('hidden');
+					// append span
+					$('#returnDateTime').next('span').append('<time datetime="' + endDateTime + '">' + endDateTimeFormat + '</time>');
+				}
+
+				if (apptDate && apptTime) {
+					var apptDateTime = new Date(apptDate + 'T' + apptTime);
+					$('#apptDateTime').val(apptDateTime);
+
+					var apptDateTimeFormat = moment(apptDateTime).format('MMMM Do YYYY, h:mm a');
+					// empty and unhide span.hidden
+					$('#apptDateTime').next('span').empty();
+					$('#apptDateTime').next('span.hidden').removeClass('hidden');
+					// append span
+					$('#apptDateTime').next('span').append('<time datetime="' + apptDateTime + '">' + apptDateTimeFormat + '</time>');
+				}
 			});
 
 
