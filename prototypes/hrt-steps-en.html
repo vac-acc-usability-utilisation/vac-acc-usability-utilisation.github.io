@@ -79,7 +79,7 @@
 					<legend>Travel details</legend>
 					<div>
 
-						<fieldset class="subfields col-xs-12">
+						<fieldset class="subfields col-xs-12" id="deptDateTimeFieldset">
 							<legend>When did you depart home?</legend>
 							<div class="form-group col-xs-6 col-md-3">
 									<label for="deptDate" class="required"><span class="field-name">Departure date</span> <span class="datepicker-format">
@@ -97,7 +97,7 @@
 								</div>
 								<div class="form-group">
 										<label for="deptDateTime"><span class="field-name">Departure date and time</span></label>
-									<input type="datetime-local" id="deptDateTime" name="deptDateTime" class="distinct-dateTimes" data-rule-notEqualToGroup=".distinct-dateTimes" readonly>
+									<input type="datetime-local" id="deptDateTime" name="deptDateTime" class="distinct-dateTimes" data-rule-notEqualToGroup=".distinct-dateTimes" >
 									<span class="hidden"></span>
 								</div>
 						</fieldset>
@@ -119,7 +119,7 @@
 							</div>
 							<div class="form-group">
 									<label for="returnDateTime"><span class="field-name">Return date and time</span></label>
-								<input type="datetime-local" id="returnDateTime" name="returnDateTime" class="distinct-dateTimes" data-rule-notEqualToGroup=".distinct-dateTimes" readonly>
+								<input type="datetime-local" id="returnDateTime" name="returnDateTime" class="distinct-dateTimes" data-rule-notEqualToGroup=".distinct-dateTimes" >
 								<span class="hidden"></span>
 							</div>
 						</fieldset>
@@ -215,7 +215,7 @@
 								<div class="form-group">
 									<label for="apptDateTime"><span class="field-name wb-inv">Appointment date and time</span></label>
 									<input type="datetime-local" id="apptDateTime" class=".distinct-appt-dateTimes" data-rule-notEqualToGroup=".distinct-appt-dateTimes"
-									readonly>
+									>
 									<span class="hidden col-xs-12"></span>
 								</div>
 							</fieldset>
@@ -296,7 +296,7 @@
 									<div class="form-group col-sm-6" col-sm-6>
 										<!-- title -->
 										<label for="country" class="required"><span class="field-name">Country</span> <strong class="required">(required)</strong></label>
-										<input class="form-control" id="hp-country" name="hp-country" type="text" value="Canada" readonly>
+										<input class="form-control" id="hp-country" name="hp-country" type="text" value="Canada" >
 									</div>
 									<div class="form-group col-sm-6">
 										<!-- postal code -->
@@ -420,7 +420,11 @@
 				this.value = parseFloat(this.value.replace(/(.*){1}/, '0$1').replace(/[^\d]/g, '').replace(/(\d\d?)$/, '.$1')).toFixed(2);
 			});
 
+			//	$("#returnDateTime").attr('min', $("#deptDateTime").val());
 
+			//	$("#apptDateTime").attr('min', $("#deptDateTime").val());
+
+			//  $("#apptDateTime").attr('max', $("#returnDateTime").val());
 
 
 			// HRT Specifc Business rules, form questions / error prevention
@@ -448,6 +452,8 @@
 				var apptDate = $('#apptDate').val();
 				var apptTime = $('#apptTime').val();
 
+				console.log($(this));
+
 				if (startDate && startTime) {
 					var startDateTime = startDate + 'T' + startTime;
 					$('#deptDateTime').val(startDateTime);
@@ -459,8 +465,14 @@
 					// append span <time datetime="2020-01-27 07:00Z">Monday, Jan 27, 2020, 7:00am EST</time>]
 					$('#deptDateTime').next('span').append('<time datetime="' + startDateTime + '">' + startDateTimeFormat + '</time>');
 					//console.log($('#deptDateTime').closest('fieldset').find('input').valid());
+					//$('').valid();
 					
-					$('#deptDateTime').closest('fieldset').find('input').valid();
+					$('#deptDateTimeFieldset').find('input').valid();
+					//$('#deptDateTimeFieldset').focus();
+					$('#deptDateTime').blur();
+
+
+
 					// update return min
 					// update appt min date/time
 					
@@ -479,7 +491,7 @@
 					$('#returnDateTime').valid();
 					
 					// update departure min
-					// update appt max date/time
+					// update appt min date/time
 				}
 
 				if (apptDate && apptTime) {
@@ -577,8 +589,6 @@
 			else {
 				return;
 			}
-
-			//$( ".wb-steps" ).trigger( "wb-init.wb-steps" );
 
 		}
 
