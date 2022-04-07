@@ -175,92 +175,118 @@
 						</fieldset>
 					</div>
 				</fieldset>
-				<fieldset id="hp-details">
-					<legend>Health-professional details</legend>
-					<div>
-						<div class="form-group">
-							<p>prev saved hp</p>
+				<fieldset id="appt-details">
+						<legend>Appointment details</legend>
+						<div>
+							<fieldset class="subfields col-xs-12">
+								<legend><span class="field-name">When did your appointment begin?</span></legend>
+								<div class="form-group col-xs-6 col-md-3">
+									<label for="deptDate" class="required">Appointment date <span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+									<input class="form-control full-width mrgn-rght-md" type="date" id="deptDate" name="deptDate" min="" max=""
+									 required />
+								</div>
+								<div class="form-group col-xs-6 col-md-3">
+									<label for="deptTime" class="required">Appointment time <span class="datepicker-format"> (<abbr title="24-hour clock, 2 digits for hours, 2 digits for minutes">HH-MM</abbr>)</span></label>
+									<div class="input-group bootstrap-timepicker timepicker">
+										<input id="deptTime" name="deptTime" type="text" class="form-control" data-rule-required="true">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+									</div>
+								</div>
+							</fieldset>
+	
+							<fieldset id="hp" class="subfields col-xs-12">
+								<legend>
+									<span class="field-name">Health professional</span>
+								</legend>
+								<div class="form-group">
+									<!-- name -->
+									<label for="hp-name" class="required"><span class="field-name">Name of health professional</span> <strong class="required">(required)</strong></label>
+									<input class="form-control" id="hp-name" name="hp-name" type="text" list="hp-stored" autocomplete="name"
+									 data-rule-required="true" data-rule-letterswithbasicpunc="true" data-rule-rangelength="[2,35]" />
+								</div>
+							</fieldset>
+							<fieldset id="hp-contact" class="subfields col-xs-12">
+								<legend>
+									<span class="field-name">Health professional address</span>
+								</legend>
+								<div>
+									<div class="form-group">
+										<!-- orgnization name -->
+										<label for="hp-organization"><span class="field-name">Clinic or practice name</span></label>
+										<input class="form-control" id="hp-organization" name="hp-organization" type="text" autocomplete="organization"
+										 data-rule-rangelength="[1,50]" />
+									</div>
+									<div class="form-group">
+										<!-- tel number -->
+										<label for="hp-tel" class="required"><span class="field-name">Phone Number (including area code)</span>
+											<strong class="required">(required)</strong></label>
+										<input class="form-control" id="hp-tel" name="hp-tel" type="tel" autocomplete="tel-national" data-rule-phoneus="true"
+										 data-rule-required="true">
+									</div>
+									<div class="form-group">
+										<!-- street name -->
+										<label for="hp-street" class="required"><span class="field-name">Street address</span> <strong class="required">(required)</strong></label>
+										<input class="form-control" id="hp-street" name="hp-street" type="text" autocomplete="address-line1"
+										 data-rule-required="true" data-rule-rangelength="[1,35]" />
+									</div>
+									<div class="form-group">
+										<!-- appt unit -->
+										<label for="hp-unit"><span class="field-name">Apartment, unit, suite, or floor #</span> </label>
+										<input class="form-control" id="hp-unit" name="hp-unit" type="text" autocomplete="address-line2"
+										 data-rule-rangelength="[1,35]" />
+									</div>
+									<div class="form-group">
+										<!-- city/town/village -->
+										<label for="hp-city" class="required"><span class="field-name">City/town/village</span> <strong class="required">(required)</strong></label>
+										<input class="form-control" id="hp-city" name="hp-city" type="text" autocomplete="address-level2"
+										 data-rule-required="true" data-rule-rangelength="[1,25]" />
+									</div>
+									<div class="form-group">
+										<!-- province -->
+										<label for="hp-province" class="required"><span class="field-name">Province/territory</span> <strong class="required">(required)</strong></label>
+										<select class="form-control" id="hp-province" name="hp-province" autocomplete="address-level1"
+										 data-rule-required="true">
+											<option label="Select a province/territory"></option>
+											<option value="AB">Alberta</option>
+											<option value="BC">British Columbia</option>
+											<option value="MB">Manitoba</option>
+											<option value="NB">New Brunswick</option>
+											<option value="NL">Newfoundland and Labrador</option>
+											<option value="NS">Nova Scotia</option>
+											<option value="ON">Ontario</option>
+											<option value="PE">Prince Edward Island</option>
+											<option value="QC">Quebec</option>
+											<option value="SK">Saskatchewan</option>
+											<option value="NT">Northwest Territories</option>
+											<option value="NU">Nunavut</option>
+											<option value="YT">Yukon</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<!-- title -->
+										<label for="country" class="required"><span class="field-name">Country</span> <strong class="required">(required)</strong></label>
+										<select class="form-control" id="country" name="country" autocomplete="country-name" data-rule-required="true"
+										 disabled>
+											<option value="canada" selected>Canada</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<!-- postal code -->
+										<label for="pcodeca1" class="required"><span class="field-name">Postal code</span> <strong class="required">(required)</strong></label>
+										<input class="form-control" id="pcodeca1" name="pcodeca1" type="text" autocomplete="postal-code" size="7"
+										 maxlength="7" data-rule-required="true" data-rule-postalCodeCA="true" />
+									</div>
+							</fieldset>
+							<fieldset class="subfields col-xs-12">
+								<legend>What medical condition was this appointment for?</legend>
+								<div class="form-group">
+									<label for="medical-condition" class="required"><span class="field-name">Medical condition</span> <strong class="required">(required)</strong></label>
+									<input class="form-control" id="medical-condition" name="medical-condition" type="text" autocomplete="name"
+									 data-rule-required="true" data-rule-letterswithbasicpunc="true" data-rule-rangelength="[2,35]" />
+								</div>
+							</fieldset>
 						</div>
-						<fieldset id="hp-contact" class="subfields col-xs-12">
-							<legend>
-								Health professional contact information
-							</legend>
-
-							<div class="form-group">
-								<!-- name -->
-								<label for="hp-name" class="required"><span class="field-name">Name</span> <strong class="required">(required)</strong></label>
-								<input class="form-control" id="hp-name" name="hp-name" type="text" autocomplete="name" data-rule-required="true"
-								 data-rule-letterswithbasicpunc="true" data-rule-rangelength="[2,35]" />
-							</div>
-							<div class="form-group">
-								<!-- orgnization name -->
-								<label for="hp-organization"><span class="field-name">Clinic or practice name</span></label>
-								<input class="form-control" id="hp-organization" name="hp-organization" type="text" autocomplete="organization"
-								 data-rule-rangelength="[1,50]" />
-							</div>
-							<div class="form-group">
-								<!-- tel number -->
-								<label for="hp-tel" class="required"><span class="field-name">Phone Number (including area code)</span> <strong
-									 class="required">(required)</strong></label>
-								<input class="form-control" id="hp-tel" name="hp-tel" type="tel" autocomplete="tel-national" data-rule-phoneus="true"
-								 data-rule-required="true">
-							</div>
-							<div class="form-group">
-								<!-- street name -->
-								<label for="hp-street" class="required"><span class="field-name">Street address</span> <strong class="required">(required)</strong></label>
-								<input class="form-control" id="hp-street" name="hp-street" type="text" autocomplete="address-line1"
-								 data-rule-required="true" data-rule-rangelength="[1,35]" />
-							</div>
-							<div class="form-group">
-								<!-- apt unit -->
-								<label for="hp-unit"><span class="field-name">Apartment, unit, suite, or floor #</span> </label>
-								<input class="form-control" id="hp-unit" name="hp-unit" type="text" autocomplete="address-line2"
-								 data-rule-rangelength="[1,35]" />
-							</div>
-							<div class="form-group">
-								<!-- city/town/village -->
-								<label for="hp-street" class="required"><span class="field-name">City/town/village</span> <strong class="required">(required)</strong></label>
-								<input class="form-control" id="hp-street" name="hp-street" type="text" autocomplete="address-level2"
-								 data-rule-required="true" data-rule-rangelength="[1,25]" />
-							</div>
-							<div class="form-group">
-								<!-- province -->
-								<label for="hp-province" class="required"><span class="field-name">Province/territory</span> <strong class="required">(required)</strong></label>
-								<select class="form-control" id="hp-province" name="hp-province" autocomplete="address-level1"
-								 data-rule-required="true">
-									<option label="Select a province/territory"></option>
-									<option value="AB">Alberta</option>
-									<option value="BC">British Columbia</option>
-									<option value="MB">Manitoba</option>
-									<option value="NB">New Brunswick</option>
-									<option value="NL">Newfoundland and Labrador</option>
-									<option value="NS">Nova Scotia</option>
-									<option value="ON">Ontario</option>
-									<option value="PE">Prince Edward Island</option>
-									<option value="QC">Quebec</option>
-									<option value="SK">Saskatchewan</option>
-									<option value="NT">Northwest Territories</option>
-									<option value="NU">Nunavut</option>
-									<option value="YT">Yukon</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<!-- title -->
-								<label for="country" class="required"><span class="field-name">Country</span> <strong class="required">(required)</strong></label>
-								<select class="form-control" id="country" name="country" autocomplete="country-name" data-rule-required="true"
-								 disabled>
-									<option value="canada" selected>Canada</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<!-- postal code -->
-								<label for="pcodeca1" class="required"><span class="field-name">Postal code</span> <strong class="required">(required)</strong></label>
-								<input class="form-control" id="pcodeca1" name="pcodeca1" type="text" autocomplete="postal-code" size="7"
-								 maxlength="7" data-rule-required="true" data-rule-postalCodeCA="true" />
-							</div>
-						</fieldset>
-					</div>
-				</fieldset>
+					</fieldset>
 				<input type="submit" name="submit" value="Submit" class="btn btn-primary">
 			</form>
 
