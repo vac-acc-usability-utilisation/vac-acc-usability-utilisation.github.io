@@ -11012,6 +11012,13 @@ main {
   margin: 0 -18px;
 }
 
+#mva-dashboard .panel footer {
+  background-color:#fff;
+  padding-left:0;
+}
+
+
+
 
 /*
  * Site menu
