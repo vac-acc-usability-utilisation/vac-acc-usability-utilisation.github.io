@@ -9006,6 +9006,7 @@ var componentName = "wb-frmvld",
 						meta: "validate",
 						focusInvalid: false,
 						ignore: settings.ignore,
+						onfocusout: true,
 
 						// Set the element which will wrap the inline error messages
 						errorElement: "strong",
@@ -9212,8 +9213,9 @@ var componentName = "wb-frmvld",
 
 					} ); /* end of validate() */
 
+
 					/* fixes validation issue (see PR #7913) */
-					$form.on( "change", "input[type=date], input[type=file], select", function() {
+					$form.on( "change", "input[type=date], input[type=file], select, div.bootstrap-timepicker > input", function() {
 						$form.validate().element( this );
 					} );
 
@@ -13391,6 +13393,7 @@ var componentName = "wb-steps",
 			// confirm if form is valid
 			if ( isNext && jQuery.validator && jQuery.validator !== "undefined" ) {
 				isFormValid =  $( "#" + parentParentElement.parentElement.id ).valid();
+				console.log($( "#" + parentParentElement.parentElement.id ));
 			}
 
 			// continue if valid
