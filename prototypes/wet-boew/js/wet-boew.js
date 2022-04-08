@@ -13393,6 +13393,7 @@ var componentName = "wb-steps",
 			// confirm if form is valid
 			if ( isNext && jQuery.validator && jQuery.validator !== "undefined" ) {
 				isFormValid =  $( "#" + parentParentElement.parentElement.id ).valid();
+				console.log($( "#" + parentParentElement.parentElement.id ));
 			}
 
 			// continue if valid
