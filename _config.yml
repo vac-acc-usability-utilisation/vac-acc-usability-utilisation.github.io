@@ -1,14 +1,8 @@
 domain: usability-utilisation-vac-acc.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-url: https://usability-utilisation-vac-acc.github.io  # the base hostname and protocol for your site, e.g. http://example.com
-baseurl: /mva/      # place folder name if the site is served in a subfolder
+url: http://usability-utilisation-vac-acc.github.io  # the base hostname and protocol for your site, e.g. http://example.com
+baseurl: /mva      # place folder name if the site is served in a subfolder
 
-lsi: false
-safe: true
-source: mva
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
+source              : .
+destination         : ./docs
+verbose             : false
+exclude             : ["./.md"]
