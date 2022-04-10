@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title>My Veteran Affairs Canada (VAC) Account - Home - Veteran Affairs Canada
+	</title>
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<meta name="description" content=" ">
+	<link rel="alternate" hreflang="fr" href="home-fr.html">
+	<link href="theme-wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon">
+	<link rel="stylesheet" href="theme-wet-boew/css/theme.css">
+	<noscript>
+		<link rel="stylesheet" href="wet-boew/css/noscript.min.css">
+	</noscript>
+	<link rel="stylesheet" href="wet-boew/css/bootstrap-timepicker.css">
+</head>
+
+<body vocab="http://schema.org/" resource="#wb-webpage" typeof="WebPage">
+	<nav>
+		<ul id="wb-tphp">
+			<li class="wb-slc">
+				<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+
+			</li>
+			<li class="wb-slc">
+				<a class="wb-sl" href="#news-and-notifications-menu">Skip to "News and notifications"</a>
+			</li>
+		</ul>
+	</nav>
+	<header role="banner" class="mrgn-tp-md">
+		<div id="wb-bnr">
+			<div id="wb-bar">
+				<div class="container">
+					<div class="row">
+						<section id="wb-lng" class="col-xs-8 col-sm-6 pull-right">
+							<h2>Language selection</h2>
+							<ul class="text-right">
+								<li><a lang="fr" hreflang="fr" href="menu-fr.html">Français</a></li>
+							</ul>
+						</section>
+
+						<div class="brand col-xs-8 col-sm-9 col-md-6 mrgn-tp-sm mrgn-bttm-md">
+							<a href="http://www.canada.ca/en" role="button" data-vac-url="http://www.canada.ca/en" rel="external" target="_blank">
+								<img src="theme-wet-boew/assets/sig-blk-en.svg" role="img" alt="Government of Canada logo">
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="container mrgn-tp-md">
+
+				<div class="row mrgn-bttm-md">
+					<div id="wb-sttl" class="col-xs-12 col-sm-6">
+						<a href="home-en.html">
+							<span class="h1">My <abbr title="Veteran Affairs Canada">VAC</abbr> Account</span>
+						</a>
+					</div>
+					<section id="wb-so" class="col-xs-12 col-sm-6">
+						<h2 class="wb-inv">Sign-on information</h2>
+
+						<span class="mrgn-rght-md">Signed in as <span class="wb-so-uname">Private Noel Knockwood</span></span>
+						<button class="btn btn-info btn-sm" type="button">Sign out</button>
+
+					</section>
+
+				</div>
+
+			</div>
+		</div>
+	</header>
+	<main role="main" property="mainContentOfPage" resource="#wb-main" class="container">
+
+		<h1 id="wb-cont" property="name">Health-related travel expenses claim</h1>
+		<div class="wb-frmvld provisional wb-steps">
+			<form action="#" method="get" id="hrt">
+				<fieldset id="travel-details">
+					<legend>Travel details</legend>
+					<div>
+
+						<fieldset class="subfields col-xs-12" id="deptDateTimeFieldset">
+							<legend>When did you depart home?</legend>
+							<div class="form-group col-xs-6 col-md-3">
+								<label for="deptDate" class="required"><span class="field-name">Departure date</span> <span class="datepicker-format">
+										(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+								<input class="form-control full-width mrgn-rght-md" type="date" id="deptDate" name="deptDate" min="" max=""
+								 data-rule-required="true" />
+							</div>
+							<div class="form-group col-xs-6 col-md-3">
+								<label for="deptTime" class="required"><span class="field-name">Departure time</span> <span class="datepicker-format">
+										(<abbr title="24-hour clock, 2 digits for hours, 2 digits for minutes">HH-MM</abbr>)</span></label>
+								<div class="input-group bootstrap-timepicker timepicker">
+									<input id="deptTime" name="deptTime" type="text" class="form-control" data-rule-required="true" placeholder="HH:MM">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="deptDateTime"><span class="field-name">Departure date and time</span></label>
+								<input type="datetime-local" id="deptDateTime" name="deptDateTime" class="distinct-dateTimes"
+								 data-rule-notEqualToGroup=".distinct-dateTimes">
+								 
+								<span class="hidden"></span>
+							</div>
+						</fieldset>
+						<fieldset class="subfields col-xs-12">
+							<legend>When did you return home?</legend>
+							<div class="form-group col-xs-6 col-md-3">
+								<label for="returnDate" class="required"><span class="field-name">Return date</span> <span class="datepicker-format">
+										(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+								<input class="form-control full-width mrgn-rght-md" type="date" id="returnDate" name="returnDate" min="" max=""
+								 data-rule-required="true" />
+							</div>
+							<div class="form-group col-xs-6 col-md-3">
+								<label for="returnTime" class="required"><span class="field-name">Return time</span> <span class="datepicker-format">
+										(<abbr title="24-hour clock, 2 digits for hours, 2 digits for minutes">HH-MM</abbr>)</span></label>
+								<div class="input-group bootstrap-timepicker timepicker">
+									<input id="returnTime" name="returnTime" type="text" class="form-control" data-rule-required="true">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="returnDateTime"><span class="field-name">Return date and time</span></label>
+								<input type="datetime-local" id="returnDateTime" name="returnDateTime" class="distinct-dateTimes"
+								 data-rule-notEqualToGroup=".distinct-dateTimes">
+								<span class="hidden"></span>
+							</div>
+						</fieldset>
+						<fieldset class="subfields col-xs-12">
+							<legend><span class="field-name">Did you attend more than one appointment?</span></legend>
+							<div class="radio">
+								<label for="multi-appt-yes"><input type="radio" class="revealNextFieldset" name="multi-appt" value="multi-appt-yes"
+									 id="multi-appt-yes">&#160;Yes</label>&#160;
+								<label for="multi-appt-no"><input type="radio" class="revealNextFieldset" name="multi-appt" value="multi-appt-no"
+									 id="multi-appt-no" checked>&#160;No</label>&#160;
+							</div>
+						</fieldset>
+						<fieldset class="subfields col-xs-12 hidden">
+							<legend>How many appointments did you attend?</legend>
+							<div class="form-group">
+								<label for="appt-quantity" class="required"><span class="field-name">Number of appointments</span> <strong
+									 class="required">
+										(required)</strong></label>
+								<input class="form-control input-lg" id="appt-quantity" name="appt-quantity" type="number" min="2" max="25"
+								 step="1" data-rule-required="true">
+							</div>
+						</fieldset>
+					</div>
+				</fieldset>
+				<fieldset id="travel-expenses">
+					<legend>Travel expenses</legend>
+					<div>
+						<fieldset id="transportation" class="subfields col-xs-12">
+							<legend><span class="field-name">Would you like to claim transportation expenses?</span></legend>
+							<div class="radio">
+								<label for="transportation-expenses-yes"><input type="radio" name="transportation-expenses" value="transportation-expenses-yes"
+									 id="transportation-expenses-yes" checked>&#160;Yes</label>&#160;
+								<label for="transportation-expenses-no" class="revealNextFieldset"><input type="radio" name="transportation-expenses"
+									 value="transportation-expenses-no" id="transportation-expenses-no" class="revealNextFieldset">&#160;No</label>&#160;
+							</div>
+						</fieldset>
+						<fieldset id="meals" class="subfields col-xs-12">
+							<legend><span class="field-name">Would you like to claim meals expenses?</span></legend>
+							<div class="radio">
+								<label for="meals-expenses-yes"><input type="radio" name="meals-expenses" value="meals-expenses-yes" id="meals-expenses-yes">&#160;Yes</label>&#160;
+								<label for="meals-expenses-no" checked><input type="radio" name="meals-expenses" value="meals-expenses-no" id="meals-expenses-no">&#160;No</label>&#160;
+							</div>
+						</fieldset>
+						<fieldset id="lodging" class="subfields col-xs-12">
+							<legend><span class="field-name">Would you like to claim lodging expenses?</span></legend>
+							<div class="radio">
+								<label for="lodging-expenses-yes"><input type="radio" name="lodging-expenses" value="lodging-expenses-yes" id="lodging-expenses-yes">&#160;Yes</label>&#160;
+								<label for="lodging-expenses-no" checked><input type="radio" name="lodging-expenses" value="lodging-expenses-no"
+									 id="lodging-expenses-no">&#160;No</label>&#160;
+							</div>
+						</fieldset>
+						<fieldset id="escort" class="subfields col-xs-12">
+							<legend><span class="field-name">Would you like to claim escort expenses?</span></legend>
+							<div class="radio">
+								<label for="escort-expenses-yes"><input type="radio" name="escort-expenses" value="escort-expenses-yes" id="escort-expenses-yes">&#160;Yes</label>&#160;
+								<label for="escort-expenses-no" checked><input type="radio" name="escort-expenses" value="escort-expenses-no"
+									 id="escort-expenses-no">&#160;No</label>&#160;
+							</div>
+						</fieldset>
+						<fieldset id="dependant-care" class="subfields col-xs-12">
+							<legend><span class="field-name">Would you like to claim dependant care expenses?</span></legend>
+							<div class="radio">
+								<label for="dependant-care-expenses-yes"><input type="radio" name="dependant-care-expenses" value="dependant-care-expenses-yes"
+									 id="dependant-care-expenses-yes">&#160;Yes</label>&#160;
+								<label for="dependant-care-expenses-no"><input type="radio" name="dependant-care-expenses" value="dependant-care-expenses-no"
+									 id="dependant-care-expenses-no" checked>&#160;No</label>&#160;
+							</div>
+						</fieldset>
+					</div>
+				</fieldset>
+				<fieldset id="appts">
+					<legend>Appointments</legend>
+					<div>
+						<div id="appt-details">
+							<h2>Appointment</h2>
+							<fieldset class="subfields col-xs-12">
+								<legend>When did your appointment begin?</legend>
+
+								<div class="form-group col-xs-6 col-md-3">
+									<label for="apptDate" class="required"><span class="field-name">Appointment date</span> <span class="datepicker-format">(<abbr
+											 title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+									<input class="form-control full-width mrgn-rght-md .distinct-dates" type="date" id="apptDate" name="apptDate"
+									 min="" max="" data-rule-required="true" />
+								</div>
+								<div class="form-group col-xs-6 col-md-3">
+									<label for="apptTime" class="required"><span class="field-name">Appointment time</span> <span class="datepicker-format">(<abbr
+											 title="24-hour clock, 2 digits for hours, 2 digits for minutes">HH-MM</abbr>)</span></label>
+									<div class="input-group bootstrap-timepicker timepicker">
+										<input id="apptTime" name="apptTime" type="text" class="form-control" data-rule-required="true">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="apptDateTime"><span class="field-name wb-inv">Appointment date and time</span></label>
+									<input type="datetime-local" id="apptDateTime" class=".distinct-appt-dateTimes" data-rule-notEqualToGroup=".distinct-appt-dateTimes">
+									<span class="hidden col-xs-12"></span>
+								</div>
+							</fieldset>
+							<fieldset id="hp" class="subfields col-xs-12">
+								<legend>
+									<span class="field-name">Health care professional</span>
+								</legend>
+								<div>
+									<div class="form-group col-sm-6">
+										<!-- name -->
+										<label for="hp-name" class="required"><span class="field-name">Name of health professional</span> <strong
+											 class="required">(required)</strong></label>
+										<input class="form-control" id="hp-name" name="hp-name" type="text" list="hp-stored" autocomplete="name"
+										 data-rule-required="true" data-rule-letterswithbasicpunc="true" data-rule-rangelength="[2,35]" />
+									</div>
+								</div>
+							</fieldset>
+							<fieldset id="hp-contact" class="subfields col-xs-12">
+								<legend>
+									<span class="field-name">Health care professional</span>
+
+								</legend>
+								<div>
+
+									<div class="form-group col-sm-6">
+										<!-- orgnization name -->
+										<label for="hp-organization"><span class="field-name">Clinic or practice name</span></label>
+										<input class="form-control" id="hp-organization" name="hp-organization" type="text" autocomplete="organization"
+										 data-rule-rangelength="[1,50]" />
+									</div>
+									<div class="form-group col-sm-6">
+										<!-- tel number -->
+										<label for="hp-tel" class="required"><span class="field-name">Phone Number (including area code)</span>
+											<strong class="required">(required)</strong></label>
+										<input class="form-control" id="hp-tel" name="hp-tel" type="tel" autocomplete="tel-national"
+										 data-rule-phoneus="true" data-rule-required="true">
+									</div>
+
+									<div class="form-group col-sm-6">
+										<!-- street name -->
+										<label for="hp-street" class="required"><span class="field-name">Street address</span> <strong class="required">(required)</strong></label>
+										<input class="form-control" id="hp-street" name="hp-street" type="text" autocomplete="address-line1"
+										 data-rule-required="true" data-rule-rangelength="[1,35]" />
+									</div>
+									<div class="form-group col-sm-6">
+										<!-- appt unit -->
+										<label for="hp-unit"><span class="field-name">Apartment, unit, suite, or floor #</span> </label>
+										<input class="form-control" id="hp-unit" name="hp-unit" type="text" autocomplete="address-line2"
+										 data-rule-rangelength="[1,35]" />
+									</div>
+									<div class="form-group col-sm-6">
+										<!-- city/town/village -->
+										<label for="hp-city" class="required"><span class="field-name">City/town/village</span> <strong class="required">(required)</strong></label>
+										<input class="form-control" id="hp-city" name="hp-city" type="text" autocomplete="address-level2"
+										 data-rule-required="true" data-rule-rangelength="[1,25]" />
+									</div>
+									<div class="form-group col-sm-6">
+										<!-- province -->
+										<label for="hp-province" class="required"><span class="field-name">Province/territory</span> <strong class="required">(required)</strong></label>
+										<select class="form-control" id="hp-province" name="hp-province" autocomplete="address-level1"
+										 data-rule-required="true">
+											<option label="Select a province/territory"></option>
+											<option value="AB">Alberta</option>
+											<option value="BC">British Columbia</option>
+											<option value="MB">Manitoba</option>
+											<option value="NB">New Brunswick</option>
+											<option value="NL">Newfoundland and Labrador</option>
+											<option value="NS">Nova Scotia</option>
+											<option value="ON">Ontario</option>
+											<option value="PE">Prince Edward Island</option>
+											<option value="QC">Quebec</option>
+											<option value="SK">Saskatchewan</option>
+											<option value="NT">Northwest Territories</option>
+											<option value="NU">Nunavut</option>
+											<option value="YT">Yukon</option>
+										</select>
+									</div>
+									<div class="form-group col-sm-6" col-sm-6>
+										<!-- title -->
+										<label for="country" class="required"><span class="field-name">Country</span> <strong class="required">(required)</strong></label>
+										<input class="form-control" id="hp-country" name="hp-country" type="text" value="Canada">
+									</div>
+									<div class="form-group col-sm-6">
+										<!-- postal code -->
+										<label for="pcodeca1" class="required"><span class="field-name">Postal code</span> <strong class="required">(required)</strong></label>
+										<input class="form-control" id="pcodeca1" name="pcodeca1" type="text" autocomplete="postal-code" size="7"
+										 maxlength="7" data-rule-required="true" data-rule-postalCodeCA="true" />
+									</div>
+								</div>
+							</fieldset>
+							<fieldset class="subfields col-xs-12">
+								<legend>What medical condition was this appointment for?</legend>
+								<div class="form-group">
+									<label for="medical-condition" class="required"><span class="field-name">Medical condition</span> <strong
+										 class="required">(required)</strong></label>
+									<input class="form-control" id="medical-condition" name="medical-condition" type="text" autocomplete="name"
+									 data-rule-required="true" data-rule-letterswithbasicpunc="true" data-rule-rangelength="[2,35]" />
+								</div>
+							</fieldset>
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset id="supporting-docs">
+					<legend><span class="field-name">Supporting documents</span></legend>
+					<div>
+
+					</div>
+				</fieldset>
+
+				<fieldset id="supporting-docs">
+					<legend><span class="field-name">Review and submit</span></legend>
+					<div>
+
+					</div>
+				</fieldset>
+				<input type="submit" name="submit" value="Submit" class="btn btn-success" disabled>
+			</form>
+
+			<dl id="wb-dtmd">
+				<dt>Date modified:&#32;</dt>
+				<dd><time property="dateModified">2022-03-31</time></dd>
+			</dl>
+	</main>
+	<!--
+	<footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">
+		<div class="container">
+			<nav role="navigation" class="row">
+				<h2>About this site</h2>
+				<section class="col-sm-3">
+					<h3>Contact us</h3>
+					<ul class="list-unstyled">
+						<li><a href="https://github.com/wet-boew/wet-boew/issues/new">Questions or comments?</a></li>
+					</ul>
+				</section>
+				<section class="col-sm-3">
+					<h3>About</h3>
+					<ul class="list-unstyled">
+						<li><a href="index-en.html#about">About the Web Experience Toolkit</a></li>
+						<li><a rel="external" href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a></li>
+					</ul>
+				</section>
+				<section class="col-sm-3">
+					<h3>News</h3>
+					<ul class="list-unstyled">
+						<li><a href="https://github.com/wet-boew/wet-boew/pulse">Recent project activity</a></li>
+						<li><a href="https://github.com/wet-boew/wet-boew/graphs">Project statistics</a></li>
+					</ul>
+				</section>
+				<section class="col-sm-3">
+					<h3>Stay connected</h3>
+					<ul class="list-unstyled">
+						<li><a rel="external" href="https://twitter.com/WebExpToolkit">Twitter</a></li>
+					</ul>
+				</section>
+			</nav>
+		</div>
+	</footer>-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="wet-boew/js/wet-boew.min.js"></script>
+
+	<script src="wet-boew/js/moment.min.js"></script>
+	<script src="wet-boew/js/bootstrap-timepicker.min.js"></script>
+	<script>
+		$(document).on("wb-ready.wb", function (event) {
+
+
+			// reveal or hide next fieldset
+			$(document).on('change', 'input.revealNextFieldset', function () {
+				var nextFieldset = $(this).closest('fieldset').next('fieldset');
+				if (nextFieldset.hasClass('hidden') || nextFieldset.hasClass('show')) {
+					nextFieldset.toggleClass('hidden show');
+				} else { return; }
+			});
+
+
+			// repeat sections based on appt-quantity value
+			$("input#appt-quantity").change(function () {
+				addRemoveFormSection("appt-details", $("input#appt-quantity"))
+			});
+
+			// remove sections by assigning 1 to the input and running function
+			$("input[name='multi-appt']").change(function () {
+				if ($(this).val('multi-appt-no')) {
+					$("input#appt-quantity").val('1');
+					addRemoveFormSection("appt-details", $("input#appt-quantity"))
+					$("input#appt-quantity").val(' ');
+				} else {
+					return;
+				}
+
+			})
+
+			// time picker init and settings
+			//$('#deptTime, #returnTime, #apptTime').timepicker({
+			//	defaultTime: false,
+			//	showMeridian: false,
+			//	minuteStep: 15
+			//});
+
+			$('form').find(".bootstrap-timepicker input").each(function () {
+				//console.log(;
+				$("#" + $(this).attr('id')).timepicker({
+					defaultTime: false,
+					showMeridian: false,
+					minuteStep: 15
+				});
+			});
+
+			// dollars and cents decimal mask
+			$(document).on('input', '.finance-mask', function () {
+				this.value = parseFloat(this.value.replace(/(.*){1}/, '0$1').replace(/[^\d]/g, '').replace(/(\d\d?)$/, '.$1')).toFixed(2);
+			});
+
+			// HRT Specifc Business rules, form questions / error prevention
+
+			// dates can not be in the future
+			//$("input[type='date']").attr('max', moment().format().slice(0, 16));
+			// dates must be within the past 60 days
+			//$("input[type='date']").attr('min', moment().startOf('day').subtract(180, 'days').format().slice(0, 16));
+
+			// dates can not be in the future, max date = today
+			$("input[type='datetime-local']").attr('max', moment().format().slice(0, 16));
+			// dates must be within the past 180 days
+			$("input[type='datetime-local']").attr('min', moment().startOf('day').subtract(180, 'days').format().slice(0, 16));
+
+
+
+			// update invisible datetime fields used for validating and comparing appointment dates/times
+			// needs clean up
+			$(document).on('change', 'input[type=date], div.timepicker > input', function () {
+				var startDate = $('#deptDate').val();
+				var startTime = $('#deptTime').val();
+				var endDate = $('#returnDate').val();
+				var endTime = $('#returnTime').val();
+				var apptDate = $('#apptDate').val();
+				var apptTime = $('#apptTime').val();
+
+				console.log($(this));
+
+				if (startDate && startTime) {
+					var startDateTime = startDate + 'T' + startTime;
+					$('#deptDateTime').val(startDateTime).change();
+
+					var startDateTimeFormat = moment(startDateTime).format('MMMM Do YYYY, h:mm a');
+					// empty and unhide span.hidden
+					$('#deptDateTime').next('span').empty();
+					$('#deptDateTime').next('span.hidden').removeClass('hidden');
+					// append span <time datetime="2020-01-27 07:00Z">Monday, Jan 27, 2020, 7:00am EST</time>]
+					$('#deptDateTime').next('span').append('<time datetime="' + startDateTime + '">' + startDateTimeFormat + '</time>');
+					//console.log($('#deptDateTime').closest('fieldset').find('input').valid());
+
+					// validate field
+					$('#deptDateTime').valid();
+
+					/* appt can't start before travel */
+					$('#apptDateTime').attr('min', startDateTime).change();
+
+					/* return can't be after starting */
+					$('#returnDateTime').attr('min', startDateTime).change();
+
+				}
+
+				if (endDate && endTime) {
+					var endDateTime = endDate + 'T' + endTime;
+					$('#returnDateTime').val(endDateTime).change();
+
+					var endDateTimeFormat = moment(endDateTime).format('MMMM Do YYYY, h:mm a');
+					// empty and unhide span.hidden
+					$('#returnDateTime').next('span').empty();
+					$('#returnDateTime').next('span.hidden').removeClass('hidden');
+					// append span
+					$('#returnDateTime').next('span').append('<time datetime="' + endDateTime + '">' + endDateTimeFormat + '</time>');
+					// validate fields
+					$('#returnDateTime').valid();
+
+					/* dept can't start after travel */
+					$('#deptDateTime').attr('max', startDateTime).change();
+
+					/* appt can't start after travel */
+					$('#apptDateTime').attr('min', startDateTime).change();
+
+					// update departure min
+				}
+
+				if (apptDate && apptTime) {
+					var apptDateTime = apptDate + 'T' + apptTime;
+					$('#apptDateTime').val(apptDateTime).change();
+
+					var apptDateTimeFormat = moment(apptDateTime).format('MMMM Do YYYY, h:mm a');
+					// empty and unhide span.hidden
+					$('#apptDateTime').next('span').empty();
+					$('#apptDateTime').next('span.hidden').removeClass('hidden');
+					// append span
+					$('#apptDateTime').next('span').append('<time datetime="' + apptDateTime + '">' + apptDateTimeFormat + '</time>');
+					$('#apptDateTime').valid();
+
+				}
+			});
+
+
+		});
+		// repeats appts, iterates on attrs
+		function addRemoveFormSection(repeatSection, repeatValue) {
+
+			// find all sections that start with the same ID
+			var duplicateSections = $('[id^="' + repeatSection + '"]');
+
+			// calculate the amount of duplicated sections
+			var currentAmount = duplicateSections.length;
+
+			// grab the number of sections the user would like 
+			var inputAmount = repeatValue.val();
+
+			// if there are less sections than asked for 
+			if (inputAmount - currentAmount > 0) {
+
+				// loop as many times as needed
+				for (i = currentAmount; i < inputAmount; i++) {
+					// clone the section
+					var clone = $("#" + repeatSection).clone();
+
+					// iterate the id of the cloned section
+					clone.attr('id', repeatSection + i);
+
+					// find all the inputs, selects and sections within the clone
+					clone.find("section, input, select, label, fieldset").each(function () {
+
+						// if they have an id property
+						if ($(this).prop('id')) {
+							//grab the current id 
+							var oldID = $(this).attr('id');
+							//iterate on the id
+							$(this).attr('id', oldID + i);
+						}
+						// if they have an for property
+						if ($(this).prop('for')) {
+							//grab the current id 
+							var oldFor = $(this).attr('for');
+							//iterate on the id
+							$(this).attr('for', oldFor + i);
+						}
+
+						// if they have an name property
+						if ($(this).prop('name')) {
+							//grab the current id 
+							var oldName = $(this).attr('name');
+							//iterate on the id
+							$(this).attr('name', oldName + i);
+						}
+					});
+
+
+					// update the list of duplicate sections
+					duplicateSections = $('[id^="' + repeatSection + '"]');
+
+					// insert clone after the last duplicated section
+					clone.insertAfter(duplicateSections.last());
+
+					// update the list of duplicate sections
+					duplicateSections = $('[id^="' + repeatSection + '"]');
+
+					// iterate the heading of the cloned section
+					var oldHeader = duplicateSections.last().children("h2").text();
+
+					duplicateSections.last().children("h2").empty();
+
+					duplicateSections.last().children("h2").text(oldHeader + " " + (i + 1));
+
+				}
+				// if we need less sections 
+			} else if (inputAmount - currentAmount < 0) {
+				for (i = inputAmount; i < currentAmount; i++) {
+					// find the last div that starts with the same title 
+					duplicateSections.last().remove();
+					// update the list of duplicate sections
+					var duplicateSections = $('[id^="' + repeatSection + '"]');
+				}
+			}
+			else {
+				return;
+			}
+
+		}
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+
+</html>
