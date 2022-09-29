@@ -1,0 +1,7 @@
+﻿@charset "UTF-8";/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.7.0
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2018 Daniel Eden
+ */.animated{-webkit-animation-duration:1s;-moz-animation-duration:1s;-moz-animation-fill-mode:both;-webkit-animation-fill-mode:both;animation-duration:1s;animation-fill-mode:both} .fadeIn{-webkit-animation-name:fadeIn;animation-name:fadeIn;-moz-animation-name:fadeIn}@media (prefers-reduced-motion){.animated{-webkit-animation:unset!important;-webkit-transition:none!important;animation:unset!important;transition:none!important;opacity:1} .fadeIn{opacity: 1;} }@-webkit-keyframes fadeIn{0%{opacity:0}to{opacity:1}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}.fadeIn{opacity: 1;}
