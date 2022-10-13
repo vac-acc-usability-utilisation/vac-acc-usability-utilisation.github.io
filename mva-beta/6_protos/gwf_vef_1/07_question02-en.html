@@ -474,8 +474,10 @@
 
 <div class="col-xs-12 mrgn-tp-md">
 
+  <h2 class="mrgn-tp-0 mrgn-bttm-md">Medical expenses</h2>
+
   <label id="is-vac-employee-label" class="mrgn-tp-0 h2 required">
-    Do you require emergency funding to cover expenses required to maintain safety such as housing or shelter?
+    Do you require emergency funding to cover medical expenses not otherwise covered by programs or insurance?
   </label>
 
 
@@ -561,13 +563,19 @@
     Please specify the amount needed. 
   </label>
 
-  <p>todo: integer input</p>
+  <div class="form-group">
+    <input class="form-control" id="numeric1" name="numeric1" type="number" data-rule-digits="true" />
+  </div>
 
   <label id="is-vac-employee-label" class="mrgn-tp-0 h2 required">
     Please specify how you will use these funds.
   </label>
 
-  <p>todo: text input</p>
+  <textarea class="form-group col-md-3 full-width" rows="4"></textarea>
+  <p class="col-xs-12 small mrgn-tp-sm">
+    You used <span id="condition-relates-details-used">0</span> characters. <span id="condition-relates-details-left">3000</span> characters left.
+    <meter id="condition-relates-details-meter" style="width:100%;" value="0" min="0" high="2250" max="3000"></meter>
+  </p>
 
 
 </div>
@@ -778,7 +786,7 @@ function confirmClientCallback(result) {
   <div class="col-sm-5 col-sm-push-7 col-xs-12 text-right">
     
     
-      <a id="button-next"  href="07_question02-en.html" class="btn btn-lg btn-primary pull-right mrgn-lft-sm mrgn-bttm-sm btn-mobile " >
+      <a id="button-next"  href="07_question03-en.html" class="btn btn-lg btn-primary pull-right mrgn-lft-sm mrgn-bttm-sm btn-mobile " >
         
         
           Next

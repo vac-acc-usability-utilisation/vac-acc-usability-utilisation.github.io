@@ -17,8 +17,8 @@
     <!---->
     <link rel="stylesheet" href="../../../wet-boew-theme/css/theme.css">
     <link rel="stylesheet" href="../../assets/css/mva-wet-boew-custom.css">
-    <link rel="stylesheet" href="../..//assets/css/mva-custom.css">
-
+    <link rel="stylesheet" href="../..//assets/css/mva-custom.css"> 
+    <link rel="stylesheet" href="../../assets/css/mva-wizard.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
 
@@ -293,8 +293,8 @@
                     <li><a href="/prot/mv-ca/MVA_7_2">My <abbr title="Veterans Affairs Canada">VAC</abbr> Account</a></li>
 
                     <!--
-                    <li>Applications</li>-->
-
+                    <li>Applications</li>
+-->
                     <li>Find a form</li>
 
                     <li>Veterans Emergency Fund </li>
@@ -303,89 +303,731 @@
             </div>
         </div>
     </nav>
-
-        
     <div class="container"> 
-        <div class="row">
+      <div class="row">
+        
+        <main property="mainContentOfPage" class="col-xs-12">
           
-          <main property="mainContentOfPage" class="col-xs-12">
+          <div id="wb-main-in">
             
-            <div id="wb-main-in">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- Declare constants -->
 
 
-<h1 property="name" id="wb-cont" class="mrgn-tp-lg mrgn-bttm-0 brdr-0 word-wrapping">
-    Veterans Emergency Fund
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 property="name" id="wb-cont" class="mrgn-tp-lg mrgn-lft-sm brdr-0">
+  Service information of Member/Veteran
 </h1>
 
+<!-- content -->
 <script src="/clf-dev/MVACLF-2.0/scripts/mva/wizard.js?v=2022.8.14"></script>
 
-<form        id="frm"        name="frm"        action="/prot/mv-ca/mva_7_100_14/display_wizard"        method="post">
+<!-- step validation errors -->
+<div id="page-alerts">
 
-  <div class="row">
-    <div class="hidden-xs col-xs-12 col-sm-6">
-      <div>
-        <img src="../../assets/mva-application-package-intro-image.png" class="img-responsive img-big" alt="" />
-      </div>
-      <p>
-        Looking for a different form? <a href="/prot/mv-ca/MVA_7_23_5">View all forms</a>.
-      </p>
-    </div>
-    <div class="col-xs-12 col-sm-6">
-      <div id="text-welcome" class="">
-        <h2 class="mrgn-tp-md text-primary">
-          Welcome
-        </h2>
-        <p>
-          This guided form will lead you through a series of questions to help you complete your application. You can edit your answers at any time, and you will have a chance to complete a final review to ensure your information is correct before submitting your application.
-        </p>
-        <p>
-          Your progress will be saved automatically in this guided form and retained for you when you exit. Information from previous applications may also be saved automatically for you, depending on your internet browser.
-        </p>
-        <p>
-          If you have any questions about an application, please <a href="/prot/mv-ca/MVA_7_12">contact us</a>.
-        </p>
-        <!-- continue button -->
-        <div class="mrgn-tp-md mrgn-bttm-md">
-          <a id="button-continue" type="button" href="01_before-you-start-en.html" class="btn btn-lg btn-success btn-mobile">
-            Continue
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</form>
-            </div>       
-                
-            
-            <div id="page-details" class="mrgn-tp-md row pagedetails">
-            
-              <div class="col-sm-5 col-xs-12 datemod btn-mobile" id="date-modified">  
-                <dl id="wb-dtmd">
-                  <dt>Date Modified:&#32;</dt> 
-                  <dd><time property="dateModified">2022-10-04</time></dd>
-                </dl>
-              </div> 
-              
-              <div class="clear visible-xs"></div>
-                <div class="col-sm-4 col-xs-12 btn-mobile">   
-                  
-                </div>
-              
-              <div class="col-sm-3 col-xs-12 btn-mobile text-right">
-                <span class="color-accent" id="page-id"><strong>MV.7.100.14.1.0</strong> </span>
-              </div>
-              
-              <div class="clear visible-xs"></div>
-            </div>
-          </main>    
-         
-        </div>
-      </div>  
+
+
+
+
+
+
+
+
+
+
+<!-- step error messages -->
+<div id="message-box" class="alert alert-danger static-alert hidden" role="alert">
+  <h3>Error</h3>
   
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+
+
+
+</div>
+
+<!-- main content area --> 
+
+<div class="panel panel-default">
+<!-- main content area -->
+<div class="panel-body">
+  <div class="mrgn-lft-md mrgn-rght-md mrgn-bttm-sm">
+    <div class="row">
+
+<!-- Declare constants -->
+
+
+
+
+<form        id="frm"        name="frm"        action="/prot/mv-ca/mva_7_100_14/next"        method="post" 		class="span-8 module">
+
+
+
+
+
+
+
+
+
+
+<input type="hidden" name="formAction" value="/prot/mv-ca/MVA_7_100_14" id="formAction"/>
+<input type="hidden" name="model.submittedStepId" value="mva.7_100_14_2_4" id="submittedStepId"/>
+<input type="hidden" name="model.jumpToStepId" value="mva.7_100_14_6_2" id="jumpToStepId"/>
+<input type="hidden" name="model.editStepMode" value="false" id="editStepMode"/>
+<input type="hidden" name="model.returnStepAfterEdit" value="" id="returnStepAfterEdit"/>
+<input type="hidden" name="model.editModeUpdatePressed" value="false" id="editModeUpdatePressed"/>
+<input type="hidden" name="model.editModeCancelPressed" value="false" id="editModeCancelPressed"/>
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-xs-12 mrgn-tp-md">
+
+  <label id="is-vac-employee-label" class="mrgn-tp-0 h2 required">
+   Veteran's details
+  </label>
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+
+
+
+<!--
+<div class="col-xs-12 mrgn-tp-sm mrgn-bttm-0" id="info-detail-summary-is-vac-employee">
+<details class="mrgn-bttm-sm">
+  <summary>
+    <span class="fa fa-info-circle mrgn-rght-sm" aria-hidden="true"></span>
+    Why are we asking if you are an employee?
+  </summary>
+  <p class="mrgn-tp-md mrgn-bttm-0">
+      Veterans Affairs Canada is committed to protecting the privacy and confidentiality of all applicants. If you are an employee of Veterans Affairs, certain steps are taken to protect your information in the workplace.
+    </p>
+</details>
+</div>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
+
+
+
+
+
+
+
+
+<div class="col-xs-12"> 
+
+  <div class="form-group col-md-3">
+    <label for="fname1" class="required"><span class="field-name">First name</span> <strong class="required">(required)</strong></label>
+    <input class="form-control" id="fname1" name="fname1" type="text" autocomplete="given-name" required="required" data-rule-minlength="2" />
+  </div>
+
+  <div class="form-group col-md-3">
+    <label for="mname1" class="required"><span class="field-name">Middle name</span> <strong class="required">(required)</strong></label>
+    <input class="form-control" id="mname1" name="mname1" type="text" autocomplete="" required="required" data-rule-minlength="2" />
+  </div>
+
+  <div class="form-group col-md-3">
+    <label for="lname1" class="required"><span class="field-name">Last name</span> <strong class="required">(required)</strong></label>
+    <input class="form-control" id="lname1" name="lname1" type="text" autocomplete="" required="required" data-rule-minlength="2" />
+  </div>
+
+  <div class="form-group col-md-3">
+    <label for="oname1"><span class="field-name">Other name</span> </label>
+    <input class="form-control" id="oname1" name="oname1" type="text" data-rule-minlength="2" />
+  </div>
+
+ <div class="clearfix mrgn-bttm-lg"></div>
+
+  <div class="form-group col-md-12">
+    <label for="serviceNumber" class="required"><span class="field-name">Service number</span> <strong class="required">(required)</strong></label>
+    <input class="form-control" id="serviceNumber" name="serviceNumber" type="number"  data-rule-minlength="2" />
+  </div>
+
+  <div class="clearfix mrgn-bttm-lg"></div>
+
+  <div class="form-group col-md-3">
+    <label for="dob" class="required"><span class="field-name">Date of birth</span> <strong class="required">(required)</strong></label>
+    <input class="form-control" id="dob" name="dob" type="date" />
+  </div>
+
+  <div class="form-group col-md-3">
+    <label for="dod"><span class="field-name">Date of death</span></label>
+    <input class="form-control" id="dod" name="dod" type="date" />
+  </div>
+
+
+
+
+</div>
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div> 
+  </div> 
+</div> 
+</div> 
+    
+
+
+
+
+
+
+
+
+
+
+<!-- button bar -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row mrgn-tp-md">
+
+
+
+  <div class="col-sm-5 col-sm-push-7 col-xs-12 text-right">
+    
+    
+      <a id="button-next"  href="04_overview-other-en.html" class="btn btn-lg btn-primary pull-right mrgn-lft-sm mrgn-bttm-sm btn-mobile " >
+        
+        
+          Next
+        
+      </a>
+      <div class="visible-xs clearfix"></div>
+      <a id="button-back" type="button" href="02_overview-other-en.html" class="btn btn-lg btn-default btn-mobile">
+        Back
+      </a>
+    
+  </div>
+
+
+
+
+  
+  
+    <div class="col-sm-7 col-sm-pull-5 col-xs-12">
       
+        <a id="button-returnToMenu" type="button" href="02_overview-en.html" class="btn btn-lg btn-default btn-mobile">Return to overview</a>
+      
+      <button id="button-exit" type="button" class="wb-lbx btn btn-lg btn-default btn-mobile">Save and exit</button> 
+      
+    </div>
+  
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="inline_content" class="mfp-hide modal-dialog modal-content overlay-def">
+<header class="modal-header">
+  <h2 class="modal-title">
+    Exit
+  </h2>
+</header>
+<div class="modal-body">
+  <p>
+    After you exit, you can find this form in the <strong>saved forms</strong> section of My VAC Account.
+  </p>
+  <button type="button" id="wizard-exit-modal-cancel-button" class="btn btn-lg btn-default popup-modal-dismiss">
+    Cancel
+  </button>
+  <button type="button" id="wizard-exit-modal-exit-button" class="btn btn-lg btn-success" onclick="exit();">
+    Exit
+    <span class="fa fa-sign-out mrgn-lft-sm"></span>
+  </button>
+</div>
+</div>
+
+<div id="inline_delete" class="mfp-hide modal-dialog modal-content overlay-def">
+<header class="modal-header">
+  <h2 class="modal-title">
+    Delete
+  </h2>
+</header>
+<div class="modal-body">
+  <p>
+    Are you sure you want to delete this application?
+  </p>
+  <button type="button" id="wizard-delete-modal-cancel-button" class="btn btn-lg btn-default popup-modal-dismiss">
+    Cancel
+  </button>
+  <button type="button" id="wizard-delete-modal-delete-button" class="btn btn-lg btn-danger" onclick="deleteWizard();">
+    <span class="fa fa-trash mrgn-rght-sm"></span>
+    Delete
+  </button>
+</div>
+</div>
+
+
+<div id="profile_edit" class="mfp-hide modal-dialog modal-content overlay-def">
+<header class="modal-header">
+  <h2 class="modal-title">
+    Go to profile
+  </h2>
+</header>
+<div class="modal-body">
+  <p>
+    After you go to the profile section, you can return to this application by clicking continue at the bottom of the next page.
+  </p>
+  <button type="button" id="wizard-profile-modal-cancel-button" class="btn btn-lg btn-default popup-modal-dismiss">
+    Cancel
+  </button>
+  <button type="button" id="wizard-profile-modal-goto-button" class="btn btn-lg btn-success" onclick="editProfile()">
+    <span class="fa fa-sign-out mrgn-rght-sm"></span>
+    Go to profile
+  </button>
+</div>
+</div>
+
+<div id="delete-row-confirmation" class="mfp-hide modal-dialog modal-content overlay-def">
+<header class="modal-header">
+  <h2 class="modal-title">
+    Before you continue
+  </h2>
+</header>
+<div class="modal-body">
+  <p class="modal-message">
+    Are you sure you want to delete this?
+  </p>
+  <button type="button" id="delete-row-modal-cancel-btn" class="btn btn-info btn-lg popup-modal-dismiss mrgn-rght-sm">
+    Cancel
+  </button>
+  <button type="button" id="delete-row-modal-delete-btn" class="btn btn-danger btn-lg mrgn-rght-sm js-modal-delete-button popup-modal-dismiss">
+    Delete
+  </button>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+$(function() {
+  /* Highlight Selected Option */   
+  $(document).on("click", "input[type=radio]", function() {
+    $this = $(this);
+    $this.closest('.form-group').find('.radio').removeClass('active');
+    if($this.is(':checked')) {
+      $this.closest('.radio').addClass('active');
+    }
+  });
+  
+  setTimeout(function(){
+    /* Hide/Show Elements For Prepopulated Data*/
+    $('[type=radio]:checked').trigger('click'); 
+  }, 100);      
+  
+  /* Initialize textarea counters for Prepopulated Data */
+  $('textarea').trigger('keyup');
+  
+  $('#button-exit, #button-exit-menu').click(function(e){
+    e.preventDefault();
+    wizard.showSaveAndExit();
+  });
+  
+  //Stop enter from submitting the step when only one text input present on page
+  $('input[type=text]').keypress(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+      return false;
+    }
+  });
+  
+});
+
+function openFormById(formId) {
+  $('#displayForm input#formID').val(formId);
+  $("#displayForm").submit();
+}
+
+/* Set Custom Messages for WET-BOEW*/
+$(document).on('timerpoke.wb', function() {
+  wb.i18nDict["frm-nosubmit"]='Your changes cannot be saved because' + ' ';
+})
+
+// TODO - wizardhelper should be moved to a separate file
+function WizardHelper () { }
+
+WizardHelper.prototype.initPage = function() {
+  // settings
+  this.settings = {
+    deleteModal: $('#delete-row-confirmation'),
+    selectors: {
+      wizardForms: '.current-step-form'
+    }
+  };
+
+  this.setupDeleteConfirm();
+  this.setupUncheckCheckboxConfirm();
+  this.setupEnsureAtLeastOne();
+};
+
+WizardHelper.prototype.showSaveAndExit = function() {
+  var $form = $(this.settings.selectors.wizardForms);
+  
+  // show exit prompt
+  modal_helper.showModal('#inline_content');
+};  
+
+//
+// limits the number of items to a maximum.  An alert is shown if at the max and false is returned.
+// otherwise true is returned.
+//
+WizardHelper.prototype.handleMaxItems = function handleMaxItems($clickedElementP, eP) {
+  var $this = $clickedElementP;
+  var maxItems = $this.data('max-items');
+  var selector = $this.data('items-to-count');
+
+  if ($(selector).size() >= maxItems) {
+    var message = $this.data('at-max-message');
+    alert(message);
+    eP.preventDefault();
+    return false;
+  }
+
+  return true;
+};
+
+/*
+ This pops a confirmation modal which then fires an event on the originating control.
+ example:
+   within the markup: 
+     <div class="btn btn-delete js-delete-confirm js-delete-foo"
+          data-delete-confirm-modal-message="Are you sure you want to delete the foo?"
+          data-delete-confirmed-event="deleteItemConfirmed">
+       Delete Foo
+     </div>
+  within the script section of the page:
+    $(document).on('deleteItemConfirmed', '.js-delete-service-history', function() {
+      // todo - run logic here  
+    return false;
+  });
+ 
+  The event name can be custom per button type to allow for different logic to run per button type.
+*/
+WizardHelper.prototype.setupDeleteConfirm = function(e) {
+  var helper = this;
+  $(document).on('click', '.js-delete-confirm', function(e) {
+    var $this = $(this);
+
+    var modal_message = $this.data('delete-confirm-modal-message');
+    var delete_confirmed_event = $this.data('delete-confirmed-event');
+    
+    // configure and show the wet modal for actual delete confirmation
+    var modal = helper.settings.deleteModal;
+    modal.find('.modal-message').html(modal_message);     
+    modal.find('.js-modal-delete-button').off('click').on("click", function(e){
+      $this.trigger(delete_confirmed_event, $this);        
+    });
+    
+    wb.doc.trigger("open.wb-lbx", [[{ src: modal, type: 'inline' }], true]);
+
+    // cancel the originating event
+    e.preventDefault();
+    return false;
+  })
+};
+
+/*
+ This pops a confirmation modal which then fires an event on the originating control.
+ example:
+   within the markup: 
+    
+    <div class="checkbox">    <label><input type="checkbox" name="checkbox-name" value="true" id="checkbox-id" class=" js-checkbox-confirm js-remove-{checkbox-id}" data-remove-confirm-modal-message="Are you sure you want to remove Label Text from selected values?" data-remove-confirmed-event="removeItemConfirmed"/><input type="hidden" id="__checkbox_checkbox-id" name="__checkbox_checkbox-name" value="true" /> Label Text</label></div>
+  within the script section of the page:
+    $(document).on('removeItemConfirmed', '.js-remove-{checkbox-id}', function() {
+      // todo - run logic here  
+    return false;
+  });
+ 
+  The event name can be custom per button type to allow for different logic to run per button type.
+*/
+WizardHelper.prototype.setupUncheckCheckboxConfirm = function(e) {
+  var helper = this;
+  $(document).on('click', '.js-checkbox-confirm', function(e) {
+    var $this = $(this);
+
+    if (!$this.is("input[type=checkbox]") || ($this.is("input[type=checkbox]") && $this.is(':checked'))) {
+      return true;
+    }
+
+    $this.prop("checked", true);
+    $this.trigger('update');
+    $this.blur();
+    
+    // cancel the originating event
+    e.preventDefault();
+
+    var modal_message = $this.data('remove-confirm-modal-message');
+    var remove_confirmed_event = $this.data('remove-confirmed-event');
+    
+    // configure and show the wet modal for actual delete confirmation
+    var modal = helper.settings.deleteModal;
+    modal.find('.modal-message').html(modal_message);
+    modal.find('.js-modal-delete-button').text('Remove');
+    modal.find('.js-modal-delete-button').off('click').on("click", function(e){
+      $this.trigger(remove_confirmed_event, $this);        
+    });
+    
+    wb.doc.trigger("open.wb-lbx", [[{ src: modal, type: 'inline' }], true]);
+
+    return false;
+  })
+};
+
+// fix for older version of WET within MVA.
+// this is fixed in the latest version of WET and can be removed once upgraded.
+WizardHelper.prototype.clearWetValidationWithinForm = function(formSelectorP){
+    var $form = $(formSelectorP);
+  $form.find('.has-error')
+       .removeClass('has-error');
+    $form.find('section')
+         .remove();
+};
+
+WizardHelper.prototype.setupEnsureAtLeastOne = function() {
+  $(document).on('click', '.js-ensure-at-least-one', function(e) {
+    var $this = $(this);
+    var selector = $this.data("ensure-at-least-one-selector");
+    var message = $this.data("ensure-at-least-one-message");
+
+    if ($(selector).size() == 0) {
+      alert(message);
+      e.preventDefault();
+      return false;
+    }
+
+    return true;
+  });
+};
+
+// initialize the wizard helper
+window.wizard = new WizardHelper();
+window.wizard.initPage(); 
+</script>
+
+
+
+<script>
+$(function() {
+  initializeStandardButtonListeners();
+});
+</script>
+
+
+
+          </div>       
+              
+          
+          <div id="page-details" class="mrgn-tp-md row pagedetails">
+          
+            <div class="col-sm-5 col-xs-12 datemod btn-mobile" id="date-modified">  
+              <dl id="wb-dtmd">
+                <dt>Date Modified:&#32;</dt> 
+                <dd><time property="dateModified">2022-10-04</time></dd>
+              </dl>
+            </div> 
+            
+            <div class="clear visible-xs"></div>
+              <div class="col-sm-4 col-xs-12 btn-mobile">   
+                
+              </div>
+            
+            <div class="col-sm-3 col-xs-12 btn-mobile text-right">
+              <span class="color-accent" id="page-id"><strong>MV.</strong> </span>
+            </div>
+            
+            <div class="clear visible-xs"></div>
+          </div>
+        </main>    
+
+        
+
+
+
+
+
+
+
+
+
+      
+        
+      </div>
+    </div>  
+
+    
 
 
 
@@ -393,30 +1035,32 @@
 
 
 <footer id="wb-info">
-  <div class="brand">
-  	<div class="container">
-		<div class="text-center">
-			<p class="mrgn-tp-md mrgn-bttm-md">
-		      
-          
-            <small>WEB.101171 &nbsp;|&nbsp;</small>
-          
-				<a href="/prot/mv-ca/MVA_7_21">Privacy information</a>
-			</p>
-		</div>
-		<div class="row">
-			<div class="col-xs-6 visible-sm visible-xs tofpg">
-				<a href="#wb-cont">Top of Page <span class="fa fa-chevron-up"></span></a>
-			</div>
-			<div class="col-xs-6 col-md-12 text-right">
+<div class="brand">
+  <div class="container">
+  <div class="text-center">
+    <p class="mrgn-tp-md mrgn-bttm-md">
         
         
-        <object type="image/svg+xml" tabindex="-1" role="img" class="footer-logo" data="/clf-dev/MVACLF-2.0/distWET4_0_50_1/assets/wmms-blk.svg" title="Government of Canada Logo" alt="Government of Canada Logo"></object>
-			</div>
-		</div>
-  	</div>
+          <small>WEB.101171 &nbsp;|&nbsp;</small>
+        
+      <a href="/prot/mv-ca/MVA_7_21">Privacy information</a>
+    </p>
   </div>
+  <div class="row">
+    <div class="col-xs-6 visible-sm visible-xs tofpg">
+      <a href="#wb-cont">Top of Page <span class="fa fa-chevron-up"></span></a>
+    </div>
+    <div class="col-xs-6 col-md-12 text-right">
+      
+      
+      <object type="image/svg+xml" tabindex="-1" role="img" class="footer-logo" data="/clf-dev/MVACLF-2.0/distWET4_0_50_1/assets/wmms-blk.svg" title="Government of Canada Logo" alt="Government of Canada Logo"></object>
+    </div>
+  </div>
+  </div>
+</div>
 </footer>
+
+
 
 
 
