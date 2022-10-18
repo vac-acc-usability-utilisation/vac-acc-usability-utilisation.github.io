@@ -613,7 +613,7 @@
       <!--table-->
 
       <h3>Specify how you will use these funds</h3>
-      <div class="table-responsive">
+      <div class="table-responsive hidden-xs">
 <table class="provisional gc-table table" id="vef-funds-table">
 	<caption class="wb-inv">Table for entering description and amounts of costs</caption>
 	<thead class="text-muted">
@@ -684,8 +684,6 @@
 		
 	</tbody>
 </table>
-</div>
-
 <div class="row">
   <div class="col-sm-7 text-right bold h4 mrgn-tp-sm">
     Total amount requested
@@ -701,6 +699,59 @@
     </div>
 </div>
 </div>
+</div>
+
+<div class="hidden-sm">
+	<h3 class="bold h4">
+    Housing/shelter expenses
+  </h3>
+    <div class="form-group">
+      <label for="housing-desc"><span class="field-name">Description of housing/shelter expenses</span> </label>
+      <input class="form-control full-width" id="housing-desc" name="housing-desc" type="text" data-rule-letterswithbasicpunc="true" />
+    </div>
+    <label for="housing-amount">Housing/shelter expenses amount ($)</label>
+    <div class="input-group">
+      <span class="input-group-addon">$</span>
+      <input type="number" class="form-control" id="housing-amount"/>
+    </div>
+
+    <h3 class="bold h4">
+      Medical expenses
+    </h3>
+      <div class="form-group">
+        <label for="medical"><span class="field-name">Description of medical expenses</span> </label>
+        <input class="form-control full-width" id="medical" name="medical" type="text" data-rule-letterswithbasicpunc="true" />
+      </div>
+      <label for="medical">Medical expenses amount ($)</label>
+      <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input type="number" class="form-control" id="housing-amount"/>
+      </div>
+
+      <h3 class="bold h4">
+        Other  expenses
+      </h3>
+        <div class="form-group">
+          <label for="other"><span class="field-name">Description of other expenses</span> </label>
+          <input class="form-control full-width" id="other" name="other" type="text" data-rule-letterswithbasicpunc="true" />
+        </div>
+        <label for="other">Other expenses amount ($)</label>
+        <div class="input-group">
+          <span class="input-group-addon">$</span>
+          <input type="number" class="form-control" id="other-amount"/>
+        </div>
+
+        <hr>
+        <label for="other">Total expenses</label>
+        <div class="input-group">
+          <span class="input-group-addon">$</span>
+          <input type="number" class="form-control" id="total-amount" disabled/>
+        </div>
+  
+
+</div>
+
+
 
   
   
@@ -721,12 +772,7 @@
 </div> 
 </div> 
 
-<script>
 
-$(document).ready(function(){
-
-});
-</script>
     
 
 
