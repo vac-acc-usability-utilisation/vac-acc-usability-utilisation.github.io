@@ -17,8 +17,8 @@
     <!---->
     <link rel="stylesheet" href="../../../wet-boew-theme/css/theme.css">
     <link rel="stylesheet" href="../../assets/css/mva-wet-boew-custom.css">
-    <link rel="stylesheet" href="../..//assets/css/mva-custom.css"> 
-    <link rel="stylesheet" href="../../assets/css/mva-wizard.css">
+    <link rel="stylesheet" href="../..//assets/css/mva-custom.css">
+
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
 
@@ -291,25 +291,25 @@
 
 
                     <li><a href="/prot/mv-ca/MVA_7_2">My <abbr title="Veterans Affairs Canada">VAC</abbr> Account</a></li>
+                  <!--
+                    <li>Applications</li>-->
 
-                    <!--
-                    <li>Applications</li>
--->
-                    <li>Find a form</li>
+                    <li><a href="#">Forms</a></li>
 
-                    <li>Veterans Emergency Fund </li>
+                    <li>Veterans Emergency Fund</li>
 
                 </ol>
             </div>
         </div>
     </nav>
+
     <div class="container"> 
-      <div class="row">
-        
-        <main property="mainContentOfPage" class="col-xs-12">
+        <div class="row">
           
-          <div id="wb-main-in">
+          <main property="mainContentOfPage" class="col-xs-12">
             
+            <div id="wb-main-in">
+              
 
 
 
@@ -317,7 +317,7 @@
 
 
 
-
+	
 
 
 
@@ -377,7 +377,7 @@
 
 
 <h1 property="name" id="wb-cont" class="mrgn-tp-lg mrgn-lft-sm brdr-0">
-  Details of emergency
+  Before you start
 </h1>
 
 <!-- content -->
@@ -385,37 +385,16 @@
 
 <!-- step validation errors -->
 <div id="page-alerts">
-
-
-
-
-
-
-
-
-
-
-
-<!-- step error messages -->
-<div id="" class="alert alert-info">
-  <div class="alert-body">
-
-    <p>
-      The Veteran Emergency Fund provide monetary assistance to applicant who are facing a financial crisis/emergency, with the intent of resolving the immediate need.
-
-    </p>
   
-  </div>
-  
-    
-  
-  
-  
-  
-  
-  
-  
-</div>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -425,354 +404,151 @@
 <!-- main content area --> 
 
 <div class="panel panel-default">
-<!-- main content area -->
-<div class="panel-body">
-  <div class="mrgn-lft-md mrgn-rght-md mrgn-bttm-sm">
-    <div class="row">
+  <!-- main content area -->
+  <div class="panel-body">
+    <div class="mrgn-lft-md mrgn-rght-md mrgn-bttm-sm">
+      <div class="row">
 
 <!-- Declare constants -->
 
 
-
+<!-- BEGIN CUSTOM -->
 
 <form        id="frm"        name="frm"        action="/prot/mv-ca/mva_7_100_14/next"        method="post" 		class="span-8 module">
 
-
-
-
-
-
-
-
-
-
-<input type="hidden" name="formAction" value="/prot/mv-ca/MVA_7_100_14" id="formAction"/>
-<input type="hidden" name="model.submittedStepId" value="mva.7_100_14_2_4" id="submittedStepId"/>
-<input type="hidden" name="model.jumpToStepId" value="mva.7_100_14_6_2" id="jumpToStepId"/>
-<input type="hidden" name="model.editStepMode" value="false" id="editStepMode"/>
-<input type="hidden" name="model.returnStepAfterEdit" value="" id="returnStepAfterEdit"/>
-<input type="hidden" name="model.editModeUpdatePressed" value="false" id="editModeUpdatePressed"/>
-<input type="hidden" name="model.editModeCancelPressed" value="false" id="editModeCancelPressed"/>
-
-
-
-  
-  
-  
-  
-  
-  
-  
-  
   
 
 
-
-
-
-
-
-
-
-<!--
-
-<div class="col-xs-12 mrgn-tp-md">
-
-  <label id="is-vac-employee-label" class="mrgn-tp-0 h2 required">
-    Do you attest that you do not have liquid assets to address the emergency?
-  </label>
-
-<p>Liquid assets are assets in the form of cash or funds easily convertible into cash.</p>
-
-
-</div>
-
--->
-
-
-
-  
-  
-  
-
-
-
-<!--
-<div class="col-xs-12 mrgn-tp-sm mrgn-bttm-0" id="info-detail-summary-is-vac-employee">
-<details class="mrgn-bttm-sm">
-  <summary>
-    <span class="fa fa-info-circle mrgn-rght-sm" aria-hidden="true"></span>
-    Why are we asking if you are an employee?
-  </summary>
-  <p class="mrgn-tp-md mrgn-bttm-0">
-      Veterans Affairs Canada is committed to protecting the privacy and confidentiality of all applicants. If you are an employee of Veterans Affairs, certain steps are taken to protect your information in the workplace.
-    </p>
-</details>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
-
-
-
-
-
-
-
-<div class="col-xs-12"> 
-
-
-<div class="list-group form-group" role="group" aria-labelledby="attest-assets">
-  
-  
-    <div class="radio list-group-item"> 
-<label ><input type="radio" name="attest-assets" id="attest-assets-1" value="1"/>Yes</label></div>
-
-<div class="radio list-group-item">
-<label ><input type="radio" name="attest-assets" id="attest-assets-0" value="0"/>No</label></div>
-
-
-</div>
-
-</div>
-
-
-
--->
-
-<div class="col-xs-12 mrgn-tp-md">
-
-  <label for="describe-circumstances" class="mrgn-tp-0 h2 required">
-    Describe the circumstances surrounding the need for assistance. 
-  </label>
-  <p>Please limit the personal or
-    3rd party information to what is required to explain your request for emergency funding.</p>
-  <div class="col-xs-12"> 
-
-  
-    <textarea id="describe-circumstances" class="full-width" rows="6"></textarea>
-    <p class="col-xs-12 small mrgn-tp-sm">
-      You used <span id="condition-relates-details-used">0</span> characters. <span id="condition-relates-details-left">3000</span> characters left.
-      <meter id="condition-relates-details-meter" style="width:100%;" value="0" min="0" high="2250" max="3000"></meter>
-    </p>
-    </div>
- 
-    <div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
-<!--
-    <label class="mrgn-tp-0 h2 required">Specify how you will use these funds:</label>
-
-    <div class="row">
-      <div class="col-sm-4 text-right">Housing/shelter expenses</div>
-    <div class="col-sm-4">
-      <input type="text" class="full-width form-control">
-    </div>
-    <div class="col-sm-4"></div>
-      <input type="number" placeholder="0.00">
-    </div>
-
-    <div class="row">
-      <div class="col-sm-4 text-right">Medical expenses</div>
-    <div class="col-sm-4">
-      <input type="text" class="full-width">
-    </div>
-    <div class="col-sm-4"></div>
-      <input type="number" placeholder="0.00">
-    </div>
-
-    <div class="row">
-      <div class="col-sm-4 text-right">Other expenses</div>
-    <div class="col-sm-4">
-      <input type="text" class="full-width">
-    </div>
-    <div class="col-sm-4"></div>
-      <input type="number" placeholder="0.00">
-    </div>-->
-
-
-      <!--table-->
-
-      <h3>Specify how you will use these funds</h3>
-      <div class="hidden-xs">
-<table class="table" id="vef-funds-table">
-	<caption class="wb-inv">Table for entering description and amounts of costs</caption>
-	<thead class="text-muted">
-		<tr>
-			<th>Category of Expense</th>
-			<th>Description of Expense</th>
-			<th>Amount ($)</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td data-label="Type of Expense" class="bold h4">
-        Housing/shelter
-      </td>
-			<td data-label="Description of Expense">
-        <div class="form-group col-sm-11">
-          <label for="housing-desc" class="hidden wb-inv mrgn-tp-0"><span class="field-name">Description of housing/shelter expenses</span> </label>
-          <input class="form-control full-width" id="housing-desc" name="housing-desc" type="text" data-rule-letterswithbasicpunc="true" />
-        </div>
-      </td>
-			<td data-label="Amount ($)">
-        <label for="housing-amount" class="wb-inv">Housing/shelter expenses amount ($)</label>
-        <div class="input-group col-sm-5">
-          <span class="input-group-addon">$</span>
-          <input type="number" class="form-control" id="housing-amount"/>
-          
-        </div>
-      </td>
-		</tr>
-		<tr>
-      <td data-label="Type of Expense" class="bold h4">
-        Medical expenses
-      </td>
-		<td data-label="Description of Expense">
-      <div class="form-group col-sm-11">
-        <label for="medical-desc" class="hidden wb-inv mrgn-tp-0"><span class="field-name">Description of medical expenses</span> </label>
-        <input class="form-control full-width" id="medical-desc" name="medical-desc" type="text" data-rule-letterswithbasicpunc="true" />
-      </div>
-    </td>
-    <td data-label="Amount ($)">
-      <label for="medical-amount" class="wb-inv">Medical expenses amount ($)</label>
-      <div class="input-group col-sm-5">
-        <span class="input-group-addon">$</span>
-        <input type="number" class="form-control" id="medical-amount"/>
-        
-      </div>
-    </td>
-		</tr>
-		<tr>
-			<td data-label="Type of Expense" class="bold h4">
-        Other expenses
-      </td>
-			<td data-label="Description of Expense">
-        <div class="form-group col-sm-11">
-          <label for="other-desc" class="hidden wb-inv mrgn-tp-0"><span class="field-name">Description of other expenses</span> </label>
-          <input class="form-control full-width" id="other-desc" name="other-desc" type="text" data-rule-letterswithbasicpunc="true" />
-        </div>
-      </td>
-			<td data-label="Amount ($)">
-        <label for="other-amount" class="wb-inv">Other expenses amount ($)</label>
-        <div class="input-group col-sm-5">
-          <span class="input-group-addon">$</span>
-          <input type="number" class="form-control" id="other-amount" min="1" max="2000"/>
-          
-        </div>
-      </td>
-		</tr>
-		
-	</tbody>
-</table>
-<div class="row">
-  <div class="col-sm-7 text-right bold h4 mrgn-tp-sm">
-    Total amount requested
-  </div>
-  
-  
-  <div class="col-sm-4 mrgn-lft-sm">
-    <label for="sum" class="wb-inv">$ Sum</label>
-    <div class="input-group mrgn-lft-lg col-sm-6">
-      <span class="input-group-addon">$</span>
-      <input type="number" class="form-control disabled" min="1" max="2000" id="sum" disabled/>
+  <div class="col-xs-12">
+    
       
-    </div>
-</div>
-</div>
-</div>
+      
+    
 
-<div class="hidden-sm hidden-md hidden-lg">
-	<h3 class="bold h4">
-    Housing/shelter expenses
-  </h3>
-    <div class="form-group">
-      <label for="housing-desc"><span class="field-name">Description of housing/shelter expenses</span> </label>
-      <input class="form-control full-width" id="housing-desc" name="housing-desc" type="text" data-rule-letterswithbasicpunc="true" />
-    </div>
-    <label for="housing-amount">Housing/shelter expenses amount ($)</label>
-    <div class="input-group">
-      <span class="input-group-addon">$</span>
-      <input type="number" class="form-control" id="housing-amount"/>
-    </div>
 
-    <h3 class="bold h4">
-      Medical expenses
-    </h3>
-      <div class="form-group">
-        <label for="medical"><span class="field-name">Description of medical expenses</span> </label>
-        <input class="form-control full-width" id="medical" name="medical" type="text" data-rule-letterswithbasicpunc="true" />
-      </div>
-      <label for="medical">Medical expenses amount ($)</label>
-      <div class="input-group">
-        <span class="input-group-addon">$</span>
-        <input type="number" class="form-control" id="housing-amount"/>
-      </div>
 
-      <h3 class="bold h4">
-        Other  expenses
-      </h3>
-        <div class="form-group">
-          <label for="other"><span class="field-name">Description of other expenses</span> </label>
-          <input class="form-control full-width" id="other" name="other" type="text" data-rule-letterswithbasicpunc="true" />
-        </div>
-        <label for="other">Other expenses amount ($)</label>
-        <div class="input-group">
-          <span class="input-group-addon">$</span>
-          <input type="number" class="form-control" id="other-amount"/>
-        </div>
 
-        <hr>
-        <label for="other">Total expenses</label>
-        <div class="input-group">
-          <span class="input-group-addon">$</span>
-          <input type="number" class="form-control" id="total-amount" disabled/>
-        </div>
-  
 
-</div>
 
 
 
   
   
   
-  </div>
-
- 
-
-</div>
-
-
-
-</form>
+  
+  
+  
+  
+  
 
 
-    </div> 
-  </div> 
-</div> 
-</div> 
 
 
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="h3 mrgn-tp-md">
+  <span class="fa fa-clock mrgn-rght-sm"></span>
+  Time to complete
+</h2>
+
+  
+    <p>
+      
+      
+       We expect this application to take about 10 to 15 minutes, if you have all of the information ready. 
+      
+      
+    </p>
+  
+  
+
+
+
+
+    
+      
+    
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<h2 class="h3">
+  <span class="fa fa-info-circle mrgn-rght-sm"></span>
+  Information you will need
+</h2>
+
+
+  <ul>
+          <li>
+            Proof of identity (for first applications)
+          </li>
+          <li>Veteran service information</li>
+          <li>
+            Details of an emergency situation that requires immediate financial support
+          </li>
+        </ul>
+
+
+
+    
+      
+      
+      
     
 
 
@@ -785,18 +561,227 @@
 
 
 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="h3">
+  <span class="fa fa-life-ring mrgn-rght-sm"></span>
+  Getting help with your application
+</h2>
+
+
+  <ul>
+          <li>
+            If you need help completing an application, <a href="/prot/mv-ca/MVA_7_12">contact <abbr title="Veterans Affairs Canada">VAC</abbr></a> by secure message, phone, or in person.
+          </li>
+          <!--
+          <li>
+            The organizations listed below will also help you to complete and submit an application, free of charge.
+            <ul>
+              <li>
+                <a href="http://www.legion.ca/" role="button" target="_blank">The Royal Canadian Legion<span class="fa fa-external-link mrgn-lft-sm" aria-hidden="true"></span><span class="wb-inv screen-reader-text">Opens a new window</span></a>
+              </li>
+              <li>
+                <a href="http://www.waramps.ca/home/?LangType=1033" role="button" target="_blank">War Amputations of Canada<span class="fa fa-external-link mrgn-lft-sm" aria-hidden="true"></span><span class="wb-inv screen-reader-text">Opens a new window</span></a>
+              </li>
+              <li>
+                <a href="http://anavets.ca/" role="button" target="_blank">Army, Navy and Air Force Veterans in Canada<span class="fa fa-external-link mrgn-lft-sm" aria-hidden="true"></span><span class="wb-inv screen-reader-text">Opens a new window</span></a>
+              </li>
+            </ul>
+          </li>-->
+        </ul>
+
+  </div>
+</form>
+
+
+
+
+
+<!-- END CUSTOM -->
+
+      </div> 
+    </div> 
+  </div> 
+</div> 
+      
+
+  
+
+
+
+
+
+
+
+
+<script>
+var $buttonNext;
+var $buttonUpdate;
+
+$(function() {
+	$buttonNext = $('#button-next');
+	$buttonUpdate = $('#button-update');
+
+	mva_app.swapLanguageUrlOverride = '/prot/mv-ca/MVA_7_100_14/swap_language';
+	mva_app.$formForSwapLanguageOverride = $('#frm');
+    
+    document.title = 'Disability Benefits (Pain and Suffering Compensation/Disability Pension) - My VAC Account - Veterans Affairs Canada';
+  });
+  
+  function initializeStandardButtonListeners() {
+    $buttonNext.off("click");
+    $buttonUpdate.off("click");
+    $buttonNext.on("click", function(e) {
+      
+        next();
+      
+    });
+    $buttonUpdate.on("click", function(e) {
+      editUpdate('');
+    });
+  }
+  
+  function initializeReviewPageButtonListeners() {
+	$buttonNext.off("click");
+    $buttonUpdate.off("click");
+    $buttonNext.on("click", function(e) {
+      next();
+    });
+    $buttonUpdate.on("click", function(e) {
+      next();
+    });
+  }
+  
+  //Only allow numbers, commas, decimals, and spaces on client side
+  function ensureNumbericInputOnTextfield(event) {
+    return ensureNumbericInputOnTextfield(event, []);
+  }
+  
+  // Only allow numbers, commas, decimals, and spaces on client side
+  function ensureNumbericInputOnTextfield(event, additionalKeys) {
+    var notAllowed = [33,34,35,36,37,38,39,40,41,42,43,45,47].concat(additionalKeys);
+    return (event.which <= 57 &&  jQuery.inArray(event.which, notAllowed) == -1);
+  }
+  
+  //Makes sure dates fit within bounds
+  function validateDateInput(input, min, max) {
+    var value = moment(input.value);
+    var minValue = moment(min);
+	  var maxValue = moment(max);
+
+    if (value != null && value > maxValue) {
+      input.value = maxValue.format("YYYY-MM-DD");
+      return false;
+    } else if (value != null && (value < minValue)) {
+      input.value = minValue.format("YYYY-MM-DD");
+      return false;
+    } else if (value != null && !value.isValid()) {
+      input.value = '';
+      return false;
+    }
+    
+    input.value = moment(input.value).format("YYYY-MM-DD");
+    return true;
+  }
+  
+  // Ensure value is a valid integer and within a range if specified.
+  function validateIntegerInput(input, min, max) {
+    var number = parseInt(input.value);
+    if (isNaN(number)) {
+      input.value = '';
+      return false;
+    }
+    if (min != null && number < min) {
+      input.value = min;
+      return false;
+    }
+    if (max != null && number > max) {
+      input.value = max;
+      return false;
+    }
+  }
+  
+  // Eng : '3,456.70'  French : '3 456,70'
+  function validateCurrencyInput(input, min, max) {
+    var tmp = new String(input.value).replace(/[\.,\s]/g, '');  // remove dot, comma, space 
+    var inp =    parseInt(tmp);  
+    var number = parseFloat(inp);
+    var percentage = (number)/100;
+    
+    min = new String(min).replace(',', '.');
+    max = new String(max).replace(',', '.');
+    
+    var zeroes = input % 10;
+
+    if (isNaN(number)) {
+      input.value = '';
+      return false;
+    } else if (min != null && percentage < min) {
+      input.value = parseFloat(min).toFixed(2);
+      return false;
+    } else if (max != null && percentage > max) {
+      input.value = parseFloat(max).toFixed(2);
+      return false;
+    }
+
+    input.value = parseFloat(percentage).toFixed(2);
+    return true;
+  }
+  
+  function validatePhoneInput(input) {
+    input = input.value.replace(/\D/g,'');
+    input = input.substring(0,10);
+
+    var size = input.length;
+    
+    if (size == 0) {
+      input = input;
+    } else if (size <= 4) {
+      input = input;
+    } else if (size <= 7) {
+      input = input.substring(0,3) + '-' +input.substring(3,7);
+    } else {
+      input = input.substring(0,3) + '-' + input.substring(3,6) + '-' + input.substring(6,10);
+    }
+    
+    return input; 
+  }
+
+  // Callback for the POA Client Confirm modal
+  function confirmClientCallback(result) {
+    if (result.success) {
+      next();
+    }
+  }
+  
+</script>
+
+
+
+
 
 <!-- button bar -->
 
-
-
-
-
-
-
-
-
-
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
@@ -808,41 +793,36 @@
 
 
 <div class="row mrgn-tp-md">
-
-
-
-  <div class="col-sm-5 col-sm-push-7 col-xs-12 text-right">
-    
-    
-      <a id="button-next"  href="06_overview-vet-en.html" class="btn btn-lg btn-primary pull-right mrgn-lft-sm mrgn-bttm-sm btn-mobile " >
-        
-        
-          Next
-        
-      </a>
-      <div class="visible-xs clearfix"></div>
-      <button id="button-back" type="button" onclick="back();" class="btn btn-lg btn-default btn-mobile">
-        Back
-      </button>
-    
-  </div>
-
-
-
-
   
   
-    <div class="col-sm-7 col-sm-pull-5 col-xs-12">
+  
+    <div class="col-sm-5 col-sm-push-7 col-xs-12 text-right">
       
-        <button id="button-returnToMenu" type="button" onclick="jump('mva.7_100_14_menu');" class="btn btn-lg btn-default btn-mobile">Return to overview</button>
       
-      <button id="button-exit" type="button" class="wb-lbx btn btn-lg btn-default btn-mobile">Save and exit</button> 
+        <a id="button-next"  href="02_overview-vet-en.html" class="btn btn-lg btn-success pull-right mrgn-lft-sm mrgn-bttm-sm btn-mobile " >
+          
+            Start application
+          
+          
+        </a>
+        <div class="visible-xs clearfix"></div>
+        <a href="00_applicant-selection-en.html" id="button-back" class="btn btn-lg btn-default btn-mobile">
+          Back
+        </a>
       
     </div>
   
-
-
-
+  
+  
+  
+  
+    <div class="col-sm-7 col-sm-pull-5 col-xs-12">
+      <a id="button-cancel" type="button" href="00_welcome-en.html" class="btn btn-lg btn-default btn-mobile">
+        Cancel
+      </a>
+    </div>
+  
+  
 </div>
 
 
@@ -856,84 +836,84 @@
 
 
 <div id="inline_content" class="mfp-hide modal-dialog modal-content overlay-def">
-<header class="modal-header">
-  <h2 class="modal-title">
-    Exit
-  </h2>
-</header>
-<div class="modal-body">
-  <p>
-    After you exit, you can find this form in the <strong>saved forms</strong> section of My VAC Account.
-  </p>
-  <button type="button" id="wizard-exit-modal-cancel-button" class="btn btn-lg btn-default popup-modal-dismiss">
-    Cancel
-  </button>
-  <button type="button" id="wizard-exit-modal-exit-button" class="btn btn-lg btn-success" onclick="exit();">
-    Exit
-    <span class="fa fa-sign-out mrgn-lft-sm"></span>
-  </button>
-</div>
+  <header class="modal-header">
+    <h2 class="modal-title">
+      Exit
+    </h2>
+  </header>
+  <div class="modal-body">
+    <p>
+      After you exit, you can find this form in the <strong>saved forms</strong> section of My VAC Account.
+    </p>
+    <button type="button" id="wizard-exit-modal-cancel-button" class="btn btn-lg btn-default popup-modal-dismiss">
+      Cancel
+    </button>
+    <button type="button" id="wizard-exit-modal-exit-button" class="btn btn-lg btn-success" onclick="exit();">
+      Exit
+      <span class="fa fa-sign-out mrgn-lft-sm"></span>
+    </button>
+  </div>
 </div>
 
 <div id="inline_delete" class="mfp-hide modal-dialog modal-content overlay-def">
-<header class="modal-header">
-  <h2 class="modal-title">
-    Delete
-  </h2>
-</header>
-<div class="modal-body">
-  <p>
-    Are you sure you want to delete this application?
-  </p>
-  <button type="button" id="wizard-delete-modal-cancel-button" class="btn btn-lg btn-default popup-modal-dismiss">
-    Cancel
-  </button>
-  <button type="button" id="wizard-delete-modal-delete-button" class="btn btn-lg btn-danger" onclick="deleteWizard();">
-    <span class="fa fa-trash mrgn-rght-sm"></span>
-    Delete
-  </button>
-</div>
+  <header class="modal-header">
+    <h2 class="modal-title">
+      Delete
+    </h2>
+  </header>
+  <div class="modal-body">
+    <p>
+      Are you sure you want to delete this application?
+    </p>
+    <button type="button" id="wizard-delete-modal-cancel-button" class="btn btn-lg btn-default popup-modal-dismiss">
+      Cancel
+    </button>
+    <button type="button" id="wizard-delete-modal-delete-button" class="btn btn-lg btn-danger" onclick="deleteWizard();">
+      <span class="fa fa-trash mrgn-rght-sm"></span>
+      Delete
+    </button>
+  </div>
 </div>
 
 
 <div id="profile_edit" class="mfp-hide modal-dialog modal-content overlay-def">
-<header class="modal-header">
-  <h2 class="modal-title">
-    Go to profile
-  </h2>
-</header>
-<div class="modal-body">
-  <p>
-    After you go to the profile section, you can return to this application by clicking continue at the bottom of the next page.
-  </p>
-  <button type="button" id="wizard-profile-modal-cancel-button" class="btn btn-lg btn-default popup-modal-dismiss">
-    Cancel
-  </button>
-  <button type="button" id="wizard-profile-modal-goto-button" class="btn btn-lg btn-success" onclick="editProfile()">
-    <span class="fa fa-sign-out mrgn-rght-sm"></span>
-    Go to profile
-  </button>
-</div>
+  <header class="modal-header">
+    <h2 class="modal-title">
+      Go to profile
+    </h2>
+  </header>
+  <div class="modal-body">
+    <p>
+      After you go to the profile section, you can return to this application by clicking continue at the bottom of the next page.
+    </p>
+    <button type="button" id="wizard-profile-modal-cancel-button" class="btn btn-lg btn-default popup-modal-dismiss">
+      Cancel
+    </button>
+    <button type="button" id="wizard-profile-modal-goto-button" class="btn btn-lg btn-success" onclick="editProfile()">
+      <span class="fa fa-sign-out mrgn-rght-sm"></span>
+      Go to profile
+    </button>
+  </div>
 </div>
 
 <div id="delete-row-confirmation" class="mfp-hide modal-dialog modal-content overlay-def">
-<header class="modal-header">
-  <h2 class="modal-title">
-    Before you continue
-  </h2>
-</header>
-<div class="modal-body">
-  <p class="modal-message">
-    Are you sure you want to delete this?
-  </p>
-  <button type="button" id="delete-row-modal-cancel-btn" class="btn btn-info btn-lg popup-modal-dismiss mrgn-rght-sm">
-    Cancel
-  </button>
-  <button type="button" id="delete-row-modal-delete-btn" class="btn btn-danger btn-lg mrgn-rght-sm js-modal-delete-button popup-modal-dismiss">
-    Delete
-  </button>
+  <header class="modal-header">
+    <h2 class="modal-title">
+      Before you continue
+    </h2>
+  </header>
+  <div class="modal-body">
+    <p class="modal-message">
+      Are you sure you want to delete this?
+    </p>
+    <button type="button" id="delete-row-modal-cancel-btn" class="btn btn-info btn-lg popup-modal-dismiss mrgn-rght-sm">
+      Cancel
+    </button>
+    <button type="button" id="delete-row-modal-delete-btn" class="btn btn-danger btn-lg mrgn-rght-sm js-modal-delete-button popup-modal-dismiss">
+      Delete
+    </button>
+  </div>
 </div>
-</div>
 
 
 
@@ -944,55 +924,273 @@
 
 
 
-<script>  
+<script>
+  $(function() {
+    /* Highlight Selected Option */   
+    $(document).on("click", "input[type=radio]", function() {
+      $this = $(this);
+      $this.closest('.form-group').find('.radio').removeClass('active');
+      if($this.is(':checked')) {
+        $this.closest('.radio').addClass('active');
+      }
+    });
+    
+    setTimeout(function(){
+      /* Hide/Show Elements For Prepopulated Data*/
+      $('[type=radio]:checked').trigger('click'); 
+    }, 100);      
+    
+    /* Initialize textarea counters for Prepopulated Data */
+    $('textarea').trigger('keyup');
+    
+    $('#button-exit, #button-exit-menu').click(function(e){
+      e.preventDefault();
+      wizard.showSaveAndExit();
+    });
+    
+  	//Stop enter from submitting the step when only one text input present on page
+    $('input[type=text]').keypress(function(event){
+    	var keycode = (event.keyCode ? event.keyCode : event.which);
+    	if(keycode == '13'){
+    		return false;
+    	}
+    });
+    
+  });
+  
+  function openFormById(formId) {
+    $('#displayForm input#formID').val(formId);
+    $("#displayForm").submit();
+  }
+  
+  /* Set Custom Messages for WET-BOEW*/
+  $(document).on('timerpoke.wb', function() {
+    wb.i18nDict["frm-nosubmit"]='Your changes cannot be saved because' + ' ';
+  })
+  
+  // TODO - wizardhelper should be moved to a separate file
+  function WizardHelper () { }
 
+  WizardHelper.prototype.initPage = function() {
+    // settings
+    this.settings = {
+      deleteModal: $('#delete-row-confirmation'),
+      selectors: {
+        wizardForms: '.current-step-form'
+      }
+    };
 
+    this.setupDeleteConfirm();
+    this.setupUncheckCheckboxConfirm();
+    this.setupEnsureAtLeastOne();
+  };
 
+  WizardHelper.prototype.showSaveAndExit = function() {
+    var $form = $(this.settings.selectors.wizardForms);
+    
+    // show exit prompt
+    modal_helper.showModal('#inline_content');
+  };  
+  
+  //
+  // limits the number of items to a maximum.  An alert is shown if at the max and false is returned.
+  // otherwise true is returned.
+  //
+  WizardHelper.prototype.handleMaxItems = function handleMaxItems($clickedElementP, eP) {
+    var $this = $clickedElementP;
+    var maxItems = $this.data('max-items');
+    var selector = $this.data('items-to-count');
+
+    if ($(selector).size() >= maxItems) {
+      var message = $this.data('at-max-message');
+      alert(message);
+      eP.preventDefault();
+      return false;
+    }
+
+    return true;
+  };
+
+  /*
+   This pops a confirmation modal which then fires an event on the originating control.
+   example:
+     within the markup: 
+       <div class="btn btn-delete js-delete-confirm js-delete-foo"
+            data-delete-confirm-modal-message="Are you sure you want to delete the foo?"
+            data-delete-confirmed-event="deleteItemConfirmed">
+         Delete Foo
+       </div>
+    within the script section of the page:
+      $(document).on('deleteItemConfirmed', '.js-delete-service-history', function() {
+        // todo - run logic here  
+      return false;
+    });
+   
+    The event name can be custom per button type to allow for different logic to run per button type.
+  */
+  WizardHelper.prototype.setupDeleteConfirm = function(e) {
+    var helper = this;
+    $(document).on('click', '.js-delete-confirm', function(e) {
+      var $this = $(this);
+
+      var modal_message = $this.data('delete-confirm-modal-message');
+      var delete_confirmed_event = $this.data('delete-confirmed-event');
+      
+      // configure and show the wet modal for actual delete confirmation
+      var modal = helper.settings.deleteModal;
+      modal.find('.modal-message').html(modal_message);     
+      modal.find('.js-modal-delete-button').off('click').on("click", function(e){
+        $this.trigger(delete_confirmed_event, $this);        
+      });
+      
+      wb.doc.trigger("open.wb-lbx", [[{ src: modal, type: 'inline' }], true]);
+
+      // cancel the originating event
+      e.preventDefault();
+      return false;
+    })
+  };
+
+  /*
+   This pops a confirmation modal which then fires an event on the originating control.
+   example:
+     within the markup: 
+      
+      <div class="checkbox">    <label><input type="checkbox" name="checkbox-name" value="true" id="checkbox-id" class=" js-checkbox-confirm js-remove-{checkbox-id}" data-remove-confirm-modal-message="Are you sure you want to remove Label Text from selected values?" data-remove-confirmed-event="removeItemConfirmed"/><input type="hidden" id="__checkbox_checkbox-id" name="__checkbox_checkbox-name" value="true" /> Label Text</label></div>
+    within the script section of the page:
+      $(document).on('removeItemConfirmed', '.js-remove-{checkbox-id}', function() {
+        // todo - run logic here  
+      return false;
+    });
+   
+    The event name can be custom per button type to allow for different logic to run per button type.
+  */
+  WizardHelper.prototype.setupUncheckCheckboxConfirm = function(e) {
+    var helper = this;
+    $(document).on('click', '.js-checkbox-confirm', function(e) {
+      var $this = $(this);
+
+      if (!$this.is("input[type=checkbox]") || ($this.is("input[type=checkbox]") && $this.is(':checked'))) {
+        return true;
+      }
+
+      $this.prop("checked", true);
+      $this.trigger('update');
+      $this.blur();
+      
+      // cancel the originating event
+      e.preventDefault();
+
+      var modal_message = $this.data('remove-confirm-modal-message');
+      var remove_confirmed_event = $this.data('remove-confirmed-event');
+      
+      // configure and show the wet modal for actual delete confirmation
+      var modal = helper.settings.deleteModal;
+      modal.find('.modal-message').html(modal_message);
+      modal.find('.js-modal-delete-button').text('Remove');
+      modal.find('.js-modal-delete-button').off('click').on("click", function(e){
+        $this.trigger(remove_confirmed_event, $this);        
+      });
+      
+      wb.doc.trigger("open.wb-lbx", [[{ src: modal, type: 'inline' }], true]);
+
+      return false;
+    })
+  };
+  
+  // fix for older version of WET within MVA.
+  // this is fixed in the latest version of WET and can be removed once upgraded.
+  WizardHelper.prototype.clearWetValidationWithinForm = function(formSelectorP){
+      var $form = $(formSelectorP);
+    $form.find('.has-error')
+         .removeClass('has-error');
+      $form.find('section')
+           .remove();
+  };
+
+  WizardHelper.prototype.setupEnsureAtLeastOne = function() {
+    $(document).on('click', '.js-ensure-at-least-one', function(e) {
+      var $this = $(this);
+      var selector = $this.data("ensure-at-least-one-selector");
+      var message = $this.data("ensure-at-least-one-message");
+
+      if ($(selector).size() == 0) {
+        alert(message);
+        e.preventDefault();
+        return false;
+      }
+
+      return true;
+    });
+  };
+
+  // initialize the wizard helper
+  window.wizard = new WizardHelper();
+  window.wizard.initPage(); 
 </script>
 
 
 
-          </div>       
-              
-          
-          <div id="page-details" class="mrgn-tp-md row pagedetails">
-          
-            <div class="col-sm-5 col-xs-12 datemod btn-mobile" id="date-modified">  
-              <dl id="wb-dtmd">
-                <dt>Date Modified:&#32;</dt> 
-                <dd><time property="dateModified">2022-10-04</time></dd>
-              </dl>
-            </div> 
-            
-            <div class="clear visible-xs"></div>
-              <div class="col-sm-4 col-xs-12 btn-mobile">   
+<script>
+  $(function() {
+    initializeStandardButtonListeners();
+  });
+</script>
+
+
+
+<script>
+  $(function() {
+    var $pageAlerts = $("#page-alerts");
+    var alertsToAdd = $("#disabilityFirstQuestion").html(); 
+    $pageAlerts.append(alertsToAdd);
+  });
+</script>
+
+
+
+
+            </div>       
                 
+            
+            <div id="page-details" class="mrgn-tp-md row pagedetails">
+            
+              <div class="col-sm-5 col-xs-12 datemod btn-mobile" id="date-modified">  
+                <dl id="wb-dtmd">
+                  <dt>Date Modified:&#32;</dt> 
+                  <dd><time property="dateModified">2022-10-04</time></dd>
+                </dl>
+              </div> 
+              
+              <div class="clear visible-xs"></div>
+                <div class="col-sm-4 col-xs-12 btn-mobile">   
+                  
+                </div>
+              
+              <div class="col-sm-3 col-xs-12 btn-mobile text-right">
+                <span class="color-accent" id="page-id"><strong>MV</strong> </span>
               </div>
-            
-            <div class="col-sm-3 col-xs-12 btn-mobile text-right">
-              <span class="color-accent" id="page-id"><strong>MV.</strong> </span>
+              
+              <div class="clear visible-xs"></div>
             </div>
-            
-            <div class="clear visible-xs"></div>
-          </div>
-        </main>    
+          </main>    
+  
+          
+
+
+
+
+
+ 
+
+  
 
         
-
-
-
-
-
-
-
-
-
+          
+        </div>
+      </div>  
+  
       
-        
-      </div>
-    </div>  
-
-    
 
 
 
@@ -1000,31 +1198,33 @@
 
 
 <footer id="wb-info">
-<div class="brand">
-  <div class="container">
-  <div class="text-center">
-    <p class="mrgn-tp-md mrgn-bttm-md">
+  <div class="brand">
+  	<div class="container">
+		<div class="text-center">
+			<p class="mrgn-tp-md mrgn-bttm-md">
+		      
+          
+            <small>WEB.101171 &nbsp;|&nbsp;</small>
+          
+				<a href="/prot/mv-ca/MVA_7_21">Privacy information</a>
+			</p>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 visible-sm visible-xs tofpg">
+				<a href="#wb-cont">Top of Page <span class="fa fa-chevron-up"></span></a>
+			</div>
+			<div class="col-xs-6 col-md-12 text-right">
         
         
-          <small>WEB.101171 &nbsp;|&nbsp;</small>
-        
-      <a href="/prot/mv-ca/MVA_7_21">Privacy information</a>
-    </p>
+        <object type="image/svg+xml" tabindex="-1" role="img" class="footer-logo" data="/clf-dev/MVACLF-2.0/distWET4_0_50_1/assets/wmms-blk.svg" title="Government of Canada Logo" alt="Government of Canada Logo"></object>
+			</div>
+		</div>
+  	</div>
   </div>
-  <div class="row">
-    <div class="col-xs-6 visible-sm visible-xs tofpg">
-      <a href="#wb-cont">Top of Page <span class="fa fa-chevron-up"></span></a>
-    </div>
-    <div class="col-xs-6 col-md-12 text-right">
-      
-      
-      <object type="image/svg+xml" tabindex="-1" role="img" class="footer-logo" data="/clf-dev/MVACLF-2.0/distWET4_0_50_1/assets/wmms-blk.svg" title="Government of Canada Logo" alt="Government of Canada Logo"></object>
-    </div>
-  </div>
-  </div>
-</div>
 </footer>
 
+
+</footer>
 
 
 

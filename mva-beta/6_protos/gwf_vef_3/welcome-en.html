@@ -17,8 +17,8 @@
     <!---->
     <link rel="stylesheet" href="../../../wet-boew-theme/css/theme.css">
     <link rel="stylesheet" href="../../assets/css/mva-wet-boew-custom.css">
-    <link rel="stylesheet" href="../..//assets/css/mva-custom.css"> 
-    <link rel="stylesheet" href="../../assets/css/mva-wizard.css">
+    <link rel="stylesheet" href="../..//assets/css/mva-custom.css">
+
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
 
@@ -293,9 +293,9 @@
                     <li><a href="/prot/mv-ca/MVA_7_2">My <abbr title="Veterans Affairs Canada">VAC</abbr> Account</a></li>
 
                     <!--
-                    <li>Applications</li>
--->
-                    <li>Find a form</li>
+                    <li>Applications</li>-->
+
+                    <li><a href="#">Forms</a></li>
 
                     <li>Veterans Emergency Fund </li>
 
@@ -303,696 +303,89 @@
             </div>
         </div>
     </nav>
-    <div class="container"> 
-      <div class="row">
+
         
-        <main property="mainContentOfPage" class="col-xs-12">
+    <div class="container"> 
+        <div class="row">
           
-          <div id="wb-main-in">
+          <main property="mainContentOfPage" class="col-xs-12">
             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <div id="wb-main-in">
 
 
 <!-- Declare constants -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h1 property="name" id="wb-cont" class="mrgn-tp-lg mrgn-lft-sm brdr-0">
-  Details of emergency
+<h1 property="name" id="wb-cont" class="mrgn-tp-lg mrgn-bttm-0 brdr-0 word-wrapping">
+    Veterans Emergency Fund
 </h1>
 
-<!-- content -->
 <script src="/clf-dev/MVACLF-2.0/scripts/mva/wizard.js?v=2022.8.14"></script>
 
-<!-- step validation errors -->
-<div id="page-alerts">
+<form        id="frm"        name="frm"        action="/prot/mv-ca/mva_7_100_14/display_wizard"        method="post">
 
-
-
-
-
-
-
-
-
-
-
-<!-- step error messages -->
-<div id="" class="alert alert-info">
-  <div class="alert-body">
-
-    <p>
-      The Veteran Emergency Fund provide monetary assistance to applicant who are facing a financial crisis/emergency, with the intent of resolving the immediate need.
-
-    </p>
-  
+  <div class="row">
+    <div class="hidden-xs col-xs-12 col-sm-6">
+      <div>
+        <img src="../../assets/mva-application-package-intro-image.png" class="img-responsive img-big" alt="" />
+      </div>
+      <p>
+        Looking for a different form? <a href="/prot/mv-ca/MVA_7_23_5">View all forms</a>.
+      </p>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <div id="text-welcome" class="">
+        <h2 class="mrgn-tp-md text-primary">
+          Welcome
+        </h2>
+        <p>
+          This guided form will lead you through a series of questions to help you complete your application. You can edit your answers at any time, and you will have a chance to complete a final review to ensure your information is correct before submitting your application.
+        </p>
+        <p>
+          Your progress will be saved automatically in this guided form and retained for you when you exit. Information from previous applications may also be saved automatically for you, depending on your internet browser.
+        </p>
+        <p>
+          If you have any questions about an application, please <a href="/prot/mv-ca/MVA_7_12">contact us</a>.
+        </p>
+        <!-- continue button -->
+        <div class="mrgn-tp-md mrgn-bttm-md">
+          <a id="button-continue" type="button" href="01_before-you-start-en.html" class="btn btn-lg btn-success btn-mobile">
+            Continue
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-  
-    
-  
-  
-  
-  
-  
-  
-  
-</div>
-
-
-
-
-</div>
-
-<!-- main content area --> 
-
-<div class="panel panel-default">
-<!-- main content area -->
-<div class="panel-body">
-  <div class="mrgn-lft-md mrgn-rght-md mrgn-bttm-sm">
-    <div class="row">
-
-<!-- Declare constants -->
-
-
-
-
-<form        id="frm"        name="frm"        action="/prot/mv-ca/mva_7_100_14/next"        method="post" 		class="span-8 module">
-
-
-
-
-
-
-
-
-
-
-<input type="hidden" name="formAction" value="/prot/mv-ca/MVA_7_100_14" id="formAction"/>
-<input type="hidden" name="model.submittedStepId" value="mva.7_100_14_2_4" id="submittedStepId"/>
-<input type="hidden" name="model.jumpToStepId" value="mva.7_100_14_6_2" id="jumpToStepId"/>
-<input type="hidden" name="model.editStepMode" value="false" id="editStepMode"/>
-<input type="hidden" name="model.returnStepAfterEdit" value="" id="returnStepAfterEdit"/>
-<input type="hidden" name="model.editModeUpdatePressed" value="false" id="editModeUpdatePressed"/>
-<input type="hidden" name="model.editModeCancelPressed" value="false" id="editModeCancelPressed"/>
-
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-<!--
-
-<div class="col-xs-12 mrgn-tp-md">
-
-  <label id="is-vac-employee-label" class="mrgn-tp-0 h2 required">
-    Do you attest that you do not have liquid assets to address the emergency?
-  </label>
-
-<p>Liquid assets are assets in the form of cash or funds easily convertible into cash.</p>
-
-
-</div>
-
--->
-
-
-
-  
-  
-  
-
-
-
-<!--
-<div class="col-xs-12 mrgn-tp-sm mrgn-bttm-0" id="info-detail-summary-is-vac-employee">
-<details class="mrgn-bttm-sm">
-  <summary>
-    <span class="fa fa-info-circle mrgn-rght-sm" aria-hidden="true"></span>
-    Why are we asking if you are an employee?
-  </summary>
-  <p class="mrgn-tp-md mrgn-bttm-0">
-      Veterans Affairs Canada is committed to protecting the privacy and confidentiality of all applicants. If you are an employee of Veterans Affairs, certain steps are taken to protect your information in the workplace.
-    </p>
-</details>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
-
-
-
-
-
-
-
-<div class="col-xs-12"> 
-
-
-<div class="list-group form-group" role="group" aria-labelledby="attest-assets">
-  
-  
-    <div class="radio list-group-item"> 
-<label ><input type="radio" name="attest-assets" id="attest-assets-1" value="1"/>Yes</label></div>
-
-<div class="radio list-group-item">
-<label ><input type="radio" name="attest-assets" id="attest-assets-0" value="0"/>No</label></div>
-
-
-</div>
-
-</div>
-
-
-
--->
-
-<div class="col-xs-12 mrgn-tp-md">
-
-  <label for="describe-circumstances" class="mrgn-tp-0 h2 required">
-    Describe the circumstances surrounding the need for assistance. 
-  </label>
-  <p>Please limit the personal or
-    3rd party information to what is required to explain your request for emergency funding.</p>
-  <div class="col-xs-12"> 
-
-  
-    <textarea id="describe-circumstances" class="full-width" rows="6"></textarea>
-    <p class="col-xs-12 small mrgn-tp-sm">
-      You used <span id="condition-relates-details-used">0</span> characters. <span id="condition-relates-details-left">3000</span> characters left.
-      <meter id="condition-relates-details-meter" style="width:100%;" value="0" min="0" high="2250" max="3000"></meter>
-    </p>
-    </div>
- 
-    <div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
-<!--
-    <label class="mrgn-tp-0 h2 required">Specify how you will use these funds:</label>
-
-    <div class="row">
-      <div class="col-sm-4 text-right">Housing/shelter expenses</div>
-    <div class="col-sm-4">
-      <input type="text" class="full-width form-control">
-    </div>
-    <div class="col-sm-4"></div>
-      <input type="number" placeholder="0.00">
-    </div>
-
-    <div class="row">
-      <div class="col-sm-4 text-right">Medical expenses</div>
-    <div class="col-sm-4">
-      <input type="text" class="full-width">
-    </div>
-    <div class="col-sm-4"></div>
-      <input type="number" placeholder="0.00">
-    </div>
-
-    <div class="row">
-      <div class="col-sm-4 text-right">Other expenses</div>
-    <div class="col-sm-4">
-      <input type="text" class="full-width">
-    </div>
-    <div class="col-sm-4"></div>
-      <input type="number" placeholder="0.00">
-    </div>-->
-
-
-      <!--table-->
-
-      <h3>Specify how you will use these funds</h3>
-      <div class="hidden-xs">
-<table class="table" id="vef-funds-table">
-	<caption class="wb-inv">Table for entering description and amounts of costs</caption>
-	<thead class="text-muted">
-		<tr>
-			<th>Category of Expense</th>
-			<th>Description of Expense</th>
-			<th>Amount ($)</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td data-label="Type of Expense" class="bold h4">
-        Housing/shelter
-      </td>
-			<td data-label="Description of Expense">
-        <div class="form-group col-sm-11">
-          <label for="housing-desc" class="hidden wb-inv mrgn-tp-0"><span class="field-name">Description of housing/shelter expenses</span> </label>
-          <input class="form-control full-width" id="housing-desc" name="housing-desc" type="text" data-rule-letterswithbasicpunc="true" />
-        </div>
-      </td>
-			<td data-label="Amount ($)">
-        <label for="housing-amount" class="wb-inv">Housing/shelter expenses amount ($)</label>
-        <div class="input-group col-sm-5">
-          <span class="input-group-addon">$</span>
-          <input type="number" class="form-control" id="housing-amount"/>
-          
-        </div>
-      </td>
-		</tr>
-		<tr>
-      <td data-label="Type of Expense" class="bold h4">
-        Medical expenses
-      </td>
-		<td data-label="Description of Expense">
-      <div class="form-group col-sm-11">
-        <label for="medical-desc" class="hidden wb-inv mrgn-tp-0"><span class="field-name">Description of medical expenses</span> </label>
-        <input class="form-control full-width" id="medical-desc" name="medical-desc" type="text" data-rule-letterswithbasicpunc="true" />
-      </div>
-    </td>
-    <td data-label="Amount ($)">
-      <label for="medical-amount" class="wb-inv">Medical expenses amount ($)</label>
-      <div class="input-group col-sm-5">
-        <span class="input-group-addon">$</span>
-        <input type="number" class="form-control" id="medical-amount"/>
-        
-      </div>
-    </td>
-		</tr>
-		<tr>
-			<td data-label="Type of Expense" class="bold h4">
-        Other expenses
-      </td>
-			<td data-label="Description of Expense">
-        <div class="form-group col-sm-11">
-          <label for="other-desc" class="hidden wb-inv mrgn-tp-0"><span class="field-name">Description of other expenses</span> </label>
-          <input class="form-control full-width" id="other-desc" name="other-desc" type="text" data-rule-letterswithbasicpunc="true" />
-        </div>
-      </td>
-			<td data-label="Amount ($)">
-        <label for="other-amount" class="wb-inv">Other expenses amount ($)</label>
-        <div class="input-group col-sm-5">
-          <span class="input-group-addon">$</span>
-          <input type="number" class="form-control" id="other-amount" min="1" max="2000"/>
-          
-        </div>
-      </td>
-		</tr>
-		
-	</tbody>
-</table>
-<div class="row">
-  <div class="col-sm-7 text-right bold h4 mrgn-tp-sm">
-    Total amount requested
-  </div>
-  
-  
-  <div class="col-sm-4 mrgn-lft-sm">
-    <label for="sum" class="wb-inv">$ Sum</label>
-    <div class="input-group mrgn-lft-lg col-sm-6">
-      <span class="input-group-addon">$</span>
-      <input type="number" class="form-control disabled" min="1" max="2000" id="sum" disabled/>
-      
-    </div>
-</div>
-</div>
-</div>
-
-<div class="hidden-sm hidden-md hidden-lg">
-	<h3 class="bold h4">
-    Housing/shelter expenses
-  </h3>
-    <div class="form-group">
-      <label for="housing-desc"><span class="field-name">Description of housing/shelter expenses</span> </label>
-      <input class="form-control full-width" id="housing-desc" name="housing-desc" type="text" data-rule-letterswithbasicpunc="true" />
-    </div>
-    <label for="housing-amount">Housing/shelter expenses amount ($)</label>
-    <div class="input-group">
-      <span class="input-group-addon">$</span>
-      <input type="number" class="form-control" id="housing-amount"/>
-    </div>
-
-    <h3 class="bold h4">
-      Medical expenses
-    </h3>
-      <div class="form-group">
-        <label for="medical"><span class="field-name">Description of medical expenses</span> </label>
-        <input class="form-control full-width" id="medical" name="medical" type="text" data-rule-letterswithbasicpunc="true" />
-      </div>
-      <label for="medical">Medical expenses amount ($)</label>
-      <div class="input-group">
-        <span class="input-group-addon">$</span>
-        <input type="number" class="form-control" id="housing-amount"/>
-      </div>
-
-      <h3 class="bold h4">
-        Other  expenses
-      </h3>
-        <div class="form-group">
-          <label for="other"><span class="field-name">Description of other expenses</span> </label>
-          <input class="form-control full-width" id="other" name="other" type="text" data-rule-letterswithbasicpunc="true" />
-        </div>
-        <label for="other">Other expenses amount ($)</label>
-        <div class="input-group">
-          <span class="input-group-addon">$</span>
-          <input type="number" class="form-control" id="other-amount"/>
-        </div>
-
-        <hr>
-        <label for="other">Total expenses</label>
-        <div class="input-group">
-          <span class="input-group-addon">$</span>
-          <input type="number" class="form-control" id="total-amount" disabled/>
-        </div>
-  
-
-</div>
-
-
-
-  
-  
-  
-  </div>
-
- 
-
-</div>
-
-
-
 </form>
-
-
-    </div> 
-  </div> 
-</div> 
-</div> 
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- button bar -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="row mrgn-tp-md">
-
-
-
-  <div class="col-sm-5 col-sm-push-7 col-xs-12 text-right">
-    
-    
-      <a id="button-next"  href="06_overview-vet-en.html" class="btn btn-lg btn-primary pull-right mrgn-lft-sm mrgn-bttm-sm btn-mobile " >
-        
-        
-          Next
-        
-      </a>
-      <div class="visible-xs clearfix"></div>
-      <button id="button-back" type="button" onclick="back();" class="btn btn-lg btn-default btn-mobile">
-        Back
-      </button>
-    
-  </div>
-
-
-
-
-  
-  
-    <div class="col-sm-7 col-sm-pull-5 col-xs-12">
-      
-        <button id="button-returnToMenu" type="button" onclick="jump('mva.7_100_14_menu');" class="btn btn-lg btn-default btn-mobile">Return to overview</button>
-      
-      <button id="button-exit" type="button" class="wb-lbx btn btn-lg btn-default btn-mobile">Save and exit</button> 
-      
-    </div>
-  
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-<div id="inline_content" class="mfp-hide modal-dialog modal-content overlay-def">
-<header class="modal-header">
-  <h2 class="modal-title">
-    Exit
-  </h2>
-</header>
-<div class="modal-body">
-  <p>
-    After you exit, you can find this form in the <strong>saved forms</strong> section of My VAC Account.
-  </p>
-  <button type="button" id="wizard-exit-modal-cancel-button" class="btn btn-lg btn-default popup-modal-dismiss">
-    Cancel
-  </button>
-  <button type="button" id="wizard-exit-modal-exit-button" class="btn btn-lg btn-success" onclick="exit();">
-    Exit
-    <span class="fa fa-sign-out mrgn-lft-sm"></span>
-  </button>
-</div>
-</div>
-
-<div id="inline_delete" class="mfp-hide modal-dialog modal-content overlay-def">
-<header class="modal-header">
-  <h2 class="modal-title">
-    Delete
-  </h2>
-</header>
-<div class="modal-body">
-  <p>
-    Are you sure you want to delete this application?
-  </p>
-  <button type="button" id="wizard-delete-modal-cancel-button" class="btn btn-lg btn-default popup-modal-dismiss">
-    Cancel
-  </button>
-  <button type="button" id="wizard-delete-modal-delete-button" class="btn btn-lg btn-danger" onclick="deleteWizard();">
-    <span class="fa fa-trash mrgn-rght-sm"></span>
-    Delete
-  </button>
-</div>
-</div>
-
-
-<div id="profile_edit" class="mfp-hide modal-dialog modal-content overlay-def">
-<header class="modal-header">
-  <h2 class="modal-title">
-    Go to profile
-  </h2>
-</header>
-<div class="modal-body">
-  <p>
-    After you go to the profile section, you can return to this application by clicking continue at the bottom of the next page.
-  </p>
-  <button type="button" id="wizard-profile-modal-cancel-button" class="btn btn-lg btn-default popup-modal-dismiss">
-    Cancel
-  </button>
-  <button type="button" id="wizard-profile-modal-goto-button" class="btn btn-lg btn-success" onclick="editProfile()">
-    <span class="fa fa-sign-out mrgn-rght-sm"></span>
-    Go to profile
-  </button>
-</div>
-</div>
-
-<div id="delete-row-confirmation" class="mfp-hide modal-dialog modal-content overlay-def">
-<header class="modal-header">
-  <h2 class="modal-title">
-    Before you continue
-  </h2>
-</header>
-<div class="modal-body">
-  <p class="modal-message">
-    Are you sure you want to delete this?
-  </p>
-  <button type="button" id="delete-row-modal-cancel-btn" class="btn btn-info btn-lg popup-modal-dismiss mrgn-rght-sm">
-    Cancel
-  </button>
-  <button type="button" id="delete-row-modal-delete-btn" class="btn btn-danger btn-lg mrgn-rght-sm js-modal-delete-button popup-modal-dismiss">
-    Delete
-  </button>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<script>  
-
-
-
-</script>
-
-
-
-          </div>       
-              
-          
-          <div id="page-details" class="mrgn-tp-md row pagedetails">
-          
-            <div class="col-sm-5 col-xs-12 datemod btn-mobile" id="date-modified">  
-              <dl id="wb-dtmd">
-                <dt>Date Modified:&#32;</dt> 
-                <dd><time property="dateModified">2022-10-04</time></dd>
-              </dl>
-            </div> 
-            
-            <div class="clear visible-xs"></div>
-              <div class="col-sm-4 col-xs-12 btn-mobile">   
+            </div>       
                 
+            
+            <div id="page-details" class="mrgn-tp-md row pagedetails">
+            
+              <div class="col-sm-5 col-xs-12 datemod btn-mobile" id="date-modified">  
+                <dl id="wb-dtmd">
+                  <dt>Date Modified:&#32;</dt> 
+                  <dd><time property="dateModified">2022-10-04</time></dd>
+                </dl>
+              </div> 
+              
+              <div class="clear visible-xs"></div>
+                <div class="col-sm-4 col-xs-12 btn-mobile">   
+                  
+                </div>
+              
+              <div class="col-sm-3 col-xs-12 btn-mobile text-right">
+                <span class="color-accent" id="page-id"><strong>MV</strong> </span>
               </div>
-            
-            <div class="col-sm-3 col-xs-12 btn-mobile text-right">
-              <span class="color-accent" id="page-id"><strong>MV.</strong> </span>
+              
+              <div class="clear visible-xs"></div>
             </div>
-            
-            <div class="clear visible-xs"></div>
-          </div>
-        </main>    
-
-        
-
-
-
-
-
-
-
-
-
+          </main>    
+         
+        </div>
+      </div>  
+  
       
-        
-      </div>
-    </div>  
-
-    
 
 
 
@@ -1000,33 +393,30 @@
 
 
 <footer id="wb-info">
-<div class="brand">
-  <div class="container">
-  <div class="text-center">
-    <p class="mrgn-tp-md mrgn-bttm-md">
+  <div class="brand">
+  	<div class="container">
+		<div class="text-center">
+			<p class="mrgn-tp-md mrgn-bttm-md">
+		      
+          
+            <small>WEB.101171 &nbsp;|&nbsp;</small>
+          
+				<a href="/prot/mv-ca/MVA_7_21">Privacy information</a>
+			</p>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 visible-sm visible-xs tofpg">
+				<a href="#wb-cont">Top of Page <span class="fa fa-chevron-up"></span></a>
+			</div>
+			<div class="col-xs-6 col-md-12 text-right">
         
         
-          <small>WEB.101171 &nbsp;|&nbsp;</small>
-        
-      <a href="/prot/mv-ca/MVA_7_21">Privacy information</a>
-    </p>
+        <object type="image/svg+xml" tabindex="-1" role="img" class="footer-logo" data="/clf-dev/MVACLF-2.0/distWET4_0_50_1/assets/wmms-blk.svg" title="Government of Canada Logo" alt="Government of Canada Logo"></object>
+			</div>
+		</div>
+  	</div>
   </div>
-  <div class="row">
-    <div class="col-xs-6 visible-sm visible-xs tofpg">
-      <a href="#wb-cont">Top of Page <span class="fa fa-chevron-up"></span></a>
-    </div>
-    <div class="col-xs-6 col-md-12 text-right">
-      
-      
-      <object type="image/svg+xml" tabindex="-1" role="img" class="footer-logo" data="/clf-dev/MVACLF-2.0/distWET4_0_50_1/assets/wmms-blk.svg" title="Government of Canada Logo" alt="Government of Canada Logo"></object>
-    </div>
-  </div>
-  </div>
-</div>
 </footer>
-
-
-
 
 
 
