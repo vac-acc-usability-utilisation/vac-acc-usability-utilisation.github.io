@@ -580,118 +580,68 @@
  
     <div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
 
-    <h3>Specify how you will use these funds</h3>
-    <div class="hidden-xs">
-<table class="table" id="vef-funds-table">
-<caption class="wb-inv">Table for entering description and amounts of costs</caption>
-<thead class="text-muted">
-  <tr>
-    <th>Category of Expense</th>
-    <th>Description of Expense</th>
-    <th>Amount ($)</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td data-label="Type of Expense" class="bold h4">
-      Housing/shelter
-    </td>
-    <td data-label="Description of Expense">
-      <div class="form-group col-sm-11">
-        <label for="housing-desc" class="hidden wb-inv mrgn-tp-0"><span class="field-name">Description of housing/shelter expenses</span> </label>
-        <input class="form-control full-width" id="housing-desc" name="housing-desc" type="text" data-rule-letterswithbasicpunc="true" />
-      </div>
-    </td>
-    <td data-label="Amount ($)">
-      <label for="housing-amount" class="wb-inv">Housing/shelter expenses amount ($)</label>
-      <div class="input-group col-sm-5">
-        <span class="input-group-addon">$</span>
-        <input type="number" class="form-control" id="housing-amount"/>
-        
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td data-label="Type of Expense" class="bold h4">
-      Medical expenses
-    </td>
-  <td data-label="Description of Expense">
-    <div class="form-group col-sm-11">
-      <label for="medical-desc" class="hidden wb-inv mrgn-tp-0"><span class="field-name">Description of medical expenses</span> </label>
-      <input class="form-control full-width" id="medical-desc" name="medical-desc" type="text" data-rule-letterswithbasicpunc="true" />
-    </div>
-  </td>
-  <td data-label="Amount ($)">
-    <label for="medical-amount" class="wb-inv">Medical expenses amount ($)</label>
-    <div class="input-group col-sm-5">
-      <span class="input-group-addon">$</span>
-      <input type="number" class="form-control" id="medical-amount"/>
-      
-    </div>
-  </td>
-  </tr>
-  <tr>
-    <td data-label="Type of Expense" class="bold h4">
-      Other expenses
-    </td>
-    <td data-label="Description of Expense">
-      <div class="form-group col-sm-11">
-        <label for="other-desc" class="hidden wb-inv mrgn-tp-0"><span class="field-name">Description of other expenses</span> </label>
-        <input class="form-control full-width" id="other-desc" name="other-desc" type="text" data-rule-letterswithbasicpunc="true" />
-      </div>
-    </td>
-    <td data-label="Amount ($)">
-      <label for="other-amount" class="wb-inv">Other expenses amount ($)</label>
-      <div class="input-group col-sm-5">
-        <span class="input-group-addon">$</span>
-        <input type="number" class="form-control" id="other-amount" min="1" max="2000"/>
-        
-      </div>
-    </td>
-  </tr>
-  
-</tbody>
-</table>
-<div class="row">
-<div class="col-sm-7 text-right bold h4 mrgn-tp-sm">
-  Total amount requested
-</div>
+    <div class="mrgn-bttm-lg">
+      <h2> Select the categories of expenses that you need:</h2>
 
 
-<div class="col-sm-4 mrgn-lft-sm">
-  <label for="sum" class="wb-inv">$ Sum</label>
-  <div class="input-group mrgn-lft-lg col-sm-6">
-    <span class="input-group-addon">$</span>
-    <input type="number" class="form-control disabled" min="1" max="2000" id="sum" disabled/>
+      <div class="checkbox">
+        <label for="expenseCheck1"  class="h4 mrgn-tp-sm">
+          <input id="expenseCheck1" type="checkbox" value="">
+          Housing/shelter expenses
+
+        </label>
+      </div>
+      <div class="checkbox">
+        <label for="expenseCheck2"  class="h4 mrgn-tp-sm">
+          <input id="expenseCheck2" type="checkbox" value="">
+          Medical expenses
+
+        </label>
+      </div>
+      <div class="checkbox">
+        <label for="expenseCheck3"  class="h4 mrgn-tp-sm">
+          <input id="expenseCheck3" type="checkbox" value="">
+          Other expenses
+        </label>
+        </div>
+
+     </div>
+     
     
-  </div>
-</div>
-</div>
-</div>
+     <div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
 
-<div class="hidden-sm hidden-md hidden-lg">
+    
+    </div>
+
+
+
+
+
+    <h3>Specify how you will use these funds</h3>
+   
+      
+
+
+<div>
 <h3 class="bold h4">
   Housing/shelter expenses
 </h3>
   <div class="form-group">
-    <label for="housing-desc"><span class="field-name">Description of housing/shelter expenses</span> </label>
-    <input class="form-control full-width" id="housing-desc" name="housing-desc" type="text" data-rule-letterswithbasicpunc="true" />
+    <label for="housing-desc" class=""><span class="field-name">Description of housing/shelter expenses</span> </label>
+    <input class="form-control col-md-6" id="housing-desc" name="housing-desc" type="text" data-rule-letterswithbasicpunc="true" />
+    
   </div>
-  <label for="housing-amount">Housing/shelter expenses amount ($)</label>
-  <div class="input-group">
-    <span class="input-group-addon">$</span>
-    <input type="number" class="form-control" id="housing-amount"/>
-  </div>
+  
 
   <h3 class="bold h4">
     Medical expenses
   </h3>
     <div class="form-group">
-      <label for="medical"><span class="field-name">Description of medical expenses</span> </label>
-      <input class="form-control full-width" id="medical" name="medical" type="text" data-rule-letterswithbasicpunc="true" />
+      <label for="medical"><spa class=""n class="field-name">Description of medical expenses</span> </label>
+      <input class="form-control col-md-6" id="medical" name="medical" type="text" data-rule-letterswithbasicpunc="true" />
     </div>
     <label for="medical">Medical expenses amount ($)</label>
-    <div class="input-group">
+    <div class="input-group col-md-2 col-sm-12">
       <span class="input-group-addon">$</span>
       <input type="number" class="form-control" id="housing-amount"/>
     </div>
@@ -700,18 +650,18 @@
       Other  expenses
     </h3>
       <div class="form-group">
-        <label for="other"><span class="field-name">Description of other expenses</span> </label>
-        <input class="form-control full-width" id="other" name="other" type="text" data-rule-letterswithbasicpunc="true" />
+        <label for="other"><span  class=""class="field-name">Description of other expenses</span> </label>
+        <input class="form-control col-md-6" id="other" name="other" type="text" data-rule-letterswithbasicpunc="true" />
       </div>
       <label for="other">Other expenses amount ($)</label>
-      <div class="input-group">
+      <div class="input-group col-md-2 col-sm-12">
         <span class="input-group-addon">$</span>
         <input type="number" class="form-control" id="other-amount"/>
       </div>
 
       <hr>
       <label for="other">Total expenses</label>
-      <div class="input-group">
+      <div class="input-group col-md-2 col-sm-12">
         <span class="input-group-addon">$</span>
         <input type="number" class="form-control" id="total-amount" disabled/>
       </div>
@@ -719,6 +669,27 @@
 
 </div>
   
+<div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
+
+
+<div class="checkbox">
+  <label for="attestCheck1" class="h5"><input id="attestCheck1" type="checkbox" value="">I attest that I do not have liquid assets to address the emergency. Liquid assets are assets in
+    the form of cash or funds easily convertible into cash.*</label>
+</div>
+<div class="checkbox">
+  <label for="attestCheck2" class="h5"><input id="attestCheck2" type="checkbox" value="">I will use the fund for the intended emergency need. Using the fund for any other purpose will
+    result in an overpayment and will be repayable.*</label>
+</div>
+<div class="checkbox">
+  <label for="attestCheck3" class="h5"><input id="attestCheck3" type="checkbox" value="">I authorize VAC to make payments on my behalf to pay bills and/or make purchases.</label>
+</div>
+
+
+
+
+
+
+
   
   
   </div>
