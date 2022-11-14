@@ -1308,12 +1308,10 @@ small svg {
     left: 0;
     width: 8px;
     background: #1b6c1c;
-    transition: all .3s;
 }
 
 .checkboxButton {
     transform: scale(1);
-    transition: transform .3s;
     padding: 0;
 }
 

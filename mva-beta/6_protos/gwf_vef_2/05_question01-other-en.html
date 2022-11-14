@@ -440,29 +440,47 @@
       <meter id="condition-relates-details-meter" style="width:100%;" value="0" min="0" high="2250" max="3000"></meter>
     </p>
     </div>
+
+
+      
+<div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
+
+
+<div class="checkbox">
+  <label for="attestCheck1" class="h5"><input id="attestCheck1" type="checkbox" value="">I attest that I do not have liquid assets to address the emergency. Liquid assets are assets in
+    the form of cash or funds easily convertible into cash.</label>
+</div>
+<div class="checkbox">
+  <label for="attestCheck2" class="h5"><input id="attestCheck2" type="checkbox" value="">I will use the fund for the intended emergency need. Using the fund for any other purpose will
+    result in an overpayment and will be repayable.</label>
+</div>
+<div class="checkbox">
+  <label for="attestCheck3" class="h5"><input id="attestCheck3" type="checkbox" value="">I authorize VAC to make payments on my behalf to pay bills and/or make purchases.</label>
+</div>
+
  
     <div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
-    <details open="open">
-
-      <summary>What expenses does the Veterans Emergency Fund cover?</summary>
-
-          <p>Veterans Emergency Fund will cover essential needs, which may include: food; clothing; shelter; medical care/expenses; expenses required to maintain safety and shelter.</p>
-
-    <p>VAC will consider each purchase or expense individually; however, the following are examples that might not be considered eligible for the VEF. The purchase or payment of/for:
-      <ul>
-        <li>expenses of an ongoing nature (e.g., a series of payments such as rent, mortgage, etc.) </li>
-        <li>non-essential goods, services or travel, vacation/vacation home, entertainment</li>
-        <li>non-essential bills (e.g., cable/satellite TV, gifts for others, etc.)</li>
-        <li>expenses related to financial mismanagement, or due to bankruptcy or foreclosure</li>
-        <li>credit cards, or retail store cards, overdraft fees and non-sufficient funds charges</li>
-        <li>taxes, fines or assessment by a government entity, legal expenses</li>
-        <li>marriage, divorce, or adoption</li>
-      </ul>
-      </p>
-     </details>
+   
     <div class="mrgn-bttm-lg">
       <h2> Specify how you will use these funds:</h2>
+      <details>
 
+        <summary>What expenses does the Veterans Emergency Fund cover?</summary>
+  
+            <p>Veterans Emergency Fund will cover essential needs, which may include: food; clothing; shelter; medical care/expenses; expenses required to maintain safety and shelter.</p>
+  
+      <p>VAC will consider each purchase or expense individually; however, the following are examples that might not be considered eligible for the VEF. The purchase or payment of/for:
+        <ul>
+          <li>expenses of an ongoing nature (e.g., a series of payments such as rent, mortgage, etc.) </li>
+          <li>non-essential goods, services or travel, vacation/vacation home, entertainment</li>
+          <li>non-essential bills (e.g., cable/satellite TV, gifts for others, etc.)</li>
+          <li>expenses related to financial mismanagement, or due to bankruptcy or foreclosure</li>
+          <li>credit cards, or retail store cards, overdraft fees and non-sufficient funds charges</li>
+          <li>taxes, fines or assessment by a government entity, legal expenses</li>
+          <li>marriage, divorce, or adoption</li>
+        </ul>
+        </p>
+       </details>
     
 
 
@@ -474,7 +492,7 @@
         </label>
       </div>
 
-      <section id="housing-expenses" class="col-xs-12"> 
+      <section id="housing-expenses" class="col-xs-12 hidden"> 
         <div class="form-group col-md-6">
           <label for="housing-description" class="required"><span class="field-name">Housing/shelter expenses description</span> <strong class="required">(required)</strong></label>
           <input class="form-control full-width" id="housing-description" name="housing-description" type="text" required="required" data-rule-minlength="2" />
@@ -501,7 +519,7 @@
       </div>
           
 
-      <section id="medical-expenses" class="col-xs-12"> 
+      <section id="medical-expenses" class="col-xs-12 hidden"> 
         <div class="form-group col-md-6">
           <label for="medical-description" class="required"><span class="field-name">Medical expenses description</span> <strong class="required">(required)</strong></label>
           <input class="form-control full-width" id="medical-description" name="medical-description" type="text" required="required" data-rule-minlength="2" />
@@ -527,7 +545,7 @@
         </div>
 
      </div>
-     <section id="other-expenses" class="col-xs-12"> 
+     <section id="other-expenses" class="col-xs-12 hidden"> 
       <div class="form-group col-md-6">
         <label for="other-description" class="required"><span class="field-name">Other expenses description</span> <strong class="required">(required)</strong></label>
         <input class="form-control full-width" id="medical-description" name="other-description" type="text" required="required" data-rule-minlength="2" />
@@ -559,21 +577,6 @@
     </div>
   
     
-  
-<div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
-
-
-<div class="checkbox">
-  <label for="attestCheck1" class="h5"><input id="attestCheck1" type="checkbox" value="">I attest that I do not have liquid assets to address the emergency. Liquid assets are assets in
-    the form of cash or funds easily convertible into cash.*</label>
-</div>
-<div class="checkbox">
-  <label for="attestCheck2" class="h5"><input id="attestCheck2" type="checkbox" value="">I will use the fund for the intended emergency need. Using the fund for any other purpose will
-    result in an overpayment and will be repayable.*</label>
-</div>
-<div class="checkbox">
-  <label for="attestCheck3" class="h5"><input id="attestCheck3" type="checkbox" value="">I authorize VAC to make payments on my behalf to pay bills and/or make purchases.</label>
-</div>
 
 
 
@@ -592,7 +595,6 @@
 
 
 </form>
-
 
 
 
@@ -850,6 +852,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
     <script src="../../../wet-boew/js/wet-boew.min.js"></script>
     <script src="../../../GCWeb/js/theme.min.js"></script>
+
+    <script>
+      $('input#expenseCheck1').change(
+        function(){
+          $("#housing-expenses").toggleClass("hidden show");
+      });
+
+      $('input#expenseCheck2').change(
+        function(){
+          $("#medical-expenses").toggleClass("hidden show");
+      });
+
+      $('input#expenseCheck3').change(
+        function(){
+          $("#other-expenses").toggleClass("hidden show");
+      });
+
+
+
+      
+      
+      
+      
+      </script>
+      
 </body>
 
 </html>
