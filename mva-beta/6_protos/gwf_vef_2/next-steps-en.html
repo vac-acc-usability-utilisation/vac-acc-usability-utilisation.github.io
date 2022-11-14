@@ -438,30 +438,7 @@
                         <div class="col-xs-12">
                           
                           
-                          
-                            
-                              
-                              
-                              
-                            
-          
-          
-          
-          
-          
-          
-          <div id="expect-to-hear-from-us-section">
-            <h3 class="mrgn-tp-lg">
-              <span class="fa fa-check-square-o mrgn-rght-sm" aria-hidden="true"></span>
-              Expect to hear from us
-            </h3>
-            <div class="mrgn-lft-lg">
-              <p>
-                                  We will contact you shortly to discuss your application.
-                                </p> 
-            </div>
-          </div>
-                          
+               
                           
                           
                           
@@ -519,8 +496,8 @@
                                               
                                               
                                             
-                                            <a href="/prot/mv-ca/MVA_7_23_11?fromWizard=1&amp;formInstanceID=153837983">
-                                              Veterans Independence Program (VIP) Application (VAC1145)
+                                            <a href="#">
+                                              Veterans Emergency Fund Application (VAC1517)
                                             </a>
                                           </td>
                                           <td>
@@ -553,32 +530,7 @@
             <hr>
           
           
-          <div id="track-your-application-section">
-            <h3 class="mrgn-tp-lg">
-              <span class="fa fa-check-square-o mrgn-rght-sm" aria-hidden="true"></span>
-              Track your application
-            </h3>
-            <div class="mrgn-lft-lg">
-              <p>
-                                  You can track the status of your application on the <a href="/prot/mv-ca/STATINQ_6_3">track your applications</a> page. If you have any questions please <a href="/prot/mv-ca/MVA_7_17_2">send a secure message</a> or <a href="/prot/mv-ca/MVA_7_12">contact us</a>.
-                                </p> 
-            </div>
-          </div>
-                          
-                          
-                          
-                          
-                            
-                              
-                              
-                              
-                            
-          
-          
-          
-          
-          
-            <hr>
+
           
           
           <div id="direct-deposit-section">
@@ -630,213 +582,6 @@
                     </div> 
                   </div> 
                 </div> 
-
-
-          <script>
-            $(function () {
-              /* Highlight Selected Option */
-              $(document).on("click", "input[type=radio]", function () {
-                $this = $(this);
-                $this.closest('.form-group').find('.radio').removeClass('active');
-                if ($this.is(':checked')) {
-                  $this.closest('.radio').addClass('active');
-                }
-              });
-
-              setTimeout(function () {
-                /* Hide/Show Elements For Prepopulated Data*/
-                $('[type=radio]:checked').trigger('click');
-              }, 100);
-
-              /* Initialize textarea counters for Prepopulated Data */
-              $('textarea').trigger('keyup');
-
-              $('#button-exit, #button-exit-menu').click(function (e) {
-                e.preventDefault();
-                wizard.showSaveAndExit();
-              });
-
-              //Stop enter from submitting the step when only one text input present on page
-              $('input[type=text]').keypress(function (event) {
-                var keycode = (event.keyCode ? event.keyCode : event.which);
-                if (keycode == '13') {
-                  return false;
-                }
-              });
-
-            });
-
-            function openFormById(formId) {
-              $('#displayForm input#formID').val(formId);
-              $("#displayForm").submit();
-            }
-
-            /* Set Custom Messages for WET-BOEW*/
-            $(document).on('timerpoke.wb', function () {
-              wb.i18nDict["frm-nosubmit"] = 'Your changes cannot be saved because' + ' ';
-            })
-
-            // TODO - wizardhelper should be moved to a separate file
-            function WizardHelper() { }
-
-            WizardHelper.prototype.initPage = function () {
-              // settings
-              this.settings = {
-                deleteModal: $('#delete-row-confirmation'),
-                selectors: {
-                  wizardForms: '.current-step-form'
-                }
-              };
-
-              this.setupDeleteConfirm();
-              this.setupUncheckCheckboxConfirm();
-              this.setupEnsureAtLeastOne();
-            };
-
-            WizardHelper.prototype.showSaveAndExit = function () {
-              var $form = $(this.settings.selectors.wizardForms);
-
-              // show exit prompt
-              modal_helper.showModal('#inline_content');
-            };
-
-            //
-            // limits the number of items to a maximum.  An alert is shown if at the max and false is returned.
-            // otherwise true is returned.
-            //
-            WizardHelper.prototype.handleMaxItems = function handleMaxItems($clickedElementP, eP) {
-              var $this = $clickedElementP;
-              var maxItems = $this.data('max-items');
-              var selector = $this.data('items-to-count');
-
-              if ($(selector).size() >= maxItems) {
-                var message = $this.data('at-max-message');
-                alert(message);
-                eP.preventDefault();
-                return false;
-              }
-
-              return true;
-            };
-
-            /*
-            This pops a confirmation modal which then fires an event on the originating control.
-            example:
-             within the markup: 
-               <div class="btn btn-delete js-delete-confirm js-delete-foo"
-                    data-delete-confirm-modal-message="Are you sure you want to delete the foo?"
-                    data-delete-confirmed-event="deleteItemConfirmed">
-                 Delete Foo
-               </div>
-            within the script section of the page:
-              $(document).on('deleteItemConfirmed', '.js-delete-service-history', function() {
-                // todo - run logic here  
-              return false;
-            });
-            
-            The event name can be custom per button type to allow for different logic to run per button type.
-            */
-            WizardHelper.prototype.setupDeleteConfirm = function (e) {
-              var helper = this;
-              $(document).on('click', '.js-delete-confirm', function (e) {
-                var $this = $(this);
-
-                var modal_message = $this.data('delete-confirm-modal-message');
-                var delete_confirmed_event = $this.data('delete-confirmed-event');
-
-                // configure and show the wet modal for actual delete confirmation
-                var modal = helper.settings.deleteModal;
-                modal.find('.modal-message').html(modal_message);
-                modal.find('.js-modal-delete-button').off('click').on("click", function (e) {
-                  $this.trigger(delete_confirmed_event, $this);
-                });
-
-                wb.doc.trigger("open.wb-lbx", [[{ src: modal, type: 'inline' }], true]);
-
-                // cancel the originating event
-                e.preventDefault();
-                return false;
-              })
-            };
-
-            /*
-            This pops a confirmation modal which then fires an event on the originating control.
-            example:
-             within the markup: 
-              
-              <div class="checkbox">    <label><input type="checkbox" name="checkbox-name" value="true" id="checkbox-id" class=" js-checkbox-confirm js-remove-{checkbox-id}" data-remove-confirm-modal-message="Are you sure you want to remove Label Text from selected values?" data-remove-confirmed-event="removeItemConfirmed"/><input type="hidden" id="__checkbox_checkbox-id" name="__checkbox_checkbox-name" value="true" /> Label Text</label></div>
-            within the script section of the page:
-              $(document).on('removeItemConfirmed', '.js-remove-{checkbox-id}', function() {
-                // todo - run logic here  
-              return false;
-            });
-            
-            The event name can be custom per button type to allow for different logic to run per button type.
-            */
-            WizardHelper.prototype.setupUncheckCheckboxConfirm = function (e) {
-              var helper = this;
-              $(document).on('click', '.js-checkbox-confirm', function (e) {
-                var $this = $(this);
-
-                if (!$this.is("input[type=checkbox]") || ($this.is("input[type=checkbox]") && $this.is(':checked'))) {
-                  return true;
-                }
-
-                $this.prop("checked", true);
-                $this.trigger('update');
-                $this.blur();
-
-                // cancel the originating event
-                e.preventDefault();
-
-                var modal_message = $this.data('remove-confirm-modal-message');
-                var remove_confirmed_event = $this.data('remove-confirmed-event');
-
-                // configure and show the wet modal for actual delete confirmation
-                var modal = helper.settings.deleteModal;
-                modal.find('.modal-message').html(modal_message);
-                modal.find('.js-modal-delete-button').text('Remove');
-                modal.find('.js-modal-delete-button').off('click').on("click", function (e) {
-                  $this.trigger(remove_confirmed_event, $this);
-                });
-
-                wb.doc.trigger("open.wb-lbx", [[{ src: modal, type: 'inline' }], true]);
-
-                return false;
-              })
-            };
-
-            // fix for older version of WET within MVA.
-            // this is fixed in the latest version of WET and can be removed once upgraded.
-            WizardHelper.prototype.clearWetValidationWithinForm = function (formSelectorP) {
-              var $form = $(formSelectorP);
-              $form.find('.has-error')
-                .removeClass('has-error');
-              $form.find('section')
-                .remove();
-            };
-
-            WizardHelper.prototype.setupEnsureAtLeastOne = function () {
-              $(document).on('click', '.js-ensure-at-least-one', function (e) {
-                var $this = $(this);
-                var selector = $this.data("ensure-at-least-one-selector");
-                var message = $this.data("ensure-at-least-one-message");
-
-                if ($(selector).size() == 0) {
-                  alert(message);
-                  e.preventDefault();
-                  return false;
-                }
-
-                return true;
-              });
-            };
-
-            // initialize the wizard helper
-            window.wizard = new WizardHelper();
-            window.wizard.initPage(); 
-          </script>
-
 
 
 

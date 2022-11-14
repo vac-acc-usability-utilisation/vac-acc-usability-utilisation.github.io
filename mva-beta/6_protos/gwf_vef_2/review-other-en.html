@@ -530,12 +530,82 @@ AB  T8L 0E9</td>
     </table>
   </div>
 </div>
+
      
-    
-    <!-- Profile Information -->
-    <div id="profile-information-section">
+<div id="">
+  <h3 class="text-primary">
+    Applicant selection
+
+  </h3>
+  <div class="table-responsive">
+    <table id="profile-information-table" class="mrgn-bttm-0 table brdr-bttm">
+      <tbody>
+      
+
+
+
+
+<tr>
+
+<th scope="row" class=" col-sm-4">
+  Which applicant type best describes you?
+</th>
+
+
+
+<td id="ans-service-number">
+  I am applying as an Orpan
+</td>
+<td class="col-sm-2 text-right">
+
+  <a id="edit-service-number" href="javascript:editStep('mva.7_100_3_2_1', 'mva.7_100_3_9_0');"><span class="fa fa-pencil mrgn-rght-sm"></span>Edit</a>
+
+</td>
+</tr>
+        
+        
+        
+          
+          
+           
+           
+          
+        
+
+
+
+<tr>
+
+<th scope="row" class=" col-sm-4">
+  Are you between 18 and 25 years of age?
+</th>
+
+
+
+<td id="ans-vac-employee">
+Yes
+</td>
+<td class="col-sm-2 text-right">
+
+  <a id="edit-vac-employee" href="javascript:editStep('mva.7_100_3_2_2', 'mva.7_100_3_9_0');"><span class="fa fa-pencil mrgn-rght-sm"></span>Edit</a>
+
+</td>
+</tr>
+
+        
+        
+        
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+     
+ <div id="">
       <h3 class="text-primary">
-        Your profile
+        Service information of Member/Veteran
+
       </h3>
       <div class="table-responsive">
         <table id="profile-information-table" class="mrgn-bttm-0 table brdr-bttm">
@@ -548,13 +618,13 @@ AB  T8L 0E9</td>
 <tr>
   
     <th scope="row" class=" col-sm-4">
-      Service number
+      First name
     </th>
   
   
   
-  <td id="ans-service-number">
-    F12004173
+  <td id="Fname">
+    FName
   </td>
   <td class="col-sm-2 text-right">
     
@@ -562,118 +632,68 @@ AB  T8L 0E9</td>
     
   </td>
 </tr>
-            
-            
-            
-              
-              
-               
-               
-              
-            
-
-
 
 <tr>
   
     <th scope="row" class=" col-sm-4">
-      Are you an employee of Veterans Affairs?
+      Middle name
     </th>
   
   
   
-  <td id="ans-vac-employee">
-    No
+  <td id="Mname">
+    MName
   </td>
   <td class="col-sm-2 text-right">
     
-      <a id="edit-vac-employee" href="javascript:editStep('mva.7_100_3_2_2', 'mva.7_100_3_9_0');"><span class="fa fa-pencil mrgn-rght-sm"></span>Edit</a>
+      <a id="edit-service-number" href="javascript:editStep('mva.7_100_3_2_1', 'mva.7_100_3_9_0');"><span class="fa fa-pencil mrgn-rght-sm"></span>Edit</a>
     
   </td>
 </tr>
-            
-            
-              
-                
-                
-                 
-                 
-                
-              
-
-
-      
-                
-                  
-                  
-                   
-                  
-                  
-                
-
-            
-                  
-                    
-                    
-                     
-                    
-                    
-                  
-          
-              
-              
-            
-              
-            
-              
-                
-                
-                 
-                
-                
-              
-       
-            
-              
-                
-                
-                 
-                
-                
-              
-
-
 
 <tr>
   
-    <th scope="row" class=" col-sm-4">
-      Proof of identity
-    </th>
+  <th scope="row" class=" col-sm-4">
+   Last name
+  </th>
+
+
+
+<td id="Mname">
+  LName
+</td>
+<td class="col-sm-2 text-right">
   
+    <a id="edit-service-number" href="javascript:editStep('mva.7_100_3_2_1', 'mva.7_100_3_9_0');"><span class="fa fa-pencil mrgn-rght-sm"></span>Edit</a>
   
-  
-  <td id="ans-proof-of-identity">
-    Mail
-  </td>
-  <td class="col-sm-2 text-right">
-    
-      <a id="edit-proof-of-identity" href=""><span class="fa fa-pencil mrgn-rght-sm"></span>Edit</a>
-    
-  </td>
+</td>
 </tr>
-            
-            
+
+<tr>
+  
+  <th scope="row" class=" col-sm-4">
+   Date of birth
+  </th>
+
+
+
+<td id="Mname">
+  1968-01-02
+</td>
+<td class="col-sm-2 text-right">
+  
+    <a id="edit-service-number" href="javascript:editStep('mva.7_100_3_2_1', 'mva.7_100_3_9_0');"><span class="fa fa-pencil mrgn-rght-sm"></span>Edit</a>
+  
+</td>
+</tr>
+        
             
 
           </tbody>
         </table>
       </div>
     </div>
-    
-    <!-- Veteran's Profile Information -->
-    
-  
-    <!-- Education and Training Benefit -->
+
     
       <div id="etb-section">
         <h3 class="text-primary">
@@ -696,7 +716,7 @@ AB  T8L 0E9</td>
 <tr>
   
     <th scope="row" class=" col-sm-4">
-      --
+      Describe the circumstances surrounding the need for assistance.
     </th>
   
   
@@ -710,6 +730,116 @@ AB  T8L 0E9</td>
     
   </td>
 </tr>
+
+
+<tr>
+  
+  <th scope="row" class=" col-sm-4">
+    Housing/shelter expense description
+  </th>
+
+
+
+<td id="ans-enrolled-in-other-program">
+ {Text}
+</td>
+<td class="col-sm-2 text-right">
+  
+    <a id="edit-enrolled-in-other-program" href="javascript:editStep('mva.7_100_3_3_0', 'mva.7_100_3_9_0');"><span class="fa fa-pencil mrgn-rght-sm"></span>Edit</a>
+  
+</td>
+</tr>
+
+<tr>
+  
+  <th scope="row" class=" col-sm-4">
+    Housing/shelter expense amount
+  </th>
+
+
+
+<td id="ans-enrolled-in-other-program">
+ $385.00
+</td>
+<td class="col-sm-2 text-right">
+  
+    <a id="edit-enrolled-in-other-program" href="javascript:editStep('mva.7_100_3_3_0', 'mva.7_100_3_9_0');"><span class="fa fa-pencil mrgn-rght-sm"></span>Edit</a>
+  
+</td>
+</tr>
+
+<tr>
+  
+  <th scope="row" class=" col-sm-4">
+    Medical expense description
+  </th>
+
+
+
+<td id="ans-enrolled-in-other-program">
+ {Text}
+</td>
+<td class="col-sm-2 text-right">
+  
+    <a id="edit-enrolled-in-other-program" href="javascript:editStep('mva.7_100_3_3_0', 'mva.7_100_3_9_0');"><span class="fa fa-pencil mrgn-rght-sm"></span>Edit</a>
+  
+</td>
+</tr>
+
+<tr>
+  
+  <th scope="row" class=" col-sm-4">
+    Medical expense amount
+  </th>
+
+
+
+<td id="ans-enrolled-in-other-program">
+ $255.00
+</td>
+<td class="col-sm-2 text-right">
+  
+    <a id="edit-enrolled-in-other-program" href="javascript:editStep('mva.7_100_3_3_0', 'mva.7_100_3_9_0');"><span class="fa fa-pencil mrgn-rght-sm"></span>Edit</a>
+  
+</td>
+</tr>
+
+<tr>
+  
+  <th scope="row" class=" col-sm-4">
+    Other expense description
+  </th>
+
+
+
+<td id="ans-enrolled-in-other-program">
+ {Text}
+</td>
+<td class="col-sm-2 text-right">
+  
+    <a id="edit-enrolled-in-other-program" href="javascript:editStep('mva.7_100_3_3_0', 'mva.7_100_3_9_0');"><span class="fa fa-pencil mrgn-rght-sm"></span>Edit</a>
+  
+</td>
+</tr>
+
+<tr>
+  
+  <th scope="row" class=" col-sm-4">
+    Other expense amount
+  </th>
+
+
+
+<td id="ans-enrolled-in-other-program">
+ $145.00
+</td>
+<td class="col-sm-2 text-right">
+  
+    <a id="edit-enrolled-in-other-program" href="javascript:editStep('mva.7_100_3_3_0', 'mva.7_100_3_9_0');"><span class="fa fa-pencil mrgn-rght-sm"></span>Edit</a>
+  
+</td>
+</tr>
+       
               
               
               
@@ -772,12 +902,12 @@ AB  T8L 0E9</td>
     <div class="col-sm-5 col-sm-push-7 col-xs-12 text-right">
       
       
-        <button id="button-next"  data-mode="new" class="btn btn-lg btn-primary pull-right mrgn-lft-sm mrgn-bttm-sm btn-mobile " >
+        <a id="button-next"  href="disclaimer-en.html" class="btn btn-lg btn-primary pull-right mrgn-lft-sm mrgn-bttm-sm btn-mobile " >
           
             Confirm
           
           
-        </button>
+        </a>
         <div class="visible-xs clearfix"></div>
         <button id="button-back" type="button" onclick="back();" class="btn btn-lg btn-default btn-mobile">
           Back
@@ -826,211 +956,6 @@ AB  T8L 0E9</td>
                   </div> 
                 </div> 
 
-
-          <script>
-            $(function () {
-              /* Highlight Selected Option */
-              $(document).on("click", "input[type=radio]", function () {
-                $this = $(this);
-                $this.closest('.form-group').find('.radio').removeClass('active');
-                if ($this.is(':checked')) {
-                  $this.closest('.radio').addClass('active');
-                }
-              });
-
-              setTimeout(function () {
-                /* Hide/Show Elements For Prepopulated Data*/
-                $('[type=radio]:checked').trigger('click');
-              }, 100);
-
-              /* Initialize textarea counters for Prepopulated Data */
-              $('textarea').trigger('keyup');
-
-              $('#button-exit, #button-exit-menu').click(function (e) {
-                e.preventDefault();
-                wizard.showSaveAndExit();
-              });
-
-              //Stop enter from submitting the step when only one text input present on page
-              $('input[type=text]').keypress(function (event) {
-                var keycode = (event.keyCode ? event.keyCode : event.which);
-                if (keycode == '13') {
-                  return false;
-                }
-              });
-
-            });
-
-            function openFormById(formId) {
-              $('#displayForm input#formID').val(formId);
-              $("#displayForm").submit();
-            }
-
-            /* Set Custom Messages for WET-BOEW*/
-            $(document).on('timerpoke.wb', function () {
-              wb.i18nDict["frm-nosubmit"] = 'Your changes cannot be saved because' + ' ';
-            })
-
-            // TODO - wizardhelper should be moved to a separate file
-            function WizardHelper() { }
-
-            WizardHelper.prototype.initPage = function () {
-              // settings
-              this.settings = {
-                deleteModal: $('#delete-row-confirmation'),
-                selectors: {
-                  wizardForms: '.current-step-form'
-                }
-              };
-
-              this.setupDeleteConfirm();
-              this.setupUncheckCheckboxConfirm();
-              this.setupEnsureAtLeastOne();
-            };
-
-            WizardHelper.prototype.showSaveAndExit = function () {
-              var $form = $(this.settings.selectors.wizardForms);
-
-              // show exit prompt
-              modal_helper.showModal('#inline_content');
-            };
-
-            //
-            // limits the number of items to a maximum.  An alert is shown if at the max and false is returned.
-            // otherwise true is returned.
-            //
-            WizardHelper.prototype.handleMaxItems = function handleMaxItems($clickedElementP, eP) {
-              var $this = $clickedElementP;
-              var maxItems = $this.data('max-items');
-              var selector = $this.data('items-to-count');
-
-              if ($(selector).size() >= maxItems) {
-                var message = $this.data('at-max-message');
-                alert(message);
-                eP.preventDefault();
-                return false;
-              }
-
-              return true;
-            };
-
-            /*
-            This pops a confirmation modal which then fires an event on the originating control.
-            example:
-             within the markup: 
-               <div class="btn btn-delete js-delete-confirm js-delete-foo"
-                    data-delete-confirm-modal-message="Are you sure you want to delete the foo?"
-                    data-delete-confirmed-event="deleteItemConfirmed">
-                 Delete Foo
-               </div>
-            within the script section of the page:
-              $(document).on('deleteItemConfirmed', '.js-delete-service-history', function() {
-                // todo - run logic here  
-              return false;
-            });
-            
-            The event name can be custom per button type to allow for different logic to run per button type.
-            */
-            WizardHelper.prototype.setupDeleteConfirm = function (e) {
-              var helper = this;
-              $(document).on('click', '.js-delete-confirm', function (e) {
-                var $this = $(this);
-
-                var modal_message = $this.data('delete-confirm-modal-message');
-                var delete_confirmed_event = $this.data('delete-confirmed-event');
-
-                // configure and show the wet modal for actual delete confirmation
-                var modal = helper.settings.deleteModal;
-                modal.find('.modal-message').html(modal_message);
-                modal.find('.js-modal-delete-button').off('click').on("click", function (e) {
-                  $this.trigger(delete_confirmed_event, $this);
-                });
-
-                wb.doc.trigger("open.wb-lbx", [[{ src: modal, type: 'inline' }], true]);
-
-                // cancel the originating event
-                e.preventDefault();
-                return false;
-              })
-            };
-
-            /*
-            This pops a confirmation modal which then fires an event on the originating control.
-            example:
-             within the markup: 
-              
-              <div class="checkbox">    <label><input type="checkbox" name="checkbox-name" value="true" id="checkbox-id" class=" js-checkbox-confirm js-remove-{checkbox-id}" data-remove-confirm-modal-message="Are you sure you want to remove Label Text from selected values?" data-remove-confirmed-event="removeItemConfirmed"/><input type="hidden" id="__checkbox_checkbox-id" name="__checkbox_checkbox-name" value="true" /> Label Text</label></div>
-            within the script section of the page:
-              $(document).on('removeItemConfirmed', '.js-remove-{checkbox-id}', function() {
-                // todo - run logic here  
-              return false;
-            });
-            
-            The event name can be custom per button type to allow for different logic to run per button type.
-            */
-            WizardHelper.prototype.setupUncheckCheckboxConfirm = function (e) {
-              var helper = this;
-              $(document).on('click', '.js-checkbox-confirm', function (e) {
-                var $this = $(this);
-
-                if (!$this.is("input[type=checkbox]") || ($this.is("input[type=checkbox]") && $this.is(':checked'))) {
-                  return true;
-                }
-
-                $this.prop("checked", true);
-                $this.trigger('update');
-                $this.blur();
-
-                // cancel the originating event
-                e.preventDefault();
-
-                var modal_message = $this.data('remove-confirm-modal-message');
-                var remove_confirmed_event = $this.data('remove-confirmed-event');
-
-                // configure and show the wet modal for actual delete confirmation
-                var modal = helper.settings.deleteModal;
-                modal.find('.modal-message').html(modal_message);
-                modal.find('.js-modal-delete-button').text('Remove');
-                modal.find('.js-modal-delete-button').off('click').on("click", function (e) {
-                  $this.trigger(remove_confirmed_event, $this);
-                });
-
-                wb.doc.trigger("open.wb-lbx", [[{ src: modal, type: 'inline' }], true]);
-
-                return false;
-              })
-            };
-
-            // fix for older version of WET within MVA.
-            // this is fixed in the latest version of WET and can be removed once upgraded.
-            WizardHelper.prototype.clearWetValidationWithinForm = function (formSelectorP) {
-              var $form = $(formSelectorP);
-              $form.find('.has-error')
-                .removeClass('has-error');
-              $form.find('section')
-                .remove();
-            };
-
-            WizardHelper.prototype.setupEnsureAtLeastOne = function () {
-              $(document).on('click', '.js-ensure-at-least-one', function (e) {
-                var $this = $(this);
-                var selector = $this.data("ensure-at-least-one-selector");
-                var message = $this.data("ensure-at-least-one-message");
-
-                if ($(selector).size() == 0) {
-                  alert(message);
-                  e.preventDefault();
-                  return false;
-                }
-
-                return true;
-              });
-            };
-
-            // initialize the wizard helper
-            window.wizard = new WizardHelper();
-            window.wizard.initPage(); 
-          </script>
 
 
 
