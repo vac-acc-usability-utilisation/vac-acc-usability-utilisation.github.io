@@ -463,6 +463,7 @@
    
     <div class="mrgn-bttm-lg">
       <h2> Specify how you will use these funds:</h2>
+      <p>Select the categories...</p>
       <details>
 
         <summary>What expenses does the Veterans Emergency Fund cover?</summary>
@@ -499,7 +500,7 @@
         </div>
       
         <div class="form-group col-md-6">
-          <label for="housing-amount" class="required"><span class="field-name">Housing/shelter expenses amount</span> <strong class="required">(required)</strong></label>
+          <label for="housing-amount"><span class="field-name">Housing/shelter expenses amount</span></label>
           <div class="input-group col-md-4">
             <span class="input-group-addon">$</span>
             <input type="number" class="form-control" id="housing-amount">
@@ -514,25 +515,27 @@
         <label for="expenseCheck2"  class="h4 mrgn-tp-sm">
           <input id="expenseCheck2" type="checkbox" value="">
           Medical expenses
-        </label>
-        </div>
 
-     
-     <section id="medical-expenses" class="col-xs-12 hidden"> 
-      <div class="form-group col-md-6">
-        <label for="medical-description" class="required"><span class="field-name">Medical expenses description</span> <strong class="required">(required)</strong></label>
-        <input class="form-control full-width" id="medical-description" name="medical-description" type="text" required="required" data-rule-minlength="2" />
+        </label>
       </div>
-    
-      <div class="form-group col-md-6">
-        <label for="medical-amount" class="required"><span class="field-name">Medical expenses amount</span> <strong class="required">(required)</strong></label>
-        <div class="input-group col-md-4">
-          <span class="input-group-addon">$</span>
-          <input type="number" class="form-control" id="medical-amount">
           
+
+      <section id="medical-expenses" class="col-xs-12 hidden"> 
+        <div class="form-group col-md-6">
+          <label for="medical-description" class="required"><span class="field-name">Medical expenses description</span> <strong class="required">(required)</strong></label>
+          <input class="form-control full-width" id="medical-description" name="medical-description" type="text" required="required" data-rule-minlength="2" />
         </div>
-      </div>
-    </section>
+      
+        <div class="form-group col-md-6">
+          <label for="medical-amount"><span class="field-name">Medical expenses amount</span> </label>
+          <div class="input-group col-md-4">
+            <span class="input-group-addon">$</span>
+            <input type="number" class="form-control" id="medical-amount">
+            
+          </div>
+        </div>
+      </section>
+
 
 
       <div class="checkbox">
@@ -545,22 +548,19 @@
      
      <section id="other-expenses" class="col-xs-12 hidden"> 
       <div class="form-group col-md-6">
-        <label for="other-description" class="required"><span class="field-name">Other expenses description</span> <strong class="required">(required)</strong></label>
-        <input class="form-control full-width" id="other-description" name="other-description" type="text" required="required" data-rule-minlength="2" />
+        <label for="other-description" class="required"><span class="field-name">Other expenses description</span> <strong class="required">(Required)</strong></label>
+        <input class="form-control full-width" id="medical-description" name="other-description" type="text" required="required" data-rule-minlength="2" />
       </div>
     
       <div class="form-group col-md-6">
-        <label for="other-amount" class="required"><span class="field-name">Other expenses amount</span> <strong class="required">(required)</strong></label>
+        <label for="other-amount"><span class="field-name">Other expenses amount</span> </label>
         <div class="input-group col-md-4">
           <span class="input-group-addon">$</span>
           <input type="number" class="form-control" id="other-amount">
           
         </div>
       </div>
-    </section>
-   
-    
-    </div></div>
+    </div>
 
   
     
