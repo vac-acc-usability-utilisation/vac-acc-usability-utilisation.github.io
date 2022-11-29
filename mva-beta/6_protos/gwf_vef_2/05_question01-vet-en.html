@@ -400,6 +400,7 @@
     <div class="row">
 
 <!-- Declare constants -->
+<!-- Declare constants -->
 
 
 
@@ -424,165 +425,170 @@
 
 
 
-<div class="col-xs-12 mrgn-tp-md">
-
-  <label id="describe-circumstances" class="mrgn-tp-0 h2 required">
-    Describe the circumstances surrounding the need for assistance. 
-  </label>
-  <p>Please limit the personal or
-    3rd party information to what is required to explain your request for emergency funding.</p>
-  <div class="col-xs-12"> 
-
+  <div class="col-xs-12 mrgn-tp-md">
   
-    <textarea class="form-group col-md-3 full-width" rows="6"></textarea>
-    <p class="col-xs-12 small mrgn-tp-sm">
-      You used <span id="condition-relates-details-used">0</span> characters. <span id="condition-relates-details-left">3000</span> characters left.
-      <meter id="condition-relates-details-meter" style="width:100%;" value="0" min="0" high="2250" max="3000"></meter>
-    </p>
-    </div>
-
-
-      
-<div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
-
-
-<div class="checkbox">
-  <label for="attestCheck1" class="h5"><input id="attestCheck1" type="checkbox" value="">I attest that I do not have liquid assets to address the emergency. Liquid assets are assets in
-    the form of cash or funds easily convertible into cash.</label>
-</div>
-<div class="checkbox">
-  <label for="attestCheck2" class="h5"><input id="attestCheck2" type="checkbox" value="">I will use the fund for the intended emergency need. Using the fund for any other purpose will
-    result in an overpayment and will be repayable.</label>
-</div>
-<div class="checkbox">
-  <label for="attestCheck3" class="h5"><input id="attestCheck3" type="checkbox" value="">I authorize VAC to make payments on my behalf to pay bills and/or make purchases.</label>
-</div>
-
- 
-    <div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
+    <label id="describe-circumstances" class="mrgn-tp-0 h2 required" for="circumstances">
+      Describe the circumstances surrounding the need for assistance. 
+    </label>
+    <p>Please limit the personal or
+      3rd party information to what is required to explain your request for emergency funding.</p>
+    <div class="col-xs-12"> 
+  
+    
+      <textarea class="form-group col-md-3 full-width" rows="6" name="circumstances"></textarea>
+      <p class="col-xs-12 small mrgn-tp-sm">
+        You used <span id="condition-relates-details-used">0</span> characters. <span id="condition-relates-details-left">3000</span> characters left.
+        <meter id="condition-relates-details-meter" style="width:100%;" value="0" min="0" high="2250" max="3000"></meter>
+      </p>
+      </div>
+  
+  
+        
+  <div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
+  
+  
+  <div class="checkbox">
+    <label for="attestCheck1" class="h5 required"><input id="attestCheck1" type="checkbox" value="" >I attest that I do not have liquid assets to address the emergency. Liquid assets are assets in
+      the form of cash or funds easily convertible into cash. <strong class="required">(Required)</strong></label>
+  </div>
+  <div class="checkbox">
+    <label for="attestCheck2" class="h5 required"><input id="attestCheck2" type="checkbox" value="" >I will use the fund for the intended emergency need. Using the fund for any other purpose will
+      result in an overpayment and will be repayable. <strong class="required">(Required)</strong></label>
+  </div>
+  <div class="checkbox">
+    <label for="attestCheck3" class="h5"><input id="attestCheck3" type="checkbox" value="">I authorize VAC to make payments on my behalf to pay bills and/or make purchases. <strong class="text-muted">(Optional)</strong></label>
+  </div>
+  
    
-    <div class="mrgn-bttm-lg">
-      <h2> Specify how you will use these funds:</h2>
-      <p>Select the categories...</p>
-      <details>
-
-        <summary>What expenses does the Veterans Emergency Fund cover?</summary>
-  
-            <p>Veterans Emergency Fund will cover essential needs, which may include: food; clothing; shelter; medical care/expenses; expenses required to maintain safety and shelter.</p>
-  
-      <p>VAC will consider each purchase or expense individually; however, the following are examples that might not be considered eligible for the VEF. The purchase or payment of/for:
-        <ul>
-          <li>expenses of an ongoing nature (e.g., a series of payments such as rent, mortgage, etc.) </li>
-          <li>non-essential goods, services or travel, vacation/vacation home, entertainment</li>
-          <li>non-essential bills (e.g., cable/satellite TV, gifts for others, etc.)</li>
-          <li>expenses related to financial mismanagement, or due to bankruptcy or foreclosure</li>
-          <li>credit cards, or retail store cards, overdraft fees and non-sufficient funds charges</li>
-          <li>taxes, fines or assessment by a government entity, legal expenses</li>
-          <li>marriage, divorce, or adoption</li>
-        </ul>
-        </p>
-       </details>
-    
-
-
-      <div class="checkbox">
-        <label for="expenseCheck1"  class="h4 mrgn-tp-sm">
-          <input id="expenseCheck1" type="checkbox" value="">
-          Housing/shelter expenses
-
-        </label>
-      </div>
-
-      <section id="housing-expenses" class="col-xs-12 hidden"> 
-        <div class="form-group col-md-6">
-          <label for="housing-description" class="required"><span class="field-name">Housing/shelter expenses description</span> <strong class="required">(required)</strong></label>
-          <input class="form-control full-width" id="housing-description" name="housing-description" type="text" required="required" data-rule-minlength="2" />
-        </div>
-      
-        <div class="form-group col-md-6">
-          <label for="housing-amount"><span class="field-name">Housing/shelter expenses amount</span></label>
-          <div class="input-group col-md-4">
-            <span class="input-group-addon">$</span>
-            <input type="number" class="form-control" id="housing-amount">
-            
-          </div>
-        </div>
-      </section>
-
-
-      
-      <div class="checkbox">
-        <label for="expenseCheck2"  class="h4 mrgn-tp-sm">
-          <input id="expenseCheck2" type="checkbox" value="">
-          Medical expenses
-
-        </label>
-      </div>
-          
-
-      <section id="medical-expenses" class="col-xs-12 hidden"> 
-        <div class="form-group col-md-6">
-          <label for="medical-description" class="required"><span class="field-name">Medical expenses description</span> <strong class="required">(required)</strong></label>
-          <input class="form-control full-width" id="medical-description" name="medical-description" type="text" required="required" data-rule-minlength="2" />
-        </div>
-      
-        <div class="form-group col-md-6">
-          <label for="medical-amount"><span class="field-name">Medical expenses amount</span> </label>
-          <div class="input-group col-md-4">
-            <span class="input-group-addon">$</span>
-            <input type="number" class="form-control" id="medical-amount">
-            
-          </div>
-        </div>
-      </section>
-
-
-
-      <div class="checkbox">
-        <label for="expenseCheck3"  class="h4 mrgn-tp-sm">
-          <input id="expenseCheck3" type="checkbox" value="">
-          Other expenses
-        </label>
-        </div>
-
+      <div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
      
-     <section id="other-expenses" class="col-xs-12 hidden"> 
-      <div class="form-group col-md-6">
-        <label for="other-description" class="required"><span class="field-name">Other expenses description</span> <strong class="required">(Required)</strong></label>
-        <input class="form-control full-width" id="medical-description" name="other-description" type="text" required="required" data-rule-minlength="2" />
-      </div>
+      <div class="mrgn-bttm-lg">
+        <h2> Specify how you will use these funds:</h2>
+        <p>Select the categories...</p>
+        <details>
+  
+          <summary>What expenses does the Veterans Emergency Fund cover?</summary>
     
-      <div class="form-group col-md-6">
-        <label for="other-amount"><span class="field-name">Other expenses amount</span> </label>
-        <div class="input-group col-md-4">
-          <span class="input-group-addon">$</span>
-          <input type="number" class="form-control" id="other-amount">
-          
+              <p>Veterans Emergency Fund will cover essential needs, which may include: food; clothing; shelter; medical care/expenses; expenses required to maintain safety and shelter.</p>
+    
+        <p>VAC will consider each purchase or expense individually; however, the following are examples that might not be considered eligible for the VEF. The purchase or payment of/for:
+          <ul>
+            <li>expenses of an ongoing nature (e.g., a series of payments such as rent, mortgage, etc.) </li>
+            <li>non-essential goods, services or travel, vacation/vacation home, entertainment</li>
+            <li>non-essential bills (e.g., cable/satellite TV, gifts for others, etc.)</li>
+            <li>expenses related to financial mismanagement, or due to bankruptcy or foreclosure</li>
+            <li>credit cards, or retail store cards, overdraft fees and non-sufficient funds charges</li>
+            <li>taxes, fines or assessment by a government entity, legal expenses</li>
+            <li>marriage, divorce, or adoption</li>
+          </ul>
+          </p>
+         </details>
+      
+  
+  
+        <div class="checkbox">
+          <label for="expenseCheck1"  class="h4 mrgn-tp-sm">
+            <input id="expenseCheck1" type="checkbox" value="">
+            Housing/shelter expenses
+  
+          </label>
+        </div>
+  
+        <section id="housing-expenses" class="col-xs-12 hidden"> 
+          <div class="form-group col-md-6">
+            <label for="housing-description" class="required"><span class="field-name">Housing/shelter expenses description</span> <strong class="required">(required)</strong></label>
+            <input class="form-control full-width" id="housing-description" name="housing-description" type="text" required="required" data-rule-minlength="2" />
+          </div>
+        
+          <div class="form-group col-md-6">
+            <label for="housing-amount"><span class="field-name">Housing/shelter expenses amount</span></label>
+            <div class="input-group col-md-4">
+              <span class="input-group-addon">$</span>
+              <input type="number" class="form-control" id="housing-amount">
+              
+            </div>
+          </div>
+        </section>
+  
+  
+        
+        <div class="checkbox">
+          <label for="expenseCheck2"  class="h4 mrgn-tp-sm">
+            <input id="expenseCheck2" type="checkbox" value="">
+            Medical expenses
+  
+          </label>
+        </div>
+            
+  
+        <section id="medical-expenses" class="col-xs-12 hidden"> 
+          <div class="form-group col-md-6">
+            <label for="medical-description" class="required"><span class="field-name">Medical expenses description</span> <strong class="required">(required)</strong></label>
+            <input class="form-control full-width" id="medical-description" name="medical-description" type="text" required="required" data-rule-minlength="2" />
+          </div>
+        
+          <div class="form-group col-md-6">
+            <label for="medical-amount"><span class="field-name">Medical expenses amount</span> </label>
+            <div class="input-group col-md-4">
+              <span class="input-group-addon">$</span>
+              <input type="number" class="form-control" id="medical-amount">
+              
+            </div>
+          </div>
+        </section>
+  
+  
+  
+        <div class="checkbox">
+          <label for="expenseCheck3"  class="h4 mrgn-tp-sm">
+            <input id="expenseCheck3" type="checkbox" value="">
+            Other expenses
+          </label>
+          </div>
+  
+       
+       <section id="other-expenses" class="col-xs-12 hidden"> 
+        <div class="form-group col-md-6">
+          <label for="other-description" class="required"><span class="field-name">Other expenses description</span> <strong class="required">(required)</strong></label>
+          <input class="form-control full-width" id="medical-description" name="other-description" type="text" required="required" data-rule-minlength="2" />
+        </div>
+      
+        <div class="form-group col-md-6">
+          <label for="other-amount"><span class="field-name">Other expenses amount</span> </label>
+          <div class="input-group col-md-4">
+            <span class="input-group-addon">$</span>
+            <input type="number" class="form-control" id="other-amount">
+            
+          </div>
         </div>
       </div>
-    </div>
-
-  
+      <!--
+      <section id="sum-expenses" class="col-xs-12"> 
+        <div class="col-md-6">
+        </div>
+        <div class="form-group col-md-6 mrgn-tp-md">
+          <label for="sum-amount" class="disabled"><span class="field-name">Total expenses amount</span> </label>
+          <div class="input-group col-md-4">
+            <span class="input-group-addon">$</span>
+            <input type="number" class="form-control disabled" id="sum-amount" disabled>
+            
+          </div>
+        </div>
+      </section>-->
+      
+      </div>
     
-
-
-
-
-
-
-
   
+    </div>
+  
+   
   
   </div>
-
- 
-
-</div>
-
-
-
-</form>
-
+  
+  
+  
+  </form>
+  
 
 
 

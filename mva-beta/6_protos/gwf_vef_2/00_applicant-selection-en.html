@@ -296,33 +296,12 @@ Applicant type
    
   </div>
   
-  
-
-
-
-
-
-
-
-  
-  
-  
-
-
-
-
 
 
 
 <div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
 
 
-  
-  
-    
-  
-  
-  
 
   <div class="col-xs-12"> 
     <div class="list-group form-group">
@@ -371,22 +350,6 @@ Applicant type
 
 
 
-
-
-
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
       </div> 
     </div> 
   </div> 
@@ -398,23 +361,6 @@ Applicant type
 
 
 <!-- button bar -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -438,15 +384,6 @@ Applicant type
     
   </div>
 
-  
-
-
-
-  
-  
-
-  
-
 
 
 </div>
@@ -455,8 +392,9 @@ Applicant type
           </div>       
 
           <div class="clear-fix"></div>
+          <!--
   <a href="01_before-you-start-other-en.html" class="pull-right mrgn-tp-md">(Next as non-Veteran)</a>
-              
+              -->
           
           <div id="page-details" class="mrgn-tp-md row pagedetails">
           
@@ -480,26 +418,9 @@ Applicant type
           </div>
         </main>    
 
-        
 
-
-
-
-
-
-
-
-
-      
-        
       </div>
     </div>  
-
-    
-
-
-
-
 
 
 <footer id="wb-info">
@@ -509,7 +430,6 @@ Applicant type
     <p class="mrgn-tp-md mrgn-bttm-md">
         
         
-          <small>WEB.101171 &nbsp;|&nbsp;</small>
         
       <a href="/prot/mv-ca/MVA_7_21">Privacy information</a>
     </p>
@@ -537,13 +457,27 @@ Applicant type
     <script src="../../../GCWeb/js/theme.min.js"></script>
 
     <script>    
+     
+
+        
        $('input:radio[name="applicant-type"]').change(
           function(){
+              if (!$("#application-option-1").is(':checked')) {
+                //if applicant type is not Veteran, change link in next button
+                $('#button-next').attr("href", "01_before-you-start-other-en.html")
+                  }
+                  
+              else {
+               //if applicant type is Veteran, change link in next button
+               $('#button-next').attr("href", "01_before-you-start-vet-en.html")
+               }
+
               if ($("#application-option-4").is(':checked')) {
                  
 
                   $("#orphan-follow-up").toggleClass("show hidden");
               }
+              
               else {
                 
                 $("#orphan-follow-up").addClass("hidden");
