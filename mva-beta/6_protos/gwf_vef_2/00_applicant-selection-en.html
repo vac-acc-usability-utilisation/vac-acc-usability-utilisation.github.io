@@ -225,40 +225,6 @@ Applicant type
 <!-- content
 <script src="/clf-dev/MVACLF-2.0/scripts/mva/wizard.js?v=2022.8.14"></script> -->
 
-<!-- step validation errors -->
-<div id="page-alerts">
-
-
-
-
-
-
-
-
-
-
-
-<!-- step error messages -->
-<div id="message-box" class="alert alert-danger static-alert hidden" role="alert">
-  <h3>Error</h3>
-  
-    <p>
-      An answer is required for: "Are you an employee of Veterans Affairs?"
-    </p>
-  
-  
-  
-  
-  
-  
-  
-  
-</div>
-
-
-
-
-</div>
 
 <!-- main content area --> 
 
@@ -277,15 +243,6 @@ Applicant type
 
 <form        id="frm"        name="frm"        action="/prot/mv-ca/mva_7_100_3/jump"        method="post" 		class="span-8 module">
 
-
-<input type="hidden" name="formAction" value="/prot/mv-ca/MVA_7_100_3" id="formAction"/>
-<input type="hidden" name="model.submittedStepId" value="mva.7_100_3_1_1" id="submittedStepId"/>
-<input type="hidden" name="model.jumpToStepId" value="mva.7_100_3_1_1" id="jumpToStepId"/>
-<input type="hidden" name="model.editStepMode" value="true" id="editStepMode"/>
-<input type="hidden" name="model.returnStepAfterEdit" value="mva.7_100_3_menu" id="returnStepAfterEdit"/>
-<input type="hidden" name="model.editModeUpdatePressed" value="false" id="editModeUpdatePressed"/>
-<input type="hidden" name="model.editModeCancelPressed" value="false" id="editModeCancelPressed"/>
-
          
   <div class="col-xs-12">
     <label class="h3 mrgn-tp-md required">
@@ -296,7 +253,6 @@ Applicant type
    
   </div>
   
-
 
 
 <div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
@@ -316,12 +272,42 @@ Applicant type
 <div class="radio list-group-item">
   <label ><input type="radio" name="applicant-type" id="application-option-4" value="4"/>I am applying as an <strong>Orphan</strong></label></div>
     </div>
-  </div>      
+
+    <section id="orphan-follow-up" class="hidden">
+      <div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
+      <div class="clearfix"></div>
+      <h3>Qualifying for Veterans Emergency Fund as an Orphan</h3>
+        <div class="well">
+          
+          <p>To qualify for the Veterans Emergency Fund, you must be an orphan of a deceased Veteran or CAF member (or the legal guardian if the orphan is under the age of 18), who is:</p>
+          <ul>
+            <li>under the age of 18 years;</li>
+            <li>under the age of 25 years and attending a school or college full-time (OR under the age of 25 years with full-time attendance at a school of college)</li>
+            <li>over the age of 18 years and prevented by physical or mental incapacity from earning a livelihood, if the incapacity occurred</li>
+            <ul>
+              <li>before the child attained the age of 18 years, or</li>
+              <li>after the age of 18 years and before the age of 25 years while the child was attending a school or college full-time.</li>
+            </ul>
+          </ul>
+  
+         
+        </div>
+          
+        <div class="checkbox-inline">
+          <label for="inlineCheckAccredited"><input id="inlineCheckAccredited" type="checkbox" value="">I attest that I am attending a full-time education program at an accredited school. <strong class="text-muted">(If applicable)</strong></label>
+      </div>
+          
+          
+           
+           
+          
+      </section>
+
+  </div>    
 
 
-  <section id="orphan-follow-up" class="hidden">
-    <div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
-
+  
+    <!--
     <label class="h3 mrgn-tp-md required">
       Are you between 18 and 25 years of age?
     </label>
@@ -341,10 +327,8 @@ Applicant type
     <section id="orphan-accredited-school" class="hidden">
       <div class="col-xs-12 mrgn-lft-lg fa fa-arrow-down text-success fa-3x mrgn-tp-md mrgn-bttm-md show" aria-hidden="true"></div>
 
-      <div class="checkbox-inline">
-        <label for="inlineCheckAccredited" class="required"><input id="inlineCheckAccredited" type="checkbox" value="">I attest that I am attending a full-time education program at an accredited school. <strong class="required">(Required)</strong></label>
-    </div>
-    </section>
+     
+    </section>-->
           
 </form>
 
@@ -389,7 +373,6 @@ Applicant type
 </div>
 
 
-          </div>       
 
           <div class="clear-fix"></div>
           <!--
