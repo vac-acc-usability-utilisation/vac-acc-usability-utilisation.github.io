@@ -148,16 +148,15 @@
                          
                       
                       </div>
- 
                   
                     </div>
                     <hr class="mrgn-tp-sm mrgn-bttm-sm">
                   </div>
                   
-                  <div class="step current">
+                  <div class="step active">
                     <div class="step-label">
 
-                      2
+                      <span aria-hidden="true" class="fa fa-check"></span>
 
 
                     </div>
@@ -171,91 +170,22 @@
 
                       </div>
 
-                      <div class="col-sm-12 mrgn-lft-md mrgn-tp-md">
-                      <div class="row mrgn-bttm-md ">
-                        <form action="#" method="get" id="steps-example">
-                          <div class="row">
-                            <div class="form-group col-md-3">
-                                <label for="firstname" class="required"><span class="field-name">First name</span></label>
-                                <input class="form-control" id="firstname" name="firstname" type="text" data-rule-minlength="2" >
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label for="middlename" ><span class="field-name">Middle name</span></label>
-                                <input class="form-control" id="middlename" name="middlename" type="text" data-rule-minlength="2" required="required">
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label for="lastname" class="required"><span class="field-name">Last name</span></label>
-                                <input class="form-control" id="lastname" name="lastname" type="text" data-rule-minlength="2" required="required">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <label for="dateOfBirth" class="required"><span class="field-name">Date of Birth</span><span class="datepicker-format">
-                                                (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
-                                <input class="form-control" id="dateOfBirth" name="dateOfBirth" type="date" required="required">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-3">
-                                <label for="country" class="required"><span class="field-name">Country</span></label>
-                                <select class="form-control" id="country" name="country" autocomplete="country" required="required">
-                                        <option>select country</option>
-                                        
-                                        <option value="CA" selected>Canada</option>
-                                    
-                                    </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="postalCode" class="required"><span class="field-name">Postal Code</span><span class="postal-code-format hidden">
-                                                        (<abbr title="Six digits, alternating letter and number">A1B 2C3</abbr>)</span></label>
-                                <input class="form-control" id="postalCode" name="postalCode" type="text" autocomplete="postal-code" size="7" maxlength="7" required="required" data-rule-postalCodeCA="true">
-                            </div>
-                        </div>
-                        <div class="row opct-70">
-                          <div class="col-sm-12">
-                              <fieldset class="subfields text-muted">
-                                  <legend class="required" style="font-weight:700;font-size:16px"><span class="field-name text-muted"> Is there a matching profile? (testing only)</span></legend>
-                                  <div class="radio" >
-                                      <label for="protoCSDNno">
-                                          <input type="radio" name="protoCSDN" value="protoCSDNno" id="protoCSDNno" onchange="protoCSDNLogic(1)" data-rule-required="true"> &nbsp;No matches in CSDN </label>
-                                      <div class="clearfix mrgn-bttm-sm"></div>
-                                      <label for="protoCSDNveteran">
-                                          <input type="radio" name="protoCSDN" value="protoCSDNveteran" id="protoCSDNveteran" onchange="protoCSDNLogic(2)"> &nbsp;Veteran notebook in CSDN</label>
-                                      <div class="clearfix mrgn-bttm-sm"></div>
-                                      <label for="protoCSDNfamily">
-                                          <input type="radio" name="protoCSDN" value="protoCSDNfamily" id="protoCSDNfamily" onchange="protoCSDNLogic(3)">&nbsp;Family or POA notebook in CSDN
-                                      </label>&nbsp;
-                                      <div class="clearfix mrgn-bttm-sm"></div>
-                                  </div>
-                              </fieldset>
-                          </div>
-
-                      </div>
-                        <a id="button-next" class="btn btn-success btn-lg mrgn-tp-md" href="#">
-                          Continue </a>
-                        </form>
-                          
-                         
-                      
-                      </div>
-                      
-                    </div>
                     
                     </div>
                     <hr class="mrgn-tp-sm mrgn-bttm-sm">
                   </div>
 
-                  <div class="step">
-                    <div class="step-label">
+                  <div class="step current">
+                    <div class="step-label text-success">
 
                       3
 
 
                     </div>
-                    <div class="step-content text-muted">
+                    <div class="step-content ">
                       <div class="row mrgn-tp-sm">
                         <div class="col-xs-8">
-                          <h2 class="mrgn-tp-sm">
+                          <h2 class="mrgn-tp-sm text-success">
                             Account details
                           </h2>
                         </div>
@@ -264,7 +194,65 @@
 
                       </div>
 
-
+                      
+                      <div class="col-sm-12 mrgn-lft-md mrgn-tp-md">
+                        <div class="row mrgn-bttm-md ">
+                          <form action="#" method="get" id="steps-example">
+                            <div id="register" class="form-group col-sm-12">
+                            
+                              <div class="row">
+                                  <div class="form-group col-md-6 mrgn-tp-md">
+  
+                                      <label for="newUser" class="required"><span class="field-name">Enter your CSDN ID:</span></label>
+                                      <input class="form-control" id="newUser" name="newUser" type="text" required="required">
+  
+                                  </div>
+                              </div>
+                              <hr>
+                              <div class="row">
+                                  <div class="col-sm-12">
+                                      <fieldset class="subfields">
+                                          <legend>Preferred language</legend>
+                                          <div class="form-group col-md-3">
+                                              <label for="writtenlang" class="required">
+                                                                          Written language
+                                                                       </label>
+                                              <select class="form-control" name="writtenlang" id="writtenlang">
+                                                                           <option value="en" selected>English</option>
+                                                                           <option value="fr">French</option>
+                                                                       </select>
+                                          </div>
+                                          <div class="form-group col-md-3">
+                                              <label for="spokenlang" class="required">
+                                                                              Spoken language
+                                                                           </label>
+                                              <select class="form-control" name="spokenlang" id="spokenlang">
+                                                                               <option value="en" selected>English</option>
+                                                                               <option value="fr">French</option>
+                                                                           </select>
+                                          </div>
+                                      </fieldset>
+                                  </div>
+                              </div>
+                              <hr>
+                             
+                              <hr>
+                           
+  
+                              <hr>
+  
+  
+  
+                          </div>
+                          <a class="btn btn-success btn-lg mrgn-tp-md" href="#">
+                            Continue </a>
+                          </form>
+                            
+                           
+                        
+                        </div>
+                        
+                      </div>
 
                     </div>
                   </div>
@@ -390,26 +378,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
     <script src="../../../wet-boew/js/wet-boew.min.js"></script>
     <script src="../../../GCWeb/js/theme.min.js"></script>
-
-    <script>
-      $('input:radio[name="protoCSDN"]').change(
-          function(){
-              if ($("#protoCSDNno").is(':checked')) {
-                //if notebook type is not 
-                $('#button-next').attr("href", "register3-new.html");
-              }
-              if ($("#protoCSDNveteran").is(':checked')) {
-                //if notebook type is not 
-                $('#button-next').attr("href", "register3-family.html");
-              }
-              if ($("#protoCSDNfamily").is(':checked')) {
-                //if notebook type is not 
-                $('#button-next').attr("href", "register3-family.html");
-              }
-      });
-
-        
-    </script>
 </body>
 
 </html>
