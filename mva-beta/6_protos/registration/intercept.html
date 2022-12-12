@@ -5,13 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intercept</title>
+    <style>
+        body {
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
-    <ul>
-        <li>
-            <a href="register2.html">Complete sign-in partner registration or sign-in</a>
-        </li>
+    <p>Scenarios:</p>
+    <ol>
         
-    </ul>
+        <li>
+            <a href="#">
+                <span class="spanAuthOpt"></span> is connected to notebook, user signs-in
+            </a>
+        </li> 
+        <br>
+        <li>
+            <a href="signin.html">
+                <span class="spanAuthOpt"></span> is not connected to a notebook, user must verify identity and link notebook 
+            </a>
+        </li>       
+    </ol>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script>
+       // Read a page's GET URL variables and return them as an associative array.
+       function getUrlVars()
+       {
+           var vars = [], hash;
+           var url = window.location.href;
+           var cleanedUrl = url.replace(/#/g, '');
+           var hashes = cleanedUrl.slice(cleanedUrl.indexOf('?') + 1).split('&');
+           for(var i = 0; i < hashes.length; i++)
+           {
+               hash = hashes[i].split('=');
+               vars.push(hash[0]);
+               vars[hash[0]] = hash[1];
+           }
+           return vars;
+       }
+
+       urlParams = getUrlVars();
+
+       console.log(urlParams);
+
+        if (urlParams['authopt'] == 'gckey') {
+           var spanAuthOpt = 'gcKey';
+        }
+        if (urlParams['authopt'] == 'signinpartner') {
+            var spanAuthOpt = 'Sign-in Partner';
+        } 
+
+        $(".spanAuthOpt").text(spanAuthOpt);
+    </script>
 </body>
 </html>
