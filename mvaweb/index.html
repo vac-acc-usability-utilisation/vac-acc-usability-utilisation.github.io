@@ -44,7 +44,7 @@
 	<h2 class="wb-inv">Language selection</h2>
 	<ul class="list-inline mrgn-bttm-0">
 		<li>
-			<a lang="fr" hreflang="fr" href="content-limit-fr.html">
+			<a lang="fr" hreflang="fr" href="content-fr.html">
 				<span class="hidden-xs">Français</span>
 				<abbr title="Français" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
 			</a>
@@ -87,7 +87,7 @@
 	<hr>
 	<div class="container">
 		<div class="row"><div class="col-md-8">
-					<nav class="gcWeb-menu" typeof="SiteNavigationElement">
+					<nav class="gcweb-menu" typeof="SiteNavigationElement">
 	<h2 class="wb-inv">Menu</h2>
 	<button type="button" aria-haspopup="true" aria-expanded="false"><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
 	<ul role="menu" aria-orientation="vertical" data-ajax-replace="https://www.canada.ca/content/dam/canada/sitemenu/sitemenu-v2-en.html"><li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/jobs.html">Jobs and the workplace</a></li>
@@ -113,18 +113,20 @@
 						<h2 class="wb-inv">Sign-on information</h2>
 						<button class="btn btn-default" type="button">My account</button>
 						<button class="btn btn-primary" type="button">Sign out</button>
-						<p class="small mrgn-tp-sm">Signed in as <span class="nowrap honor">John Doe</span></p>
+						<p class="small mrgn-tp-sm">Signed in as <span class="nowrap honour">John Doe</span></p>
 					</section>
-				</div>
-			</div>
+				</div></div>
 	</div>
 	<nav id="wb-bc" property="breadcrumb">
 	<h2>You are here:</h2>
 	<div class="container">
-		<ol class="breadcrumb">
-			<li><a href="#mva-dashboard-url">My VAC Account</a></li>
-			<li><a href="#">Design</a></li>
-			<li><a href="#">Static page template</a></li>
+		<ol class="breadcrumb" typeof="BreadcrumbList">
+			<li property="itemListElement" typeof="ListItem">
+				<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
+					<span property="name">Canada.ca</span>
+				</a>
+				<meta property="position" content="1">
+			</li>
 		</ol>
 	</div>
 </nav>
@@ -133,16 +135,14 @@
 </header>
 
 <main class="container" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
-	<div class="container">
-        <div class="row">
+        <div class="row hidden">
             <div class="col-sm-12">
-                <section class="alert alert-info small">
+                <section class="alert alert-info">
 					<h2 class="h4">Conceptual prototype</h2>
                     <p>This is how MVA would look as a gcWeb theme. Global, temporary alerts require a header, short description, and an expiry date.</p>
                  </section>
             </div>
         </div>
-    </div>
 <h1 id="wb-cont" property="name" class="brdr-0">
 	Content page - Limited width content
 </h1>
@@ -361,6 +361,39 @@
 <script src="wet-boew/js/wet-boew.min.js"></script>
 <script src="GCWeb/js/theme.min.js"></script>
 
+<script>	
+
+
+	$(document).ready(function() {
+   
+		// https://open.canada.ca/data/en/dataset/089fc8e5-1340-4e8a-a7e4-f6eb320a5b6e/resource/26faf38b-2f6e-4062-b320-9a39e1081c2e?inner_span=True
+		
+		$.getJSON('https://www.veterans.gc.ca/xml/jsonp/app.cfc?method=GetCasualties&language=en', 
+			   function(json) {
+				   
+				   console.log(json['data'].length);
+   
+				   var rndEntry = json['data'][Math.floor(Math.random() * json['data'].length)];
+				   var surname = rndEntry['SURNAME'];
+				   var firstname = rndEntry['FORENAMES'].replace(/ .*/,'');
+   
+   
+				   var displayname = firstname + " " + surname;
+   
+				   console.log(displayname);
+				   writeDisplayName(displayname);
+				   return;
+			   }
+		   );
+		   
+		   function writeDisplayName(displayname) {
+			   $('.honor').text(displayname);
+		   }
+			   
+   });
+   </script>
+   
+
 <script src="vacWeb/js/servicenumbervalidatormethod.js"></script>
 <script src="vacWeb/js/servicenumberformatpainter.js"></script>
 
@@ -370,37 +403,6 @@
 	}
 </script>
 
-<script>	
-
-
- $(document).ready(function() {
-
-	 // https://open.canada.ca/data/en/dataset/089fc8e5-1340-4e8a-a7e4-f6eb320a5b6e/resource/26faf38b-2f6e-4062-b320-9a39e1081c2e?inner_span=True
-	 
-	 $.getJSON('https://www.veterans.gc.ca/xml/jsonp/app.cfc?method=GetCasualties&language=en', 
-            function(json) {
-				
-                console.log(json['data'].length);
-
-				var rndEntry = json['data'][Math.floor(Math.random() * json['data'].length)];
-				var surname = rndEntry['SURNAME'];
-				var firstname = rndEntry['FORENAMES'].replace(/ .*/,'');
-
-
-				var displayname = firstname + " " + surname;
-
-				console.log(displayname);
-				writeDisplayName(displayname);
-                return;
-            }
-        );
-		
-		function writeDisplayName(displayname) {
-			$('.honor').text(displayname);
-		}
-			
-});
-</script>
 
 <!--
 
