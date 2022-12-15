@@ -276,24 +276,32 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
-<script src="wet-boew/js/wet-boew.min.js"></script>
-<script src="GCWeb/js/theme.min.js"></script>
+<script src="https://wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/wet-boew.min.js"></script>
+<script src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js"></script>
+
 
 <script>	
-
-/* Retrieves a random first and last name of a Veteran featured in today's Honour Roll api */
+/*+++    🍁     ++++⠀⠀honour roll 
+Replaces an inline spinner with 
+a random first and last name 
+of a Veteran from the Honour Roll .api 
+https://open.canada.ca/data/en/dataset/792bb73a-f758-4459-b7e9-0c286a0bc15d
+HTML
+<code>
+	
+  +++++++++++++++++*/
 
    $.ajax({
      url:"https://www.veterans.gc.ca/xml/jsonp/app.cfc?method=remoteGetHonourRoll&callback=?&language=en",
 	 
-	 success:function(str){
-
-			var strFormat = str.substring(2, str.length - 1);
-			var json = jQuery.parseJSON(strFormat);
-			var dataset = json['days'];   
-			var rndEntry = dataset[Math.floor(Math.random() * dataset.length)];
-			var surname = rndEntry['SURNAME'];
-			var firstName = rndEntry['FORENAMES'].replace(/ .*/,'');
+	 success:function(dataset){
+			//json is as a JSON string, so I trimmed it and parsed with jQuery to json 
+			var dataset = dataset.substring(2, dataset.length - 1);
+			var json = jQuery.parseJSON(dataset);
+			var names = json['days'];   
+			var rndHonourRoll = names[Math.floor(Math.random() * names.length)];
+			var surname = rndHonourRoll['SURNAME'];
+			var firstName = rndHonourRoll['FORENAMES'].replace(/ .*/,'');
 			var displayName = firstName + " " + surname;
 			writeDisplayName(displayName);
 			return;
@@ -309,20 +317,6 @@
 		   }
    </script>
    
-
-<script src="vacWeb/js/servicenumbervalidatormethod.js"></script>
-<script src="vacWeb/js/servicenumberformatpainter.js"></script>
-
-<script>
-	function SubmitForm(e) {
-		e.preventDefault();
-	}
-</script>
-
-
-<!--
-
--->
 
 </body>
 </html>
