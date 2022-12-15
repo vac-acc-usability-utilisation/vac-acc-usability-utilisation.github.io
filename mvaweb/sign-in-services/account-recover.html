@@ -24,8 +24,32 @@
 <!--
 <link rel="stylesheet" href="vacweb/css/theme.css" />-->
 
+<link rel="stylesheet" href="../vacWeb/css/lst-stps.css">
+
 <noscript><link rel="stylesheet" href="../wet-boew/css/noscript.min.css" /></noscript>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+
+<style>
+
+.btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled].focus, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
+    background-color: #26374a;
+    border-color: #26374a;	
+}
+
+ol.lst-stps>li.stp-success:before {
+	border-color: #102900;
+	background: #102900;
+	color: #fff;
+	opacity: 0.6;
+}
+
+ol.lst-stps>li>h2 {
+	font-weight: 400;
+}
+
+
+
+</style>
 
 
 
@@ -182,36 +206,144 @@ custom page begins:
 sign-in services - prototype
 +++++++++++++++++++++++++++++++++++-->
 
-<h1 id="wb-cont" property="name">
-	My <abbr title="Veteran Affairs Canada">VAC</abbr> Account for individuals
-</h1>
-<h2>Link your sign-in partner</h2>
-<fieldset class="gc-chckbxrdio">
-	<legend>Which identifier would you like to use?</legend>
-	<ul class="list-unstyled lst-spcd-2">
-		<li class="radio">
-			<input type="radio" name="animal" id="animal-1">
-			<label for="animal-1">CAF service number</label>
-		</li>
-		<li class="radio">
-			<input type="radio" name="animal" id="animal-1">
-			<label for="animal-1">RCMP regimental number</label>
-		</li>
-		<li class="radio">
-			<input type="radio" name="animal" id="animal-2">
-			<label for="animal-2">CSDN ID</label>
-		</li>
-	</ul>
-	<p class="small"><em>Representative accounts must use CSDN ID</em></p>
-
-</fieldset>
 
 <section>
 	
-	
+	<div id="toggle-second" class="jumbotron hidden">
+		<p>This is second <code>@id=toggle-second</code></p>
+	</div>
+
+	<h1 id="wb-cont" property="name">
+		Link your sign-in partner
+	</h1>
 </section>
+
 <section>
-	<h2 class="mrgn-tp-md">Topics</h2>
+	<div data-wb-urlmapping='{
+		"ajxload=1" : " "}'>
+	</div>
+
+	<div class="clearfix"></div>
+	<ol class="lst-stps mrgn-tp-md">
+		<li><h2 class="h4">Enter your unique identifier</h2>
+			<div id="myformid" class="wb-frmvld">
+			<form action="javascript:continueForm(myformid)" class="col-md-12">
+				<div class="wb-fieldflow" id="numbers"
+				
+					data-wb-fieldflow='
+					{"renderas":"radio", 
+					"gcChckbxrdio":true, 
+					"noForm": true,
+					"noreqlabel": true}'
+					>
+						<p class="wb-fieldflow-label">Choose an identifying number associated with your account</p>
+						<ul>
+							<li id="cafServiceNumberRadioButton"
+							data-wb-fieldflow='{"action": "toggle", "toggle": "#caf-service-number-form-group", "live": true}'>
+								CAF service number
+								
+							</li>
+							<li id="rcmpRegimentalNumberRadioButton"
+							data-wb-fieldflow='{"action": "toggle", "toggle": "#rcmp-regimental-form-group", "live": true}'>
+								RCMP regimental number
+							</li>
+							<li
+							data-wb-fieldflow='{"action": "toggle", "toggle": "#csdn-id-form-group", "live": true}'>
+								VAC CSDN ID number
+							</li>
+						</ul>
+				</div>
+
+				<div id="caf-service-number-form-group" class="hidden">
+					<div class="form-group">			
+						<div class="row">
+							<div class="col-sm-12">
+							<label for="cafServiceNumberField" class="control-label required ">
+								<span class="field-name h3">CAF service number</span>
+								<strong class="required">(required)</strong>
+							</label>
+							<div class="row">
+								<div class="col-xs-4 col-sm-6 col-md-3">
+									<input type="text" class="form-control input-lg full-width" 
+									id="cafServiceNumberField" 
+									required="required" 
+									data-rule-nowhitespace="true" 
+									data-rule-alphaornumeric="true" 
+									data-rule-serviceNumber="true" 
+									data-rule-rangelength="[5,9]"
+										/>
+								</div>
+							</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+		
+				<div id="rcmp-regimental-form-group" class="hidden">
+					<div class="form-group">			
+						<div class="row">
+							<div class="col-sm-12">
+							<label for="rcmpRegNumberField" class="control-label required ">
+								<span class="field-name h3">RCMP regimental number</span>
+								<strong class="required">(required)</strong>
+							</label>
+							<div class="row">
+								<div class="col-xs-4 col-sm-6 col-md-3">
+									<input type="text" class="form-control input-lg full-width" id="rcmpRegNumberField" 
+									required="required" 
+									data-rule-nowhitespace="true" data-rule-rangelength="[3,9]" />
+		
+								</div>
+							</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+		
+				<div id="csdn-id-form-group" class="hidden">
+					<div class="form-group">			
+						<div class="row">
+							<div class="col-sm-12">
+							<label for="csdnID" class="control-label required ">
+								<span class="field-name h3">VAC CSDN ID number</span>
+								<strong class="required">(required)</strong>
+							</label>
+							<div class="row">
+								<div class="col-xs-4 col-sm-6 col-md-3">
+									<input type="number" class="form-control input-lg full-width" id="csdnID" 
+									required="required" data-rule-nowhitespace="true" 
+									data-rule-maxlength="11" data-rule-minlength="11"  />
+								</div>
+							</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			
+			<button type="submit" class="btn btn-primary btn-lg mrgn-tp-0 mrgn-bttm-lg disabled" disabled>Continue</button>
+			
+			</form>
+			</div>
+		</li>
+		<div class="clearfix"></div>
+		<li>
+				<h2 class="h4">Validate your identity</h2>
+				<p>Basic personal information form here, hidden until previous step complete</p>
+			
+			
+		</li>
+	</ol>
+	
+	<div class="clearfix"></div>
+</section>
+
+
+<!--
+<section>
+	<h2 >Topics</h2>
 		<ul>
 			<li><a href="#">My <abbr title="Veteran Affairs Canada">VAC</abbr> Account - What's new</a></li>
 			<li><a href="#">About My <abbr title="Veteran Affairs Canada">VAC</abbr> Account</a></li>
@@ -220,7 +352,7 @@ sign-in services - prototype
 		</ul>
 
 </section>
-
+-->
 
 
 <footer class="pagedetails">
@@ -283,6 +415,83 @@ sign-in services - prototype
 <script src="../wet-boew/js/wet-boew.min.js"></script>
 <script src="../GCWeb/js/theme.min.js"></script>
 
+<script>
+
+	var getUrlParameter = function getUrlParameter(sParam) {
+		var sPageURL = window.location.search.substring(1),
+			sURLVariables = sPageURL.split('&'),
+			sParameterName,
+			i;
+
+		for (i = 0; i < sURLVariables.length; i++) {
+			sParameterName = sURLVariables[i].split('=');
+
+			if (sParameterName[0] === sParam) {
+				return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+			}
+		}
+	};
+
+	var representative = getUrlParameter('representative');
+
+	if (representative) {
+			//hide
+			$('#numbers').remove();
+			$('#csdn-id-form-group').removeClass('hidden');
+		}
+	
+	
+	$( document ).on( "wb-ready.wb", function( event ) {
+	
+		if(jQuery.validator && jQuery.validator !== 'undefined') {
+
+			var validate = $('div.wb-frmvld form').validate();
+
+			$( "input[type=text],input[type=number]" ).keyup(function() {
+				 // Get validate instance
+				var isValid = validate.checkForm(); // Valid?
+				validate.submitted = {} //prevent error handling/submission
+				if (isValid) {
+					$('button[type="submit"]').removeAttr('disabled');
+					$('button[type="submit"]').removeClass('disabled');
+				} else {
+					$('button[type="submit"]').attr('disabled');
+					$('button[type="submit"]').addClass('disabled');
+				}
+			});
+
+		}
+	
+	});
+
+
+	function continueForm(form) {
+		console.log(form);
+
+		$(form).find("input,select,button").attr("disabled", true).addClass('disabled'); //lock form
+		$(form).find('button[type="submit"]').text("Loading..."); //change button to loading
+
+		//For prototyping 
+		setTimeout(function (){
+
+		// Something you want delayed.
+
+			$(form).animate({height: '0px', opacity: '0'});
+
+			$(form).closest('ol.lst-stps>li').addClass('stp-success');
+			$(form).closest('ol.lst-stps>li').addClass('text-muted');
+
+			$(form).addClass('hidden');
+
+		}, 1000);
+
+	}
+
+	//       
+	//$(this).closest('section').parent().next('section').find("input,select,button").attr("disabled", false);
+
+
+</script>
 
 </body>
 </html>
