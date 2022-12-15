@@ -45,6 +45,11 @@
         transform: translate3d(-50%, -50%, 0);
       }
 
+	  .no-wrap {
+    	white-space: nowrap;
+
+	  }
+
 </style>
 
 </head>
@@ -155,7 +160,7 @@
 
 </header>
 
-<main class="container" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
+<main class="container cnt-wdth-lmtd" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
         <div class="row hidden">
             <div class="col-sm-12">
                 <section class="alert alert-info">
@@ -164,60 +169,111 @@
                  </section>
             </div>
         </div>
+<!--+++++++++++++++++++++++++++++++++⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⣄⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣷⣴⣿⡄⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠰⣶⣾⣿⣿⣿⣿⣿⡇⠀⢠⣷⣤⣶⣿⡇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣀⣿⣿⣿⣿⣿⣧⣀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣷⣦⣀⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢲⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠁⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠚⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠂⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⢻⣿⣿⡿⠛⠉⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠋⠁⠀⠀⠀⠸⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+++++++++++++++++++++++++++++++++++++++
+Forms UX Mock-Up
++++++++++++++++++++++++++++++++++++-->
+
 <h1 id="wb-cont" property="name">
-	Honour roll 
+	Veteran Affairs Canada Forms
 </h1>
 
 <p class="lead mrgn-tp-md">
-	An additional method for jQuery.validate() and a script to render format matches, errors, or potential matches.
+
 
 </p>
-
-
-<p>
-	The script compares inputs to a set of alpha-number patterns defined in an array.
-</p>
-<div class="wb-frmvld mrgn-bttm-lg">
-	<!--<div class="col-sm-6 col-md-3">-->
-	<form id="serviceNumberForm" class="form" method="get" action="#">
-
-		<div class="form-group">
-			
-			<div class="row">
-				<div class="col-md-12 col-lg-4">
-				<label for="serviceNumber" class="control-label required h3">
-					<span class="field-name">Service number</span>
-					<strong class="required">(required)</strong>
-				</label>
-
-				<input type="text" class="form-control input-lg" id="serviceNumber" required="required" data-rule-nowhitespace="true" data-rule-alphaornumeric="true" data-rule-serviceNumber="true" data-rule-minlength="5" data-rule-maxlength="9" />
-				</div>
-				<div class="mrgn-tp-md col-sm-12 col-md-6">
-					<p>Valid service number formats</p>
-					<ul id="sampleList" class="list-responsive colcount-xs-1 colcount-sm-2 fa-ul" >
-					</ul>	
-				</div>
-				
+<section class="well well-sm provisional gc-most-requested">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<h2>Most requested</h2>
 			</div>
-			<div class="row">
-				<div class="col-sm-12">
-					<input id="continueButton" type="submit" value="Next" class="btn btn-primary btn-lg">
-				</div>
-				
+			<div class="col-md-10" >
+				<ul class="colcount-md-1 lst-spcd" >
+					<li><a href="#">Disability Benefits (Pain and Suffering Compensation/Disability Pension)</a></li>
+					<li><a href="#">Consent for Veterans Affairs Canada to Disclose Personal Information to Third Parties</a></li>
+					<li><a href="#">Treatment Benefits Reimbursement Claim Form (POC 1-14)</a></li>
+					<li><a href="#">Medical Questionnaire: Psychiatric/Psychological Condition(s)</a></li>
+					<li><a href="#">Health Related Travel Claim - Veteran</a></li>
+				</ul>
 			</div>
 		</div>
+	</div>
+</section>
 
+<h2>All forms</h2>
+<div class="row">
+	<div class="col-md-3">
+		<h4 class="wb-inv">Filtering Options</h4>
+		<details open>
+			<summary><h4 class="h4">Filter Options</h4></summary>
+			<p class="mrgn-tp-md">Use filters to below options to change the focus of your results in following data table</p>
+			<form class="wb-tables-filter" data-bind-to="all-forms">
+				<div class="form-group">
+					<fieldset>
+						<legend><span class="field-name">Categories</span></legend>
+						<ul class="list-unstyled">
+							<li class="checkbox"><label for="form_category1"><input type="checkbox" id="form_category1" name="form_category" data-column="6" value=""> All</label></li>
+							<li class="checkbox"><label for="form_category2"><input type="checkbox" id="form_category2" name="form_category" data-column="6" value="Additional Pain and Suffering Compensation"> Additional Pain and Suffering Compensation</label></li>
+							<li class="checkbox"><label for="form_category3"><input type="checkbox" id="form_category3" name="form_category" data-column="6" value="Disability Benefits"> Disability Benefits</label></li>
+							<li class="checkbox"><label for="form_category4"><input type="checkbox" id="form_category4" name="form_category" data-column="6" value="Financial Advice"> Financial Advice</label></li>
+							<li class="checkbox"><label for="form_category6"><input type="checkbox" id="form_category6" name="form_category" data-column="6" value="Education and Training"> Education and Training</label></li>
 
-			
+							<li class="checkbox"><label for="form_category5"><input type="checkbox" id="form_category5" name="form_category" data-column="6" value="Health Care"> Health Care</label></li>
+							
+						</ul>
+					</fieldset>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary" aria-controls="dataset-filter2">Filter</button>
+				</div>
+				<div class="form-group">
+					<button type="reset" class="btn btn-link btn-sm p-0">Reset to defaults</button>
+				</div>
+			</form>
+		</details>
+	</div>
+	<div class="col-md-9">
+		<table class="provisional gc-table wb-tables table table-striped table-hover" id="all-forms" 
+		data-wb-tables='
+		{
 		
-		
-	</form>
+		"bDeferRender" : true,		
+		"ajaxSource": "ajax/formsdata.json",
+		"columns": [
+			{ "data": "Title-EN" },
+			{ "data": "FormNumber", "visible" : true },
+			{ "data": "Categories-EN", "visible" : false }
+		],
+		"columnDefs": [
+                {
+                    "targets": [1], 
+                    "className": "no-wrap text-right"
+				}]
+		}'>
+			<thead>
+			<tr>
+				
+				<th>Title</th>
+				<th>Form Number</th>
+				<th>Categories</th>
+			</tr>
+			</thead>
+		</table>
+	</div>
 </div>
-
-</div>
-</div>
-
-
 
 <footer class="pagedetails">
 	
@@ -281,7 +337,8 @@
 
 <script>	
 
-/* Retrieves a random first and last name of a Veteran featured in today's Honour Roll api */
+/* uses open canada api Honour Roll 
+   to randomly assign a name for placeholder purposes */
 
    $.ajax({
      url:"https://www.veterans.gc.ca/xml/jsonp/app.cfc?method=remoteGetHonourRoll&callback=?&language=en",
@@ -290,16 +347,21 @@
 
 			var strFormat = str.substring(2, str.length - 1);
 			var json = jQuery.parseJSON(strFormat);
-			var dataset = json['days'];   
+			var dataset = json['days']
+   
 			var rndEntry = dataset[Math.floor(Math.random() * dataset.length)];
+
 			var surname = rndEntry['SURNAME'];
 			var firstName = rndEntry['FORENAMES'].replace(/ .*/,'');
+
 			var displayName = firstName + " " + surname;
+
+			console.log(displayName);
 			writeDisplayName(displayName);
 			return;
 		},
 		error:function(xhr, status){
-			console.log("Honour Roll ajax error" + xhr.statusText);
+			console.log("ajax error" + xhr.statusText);
 			writeDisplayName("John Doe");
 		}      
 	});
@@ -308,10 +370,7 @@
 			   $('.honour').text(displayName);
 		   }
    </script>
-   
 
-<script src="vacWeb/js/servicenumbervalidatormethod.js"></script>
-<script src="vacWeb/js/servicenumberformatpainter.js"></script>
 
 <script>
 	function SubmitForm(e) {
