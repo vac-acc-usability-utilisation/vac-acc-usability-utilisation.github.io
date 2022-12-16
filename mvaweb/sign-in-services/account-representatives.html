@@ -158,9 +158,9 @@
 
 <main class="container cnt-wdth-lmtd" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
       
-<!--%%%%  \,∆,/  %%%%  
-	%%%% \%%¥%%/ %%%%
-	%%%%   *|*   %%%%
+<!-- \,∆,/    
+	\%%¥%%/ 
+	  *|*   
 custom page begins: 
 sign-in services - prototype-->
 
@@ -236,34 +236,21 @@ sign-in services - prototype-->
 </section>
 
 
-<div data-ajax-replace="../ajax/ajax-4.html" class="original">
+<div data-ajax-replace="ajax/ajax-test.html" class="original">
 	<section>
 		<h4>Hello World</h4>
 		<p>Example text. Example text. Example text. Example text. Example text. Example text. Example text. Example text. Example text. Example text.</p>
 	</section>
 </div>
 
-<aside id="asidecontainer" class="col-md-5 pull-right">
-	<h2>Aside container</h2>
-	<p>Empty</p>
-</aside>
-
 <ul>
 	<li><a href="?">Empty <code>?</code></a></li>
 	<li><a href="?ajxload=1">Ajax 1 <code>?ajxload=1</code></a></li>
-	<li><a href="?ajxload=2">Ajax 2 <code>?ajxload=2</code></a></li>
-	<li><a href="?ajxload=3">Ajax 3 <code>?ajxload=3</code></a></li>
-	<li><a href="?ajxload=4">Ajax 4 <code>?ajxload=4</code></a></li>
-	<li><a href="?ajxload=5">Ajax 5 <code>?ajxload=5</code></a></li>
-	<li><a href="?ajxload=5special">Trigger WET after Ajax 5 is inserted<code>?ajxload=5special</code></a></li>
-	<li><a href="?special">Ajax two files (Ajax 4 and Ajax 2) <code>?special</code></a></li>
-	<li><a href="?mspecial=ul">Ajax <code>ul</code> of two files (Ajax 4 and Ajax 2) <code>?mspecial=ul</code></a></li>
-	<li><a href="?loadme=3">Mapping the query string, load Ajax 3<code>?loadme=3</code></a></li>
-	<li><a href="?loadme=asdf">Mapping the query string, load Ajax asdf<code>?loadme=asdf</code></a> but fallback on default "1"</li>
 </ul>
 
 <div data-wb-urlmapping='{
-		"ajxload=1": { "action": "ajax", "url": "ajax/ajax-1.html" }}'></div>
+		"ajxload=1": { "action": "ajax", "url": "ajax/ajax-test.html" }
+	}'></div>
 
 
 <footer class="pagedetails">
@@ -315,15 +302,17 @@ sign-in services - prototype-->
 				
 				<div class="col-xs-6 visible-sm visible-xs tofpg">
 					<a href="#wb-cont">Top of page <span class="glyphicon glyphicon-chevron-up"></span></a>
-				</div><div class="col-xs-6 col-md-3 col-lg-2 text-right"><img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+				</div><div class="col-xs-6 col-md-3 col-lg-2 text-right">
+					<img src="../gcWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
 				</div>
 			</div>
 		</div>
 	</div>
 </footer>
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
-<script src="https://wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/wet-boew.min.js"></script>
-<script src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js"></script>
+<script src="../wet-boew/js/wet-boew.min.js"></script>
+<script src="../gcWeb/js/theme.min.js"></script>
 </body>
 </html>
