@@ -356,6 +356,22 @@ Begin using My VAC Account.
 <script src="https://wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/wet-boew.min.js"></script>
 <script src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js"></script>
 
+<script>
+$( document ).on( "wb-ready.wb", function( event ) {
+	$( "#bottom-bar" ).trigger( "open.wb-overlay" );
+});
+</script>
+<section id="bottom-bar" class="wb-overlay modal-content overlay-def wb-bar-b text-white">
+	<header>
+		<h2 class="modal-title">vac-acc-usability-utilisation design tools</h2>
+		
+	</header>
+		<p class=" mrgn-lft-md">
+			This is a public github repository hosted on Github pages. Designs here do not reflect digital services available at <a href="https://www.veterans.gc.ca/eng/e_services">My <abbr title="Veterans Affairs Canada">VAC</abbr> Account</a>.<br> 
+			It serves as a proof of concept for an implementation of the 
+			<a href="https://www.canada.ca/en/government/about/design-system.html">Canada.ca design system in</a> the <a href="https://wet-boew.github.io/GCWeb/">GCWeb (the Canada.ca theme)</a> for <a href="https://wet-boew.github.io/">WET-BOEW</a>.
+		</p>
+</section>
 
 </body>
 </html>
