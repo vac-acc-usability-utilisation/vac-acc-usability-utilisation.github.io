@@ -27,7 +27,11 @@
 <noscript><link rel="stylesheet" href="../wet-boew/css/noscript.min.css" /></noscript>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
-
+<style>
+	h1 > div {
+		display: inline;
+	}
+</style>
 
 </head>
 <body class="" vocab="http://schema.org/" typeof="WebPage"><nav>
@@ -90,6 +94,7 @@
 					<nav class="gcweb-menu" typeof="SiteNavigationElement">
 	<h2 class="wb-inv">Menu</h2>
 	<button type="button" aria-haspopup="true" aria-expanded="false"><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
+	
 	<ul role="menu" aria-orientation="vertical" data-ajax-replace="https://www.canada.ca/content/dam/canada/sitemenu/sitemenu-v2-en.html"><li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/jobs.html">Jobs and the workplace</a></li>
 		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/immigration-citizenship.html">Immigration and citizenship</a></li>
 		<li role="presentation"><a role="menuitem" href="https://travel.gc.ca/">Travel and tourism</a></li>
@@ -108,17 +113,7 @@
 </nav>
 
 				</div>
-				<div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-md-4 hidden">
-					<section id="wb-so">
-						<h2 class="wb-inv">Sign-on information</h2>
-						<button class="btn btn-default" type="button">My account</button>
-						<button class="btn btn-primary" type="button">Sign out</button>
-						<p class="small mrgn-tp-sm">Signed in as 
-							<span class="nowrap  honour">
-							<i class="fa fa-spinner spin" aria-hidden="true"></i>
-						</span></p>
-					</section>
-				</div></div>
+				</div>
 	</div>
 	<nav id="wb-bc" property="breadcrumb">
 	<h2>You are here:</h2>
@@ -145,7 +140,7 @@
 			
 			<li property="itemListElement" typeof="ListItem">
 				<a property="item" typeof="WebPage" href="#">
-					<span property="name">Representative</span>
+					<span property="name">Sign-in partners</span>
 				</a>
 				<meta property="position" content="4">
 			</li>
@@ -164,9 +159,17 @@
 custom page begins: 
 sign-in services - prototype-->
 
-<h1 id="wb-cont" property="name">
-	My <abbr title="Veteran Affairs Canada">VAC</abbr> Account for representatives
-</h1>
+<div >
+
+	<h1 id="wb-cont" property="name">
+		My <abbr title="Veteran Affairs Canada">VAC</abbr> Account 
+		<span data-wb-urlmapping='{
+			"individuals": { "action": "ajax", "url": "ajax/h1.html .h1-span-for-indvd" },
+			"representatives": { "action": "ajax", "url": "ajax/h1.html .h1-span-for-rep" }
+		}'></span>
+	</h1>
+
+</div>
 
 <p class="lead mrgn-tp-md">
 	Serving Canada's Veterans, members and their families - online
@@ -182,10 +185,9 @@ sign-in services - prototype-->
 				</div>
 				<div class="panel-body">
 				<p>Sign in or register with the same sign-in information you use for other online services (for example, online banking).</p>
-				<p class="text-center mrgn-tp-lg"><a class="btn btn-call-to-action" role="button" href="_redirect_place_holder.html">Sign-In Partner</a></p>
+				<p class="text-center mrgn-tp-lg"><a class="btn btn-call-to-action" role="button" href="redirect_place_holder.html">Sign-In Partner</a></p>
 				<details>
 				<summary tabindex="0" class="text-center" id="wb-auto-1" role="button" aria-expanded="false">View list of Sign-In Partners</summary>
-				<section data-ajax-replace=""></section> 
 				</details>
 				</div> <!-- End panel -->
 			</div>
@@ -199,7 +201,7 @@ sign-in services - prototype-->
 				<div class="col-sm-12">
 				<p class="text-center mrgn-tp-lg">
 					<a class="btn btn-call-to-action" role="button" 
-					href="_redirect_place_holder.html">GCKey sign in</a>&nbsp;&nbsp;&nbsp;
+					href="redirect_place_holder.html">GCKey sign in</a>&nbsp;&nbsp;&nbsp;
 					<a role="button" href="#">GCKey register</a></p>
 				</div>
 			</div>
@@ -225,33 +227,21 @@ sign-in services - prototype-->
 </div>
 <section>
 	<h2 class="mrgn-tp-md">Topics</h2>
-		<ul>
-			<li><a href="#">Topics relevant to representatives, policies, responsibilities</a></li>
-			<li><a href="#">My <abbr title="Veteran Affairs Canada">VAC</abbr> Account - What's new</a></li>
-			<li><a href="#">About My <abbr title="Veteran Affairs Canada">VAC</abbr> Account</a></li>
-			<li><a href="#">Sign-in Partners</a></li>
-			<li><a href="#">GCKey</a></li>
-		</ul>
+	<li><a href="#">Help and FAQs</a></li>
+    <li><a href="#">Forgot your password or user ID?</a></li>
+    <li><a href="#">Your browser and troubleshooting tips</a></li>
+    <li><a href="#">Important security information</a></li>
+	<div data-wb-urlmapping='{
+		"representatives": { "action": "ajax", "url": "ajax/topics.html li.rep" }
+	}'>
+</div>
 
 </section>
 
 
-<div data-ajax-replace="ajax/ajax-test.html" class="original">
-	<section>
-		<h4>Hello World</h4>
-		<p>Example text. Example text. Example text. Example text. Example text. Example text. Example text. Example text. Example text. Example text.</p>
-	</section>
-</div>
-
-<ul>
-	<li><a href="?">Empty <code>?</code></a></li>
-	<li><a href="?ajxload=1">Ajax 1 <code>?ajxload=1</code></a></li>
-</ul>
-
-<div data-wb-urlmapping='{
-		"ajxload=1": { "action": "ajax", "url": "ajax/ajax-test.html" }
-	}'></div>
-
+	
+		
+		
 
 <footer class="pagedetails">
 	
@@ -259,7 +249,7 @@ sign-in services - prototype-->
 		<div class="col-xs-12">
 			<dl id="wb-dtmd">
 				<dt>Date modified:</dt>
-				<dd><time property="dateModified">2022-11-15</time></dd>
+				<dd><time property="dateModified">2022-11-16</time></dd>
 			</dl>
 		</div>
 </footer>
@@ -313,6 +303,10 @@ sign-in services - prototype-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
 <script src="../wet-boew/js/wet-boew.min.js"></script>
-<script src="../gcWeb/js/theme.min.js"></script>
+<!--
+<script src="../gcWeb/js/theme.min.js"></script>-->
+
+<script src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js"></script>
+
 </body>
 </html>
