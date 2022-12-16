@@ -236,6 +236,35 @@ sign-in services - prototype-->
 </section>
 
 
+<div data-ajax-replace="../ajax/ajax-4.html" class="original">
+	<section>
+		<h4>Hello World</h4>
+		<p>Example text. Example text. Example text. Example text. Example text. Example text. Example text. Example text. Example text. Example text.</p>
+	</section>
+</div>
+
+<aside id="asidecontainer" class="col-md-5 pull-right">
+	<h2>Aside container</h2>
+	<p>Empty</p>
+</aside>
+
+<ul>
+	<li><a href="?">Empty <code>?</code></a></li>
+	<li><a href="?ajxload=1">Ajax 1 <code>?ajxload=1</code></a></li>
+	<li><a href="?ajxload=2">Ajax 2 <code>?ajxload=2</code></a></li>
+	<li><a href="?ajxload=3">Ajax 3 <code>?ajxload=3</code></a></li>
+	<li><a href="?ajxload=4">Ajax 4 <code>?ajxload=4</code></a></li>
+	<li><a href="?ajxload=5">Ajax 5 <code>?ajxload=5</code></a></li>
+	<li><a href="?ajxload=5special">Trigger WET after Ajax 5 is inserted<code>?ajxload=5special</code></a></li>
+	<li><a href="?special">Ajax two files (Ajax 4 and Ajax 2) <code>?special</code></a></li>
+	<li><a href="?mspecial=ul">Ajax <code>ul</code> of two files (Ajax 4 and Ajax 2) <code>?mspecial=ul</code></a></li>
+	<li><a href="?loadme=3">Mapping the query string, load Ajax 3<code>?loadme=3</code></a></li>
+	<li><a href="?loadme=asdf">Mapping the query string, load Ajax asdf<code>?loadme=asdf</code></a> but fallback on default "1"</li>
+</ul>
+
+<div data-wb-urlmapping='{
+		"ajxload=1": { "action": "ajax", "url": "ajax/ajax-1.html" }}'></div>
+
 
 <footer class="pagedetails">
 	
