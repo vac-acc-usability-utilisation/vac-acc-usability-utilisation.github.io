@@ -24,7 +24,14 @@
 
 <link rel="stylesheet" href="vacWeb/css/theme.css" />
 <link rel="stylesheet" href="vacWeb/css/lst-stps.css" />
+<link rel="stylesheet" href="vacWeb/css/cdts.css">
 
+
+<style>
+	#wb-so .row {
+		padding: 0;
+	}
+</style>
 
 
 
@@ -88,40 +95,54 @@
 		</div>
 	</div>
 	<hr>
+		<div class="app-bar" style="padding: 1em 0;">
+			   <div class="container">
+				 <div class="row">
+					<section class="col-xs-6">
+						<h2 class="wb-inv ">Name of Web application</h2>
+						<a class="app-name" href="#">Application name</a>
+					 </section>
+				
+				 
+				  <section class="col-xs-6 "> <!--Buttons-->
+					<section id="wb-so">
+						<h2 class="wb-inv">Sign-on information</h2>
+						
+						<div class="row mrgn-tp-0">
+							<div class="col-sm-6 pull-right">
+								<button class="btn btn-default" type="button">My account</button>
+								<button class="btn btn-primary" type="button">Sign out</button>
+							</div>
+							<div class="col-sm-6 text-right"> <!-- "Signed in as..."-->
+								<p class="text-right text-white mrgn-tp-md">
+									Signed in as 
+									<span class="nowrap honour">
+										<i class="fa fa-spinner spin" aria-hidden="true"></i>
+									</span>
+								</p>
+							</div>
+						</div>
+					</section>
+					</section>
+				</div>
+					
+			   </div>
+		 </div>
 	<div class="container">
 		<div class="row"><div class="col-md-8">
 					<nav class="gcweb-menu" typeof="SiteNavigationElement">
 	<h2 class="wb-inv">Menu</h2>
 	<button type="button" aria-haspopup="true" aria-expanded="false"><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
-	<ul role="menu" aria-orientation="vertical" data-ajax-replace="https://www.canada.ca/content/dam/canada/sitemenu/sitemenu-v2-en.html"><li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/jobs.html">Jobs and the workplace</a></li>
-		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/immigration-citizenship.html">Immigration and citizenship</a></li>
-		<li role="presentation"><a role="menuitem" href="https://travel.gc.ca/">Travel and tourism</a></li>
-		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/business.html">Business and industry</a></li>
-		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/benefits.html">Benefits</a></li>
-		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/health.html">Health</a></li>
-		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/taxes.html">Taxes</a></li>
-		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/environment.html">Environment and natural resources</a></li>
-		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/defence.html">National security and defence</a></li>
-		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
-		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
-		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
-		<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
-		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
-		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li></ul>
+	<ul role="menu" aria-orientation="vertical" data-ajax-replace="https://www.canada.ca/content/dam/canada/sitemenu/sitemenu-v2-en.html">
+		</ul>
+
+		<button type="button" aria-haspopup="true" aria-expanded="false"><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
+	<ul role="menu" aria-orientation="vertical" data-ajax-replace="https://www.canada.ca/content/dam/canada/sitemenu/sitemenu-v2-en.html">
+		</ul>
 </nav>
 
 				</div>
-				<div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-md-4 hidden">
-					<section id="wb-so">
-						<h2 class="wb-inv">Sign-on information</h2>
-						<button class="btn btn-default" type="button">My account</button>
-						<button class="btn btn-primary" type="button">Sign out</button>
-						<p class="small mrgn-tp-sm">Signed in as 
-							<span class="nowrap  honour">
-							<i class="fa fa-spinner spin" aria-hidden="true"></i>
-						</span></p>
-					</section>
-				</div></div>
+				</div>
 	</div>
 	<nav id="wb-bc" property="breadcrumb">
 	<h2>You are here:</h2>
