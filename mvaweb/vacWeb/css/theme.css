@@ -588,7 +588,7 @@
       text-decoration: none;
   }
 
-  /* Sentence case */
+  /* Capitalize the first word in a span */
   span.cptl-first-word::first-word {
     text-transform: capitalize;
   }
