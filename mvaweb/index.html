@@ -153,28 +153,108 @@
 </header>
 
 <main class="container cnt-wdth-lmtd" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
-        <div class="row hidden">
-            <div class="col-sm-12">
-                <section class="alert alert-info">
-					<h2 class="h4">Conceptual prototype</h2>
-                    <p>This is how MVA would look as a gcWeb theme. Global, temporary alerts require a header, short description, and an expiry date.</p>
-                 </section>
-            </div>
-        </div>
-<!--+++++++++++++++++++++++++++++++++⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀
-++++++++++++++++++++++++++++++++++++++
-custom page begins: 
-sign-in services - prototype
-+++++++++++++++++++++++++++++++++++-->
+ 
+<!-- index, Front-door page template
+	 + design tools footer
+
+   ##    .\^/.    ##    
+   ##   \=%¥%=/   ##
+   ##    ^`|`^    ##  -->
+
 
 <h1 id="wb-cont" property="name">
-	Veteran Affairs Canada sign-in services
+	Veteran Affairs Canada 
+	<span id="sign-in-span-h1" 
+		data-wb-urlmapping='
+		{
+		"register": { 
+			"action": "addClass", 
+			"source": "#sign-in-span-h1", 
+			"class": "hidden" } 
+		}
+		'> 
+			<!-- EN/FR content for "Sign in to"-->
+			sign in
+	</span>
+	<!--" hide and if either query is true"-->
+	<span id="or-span-h1"
+		data-wb-urlmapping='
+			{
+			"register": { 
+				"action": "addClass", 
+				"source": "#or-span-h1", 
+				"class": "hidden" },
+			"sign-in": { 
+				"action": "addClass", 
+				"source": "#or-span", 
+				"class": "hidden" } 
+			}
+			'>
+			<!-- EN/FR content for "or"-->
+			and
+	</span>
+	<!-- If html?sign-in Hide the register for span-->
+	<span id="register-span-h1"
+	data-wb-urlmapping='{
+		"sign-in": { 
+			"action": "addClass", 
+			"source": "#register-span-h1", 
+			"class": "hidden" }}'>
+			<!-- EN/FR content for "Register for"-->
+		registration
+	</span>
+	services
 </h1>
 
+<!--
+data-wb-urlmapping='{ 
+	"QueryStringToBeMapped": { 
+		"action": "addClass", 
+		"source": "#id", 
+		"class": "myclass" } }'	
+-->
+
 <p class="lead mrgn-tp-md">
-	Sign in or register for My <abbr title="Veteran Affairs Canada">VAC</abbr> Account, or Represent a Client with <abbr title="Veteran Affairs Canada">VAC</abbr>.
+	<!-- If html?register Hide the "sign in to" span-->
+	<span id="sign-in-span" 
+		data-wb-urlmapping='{
+		"register": { 
+			"action": "addClass", 
+			"source": "#sign-in-span", 
+			"class": "hidden" } }'> 
+			<!-- EN/FR content for "Sign in to"-->
+			Sign in to
+	</span>
+	<!-- Hide or if either html?register or html?sign is true"-->
+	<span id="or-span"
+		data-wb-urlmapping='{
+			"sign-in": { 
+				"action": "addClass", 
+				"source": "#or-span", 
+				"class": "hidden" },
+			"register": { 
+				"action": "addClass", 
+				"source": "#or-span", 
+				"class": "hidden" } }'>
+			<!-- EN/FR content for "or"-->
+			or
+	</span>
+	<!-- If html?sign-in Hide the register for span-->
+	<!-- also, sentence case 'register for' by adding .cptl-first-word-->
+	<span id="register-span" class="text-lowercase"
+	data-wb-urlmapping='{
+		"sign-in": { 
+			"action": "addClass", 
+			"source": "#register-span", 
+			"class": "hidden" },
+		"register": { 
+			"action": "removeClass", 
+			"source": "#register-span", 
+			"class": "text-lowercase" } }'>
+			<!-- EN/FR content for "Register for"-->
+		Register for
+	</span>
+	  My <abbr title="Veteran Affairs Canada">VAC</abbr> Account, or Represent a Client with <abbr title="Veteran Affairs Canada">VAC</abbr>.
 </p>
 
 <section> <!-- Sign in Options -->
@@ -197,12 +277,22 @@ sign-in services - prototype
 			<p class="h5">My VAC Account is for:</p>
 			<ul class="colcount-lg-2">
 				<li>Veterans</li>
-				<li>Family members</li>
-				<li>Current member of the CAF or the RCMP</li>
+				<li>Current members of the CAF or the RCMP</li>
 				<li>Retired members of the RCMP</li>
-
+				<li>Family members who are on-file<sup id="fn1-rf"><a class="fn-lnk" href="#fn1"><span class="wb-inv">Footnote </span>1</a></sup></li>
+			<!--
+				Current clients in the database
+				Active clients in the database
+				On-file clients in the database
+				Previously entered clients in the database
+				Previously recorded clients in the database
+				Previously stored clients in the database
+				Clients on record in the database
+				Clients in the database's records
+				Clients in the database's file
+			-->
 			</ul>
-			<p class="small"><a href="#">List of all services for My <abbr title="Veteran Affairs Canada">VAC</abbr> Account</a></p>
+			<p class="small"><a href="#">List of all services for My <abbr title="Veteran Affairs Canada">VAC</abbr>&nbsp;Account</a></p>
 		  </div>
 		</div>
 	  </section>
@@ -220,7 +310,7 @@ sign-in services - prototype
 		  <div class="col-lg-offset-1 col-lg-6">
 			<p class="h5">View and update someone else's Veteran Affairs Canada services, for:</p>
 			<ul>
-			  <li>Legal representatives (power of attorneys, trustees, etc.)</li>
+			  <li>Legal representatives (power of attorneys, trustees, etc. who are on-file<sup id="fn1-2-rf"><a class="fn-lnk" href="#fn1"><span class="wb-inv">Footnote </span>1</a></sup>)</li></li>
 			  <li class="hidden">Caregivers</li>
 			</ul>
 			<small>
@@ -241,12 +331,6 @@ sign-in services - prototype
 		</ul>
 
 </section>
-<!--
-	Choose either Sign-in Partner or GCKey
-If you do not have a Sign-in Partner or GCKey you'll be prompted to create one.
-We'll ask a few questions to set up your account.
-Begin using My VAC Account.
--->
 <section id="register-steps-individual-popup" class="mfp-hide modal-dialog modal-content overlay-def">
 	<header class="modal-header">
 		<h2 class="modal-title">How to register for <abbr title="Veteran Affairs Canada">VAC</abbr> Account</h2>
@@ -296,6 +380,19 @@ Begin using My VAC Account.
 		<button class="btn btn-primary overlay-close popup-modal-dismiss pull-left" type="button">Close</button>
 	</div>
 </section>
+
+<aside class="wb-fnote" role="note">
+	<h2 id="fn">Footnotes</h2>
+	<dt>Footnote 1</dt>
+	<dd id="fn1">
+		<p>An 'on-file' client has an exisiting CSDN ID. You must setup a representative account with us in person or by phone. Once your account is created you'll receive a CSDN ID.</p>
+		<p class="fn-rtn">
+			<a href="#fn1-rf">
+				<span class="wb-inv">Return to footnote </span>1<span class="wb-inv"> referrer</span>
+			</a>
+		</p>
+	</dd>
+</aside>
 
 
 <footer class="pagedetails">
@@ -366,14 +463,14 @@ $( document ).on( "wb-ready.wb", function( event ) {
 <section id="bottom-bar" class="wb-overlay modal-content overlay-def wb-bar-b text-white">
 	<header>
 		
-		<h2 class="modal-title"><span class="wb-invisibile">🟥🎖️🟥</span> vac-acc-usability-utilisation design tools</h2> 
+		<h2 class="">design tools: states</h2> 
 			
 		
 	</header>
-		<p class=" mrgn-lft-md">
-			This is a public github repository hosted on Github pages. Designs here do not reflect digital services available at <a href="https://www.veterans.gc.ca/eng/e_services">My <abbr title="Veterans Affairs Canada">VAC</abbr> Account</a>.<br> 
-			It serves as a proof of concept for an implementation of the 
-			<a href="https://www.canada.ca/en/government/about/design-system.html">Canada.ca design system in</a> the <a href="https://wet-boew.github.io/GCWeb/">GCWeb (the Canada.ca theme)</a> for <a href="https://wet-boew.github.io/">WET-BOEW</a>.
+		<p>
+			<a href="?sign-in" class="btn btn-primary">Sign-in state</a>
+			<a href="?register" class="btn btn-primary">Register state</a>
+			<a href="?" class="btn btn-default">Non</a>
 		</p>
 </section>
 

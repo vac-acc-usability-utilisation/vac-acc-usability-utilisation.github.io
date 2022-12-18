@@ -588,5 +588,9 @@
       text-decoration: none;
   }
 
+  /* Sentence case */
+  span.cptl-first-word::first-word {
+    text-transform: capitalize;
+  }
   
    
