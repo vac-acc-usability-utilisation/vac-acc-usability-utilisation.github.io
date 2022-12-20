@@ -4,14 +4,8 @@
 <head>
 <meta charset="utf-8">
 <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-<!-- VAC app concept
 
-   ##    .\^/.    ##    
-   ##   \=%¥%=/   ## 
-   ##    ^`|`^    ## 
-      
-   -->
-<title>My VAC Account Sign-In Services - Canada.ca</title>
+<title>DEMO - My VAC Account Sign-In Services - Canada.ca</title>
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <meta name="description" content=" " />
 <meta name="author" content=" "/>
@@ -28,12 +22,12 @@
 
 <link href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
 <link rel="stylesheet" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/css/theme.min.css" />
-
+<!--
 <link rel="stylesheet" href="vacWeb/css/theme.css" />
-<link rel="stylesheet" href="vacWeb/css/lst-stps.css" />
+<link rel="stylesheet" href="../vac-acc/provisional-css/lst-stps.css" />
+-->
 
-
-
+ 
 
 <noscript><link rel="stylesheet" href="wet-boew/css/noscript.min.css" /></noscript>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
@@ -161,248 +155,9 @@
 
 <main class="container cnt-wdth-lmtd" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
  
-<!-- VAC front-door concept
-
-   ##    .\^/.    ##    
-   ##   \=%¥%=/   ## 
-   ##    ^`|`^    ## 
-      
-   -->
-
-
-<h1 id="wb-cont" property="name">
-	Veteran Affairs Canada 
-	<span id="sign-in-span-h1" 
-		data-wb-urlmapping='
-		{
-		"register": { 
-			"action": "addClass", 
-			"source": "#sign-in-span-h1", 
-			"class": "hidden" } 
-		}
-		'> 
-			<!-- EN/FR content for "Sign in to"-->
-			sign in
-	</span>
-	<!--" hide and if either query is true"-->
-	<span id="or-span-h1"
-		data-wb-urlmapping='
-			{
-			"register": { 
-				"action": "addClass", 
-				"source": "#or-span-h1", 
-				"class": "hidden" },
-			"sign-in": { 
-				"action": "addClass", 
-				"source": "#or-span-h1", 
-				"class": "hidden" } 
-			}
-			'>
-			<!-- EN/FR content for "or"-->
-			and
-	</span>
-	<!-- If html?sign-in Hide the register for span-->
-	<span id="register-span-h1"
-	data-wb-urlmapping='{
-		"sign-in": { 
-			"action": "addClass", 
-			"source": "#register-span-h1", 
-			"class": "hidden" }}'>
-			<!-- EN/FR content for "Register for"-->
-		registration
-	</span>
-	services
-</h1>
-
-<!--
-data-wb-urlmapping='{ 
-	"QueryStringToBeMapped": { 
-		"action": "addClass", 
-		"source": "#id", 
-		"class": "myclass" } }'	
--->
-
-<p class="lead mrgn-tp-md">
-	<!-- If html?register Hide the "sign in to" span-->
-	<span id="sign-in-span" 
-		data-wb-urlmapping='{
-		"register": { 
-			"action": "addClass", 
-			"source": "#sign-in-span", 
-			"class": "hidden" } }'> 
-			<!-- EN/FR content for "Sign in to"-->
-			Sign in to
-	</span>
-	<!-- Hide or if either html?register or html?sign is true"-->
-	<span id="or-span"
-		data-wb-urlmapping='{
-			"sign-in": { 
-				"action": "addClass", 
-				"source": "#or-span", 
-				"class": "hidden" },
-			"register": { 
-				"action": "addClass", 
-				"source": "#or-span", 
-				"class": "hidden" } }'>
-			<!-- EN/FR content for "or"-->
-			or
-	</span>
-	<!-- If html?sign-in Hide the register for span-->
-	<!-- also, sentence case 'register for' by adding .cptl-first-word-->
-	<span id="register-span" class="text-lowercase"
-	data-wb-urlmapping='{
-		"sign-in": { 
-			"action": "addClass", 
-			"source": "#register-span", 
-			"class": "hidden" },
-		"register": { 
-			"action": "removeClass", 
-			"source": "#register-span", 
-			"class": "text-lowercase" } }'>
-			<!-- EN/FR content for "Register for"-->
-		Register for
-	</span>
-	  My <abbr title="Veteran Affairs Canada">VAC</abbr> Account, or Represent a Client with <abbr title="Veteran Affairs Canada">VAC</abbr>.
-</p>
-
-<section> <!-- Sign in Options -->
-	<section class="well-sm"> <!-- My VAC Account Sign-in Options-->
-		<div class="row mrgn-lft-sm mrgn-rght-sm">
-		  <div class="col-lg-5">
-			<div class="row">
-			  <div class="col-sm-9 col-md-6 col-lg-12">
-				<p class="mrgn-tp-xl">
-					<a href="sign-in-services/sign-in-partners.html?individuals" class="btn btn-block btn-call-to-action">My <abbr title="Veteran Affairs Canada">VAC</abbr> Account</a></p>
-			  </div>
-			</div>
-			<p>or <a href="#register-steps-individual-popup" aria-controls="register-steps-individual-popup" class="wb-lbx" role="button">
-				how to register for My <abbr title="Veteran Affairs Canada">VAC</abbr> Account
-			</a></p>
-		  </div>
-		  <div class="col-lg-offset-1 col-lg-6">
-			<p class="h5">View and update your Veteran Affairs Canada services:</p>
-
-			<p class="h5">My VAC Account is for:</p>
-			<ul class="colcount-lg-2">
-				<li>Veterans</li>
-				<li>Current members of the CAF or the RCMP</li>
-				<li>Retired members of the RCMP</li>
-				<li>Family members who are on-file<sup id="fn1-rf"><a class="fn-lnk" href="#fn1"><span class="wb-inv">Footnote </span>1</a></sup></li>
-			<!--
-				Current clients in the database
-				Active clients in the database
-				On-file clients in the database
-				Previously entered clients in the database
-				Previously recorded clients in the database
-				Previously stored clients in the database
-				Clients on record in the database
-				Clients in the database's records
-				Clients in the database's file
-			-->
-			</ul>
-			<p class="small"><a href="#">List of all services for My <abbr title="Veteran Affairs Canada">VAC</abbr>&nbsp;Account</a></p>
-		  </div>
-		</div>
-	  </section>
-	  <section class="well-sm">
-		<div class="row mrgn-lft-sm mrgn-rght-sm">
-		  <div class="col-lg-5">
-			<!-- <h2 class="mrgn-tp-lg h3">Represent a Client</h2> -->
-			<div class="row">
-			  <div class="col-sm-9 col-md-6 col-lg-12">
-				<p class="mrgn-tp-xl"><a href="sign-in-services/sign-in-partners.html?representatives" class="btn btn-block btn-call-to-action">Represent a Client</a></p>
-			  </div>
-			</div>
-			<p>or <a href="#register-steps-representative-popup" aria-controls="register-steps-representative-popup" class="wb-lbx" role="button">how to register for Represent a Client</a></p>
-		  </div>
-		  <div class="col-lg-offset-1 col-lg-6">
-			<p class="h5">View and update someone else's Veteran Affairs Canada services, for:</p>
-			<ul>
-			  <li>Legal representatives (power of attorneys, trustees, etc. who are on-file<sup id="fn1-2-rf"><a class="fn-lnk" href="#fn1"><span class="wb-inv">Footnote </span>1</a></sup>)</li></li>
-			  <li class="hidden">Caregivers</li>
-			</ul>
-			<small>
-			  <p><a href="#">List of services for representatives of individuals</a></p>
-			</small>
-  
-		  </div>
-		</div>
-	  </section>
-</section>
-<section>
-	<h2 class="mrgn-tp-md">Topics</h2>
-		<ul>
-			<li><a href="#">Help and FAQs</a></li>
-			<li><a href="#">Forgot your password or user ID?</a></li>
-			<li><a href="#">Your browser and troubleshooting tips</a></li>
-			<li><a href="#">Important security information</a></li>
-		</ul>
-
-</section>
-<section id="register-steps-individual-popup" class="mfp-hide modal-dialog modal-content overlay-def">
-	<header class="modal-header">
-		<h2 class="modal-title">How to register for <abbr title="Veteran Affairs Canada">VAC</abbr> Account</h2>
-	</header>
-	<div class="modal-body">
-		<ol class=" lst-stps  stps-strpd">
-			<li>Choose either Sign-in Partner or GCKey 
-				
-				<ul class="mrgn-tp-sm">
-					<li>If you do not have a Sign-in Partner or GCKey you'll be prompted to create one.</li>
-				</ul>
-				</li>
-			   
-			<li>We'll ask a few questions to set up your account.</li>
-			<li>Start using My VAC Account!</li>
-		
-		  </ol>
-
-		  <a href="#1" class="btn btn-lg">Registration help page and FAQs</a>
-	</div>
-	<div class="modal-footer">
-		<button class="btn btn-primary overlay-close popup-modal-dismiss pull-left" type="button">Close</button>
-	</div>
-</section>
-<section id="register-steps-representative-popup" class="mfp-hide modal-dialog modal-content overlay-def">
-	<header class="modal-header">
-		<h2 class="modal-title">How to register to represent someone else <abbr title="Veteran Affairs Canada">VAC</abbr> Account</h2>
-	</header>
-	<div class="modal-body">
-		<ol class=" lst-stps  stps-strpd">
-			<li>You must setup a representative account with us in person or by phone. Once your account is created you'll receive a CSDN ID.</li>
-			<li>Choose either Sign-in Partner or GCKey 
-				
-				<ul class="mrgn-tp-sm">
-					<li>If you do not have a Sign-in Partner or GCKey you'll be prompted to create one.</li>
-				</ul>
-				</li>
-			<li>Enter your CSDN ID.</li>   
-			<li>We'll ask a few questions to set up your account.</li>
-			<li>Start using My VAC Account!</li>
-		
-		  </ol>
-
-		  <a href="#1" class="btn btn-lg">Registration help page and FAQs</a>
-	</div>
-	<div class="modal-footer">
-		<button class="btn btn-primary overlay-close popup-modal-dismiss pull-left" type="button">Close</button>
-	</div>
-</section>
 
 
 
-<aside class="wb-fnote" role="note">
-	<h2 id="fn">Footnotes</h2>
-	<dt>Footnote 1</dt>
-	<dd id="fn1">
-		<p>An 'on-file' client has an exisiting CSDN ID. You must setup a representative account with us in person or by phone. Once your account is created you'll receive a CSDN ID.</p>
-		<p class="fn-rtn">
-			<a href="#fn1-rf">
-				<span class="wb-inv">Return to footnote </span>1<span class="wb-inv"> referrer</span>
-			</a>
-		</p>
-	</dd>
-</aside>
 
 
 <footer class="pagedetails">
@@ -465,19 +220,6 @@ data-wb-urlmapping='{
 <script src="https://wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/wet-boew.min.js"></script>
 <script src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js"></script>
 
-<section id="bottom-bar" class="wb-overlay open modal-content overlay-def wb-bar-b text-white">
-	<header>
-		
-		<h2 class="">design tools: states</h2> 
-			
-		
-	</header>
-		<p>
-			<a href="?sign-in" class="btn btn-primary">Sign-in state</a>
-			<a href="?register" class="btn btn-primary">Register state</a>
-			<a href="?" class="btn btn-default">Non</a>
-		</p>
-</section>
 
 </body>
 </html>

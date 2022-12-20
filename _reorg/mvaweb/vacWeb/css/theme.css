@@ -1,0 +1,93 @@
+/* updating link colors to pass colour contrast on black backgrounds of overlay / data-in view  */
+.overlay-def.wb-bar-b a, .overlay-def.wb-bar-t a {
+		color: #8BA8D0;
+	}
+
+	.overlay-def.wb-bar-b a:visited, .overlay-def.wb-bar-t a:visited {
+		color: #BD98E2;
+	}
+	
+
+   /*temp / experiemental */
+
+   .provisional.most-requested-bullets li {
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 26px;
+      margin-top: 0
+  }
+
+  /* .most-requested-bullets.with-img.provisional {
+  margin-top: 0px;
+  } */
+
+  .provisional.most-requested-bullets .pddng-r-0 {
+  padding-right: 0px;
+  }
+
+  .provisional.most-requested-bullets h2 {
+      font-size: 1.2em;
+  }
+
+  .provisional.list-bld {
+      font-weight: 600;
+  }
+
+  @media screen and (max-width: 991px) {
+  .provisional.most-requested-bullets li {
+      font-size: 19px;
+      }
+        
+  }
+
+  .bg-cover {
+      background-image: url(../assets/svg-leaf.svg);
+      background-color: #2e2e40;
+      background-repeat: no-repeat;
+      background-size: 200%;
+      background-position: 350px -250px;
+  }
+
+  .bg-mva {
+      background: none;
+      
+  }
+
+  .bg-mva .h3 {
+      color: #fff;
+  }
+
+  @media screen and (max-width: 2000px) {
+  .well.header-rwd {
+      width: 100%;
+  }
+}
+
+  .header-rwd > h1 {
+      width: 100%;
+  }
+
+  #wb-so > p {
+      font-size: 16px;
+  }
+
+  #wb-info p > a {
+      font-size: 1em;
+      text-decoration: none;
+  }
+
+  footer#wb-info a, footer#wb-info a:link {
+            font-size: 18px;
+        }
+
+   #wb-info p > a {
+      font-size: 1em;
+      text-decoration: none;
+  }
+
+  /* Capitalize the first word in a span */
+  span.cptl-first-word::first-word {
+    text-transform: capitalize;
+  }
+  
+   

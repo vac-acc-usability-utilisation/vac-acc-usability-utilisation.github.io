@@ -1,10 +1,11 @@
-/* temp css, waiting for GCWeb 2023 */
+/* provisional css, waiting for GCWeb 2023 */
 
  * @title Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
  * @license wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
  * v12.5.0 - 2022-12-13
  *
  */
+
 ul[class*=cnjnctn-type-] {
 	list-style:none;
 	padding-left:0;

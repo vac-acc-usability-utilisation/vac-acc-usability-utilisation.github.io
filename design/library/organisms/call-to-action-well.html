@@ -1,0 +1,77 @@
+<!-- Call to action well
+
+    VAC   .\^/.   ACC    
+    ACC  \=%¥%=/  VAC 
+    VAC   ^`|`^   ACC 
+    
+    content:
+       title
+       call-to-action-button
+       link to overlay
+       summary
+       list
+       link to detailed page
+
+       pop-up modal:
+        title
+        steps
+        call-to-action
+        close
+    -->
+
+    <section class="container well-sm"> <!-- odd call to action wells get well-sm and even get well: we could turn this in CSS :even selector -->
+        <div class="row mrgn-lft-sm mrgn-rght-sm">
+            <!-- Columns containing the call to action button and link to pop-up modal -->
+            <div class="col-lg-5">
+                <div class="row">
+                    <div class="col-sm-9 col-md-6 col-lg-12">
+                    <p>
+                        <a href="sign-in-services/sign-in-partners.html?individuals" class="btn btn-block btn-call-to-action">{Call to action}</a>
+                    </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8 col-md-6 col-lg-12 text-center">
+                    <p><a href="#register-steps-individual-popup" aria-controls="register-steps-individual-popup" class="wb-lbx" role="button">
+                        {Help overlay}
+                        </a>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Columns information about the call to action button and unordered lists -->
+            <div class="col-lg-offset-1 col-lg-6">
+                <p class="h5">{Summary or list title }:</p>
+                <ul class="colcount-lg-2">
+                    <li>{list item 1}</li>
+                    <li>{list item 2}</li>
+                    <li>{list item 3}</li>
+                </ul>
+                <!-- Link to detailed information page -->
+                <p class="small"><a href="#">{URL to a page with detailed information}</a></p>
+            </div>
+            <!-- pop-up modal -->
+            <section id="register-steps-individual-popup" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">{Help overlay title}</h2>
+            </header>
+            <div class="modal-body">
+                <ol class="provisional lst-stps stps-strpd">
+                    <li>
+                        {Step 1} 
+                    
+                    </li>
+                    <li>{Step 2} </li>
+                    <li>{Step 3}</li>
+                </ol>
+                
+                <p><a href="#1" class="btn btn-lg" style="text-decoration:underline;">{Still have questions?}</a></p>
+                
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-success pull-left" style="color:#fff">{Call to action}</span></a>
+                <button class="btn btn-primary overlay-close popup-modal-dismiss pull-right" type="button">Close</button>
+            </div>
+            </section>
+        </div>
+    </section>

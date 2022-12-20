@@ -63,11 +63,11 @@
         </h1>
 
         <h3>
-            <span class="visible-xs ">
+            <span class="visible-xs">
                 <abbr title="Veteran Affairs Canada">VAC</abbr>
             </span>
             <span class="hidden-xs">
-                Veteran Affairs Canada
+                Veteran<span class="invisible-sm">&nbsp;</span>Affairs Canada
             </span>
         </h3>
 
@@ -87,17 +87,31 @@
 <section>
 <h3>Common proper nouns</h3>
 <pre><code>
-/* Veteran Affairs Canada */
-Veteran&lt;span class=&quot;invisible-xs&quot;&gt;&amp;nbsp;&lt;/span&gt;Affairs&lt;span class=&quot;invisible-xs&quot;&gt;&amp;nbsp;&lt;/span&gt;Canada
+    /* Veteran Affairs Canada */
+    <span>Veteran<span class="invisible-xs">&nbsp;</span>Affairs<span class="invisible-xs">&nbsp;</span>Canada
+    </span>
+    Veteran&lt;span class=&quot;invisible-xs&quot;&gt;&amp;nbsp;&lt;/span&gt;Affairs&lt;span class=&quot;invisible-xs&quot;&gt;&amp;nbsp;&lt;/span&gt;Canada
+
+    /* My VAC Account */
+    <span>My<span class="invisible-xs">&nbsp;</span><abbr title="Veteran Affairs Canada">VAC</abbr><span class="invisible-xs">&nbsp;</span>Account</span>
+    My&lt;span class=&quot;invisible-xs&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;abbr title=&quot;Veteran Affairs Canada&quot;&gt;VAC&lt;/abbr&gt;&lt;span class=&quot;invisible-xs&quot;&gt;&amp;nbsp;&lt;/span&gt;Account
+  
+    /* Veteran Affairs Canada (Proper noun) -> 'VAC' (Acronym) on smaller screens */
+    <span class="visible-xs "><abbr title="Veteran Affairs Canada">VAC</abbr></span>
+    <span class="hidden-xs">Veteran Affairs Canada</span>
+    &lt;span class=&quot;visible-xs &quot;&gt;&lt;abbr title=&quot;Veteran Affairs Canada&quot;&gt;VAC&lt;/abbr&gt;&lt;/span&gt;
+    &lt;span class=&quot;hidden-xs&quot;&gt;Veteran Affairs Canada&lt;/span&gt;
 </code></pre>
 <pre><code>
-/* My VAC Account */
-My&lt;span class=&quot;invisible-xs&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;abbr title=&quot;Veteran Affairs Canada&quot;&gt;VAC&lt;/abbr&gt;&lt;span class=&quot;invisible-xs&quot;&gt;&amp;nbsp;&lt;/span&gt;Account
-</code></pre>
-<pre><code>
-/* Veteran Affairs Canada (Proper noun) -> 'VAC' (Acronym) on smaller screens */
-&lt;span class=&quot;visible-xs &quot;&gt;&lt;abbr title=&quot;Veteran Affairs Canada&quot;&gt;VAC&lt;/abbr&gt;&lt;/span&gt;
-&lt;span class=&quot;hidden-xs&quot;&gt;Veteran Affairs Canada&lt;/span&gt;</code></pre>
+ 
+    <abbr title="Canadian Armed Forces">CAF</abbr>
+    &lt;abbr title=&quot;Canadian Armed Forces&quot;&gt;CAF&lt;/abbr&gt;
+
+    <abbr title="Royal Canadian Mounted Police">RCMP</abbr>
+    &lt;abbr title=&quot;Royal Canadian Mounted Police&quot;&gt;RCMP&lt;/abbr&gt;
+    </code>
+</pre>
+
 
 </section>
 
@@ -121,7 +135,7 @@ My&lt;span class=&quot;invisible-xs&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;abbr tit
                     <div class="col-xs-12">
                         <dl id="wb-dtmd">
                             <dt>Date modified:</dt>
-                            <dd><time property="dateModified">2022-11-15</time></dd>
+                            <dd><time property="dateModified">2022-12-20</time></dd>
                         </dl>
                     </div>
 				</div>

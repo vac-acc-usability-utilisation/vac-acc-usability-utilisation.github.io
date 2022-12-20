@@ -1,0 +1,87 @@
+ <section class="container">
+			<h1 id="wb-cont" property="name">
+				My<span class="invisible-xs">&nbsp;</span><abbr title="Veteran Affairs Canada">VAC</abbr><span class="invisible-xs">&nbsp;</span>Account
+				<span id="sign-in-span-h1" 
+				   data-wb-urlmapping='
+				   {
+				   "register": { 
+				   "action": "addClass", 
+				   "source": "#sign-in-span-h1", 
+				   "class": "hidden" } 
+				   }
+				   '>
+				   <!-- EN/FR content for "Sign in to"-->
+				   sign-in
+				</span>
+				<!--" hide and if either query is true"-->
+				<span id="or-span-h1"
+				   data-wb-urlmapping='
+				   {
+				   "register": { 
+				   "action": "addClass", 
+				   "source": "#or-span-h1", 
+				   "class": "wb-inv" },
+				   "sign-in": { 
+				   "action": "addClass", 
+				   "source": "#or-span-h1", 
+				   "class": "hidden" } 
+				   }
+				   '>
+				   <!-- EN/FR content for "or"-->
+				   and
+				</span>
+				<!-- If html?sign-in Hide the register for span-->
+				<span id="register-span-h1"
+				   data-wb-urlmapping='{
+				   "sign-in": { 
+				   "action": "addClass", 
+				   "source": "#register-span-h1", 
+				   "class": "hidden" }}'>
+				   <!-- EN/FR content for "Register for"-->
+				   registration
+				</span>
+				services
+			 </h1>
+			 <p class="lead mrgn-tp-md">
+				<!-- If html?register Hide the "sign in to" span-->
+				<span id="sign-in-span" 
+				   data-wb-urlmapping='{
+				   "register": { 
+				   "action": "addClass", 
+				   "source": "#sign-in-span", 
+				   "class": "hidden" } }'>
+				   <!-- EN/FR content for "Sign in to"-->
+				   Sign in to
+				</span>
+				<!-- Hide or if either html?register or html?sign is true"-->
+				<span id="or-span"
+				   data-wb-urlmapping='{
+				   "sign-in": { 
+				   "action": "addClass", 
+				   "source": "#or-span", 
+				   "class": "hidden" },
+				   "register": { 
+				   "action": "addClass", 
+				   "source": "#or-span", 
+				   "class": "hidden" } }'>
+				   <!-- EN/FR content for "or"-->
+				   or
+				</span>
+				<!-- If html?sign-in Hide the register for span-->
+				<!-- also, sentence case 'register for' by adding .cptl-first-word-->
+				<span id="register-span" class="text-lowercase"
+				   data-wb-urlmapping='{
+				   "sign-in": { 
+				   "action": "addClass", 
+				   "source": "#register-span", 
+				   "class": "hidden" },
+				   "register": { 
+				   "action": "removeClass", 
+				   "source": "#register-span", 
+				   "class": "text-lowercase" } }'>
+				   <!-- EN/FR content for "Register for"-->
+				   Register for
+				</span>
+				My <abbr title="Veteran Affairs Canada">VAC</abbr> Account or Represent a Client with <abbr title="Veteran Affairs Canada">VAC</abbr>.
+			 </p>
+		 </section>
