@@ -136,6 +136,7 @@
          </nav>
       </header>
       <main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
+
          <!-- Sign-in / Registration services h1 and p lead content tweaks with URLMapping (GCWeb)
 
             VAC   .\^/.   ACC    
@@ -230,6 +231,7 @@
 				My <abbr title="Veteran Affairs Canada">VAC</abbr> Account or Represent a Client with <abbr title="Veteran Affairs Canada">VAC</abbr>.
 			 </p>
 		 </section>
+		 
 
          <!-- Call to action well (My VAC Account)
 
@@ -239,8 +241,8 @@
             
           
             -->
-		<section class="container well-sm"> <!-- odd call to action wells get well-sm and even get well: we could turn this in CSS :even selector -->
-			<div class="row mrgn-lft-sm mrgn-rght-sm">
+		<section class="container panel" style="background-color: #fff;"> <!-- odd call to action well have white backgrounds we could turn this in CSS :odd selector -->
+			<div class="row mrgn-lft-sm mrgn-rght-sm panel-body">
 				<!-- Columns containing the call to action button and link to pop-up modal -->
 				<div class="col-lg-5">
 					<div class="row">
@@ -266,7 +268,7 @@
 					<ul>
 						<li>Veterans</li>
 						<li>Current members of the <abbr title="Canadian Armed Forces">CAF</abbr> or the <abbr title="Royal Canadian Mounted Police">RCMP</abbr></li>
-						<li>Retired members of the RCMP</li>
+						<li>Retired members of the <abbr title="Royal Canadian Mounted Police">RCMP</abbr></li>
 						<li>Family members who are on-file<sup id="fn1-rf"><a class="fn-lnk" href="#fn1"><span class="wb-inv">Footnote </span>1</a></sup></li>
 					</ul>
 					<!-- Link to detailed information page -->
@@ -299,7 +301,7 @@
 				</section>
 			</div>
 		</section>
-         
+        
 		<!-- Call to action well (Represent a client)
 
 		VAC   .\^/.   ACC    
@@ -308,8 +310,8 @@
 		
 		
             -->
-		<section class="container well"> <!-- odd numbered calls to action wells get well-sm and even get well: we could turn this in CSS :even selector -->
-			<div class="row mrgn-lft-sm mrgn-rght-sm">
+		<section class="container panel"> <!-- -->
+			<div class="row mrgn-lft-sm mrgn-rght-sm panel-body">
 				<!-- Columns containing the call to action button and link to pop-up modal -->
 				<div class="col-lg-5">
 					<div class="row">
@@ -340,7 +342,7 @@
 				<!-- pop-up modal -->
 				<section id="register-steps-representative-popup" class="mfp-hide modal-dialog modal-content overlay-def">
 				<header class="modal-header">
-					<h2 class="modal-title">How to register to <span>Represent<span class="invisible-xs">&nbsp;</span><abbr title="Veteran Affairs Canada">a</abbr><span class="invisible-xs">&nbsp;</span>Client</span></h2>
+					<h2 class="modal-title">How to register to <span>Represent<span class="invisible-xs">&nbsp;</span>a<span class="invisible-xs">&nbsp;</span>Client</span></h2>
 				</header>
 				<div class="modal-body">
 					<ol class="provisional lst-stps stps-strpd">
@@ -401,63 +403,66 @@
                   <dd><time property="dateModified">2022-11-15</time></dd>
                </dl>
             </div>
-         </footer>
-         <!-- Design tools bottom bar 
+			<!-- Design tools bottom bar 
 			
             VAC   .\^/.   ACC    
             ACC  \=%¥%=/  VAC 
             VAC   ^`|`^   ACC 
             
             -->
-         <section id="bottom-bar" class="wb-overlay open modal-content overlay-def wb-bar-b text-white container">
-            <div class="row">
-               <div class="col-sm-12 col-md-8 col-md-offset-2 mrgn-tp-md mrgn-bttm-md">
-                  <p>State previews</p>
-                  <div class="btn-group">
-                     <a href="?sign-in" id="sign-in-state-btn" class="btn btn-default" 
-					 data-wb-urlmapping='{
-						"sign-in": { 
-						"action": "addClass", 
-						"source": "#sign-in-state-btn", 
-						"class": "active" }
-						}'>
-						Sign-in state
-					</a>
-                     <a href="?register" id="register-state-btn" class="btn btn-default"
-					 data-wb-urlmapping='{
-						"register": { 
-						"action": "addClass", 
-						"source": "#register-state-btn", 
-						"class": "active" }
-						}'>
-						Register state</a>
-                     <a href="?" id="default-state-btn" class="btn btn-default active" 
-					 data-wb-urlmapping='{
-						"register": { 
-						"action": "removeClass", 
-						"source": "#default-state-btn", 
-						"class": "active" },
-						"sign-in": { 
+			<section id="bottom-bar" class="wb-overlay open modal-content overlay-def wb-bar-b text-white container">
+				<div class="row">
+				   <div class="col-sm-12 col-md-8 col-md-offset-2 mrgn-tp-md mrgn-bttm-md">
+					  <p>State previews</p>
+					  <div class="btn-group">
+						 <a href="?sign-in" id="sign-in-state-btn" class="btn btn-default" 
+						 data-wb-urlmapping='{
+							"sign-in": { 
+							"action": "addClass", 
+							"source": "#sign-in-state-btn", 
+							"class": "active" }
+							}'>
+							Sign-in state
+						</a>
+						 <a href="?register" id="register-state-btn" class="btn btn-default"
+						 data-wb-urlmapping='{
+							"register": { 
+							"action": "addClass", 
+							"source": "#register-state-btn", 
+							"class": "active" }
+							}'>
+							Register state</a>
+						 <a href="?" id="default-state-btn" class="btn btn-default active" 
+						 data-wb-urlmapping='{
+							"register": { 
 							"action": "removeClass", 
 							"source": "#default-state-btn", 
+							"class": "active" },
+							"sign-in": { 
+								"action": "removeClass", 
+								"source": "#default-state-btn", 
+								"class": "active" }
+							}'>Direct link state</a>
+						 
+					  </div>
+					  <a href="?wbdisable=true" id="wbdisable-state-btn" class="btn btn-link text-white"
+						 style="text-decoration: underline;" 
+						 data-wb-urlmapping='{
+							"wbdisable=true": { 
+							"action": "addClass", 
+							"source": "#register-state-btn", 
 							"class": "active" }
-						}'>Direct link state</a>
-					 
-                  </div>
-				  <a href="?wbdisable=true" id="wbdisable-state-btn" class="btn btn-link text-white"
-					 style="text-decoration: underline;" 
-					 data-wb-urlmapping='{
-						"wbdisable=true": { 
-						"action": "addClass", 
-						"source": "#register-state-btn", 
-						"class": "active" }
-						}'>
-						WET-BOEW disabled state
-					</a>
-               </div>
-            </div>
-         </section>
+							}'>
+							WET-BOEW disabled state
+						</a>
+				   </div>
+				</div>
+			 </section>
+			 <!-- -->
+         </footer>
+         
       </main>
+
       <footer id="wb-info">
          <div class="landscape">
             <nav class="container wb-navcurr">
