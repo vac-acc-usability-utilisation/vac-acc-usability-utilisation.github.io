@@ -1,33 +1,46 @@
-<!--h1-->
-# My VAC Account sign-in and registration services
-<!--lead-->
-Sign in to or register for My VAC Account or Represent a Client with VAC.
+# Page: Front door content
 
----
+## Heading section
+
+English content
+
+| en | content  |
+|---|---|
+| h1  | My VAC Account sign-in and registration services |
+| p.lead |  Sign in to or register for My VAC Account or Represent a Client with VAC.  |
+
+|  fr | content  |
+|---|---|
+| h1  | tbd |
+| p.lead |  tbd  |
 
 <!--individual account well-->
- <!--call to action btn-->
- My VAC Account
- <!--link to registration help overlay for My VAC Account-->
- How to register for My VAC Account
 
-  <!-- individual account well info -->
- View and update someone else's Veteran Affairs Canada services. My VAC Account is for:
+## Panel: Individuals
+
+My VAC Account<!--call to action btn-->
+
+How to register for My VAC Account<!--link to registration help overlay for My VAC Account-->
+
+View and update someone else's Veteran Affairs Canada services. My VAC Account is for: <!-- individuals list -->
+
 * Veterans
 * Current members of the CAF or the RCMP
 * Retired members of the RCMP
 * Family members who are [on-file](#footnotes)
-<!-- link to detailed page-->
-[List of all services for My VAC Account]()
+
+[List of all services for My VAC Account](to-be-decided.html)<!-- link to detailed page-->
 
 ---
 
-<!-- Registration Help overlay individuals -->
-How to register for My VAC Account
+## Panel: Representatives
+
+How to register for My VAC Account<!-- Registration Help overlay individuals -->
+
 1. Choose either Sign-in Partner or GCKey
-  1. If you do not have a Sign-in Partner or GCKey you'll be prompted to create one.
-3. We'll ask a few questions to set up your account.
-4. Start using My VAC Account!
+   1. If you do not have a Sign-in Partner or GCKey you'll be prompted to create one.
+2. We'll ask a few questions to set up your account.
+3. Start using My VAC Account!
 
 Still have questions? Read our registration help page and FAQs
 
