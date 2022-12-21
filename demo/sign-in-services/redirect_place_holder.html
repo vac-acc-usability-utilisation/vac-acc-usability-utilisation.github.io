@@ -27,11 +27,7 @@
 <noscript><link rel="stylesheet" href="../wet-boew/css/noscript.min.css" /></noscript>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
-<style>
-	h1 > div {
-		display: inline;
-	}
-</style>
+
 
 </head>
 <body class="" vocab="http://schema.org/" typeof="WebPage"><nav>
@@ -40,7 +36,7 @@
 		<li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to About this site</a></li></ul>
 </nav>
 
-<header>
+<header class="hidden">
 	<div id="wb-bnr" class="container">
 		<div class="row">
 			
@@ -94,7 +90,6 @@
 					<nav class="gcweb-menu" typeof="SiteNavigationElement">
 	<h2 class="wb-inv">Menu</h2>
 	<button type="button" aria-haspopup="true" aria-expanded="false"><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
-	
 	<ul role="menu" aria-orientation="vertical" data-ajax-replace="https://www.canada.ca/content/dam/canada/sitemenu/sitemenu-v2-en.html"><li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/jobs.html">Jobs and the workplace</a></li>
 		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/immigration-citizenship.html">Immigration and citizenship</a></li>
 		<li role="presentation"><a role="menuitem" href="https://travel.gc.ca/">Travel and tourism</a></li>
@@ -113,7 +108,17 @@
 </nav>
 
 				</div>
-				</div>
+				<div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-md-4 hidden">
+					<section id="wb-so">
+						<h2 class="wb-inv">Sign-on information</h2>
+						<button class="btn btn-default" type="button">My account</button>
+						<button class="btn btn-primary" type="button">Sign out</button>
+						<p class="small mrgn-tp-sm">Signed in as 
+							<span class="nowrap  honour">
+							<i class="fa fa-spinner spin" aria-hidden="true"></i>
+						</span></p>
+					</section>
+				</div></div>
 	</div>
 	<nav id="wb-bc" property="breadcrumb">
 	<h2>You are here:</h2>
@@ -137,13 +142,6 @@
 				</a>
 				<meta property="position" content="3">
 			</li>
-			
-			<li property="itemListElement" typeof="ListItem">
-				<a property="item" typeof="WebPage" href="#">
-					<span property="name">Sign-in partners</span>
-				</a>
-				<meta property="position" content="4">
-			</li>
 		</ol>
 	</div>
 </nav>
@@ -153,166 +151,54 @@
 
 <main class="container cnt-wdth-lmtd" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
       
-<!-- Sign-in services hiding/showing span
+<!--  \,∆,/     custom page begins
+	 \%%¥%%/
+	   *|*  
+++++++++++++++++
+"title" : "sign-in services - prototype"
++++++++++++++-->
 
-   ##    .\^/.    ##    
-   ##   \=%¥%=/   ##
-   ##    ^`|`^    ##  -->
-
-<div >
-
-	<h1 id="wb-cont" property="name">
-		My <abbr title="Veteran Affairs Canada">VAC</abbr> Account 
-		<span data-wb-urlmapping='{
-			"individuals": { "action": "ajax", "url": "ajax/h1.html .h1-span-for-indvd" },
-			"representatives": { "action": "ajax", "url": "ajax/h1.html .h1-span-for-rep" }
-		}'></span>
-	</h1>
-
-</div>
+<h1 id="wb-cont" property="name">
+	Redirect placeholder
+</h1>
 
 <p class="lead mrgn-tp-md">
-	Serving Canada's Veterans, members and their families - online
+	User is redirected to sign-in service of their choice
 </p>
-<p>Choose from one of two ways to access My <abbr title="Veteran Affairs Canada">VAC</abbr> Account:</p>
+<p>Choose from the following scenarios:</p>
 
-<div class="row">
-	<div class="col-md-9">
-		<section> <!-- Sign in Options -->
-			<div class="panel panel-default">
-				<div class="panel-heading">
-				<h2 class="panel-title">Option 1 – Using one of our Sign-In Partners</h2>
-				</div>
-				<div class="panel-body">
-				<p>
-					<!-- data-wb-urlmapping='{ "sign-in": { "action": "addClass", "source": "#id", "class": "myclass" } } -->
-					<span class=" ">Sign in</span> 
-					<span class=" ">or </span>
-					<span class=" ">register</span> with the same sign-in information you use for other online services (for example, online banking).</p>
-				<p class="text-center mrgn-tp-lg"><a class="btn btn-call-to-action" role="button" href="redirect_place_holder.html">Sign-In Partner</a></p>
-				<details>
-				<summary tabindex="0" class="text-center" id="wb-auto-1" role="button" aria-expanded="false">View list of Sign-In Partners</summary>
-				</details>
-				</div> <!-- End panel -->
-			</div>
-			<div class="clearfix"></div>
-			<div class="panel panel-default">
-			<div class="panel-heading">
-			<h2 class="panel-title">Option 2 – Using a GCKey user ID and password</h2>
-			</div>
-			<div class="panel-body">
-				<p>Sign in with your GCKey user ID and password, or register.</p>
-				<div class="col-sm-12">
-				<p class="text-center mrgn-tp-lg">
-					<a class="btn btn-call-to-action" role="button" 
-					href="redirect_place_holder.html">GCKey sign in</a>&nbsp;&nbsp;&nbsp;
 
-					<!-- todo is it possible to link to GCKey registration through the service? 
-					<a role="button" href="#">GCKey register</a></p>-->
-				</div>
-			</div>
-			</div> <!-- End panel -->
-		</section>
-	</div>
-	<div class="col-md-3">
-		<!-- Aside -->
-		<section class="panel panel-info">
-			<header class="panel-heading">
-			 <h5 class="panel-title">Help and FAQs</h5>
-			</header>
-			<div class="panel-body">
-			 <ul class="list-group">
-				<li class="list-group-item"><a href="#">Sign-in Partners</a></li>
-
-		  <li class="list-group-item"><a href="#">GCKey user ID and password</a></li>
-		  </ul>
-		  
-			</div>
-		  </section>
-	</div>
-</div>
 <section>
-	<h2 class="mrgn-tp-md">Topics</h2>
-	<li><a href="#">Help and FAQs</a></li>
-    <li><a href="#">Forgot your password or user ID?</a></li>
-    <li><a href="#">Your browser and troubleshooting tips</a></li>
-    <li><a href="#">Important security information</a></li>
-	<div data-wb-urlmapping='{
-		"representatives": { "action": "ajax", "url": "ajax/topics.html li.rep" }
-	}'>
-	</div>
+	<h2 class="mrgn-tp-md">Scenarios</h2>
+		<ul>
+			<li><a href="#">Sign-in partner is recognized</a></li>
+			<li><a href="account-recover.html">Sign-in partner is NOT recognized</a></li>
+		</ul>
 
 </section>
 
 
-	
-		
-		
 
-<footer class="pagedetails">
+<footer class="pagedetails hidden">
 	
-	<h2 class="wb-inv">Page details</h2><div class="row"><div class="col-sm-8 col-md-9 col-lg-9">
+	<h2 class="wb-inv">Page details</h2>
+	<div class="row">
+		<div class="col-sm-8 col-md-9 col-lg-9">
 		<div class="col-xs-12">
 			<dl id="wb-dtmd">
 				<dt>Date modified:</dt>
-				<dd><time property="dateModified">2022-11-16</time></dd>
+				<dd><time property="dateModified">2022-11-15</time></dd>
 			</dl>
 		</div>
 </footer>
 
 </main>
 
-<footer id="wb-info">
-	
-	<div class="landscape">
-		<nav class="container wb-navcurr">
-			<h2 class="wb-inv">About government</h2>
-			<ul class="list-unstyled colcount-xs-2 colcount-md-3">
-				<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
-				<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
-				<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
-				<li><a href="https://www.canada.ca/en/news.html">News</a></li>
-				<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
-				<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
-				<li><a href="https://pm.gc.ca/eng">Prime Minister</a></li>
-				<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
-				<li><a href="https://open.canada.ca/en/">Open government</a></li>
-			</ul>
-		</nav>
-	</div>
-	
-	<div class="brand">
-		<div class="container">
-			<div class="row ">
-				
-				<nav class="col-md-9 col-lg-10 ftr-urlt-lnk">
-					<h2 class="wb-inv">About this site</h2>
-					<ul>
-						<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
-						<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
-						<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
-						<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-						<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-					</ul>
-				</nav>
-				
-				<div class="col-xs-6 visible-sm visible-xs tofpg">
-					<a href="#wb-cont">Top of page <span class="glyphicon glyphicon-chevron-up"></span></a>
-				</div><div class="col-xs-6 col-md-3 col-lg-2 text-right">
-					<img src="../gcWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
-<script src="../wet-boew/js/wet-boew.min.js"></script>
-<!--
-<script src="../gcWeb/js/theme.min.js"></script>-->
-
+<script src="https://wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/wet-boew.min.js"></script>
 <script src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js"></script>
+
 
 </body>
 </html>
