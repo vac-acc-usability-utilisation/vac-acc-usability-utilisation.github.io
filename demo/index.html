@@ -29,6 +29,14 @@
             <li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to About this site</a></li>
          </ul>
       </nav>
+	<!-- Global (National) Header (not signed in)
+		states: ?sign-in | ?register
+
+		VAC   .\^/.   ACC    
+		ACC  \=%¥%=/  VAC 
+		VAC   ^`|`^   ACC 
+		
+		-->
       <header>
          <div id="wb-bnr" class="container">
             <div class="row">
@@ -135,16 +143,16 @@
             </div>
          </nav>
       </header>
-      <main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
-
-         <!-- Sign-in / Registration services h1 and p lead content tweaks with URLMapping (GCWeb)
+	  <!-- Page: frontdoor
 
             VAC   .\^/.   ACC    
             ACC  \=%¥%=/  VAC 
             VAC   ^`|`^   ACC 
             
             -->
-         <section class="container"> 
+      <main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
+         
+		 <section class="container">  <!-- Frontdoor heading-->
 			<h1 id="wb-cont" property="name">
 				My<span class="invisible-xs">&nbsp;</span><abbr title="Veteran Affairs Canada">VAC</abbr><span class="invisible-xs">&nbsp;</span>Account
 				<span id="sign-in-span-h1" 
@@ -184,9 +192,7 @@
 				   "source": "#register-span-h1", 
 				   "class": "hidden" }}'>
 				   <!-- EN/FR content for "Register for"-->
-				   registration
-				</span>
-				services
+				   registration</span><span class="invisible-xs">&nbsp;</span>services
 			 </h1>
 			 <p class="lead mrgn-tp-md">
 				<!-- If html?register Hide the "sign in to" span-->
@@ -231,9 +237,17 @@
 				My <abbr title="Veteran Affairs Canada">VAC</abbr> Account or Represent a Client with <abbr title="Veteran Affairs Canada">VAC</abbr>.
 			 </p>
 		 </section>
-		 
 
-         <!-- Call to action well (My VAC Account)
+		 <style>
+			.vcenter {
+				display: inline-block;
+				vertical-align: middle;
+				float: none;
+				
+			}
+		</style>
+
+         <!-- Frontdoor Call to action panel (My VAC Account ?individual)
 
             VAC   .\^/.   ACC    
             ACC  \=%¥%=/  VAC 
@@ -241,132 +255,78 @@
             
           
             -->
-		<section class="container panel col-sm-10 col-sm-offset-2" style="background-color: #fff;"> <!-- odd call to action well have white backgrounds we could turn this in CSS :odd selector -->
-			<div class="row mrgn-lft-sm mrgn-rght-sm panel-body">
-				<!-- Columns containing the call to action button and link to pop-up modal -->
-				<div class="col-lg-5">
-					<div class="row">
-						<div class="col-sm-9 col-md-6 col-lg-12">
-						<p>
-							<a href="sign-in-services/sign-in-partners.html?individuals" class="btn btn-block btn-call-to-action">My <abbr title="Veteran Affairs Canada">VAC</abbr> Account for individuals </a>
-						</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-8 col-md-6 col-lg-12 text-center">
-						<p><a href="#register-steps-individual-popup" aria-controls="register-steps-individual-popup" class="wb-lbx" role="button">
-							How to register for My<span class="invisible-xs">&nbsp;</span><abbr title="Veteran Affairs Canada">VAC</abbr><span class="invisible-xs">&nbsp;</span>Account
-							</a>
-						</p>
-						</div>
-					</div>
-				</div>
-				<!-- Columns information about the call to action button and unordered lists -->
-				<div class="col-lg-offset-1 col-lg-6">
-					<p class="h5">View and update someone else's Veteran Affairs Canada services. My<span class="invisible-xs">&nbsp;</span><abbr title="Veteran Affairs Canada">VAC</abbr><span class="invisible-xs">&nbsp;</span>Account
-						is for:</p>
-					<ul>
-						<li>Veterans</li>
-						<li>Current members of the <abbr title="Canadian Armed Forces">CAF</abbr> or the <abbr title="Royal Canadian Mounted Police">RCMP</abbr></li>
-						<li>Retired members of the <abbr title="Royal Canadian Mounted Police">RCMP</abbr></li>
-						<li>Family members who are on-file<sup id="fn1-rf"><a class="fn-lnk" href="#fn1"><span class="wb-inv">Footnote </span>1</a></sup></li>
-					</ul>
-					<!-- Link to detailed information page -->
-					<p class="small"><a href="#">List of all services for My <abbr title="Veteran Affairs Canada">VAC</abbr>&nbsp;Account</a></p>
-				</div>
-				<!-- pop-up modal -->
-				<section id="register-steps-individual-popup" class="mfp-hide modal-dialog modal-content overlay-def">
-				<header class="modal-header">
-					<h2 class="modal-title">How to register for <span>My<span class="invisible-xs">&nbsp;</span><abbr title="Veteran Affairs Canada">VAC</abbr><span class="invisible-xs">&nbsp;</span>Account</span></h2>
+		<section class="container"> 
+			<div class="panel"> <!-- odd panels have white backgrounds we could turn this in CSS :odd selector -->
+				<header class="panel-heading">
+					<h3>My VAC Account for Individuals</h3>
 				</header>
-				<div class="modal-body">
-					<ol class="provisional lst-stps stps-strpd">
-						<li>
-							Choose either Sign-in Partner or GCKey 
-							<ul class="mrgn-tp-sm">
-							<li>If you do not have a Sign-in Partner or GCKey you'll be prompted to create one.</li>
-							</ul>
-						</li>
-						<li>We'll ask a few questions to set up your account.</li>
-						<li>Start using My VAC Account!</li>
-					</ol>
-					
-					<p><a href="#1" class="btn btn-lg" style="text-decoration:underline;">Still have questions? Read our registration help page and FAQs</a></p>
-					
+				<div class="row panel-body wb-eqht">
+					<div class="text-center col-sm-12 col-md-6 hght-inhrt"><!-- Columns containing the call to action button and link to overlay modal -->
+						<div class="vcenter">
+							<div class="mrgn-bttm-lg">
+								<p>
+									<a href="sign-in-services/sign-in-partners.html?individuals" class="btn btn-block btn-call-to-action">My <abbr title="Veteran Affairs Canada">VAC</abbr> Account for individuals </a>
+								</p>
+								<p><a href="#register-steps-individual-popup" aria-controls="register-steps-individual-popup" class="wb-lbx" role="button">
+									How to register for My<span class="invisible-xs">&nbsp;</span><abbr title="Veteran Affairs Canada">VAC</abbr><span class="invisible-xs">&nbsp;</span>Account
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mrgn-bttm-lg col-sm-12 col-md-6 hght-inhrt"><!-- Columns information about the call to action button and unordered list -->
+						<p class="h5">View and update someone else's Veteran<span class="invisible-xs">&nbsp;</span>Affairs<span class="invisible-xs">&nbsp;</span>Canada<span class="invisible-xs">&nbsp;</span>services.</p>
+						<p> My<span class="invisible-xs">&nbsp;</span><abbr title="Veteran Affairs Canada">VAC</abbr><span class="invisible-xs">&nbsp;</span>Account is for:</p>
+						<ul>
+							<li>Veterans</li>
+							<li>Current members of the <abbr title="Canadian Armed Forces">CAF</abbr> or the <abbr title="Royal Canadian Mounted Police">RCMP</abbr></li>
+							<li>Retired members of the <abbr title="Royal Canadian Mounted Police">RCMP</abbr></li>
+							<li>Family members who are on-file<sup id="fn1-rf"><a class="fn-lnk" href="#fn1"><span class="wb-inv">Footnote </span>1</a></sup></li>
+						</ul>
+						<!-- Link to detailed information page -->
+						<p class="small"><a href="#">List of all services for My <abbr title="Veteran Affairs Canada">VAC</abbr>&nbsp;Account</a></p>
+					</div>
+					<!-- overlay modal -->
+					<section id="register-steps-individual-popup " class="mfp-hide modal-dialog modal-content overlay-def ">
+					<header class="modal-header">
+						<h2 class="modal-title">How to register for <span>My<span class="invisible-xs">&nbsp;</span><abbr title="Veteran Affairs Canada">VAC</abbr><span class="invisible-xs">&nbsp;</span>Account</span></h2>
+					</header>
+					<div class="modal-body">
+						<ol class="provisional lst-stps stps-strpd">
+							<li>
+								Choose either Sign-in Partner or GCKey 
+								<ul class="mrgn-tp-sm">
+								<li>If you do not have a Sign-in Partner or GCKey you'll be prompted to create one.</li>
+								</ul>
+							</li>
+							<li>We'll ask a few questions to set up your account.</li>
+							<li>Start using My VAC Account!</li>
+						</ol>
+						
+						<p class="text-center"><a href="#1" class="btn btn-lg" style="text-decoration:underline;">Still have questions?<br>Read our registration help page and FAQs</a></p>
+						
+					</div>
+					<div class="modal-footer">
+						<ul class="list-inline lst-spcd">
+							<li class="col-xs-8 col-sm-6 pull-left">
+								<a class="btn btn-success btn-block" style="color:#fff">Register for <span>My<span class="invisible-xs">&nbsp;</span><abbr title="Veteran Affairs Canada">VAC</abbr><span class="invisible-xs">&nbsp;</span>Account</span></a>
+							</li>
+							<li class="col-xs-4 col-sm-6">
+								<button class="btn btn-primary btn-block overlay-close popup-modal-dismiss pull-right" type="button">Close</button>
+							</li>
+						</ul>
+						
+					</div>
+					</section>
 				</div>
-				<div class="modal-footer">
-					<a class="btn btn-success pull-left" style="color:#fff">Register for <span>My<span class="invisible-xs">&nbsp;</span><abbr title="Veteran Affairs Canada">VAC</abbr><span class="invisible-xs">&nbsp;</span>Account</span></a>
-					<button class="btn btn-primary overlay-close popup-modal-dismiss pull-right" type="button">Close</button>
-				</div>
-				</section>
 			</div>
+
+		
+			
 		</section>
         
-		<!-- Call to action well (Represent a client)
-
-		VAC   .\^/.   ACC    
-		ACC  \=%¥%=/  VAC 
-		VAC   ^`|`^   ACC 
 		
-		
-            -->
-		<section class="container panel"> <!-- -->
-			<div class="row mrgn-lft-sm mrgn-rght-sm panel-body">
-				<!-- Columns containing the call to action button and link to pop-up modal -->
-				<div class="col-lg-5">
-					<div class="row">
-						<div class="col-sm-9 col-md-6 col-lg-12">
-						<p>
-							<a href="sign-in-services/sign-in-partners.html?representative" class="btn btn-block btn-call-to-action">Represent a<span class="invisible-xs">&nbsp;</span>Client</a>
-						</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-8 col-md-6 col-lg-12 text-center">
-						<p><a href="#register-steps-representative-popup" aria-controls="register-steps-representative-popup" class="wb-lbx" role="button">
-							How to register to Represent<span class="invisible-xs">&nbsp;</span>a<span class="invisible-xs">&nbsp;</span>Client
-							</a>
-						</p>
-						</div>
-					</div>
-				</div>
-				<!-- Columns information about the call to action button and unordered lists -->
-				<div class="col-lg-offset-1 col-lg-6">
-					<p class="h5">View and update someone else's Veteran Affairs Canada services, for:</p>
-					<ul>
-						<li>Legal representatives (power of attorneys, trustees, etc. who are on-file<sup id="fn1-2-rf"><a class="fn-lnk" href="#fn1"><span class="wb-inv">Footnote </span>1</a></sup>)</li></li>
-					</ul>
-					<!-- Link to detailed information page -->
-					<p class="small"><a href="#">List of all services for representatives</a></p>
-				</div>
-				<!-- pop-up modal -->
-				<section id="register-steps-representative-popup" class="mfp-hide modal-dialog modal-content overlay-def">
-				<header class="modal-header">
-					<h2 class="modal-title">How to register to <span>Represent<span class="invisible-xs">&nbsp;</span>a<span class="invisible-xs">&nbsp;</span>Client</span></h2>
-				</header>
-				<div class="modal-body">
-					<ol class="provisional lst-stps stps-strpd">
-						<li>You must setup a representative account with us in person or by phone. Once your account is created you'll receive a CSDN ID.</li>
-						<li>Choose either Sign-in Partner or GCKey 
-							
-							<ul class="mrgn-tp-sm">
-								<li>If you do not have a Sign-in Partner or GCKey you'll be prompted to create one.</li>
-							</ul>
-							</li>
-						<li>Enter your CSDN ID.</li>   
-						<li>We'll ask a few questions to set up your account.</li>
-						<li>Start using My VAC Account!</li>
-					
-						</ol>
-					<p><a href="#1" class="btn btn-lg" style="text-decoration:underline;">Still have questions? Read our registration help page and FAQs</a></p>
-				</div>
-				<div class="modal-footer">
-					<a class="btn btn-success pull-left" style="color:#fff">Register to <span>Represent<span class="invisible-xs">&nbsp;</span>a<span class="invisible-xs">&nbsp;</span>Client</span></a>
-					<button class="btn btn-primary overlay-close popup-modal-dismiss pull-right" type="button">Close</button>
-				</div>
-				</section>
-			</div>
-		</section>
 
          <section class="container">
             <h2>Topics</h2>
@@ -392,74 +352,75 @@
 				   </p>
 				</dd>
 			 </aside>
-		 </div>
-         <footer class="pagedetails">
-            <h2 class="wb-inv">Page details</h2>
-            <div class="row">
-            <div class="col-sm-8 col-md-9 col-lg-9">
-            <div class="col-xs-12">
-               <dl id="wb-dtmd">
-                  <dt>Date modified:</dt>
-                  <dd><time property="dateModified">2022-11-15</time></dd>
-               </dl>
-            </div>
-			<!-- Design tools bottom bar 
-			
-            VAC   .\^/.   ACC    
-            ACC  \=%¥%=/  VAC 
-            VAC   ^`|`^   ACC 
-            
-            -->
-			<section id="bottom-bar" class="wb-overlay open modal-content overlay-def wb-bar-b text-white container">
+			 <footer class="pagedetails">
+				<h2 class="wb-inv">Page details</h2>
 				<div class="row">
-				   <div class="col-sm-12 col-md-8 col-md-offset-2 mrgn-tp-md mrgn-bttm-md">
-					  <p>State previews</p>
-					  <div class="btn-group">
-						 <a href="?sign-in" id="sign-in-state-btn" class="btn btn-default" 
-						 data-wb-urlmapping='{
-							"sign-in": { 
-							"action": "addClass", 
-							"source": "#sign-in-state-btn", 
-							"class": "active" }
-							}'>
-							Sign-in state
-						</a>
-						 <a href="?register" id="register-state-btn" class="btn btn-default"
-						 data-wb-urlmapping='{
-							"register": { 
-							"action": "addClass", 
-							"source": "#register-state-btn", 
-							"class": "active" }
-							}'>
-							Register state</a>
-						 <a href="?" id="default-state-btn" class="btn btn-default active" 
-						 data-wb-urlmapping='{
-							"register": { 
-							"action": "removeClass", 
-							"source": "#default-state-btn", 
-							"class": "active" },
-							"sign-in": { 
+				<div class="col-sm-8 col-md-9 col-lg-9">
+				<div class="col-xs-12">
+				   <dl id="wb-dtmd">
+					  <dt>Date modified:</dt>
+					  <dd><time property="dateModified">2022-11-15</time></dd>
+				   </dl>
+				</div>
+				<!-- Design tools bottom bar 
+				
+				VAC   .\^/.   ACC    
+				ACC  \=%¥%=/  VAC 
+				VAC   ^`|`^   ACC 
+				
+				-->
+				<section id="bottom-bar" class="wb-overlay open modal-content overlay-def wb-bar-b text-white container col-sm-12">
+					<div class="row">
+					   <div class="col-sm-12 col-md-8 col-md-offset-2 mrgn-tp-md mrgn-bttm-md">
+						  <p>State previews</p>
+						  <div class="btn-group">
+							 <a href="?sign-in" id="sign-in-state-btn" class="btn btn-default" 
+							 data-wb-urlmapping='{
+								"sign-in": { 
+								"action": "addClass", 
+								"source": "#sign-in-state-btn", 
+								"class": "active" }
+								}'>
+								Sign-in state
+							</a>
+							 <a href="?register" id="register-state-btn" class="btn btn-default"
+							 data-wb-urlmapping='{
+								"register": { 
+								"action": "addClass", 
+								"source": "#register-state-btn", 
+								"class": "active" }
+								}'>
+								Register state</a>
+							 <a href="?" id="default-state-btn" class="btn btn-default active" 
+							 data-wb-urlmapping='{
+								"register": { 
 								"action": "removeClass", 
 								"source": "#default-state-btn", 
+								"class": "active" },
+								"sign-in": { 
+									"action": "removeClass", 
+									"source": "#default-state-btn", 
+									"class": "active" }
+								}'>Direct link state</a>
+							 
+						  </div>
+						  <a href="?wbdisable=true" id="wbdisable-state-btn" class="btn btn-link text-white"
+							 style="text-decoration: underline;" 
+							 data-wb-urlmapping='{
+								"wbdisable=true": { 
+								"action": "addClass", 
+								"source": "#register-state-btn", 
 								"class": "active" }
-							}'>Direct link state</a>
-						 
-					  </div>
-					  <a href="?wbdisable=true" id="wbdisable-state-btn" class="btn btn-link text-white"
-						 style="text-decoration: underline;" 
-						 data-wb-urlmapping='{
-							"wbdisable=true": { 
-							"action": "addClass", 
-							"source": "#register-state-btn", 
-							"class": "active" }
-							}'>
-							WET-BOEW disabled state
-						</a>
-				   </div>
-				</div>
-			 </section>
-			 <!-- -->
-         </footer>
+								}'>
+								WET-BOEW disabled state
+							</a>
+					   </div>
+					</div>
+				 </section>
+				 <!-- -->
+			 </footer>
+		 </div>
+        
          
       </main>
 
