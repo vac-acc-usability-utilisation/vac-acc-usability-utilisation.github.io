@@ -38,7 +38,7 @@
 | cta how-to |  How to register to Represent a Client | - |
 | cta summary | View and update someone else's Veteran Affairs Canada services, for: | - |
 | cta summary list | <ul><li>Legal representatives (power of attorneys, trustees, etc. who are [on-file](Footnote 1)</li></li></ul> | - |
-| cta full-details | List of all My <abbr title="Veteran Affairs Canada">VAC</abbr> Account services for representatives. | - |
+| cta full-details | List of all My <abbr title="Veteran Affairs Canada">VAC</abbr> Account services for individuals | - |
 
 ### How to register for representatives overlay modal
 
