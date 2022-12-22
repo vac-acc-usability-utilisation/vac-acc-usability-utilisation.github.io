@@ -4,88 +4,63 @@
 
 |  | en  | fr |
 |---|---|---|
-| h1  | My VAC Account sign-in and registration services | tbd |
-| p.lead |  Sign in to or register for My VAC Account or Represent a Client with VAC.  | tbd |
+| h1  | My <abbr title="Veteran Affairs Canada">VAC</abbr> Account sign-in and registration services | - |
+| p.lead |  Sign in to or register for My <abbr title="Veteran Affairs Canada">VAC</abbr> Account or Represent a Client with <abbr title="Veteran Affairs Canada">VAC</abbr>.  | - |
 
 ---
 
-### Call-to-action panel for individuals
+## Call-to-action panel **for individuals**
 
 |  | en  | fr |
 |---|---|---|
-| cta btn  | My VAC Account for individuals | tbd |
-| cta how-to |  How to register for My VAC Account  | tbd |
-| cta summary | View and update someone else's Veteran Affairs Canada services. My VAC Account is for: | tbd |
-| cta summary list | <ul><li>Veterans</li><li>Current members of the <abbr title="Canadian Armed Forces">CAF</abbr> or the <abbr title="Royal Canadian Mounted Police">RCMP</abbr></li><li>Retired members of the <abbr title="Royal Canadian Mounted Police">RCMP</abbr></li><li>Family members who are [on-file](Footnote 1)</li></ul> |  | tbd |
-| cta full-details | List of all My VAC Account services for individuals | tbd |
+| cta btn  | My <abbr title="Veteran Affairs Canada">VAC</abbr> Account for individuals | - |
+| cta how-to |  How to register for My <abbr title="Veteran Affairs Canada">VAC</abbr> Account  | - |
+| cta summary | View and update someone else's Veteran Affairs Canada services. My VAC Account is for: | - |
+| cta summary list | <ul><li>Veterans</li><li>Current members of the <abbr title="Canadian Armed Forces">CAF</abbr> or the <abbr title="Royal Canadian Mounted Police">RCMP</abbr></li><li>Retired members of the <abbr title="Royal Canadian Mounted Police">RCMP</abbr></li><li>Family members who are [on-file](Footnote 1)</li></ul> | - |
+| cta full-details | List of all My <abbr title="Veteran Affairs Canada">VAC</abbr> Account services for individuals | - |
 
-### How-to overlay
+### How to register for individuals overlay modal
 
 | | en | fr |
 |---|---|---|
-| header | How to register for My VAC Account |  |
-| step 1 | <ul><li>Veterans</li><li>Current members of the <abbr title="Canadian Armed Forces">CAF</abbr> or the <abbr title="Royal Canadian Mounted Police">RCMP</abbr></li><li>Retired members of the <abbr title="Royal Canadian Mounted Police">RCMP</abbr></li><li>Family members who are [on-file](Footnote 1)</li></ul> | |
-| step 1.1 | If you do not have a Sign-in Partner or GCKey you'll be prompted to create one. | |
-| step 2 | Choose either Sign-in Partner or GCKey | |
-| step 3 | We'll ask a few questions to set up your account. | |
-| step 4 | Start using My VAC Account | |
+| header | How to register for My VAC Account | - |
+| steps | <ol><li>Choose either Sign-in Partner or GCKey<ul><li>If you do not have a Sign-in Partner or GCKey you'll be prompted to create one.</li></ul></li><li>We'll ask a few questions to set up your account.</li><li>Start using My VAC Account!</li></ol> | - |
+| footer | Register for My <abbr title="Veteran Affairs Canada">VAC</abbr> Account | - |
 
 ---
 
+## Call-to-action panel **for representative**
 
+|  | en  | fr |
+|---|---|---|
+| cta btn  | Represent a client | - |
+| cta how-to |  How to register to Represent a Client | - |
+| cta summary | View and update someone else's Veteran Affairs Canada services, for: | - |
+| cta summary list | <ul><li>Legal representatives (power of attorneys, trustees, etc. who are [on-file](Footnote 1)</li></li></ul> | - |
+| cta full-details | List of all My <abbr title="Veteran Affairs Canada">VAC</abbr> Account services for individuals | - |
 
+### How to register for representatives overlay modal
 
-
-## Panel: Representatives
-
-<!-- Registration Help overlay individuals -->
-
-
-
-Still have questions? Read our registration help page and FAQs
-
-Register for My VAC Account
-Close
-
----
-
-<!--representative account well-->
- <!--call to action btn-->
- Represent a Client
- <!--link to registration help overlay for representatives-->
- [How to register to Represent a Client](overlay)
-
- <!-- representatives account well info -->
-View and update someone else's Veteran Affairs Canada services, for:
-*Legal representatives (power of attorneys, trustees, etc. who are on-file[1](footnote1)
-<!-- link to detailed page-->
-[List of all services for representatives]()
-
----
-
-<!-- Registration Help overlay individuals -->
-How to register to Represent a Client
-1. You must setup a representative account with us in person or by phone. Once your account is created you'll receive a CSDN ID.
-2. Choose either Sign-in Partner or GCKey
-   1. If you do not have a Sign-in Partner or GCKey you'll be prompted to create one.
-3. Enter your CSDN ID.
-4. We'll ask a few questions to set up your account.
-5. Start using My VAC Account!
-
-[Still have questions? Read our registration help page and FAQs]()
-
-Register for My VAC Account
-Close
+| | en | fr |
+|---|---|---|
+| header | How to register to Represent a Client | - |
+| steps | <ol><li>You must setup a representative account with us in person or by phone. Once your account is created you'll receive a CSDN ID.</li><li>Choose either Sign-in Partner or GCKey<ul><li>If you do not have a Sign-in Partner or GCKey you'll be prompted to create one.</li></ul></li><li>Enter your CSDN ID.</li><li>We'll ask a few questions to set up your account.</li><li>Start using My VAC Account!</li></ol> | - |
+| footer | Register for My <abbr title="Veteran Affairs Canada">VAC</abbr> Account | - |
 
 ---
 
 ## Topics
-* Help and FAQs
-* Forgot your password or user ID?
-* Your browser and troubleshooting tips
-* Important security information
+
+| | en | fr |
+|---|---|---|
+| h2 | Topics | - |
+| 1 | <ul><li>Help and FAQs</li><li>Forgot your password or user ID?</li><li>Your browser and troubleshooting tips</li><li>Important security information</li></ul> | - |
 
 ---
 
 ## Footnotes
-1. An 'on-file' client has an exisiting CSDN ID. You must setup a representative account with us in person or by phone. Once your account is created you'll receive a CSDN ID.
+
+| | en | fr |
+|---|---|---|
+| h2 | Footnotes | - |
+| 1 | An 'on-file' client has an exisiting CSDN ID. You must setup a representative account with us in person or by phone. Once your account is created you'll receive a CSDN ID. | - |
