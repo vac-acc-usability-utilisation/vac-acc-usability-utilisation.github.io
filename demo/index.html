@@ -243,8 +243,8 @@
 				<h2 class="wb-invisible">On this page</h2>
 				<nav>
 					<ul class="lst-none">
-						<li><a href="#use" class="wb-sl">Option 1 of 2: My <abbr title="Veteran Affairs Canada">VAC</abbr> Account</a></li>
-						<li><a href="#avoid" class="wb-sl">Option 2 of 2: Represent a client</a></li>
+						<li><a href="#mva-for-individuals" class="wb-sl">Option 1 of 2: My <abbr title="Veteran Affairs Canada">VAC</abbr> Account</a></li>
+						<li><a href="#mva-for-representatives" class="wb-sl">Option 2 of 2: Represent a client</a></li>
 	
 					</ul>
 				</nav>
@@ -257,14 +257,23 @@
             VAC   .\^/.   ACC    
             ACC  \=%¥%=/  VAC 
             VAC   ^`|`^   ACC 
-	
+
+			odd panels
+			/* border: 1px solid transparent; */
+			/* border-radius: 4px; */
+			/* -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%); */
+			/* box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+			
+			even panels
+			background-color: #f9f9f9
             -->
 
 		<section class="container"> 
-			<div class="panel"> 
-				<header class="panel-heading hidden">
-					<span class="text-muted h6">Option 1<span class="wb-invisible"> of 2</span>: </span>
-					<h3 id="mva-for-individuals" class="mrgn-tp-0 mrgn-bttm-sm">
+			<div class="panel" style="border: none; box-shadow: none;"> 
+				<header class="panel-heading hidden visible-print">
+					
+					<h3 id="mva-for-individuals" class="mrgn-tp-md">
+						<span class="h6">Option 1<span class="wb-invisible"> of 2</span> -</span>
 						My&nbsp;<abbr title="Veteran Affairs Canada">VAC</abbr>&nbsp;Account</h3>
 						
 				</header>
@@ -298,7 +307,7 @@
 					<header class="modal-header">
 						<h2 class="modal-title">How to register for <span>My<span class="invisible-xs">&nbsp;</span><abbr title="Veteran Affairs Canada">VAC</abbr><span class="invisible-xs">&nbsp;</span>Account</span></h2>
 					</header>
-					<div class="modal-body ">
+					<div class="modal-body">
 						<ol class="lst-spcd-2 mrgn-rght-sm">
 							<li>
 								Choose either Sign-in Partner or GCKey 
@@ -318,7 +327,7 @@
 					<div class="modal-footer">
 						<ul class="list-inline lst-spcd">
 							<li class="col-xs-8 col-sm-6 pull-left">
-								<a class="btn btn-success btn-block" style="color:#fff">My&nbsp;<abbr title="Veteran Affairs Canada">VAC</abbr>&nbsp;Account for individuals</a>
+								<button class="btn btn-success btn-block" onclick="window.location.href='sign-in-services/sign-in-partners.html';" type="button" style="color:#fff">My&nbsp;<abbr title="Veteran Affairs Canada">VAC</abbr>&nbsp;Account for individuals</button>
 							</li>
 							<li class="col-xs-4 col-sm-4 col-lg-3 pull-right">
 								<button class="btn btn-primary btn-block overlay-close popup-modal-dismiss pull-right" type="button">Close</button>
@@ -330,15 +339,16 @@
 				</div>
 			</div>
 
-			<!-- even panel have grey background -->
-			<div class="panel"> 
-				<header class="panel-heading hidden">
-					<span class="text-muted h6">Option 2<span class="wb-invisible"> of 2</span>: </span>
-					<h3 id="mva-for-representatives" class="mrgn-tp-0 mrgn-bttm-sm">
+			<!-- even panelS have grey background -->
+			<div class="panel" style="border: none; box-shadow: none; background-color: #f9f9f9;"> 
+				<header class="panel-heading hidden visible-print">
+					
+					<h3 id="mva-for-representatives" class="mrgn-tp-md">
+						<span class="h6">Option 2<span class="wb-invisible"> of 2</span> -</span>
 						Represent a client</h3>
 						
 				</header>
-				<div class="row panel-body">
+				<div class="row panel-body" >
 					<div class="col-md-6 col-md-offset-0 text-center mrgn-bttm-xl"><!-- Columns containing the call to action button and link to overlay modal -->
 							<div class="clearfix mrgn-tp-xl visible-md visible-lg"></div>
 							<div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 mrgn-bttm-sm">
@@ -355,7 +365,7 @@
 						<p class="h5">View and update someone else's Veteran&nbsp;Affairs&nbsp;Canada<span class="invisible-xs">&nbsp;</span>services.</p>
 						<p>Represent&nbsp;a&nbsp;Client is&nbsp;for:</p>
 						<ul>
-							<li>Legal representatives (power of attorneys who are <span id="fn1-rf"><a href="#fn1">on-file <sup class="ftn-link"><span class="wb-inv">Footnote </span>1</sup></span><span class="wb-inv"> defining on-file</span></span></a>)</li>
+							<li>Legal representatives (power of attorneys) <div class="clearfix visible-lg"></div> who are <span id="fn1-rf"><a href="#fn1">on-file <sup class="ftn-link"><span class="wb-inv">Footnote </span>1</sup></span><span class="wb-inv"> defining on-file</span></span></a></li>
 						</ul>
 						<!-- Link to detailed information page -->
 						<p class="small"><a href="#" title="">List of all services for representatives</a></p>
