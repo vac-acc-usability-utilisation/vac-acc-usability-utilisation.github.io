@@ -25,7 +25,7 @@
 |---|---|---|
 | header | How to register for My <abbr title="Veteran Affairs Canada">VAC</abbr> Account | - |
 | steps | <ol><li>Choose either Sign-in Partner or GCKey<ul><li>If you do not have a Sign-in Partner or GCKey you'll be prompted to create one.</li></ul></li><li>We'll ask a few questions to set up your account.</li><li>Start using My <abbr title="Veteran Affairs Canada">VAC</abbr> Account!</li></ol> | - |
-| link | Still have questions? Read our registration help page and FAQs | - |
+| link | Still have questions? <br> Read our registration help page and FAQs | - |
 | footer | Register for My <abbr title="Veteran Affairs Canada">VAC</abbr> Account | - |
 
 ---
@@ -46,7 +46,7 @@
 |---|---|---|
 | header | How to register to Represent a Client | - |
 | steps | <ol><li>You must setup a representative account with us in person or by phone. Once your account is created you'll receive a CSDN ID.</li><li>Choose either Sign-in Partner or GCKey<ul><li>If you do not have a Sign-in Partner or GCKey you'll be prompted to create one.</li></ul></li><li>Enter your CSDN ID.</li><li>We'll ask a few questions to set up your account.</li><li>Start using My <abbr title="Veteran Affairs Canada">VAC</abbr> Account!</li></ol> | - |
-| link | Still have questions? Read our registration help page and FAQs | - |
+| link | Still have questions? <br> Read our registration help page and FAQs | - |
 | footer | Register to Represent a Client | - |
 
 ---
