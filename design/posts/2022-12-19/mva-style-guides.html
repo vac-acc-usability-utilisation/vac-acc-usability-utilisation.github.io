@@ -175,10 +175,10 @@
 <section class="gc-stp-stp container">
     <div class="row">
         <ul class="toc lst-spcd col-md-12">
-            <li class="col-md-4 col-sm-6"><a class="list-group-item ">1. Style guides and templates</a></li>
-            <li class="col-md-4 col-sm-6"><a class="list-group-item " href="page2-en.html">2. WET-BOEW use cases</a></li>
+            <li class="col-md-4 col-sm-6"><a class="list-group-item active">1. Style guides and templates</a></li>
+            <li class="col-md-4 col-sm-6"><a class="list-group-item" href="page2-en.html">2. WET-BOEW use cases</a></li>
             <li class="col-md-4 col-sm-6 clr-lft-sm"><a class="list-group-item" href="url-mapping-use-case.html">3. GCWeb URLMapping use<span class="invisible-xs">&nbsp;</span>case</a></li>
-            <li class="col-md-4 col-sm-6 clr-lft-md clr-lft-lg"><a class="list-group-item  active" href="#">4. [Step / section page name]</a></li>
+            <li class="col-md-4 col-sm-6 clr-lft-md clr-lft-lg"><a class="list-group-item" href="#">4. [Step / section page name]</a></li>
             <li class="col-md-4 col-sm-6 clr-lft-sm"><a class="list-group-item" href="page5-en.html">5. [Step / section page name]</a></li>
             <li class="col-md-4 col-sm-6"><a class="list-group-item" href="page6-en.html">6. [Step / section page name]</a></li>
         </ul>
@@ -186,53 +186,80 @@
 </section>
   
 <section class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1 id="my-vac-account-style-guides-and-beta-direction">My VAC Account style guides and beta direction</h1>
+				<ul>
+					<li>To date, My VAC Account has been following the <a href="https://wet-boew.github.io/v4.0-ci/theme/content-signedon-es.html">WET base theme</a> for guidance on its look and feel and design patterns.</li>
+				<li>
+					Since then, GCWeb was created and combined WET&#39;s toolkit with <a href="https://www.canada.ca/en/government/about/design-system.html">Canada.ca&#39;s design guidance</a>.
+					<ul>
+						<li>GCWeb wasn&#39;t available to us before WET&#39;s update.</li>
+					</ul>
+				</li>
+				<li>In 2018-2019, <a href="https://www.veterans.gc.ca/">veterans.gc.ca</a> renewed its look and feel, stylizing GCWeb components with VAC colours and fonts.</li>
+				<li>Since then, My VAC Account has been trying to design things with all of these in mind.</li>
+				<li>The beta, for instance, is attempting to weave together WET&#39;s base theme, the veterans.gc.ca look and feel, and the Canada.ca style guide (and MVA legacy styles).</li>
+				</ul>
+				<p>Now that the Web Experience Toolkit is updated, we can include the <a href="https://wet-boew.github.io/GCWeb/index-en.html">GCWeb (Canada.ca) theme</a>.</p>
+				<h2 id="why-we-should-add-gcweb-theme-and-tools-to-wet-">Why we should add GCWeb theme and tools to WET:</h2>
+				<p>GCWeb (with Canada.ca&#39;s design system) provides user-tested templates, patterns, content guidelines and design principles.</p>
+				<ul>
+				<li>Updated theme and tools that are maintained regularly, tested for accessibility, and usability tested</li>
+				<li>Designs consistent with other Canadian institutions builds trust and better user experience</li>
+				<li>
+					New design patterns are released, and we maintain fewer custom patterns: <a href="https://design.canada.ca/crisis/alerts.html#examples">new alerts examples</a>, <a href="https://design.canada.ca/common-design-patterns/checkboxes-radio-buttons.html">larger checkboxes/radio buttons examples</a>, and <a href="https://wet-boew.github.io/GCWeb/components/wb-fieldflow/fieldflow-en.html">tools like interactive questions &#39;field-form,&#39; i.e. guided web forms</a>. We can leverage these design patterns without building or maintaining our own
+					<ul>
+						<li>There is also templates for server-side functionality available at <a href="https://cenw-wscoe.github.io/sgdc-cdts/docs/index-en.html">Centrally Deployed Template Solutions.</a> It templates functionality like signed-in or signed-out headers, reporting problems on a page, and search capability.</li>
+					</ul>
+				</li>
+				<li>Veteran Affairs Canada is listed as an institution within the scope of Canada.ca&#39;s design requirements.</li>
+				</ul>
+				<p><em>These organizations must apply Canada.ca design requirements for all their public-facing websites or digital services, regardless of the technology, domain name (both canada.ca and gc.ca) or publishing platform through which these are delivered.</em></p>
+				<ul>
+				<li><a href="https://www.canada.ca/en/government/about/design-system/institutions-list.html">https://www.canada.ca/en/government/about/design-system/institutions-list.html</a></li>
+				<li><a href="https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-information-architecture-specification/usage-canadaca-design.html">https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-information-architecture-specification/usage-canadaca-design.html</a></li>
+				</ul>
+				<p>Building interactions:</p>
+				<ol>
+				<li>Canada.ca&#39;s design system guides interaction patterns. (<a href="https://design.canada.ca/crisis/alerts.html">Guidance on alerts</a>)</li>
+				<li>GCWeb applies those guidelines (<a href="https://design.canada.ca/common-design-patterns/contextual-alerts.html">GCWeb alert style</a>) to Web Experience Toolkit</li>
+				<li>
+					<p>WET provides the base functionality (<a href="https://wet-boew.github.io/wet-boew-styleguide/design/alerts-en.html">WET alert functionality/style</a>)</p>
+					<ol>
+						<li>We build and maintain fewer scripts for interactions
+							Writing web content:
+						</li>
+					</ol>
+				</li>
+				<li>
+					<p>Canada.ca&#39;s style guide for guidance on writing for the web</p>
+				</li>
+				<li>veterans.gc.ca style guide for VAC&#39;s audience</li>
+				</ol>
+				<p>What about the 2018 VAC look and feel?</p>
+				<ul>
+				<li>We could propose a theme for GCWeb, like the <a href="https://wet-boew.github.io/GCWeb/templates/thematic/pink-day-en.html">Pink Day theme</a>. We could create other designs for events or let users decide.</li>
+				<li>Or something like <a href="https://parks.canada.ca/index">how Parks Canada integrates their brand identity</a></li>
+				</ul>
+				<h2 id="examples-">Examples:</h2>
+				<ol>
+				<li>How GCWeb/Canada.ca Design System would apply to <a href="https://vac-acc-usability-utilisation.github.io/demo/index.html">My VAC Account&#39;s front-door (prototype)</a></li>
+				<li><a href="https://vac-acc-usability-utilisation.github.io/design/posts/2022-12-19/url-mapping-use-case.html">Use case for GCWeb&#39;s URLMapping tool (in progress)</a></li>
+				</ol>
+				<h2 id="screenshots-note-draft-content-">Screenshots (note: draft content)</h2>
+				<details>
+				<summary>
+					MVA Front door - GCWeb Theme
+				</summary>
+				<img src="/uploads/b7e4340dfe73f35da921b5c6fc9b0f0a/screencapture-vac-acc-usability-utilisation-github-io-demo-index-html-2022-12-23-11_44_31.png" alt="screencapture-vac-acc-usability-utilisation-github-io-demo-index-html-2022-12-23-11_44_31">
+				<img src="/uploads/15af4ca83ae7dfb5c4f8f5cb5b4c7f4a/screencapture-vac-acc-usability-utilisation-github-io-demo-sign-in-services-sign-in-partners-html-2022-12-23-11_44_45.png" alt="screencapture-vac-acc-usability-utilisation-github-io-demo-sign-in-services-sign-in-partners-html-2022-12-23-11_44_45">
+				</details>
+		</div>
+	</div>
     <div class="row">
         <div class="col-sm-12">
-            
-            <!--
-
-            <ul>                
-                <li><a href="#">Designing for components</span></a></li>
-            </ul>
-
-            <h2>The problem</h2>
-            <p>Our sign-in and registration flow is complex.</p>
-            <p>Due to the nature of third-party sign-ins when a user clicks 'sign-in' or 'register' they're taken to the same web page to choose their third-party authentication provider. it's a challenge to deliver content that makes sense</p>
-
-            <h2>How it affects users</h2>
-            <p>Users lose trust and confidence.</p>
-            <p>It's confusing to arrive on a page and read something like 'sign-in or register' when you just indicated your intent by pressing either button.</p>
-
-            <h2>A solution</h2>
-            <p>Tweak the content on the page to suit people's intent.</p>
-            
-            <h3 id="url-mapping-sign-in-use-case">GCWeb's URLMapping</h2>
-            <blockquote>
-                <p>[Use when] the page needs to be modified slightly to improve the content<span class="invisible-xs">&nbsp;</span>usability.
-                </p>
-            </blockquote>
-            <ul>
-                <li><a href="https://wet-boew.github.io/GCWeb/components/wb-urlmapping/urlmapping-doc-en.html">URLMapping Documentation (GCWeb)</a> </li>
-                <li><a href="https://wet-boew.github.io/GCWeb/components/wb-urlmapping/ajax-en.html">URLMapping example (GCWeb)</a> </li>
-            </ul>
-
-            <h2>How it works</h2>
-            <p>Register and Sign-in buttons link to the same page but add a query string to pass what button was clicked to the sign-in and registration services page. </p>
-            <p>URLMapping allows us to read and act on the URL in the HTML mark-up with no custom scripting and while maintaing content in one place.</p>
-            <h2>Examples</h2>
-            <ul>
-                <li><a href="#">Sign-in and registration services page <span class="small">(working example with states overlay)</span></a></li>
-            </ul>
-            <h3>Register state (<code>?register</code>) <small>- user clicked a register call to action</small> </h3>
-            <p>Expected output: Only 'register' appears if (<code>?sign-in</code>) is in the link.</p>
-            <div class="well">-->
-                
-                <!--Static example of Call to action well-->
-
-            <h2>An example of design components:</h2>
-                <div class="brdr-tp brdr-bttm" data-ajax-replace="../../../design/library/organisms/call-to-action-well.html">
-                    <a href="../../../design/library/organisms/call-to-action-well.html">../../../design/library/organisms/call-to-action-well.html</a>
-                </div>  
+             
                
             <h2>Notes</h2>
             <blockquote>
