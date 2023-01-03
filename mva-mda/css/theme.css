@@ -3,7 +3,6 @@ ul.app-list-main>li>a {
     margin-top: 10px;
 }
 
-
 #mb-pnl .modal-header:before {
     border: none;
 }
@@ -11,8 +10,6 @@ ul.app-list-main>li>a {
 .app-bar-mb .btn {
     border-radius: 0;
 }
-
-
 
 nav#mb-menu {
     background: #E1E4E7;
@@ -54,11 +51,7 @@ li#wb-glb-mn {
     vertical-align: middle;
 }
 
-
-
-
-
-/* custom mva-cards with dismissable (for session)*/
+/* custom mva-cards with restyled wb-dismissable (dismisses for session)*/
 
 .mva-cards .wb-dismissable {
     padding: 0;
@@ -103,11 +96,6 @@ li#wb-glb-mn {
     }
 }
 
-
-
-
-
-
 .wb-dismissable-container .mfp-close {
     color: #555;
     display: block;
@@ -122,8 +110,6 @@ li#wb-glb-mn {
 
 }
 
-
-
 .mva-cards .panel-footer {
     width: 100%;
     text-align: center;
@@ -132,7 +118,6 @@ li#wb-glb-mn {
     bottom: 0;
     background-color: #fff;
 }
-
 
 progress,
 progress[value]::-webkit-progress-bar {
