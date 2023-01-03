@@ -75,12 +75,13 @@ li#wb-glb-mn {
 }
 
 .mva-cards .wb-dismissable-container {
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0);
     display: inline-block;
 
     position: relative;
     min-height: inherit;
     margin: 0;
+    padding: 0 10px 10px 10px;
 }
 
 
@@ -88,32 +89,28 @@ li#wb-glb-mn {
 @media (min-width: 576px) {
     .mva-cards .wb-dismissable-container {
         width: 100%;
+        
     }
 }
 
 @media (min-width: 768px) {
     .mva-cards .wb-dismissable-container {
-        width: 49%;
+        
     }
 }
 
 @media (min-width: 1200px) {
     .mva-cards .wb-dismissable-container {
-        width: 33%;
+        
     }
 }
 
 
-
-
-
-
-.wb-dismissable-container .mfp-close {
+.mva-cards .wb-dismissable-container .mfp-close {
     color: #555;
     display: block;
     position: absolute;
-    right: 6px;
-    top: 8px;
+    right: 8px;
     z-index: 1;
 }
 
@@ -121,6 +118,7 @@ li#wb-glb-mn {
     position: relative;
 
 }
+
 
 
 
@@ -141,5 +139,28 @@ progress[value]::-webkit-progress-bar {
     background-color: whitesmoke;
     border-radius: 2px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+
+}
+
+
+
+.panel.svg-leaf { 
+    /* color from footer 
+    background-color: #26374a;*/
+    
+    /* color from header */
+    background-color: #38414d;
+    
+    /* color from 2018 redesign 
+    background-color: #2e2e40;*/
+
+    background-image: url(https://www.veterans.gc.ca/css/assets/svg-leaf.svg);
+    background-repeat: no-repeat;
+    background-size: 260%;
+    background-position: 200px -225px;
+}
+
+.panel.svg-leaf  .panel-body {
+    padding: 10px 15px 0;
 
 }
