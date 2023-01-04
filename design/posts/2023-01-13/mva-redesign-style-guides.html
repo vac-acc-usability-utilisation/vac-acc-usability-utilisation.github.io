@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+
+<title>Redesigning MVA with GCWeb</title>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta name="description" content=" " />
+<meta name="author" content=" "/>
+<meta name="dcterms.title" content="My VAC Account Sign-In Services"/>
+<meta name="dcterms.description" content=" "/>
+<meta name="dcterms.creator" content=" "/>
+<meta name="dcterms.language" content="eng"/>
+<meta name="dcterms.subject" content=""/>
+<meta name="dcterms.issued" content=""/>
+<meta name="dcterms.modified" content="2022-12-20"/>
+
+<link href="../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
+
+<link rel="stylesheet" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/css/theme.min.css" />
+
+<noscript><link rel="stylesheet" href="wet-boew/css/noscript.min.css" /></noscript>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+
+
+</head>
+<body class="cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage">
+	<nav>
+	<ul id="wb-tphp">
+		<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+		<li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to About this site</a></li></ul>
+</nav>
+
+<header>
+	<div id="wb-bnr" class="container">
+		<div class="row">
+			
+			<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+            <h2 class="wb-inv">Language selection</h2>
+            <ul class="list-inline mrgn-bttm-0">
+                <li>
+                    <a lang="fr" hreflang="fr" href="content-fr.html">
+                        <span class="hidden-xs">Français</span>
+                        <abbr title="Français" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+                    </a>
+                </li>
+            </ul>
+            </section>
+
+			<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+	            <a href="https://wet-boew.github.io/GCWeb/" property="url">
+		            <img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo" /><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
+	            </a>
+                <meta property="name" content="Government of Canada">
+                <meta property="areaServed" typeof="Country" content="Canada" />
+                <link property="logo" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" />
+            </div>
+
+			
+				
+            <section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
+                <h2>Search</h2>
+                <form action="#" method="post" name="cse-search-box" role="search">
+                    <div class="form-group wb-srch-qry">
+                        <label for="wb-srch-q" class="wb-inv">Search Canada.ca</label>
+                        <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search Canada.ca" />
+                        <datalist id="wb-srch-q-ac"></datalist>
+                    </div>
+                    <div class="form-group submit">
+                        <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
+                            <span class="glyphicon-search glyphicon"></span>
+                            <span class="wb-inv">Search</span>
+                        </button>
+                    </div>
+                </form>
+            </section>
+		</div>
+	</div>
+	<hr>
+
+	<div class="container">
+		<div class="row"><div class="col-md-8">
+					<nav class="gcweb-menu" typeof="SiteNavigationElement">
+	<h2 class="wb-inv">Menu</h2>
+	<button type="button" aria-haspopup="true" aria-expanded="false"><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
+	<ul role="menu" aria-orientation="vertical" data-ajax-replace="https://www.canada.ca/content/dam/canada/sitemenu/sitemenu-v2-en.html"><li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/jobs.html">Jobs and the workplace</a></li>
+		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/immigration-citizenship.html">Immigration and citizenship</a></li>
+		<li role="presentation"><a role="menuitem" href="https://travel.gc.ca/">Travel and tourism</a></li>
+		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/business.html">Business and industry</a></li>
+		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/benefits.html">Benefits</a></li>
+		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/health.html">Health</a></li>
+		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/taxes.html">Taxes</a></li>
+		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/environment.html">Environment and natural resources</a></li>
+		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/defence.html">National security and defence</a></li>
+		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
+		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
+		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
+		<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
+		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
+		<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li></ul>
+</nav>
+
+				</div>
+				<div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-md-4 hidden">
+					<section id="wb-so">
+						<h2 class="wb-inv">Sign-on information</h2>
+						<button class="btn btn-default" type="button">My account</button>
+						<button class="btn btn-primary" type="button">Sign out</button>
+						<p class="small mrgn-tp-sm">Signed in as 
+							<span class="nowrap  honour">
+							<i class="fa fa-spinner spin" aria-hidden="true"></i>
+						</span></p>
+					</section>
+				</div></div>
+	</div>
+	<nav id="wb-bc" property="breadcrumb">
+	<h2>You are here:</h2>
+	<div class="container">
+		<ol class="breadcrumb" typeof="BreadcrumbList">
+            <!--
+			<li property="itemListElement" typeof="ListItem">
+				<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
+					<span property="name">Canada.ca</span>
+				</a>
+				<meta property="position" content="1">
+			</li>
+			<li property="itemListElement" typeof="ListItem">
+				<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
+					<span property="name">Veteran Affairs Canada</span>
+				</a>
+				<meta property="position" content="2">
+			</li>-->
+			<li property="itemListElement" typeof="ListItem">
+				<a property="item" typeof="WebPage" href="#">
+                    My<span class="invisible-xs">&nbsp;</span><abbr title="Veteran Affairs Canada">VAC</abbr><span class="invisible-xs">&nbsp;</span>Account 
+
+				</a>
+				<meta property="position" content="3">
+			</li>
+            <li property="itemListElement" typeof="ListItem">
+				<a property="item" typeof="WebPage" href="#">
+                    vac-acc-usability-utilisation.github.io
+
+				</a>
+				<meta property="position" content="3">
+			</li>
+            <li property="itemListElement" typeof="ListItem">
+				<a property="item" typeof="WebPage" href="#">
+                    Usability posts
+
+				</a>
+				<meta property="position" content="3">
+			</li>
+		</ol>
+	</div>
+</nav>
+
+
+</header>
+
+<main class="cnt-wdth-lmtd" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
+
+<article class="container">
+	<h1 id="wb-cont" property="name">Redesigning MVA with GCWeb</h1>
+	<p class="lead">Sorting out which style guides for MVA to follow. 
+	</p>
+	<h2>On this page</h2>
+	<ul>
+		<li><a href="#current-mva-styles">Current MVA style status</a></li>
+	
+		<li><a href="wet-gcweb">WET + GCWeb</a></li>
+		
+		<li><a href="conclusion">Conclusion</a></li>
+	
+		<li><a href="next-steps">Next steps</a></li>
+		
+	</ul>
+
+	<h2 id="current-mva-styles">Current MVA style status</h2>
+	<h3>MVA Legacy style</h3>
+	<p>Historically, My VAC Account followed <a href="https://wet-boew.github.io/v4.0-ci/theme/content-signedon-en.html">Web Experience Toolkit (WET) base theme</a> for guidance on its look and feel. </p>
+	<p>The WET base theme is the basis for the MVA Legacy styles:</p>
+	<img src="img/mva-legacy-sample.png" class="full-width" alt="Screenshot of MVA's Benefits and services page showing the legacy visual style">
+	<hr>
+	<h3>MVA Beta style</h3>
+	<p>In 2019, veterans.gc.ca released a content style guide and a renewed visual theme. As its base, this redesign used the <a href="https://www.canada.ca/en/government/about/design-system.html">Canada.ca design system</a> for guidance and leveraged <a href="https://wet-boew.github.io/GCWeb/index-en.html">GCWeb</a>.</p>
+	<p>In 2022, we began the redesign of My VAC Account. The 2019 <a href="https://www.veterans.gc.ca/eng">veterans.gc.ca</a> visual theme influenced the design. However, we do not have the GCWeb theme for WET, leading to the following: </p>
+	<img src="img/mva-beta-sample.png" class="full-width" alt="Screenshot of MVA's  Benefits and services page showing the beta visual style">
+
+	<h2 id="wet-gcweb">WET + GCWeb</h2>
+	<p>In 2022, we also upgraded to the latest version of WET, meaning the GCWeb theme is an option for My VAC Account.</p>
+	<h3>What is WET?</h3>
+	<p>The Web Experience Toolkit is a collection of helpful web tools for enhancing website interactivity. </p>
+	<p>You can turn off WET by viewing the page in basic HTML. <a href="?wbdisable=true">Just add <code>?wbdisable=true</code> to any URL.</a></p>
+	<p>WET allows us to use pre-built templates and tools.</p>
+	<p>For instance, one of WET's tools is Datatables which enables interactive HTML tables:</p>
+	<div class="well">
+		<div class="row">
+			<div class="col-md-3">
+				<h3 class="wb-inv">Filtering options</h3>
+				<details open>
+					<summary>
+						<h4 class="h5">Filter options</h4>
+					</summary>
+					<p class="mrgn-tp-md">Use filters to below options to change the focus ...</p>
+					<form class="wb-tables-filter" data-bind-to="dataset-filter">
+						<div class="form-group">
+							<fieldset class="legend-brdr-bttm">
+								<legend><span class="field-name">For</span></legend>
+								<ul class="list-unstyled">
+									<li class="checkbox gc-chckbxrdio">
+										<input type="checkbox" id="dt_audience1" value="">
+										<label for="dt_audience1">Everyone</label>
+									</li>
+									<li class="checkbox gc-chckbxrdio">
+										<input type="checkbox" id="dt_audience2" value="">
+										<label for="dt_audience2">Government</label>
+									</li>
+								</ul>
+							</fieldset>
+						</div>
+					</form>
+				</details>
+			</div>
+			<div class="col-md-9">
+				<table class="wb-tables table table-striped table-hover" id="dataset-filter" aria-live="polite">
+					<thead>
+						<tr>
+							<th>Title</th>
+							<th>Publication date</th>
+							<th>Department</th>
+							<th>News Type</th>
+							<th>Summary</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Backgrounder: Seventeen Infrastructure Projects in ...</td>
+							<td>2016-07-26 14:07:00</td>
+							<td>Infrastructure Canada</td>
+							<td>Backgrounders</td>
+							<td>The governments of Canada and ...</td>
+						</tr>
+						<tr>
+							<td>Seventeen Infrastructure Projects in ...</td>
+							<td>2016-07-26 14:07:00</td>
+							<td>Infrastructure Canada</td>
+							<td>News Releases</td>
+							<td>Providing community residents ...</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+			
+		<hr>
+	<h3>What is GCWeb?</h3>
+	<p>GCweb updates the WET base theme with patterns from the Canada.ca design system</p>
+	<p>For instance, GCWeb updates the alerts styles:</p>
+		<div class="well">
+			<section class="alert alert-info bg-white">
+				<header class="alert-heading h3">Redesigned alerts</header>
+				<p>Alerts have an updated look and feel</p>
+			</section>
+		</div>
+	<p>Another example are updated checkbox styles:</p>
+	<div class="well">
+		<fieldset class="gc-chckbxrdio">
+			<legend>Choose your condiments:</legend>
+			<ul class="list-unstyled lst-spcd-2">
+				<li class="checkbox">
+					<input type="checkbox" id="cond1">
+					<label for="cond1">Ketchup</label>
+				</li>
+				<li class="checkbox">
+					<input type="checkbox" id="cond2">
+					<label for="cond2">Relish</label>
+				</li>
+				<li class="checkbox">
+					<input type="checkbox" id="cond3">
+					<label for="cond3">Mustard</label>
+				</li>
+			</ul>
+		</fieldset>
+	</div>
+	<p><a href="https://wet-boew.github.io/gcweb-compiled-demos/index.html#wet-boew">WET features styled with GCWeb theme</a></p>
+	<p>GCWeb also includes some additional tools.</p>
+	<ul>
+		<li><a href="https://shawnthompson.github.io/gcweb-4.0.26/demos/doaction/tblfilter-en.html">Do action</a>: Execute action, like filtering a table</li>
+		<li><a href="https://openplus.github.io/GCWeb/components/wb-urlmapping/ajax-en.html">URL mapping</a>: Slightly tweak page content based on URL query</li>
+		<li><a href="https://openplus.github.io/GCWeb/components/wb-fieldflow/fieldflow-en.html">Field flow</a>: Build interactive forms</li>
+	</ul>
+	<p>The benefit of these tools being in the framework is that we build and maintain fewer custom scripts. We also inherit components and page templates as more are developed, tested, and released.</p>
+	<p>As well, according to <a href="https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-information-architecture-specification/usage-canadaca-design.html">Who has to use the Canada.ca design system</a> from the <a href="https://www.canada.ca/en/treasury-board-secretariat.html">Treasury Board of Canada Secretariat</a>: </p>
+	<blockquote><p>"[Veterans Affairs Canada] must apply Canada.ca design requirements for all their public-facing [...] digital services, regardless of the technology, ...or publishing platform..."</p></blockquote>
+	<p><a href="https://wet-boew.github.io/GCWeb/docs/implementing-en.html">GCWeb Quick implementation guide</a></p>
+	<h3>Related WET Projects: Centrally Deployed Template Solution (CDTS)</h3>
+	<p><a href="https://cenw-wscoe.github.io/sgdc-cdts/docs/index-en.html#What_is_the_Centrally_Deployed_Templates_Solution_.28CDTS.29">What is the Centrally Deployed Templates Solution (CDTS)?</a></p>
+	<blockquote><p>"The purpose of the CDTS is [...] to deliver the presentation layer of the Canada.ca theme or Intranet.canada.ca theme [...] to web assets. It decouples the presentation layer from the business logic of a [..] web application and allows rapid updates across multiple networks."</p></blockquote>
+	<p>CDTS can help us automate updating the assets for GCWeb and WET. It can template a header, menu, and footer; there is also documentation for search and page feedback. 	</p>
+	<p>It also provides some templates for applications (not just content sites) in the GCWeb theme.</p>
+	<ul>
+		<li><a href="https://cdts.service.canada.ca/app/cls/WET/gcweb/v4_0_46/cdts/samples/">CDTS Samples</a></li>
+		<li><a href="https://cenw-wscoe.github.io/sgdc-cdts/docs/index-en.html">CDTS Home page</a></li>
+	</ul>
+	<h2 id="conclusion">Conclusion</h2>
+	<p>As we move forward with the MVA beta and redesign, we should use the GCWeb (Canada.ca) theme. It's usability tested, well-maintained and growing. As well it's compliant with the Government of Canada's digital standards and makes it easier for My VAC Account to <a href="https://design.canada.ca/continuous-improvement.html">improve continuously</a>. </p>
+	<p>UX and BAs deliver components to developers with defined content and states. They can be tested for accessibility and responsiveness development. Those components are documented in a My VAC Account design library.</p>
+	
+	<details>
+		<summary>
+			<p>Quick visualization of MVA's Benefits and services page with GCWeb style. </p>
+		</summary>
+
+		<p><strong>Note: the header and footer have not been added.</strong></p>
+		<img src="img/mva-gcweb-sample.png" class="full-width" alt="Screenshot of MVA's  Benefits and services page showing the GCWeb visual style">
+
+
+	</details>
+	
+	<h3>What about the 2019 veterans.gc.ca visual style?</h3>
+	<p>There is still a potential for My VAC Account to include this visual style while using GCWeb. GCWeb supports something they call thematics, like this Canada day example. This could help us distinguish our custom header/footer from the Canada.ca header/footer when clients are in the MVA application.</p>
+	<p>The <a href="https://intranet.vac-acc.gc.ca/eng/operations/communications-toolbox/vac-style/vac-style-guide">Veterans Affairs Canada content style guide</a> provides context on creating content for our audience.</p>
+	<h2 id="next-steps">Next steps</h2>
+	<ul>
+		<li><a href="https://design.canada.ca/continuous-improvement/choosing.html">Apply "Choosing what to improve" guide</a></li>
+		<li>Applying GCWeb to My VAC Account's front door</li>
+		<li>Applying GCWeb to My VAC Account header redesign</li>
+	</ul>
+	<h3>Additional ideas</h3>
+	<ul>
+		<li>What if we leveraged GCWeb for MVA documentation?</li>
+		<ul>
+			<li>What if we used <a href="https://wet-boew.github.io/wet-boew/demos/charts/charts-en.html">charts/graph tools</a> for things like sprint reporting?</li>
+		</ul>
+	</ul>
+</article>
+
+
+<footer class="pagedetails container">
+	
+	<h2 class="wb-inv">Page details</h2><div class="row"><div class="col-sm-8 col-md-9 col-lg-9">
+		<div class="col-xs-12">
+			<dl id="wb-dtmd">
+				<dt>Date modified:</dt>
+				<dd><time property="dateModified">2023-01-04</time></dd>
+			</dl>
+		</div>
+</footer>
+
+</main>
+
+<footer id="wb-info">
+	
+	<div class="landscape">
+		<nav class="container wb-navcurr">
+			<h2 class="wb-inv">About government</h2>
+			<ul class="list-unstyled colcount-xs-2 colcount-md-3">
+				<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
+				<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+				<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
+				<li><a href="https://www.canada.ca/en/news.html">News</a></li>
+				<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
+				<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+				<li><a href="https://pm.gc.ca/eng">Prime Minister</a></li>
+				<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+				<li><a href="https://open.canada.ca/en/">Open government</a></li>
+			</ul>
+		</nav>
+	</div>
+	
+	<div class="brand">
+		<div class="container">
+			<div class="row ">
+				
+				<nav class="col-md-9 col-lg-10 ftr-urlt-lnk">
+					<h2 class="wb-inv">About this site</h2>
+					<ul>
+						<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+						<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+						<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
+						<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+						<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+					</ul>
+				</nav>
+				
+				<div class="col-xs-6 visible-sm visible-xs tofpg">
+					<a href="#wb-cont">Top of page <span class="glyphicon glyphicon-chevron-up"></span></a>
+				</div><div class="col-xs-6 col-md-3 col-lg-2 text-right"><img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
+<script src="../../../wet-boew/js/wet-boew.min.js"></script>
+<script src="../../../GCWeb/js/theme.min.js"></script>
+
+</body>
+</html>
