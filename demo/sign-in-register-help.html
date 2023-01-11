@@ -136,6 +136,12 @@
                      </a>
                      <meta property="position" content="3">
                   </li>
+                  <li property="itemListElement" typeof="ListItem">
+                     <a property="item" typeof="WebPage" href="#">
+                     <span property="name">Sign-in or register</span>
+                     </a>
+                     <meta property="position" content="4">
+                  </li>
                </ol>
             </div>
          </nav>
@@ -153,365 +159,49 @@
 			<div class="row">
             <div class="col-xs-12">
                <h1 id="wb-cont" property="name">
-                  <span id="sign-in-span-h1" class="hidden" 
-                     data-wb-urlmapping='
-                     {
-                     "sign-in": { 
-                     "action": "removeClass", 
-                     "source": "#sign-in-span-h1", 
-                     "class": "hidden" } 
-                     }
-                     '>
-                     <!-- EN/FR content for "Sign in to"-->
-                     Sign in to </span><!--" hide and if either query is true"-->
-                    
-                  <!-- If html?sign-in Hide the register for span-->
-                  <span id="register-span-h1" class="hidden"
-                     data-wb-urlmapping='{
-                     "register": { 
-                     "action": "removeClass", 
-                     "source": "#register-span-h1", 
-                     "class": "hidden" }}'>
-                     <!-- EN/FR content for "Register for"-->
-                     Register for </span>
-                     
-                  <span id="default-span-h1" data-wb-urlmapping='{
-                     "sign-in": { 
-                     "action": "addClass", 
-                     "source": "#default-span-h1", 
-                     "class": "hidden" },
-                     "register": { 
-                        "action": "addClass", 
-                        "source": "#default-span-h1", 
-                        "class": "hidden" }
-                     }'>
-                     <!--Default-->
-                     Sign in to, or register for,
-                  </span>
-                  My <abbr title="Veterans Affairs Canada">VAC</abbr>&nbsp;Account
+                  Sign in and register Help and FAQ
                </h1>
-               <p class="lead">
-                  Choose from one of two ways to access My <abbr>VAC</abbr>&nbsp;Account:
-               </p>
+               <!--
+               <h2>Sign in to My VAC Account</h2>
+               <h2>Register for My VAC Account</h2>
+               <h2>Sign-in partners</h2>
+               <h2>GCKey</h2>-->
+               <ul>
+                  <li><a href="">How to register for My VAC Account</a></li>
+                  <li><a href="">Sign-In Partners Help and FAQs</a></li>
+                  <li><a href="">GCKey Help and FAQs</a></li>
+                  <li><a href="">Your browser and troubleshooting tips</a></li>
+               </ul>
                
             </div>
-            <div class="col-md-12">
-              
-               <section>
-                  <h2 class="wb-invisible">On this page</h2>
-                  <nav>
-                     <ul class="lst-none">
-                        <li><a href="#opt-1-sign-in-partner" class="wb-sl">Option 1 of 2: Sign-in partner</a></li>
-                        <li><a href="#opt-2-gckey" class="wb-sl">Option 2 of 2: GCKey</a></li>
-         
-                     </ul>
-                  </nav>
-               </section>
-               
-            
-   
-               <!-- Call to action panel (My VAC Account)
-   
-                  VAC   .\^/.   ACC    
-                  ACC  \=%¥%=/  VAC 
-                  VAC   ^`|`^   ACC 
-
-                  -->
-   
-            
-               <div class="row wb-eqht-grd"> 
-               
-                  <div class="col-md-6">
-                     <div class="panel panel-default hght-inhrt"> 
-                  <header class="panel-heading">
-                     
-                     <h3 id="mva-for-individuals" class="panel-title">
-                        <span>Option 1<span class="wb-inv"> of 2</span> -</span>
-                        Sign-in partner</h3>
-                        
-                  </header>
-                  <div class="row panel-body hght-inhrt">
-                     
-         
-                     <div class="col-sm-12 "><!-- Columns information about the call to action button and unordered list -->
-                        <p><span id="sign-in-partner-desc" class="hidden" 
-                           data-wb-urlmapping='
-                           {
-                           "sign-in": { 
-                           "action": "removeClass", 
-                           "source": "#sign-in-partner-desc", 
-                           "class": "hidden" } 
-                           }
-                           '>
-                           <!-- EN/FR content for "Sign in to"-->
-                           Sign in to </span><!--" hide and if either query is true"-->
-                          
-                        <!-- If html?sign-in Hide the register for span-->
-                        <span id="register-partner-desc" class="hidden"
-                           data-wb-urlmapping='{
-                           "register": { 
-                           "action": "removeClass", 
-                           "source": "#register-partner-desc", 
-                           "class": "hidden" }}'>
-                           <!-- EN/FR content for "Register for"-->
-                           Register for </span>
-                           
-                        <span id="default-partner-desc" data-wb-urlmapping='{
-                           "sign-in": { 
-                           "action": "addClass", 
-                           "source": "#default-partner-desc", 
-                           "class": "hidden" },
-                           "register": { 
-                              "action": "addClass", 
-                              "source": "#default-partner-desc", 
-                              "class": "hidden" }
-                           }'>
-                           <!--Default-->
-                           Sign in to, or register for,
-                        </span>
-                        My <abbr>VAC</abbr> Account with the same sign-in information you use for other online services (for example, online&nbsp;banking).</p>
-                  
-                     </div>
-                     <div class="text-center mrgn-bttm-lg"><!-- Columns containing the call to action button and link to overlay modal -->
-                        <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 mrgn-bttm-sm">
-                           <a href="redirect_place_holder.html" class="btn btn-call-to-action full-width">
-                              Sign-in partner
-                           </a>
-                        </div>
-                        <div class="col-sm-12">
-                           <details>
-                              <summary>View list of Sign-in Partners</summary>
-         
-                              <section class="row" id="logos">
-                              
-                                    <div class="col-xs-12">
-                                    
-                                    <ul class="list-unstyled list-col-xs-2 list-col-sm-3 list-col-md-2 list-col-lg-3">
-                                       
-                                       <li>
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/affinity.png" alt="Affinity Credit Union">
-                                          </div>
-                                       </li>
-                                       <li>
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/atb.png" alt="ATB Financial">
-                                          </div>
-                                       </li>                    
-                                       <li>
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/bmo.png" alt="BMO Bank of Montreal">
-                                          </div>
-                                       </li>
-                                       <li>
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/cais.png" alt="Caisse Alliance">
-                                          </div>
-                                       </li>
-                                       
-                                       <li>
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                             <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/cibc.png" alt="CIBC - Banking that fits your life.">
-                                          </div>
-                                       </li>
-                                    
-                                       <li >
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/coast.png" alt="Coast Capital">
-                                          </div>
-                                       </li>
-                                       <li >
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/conexus.png" alt="Conexus">
-                                          </div>
-                                          </li>
-                                       <li  >
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/desj.png" alt="Desjardins">
-                                          </div>
-                                       </li>
-                                       <li >
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/libro.png" alt="Desjardins">
-                                          </div>
-                                       </li>           
-                                       <li>
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/nbc.png" alt="National Bank">
-                                          </div>
-                                       </li>
-                                       <li>
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/rbc.png" alt="RBC Royal Bank">
-                                          </div>
-                                       </li>
-         
-                                       <li>
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/bns.png" alt="Scotiabank">
-                                          </div>
-                                       </li>
-         
-                                       <li>
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/servus.png" alt="Servus Credit Union">
-                                          </div>
-                                       </li>
-         
-                                       <li>
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/simplii.png" alt="Simplii Financial">
-                                          </div>
-                                       </li>
-         
-                                       <li>
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/tang.png" alt="Tangerine - Forward Banking">
-                                          </div>
-                                       </li>
-         
-                                       <li>
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/td.png" alt="TD Canada Trust">
-                                          </div>  
-                                       </li>
-                                       <li >
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/uni.png" alt="UNI Financial Cooperation">
-                                          </div>
-                                       </li>
-         
-                                       <li>
-                                          <div class="brdr-tp brdr-rght brdr-bttm brdr-lft" >
-                                          <img class="img-responsive center-block" src="../mva-mda/assets/sign-in-partner-logos/en/vancity.png" alt="Vancity">
-                                          </div>
-                                       </li> 
-                                    
-                                    </section>
-                                 </div>
-                              </div>
-                           </details>
-                           </a>
-                  </div>
-               </div>
-               
-         
-            
-                  </div>
-                  <div class="col-md-6">
-                     <!-- even panelS have grey background -->
-               <div class="panel panel-default hght-inhrt">	
-                  <header class="panel-heading">
-                     
-                     <h3 id="mva-for-individuals" class="panel-title">
-                        <span>Option 2<span class="wb-inv"> of 2</span> -</span>
-                        GCKey</h3>
-                        
-                  </header>	
-                  <div class="row panel-body hght-inhrt" >
-         
-                     <div class="col-sm-12 ">
-                        <p><span id="sign-in-gckey-desc" class="hidden" 
-                           data-wb-urlmapping='
-                           {
-                           "sign-in": { 
-                           "action": "removeClass", 
-                           "source": "#sign-in-gckey-desc", 
-                           "class": "hidden" } 
-                           }
-                           '>
-                           <!-- EN/FR content for "Sign in to"-->
-                           Sign in to </span><!--" hide and if either query is true"-->
-                          
-                        <!-- If html?sign-in Hide the register for span-->
-                        <span id="register-gckey-desc" class="hidden"
-                           data-wb-urlmapping='{
-                           "register": { 
-                           "action": "removeClass", 
-                           "source": "#register-gckey-desc", 
-                           "class": "hidden" }}'>
-                           <!-- EN/FR content for "Register for"-->
-                           Register for </span>
-                           
-                        <span id="default-gckey-desc" data-wb-urlmapping='{
-                           "sign-in": { 
-                           "action": "addClass", 
-                           "source": "#default-gckey-desc", 
-                           "class": "hidden" },
-                           "register": { 
-                              "action": "addClass", 
-                              "source": "#default-gckey-desc", 
-                              "class": "hidden" }
-                           }'>
-                           <!--Default-->
-                           Sign in to, or register for,
-                        </span>
-                        My <abbr>VAC</abbr> Account with your GCKey user&nbsp;ID and password, or register for a&nbsp;GCKey.</p>	
-                     </div>
-                     <div class="text-center mrgn-bttm-xl"><!-- Columns containing the call to action button and link to overlay modal -->
-                        <div class="clearfix hidden-sm mrgn-tp-lg"></div>
-                        <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 ">
-                           <a href="https://mva-vac-acc.fjgc-gccf.gc.ca/pub/MVA_7_24_1_1?request_locale=en&URI=https%3A%2F%2Fmva-mda.vac-acc.gc.ca%2Fprot%2Fmv%2FMVA_7_2%3Flang%3Den&IDP=GC" class="btn btn-call-to-action full-width">
-                              GCKey
-                           </a>
-                        </div>
-                     
-                  </div>
-                  
-                  </div>
-               </div>
-                  </div>
-                  
-               </div>
-            </div>
-           
          </div>
       </section>
+      <section class="container">  <!-- Frontdoor heading-->
+			<div class="row">
+            <div class="col-xs-12">
+               <h2>
+                  Most asked-about topics
+               </h2>
+               <p>I want to:</p>
+               <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+               </ul>
+            </div>
+         </div>
+      </section>
+      <!--
       <section class="container">
          <div class="row">
             <div class="col-xs-12"> 
-               <p> 
-                  <span id="sign-in-link" class="hidden" 
-                  data-wb-urlmapping='
-                  {
-                  "register": { 
-                  "action": "removeClass", 
-                  "source": "#sign-in-link", 
-                  "class": "hidden" } 
-                  }
-                  '>
-                  
-                  <a href="?sign-in">Sign in to My <abbr>VAC</abbr> Account</a></span>
-                 
-               <!-- If html?sign-in Hide the register for span-->
-               <span id="register-link" class="hidden"
-                  data-wb-urlmapping='{
-                  "sign-in": { 
-                  "action": "removeClass", 
-                  "source": "#register-link", 
-                  "class": "hidden" }}'>
-                  
-                  <a href="?register">Register for My <abbr>VAC</abbr> Account</a></span>
-                  
-              
                
-               </p>
                <h2>Help and FAQ</h2>
               
                <ul>
-                  <!--
-                  <li><a href="https://www.veterans.gc.ca/eng/e_services/faq">My VAC Account</a></li>-->
-                  
-                  <li><a href="https://mva-mda.vac-acc.gc.ca/pub/MVA_7_24_2">Sign-in partners</a></li>
-                 
               
-                  <li><a href="https://mva-mda.vac-acc.gc.ca/pub/MVA_7_24_2">GCKey</a></li>
-                  <ul>
-                     <!--
-                     <li><a href="">Forgotten GCKey user id or password</a></li>-->
-                     <li><a href="#">Forgot your password or user ID?</a></li>
-                  </ul>
-                  
                   <li><a href="#">Your browser and troubleshooting tips</a></li>
                   <li><a href="https://www.veterans.gc.ca/eng/contact">Contact <abbr>VAC</abbr></a></li>
                </ul>
@@ -521,7 +211,7 @@
             
          </div>
          
-   </section>
+   </section>-->
 		
 
         
