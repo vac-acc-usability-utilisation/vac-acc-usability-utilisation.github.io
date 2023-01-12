@@ -1,4 +1,23 @@
-/* cdts overwrites*/
+/* cdts overwrites
+.app-name {
+    font-size: 28px;
+    margin-bottom: 6px;
+    margin-top: 8px;
+    padding: 5px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.app-bar .row>section.app-name,
+.app-bar .row>nav {
+    display: table-cell;
+    float: none;
+    vertical-align: middle;
+}
+
+
+
+
 ul.app-list-main>li>a {
     margin-top: 10px;
 }
@@ -17,9 +36,17 @@ ul.app-list-main>li>a {
 nav#mb-menu {
     background: #E1E4E7;
 
+}*/
+
+#wb-so .row {
+    padding: 0 0 0;
 }
 
-/*menu button*/
+div.app-bar {
+    padding: 1em 0;
+}
+
+/*menu button
 li#wb-glb-mn>a.btn {
     padding: 1em;
     margin: 0 0 0.5em 0;
@@ -36,23 +63,15 @@ li#wb-glb-mn {
     display: table-cell;
     float: none;
 
-}
+}*/
 
-.app-name {
-    font-size: 28px;
-    margin-bottom: 6px;
-    margin-top: 8px;
-    padding: 5px;
-    font-weight: bold;
-    line-height: 1.1;
-}
 
-.app-bar .row>section,
-.app-bar .row>nav {
-    display: table-cell;
-    float: none;
-    vertical-align: middle;
-}
+
+/* sign-in partner logos */
+
+         #logos ul li, #logos ul li img { 
+            padding:5px;
+         }
 
 
 
