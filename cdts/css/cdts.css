@@ -85,7 +85,15 @@
 		text-decoration: underline;
 	}
 
-	/*Mobile app bar - account menu - links*/
+	/*App bar - app name link*/
+	.app-name {
+		font-size: 28px;
+		margin-bottom: 6px;
+		margin-top: 8px;
+		padding: 5px;
+	}
+
+	/*Mobile app bar - account menu - links
 	.app-list-account .btn, .app-list-account .btn:visited {
 		background-color: #FFF;
 		color: #335075;
@@ -99,7 +107,7 @@
 		-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 		box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 		cursor: not-allowed;
-	}
+	}*/
 
 	/* Style FIP img instead of a element like GCWeb templates */
 	header .brand img {
@@ -118,34 +126,33 @@
 /*Extra-small view and under (screen only)*/
 @media screen and (max-width: 767px) {
 
-	/*App bar - app name link*/
+	/*App bar - app name link 	*/
 	.app-name {
 		font-size: 18px;
-		margin: 5px 0 6px;
-		padding: 5px;
+		margin-top: 10px;
 	}
 
-	/*Mobile app bar*/
+	/*Mobile app bar
 	.app-bar-mb {
 		background: #E1E4E7;
 		padding-top: 5px;
-	}
+	}*/
 
-	/*Mobile app bar - main + account menus*/
+	/*Mobile app bar - main + account menus
 	.app-list-main, .app-list-account {
 		margin: 0;
 	}
 
 	.app-list-main li, .app-list-account li {
 		margin-bottom: 5px;
-	}
+	}*/
 
 	/*Mobile app bar - main menu + mobile search overlay - Hide in basic HTML (wbdisable) mode.*/
 	.wb-disable .app-list-main, .wb-disable #app-srch-mb {
 		display: none !important;
 	}
 
-	/*Mobile app bar - main menu*/
+	/*Mobile app bar - main menu
 	.app-list-main li {
 		float: left;
 		margin-right: 5px;
@@ -164,15 +171,15 @@
 	.app-list-main .active, .app-list-main .active:visited, .app-list-main .btn:active, .app-list-main .btn:focus, .app-list-main .btn:hover {
 		background-color: #243850;
 		color: #FFF;
-	}
+	}*/
 
-	/*Mobile app bar - main menu - Hide a heading whose content is used as the mobile menu overlay's title.*/
+	/*Mobile app bar - main menu - Hide a heading whose content is used as the mobile menu overlay's title.
 	.app-list-main h2 {
 		display: none;
-	}
+	}*/
 
 	/*Mobile app bar - account menu*/
-	/*Float the account menu to allow it to initially collapse with both of its items on the same line if the viewport width gets too limited.*/
+	/*Float the account menu to allow it to initially collapse with both of its items on the same line if the viewport width gets too limited.
 	.app-list-account {
 		float: left;
 	}
@@ -189,19 +196,19 @@
 	#wb-glb-mn {
 		float: left !important;
 		margin-top: 0px;
-	}
+	}*/
 
-	/*Mobile menu overlay - Hide search box/language toggle link.*/
+	/*Mobile menu overlay - Hide search box/language toggle link.
 	.srch-pnl, .lng-ofr {
 		display: none;
-	}
+	}*/
 
-	/*Mobile menu overlay - Prevent an overly large space from appearing above the first list in the mobile menu's overlay.*/
+	/*Mobile menu overlay - Prevent an overly large space from appearing above the first list in the mobile menu's overlay.
 	#mb-pnl .sm-pnl {
 		padding-top: 0;
-	}
+	}*/
 
-	/*Mobile search overlay*/
+	/*Mobile search overlay
 	#app-srch-mb {
 		background: transparent;
 		-webkit-box-shadow: none;
@@ -250,7 +257,7 @@
 		padding-right: 15px;
 		top: 5px;
 		width: 59px;
-	}
+	}*/
 }
 
 /* Small view and under (screen only) custom GCWeb theme */
@@ -278,20 +285,20 @@
 /*Extra-small view and over (screen only)*/
 @media screen and (min-width: 480px) {
 
-	/*Mobile app bar - main menu*/
+	/*Mobile app bar - main menu
 	.app-list-account {
 		text-align: right;
 	}
 
 	.app-list-account li {
 		display: inline-block;
-	}
+	}*/
 }
 
 /*Small view and over (screen only)*/
 @media screen and (min-width: 768px) {
 
-	/*App bar*/
+	/*App bar
 	.app-bar .row {
 		display: table;
 		table-layout: fixed;
@@ -302,17 +309,17 @@
 		display: table-cell;
 		float: none;
 		vertical-align: middle;
-	}
+	}*/
 
-	/*App bar - app name link*/
+	/*App bar - app name link
 	.app-name {
 		font-size: 28px;
 		margin-bottom: 6px;
 		margin-top: 8px;
 		padding: 5px;
-	}
+	}*/
 
-	/*Mobile app bar - main menu*/
+	/*Mobile app bar - main menu
 	.app-list-account {
 		margin-bottom: 0;
 		margin-top: 9px;
@@ -325,17 +332,17 @@
 
 	.app-list-account li:first-child {
 		margin-left: 0;
-	}
+	}*/
 }
 
 /*Extra-extra-small view (screen only)*/
 @media screen and (max-width: 479px) {
 
 	/*Mobile menu overlay - Maximise the mobile menu's width to prevent it from shifting when opening/closing details elements.
-	  Note: Once GCWeb 4.0.27 is out, check if this fix is built-into it. If it is, remove this CSS selector.*/
+	  Note: Once GCWeb 4.0.27 is out, check if this fix is built-into it. If it is, remove this CSS selector.
 	#mb-pnl {
 		min-width: 90%;
-	}
+	}*/
 }
 
 /*Extra-small view (screen only)*/
@@ -349,10 +356,10 @@
 
 /*Small view (screen-only)*/
 @media screen and (min-width: 768px) and (max-width: 991px) {
-	/*Desktop search box + menu bar - Restore medium view and up's search box/menu bar.*/
+	/*Desktop search box + menu bar - Restore medium view and up's search box/menu bar.
 	#wb-srch, #wb-sm {
 		display: block !important;
-	}
+	}*/
 
 }
 
