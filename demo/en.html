@@ -184,7 +184,7 @@
                   <div class="panel-heading">
                      <h3 class="panel-title"><span>Option 1<span class="wb-inv"> of 2</span> -</span> Sign-in Partner</h3>
                   </div>
-                  <div class="panel-body">
+                  <div class="panel-body hidden-xs">
                      <p class="account-chooser-desc">
                         <span id="sign-in-partner-desc" class="hidden" data-wb-urlmapping='
                                     {
@@ -376,8 +376,8 @@
                         Option 2 - GCKey
                      </h3>
                   </div>
-                  <div class="panel-body">
-                     <p class="account-chooser-desc">
+                  <div class="panel-body hidden-xs">
+                     <p class="account-chooser-desc ">
                         <span id="sign-in-gckey-desc" class="hidden" data-wb-urlmapping='
                                     {
                                     "sign-in": { 
@@ -428,6 +428,7 @@
                </section>
             
          </div>
+         
          </div>
       </section>
       <section class="container">
@@ -455,58 +456,139 @@
 
       
             </div>
+            <div class="col-xs-12 visible-xs">
+               <h2 class="h4">Sign-in Partner</h2>
+               <p>
+                  
+                  <span id="sign-in-partner-dfn" class="hidden" data-wb-urlmapping='
+                              {
+                              "sign-in": { 
+                              "action": "removeClass", 
+                              "source": "#sign-in-partner-dfn", 
+                              "class": "hidden" } 
+                              }
+                              '>
+                     <!-- EN/FR content for "Sign in to"-->
+                     Sign in to </span><!--" hide and if either query is true"-->
+   
+                  <!-- If html?sign-in Hide the register for span-->
+                  <span id="register-partner-dfn" class="hidden" data-wb-urlmapping='{
+                              "register": { 
+                              "action": "removeClass", 
+                              "source": "#register-partner-dfn", 
+                              "class": "hidden" }}'>
+                     <!-- EN/FR content for "Register for"-->
+                     Register for </span>
+   
+                  <span id="default-partner-dfn" data-wb-urlmapping='{
+                              "sign-in": { 
+                              "action": "addClass", 
+                              "source": "#default-partner-dfn", 
+                              "class": "hidden" },
+                              "register": { 
+                                 "action": "addClass", 
+                                 "source": "#default-partner-dfn", 
+                                 "class": "hidden" }
+                              }'>
+                     <!--Default-->
+                     Sign in to, or register for,
+                  </span>
+                  My <abbr>VAC</abbr> Account with the same sign-in information you use for other online services (for
+                  example, online&nbsp;banking).
+               </p>
+               <h2 class="h4">GCKey</h2>
+               <p class="account-chooser-dfn ">
+                  <span id="sign-in-gckey-dfn" class="hidden" data-wb-urlmapping='
+                              {
+                              "sign-in": { 
+                              "action": "removeClass", 
+                              "source": "#sign-in-gckey-dfn", 
+                              "class": "hidden" } 
+                              }
+                              '>
+                     <!-- EN/FR content for "Sign in to"-->
+                     Sign in to </span><!--" hide and if either query is true"-->
+   
+                  <!-- If html?sign-in Hide the register for span-->
+                  <span id="register-gckey-dfn" class="hidden" data-wb-urlmapping='{
+                              "register": { 
+                              "action": "removeClass", 
+                              "source": "#register-gckey-dfn", 
+                              "class": "hidden" }}'>
+                     <!-- EN/FR content for "Register for"-->
+                     Register for </span>
+   
+                  <span id="default-gckey-dfn" data-wb-urlmapping='{
+                              "sign-in": { 
+                              "action": "addClass", 
+                              "source": "#default-gckey-dfn", 
+                              "class": "hidden" },
+                              "register": { 
+                                 "action": "addClass", 
+                                 "source": "#default-gckey-dfn", 
+                                 "class": "hidden" }
+                              }'>
+                     <!--Default-->
+                     Sign in to, or register for,
+                  </span>
+                  My <abbr>VAC</abbr> Account with your GCKey user&nbsp;ID and password, or register for a&nbsp;GCKey.
+               </p>
+            </div>
             <div class="col-xs-12"> 
             
-               <h2>Help and FAQ</h2>
+               <h2>Topics:</h2>
               
                <ul>
                   
+                  <li>
+                     <a href="en/sign-in-register-help/index.html">Help and FAQs</a>
+                     <ul>
+                        <li id="sign-in-help-link" class="hidden" data-wb-urlmapping='
+                        {
+                        "sign-in": { 
+                        "action": "removeClass", 
+                        "source": "#sign-in-help-link", 
+                        "class": "hidden" } 
+                        }
+                        '>
+                        <a href="en/sign-in-register-help/index.html#sign-in">Sign-in help and FAQs</a>  </li><!--" hide and if either query is true"-->
 
-                  <li id="sign-in-help-link" class="hidden" data-wb-urlmapping='
-                                    {
-                                    "sign-in": { 
-                                    "action": "removeClass", 
-                                    "source": "#sign-in-help-link", 
-                                    "class": "hidden" } 
-                                    }
-                                    '>
-                           <!-- EN/FR content for "Sign in to"-->
-                           <a href="en/sign-in-register-help/index.html#sign-in">My VAC Account sign in</a>  </li><!--" hide and if either query is true"-->
-         
                         <!-- If html?sign-in Hide the register for span-->
                         <li id="register-help-link" class="hidden" data-wb-urlmapping='{
                                     "register": { 
                                     "action": "removeClass", 
                                     "source": "#register-help-link", 
                                     "class": "hidden" }}'>
-                           <!-- EN/FR content for "Register for"-->
-                           <a href="en/sign-in-register-help/index.html#register">My VAC Account registration</a> </li>
-         
-                        <li id="default-help-link" data-wb-urlmapping='{
-                                    "sign-in": { 
-                                    "action": "addClass", 
-                                    "source": "#default-help-link", 
-                                    "class": "hidden" },
-                                    "register": { 
-                                       "action": "addClass", 
-                                       "source": "#default-help-link", 
-                                       "class": "hidden" }
-                                    }'>
-                           <!--Default-->
-                           <a href="en/sign-in-register-help/">My VAC Account sign in and registration</a>
-                        </li>
+                        <!-- EN/FR content for "Register for"-->
+                        <a href="en/sign-in-register-help/index.html#register">Registration help and FAQs</a> </li>
 
+                     
+                        
 
-                        <li>
-                           <a href="en/sign-in-register-help/sign-in-provider-help.html">Sign-in providers</a>
-                           <ul>
-                              <li><a href="en/sign-in-register-help/sign-in-provider-help.html#partner">Sign-in Partner</a></li>
-                              <li><a href="en/sign-in-register-help/sign-in-provider-help.html#gckey">GCKey</a></li>
-                           </ul>
-                        </li>
-                  <li><a href="en/sign-in-register-help/your-browser.html">Your browser and troubleshooting tips</a></li>
+                        
+                     </ul>
                   </li>
-            
+                
+                           
+                           
+                        </li>
+                  <li>
+                     <a href="en/sign-in-register-help/your-browser.html">Your browser and troubleshooting tips</a></li>
+                  </li>
+                  <li>
+                     <a href="en/sign-in-register-help/sign-in-provider-help.html#forgotten">Forgot your GCKey password or user ID?</a>
+                  </li>
+                  <li>
+                     <a href="en/sign-in-register-help/sign-in-provider-help.html#revoked">Revoked GCKey</a>
+                  </li>
+
+                  <li>
+                     <a href="en/sign-in-register-help/sign-in-provider-help.html">Sign-in services help and FAQs</a>
+                     <ul>
+                        <li><a href="en/sign-in-register-help/sign-in-provider-help.html#partner">Sign-in Partner</a></li>
+                        <li><a href="en/sign-in-register-help/sign-in-provider-help.html#gckey">GCKey</a></li>
+                     </ul>
+                    </li>
                   
                  
                   
