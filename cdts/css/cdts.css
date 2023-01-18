@@ -109,7 +109,7 @@
 		cursor: not-allowed;
 	}*/
 
-	/* Style FIP img instead of a element like GCWeb templates */
+	/* Style FIP img instead of a element like GCWeb templates 
 	header .brand img {
 		position: relative;
 		text-decoration: none;
@@ -120,7 +120,7 @@
 		height: auto;
 		padding-bottom: 0;
 		width: auto;
-	}
+	}*/
 	}
 
 /*Extra-small view and under (screen only)*/

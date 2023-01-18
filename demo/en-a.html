@@ -22,7 +22,24 @@
          <link rel="stylesheet" href="wet-boew/css/noscript.min.css" />
       </noscript>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+      <style>
+         /* account-chooser */
+         p.account-chooser-desc {
+            height: 5em;
+         }
 
+         @media (min-width: 992px) {
+            p.account-chooser-desc {
+               height: 7em;
+            }
+         }
+
+         @media (min-width: 1200px) {
+            p.account-chooser-desc {
+               height: 5em;
+            }
+         }
+      </style>
    </head>
    <body class="cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage">
       
@@ -160,7 +177,7 @@
             }
             '>
             
-            Choose from one of two ways to sign in to </span>
+            Choose the sign-in method you used to register for My VAC Account:</span>
 
             <!-- If html?sign-in Hide the register for span-->
             <span id="register-p-lead" class="hidden" data-wb-urlmapping='{
@@ -169,7 +186,7 @@
                         "source": "#register-p-lead", 
                         "class": "hidden" }}'>
                <!-- EN/FR content for "Register for"-->
-               Choose from one of two ways to register for  </span>
+               Choose from one of two ways to register for My&nbsp;<abbr>VAC</abbr>&nbsp;Account: </span>
 
             <span id="default-p-lead" data-wb-urlmapping='{
                         "sign-in": { 
@@ -182,9 +199,9 @@
                            "class": "hidden" }
                         }'>
                <!--Default-->
-               Choose from one of two ways to access 
+               Choose from one of two ways to access My&nbsp;<abbr>VAC</abbr>&nbsp;Account:
             </span>
-            My&nbsp;<abbr>VAC</abbr>&nbsp;Account:
+            
            
          </p>
          <!-- register and sign-in links -->
@@ -262,7 +279,8 @@
                            <!--Default empty ?-->
                            Sign in to, or register,
                         </span>
-                        with the same sign-in information you use for online&nbsp;banking.</p>
+                        with the same sign-in information you use for online&nbsp;banking. None of your personal or banking information is shared with Veterans Affairs Canada.
+                     </p>
                      
                   
                      
@@ -463,7 +481,7 @@
                            <!--Default-->
                            Sign in to, or register
                         </span>
-                        with a GCKey user&nbsp;ID and password. 
+                        with your GCKey user&nbsp;ID and password. You can also create or recover a&nbsp;GCKey. 
                      </p>
                      
                   
@@ -571,7 +589,6 @@
                <ul>
                   
                   <li>
-                     
                      <a href="en/sign-in-register-help/index.html">Help and FAQs</a>
                      <ul>
                         <li id="sign-in-help-link" class="hidden" data-wb-urlmapping='
@@ -606,7 +623,6 @@
                   <li>
                      <a href="en/sign-in-register-help/your-browser.html">Your browser and troubleshooting tips</a></li>
                   </li>
-                  
                   <li>
                      <a href="en/sign-in-register-help/sign-in-provider-help.html#forgotten">Forgot your GCKey password or user ID?</a>
                   </li>

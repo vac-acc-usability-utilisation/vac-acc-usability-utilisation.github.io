@@ -1,24 +1,30 @@
-/* header */
 
 
 
 
+/* account-chooser */
 p.account-chooser-desc {
-    height:auto;
+    height:2em;
 }
 
 @media (min-width: 992px) {
     p.account-chooser-desc {
-        height:100px;
+        height: 2em;
+    }
+}
+
+@media (min-width: 1200px) {
+    p.account-chooser-desc {
+        height: 2em;
     }
 }
 
 /* sign-in partner logos */
-
 #logos ul li, #logos ul li img { 
     padding:5px;
 }
 
+/* making bg-white available to panel-footer */
 .panel-footer.bg-white {
     background-color: white;
 }
