@@ -27,6 +27,19 @@
 	</noscript>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
+	<style>
+		.accnt-menu [role=menuitem] {
+			
+			width: auto;
+			
+		}
+
+		.accnt-menu [role=menu] {
+    		
+			position: absolute;
+			right: 1em;
+		}
+			</style>
 
 </head>
 
@@ -213,6 +226,95 @@
                 </div>
             </div>
         </div>
+        <!--
+        <div class="app-bar-mb container visible-xs-block hidden-print">
+            <nav>
+                <h2 class="wb-inv">Account menu</h2>
+                <ul class="app-list-account list-unstyled">
+                    <li><a href="../../en.html?register" class="btn">Register</a></li>
+                    <li><a href="../../en.html?sign-in" class="btn">Sign-in</a></li>
+                </ul>
+            </nav>
+        </div>-->
+    </header> 
+
+	<hr>
+
+	<header>
+        <div id="wb-bnr" class="container">
+			<div class="row">
+				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+					<h2 class="wb-inv">Language selection</h2>
+					<ul class="list-inline mrgn-bttm-0">
+						<li>
+							<a lang="fr" hreflang="fr" href="fr.html">
+								<span class="hidden-xs">Français</span>
+								<abbr title="Français"
+									class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+							</a>
+						</li>
+					</ul>
+				</section>
+				<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" resource="#wb-publisher"
+					typeof="GovernmentOrganization">
+					<a href="en.html" property="url">
+						<img src="../../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv"
+							property="name">
+							Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+					</a>
+					<meta property="areaServed" typeof="Country" content="Canada">
+					<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
+				</div>
+				
+			</div>
+
+		</div>
+        <div class="app-bar">
+            <div class="container">
+                <div class="row">
+                    <section class="col-xs-6 col-sm-7">
+                        <h2 class="wb-inv">Name of Web application</h2><a class="app-name" href="../../en.html">My VAC Account</a>
+                    </section>
+                    
+                    <nav class="col-xs-6 col-sm-5 text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
+                        <section>    
+                            <h2 class="wb-inv">Account menu</h2>
+                            
+                            <button class="btn btn-default" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false">Noel Knockwood<span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" style="text-align: left; width: auto;">
+								<li role="none"><a role="menuitem" tabindex="-1" href="#">Profile</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
+							</ul>
+							
+                        </section>
+                    </nav>
+                  
+                </div>
+            </div>
+        </div>
+		<nav class="gweb-v2 gcweb-menu" typeof="SiteNavigationElement">
+					<div class="container">
+						<h2 class="wb-inv">Menu</h2>
+						<button type="button" aria-haspopup="true" aria-controls="gc-mnu" aria-expanded="false"><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
+						<ul id="gc-mnu" role="menu" aria-orientation="vertical">
+							<li role="none"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/jobs.html">Jobs and the workplace</a></li>
+							<li role="none"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/immigration-citizenship.html">Immigration and citizenship</a></li>
+							<li role="none"><a role="menuitem" tabindex="-1" href="https://travel.gc.ca/">Travel and tourism</a></li>
+							<li role="none"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/business.html">Business and industry</a></li>
+							<li role="none"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/benefits.html">Benefits</a></li>
+							<li role="none"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/health.html">Health</a></li>
+							<li role="none"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/taxes.html">Taxes</a></li>
+							<li role="none"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/environment.html">Environment and natural resources</a></li>
+							<li role="none"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/defence.html">National security and defence</a></li>
+							<li role="none"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
+							<li role="none"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
+							<li role="none"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
+							<li role="none"><a role="menuitem" tabindex="-1" href="http://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
+							<li role="none"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
+							<li role="none"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/finance.html">Science and innovation</a></li>
+						</ul>
+					</div>
+				</nav>
         <!--
         <div class="app-bar-mb container visible-xs-block hidden-print">
             <nav>
