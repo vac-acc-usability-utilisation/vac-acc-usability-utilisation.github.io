@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+      <title>DEMO - Sign-In Services - My VAC Account</title>
+      <meta content="width=device-width, initial-scale=1" name="viewport">
+      <meta name="description" content=" " />
+      <meta name="author" content=" "/>
+      <meta name="dcterms.title" content="My VAC Account Sign-In Services"/>
+      <meta name="dcterms.description" content=" "/>
+      <meta name="dcterms.creator" content=" "/>
+      <meta name="dcterms.language" content="eng"/>
+      <meta name="dcterms.subject" content=""/>
+      <meta name="dcterms.issued" content=""/>
+      <meta name="dcterms.modified" content="2017-09-29"/>
+      <link href="../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
+      <link rel="stylesheet" href="../../../GCWeb/css/theme.min.css" />
+      <link rel="stylesheet" href="../../../cdts/css/cdts.css" />
+      <link rel="stylesheet" href="../../../mva-mda/css/theme.css" />
+      <noscript>
+         <link rel="stylesheet" href="wet-boew/css/noscript.min.css" />
+      </noscript>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+
+   </head>
+   <body class="cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage">
+      
+	<!-- Global (National) Header (not signed in)
+		states: ?sign-in | ?register
+
+		VAC   .\^/.   ACC    
+		ACC  \=%¥%=/  VAC 
+		VAC   ^`|`^   ACC 
+		
+		-->
+      <nav aria-label="Skip Links">
+         <ul id="wb-tphp">
+         <li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+         <li class="wb-slc visible-xs visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to "About My VAC Account"</a></li>
+         </ul>
+      </nav>
+      <header>
+            
+
+            
+            
+      </header>
+        <!-- Static header ends -->
+         
+	  <!-- Page: frontdoor
+
+            VAC   .\^/.   ACC    
+            ACC  \=%¥%=/  VAC 
+            VAC   ^`|`^   ACC 
+            
+            -->
+      <main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
+      
+      <!-- Landing page heading-->		      
+      <div class="container">
+         <!-- h1 with URLMapping on spans-->		  
+         <h1 id="wb-cont" property="name">
+            <!-- Show Sign in content when url?sign-in -->
+            Heading 1 
+            
+         </h1>
+         <p class="lead">
+            Lead
+         </p>
+         <!-- register and sign-in links -->
+         <div>
+            <p id="register-link" class="hidden mrgn-bttm-md" data-wb-urlmapping='
+               {
+                        "sign-in": { 
+                        "action": "removeClass", 
+                        "source": "#register-link", 
+                        "class": "hidden" } 
+                        }
+                        '>
+               <!-- EN/FR content for "Sign in to"-->
+               New to My&nbsp;<abbr>VAC</abbr>&nbsp;Account? <a href="?register">Register</a> </p><!--" hide and if either query is true"-->
+
+            <!-- If html?sign-in Hide the register for span-->
+            <p id="sign-in-link" class="hidden mrgn-bttm-md" data-wb-urlmapping='{
+                        "register": { 
+                        "action": "removeClass", 
+                        "source": "#sign-in-link", 
+                        "class": "hidden" }}'>
+               
+               <a href="?sign-in">Sign in to My&nbsp;<abbr>VAC</abbr>&nbsp;Account</a>  </p>
+
+   
+         </div>
+      </div>
+      <!-- Landing page call-to-action panels -->
+      <div class="container" id="sign-in-services-panels">
+         <div class="row wb-eqht-grd">
+            <!-- Panel 1 -->
+            <div class="col-sm-12 col-md-6">
+               <!-- panel is target of equal height-->
+               <section class="panel panel-default hght-inhrt">
+                  <!-- panel heading -->
+                  <div class="panel-heading">
+                     <!-- panel title -->
+                     <h2 class="panel-title">
+                        <span>Option 1&nbsp;<span class="wb-inv">of 2&nbsp;</span>-</span> {{Heading 2}}
+                     </h2>
+                  </div>
+                  <!-- panel-body -->
+                  <div class="panel-body hidden-xs">
+                    <p>
+                       {{description}} 
+                    </p>
+                  </div>
+                  <!-- panel footer -->
+                  <footer class="panel-footer brdr-0 bg-white mrgn-tp-0">
+                     <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text-center">
+                           <!-- panel call to action button -->
+                           <a href="#" class="btn btn-call-to-action full-width">
+                              {{call to action}}
+                           </a>
+                        </div>
+                     </div>
+                     <!-- drop down of bank logos (adding 15px of padding to each liin mva stylesheet)-->
+                     <details class="text-center">
+                        <summary>{{summary}} </summary>
+                        <section class="row" id="details">
+      
+                           <div class="col-xs-12">
+                                <p>{{details}}</p>
+                           </div>
+                        </section>
+                     </details>
+                  </footer>
+               </section>
+            </div>
+            <!-- Panel 2 -->
+            <div class="col-sm-12 col-md-6">
+                <!-- panel is target of equal height-->
+                <section class="panel panel-default hght-inhrt">
+                   <!-- panel heading -->
+                   <div class="panel-heading">
+                      <!-- panel title -->
+                      <h2 class="panel-title">
+                         <span>Option 2&nbsp;<span class="wb-inv">of 2&nbsp;</span>-</span> {{Heading 2}}
+                      </h2>
+                   </div>
+                   <!-- panel-body -->
+                   <div class="panel-body hidden-xs">
+                      <!--Description of sign-in method with URL mapping-->
+                      <!-- currently has a set height depending on media query because the eqht and eqhtgrd wasn't working on the panel body -->
+                      <p>
+                        {{description}} 
+                     </p>
+                   </div>
+                   <!-- panel footer -->
+                   <footer class="panel-footer brdr-0 bg-white mrgn-tp-0">
+                      <div class="row">
+                         <div class="col-sm-8 col-sm-offset-2 text-center">
+                            <!-- panel call to action button -->
+                            <a href="#" class="btn btn-call-to-action full-width">
+                               {{call to action}}
+                            </a>
+                         </div>
+                      </div>
+                      <!-- drop down of bank logos (adding 15px of padding to each liin mva stylesheet)-->
+                      <details class="text-center">
+                         <summary>{{summary}} </summary>
+                         <section class="row" id="details">
+       
+                            <div class="col-xs-12">
+                                 <p>{{details}}</p>
+                            </div>
+                         </section>
+                      </details>
+                   </footer>
+                </section>
+             </div>
+         </div>
+      </div>
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
+      <script src="../../wet-boew/js/wet-boew.min.js"></script>
+      <script src="../../GCWeb/js/theme.min.js"></script>
+      <script src="../../cdts/js/cdtscustom.js"></script>
+
+
+   </body>
+</html>
