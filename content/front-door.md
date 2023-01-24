@@ -47,11 +47,11 @@
 
 ### Meta (fr)
 
-### Page (fr)
-
 |   |   |
 |---|---|
 | page title |  |
+
+### Page (fr)
 
 #### Heading one (fr)
 
