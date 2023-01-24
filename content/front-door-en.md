@@ -1,9 +1,10 @@
+# Front door (en)
+
 | query string | none | ?sign-in | ?register |
 |---|---|---|---|
 | page title | My VAC Account sign-in services |  |  |
 | h1 | Sign in to or register for My VAC Account | Sign in to My VAC Account | Register for My VAC Account |
 | p.lead | "Choose from one of two ways to access My VAC Account: |  |  |
-| " |  |  |  |
 | cta1-title | Option 1 of 2 - Sign-in Partner |  |  |
 | cta1-desc | "Sign in, or register, with the same sign-in information you use for online banking." | Sign in with the same sign-in information you use for online banking. | Register with the same sign-in information you use for online banking. |
 | cta1-btn | Sign-in Partner |  |  |
