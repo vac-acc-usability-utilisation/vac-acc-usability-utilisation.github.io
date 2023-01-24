@@ -1,10 +1,10 @@
 
 # Front door
 
-### Meta 
+## Meta 
 | meta (en) |  |
 |---|---|
-| page title | My VAC Account sign-in services |
+| page title | Sign in to or register for My Veterans Affairs Canada Account |
 
 | meta (fr) |  |
 |---|---|
