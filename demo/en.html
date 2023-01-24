@@ -110,106 +110,107 @@
             -->
       <main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
       
-      <!-- Landing page heading-->		      
+      <!-- Landing page heading-->
       <div class="container">
-         <!-- h1 with URLMapping on spans-->		  
+         <!-- h1 with URLMapping on spans-->
          <h1 id="wb-cont" property="name">
-            <!-- Show Sign in content when url?sign-in -->
-            <span id="sign-in-h1-span" class="hidden" 
-               data-wb-urlmapping='
-               {
-               "sign-in": { 
-               "action": "removeClass", 
-               "source": "#sign-in-h1-span", 
-               "class": "hidden" } 
-               }
-               '>
-               Sign in to </span>
-            <!-- Show Register content when url?register -->
-            <span id="register-h1-span" class="hidden"
-               data-wb-urlmapping='{
-               "register": { 
-               "action": "removeClass", 
-               "source": "#register-h1-span", 
-               "class": "hidden" }}'>
-               Register for </span>
-            
-            <!-- Hide default when url?register or url?sign-in -->
-            <span id="default-h1-span" data-wb-urlmapping='{
-               "sign-in": { 
-               "action": "addClass", 
-               "source": "#default-h1-span", 
-               "class": "hidden" },
-               "register": { 
-                  "action": "addClass", 
-                  "source": "#default-h1-span", 
-                  "class": "hidden" }
-               }'>
-               <!--Default empty ?-->
-               Sign in to or register for
-            </span>
-            My&nbsp;<abbr title="Veterans Affairs Canada">VAC</abbr>&nbsp;Account
+         <!-- Show Sign in content when url?sign-in -->
+         <span id="sign-in-h1-span" class="hidden"
+                     data-wb-urlmapping='{
+                     "sign-in": { 
+                     "action": "removeClass", 
+                     "source": "#sign-in-h1-span", 
+                     "class": "hidden" } 
+                     }
+                     '>
+                     Sign in to </span>
+         <!-- Show Register content when url?register -->
+         <span id="register-h1-span" class="hidden"
+                     data-wb-urlmapping='{
+                     "register": { 
+                     "action": "removeClass", 
+                     "source": "#register-h1-span", 
+                     "class": "hidden" }}'>
+                     Register for </span>
+      
+         <!-- Hide default when url?register or url?sign-in -->
+         <span id="default-h1-span" data-wb-urlmapping='{
+                     "sign-in": { 
+                     "action": "addClass", 
+                     "source": "#default-h1-span", 
+                     "class": "hidden" },
+                     "register": { 
+                        "action": "addClass", 
+                        "source": "#default-h1-span", 
+                        "class": "hidden" }
+                     }'>
+                     <!--Default empty ?-->
+                     Sign in to or register for
+                  </span>
+         My&nbsp;<abbr title="Veterans Affairs Canada">VAC</abbr>&nbsp;Account
          </h1>
          <p class="lead">
-            <span id="sign-in-p-lead" class="hidden" data-wb-urlmapping='
-            {
-            "sign-in": { 
-            "action": "removeClass", 
-            "source": "#sign-in-p-lead", 
-            "class": "hidden" } 
-            }
-            '>
-            
-            Choose from one of two ways to sign in to </span>
-
-            <!-- If html?sign-in Hide the register for span-->
-            <span id="register-p-lead" class="hidden" data-wb-urlmapping='{
-                        "register": { 
-                        "action": "removeClass", 
-                        "source": "#register-p-lead", 
-                        "class": "hidden" }}'>
-               <!-- EN/FR content for "Register for"-->
-               Choose from one of two ways to register for  </span>
-
-            <span id="default-p-lead" data-wb-urlmapping='{
-                        "sign-in": { 
-                        "action": "addClass", 
-                        "source": "#default-p-lead", 
-                        "class": "hidden" },
-                        "register": { 
-                           "action": "addClass", 
-                           "source": "#default-p-lead", 
-                           "class": "hidden" }
-                        }'>
-               <!--Default-->
-               Choose from one of two ways to access 
-            </span>
-            My&nbsp;<abbr>VAC</abbr>&nbsp;Account:
-           
+         <span id="sign-in-p-lead" class="hidden" data-wb-urlmapping='
+                  {
+                  "sign-in": { 
+                  "action": "removeClass", 
+                  "source": "#sign-in-p-lead", 
+                  "class": "hidden" } 
+                  }
+                  '>
+      
+                  Choose from one of two ways to sign in to </span>
+      
+         <!-- If html?sign-in Hide the register for span-->
+         <span id="register-p-lead" class="hidden" data-wb-urlmapping='{
+                              "register": { 
+                              "action": "removeClass", 
+                              "source": "#register-p-lead", 
+                              "class": "hidden" }}'>
+                     <!-- EN/FR content for "Register for"-->
+                     Choose from one of two ways to register for  </span>
+      
+         <span id="default-p-lead" data-wb-urlmapping='{
+                              "sign-in": { 
+                              "action": "addClass", 
+                              "source": "#default-p-lead", 
+                              "class": "hidden" },
+                              "register": { 
+                                 "action": "addClass", 
+                                 "source": "#default-p-lead", 
+                                 "class": "hidden" }
+                              }'>
+                     <!--Default-->
+                     Choose from one of two ways to access 
+                  </span>
+         My&nbsp;<abbr>VAC</abbr>&nbsp;Account:
+      
          </p>
          <!-- register and sign-in links -->
          <div>
-            <p id="register-link" class="hidden mrgn-bttm-md" data-wb-urlmapping='
-               {
-                        "sign-in": { 
-                        "action": "removeClass", 
-                        "source": "#register-link", 
-                        "class": "hidden" } 
-                        }
-                        '>
-               <!-- EN/FR content for "Sign in to"-->
-               New to My&nbsp;<abbr>VAC</abbr>&nbsp;Account? <a href="?register">Register</a> </p><!--" hide and if either query is true"-->
-
-            <!-- If html?sign-in Hide the register for span-->
-            <p id="sign-in-link" class="hidden mrgn-bttm-md" data-wb-urlmapping='{
-                        "register": { 
-                        "action": "removeClass", 
-                        "source": "#sign-in-link", 
-                        "class": "hidden" }}'>
-               
-               <a href="?sign-in">Sign in to My&nbsp;<abbr>VAC</abbr>&nbsp;Account</a>  </p>
-
-   
+         <p id="register-link" class="hidden mrgn-bttm-md" data-wb-urlmapping='
+                     {
+                              "sign-in": { 
+                              "action": "removeClass", 
+                              "source": "#register-link", 
+                              "class": "hidden" } 
+                              }
+                              '>
+            <!-- EN/FR content for "Sign in to"-->
+            New to My&nbsp;<abbr>VAC</abbr>&nbsp;Account? <a href="?register">Register</a>
+         </p>
+         <!--" hide and if either query is true"-->
+      
+         <!-- If html?sign-in Hide the register for span-->
+         <p id="sign-in-link" class="hidden mrgn-bttm-md" data-wb-urlmapping='{
+                              "register": { 
+                              "action": "removeClass", 
+                              "source": "#sign-in-link", 
+                              "class": "hidden" }}'>
+      
+            <a href="?sign-in">Sign in to My&nbsp;<abbr>VAC</abbr>&nbsp;Account</a>
+         </p>
+      
          </div>
       </div>
       <!-- Landing page call-to-action panels -->
