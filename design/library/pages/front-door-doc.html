@@ -17,7 +17,7 @@
       <link href="../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
       <link rel="stylesheet" href="../../../GCWeb/css/theme.min.css" />
       <link rel="stylesheet" href="../../../cdts/css/cdts.css" />
-      <link rel="stylesheet" href="../../../mva-mda/css/theme.css" />
+      <link rel="stylesheet" href="../../../../../mva-mda/css/theme.css" />
       <noscript>
          <link rel="stylesheet" href="../../../wet-boew/css/noscript.min.css" />
       </noscript>
@@ -110,7 +110,86 @@
             -->
       <main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
       
-      <p>Front door doc</p>
+      <!--Heading-->		      
+      <div class="container">
+         <h1 id="wb-cont" property="name">
+            Landing page documentation
+         </h1>
+
+         <h2></h2>
+      </div>
+
+      <div class="container">
+         <dl class="horizontal">
+            <dt>Status</dt>
+            <dd>Prepping for development</dd>
+      
+            <dt>Type</dt>
+            <dd>Page <!-- Common design pattern --></dd>
+      
+            <dt>Last review</dt>
+            <dd>2023-01-27</dd>
+      
+            <!--
+            <dt>Conforming to</dt>
+            <dd>Going to be: Content and IA spec 2.0</dd>-->
+      
+            <dt>Working example</dt>
+            <dd><a href="front-door.html">Landing page for unauthenticated MVA users</a>
+              
+            <dt>Available instances</dt>
+            <dd><a href="https://mva-mda.vac-acc.gc.ca/pub/MVA_7_24_1">Landing page for unauthenticated MVA users (MVA_7_24_1)</a> <!--
+            <dd><a href="https://www.canada.ca/en.html" title="Canada.ca Home Page">https://www.canada.ca/en.html</a></dd>
+            <dd><a href="https://www.canada.ca/fr.html" title="Page d'accueil Canada.ca">https://www.canada.ca/fr.html</a></dd>-->
+         </dl>
+      
+         <h2>Technical specification</h2>
+      
+         <h3>Component list</h3>
+         <ul>
+            <li><a href="#">Header</a></li>
+            <li><a href="#">Heading one</a></li>
+            <li><a href="#">Double call to action</a></li>
+            <li><a href="#">Topics menu</a></li>
+            <li><a href="#">Footer</a></li>
+         </ul>
+      
+         <h3 id="">Header</h3>
+         <p>Public header without:</p>
+         <ul>
+            <li>'sign in' or 'register' buttons</li>
+            <li>breadcrumb menu</li>
+         </ul>
+      
+         <h3 id="">Heading one (with lead)</h3>
+         <p>h1 content changes with query strings:</p>
+         <ul>
+            <li>No query string: Sign in to or register for...</li>
+            <li>?sign-in: Sign in to...</li>
+            <li>?register: Register for...</li>
+         </ul>
+         
+         <h3 id="">Double call to action</h3>
+         <p>Sign-in partner and GCKey descriptions</p>
+         <ul>
+            <li>No query string: Sign in to or register for...</li>
+            <li>?sign-in: Sign in to...</li>
+            <li>?register: Register for...</li>
+         </ul>
+        
+         <h3 id="">Topics menu</h3>
+         <p>Until new 'common solutions' content is completed, use links from 'Resource Center' on existing page.</p>
+
+         <h3 id="">Footer</h3>
+         <p>Public footer</p>
+      
+         <h2>Content</h2>
+         
+         <h2>To-dos</h2>
+         <ul>
+            <li>Finalize content</li>
+         </ul>
+      </div>
 
 		<footer class="container">
 			<div class="pagedetails">
@@ -133,8 +212,7 @@
                <nav class="container wb-navcurr">
                   
                   <ul class="list-unstyled colcount-xs-2 colcount-md-3">
-                     <li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
-                     <li><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">Talk to a mental health professional</a></li>
+                     <li><a href="#">Contact VAC Usability</a></li>
                      <!--<li><a href="#">News</a></li>-->
                   </ul>
                </nav>
@@ -146,7 +224,6 @@
                <nav>
                   <h3 class="wb-inv">Veteran Affairs Canada Corporate</h3>
                   <ul>
-                     <li><a href="https://www.veterans.gc.ca/eng/e_services">About My VAC Account</a></li>
                      <li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Terms and conditions</a></li>
                      <li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Privacy</a></li></ul>
                </nav>
@@ -156,65 +233,6 @@
             </div>
          </div>
       </footer>
-
-      <section class="container">
-         <!-- Design tools bottom bar 
-			
-			VAC   .\^/.   ACC    
-			ACC  \=%¥%=/  VAC 
-			VAC   ^`|`^   ACC 
-			
-			-->
-			<section id="bottom-bar" class="wb-overlay open modal-content overlay-def wb-bar-b text-white container col-sm-12">
-            <div class="row">
-               <div class="col-sm-12 col-md-8 col-md-offset-2 mrgn-tp-md mrgn-bttm-md">
-                  <p>State previews</p>
-                  <div class="btn-group">
-                     <a href="?sign-in" id="sign-in-state-btn" class="btn btn-default" 
-                     data-wb-urlmapping='{
-                     "sign-in": { 
-                     "action": "addClass", 
-                     "source": "#sign-in-state-btn", 
-                     "class": "active" }
-                     }'>
-                     Sign-in state
-                  </a>
-                     <a href="?register" id="register-state-btn" class="btn btn-default"
-                     data-wb-urlmapping='{
-                     "register": { 
-                     "action": "addClass", 
-                     "source": "#register-state-btn", 
-                     "class": "active" }
-                     }'>
-                     Register state</a>
-                     <a href="?" id="default-state-btn" class="btn btn-default active" 
-                     data-wb-urlmapping='{
-                     "register": { 
-                     "action": "removeClass", 
-                     "source": "#default-state-btn", 
-                     "class": "active" },
-                     "sign-in": { 
-                        "action": "removeClass", 
-                        "source": "#default-state-btn", 
-                        "class": "active" }
-                     }'>Direct link state</a>
-                     
-                  </div>
-                  <a href="?wbdisable=true" id="wbdisable-state-btn" class="btn btn-link text-white"
-                     style="text-decoration: underline;" 
-                     data-wb-urlmapping='{
-                     "wbdisable=true": { 
-                     "action": "addClass", 
-                     "source": "#register-state-btn", 
-                     "class": "active" }
-                     }'>
-                     WET-BOEW disabled state
-                  </a>
-               </div>
-            </div>
-            </section>
-            <!-- END Design tools bottom bar-->
-      </section>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
       <script src="../../../wet-boew/js/wet-boew.min.js"></script>
