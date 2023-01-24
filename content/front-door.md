@@ -40,9 +40,8 @@
 | cta2-title | Option 2 of 2 - GCKey |  |  |
 | cta2-desc | Sign in, or register, with a GCKey user ID and password. | Sign in with a GCKey user ID and password. | Register with a GCKey user ID and password. |
 | cta2-btn | GCKey |  |  |
- 
-#### Topics (en)
 
+#### Topics (en)
 
 ## French
 
@@ -50,13 +49,39 @@
 
 ### Page (fr)
 
+|   |   |
+|---|---|
+| page title |  |
+
 #### Heading one (fr)
+
+| query string | none | ?sign-in | ?register |
+|---|---|---|---|
+| h1 |  |  | |
+| p.lead |  |  |  |
 
 #### Call to action panels (fr)
 
+| query string | none | ?sign-in | ?register |
+|---|---|---|---|
+| link | |  |  |
+
 ##### Sign-in partner call to action (fr)
- 
+
+| query string | none | ?sign-in | ?register |
+|---|---|---|---|
+| cta1-title | Option 1 of 2 -  |  |  |
+| cta1-desc |  |  |  |
+| cta1-btn |  |  |  |
+| summary | |  |  |
+| details |  |  |  |
+
 ##### GCKey call to action (fr)
 
+| query string | none | ?sign-in | ?register |
+|---|---|---|---|
+| cta2-title |  |  |  |
+| cta2-desc |  |  |
+| cta2-btn |  |  |  |
+
 #### Topics (fr)
- 
