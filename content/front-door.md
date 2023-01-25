@@ -16,7 +16,7 @@
 
 | query string (en) | - | ?sign-in | ?register |
 |---|---|---|---|
-| h1 | Sign in to or register for My VAC Account | Sign in to My VAC Account | Register for My VAC Account |
+| h1 | Sign in to or register for My VAC&nbsp;Account | Sign in to My VAC Account | Register for My VAC Account |
 | p.lead | Choose from one of two ways to access My VAC Account: |  |  |
 
 | query string (fr) | - | ?se-connecter | ?inscription |
@@ -75,5 +75,5 @@
 
 | topics (FR) | |
 |---|---|
-| h2 | Topics |
+| h2 | Sujets |
 | list | * Foire aux questions (FAQ) <br> * La FAQ de Mon dossier ACC <br> * Contactez-nous <br> * Modalités |
