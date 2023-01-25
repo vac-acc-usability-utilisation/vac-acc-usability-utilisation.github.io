@@ -16,7 +16,7 @@
 
 | query string (en) |   | ?sign-in | ?register |
 |---|---|---|---|
-| h1 | Sign in to or register for My VAC&amp;nbsp;Account | Sign in to My VAC Account | Register for My VAC Account |
+| h1 | Sign in to or register for My VAC Account | Sign in to My VAC Account | Register for My VAC Account |
 | p.lead | Choose from one of two ways to access My VAC Account: |  |  |
 
 | query string (fr) |   | ?se-connecter | ?inscription |
