@@ -19,10 +19,10 @@
 | h1 | Sign in to or register for My VAC Account | Sign in to My VAC Account | Register for My VAC Account |
 | p.lead | Choose from one of two ways to access My VAC Account: |  |  |
 
-| query string (fr) | - | ?- | ?- |
+| query string (fr) | - | ?se-connecter | ?inscription |
 |---|---|---|---|
-| h1 | - | - | - |
-| p.lead | - | - | - |
+| h1 | Ouvrez une session ou inscrivez-vous à Mon dossier ACC | Ouvrez une session dans Mon dossier ACC | Inscrivez-vous à Mon dossier ACC |
+| p.lead | Choisissez parmi l'une des trois façons d'accéder à Mon dossier ACC : | - | - |
 
 ### Call to action panels
 
@@ -30,9 +30,9 @@
 |---|---|---|---|
 | link | | New to My VAC Account? Register | Sign in to My VAC Account |
 
-| query string (fr)  | - | ?sign-in | ?register |
+| query string (fr)  | - | ?se-connecter | ?inscription |
 |---|---|---|---|
-| link | - | - | - |
+| link | - | Comment s'inscrire? | Ouvrez une session |
 
 #### Sign-in partner call to action 
 
@@ -44,12 +44,12 @@
 | summary | View list of Sign-in Partners | - | - |
 | details | - | - | - |
 
-| query string (fr) | - | ?- | ?- |
+| query string (fr) | - | ?se-connecter | ?inscription |
 |---|---|---|---|
-| cta1-title | Option 1 of 2 -  | - | - |
-| cta1-desc | - | - | - |
-| cta1-btn | Sign-in Partner | - | - |
-| summary | View list of Sign-in Partners | - | - |
+| cta1-title | Option 1 of 2 - Partenaires de connexion | - | - |
+| cta1-desc | Ouvrez une session ou inscrivez-vous avec les mêmes renseignements que vous utilisez pour services bancaires. | Ouvrez une session avec les mêmes renseignements que vous utilisez pour services bancaires. | Inscrivez-vous avec les mêmes renseignements que vous utilisez pour services bancaires. |
+| cta1-btn | Partenaires de connexion | - | - |
+| summary | Voir la liste des partenaires de connexion | - | - |
 | details | - | - | - |
 
 #### GCKey call to action
@@ -60,10 +60,20 @@
 | cta2-desc | Sign in, or register, with a GCKey user ID and password. | Sign in with a GCKey user ID and password. | Register with a GCKey user ID and password. |
 | cta2-btn | GCKey |  |  |
 
-| query string (fr) | - | ?- | ?- |
+| query string (fr) | - | ?se-connecter | ?inscription |
 |---|---|---|---|
-| cta2-title | Option 2 of 2 -  |  |  |
-| cta2-desc | - | - | - |
-| cta2-btn | - | - | - |
+| cta2-title | Option 2 of 2 - CléGC |  |  |
+| cta2-desc | Ouvrez une session ou inscrivez-vous avec CléGC. | Ouvrez une session avec CléGC. | Inscrivez-vous avec CléGC. |
+| cta2-btn | CléGC | - | - |
 
-### Topics (en)
+### Topics
+
+| topics (EN) | |
+|---|---|
+| h2 | Topics |
+| list | * Frequently Asked Questions (FAQs) <br> * My VAC Account FAQs <br> * Contact us <br> * Terms and conditions |
+
+| topics (FR) | |
+|---|---|
+| h2 | Topics |
+| list | * Foire aux questions (FAQ) <br> * La FAQ de Mon dossier ACC <br> * Contactez-nous <br> * Modalités |
