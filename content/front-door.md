@@ -8,7 +8,7 @@
 
 | meta (fr) |  |
 |---|---|
-| page title | - |
+| page title | Ouvrez une session ou inscrivez-vous à Mon dossier ACC |
 
 ## Page
 
