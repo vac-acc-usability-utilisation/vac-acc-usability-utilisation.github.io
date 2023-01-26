@@ -131,26 +131,13 @@
 				</a>
 				<meta property="position" content="2">
 			</li>-->
-			<li property="itemListElement" typeof="ListItem">
-				<a property="item" typeof="WebPage" href="#">
-                    My<span class="invisible-xs">&nbsp;</span><abbr title="Veteran Affairs Canada">VAC</abbr><span class="invisible-xs">&nbsp;</span>Account 
-
-				</a>
-				<meta property="position" content="3">
-			</li>
+			
             <li property="itemListElement" typeof="ListItem">
-				<a property="item" typeof="WebPage" href="#">
+				<a property="item" typeof="WebPage" href="../../../en.html">
                     vac-acc-usability-utilisation.github.io
 
 				</a>
-				<meta property="position" content="3">
-			</li>
-            <li property="itemListElement" typeof="ListItem">
-				<a property="item" typeof="WebPage" href="#">
-                    GCWeb URLMapping use case
-
-				</a>
-				<meta property="position" content="3">
+				<meta property="position" content="1">
 			</li>
 		</ol>
 	</div>
@@ -179,19 +166,28 @@
 
             <h2>The problem</h2>
             <p>Users who click a 'sign-in' or 'register' button arrive on the same web page. Once there, they choose one of two third-party authentication services. The content of that page needs to address both returning and new users. It's a challenge to deliver straightforward content. </p>
-            <h2>How it affects users</h2>
+            
+			<details>
+				<summary>Screen capture of My VAC Account landing page (2023-01-25)</summary>
+				
+				<img src="img/screencapture-MVA-7-24-1-2023-01-25.png" alt="Screen capture of My VAC Account landing page" class="full-width">
+
+			</details>
+			
+			
+			<h2>How it affects users</h2>
             <p>The application isn't responding to the choices that you've made. Users lose trust and confidence.</p>
             <h2>The solution</h2>
-            <p>It is clearer to arrive on a page and read either 'sign-in' or 'register' when you press either button. Rather than create many pages with different content, we can use GCWeb's URL Mapping. We tweak the content on the page to fit people's intent</p>
+            <p>It is clearer to arrive on a page and read either 'sign-in' or 'register' when you press either button. Rather than create many pages with different content, we can use GCWeb's URL Mapping. We tweak the content on the page to fit a person's intent</p>
             <h3>URL Mapping</h3>
-            <p>Query strings are a way to add information to a URL. You may have noticed links that end in something like `?value=true`. Query strings can help us change the page's appearance, for example.
+            <p>Query strings are a way to add information to a URL. You may have noticed links that end in something like <code>?lang=en</code>. Query strings can help us change the page's appearance, for example.
             </p>
             <p>The benefit of this tool being a part of the GCWeb theme is that we don't create and maintain custom javascript. This tool makes reacting to query strings part of the HTML markup. 
             </p>
-            <p>We will show and hide words on the landing page in the heading. The page will read either "Sign in to My VAC Account" or "Register for My VAC Account." We will also need the default content "Sign in to or Register for My VAC Account."
+            <p>When a user clicks a sign-in or register link, the landing page will read either "Sign in to My VAC Account" or "Register for My VAC Account." We will also need the default content "Sign in to or Register for My VAC Account."
             </p>
             <h3>Default content</h3>
-            <p>The default content is essential for two reasons. First, the content will not change if a user arrives at the URL from another source. Also, if the user disabled javascript, the content does not change. Second, this is the content that displays before the Web Experience Toolkit is ready. For people with slower connections, this could take a few seconds. This means users might read part way down the page before the content changes. The content should only change in a minor way. 
+            <p>The default content is essential for two reasons. First, the content will not change if a user arrives at the URL from another source. Also, if the user disabled javascript, the content does not change. Second, this is the content that displays before the Web Experience Toolkit is ready. For people with slower connections, this could take a few seconds. This means users might read part way down the page before the content changes. The content should only slightly change. 
             </p>
             
             <p>This means the default content is visible unless either 'sign-in' or 'register' is in the query string. The register and sign-in content are hidden unless their respective query strings are present.</p>
@@ -213,47 +209,50 @@
             <summary>HTML for h1 example</summary>
 
             <pre>
-                <code>
-    &lt;!-- Landing page heading--&gt;
-    &lt;div class=&quot;container&quot;&gt;
-        &lt;!-- h1 with URLMapping on spans--&gt;
-        &lt;h1 id=&quot;wb-cont&quot; property=&quot;name&quot;&gt;
-        &lt;!-- Show Sign in content when url?sign-in --&gt;
-        &lt;span id=&quot;sign-in-h1-span&quot; class=&quot;hidden&quot;
-                    data-wb-urlmapping={&apos;
-                    &quot;sign-in&quot;: { 
-                    &quot;action&quot;: &quot;removeClass&quot;, 
-                    &quot;source&quot;: &quot;#sign-in-h1-span&quot;, 
-                    &quot;class&quot;: &quot;hidden&quot; }
-                    }&apos;&gt;
-                    Sign in to &lt;/span&gt;
-        &lt;!-- Show Register content when url?register --&gt;
-        &lt;span id=&quot;register-h1-span&quot; class=&quot;hidden&quot;
-                    data-wb-urlmapping=&apos;{
-                    &quot;register&quot;: { 
-                    &quot;action&quot;: &quot;removeClass&quot;, 
-                    &quot;source&quot;: &quot;#register-h1-span&quot;, 
-                    &quot;class&quot;: &quot;hidden&quot; }
-                    }&apos;&gt;
-                    Register for &lt;/span&gt;
-    
-        &lt;!-- Hide default when url?register or url?sign-in --&gt;
-        &lt;span id=&quot;default-h1-span&quot; data-wb-urlmapping=&apos;{
-                    &quot;sign-in&quot;: { 
-                    &quot;action&quot;: &quot;addClass&quot;, 
-                    &quot;source&quot;: &quot;#default-h1-span&quot;, 
-                    &quot;class&quot;: &quot;hidden&quot; },
-                    &quot;register&quot;: { 
-                        &quot;action&quot;: &quot;addClass&quot;, 
-                        &quot;source&quot;: &quot;#default-h1-span&quot;, 
-                        &quot;class&quot;: &quot;hidden&quot; }
-                    }&apos;&gt;
-                    &lt;!--Default empty ?--&gt;
-                    Sign in to or register for
-                &lt;/span&gt;
-        My&amp;nbsp;&lt;abbr title=&quot;Veterans Affairs Canada&quot;&gt;VAC&lt;/abbr&gt;&amp;nbsp;Account
-        &lt;/h1&gt;
-        
+<code>&lt;!-- h1 with URLMapping on spans--&gt;
+&lt;h1 id=&quot;wb-cont&quot; property=&quot;name&quot;&gt;
+
+	&lt;!-- Show Sign in content if ?sign-in --&gt;
+	&lt;span id=&quot;sign-in-h1-span&quot; class=&quot;hidden&quot;
+				data-wb-urlmapping={&apos;
+				&quot;sign-in&quot;: { 
+					&quot;action&quot;: &quot;removeClass&quot;, 
+					&quot;source&quot;: &quot;#sign-in-h1-span&quot;, 
+					&quot;class&quot;: &quot;hidden&quot; }
+				}&apos;&gt;
+		Sign in to 
+	&lt;/span&gt;
+
+	&lt;!-- Show Register content if ?register --&gt;
+	&lt;span id=&quot;register-h1-span&quot; class=&quot;hidden&quot;
+				data-wb-urlmapping=&apos;{
+				&quot;register&quot;: { 
+					&quot;action&quot;: &quot;removeClass&quot;, 
+					&quot;source&quot;: &quot;#register-h1-span&quot;, 
+					&quot;class&quot;: &quot;hidden&quot; }
+				}&apos;&gt;
+		Register for 
+	&lt;/span&gt;
+
+	&lt;!-- Hide default if ?register or ?sign-in --&gt;
+	&lt;span id=&quot;default-h1-span&quot; 
+				data-wb-urlmapping=&apos;{
+				&quot;sign-in&quot;: { 
+					&quot;action&quot;: &quot;addClass&quot;, 
+					&quot;source&quot;: &quot;#default-h1-span&quot;, 
+					&quot;class&quot;: &quot;hidden&quot; },
+				&quot;register&quot;: { 
+					&quot;action&quot;: &quot;addClass&quot;, 
+					&quot;source&quot;: &quot;#default-h1-span&quot;, 
+					&quot;class&quot;: &quot;hidden&quot; }
+				}&apos;&gt;
+		Sign in to or register for 
+	&lt;/span&gt;
+
+	&lt;!--My VAC Account span (always visible) --&gt;
+	My&amp;nbsp;&lt;abbr title=&quot;Veterans Affairs Canada&quot;&gt;VAC&lt;/abbr&gt;&amp;nbsp;Account
+&lt;/h1&gt;
+	
                 </code>
                </pre>
 
