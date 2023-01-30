@@ -1,4 +1,3 @@
-
 # Front door
 
 ## Meta 
@@ -17,7 +16,7 @@
 | query string (en) |   | ?sign-in | ?register |
 |---|---|---|---|
 | h1 | Sign in to or register for My VAC Account | Sign in to My VAC Account | Register for My VAC Account |
-| p.lead | Choose from one of two ways to access My VAC Account: |  |  |
+| p.lead | Choose from one of two ways to access My VAC Account: | Choose from one of two ways to sign in to My VAC Account: | Choose from one of two ways to register for My VAC Account: |
 
 | query string (fr) |   | ?se-connecter | ?inscription |
 |---|---|---|---|
