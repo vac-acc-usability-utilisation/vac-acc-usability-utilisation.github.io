@@ -21,7 +21,8 @@
 | query string (fr) |   | ?se-connecter | ?inscription |
 |---|---|---|---|
 | h1 | Ouvrez une session ou inscrivez-vous à Mon dossier ACC | Ouvrez une session dans Mon dossier ACC | Inscrivez-vous à Mon dossier ACC |
-| p.lead | Choisissez parmi l'une des trois façons d'accéder à Mon dossier ACC : |   |   |
+| p.lead | Choisissez l'une des deux options suivantes pour accéder à Mon dossier ACC : |  Choisissez l'une des deux options suivantes pour accéder à Mon dossier ACC : |  Choisissez l'une des deux options suivantes pour accéder à Mon dossier ACC :
+  |
 
 ### Call to action panels
 
