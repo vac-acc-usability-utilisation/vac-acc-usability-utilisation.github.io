@@ -1,4 +1,3 @@
-
 # Front door
 
 ## Meta 
@@ -17,12 +16,12 @@
 | query string (en) |   | ?sign-in | ?register |
 |---|---|---|---|
 | h1 | Sign in to or register for My VAC Account | Sign in to My VAC Account | Register for My VAC Account |
-| p.lead | Choose from one of two ways to access My VAC Account: |  |  |
+| p.lead | Choose from one of two ways to access My VAC Account: | Choose from one of two ways to sign in to My VAC Account: | Choose from one of two ways to register for My VAC Account: |
 
 | query string (fr) |   | ?se-connecter | ?inscription |
 |---|---|---|---|
 | h1 | Ouvrez une session ou inscrivez-vous à Mon dossier ACC | Ouvrez une session dans Mon dossier ACC | Inscrivez-vous à Mon dossier ACC |
-| p.lead | Choisissez parmi l'une des trois façons d'accéder à Mon dossier ACC : |   |   |
+| p.lead | Choisissez l'une des deux options suivantes pour accéder à Mon dossier ACC : |  Choisissez l'une des deux options suivantes pour accéder à Mon dossier ACC : |  Choisissez l'une des deux options suivantes pour accéder à Mon dossier ACC : |
 
 ### Call to action panels
 
