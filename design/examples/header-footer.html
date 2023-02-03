@@ -356,32 +356,52 @@
 					<meta property="areaServed" typeof="Country" content="Canada">
 					<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
 				</div>
+				<section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
+					<h2>Search</h2>
+					<form action="#" method="post" name="cse-search-box" role="search">
+						<div class="form-group wb-srch-qry">
+							<label for="wb-srch-q" class="wb-inv">Search</label>
+							<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search VAC">
+							<datalist id="wb-srch-q-ac"></datalist>
+						</div>
+						<div class="form-group submit">
+							<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
+								<span class="glyphicon-search glyphicon"></span>
+								<span class="wb-inv">Search</span>
+							</button>
+						</div>
+					</form>
+				</section>
 			</div>
+
 		</div>
         <div class="app-bar">
             <div class="container">
                 <div class="row">
-					<section class="col-xs-6 col-sm-7">
-						<nav>
-							
-								<h2 class="wb-inv">Menu</h2>
-
-								<span class="app-name" style="padding-left:0;">My VAC Account</span>
-								
-							
-						</nav>
+					<section class="col-xs-8 col-sm-5 col-md-4">
+						<h2 class="wb-inv">Name of Web application</h2>
+						<a href="#" class="app-name" href="../../en.html">My&nbsp;VAC&nbsp;Account</a>
 					</section>
                     
-                    <nav class="col-xs-6 col-sm-5 text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
+                    <nav class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
                         <section>    
                             <h2 class="wb-inv">Account menu</h2>
-							<a href="#" class="btn btn-link text-white hidden-xs hidden-sm"> <span class="fa fa-envelope mrgn-rght-sm text-muted"></span>Inbox</a>
-							<a href="#" class="btn btn-link text-white mrgn-rght-md hidden-xs hidden-sm"> <span class="fa fa-cog mrgn-rght-sm text-muted"></span>Profile</a>
+							<a href="#" class="btn btn-link text-white hidden-xs hidden-sm"> <span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span class="badge">2</span> </a>
+							<a href="#" class="btn btn-link text-white mrgn-rght-md hidden-xs hidden-sm hidden-md"> <span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a>
+							<!--mbl-->
+							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" class="hidden-sm" role="menu" aria-orientation="vertical" class="pull-left full-width" style="position:static; float: left; text-align: left; width: 80%;">
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span class="badge">2</span></a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="#">Switch user</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
+							</ul>
 
-							<button class="btn btn-default mrgn-lft-md" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false">Noel<span class="hidden-xs"> Knockwood</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
-							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" style="text-align: left; width: auto;">
-								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-envelope mrgn-rght-sm text-muted"></span>Inbox</a></li>
-								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-cog mrgn-rght-sm text-muted"></span>Profile</a></li>
+							<button class="btn btn-default mrgn-lft-md hidden-xs" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" class="hidden-xs" role="menu" aria-orientation="vertical" style="text-align: left; width: auto;">
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span class="badge">2</span></a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="#">Switch user</a></li>
 								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
 							</ul>
 							
@@ -394,7 +414,7 @@
 		<nav id="wb-bc" property="breadcrumb">
 			<h2>You are here:</h2>
 			<div class="container">
-				<ol class="breadcrumb hidden-xs hidden-sm" typeof="BreadcrumbList">
+				<ol class="breadcrumb hidden-xs" typeof="BreadcrumbList">
 					<li property="itemListElement" typeof="ListItem">
 						<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
 							<span property="name">My VAC Account</span>
@@ -414,18 +434,18 @@
 						<meta property="position" content="3">
 					</li>
 				</ol>
-				<div class="hidden-md hidden-lg">
-					<ol>
-						<li>	
+				<div class="hidden-sm hidden-md hidden-lg">
+				<ol>
+					<li>	
+						
+						<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
+							<span class="fa fa-arrow-left"></span>
+							<span property="name">Template and components</span>
+						</a></li>
+				</ol>
 							
-							<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
-								<span class="fa fa-arrow-left"></span>
-								<span property="name">Template and components</span>
-							</a></li>
-					</ol>
-								
-							
-					</div>
+						
+				</div>
 			</div>
 		</nav>
         <!--
@@ -598,11 +618,79 @@
 				<section>    
 					<h2 class="wb-inv">Account menu</h2>
 
-					<button id="mbl-mnu-btn" class="btn btn-default btn-lg mrgn-lft-md " style="background:#fff; color:#000;" type="button" aria-haspopup="true" aria-controls="app-mnu" aria-expanded="false"
+					<button id="mbl-mnu-btn" class="btn btn-default btn-lg mrgn-lft-md visible-xs" style="background:#fff; color:#000;" type="button" aria-haspopup="true" aria-controls="app-mnu" aria-expanded="false"
 					>
-						MENU<span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+						MENU<span class="fa fa-chevron-down mrgn-lft-sm"></span>
+					</button>
 					
-					<ul id="app-mnu" role="menu" class="col-xs-6" aria-orientation="vertical" style="text-align: left; width: 100%; padding:1.25em 1em 1em; background-color: #fff; border: 1px solid #000; position: static;">
+					<ul id="app-mnu" class="hidden-sm" role="menu" aria-orientation="vertical" style="text-align: left; padding:1.25em 1em 1em; background-color: #fff; border: 1px solid #000; width: 100%; position:static;">
+						<div class="accordion" >
+							<nav>
+								<ul class="list-unstyled list-group" >
+									<li>
+										<a href="#" class="btn btn-link full-width list-group-item brdr-bttm" style="text-align: left; font-size: 18px;">
+
+											Overview
+										</a>
+									</li>
+									<li>
+										<a href="#" class="btn btn-link full-width list-group-item brdr-bttm" style="text-align: left; font-size: 18px;">
+											Apply for programs and services
+										</a>
+									</li>
+									<li>
+										<a href="#" class="btn btn-link full-width list-group-item brdr-bttm" style="text-align: left; font-size: 18px;">
+											Track your applications
+										</a>
+									</li>
+									<li>
+										 <!-- Accordion section 1 -->
+							<!--<details class="acc-group " style="padding:0; font-size:14px;">
+								
+								<summary class="wb-toggle tgl-tab brdr-0" data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>Apply for programs and services</summary>
+								<div class="tgl-panel">
+									
+									<ul class="list-unstyled mrgn-lft-sm">
+										<li><a href="#" class="btn btn-link full-width brdr-bttm"  style="text-align: left;">Find a form</a></li>
+										<li><a href="#" class="btn btn-link full-width brdr-bttm"  style="text-align: left;">Track your applications</a></li>
+										<li><a href="#" class="btn btn-link full-width brdr-bttm"  style="text-align: left;">What can you apply for?</a></li>
+										<li><a href="#" class="btn btn-link full-width"  style="text-align: left;">Upload files</a></li>
+
+									</ul>
+								</div>
+							</details>-->
+									</li>
+									
+									
+									<li> 
+										<!-- Accordion section 3 -->
+										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
+											<summary class="wb-toggle tgl-tab brdr-bttm" style="font-size: 16px;" data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>Transition to life after service</summary>
+											<div class="tgl-panel">
+												<!-- Section 3's content -->
+												<ul class="list-unstyled mrgn-lft-sm">
+													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; font-size: 18px;">Your transition task list</a></li>
+												</ul>
+											</div>
+										</details>
+									</li>
+									<li>
+										<a href="#" class="btn btn-link full-width list-group-item brdr-bttm" style="text-align: left; font-size: 18px;">
+											Your programs and services
+										</a>
+									</li>
+									
+								</ul>
+							</nav>
+						</div>
+					</ul>
+
+					<button id="mbl-mnu-btn" class="btn btn-default btn-lg mrgn-lft-md visible-sm" style="background:#fff; color:#000;" type="button" aria-haspopup="true" aria-controls="app-mnu" aria-expanded="false"
+					>
+						MENU<span class="fa fa-chevron-down mrgn-lft-sm"></span>
+					</button>
+					
+					<ul id="app-mnu" class="hidden-xs" role="menu" aria-orientation="vertical" style="text-align: left; padding:1.25em 1em 1em; background-color: #fff; border: 1px solid #000; width:50%;">
 						<div class="accordion" >
 							<nav>
 								<ul class="list-unstyled list-group" >
@@ -763,7 +851,9 @@
 					<div class="col-sm-12 col-lg-9 col-md-8">
 						<section>
 							<div class="mrgn-lft-md">
-								<h1 id="wb-cont" class="mrgn-tp-lg" property="name">Header, navigation and footer</h1>
+								<h1 id="wb-cont"  property="name">
+									Header, navigation and footer
+								</h1>
 							</div>
 						</section>
 						<section>
@@ -855,6 +945,28 @@
 							</div>
 							<div class="clearfix mrgn-bttm-lg mrgn-tp-lg"></div>
 						</section>
+						<footer class="pagedetails">
+							<h2 class="wb-inv">Page details</h2>
+							<div class="row">
+								<div class="col-sm-8 col-md-9 col-lg-9">
+									<div data-ajax-replace="../feedback/ajax/report-problem-en.html" >
+											<div class="row row-no-gutters">
+												<div class="col-sm-9 col-md-6 col-lg-5">
+													<a class="btn btn-default btn-block" href="https://www.canada.ca/en/report-problem.html">Report a problem on this page</a>
+												</div>
+											</div>
+										</div>
+								</div>
+								<div class="wb-share col-sm-4 col-md-3" data-wb-share='{"lnkClass": "btn btn-default btn-block"}' >
+								</div>
+								<div class="col-xs-12">
+									<dl id="wb-dtmd">
+										<dt>Date modified:</dt>
+										<dd><time property="dateModified">2022-04-14</time></dd>
+									</dl>
+								</div>
+							</div>
+						</footer>
 					</div>
 						
 					</div>
@@ -865,6 +977,9 @@
 		
 	</main>
 
+
+
+	<!-- footer -->
 	<div id="default-footer" 
 	data-wb-urlmapping='{
 		"transactional": { 
