@@ -123,13 +123,23 @@
 	}*/
 	}
 
+/*Custom*/
+/*Extra-extra-small view and under */
+@media screen and (max-width: 767px) {
+
+}
+
 /*Extra-small view and under (screen only)*/
 @media screen and (max-width: 767px) {
 
 	/*App bar - app name link 	*/
 	.app-name {
-		font-size: 18px;
+		font-size: 22px;
 		margin-top: 10px;
+	}
+
+	.app-bar .gcweb-menu button[aria-haspopup=true] {
+		
 	}
 
 	/*Mobile app bar
