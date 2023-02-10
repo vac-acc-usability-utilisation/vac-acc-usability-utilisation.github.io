@@ -151,143 +151,81 @@
 <section class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h1 id="wb-cont" property="name">GCWeb URL Mapping Use Case: <abbr title="My VAC Account">MVA</abbr> landing page</h1>
-            <p class="lead">GCWeb use cases in the My<span class="invisible-xs">&nbsp;</span><abbr title="Veteran Affairs Canada">VAC</abbr><span class="invisible-xs">&nbsp;</span>Account 
-    sign-in and register redesign</p>
+            <h1 id="wb-cont" property="name">Slips and mistakes</h1>
+            <p class="lead">Changing the behaviour of My VAC Account's sign out button</p>
     
         </div>
     </div>
 </section>
 
   
-<section class="container wb-prettify all-pre lang-css">
+<section class="container">
     <div class="row">
         <div class="col-sm-12">
-
-            <h2>The problem</h2>
-            <p>Users who click a 'sign-in' or 'register' button arrive on the same web page. Once there, they choose one of two third-party authentication services. The content of that page needs to address both returning and new users. It's a challenge to deliver straightforward content. </p>
-            
-			<details>
-				<summary>Screen capture of My VAC Account landing page (2023-01-25)</summary>
-				
-				<img src="img/screencapture-MVA-7-24-1-2023-01-25.png" alt="Screen capture of My VAC Account landing page" class="full-width">
-
-			</details>
+			<p>Errors are unavoidable. </p>
+			<p>Human errors are distinguished between slips and mistakes.</p>
+			<section>
 			
-			
-			<h2>How it affects users</h2>
-            <p>The application isn't responding to the choices that you've made. Users lose trust and confidence.</p>
-            <h2>The solution</h2>
-            <p>It is clearer to arrive on a page and read either 'sign-in' or 'register' when you press either button. Rather than create many pages with different content, we can use GCWeb's URL Mapping. We tweak the content on the page to fit a person's intent</p>
-            <h3>URL Mapping</h3>
-            <p>Query strings are a way to add information to a URL. You may have noticed links that end in something like <code>?lang=en</code>. Query strings can help us change the page's appearance, for example.
-            </p>
-            <p>The benefit of this tool being a part of the GCWeb theme is that we don't create and maintain custom javascript. This tool makes reacting to query strings part of the HTML markup. 
-            </p>
-            <p>When a user clicks a sign-in or register link, the landing page will read either "Sign in to My VAC Account" or "Register for My VAC Account." We will also need the default content "Sign in to or Register for My VAC Account."
-            </p>
-            <h3>Default content</h3>
-            <p>The default content is essential for two reasons. First, the content will not change if a user arrives at the URL from another source. Also, if the user disabled javascript, the content does not change. Second, this is the content that displays before the Web Experience Toolkit is ready. For people with slower connections, this could take a few seconds. This means users might read part way down the page before the content changes. The content should only slightly change. 
-            </p>
+				<h2>Slips</h2>
+				<p>Slips are when we make an error executing a plan.</p>
+				<p>They are errors like sending a message to the wrong person or using a tablespoon rather than a teaspoon. Doing something you did not intend to.</p>
+
+				<p>These are slips in attention. We're in auto-pilot mode, and people are distracted by their environment and thoughts.</p>
+
+				<p>Slips happen to experts more often than beginners.</p>
+
+				<p>Preventing slips:</p>
+				<ul>
+					<li>Adjust the design depending on the type of slip.</li>
+					<li>If people need essential information, we design to direct attention to important details.</li>
+					<li>Allow people to recover. </li>
+				</ul>
+
+				<h2>Mistakes</h2>
+				<p>Mistakes are when we make an error in developing a plan.</p>
+				<p>They are decisions made on incorrect information. Doing something you intended that turns out to be wrong.</p>
+				<p>Errors aren't about the person making the mistakes, and they're about human limitations in cognitive load and a person's environment. We cannot convince people to think a specific way so that they use an interface the way we assume they should. We must understand what they're trying to achieve and meet them halfway. </p>
+				<p>Preventing mistakes:</p>
+				<ul>
+					<li>Providing clear, concise, and complete information</li>
+					<li>Make risky, error-prone operations hard to do.</li>
+					<li>Match mental models.</li>
+					<li>Allow people to recover. </li>
+				</ul>
+
+				<h3>Making risky, error-prone operations hard to do</h3>
+				<p>Confirmation overlays are a way to control destructive changes. When a change can't be undone, we ask someone if they're sure. They must only appear when they're necessary. If fewer appear, people will pay more attention to their content. </p>
+				<p>We noticed that while at events, an error was occurring. When a person presses the sign-out button, a new page appears. There they must select a confirmation sign-out button. People would press the button in the header and walk away from the laptop, assuming they had signed out. Again, it's more about the system and the environment than the person. </p>
+				<p>So we changed the behaviour of the sign-out button. We don't need a confirmation message for signing out. It's not a destructive action; people can recover since they arrive at the sign-in page. </p>	
+			</section>
+
+			<section>
+				<h2>Sources</h2>
+				<ul>
+					<li>Understanding adverse events: human factors. | BMJ Quality & Safety. https://qualitysafety.bmj.com/content/4/2/80
+					</li>
+					<li>https://www.nngroup.com/articles/user-mistakes/
+					</li>
+					<li>https://www.nngroup.com/articles/slips/
+					</li>
+					<li>https://www.uxmatters.com/mt/archives/2020/11/designing-with-the-mind-in-mind-1.php#:~:text=Errors%20can%20be%20classified%20as,didn't%20intend%20to%20do.</li>
+					<li>https://www.interaction-design.org/literature/book/the-glossary-of-human-computer-interaction/human-error-slips-and-mistakes</li>
+					<li>https://www.shortform.com/blog/kinds-of-errors/</li>
+					<li>Requesting confirmation to continue with selected action. https://www.w3.org/WAI/WCAG21/Techniques/general/G168</li>
+				</ul>
+			</section>
+
             
-            <p>This means the default content is visible unless either 'sign-in' or 'register' is in the query string. The register and sign-in content are hidden unless their respective query strings are present.</p>
-
-
-
-
-           <h3>Sign-in and register states</h3>
-
-           <p>When a user clicks a sign-in or register call to action, we tweak the content in several places: </p>
-            <ul>
-                <li>Page heading: specifies either Sign-in or Register</li>
-                <li>Sign-in services descriptions: specifies either Sign-in or Register</li>
-                <li>Link to register or sign-in: Links to the opposite state, in case a user arrives here by mistake</li>
-            </ul>
             
-           <details>
-
-            <summary>HTML for h1 example</summary>
-
-            <pre>
-<code>&lt;!-- h1 with URLMapping on spans--&gt;
-&lt;h1 id=&quot;wb-cont&quot; property=&quot;name&quot;&gt;
-
-	&lt;!-- Show Sign in content if ?sign-in --&gt;
-	&lt;span id=&quot;sign-in-h1-span&quot; class=&quot;hidden&quot;
-				data-wb-urlmapping={&apos;
-				&quot;sign-in&quot;: { 
-					&quot;action&quot;: &quot;removeClass&quot;, 
-					&quot;source&quot;: &quot;#sign-in-h1-span&quot;, 
-					&quot;class&quot;: &quot;hidden&quot; }
-				}&apos;&gt;
-		Sign in to 
-	&lt;/span&gt;
-
-	&lt;!-- Show Register content if ?register --&gt;
-	&lt;span id=&quot;register-h1-span&quot; class=&quot;hidden&quot;
-				data-wb-urlmapping=&apos;{
-				&quot;register&quot;: { 
-					&quot;action&quot;: &quot;removeClass&quot;, 
-					&quot;source&quot;: &quot;#register-h1-span&quot;, 
-					&quot;class&quot;: &quot;hidden&quot; }
-				}&apos;&gt;
-		Register for 
-	&lt;/span&gt;
-
-	&lt;!-- Hide default if ?register or ?sign-in --&gt;
-	&lt;span id=&quot;default-h1-span&quot; 
-				data-wb-urlmapping=&apos;{
-				&quot;sign-in&quot;: { 
-					&quot;action&quot;: &quot;addClass&quot;, 
-					&quot;source&quot;: &quot;#default-h1-span&quot;, 
-					&quot;class&quot;: &quot;hidden&quot; },
-				&quot;register&quot;: { 
-					&quot;action&quot;: &quot;addClass&quot;, 
-					&quot;source&quot;: &quot;#default-h1-span&quot;, 
-					&quot;class&quot;: &quot;hidden&quot; }
-				}&apos;&gt;
-		Sign in to or register for 
-	&lt;/span&gt;
-
-	&lt;!--My VAC Account span (always visible) --&gt;
-	My&amp;nbsp;&lt;abbr title=&quot;Veterans Affairs Canada&quot;&gt;VAC&lt;/abbr&gt;&amp;nbsp;Account
-&lt;/h1&gt;
-	
-                </code>
-               </pre>
-
-           </details>
-
-           <h2>Working example</h2>
-           <p>
-            <a href="../../library/pages/front-door.html">My VAC Account landing page working example</a>
-            </p>
-            <ul>
-                <li><a href="../../library/pages/front-door.html?sign-in">Sign in</a></li>
-                <li><a href="../../library/pages/front-door.html?register">Register</a></li>
-            </ul>
-           
-           <h2>GCWeb documentation</h2>
-           <p><a href="https://openplus.github.io/GCWeb/components/wb-urlmapping/urlmapping-doc-en.html">GCWeb URL Mapping documentation</a></p>
-
-        </div>
-                
-                    
-             
-               
-           
-                
-        </div>
-    </div>
     <nav role="navigation" class="mrgn-bttm-lg">
 		<h3 class="wb-inv">Document navigation</h3>
-		<ul class="pager">
+		<ul class="pager"><!--
 			<li class="next">
-				<a href="../2023-02-13/slips-and-mistakes.html">Next blog post&nbsp;»</a>
+				<a href="../2023-01-27/url-mapping-use-case.html">Next blog post&nbsp;»</a>
 			</li>
-			
+			-->
 			<li class="previous">
-				<a href="../2023-01-13/mva-gcweb-redesign.html">«&nbsp;Previous blog post</a>
+				<a href="../2023-01-27/url-mapping-use-case.html">«&nbsp;Previous blog post</a>
 			</li>
 		</ul>
 	</nav>
