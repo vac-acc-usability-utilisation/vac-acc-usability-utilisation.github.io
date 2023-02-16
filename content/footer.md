@@ -1,7 +1,5 @@
 # Footer
 
-## Heading one
-
 | Footer (MVA) - (en) | Unauthenticated |
 |---|---|
 | h2.wb-inv | About My VAC Account |
