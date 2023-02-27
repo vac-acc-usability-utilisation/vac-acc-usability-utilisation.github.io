@@ -11,68 +11,29 @@
 
 ## Page
 
-### Heading one
-
-| query string (en) |   | ?sign-in | ?register |
-|---|---|---|---|
-| h1 | Sign in to or register for My VAC Account | Sign in to My VAC Account | Register for My VAC Account |
-| p.lead | Choose from one of two ways to access My VAC Account: | Choose from one of two ways to sign in to My VAC Account: | Choose from one of two ways to register for My VAC Account: |
-
-| query string (fr) |   | ?se-connecter | ?inscription |
-|---|---|---|---|
-| h1 | Ouvrez une session ou inscrivez-vous à Mon dossier ACC | Ouvrez une session dans Mon dossier ACC | Inscrivez-vous à Mon dossier ACC |
-| p.lead | Choisissez l'une des deux options suivantes pour accéder à Mon dossier ACC : |  Choisissez l'une des deux options suivantes pour accéder à Mon dossier ACC : |  Choisissez l'une des deux options suivantes pour accéder à Mon dossier ACC : |
-
-### Call to action panels
-
-| query string (en) |   | ?sign-in | ?register |
-|---|---|---|---|
-| link | | New to My VAC Account? Register | Sign in to My VAC Account |
-
-| query string (fr)  |   | ?se-connecter | ?inscription |
-|---|---|---|---|
-| link |   | Comment s'inscrire? | Ouvrez une session |
-
-#### Sign-in partner call to action 
-
-| query string (en) |   | ?sign-in | ?register |
-|---|---|---|---|
-| cta1-title | Option 1 of 2 - Sign-in Partner |   |   |
-| cta1-desc | Sign in, or register, with the same sign-in information you use for online banking. | Sign in with the same sign-in information you use for online banking. | Register with the same sign-in information you use for online banking. |
-| cta1-btn | Sign-in Partner |   |   |
-| summary | View list of Sign-in Partners |   |   |
-| details |   |   |   |
-
-| query string (fr) |   | ?se-connecter | ?inscription |
-|---|---|---|---|
-| cta1-title | Option 1 of 2 - Partenaires de connexion |   |   |
-| cta1-desc | Ouvrez une session ou inscrivez-vous avec les mêmes renseignements que vous utilisez pour services bancaires. | Ouvrez une session avec les mêmes renseignements que vous utilisez pour services bancaires. | Inscrivez-vous avec les mêmes renseignements que vous utilisez pour services bancaires. |
-| cta1-btn | Partenaires de connexion |   |   |
-| summary | Voir la liste des partenaires de connexion |   |   |
-| details |   |   |   |
-
-#### GCKey call to action
-
-| query string (en) |   | ?sign-in | ?register |
-|---|---|---|---|
-| cta2-title | Option 2 of 2 - GCKey |  |  |
-| cta2-desc | Sign in, or register, with a GCKey user ID and password. | Sign in with a GCKey user ID and password. | Register with a GCKey user ID and password. |
-| cta2-btn | GCKey |  |  |
-
-| query string (fr) |   | ?se-connecter | ?inscription |
-|---|---|---|---|
-| cta2-title | Option 2 of 2 - CléGC |  |  |
-| cta2-desc | Ouvrez une session ou inscrivez-vous avec CléGC. | Ouvrez une session avec CléGC. | Inscrivez-vous avec CléGC. |
-| cta2-btn | CléGC |   |   |
-
-### Topics
-
-| topics (EN) | |
-|---|---|
-| h2 | Topics |
-| list | * Frequently Asked Questions (FAQs) <br> * My VAC Account FAQs <br> * Contact us <br> * Terms and conditions |
-
-| topics (FR) | |
-|---|---|
-| h2 | Sujets |
-| list | * Foire aux questions (FAQ) <br> * La FAQ de Mon dossier ACC <br> * Contactez-nous <br> * Modalités |
+| SECTION | ENGLISH | FRENCH |
+| Meta | Sign in to or register for My Veterans Affairs Canada Account | Inscrivez-vous à Mon dossier d'Anciens Combattants Canada (ACC) ou ouvrez une session |
+| Heading one | Sign in to or register for My VAC Account | Inscrivez-vous à Mon dossier ACC ou ouvrez une session |
+| Choose from one of two ways to access My VAC Account: | Choisissez l'un des deux moyens d'accéder à Mon dossier ACC : |
+| Sign in to My VAC Account | Ouvrez une session dans Mon dossier ACC |
+| Choose from one of two ways to sign in to My VAC Account: | Choisissez l'un des deux moyens d'ouvrir une session dans Mon dossier ACC : |
+| Register for My VAC Account | Inscrivez-vous à Mon dossier ACC |
+| Choose from one of two ways to register for My VAC Account: | Choisissez l'un des deux moyens de vous inscrire à Mon dossier ACC : |
+| Call to action panels | New to My VAC Account? Register | Comment s'inscrire? S'inscrire |
+| Sign in to My VAC Account | Ouvrez une session dans Mon dossier ACC |
+| Sign-in partner call to action | Option 1 of 2 - Sign-in Partner | Option 1 de 2 -- Partenaire de connexion |
+| Sign in, or register, with the same sign-in information you use for online banking. | Ouvrez une session ou inscrivez-vous avec les mêmes identifiants que vous utilisez pour vos transactions bancaires en ligne |
+| Sign in with the same sign-in information you use for online banking. | Ouvrez une session avec les mêmes identifiants que vous utilisez pour vos transactions bancaires en ligne |
+| Register with the same sign-in information you use for online banking. | Inscrivez-vous avec les mêmes identifiants que vous utilisez pour vos transactions bancaires en ligne |
+| Sign-in Partner | Partenaire de connexion |
+| View list of Sign-in Partners | Consultez la liste des partenaires de connexion |
+| GCKey call to action | Option 2 of 2 - GCKey | Option 2 de 2 -- CléGC |
+| Sign in, or register, with a GCKey user ID and password. | Ouvrez une session ou inscrivez-vous à l'aide de votre nom d'utilisateur et de votre mot de passe CléGC |
+| Sign in with a GCKey user ID and password. | Ouvrez une session à l'aide de votre nom d'utilisateur et de votre mot de passe CléGC. |
+| Register with a GCKey user ID and password. | Inscrivez-vous à l'aide de votre nom d'utilisateur et de votre mot de passe CléGC |
+| GCKey | CléGC |
+| Topics | Topics | Sujets |
+| Frequently Asked Questions (FAQs) | Foire aux questions (FAQ) |
+| My VAC Account FAQs | FAQ sur Mon dossier ACC |
+| Contact us | Communiquez avec nous |
+| Terms and conditions | Modalités |
