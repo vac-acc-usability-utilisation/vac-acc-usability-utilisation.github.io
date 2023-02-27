@@ -12,6 +12,7 @@
 ## Page
 
 | SECTION | ENGLISH | FRENCH |
+|---|---|---|
 | Meta | Sign in to or register for My Veterans Affairs Canada Account | Inscrivez-vous à Mon dossier d'Anciens Combattants Canada (ACC) ou ouvrez une session |
 | Heading one | Sign in to or register for My VAC Account | Inscrivez-vous à Mon dossier ACC ou ouvrez une session |
 | Choose from one of two ways to access My VAC Account: | Choisissez l'un des deux moyens d'accéder à Mon dossier ACC : |
