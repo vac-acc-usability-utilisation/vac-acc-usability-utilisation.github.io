@@ -52,19 +52,28 @@
         <div class="app-bar">
             <div class="container">
                 <div class="row">
-                    <section class="col-xs-12 col-sm-7">
-                        <h2 class="wb-inv">Name of Web application</h2><a class="app-name" href="../../en.html">My <abbr>VAC</abbr> Account</a>
+                    <section class="col-xs-6 col-sm-7">
+                        <h2 class="wb-inv">Name of Web application</h2><a class="app-name" href="../../en.html">My VAC Account</a>
                     </section>
-                    <nav class="col-sm-5 hidden-xs hidden-print">
-                        <h2 class="wb-inv">Account menu</h2>
-                        <ul class="app-list-account list-unstyled">
-                            <li><a href="../../en.html?register" class="btn">Register</a></li>
-                            <li><a href="../../en.html?sign-in" class="btn">Sign in</a></li>
-                        </ul>
+                    
+                    <nav class="col-xs-6 col-sm-5 text-right mrgn-tp-sm mrgn-bttm-sm">
+                        <section>    
+                            <h2 class="wb-inv">Account menu</h2>
+                            <div class="hidden-xs">
+                                <button class="btn btn-primary" type="button">Register</button>
+                                <button class="btn btn-default" type="button">Sign in</button>
+                            </div>
+                            <div class="visible-xs mrgn-tp-sm">
+                                <button class="btn btn-primary btn-sm" type="button">Register</button>
+                                <button class="btn btn-default btn-sm" type="button">Sign in</button>
+                            </div>
+                        </section>
                     </nav>
+                  
                 </div>
             </div>
         </div>
+        <!--
         <div class="app-bar-mb container visible-xs-block hidden-print">
             <nav>
                 <h2 class="wb-inv">Account menu</h2>
@@ -73,28 +82,8 @@
                     <li><a href="../../en.html?sign-in" class="btn">Sign-in</a></li>
                 </ul>
             </nav>
-        </div>
-        <nav id="wb-bc" property="breadcrumb">
-            <h2>You are here:</h2>
-            <div class="container">
-                <ol class="breadcrumb" typeof="BreadcrumbList">
-                    <li property="itemListElement" typeof="ListItem">
-                        <a property="item" typeof="WebPage" href="../../en.html">
-                            <span property="name">My VAC Account</span>
-                        </a>
-                        <meta property="position" content="1">
-                    </li>
-                    <li property="itemListElement" typeof="ListItem">
-                        <a property="item" typeof="WebPage" href="../../en/sign-in-register-help/">
-                            <span property="name">Sign-in and registration help and FAQ</span>
-                        </a>
-                        <meta property="position" content="2">
-                    </li>
-                </ol>
-            </div>
-        </nav>
+        </div>-->
     </header>
-
 
     <!-- Static header ends -->
     <!-- Page: frontdoor
@@ -110,20 +99,9 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h1 id="wb-cont" property="name">
-                        Sign in provider help
+                        GCKey Help and FAQs
                     </h1>
-                    <ul>
-                        <li><a href="">GCKey</a></li>
-                        <ul>
-                            <li><a href="#forgotten">Forgotten GCKey username or password</a></li>
-                            <li><a href="#revoked">Revoked GCKey</a></li>
-
-                        </ul>
-                        <li><a href="#partner">Sign-in Partner help</a></li>
-                        <ul>
-                            <li><a href="#partner-change">Change your sign-in partner</a></li>
-                        </ul>
-                    </ul>
+              
 
                 </div>
             </div>
@@ -132,18 +110,56 @@
             <div class="row">
                 <div class="col-xs-12">
                  
-                    <h2 id="gckey">GCKey</h2>
+                    <h2 id="gckey">Common solutions</h2>
                     <h3 id="gckey-forgotten">Forgotten GCKey username or password</a></h3>
                     <p>Recover your account by following the steps on GCKey's sign-in page.</p>
                     <h3 id="gckey-revoked">Revoked GCKey</h3>
                     <p>Your GCKey cannot be recovered. You will need to register a new GCKey.</p>
-                    <h2 id="partner">Sign-in Partner</h2>
-                    <h3 id="partner-change">Change your Sign-in Partner</h3>
-                    <p>Change your Sign-in Partner with the "Switch Sign-in Partner" link on the Sign-in Partner page.</p>
-                </div>
+                   </div>
             </div>
         </section>
-      
+        <section class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                 
+                    <h2 id="">Frequently asked questions</h2>
+                    <ol class="column-1">
+                        <li><a href="#faq3.1">What is GCKey?</a></li>
+                        <li><a href="#faq3.2">Why has the Government of Canada introduced GCKey?</a></li>
+                        <li><a href="#faq3.3">How do I get a GCKey?</a></li>
+                        <li><a href="#faq3.4">Can I use the same GCKey to access several services?</a></li>
+                        <li><a href="#faq3.5">Am I able to access all of the government's online services with my GCKey?</a></li>
+                    <li><a href="#faq3.6">Who has access to the information I submit when I register for a GCKey?</a></li>
+                    </ol>
+                    <ol>
+                        <li>
+                        <h4 id="faq3.1">What is GCKey?</h4>
+                        <p>A GCKey is a unique electronic credential (username and password) that allows you to communicate securely with online government services.  The Government of Canada, as the service provider, issues these credentials to individuals so they can access government online services.</p></li>
+                            
+                        <li>
+                        <h4 id="faq3.2">Why has the Government of Canada introduced GCKey?</h4>
+                        <p>GCKey is a Government of Canada service that issues credentials (username and password) that are used to access (or log in to) federal government services online.  The GCKey service can be used by clients who do not have, or choose not to use a credential they may have with one of the Sign-In Partners.</p></li>
+                        
+                        <li>
+                        <h4 id="faq3.3">How do I get a GCKey?</h4>
+                        <p>To register or sign up for a GCKey, go to the Government of Canada website that you would like to access and click on the "Continue to GCKey" button when you are presented with the log in choice.</p></li>
+                        
+                        <li>
+                        <h4 id="faq3.4">Can I use the same GCKey to access several services?</h4>
+                        <div><p>Yes.  You can use the same GCKey credential to access all available online services, with the exception of the CRA services.  Using the same credential to access many services is convenient, as you don't have to remember several username and passwords.</p><p>To access the CRA's login services, you must either use one of the Sign-In Partners or register for a CRA User ID and password.</p></div></li>
+                            
+                        <li>
+                        <h4 id="faq3.5">Am I able to access all of the government's online services with my GCKey?</h4>
+                        <p>You are able to use your GCKey to access all available government online services with the exception of services offered by the Canada Revenue Agency. To access the CRA's services, you must use one of the Sign-In Partners or register for a CRA User ID and password.</p></li>
+            
+                        <li>
+                        <h4 id="faq3.6">Who has access to the information I submit when I register for a GCKey?</h4>
+                        <p>The GCKey service does not share your registration information with any third party. The information you provide is held by the Government of Canada and is protected under the Federal Privacy Act.</p></li>
+            
+                    </ol>
+                   </div>
+            </div>
+        </section>
         <footer class="container">
             <div class="pagedetails">
               
