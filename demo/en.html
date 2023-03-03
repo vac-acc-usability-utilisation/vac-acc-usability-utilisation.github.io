@@ -567,38 +567,19 @@
             </div>
             <div class="col-xs-12"> 
             
-               <h2>Topics:</h2>
+               <h2>Help and FAQs:</h2>
               
                <ul>
                   
-                  <li>
-                     
-                     <a href="en/sign-in-register-help/index.html">Help and FAQs</a>
-                        <li id="sign-in-help-link" class="hidden" data-wb-urlmapping='
-                        {
-                        "sign-in": { 
-                        "action": "removeClass", 
-                        "source": "#sign-in-help-link", 
-                        "class": "hidden" } 
-                        }
-                        '>
-                        <a href="en/sign-in-register-help/index.html#sign-in">Sign-in help and FAQs</a>  </li><!--" hide and if either query is true"-->
-
-                        <!-- If html?sign-in Hide the register for span-->
-                        <li id="register-help-link" class="hidden" data-wb-urlmapping='{
-                                    "register": { 
-                                    "action": "removeClass", 
-                                    "source": "#register-help-link", 
-                                    "class": "hidden" }}'>
-                        <!-- EN/FR content for "Register for"-->
-                        <a href="en/sign-in-register-help/index.html#register">My VAC Account registration</a> </li>
-
-                     
-                        
-
-                        
+                  <!-- If html?sign-in Hide the register for span-->
+                  <li id="register-help-link" data-wb-urlmapping='{
+                     "sign-in": { 
+                     "action": "addClass", 
+                     "source": "#register-help-link", 
+                     "class": "hidden" }}'>
+                     <!-- EN/FR content for "Register for"-->
+                     <a href="en/sign-in-register-help/index.html#register">My VAC Account registration</a> 
                   </li>
-                
                            
                            
                         </li>
