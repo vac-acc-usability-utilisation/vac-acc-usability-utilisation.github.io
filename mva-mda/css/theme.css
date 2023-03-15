@@ -1,10 +1,10 @@
-
-
-
-
 /* account-chooser */
 p.account-chooser-desc {
     height:2em;
+}
+
+@media (min-width: 576px) {
+    
 }
 
 @media (min-width: 992px) {
@@ -98,23 +98,3 @@ progress[value]::-webkit-progress-bar {
 
 }
 
-.panel.svg-leaf { 
-    /* color from footer 
-    background-color: #26374a;*/
-    
-    /* color from header */
-    background-color: #38414d;
-    
-    /* color from 2018 redesign 
-    background-color: #2e2e40;*/
-
-    background-image: url(https://www.veterans.gc.ca/css/assets/svg-leaf.svg);
-    background-repeat: no-repeat;
-    background-size: 260%;
-    background-position: 200px -225px;
-}
-
-.panel.svg-leaf  .panel-body {
-    padding: 10px 15px 0;
-
-}
