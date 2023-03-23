@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8"/>
-		<title>VAC Usability - Github.io page </title>
+		<title>MVA Design System</title>
 		<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
 		<meta name="description" content="The [institution/service name] website is a single point of access [contextual description]." />
@@ -23,11 +23,12 @@
 	</head>
 
 	<body vocab="http://schema.org/" resource="#wb-webpage" typeof="WebPage">
+      <!--
       <div class="container">
          <div class="wb-dismissable  alert alert-info">
             <h2 class="h4">This Github.io site is a conceptual example of applying GCWeb to My VAC Account</h2>
          </div>
-      </div>
+      </div>-->
 		<header>
             <div id="wb-bnr" class="container">
                <div class="row">
@@ -148,69 +149,261 @@
             
             <section class="container">  
                <h1 id="wb-cont" property="name">
-                   My VAC Account Usability
+                   My VAC Account Design System
                </h1>
                <p class="lead mrgn-tp-md">
                   A design system for My VAC Account.
                 </p>
-               <section class="wb-inv">
-                   <h2>On this page</h2>
-                   <nav>
-                       <ul class="lst-none">
-                           <li><a class="wb-sl"></a></li>       
-                       </ul>
-                   </nav>
-               </section>
+                <nav role="navigation" class="gc-toc">
+                  <h2>Table of contents</h2>
+                  <ul>
+                     <li><a href="#download">Components and templates</a></li>
+                     <li><a href="#toc">Demo</a></li>
+                     <li><a href="#min-port">Design blog</a></li>
+                  </ul>
+               </nav>
             </section>
 
             <section class="container">
                 <h2>Components and templates</h2>
-                <ol>
+                <ol class="list-unstyled">
                   <li> 
-                     <h3>Pages</h3>
-                     <ul>
-                        <li>
-                           Landing page / front door <span class="label label-default">Prepping for development</span>
-                           <ul>
-                              <li>
-                                 <a href="design/library/pages/front-door.html">Working example</a>
-                              </li>
-                              <li>
-                                 <a href="design/library/pages/front-door-doc.html">Documentation</a>
-                              </li>
-                           </ul>
-                        </li>
-                     </ul>
-                  </li>
+                     <h3 id="pages" class="mrgn-bttm-lg">Pages</h3>
+	<ul class="row list-unstyled wb-eqht-grd wb-filter mrgn-tp-md pb-4" data-wb-filter='{ "selector": ">li" }'>
+	
+		
+		<li class="col-xs-12 col-md-6 mrgn-tp-md mrgn-bttm-md">
+			<div class="brdr-tp brdr-rght brdr-bttm brdr-lft hght-inhrt">
+				<h3 class="mrgn-tp-md mrgn-rght-md mrgn-bttm-md mrgn-lft-md">Landing page
+				
+				<span class="label label-success mrgn-lft-sm"><span class="wb-inv">State: </span>Stable</span>
+				
+				</h3>
+				<div class="mrgn-rght-md mrgn-bttm-md mrgn-lft-md">
+					<p>My VAC Account's public landing page.</p>
+					<!--
+					Main working example
+					- First working example in the example list where the language match
+					-->
+					
+					<ul class="list-unstyled mrgn-bttm-lg mrgn-lft-md">
+					
+					<li>
+					
+					<a href="design/library/pages/front-door.html" lang="en" hreflang="en"><span class="fas fa-eye small mrgn-rght-sm" aria-hidden="true"></span>Working example</a>
+					
+               </li>
+					
+					<!--
+					Documentation
+					- Link to the documentations if any
+					-->
+					
+					<!--<ul class="list-unstyled mrgn-bttm-lg mrgn-lft-md">-->
+					
+					
+						<li><a href="design/library/pages/front-door-doc.html"><span class="fas fa-info-circle small mrgn-rght-sm" aria-hidden="true"></span>Documentation</a></li>
+					
+					<!--
+					<li><a href="https://github.com/wet-boew/GCWeb/tree/master/components/gc-chckbxrdio" hreflang="en"><span class="fas fa-code small mrgn-rght-sm" aria-hidden="true"></span>Source code</a></li>-->
+               
+               </ul>
+					<!--
+					> All examples and info
+					* Example
+					* Documentation
+					* Spec
+					<details class="mrgn-tp-lg"><summary>All examples and info</summary>
+					<ul class="list-unstyled">
+					
+						
+						<li>Documentations
+							<ul>
+							
+							
+								
+								<li><a href="components/gc-chckbxrdio/gc-chckbxrdio-doc-en.html" >Checkboxes and radio buttons</a></li>
+								
+							
+								
+								<li><a href="components/gc-chckbxrdio/gc-chckbxrdio-doc-fr.html" lang="fr" hreflang="fr">Cases à cocher et boutons radio</a></li>
+								
+							
+							</ul>
+						</li>
+					
+						
+						<li>Examples
+							<ul>
+							
+							
+								
+								<li><a href="components/gc-chckbxrdio/gc-chckbxrdio-en.html" >Checkboxes and radio buttons</a></li>
+								
+							
+								
+								<li><a href="components/gc-chckbxrdio/gc-chckbxrdio-fr.html" lang="fr" hreflang="fr">Cases à cocher et boutons radio</a></li>
+								
+							
+							</ul>
+						</li>
+					
+						
+						<li>Specification
+							<ul>
+							
+							
+								
+									<li><a href="https://conception.canada.ca/configurations-conception-communes/cases-cocher-boutons-radio.html">Cases à cocher et boutons radio : Système de conception de Canada.ca</a></li>
+								
+							
+								
+									<li><a href="https://design.canada.ca/common-design-patterns/checkboxes-radio-buttons.html">Checkboxes and radio buttons: Canada.ca design system</a></li>
+								
+							
+							</ul>
+						</li>
+					
+					</ul>
+					 
+					</details>-->
+				</div>
+			</div>
+		</li>
+	
+		
+   </ul>
+                     
+
+                 
                   <li>
                      <h3>Organisms</h3>
-                     <ul>
-                        <li>
-                           Header and footer <span class="label label-warning">In progress</span>
-                           <ul>
-                              <li><a href="design/examples/header-footer.html">Working example</a></li>
-                           </ul>
+                     <ul class="row list-unstyled wb-eqht-grd wb-filter mrgn-tp-md pb-4" data-wb-filter='{ "selector": ">li" }'>
+	
+		
+                        <li class="col-xs-12 col-md-6 mrgn-tp-md mrgn-bttm-md">
+                           <div class="brdr-tp brdr-rght brdr-bttm brdr-lft hght-inhrt">
+                              <h3 class="mrgn-tp-md mrgn-rght-md mrgn-bttm-md mrgn-lft-md">Header and footer
+                              
+                              <span class="label label-warning mrgn-lft-sm"><span class="wb-inv">State: </span>In Progress</span>
+                              
+                              </h3>
+                              <div class="mrgn-rght-md mrgn-bttm-md mrgn-lft-md">
+                                 <p>My VAC Account's public landing page.</p>
+                                 <!--
+                                 Main working example
+                                 - First working example in the example list where the language match
+                                 -->
+                                 
+                                 <ul class="list-unstyled mrgn-bttm-lg mrgn-lft-md">
+                                 
+                                 <li>
+                                 
+                                 <a href="design/examples/header-footer.html" lang="en" hreflang="en"><span class="fas fa-eye small mrgn-rght-sm" aria-hidden="true"></span>Working example</a>
+                                 
+                                 </li>
+                                 
+                                 <!--
+                                 Documentation
+                                 - Link to the documentations if any
+                                 -->
+                                 
+                                 <!--<ul class="list-unstyled mrgn-bttm-lg mrgn-lft-md">-->
+                                 
+                                 
+                                    <li><a href="#"><span class="fas fa-info-circle small mrgn-rght-sm" aria-hidden="true"></span>Documentation</a></li>
+                                 
+                                 <!--
+                                 <li><a href="https://github.com/wet-boew/GCWeb/tree/master/components/gc-chckbxrdio" hreflang="en"><span class="fas fa-code small mrgn-rght-sm" aria-hidden="true"></span>Source code</a></li>-->
+                                 
+                                 </ul>
+                                 <!--
+                                 > All examples and info
+                                 * Example
+                                 * Documentation
+                                 * Spec
+                                 <details class="mrgn-tp-lg"><summary>All examples and info</summary>
+                                 <ul class="list-unstyled">
+                                 
+                                    
+                                    <li>Documentations
+                                       <ul>
+                                       
+                                       
+                                          
+                                          <li><a href="components/gc-chckbxrdio/gc-chckbxrdio-doc-en.html" >Checkboxes and radio buttons</a></li>
+                                          
+                                       
+                                          
+                                          <li><a href="components/gc-chckbxrdio/gc-chckbxrdio-doc-fr.html" lang="fr" hreflang="fr">Cases à cocher et boutons radio</a></li>
+                                          
+                                       
+                                       </ul>
+                                    </li>
+                                 
+                                    
+                                    <li>Examples
+                                       <ul>
+                                       
+                                       
+                                          
+                                          <li><a href="components/gc-chckbxrdio/gc-chckbxrdio-en.html" >Checkboxes and radio buttons</a></li>
+                                          
+                                       
+                                          
+                                          <li><a href="components/gc-chckbxrdio/gc-chckbxrdio-fr.html" lang="fr" hreflang="fr">Cases à cocher et boutons radio</a></li>
+                                          
+                                       
+                                       </ul>
+                                    </li>
+                                 
+                                    
+                                    <li>Specification
+                                       <ul>
+                                       
+                                       
+                                          
+                                             <li><a href="https://conception.canada.ca/configurations-conception-communes/cases-cocher-boutons-radio.html">Cases à cocher et boutons radio : Système de conception de Canada.ca</a></li>
+                                          
+                                       
+                                          
+                                             <li><a href="https://design.canada.ca/common-design-patterns/checkboxes-radio-buttons.html">Checkboxes and radio buttons: Canada.ca design system</a></li>
+                                          
+                                       
+                                       </ul>
+                                    </li>
+                                 
+                                 </ul>
+                                  
+                                 </details>-->
+                              </div>
+                           </div>
                         </li>
+                     
+                        
                      </ul>
+                    
                   </li>
                   <li><h3>Molecules</h3></li>
                   <li><h3>Atoms</h3></li>
                 </ol>
+
                
                 
             </section>
             
             <section class="container">
-               <h2>Demos (static site)</h2>
+               <h2>Demo</h2>
                <ul>
+                  <li><a href="#">My <abbr>VAC</abbr> Account Overview</a></li>
                  <li>                
-                    <a href="demo/en.html">Front door (EN)</a>
+                    <a href="demo/en.html">Landing page</a>
                     <ul>
-                       <li><a href="demo/en.html?sign-in">Sign-in</a></li>
-                       <li><a href="demo/en.html?register">Register</a></li>
+                       <li><a href="demo/en.html?sign-in">Sign-in state</a></li>
+                       <li><a href="demo/en.html?register">Register state</a></li>
                     </ul>
                  </li>
-                 <li><a href="demo/">Splash page (EN/FR)</a></li>
+                 <li><a href="demo/">Splash page</a></li>
                  <!--
                  <li>
                     <a class="" href="demo/en/overview/">MVA + GCWeb Overview demonstration</a>
