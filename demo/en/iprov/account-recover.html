@@ -223,7 +223,95 @@
 
 	<ol class="lst-stps mrgn-tp-md">
 		<li>
-			<h2 class="h4">Enter your unique identifier</h2>
+				
+			<!-- todo if matched Account recovery questions -->
+			<!-- todo if notmatch Account recovery questions -->
+
+			<!-- Create a notebook
+				--- Account recovery qs / new client (1)
+				First Name
+				Last name / Surname
+				Postal code 
+				Province
+				DOB
+				Marital status
+
+				Plus a random Question from below
+					§  Service Number (? could this be excluded if they put in a service number)
+					§  Province
+					§  Marital Status
+
+				---
+				
+				---
+				Gender (can't be unknown)*
+				Oral language*
+				Written language*
+				Rank or title (can't be unknown)*
+				
+			-->
+			<section>
+				<div class="row mrgn-bttm-lg">
+					<div class="col-xs-12">
+						<h2 class="h4">Validate your identity</h2>
+						<p>Basic personal information form here, hidden until previous step complete.</p>
+						<p class="small">Or <a href="#">contact us to receive a one-time password.</a></p>
+					</div>
+				</div>
+				<div id="identityValidate" class="wb-frmvld">
+					<form action="javascript:continueForm(identityValidate)" method="post" id="retreat" class="form-horizontal">
+						
+							<div class="">
+								<div class="form-group mrgn-bttm-lg">
+									<label for="fname" class="required col-sm-4 mrgn-tp-sm"><span class="field-name">First Name</span> <strong class="required">(required)</strong></label>
+									<input class="form-control input-lg col-sm-6" id="fname" name="fname" type="text" autocomplete="given-name" required="required">
+								</div>
+							</div>
+							<!--
+							<div class="col-xs-8 col-sm-6 col-md-4">
+								<div class="form-group">
+									<label for="mname"><span class="field-name">Middle Name</span> </label>
+									<input class="form-control full-width" id="mname" name="mname" type="text" autocomplete="middle-name" >
+								</div>
+							</div>-->
+							<div class="">
+								<div class="form-group mrgn-bttm-lg">
+									<label for="lname" class="required col-sm-4 mrgn-tp-sm"><span class="field-name">Last Name</span> <strong class="required">(required)</strong></label>
+									<input class="form-control input-lg col-sm-6" id="lname" name="lname" type="text" autocomplete="family-name" required="required">
+								</div>
+							</div>
+							
+						
+						
+							<div class="">
+								<div class="form-group mrgn-bttm-lg">
+									<label for="startdate" class="col-sm-4 mrgn-tp-sm">Date of birth<span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+									<input class="form-control col-sm-6" type="date" id="startdate" name="startdate" min="1900-01-01" max="2004-12-31" />
+								</div>
+							</div>
+							<!--
+							<div class="col-md-4">
+								<div class="form-group">
+								<label for="title" class="required"><span class="field-name">Title</span> <strong class="required">(required)</strong></label>
+								<input class="form-control full-width" id="title" name="title" type="text" required="required">
+								</div>
+							</div>
+							
+							<div class="col-md-8">
+								<div class="form-group">
+									<label for="org" class="required"><span class="field-name">University/Organization</span> <strong class="required">(required)</strong></label>
+									<input class="form-control full-width" id="org" name="org" type="text" required="required">
+								</div>
+							</div>-->
+							<button type="submit" class="btn btn-primary btn-lg mrgn-tp-0 mrgn-bttm-lg "
+							>Continue</button>
+
+					</form>
+				</div>
+			</section>
+		</li>
+		<li>
+			<h2 class="h4">Choose an identifying number</h2>
 
 			<div id="uniqueIdentifier" class="wb-frmvld">
 				<form action="javascript:continueForm(uniqueIdentifier)">
@@ -236,7 +324,7 @@
 						"noreqlabel": true}'
 						>
 
-						<p class="wb-fieldflow-label">Choose an identifying number associated with your account.
+						<p class="wb-fieldflow-label"> <span class="iprov">Choose an identifying number</span> associated with your account.
 							<br><span class="small">Representatives and family members must use CSDN ID (VAC).</span>
 						</p>
 						
@@ -334,100 +422,13 @@
 						</div>
 					</div>
 				
-				<button type="submit" class="btn btn-primary btn-lg mrgn-tp-0 mrgn-bttm-lg disabled" disabled>Continue</button>
+				<button type="submit" class="btn btn-primary btn-lg mrgn-tp-0 mrgn-bttm-lg">Continue</button>
 				
 				</form>
 			</div>
 		</li>
 		
-		<li>
-				
-			<!-- todo if matched Account recovery questions -->
-			<!-- todo if notmatch Account recovery questions -->
 
-			<!-- Create a notebook
-				--- Account recovery qs / new client (1)
-				First Name
-				Last name / Surname
-				Postal code 
-				Province
-				DOB
-				Marital status
-
-				Plus a random Question from below
-					§  Service Number (? could this be excluded if they put in a service number)
-					§  Province
-					§  Marital Status
-
-				---
-				
-				---
-				Gender (can't be unknown)*
-				Oral language*
-				Written language*
-				Rank or title (can't be unknown)*
-				
-			-->
-			<section>
-				<div class="row mrgn-bttm-lg">
-					<div class="col-xs-12">
-						<h2 class="h4">Validate your identity</h2>
-						<p>Basic personal information form here, hidden until previous step complete.</p>
-						<p class="small">Or <a href="#">contact us to receive a one-time password.</a></p>
-					</div>
-				</div>
-				<div id="identityValidate" class="wb-frmvld">
-					<form action="javascript:continueForm(identityValidate)" method="post" id="retreat" class="form-horizontal">
-						
-							<div class="">
-								<div class="form-group mrgn-bttm-lg">
-									<label for="fname" class="required col-sm-4 mrgn-tp-sm"><span class="field-name">First Name</span> <strong class="required">(required)</strong></label>
-									<input class="form-control input-lg col-sm-6" id="fname" name="fname" type="text" autocomplete="given-name" required="required">
-								</div>
-							</div>
-							<!--
-							<div class="col-xs-8 col-sm-6 col-md-4">
-								<div class="form-group">
-									<label for="mname"><span class="field-name">Middle Name</span> </label>
-									<input class="form-control full-width" id="mname" name="mname" type="text" autocomplete="middle-name" >
-								</div>
-							</div>-->
-							<div class="">
-								<div class="form-group mrgn-bttm-lg">
-									<label for="lname" class="required col-sm-4 mrgn-tp-sm"><span class="field-name">Last Name</span> <strong class="required">(required)</strong></label>
-									<input class="form-control input-lg col-sm-6" id="lname" name="lname" type="text" autocomplete="family-name" required="required">
-								</div>
-							</div>
-							
-						
-						
-							<div class="">
-								<div class="form-group mrgn-bttm-lg">
-									<label for="startdate" class="col-sm-4 mrgn-tp-sm">Date of birth<span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
-									<input class="form-control col-sm-6" type="date" id="startdate" name="startdate" min="1900-01-01" max="2004-12-31" />
-								</div>
-							</div>
-							<!--
-							<div class="col-md-4">
-								<div class="form-group">
-								<label for="title" class="required"><span class="field-name">Title</span> <strong class="required">(required)</strong></label>
-								<input class="form-control full-width" id="title" name="title" type="text" required="required">
-								</div>
-							</div>
-							
-							<div class="col-md-8">
-								<div class="form-group">
-									<label for="org" class="required"><span class="field-name">University/Organization</span> <strong class="required">(required)</strong></label>
-									<input class="form-control full-width" id="org" name="org" type="text" required="required">
-								</div>
-							</div>-->
-							<button type="submit" class="btn btn-primary btn-lg mrgn-tp-0 mrgn-bttm-lg "
-							>Continue</button>
-
-					</form>
-				</div>
-			</section>
-		</li>
 	</ol>
 
 	
