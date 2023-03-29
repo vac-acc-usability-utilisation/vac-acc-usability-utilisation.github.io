@@ -59,13 +59,21 @@
             <li class="wb-slc visible-xs visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to "About My VAC Account"</a></li>
         </ul>
     </nav>
-	<!--transactional / authenticated (landing page)-->
+	<!-- authenticated (landing page)-->
     <header id="unauthenticated-no-accnt-menu-header" 
 		data-wb-urlmapping='{
 		"unauthenticated": { 
 		"action": "addClass", 
 		"source": "#unauthenticated-no-accnt-menu-header", 
 		"class": "hidden" },
+		"iprov": { 
+			"action": "addClass", 
+			"source": "#unauthenticated-no-accnt-menu-header", 
+			"class": "hidden" },
+			"iprov-poa": { 
+			  "action": "addClass", 
+			  "source": "#unauthenticated-no-accnt-menu-header", 
+			  "class": "hidden" },
 		"transactional": { 
 		  "action": "addClass", 
 		  "source": "#unauthenticated-no-accnt-menu-header", 
@@ -229,6 +237,198 @@
 		</nav>
     </header> 
 
+	<!-- IPROV -->
+	<header class="hidden" id="iprov-header" 
+		data-wb-urlmapping='{
+			"iprov": { 
+			"action": "removeClass", 
+			"source": "#iprov-header", 
+			"class": "hidden" }
+			}'>
+        <div id="wb-bnr" class="container">
+			<div class="row">
+				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+					<h2 class="wb-inv">Language selection</h2>
+					<ul class="list-inline mrgn-bttm-0">
+						<li>
+							<a lang="fr" hreflang="fr" href="fr.html">
+								<span class="hidden-xs">Français</span>
+								<abbr title="Français"
+									class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+							</a>
+						</li>
+					</ul>
+				</section>
+				<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" resource="#wb-publisher"
+					typeof="GovernmentOrganization">
+					<a href="en.html" property="url">
+						<img src="../../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv"
+							property="name">
+							Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+					</a>
+					<meta property="areaServed" typeof="Country" content="Canada">
+					<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
+				</div>
+				
+			</div>
+
+		</div>
+        <div class="app-bar">
+            <div class="container">
+                <div class="row">
+                    <section class="col-xs-6 col-sm-7">
+                        <h2 class="wb-inv">Name of Web application</h2><a class="app-name" href="../../en.html">My VAC Account</a>
+                    </section>
+                    
+                    <nav class="col-xs-6 col-sm-5 text-right mrgn-tp-sm mrgn-bttm-sm accnt-menu">
+                        <section>    
+                            <h2 class="wb-inv">Account menu</h2>
+                            <div class="hidden-xs">
+                                <button class="btn btn-primary" type="button">Sign out</button>
+                            </div>
+                            <div class="visible-xs mrgn-tp-sm">
+                                <button class="btn btn-primary btn-sm" type="button">Sign out</button>
+                            </div>
+                        </section>
+                    </nav>
+                  
+                </div>
+            </div>
+        </div>
+		<nav id="wb-bc" property="breadcrumb">
+			<h2>You are here:</h2>
+			<div class="container">
+				<ol class="breadcrumb hidden-xs hidden-sm" typeof="BreadcrumbList">
+					
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="#">
+							<span property="name">Breadcrumb link</span>
+						</a>
+						<meta property="position" content="1">
+					</li>
+				</ol>
+				<div class="hidden-md hidden-lg">
+					<ol>
+						<li>	
+							<a property="item" typeof="WebPage" href="#">
+								<span class="fa fa-arrow-left"></span>
+								<span property="name">Breadcrumb link</span>
+							</a>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</nav>
+    </header> 
+
+	<!-- IPROV POA -->
+	<header class="hidden" id="iprov-poa-header"
+	data-wb-urlmapping='{
+		"iprov-poa": { 
+		"action": "removeClass", 
+		"source": "#iprov-poa-header", 
+		"class": "hidden" }
+		}'>
+        <div id="wb-bnr" class="container">
+			<div class="row">
+				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+					<h2 class="wb-inv">Language selection</h2>
+					<ul class="list-inline mrgn-bttm-0">
+						<li>
+							<a lang="fr" hreflang="fr" href="fr.html">
+								<span class="hidden-xs">Français</span>
+								<abbr title="Français"
+									class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+							</a>
+						</li>
+					</ul>
+				</section>
+				<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" resource="#wb-publisher"
+					typeof="GovernmentOrganization">
+					<a href="en.html" property="url">
+						<img src="../../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv"
+							property="name">
+							Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+					</a>
+					<meta property="areaServed" typeof="Country" content="Canada">
+					<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
+				</div>
+				<!--
+				<section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
+					<h2>Search</h2>
+					<form action="#" method="post" name="cse-search-box" role="search">
+						<div class="form-group wb-srch-qry">
+							<label for="wb-srch-q" class="wb-inv">Search</label>
+							<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search VAC">
+							<datalist id="wb-srch-q-ac"></datalist>
+						</div>
+						<div class="form-group submit">
+							<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
+								<span class="glyphicon-search glyphicon"></span>
+								<span class="wb-inv">Search</span>
+							</button>
+						</div>
+					</form>
+				</section>-->
+			</div>
+
+		</div>
+        <div class="app-bar" style="border-bottom: 4px solid #f90;">
+            <div class="container">
+                <div class="row">
+					<section class="col-xs-8 col-sm-5 col-md-4">
+						<h2 class="wb-inv">Name of Web application</h2>
+						<a href="#" class="app-name" href="../../en.html">My&nbsp;VAC&nbsp;Account</a>
+					</section>
+                    
+                    <nav class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
+                        <section>    
+                            <h2 class="wb-inv">Account menu</h2>
+							
+							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width" style="position:static; width: 100%; float: left; text-align: left; width: auto;">
+								<!--<li role="none"><a role="menuitem" tabindex="-1" href="#">Switch user</a></li>-->
+								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
+							</ul>
+
+							<button class="btn btn-default mrgn-lft-md hidden-xs" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false"><strong class="text-warning"> </strong>Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" style="text-align: left; width: auto;">
+								<li role="none"><a role="menuitem" tabindex="-1" href="#">Cancel</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
+							</ul>
+							
+                        </section>
+                    </nav>
+                  
+                </div>
+            </div>
+        </div>
+        <nav id="wb-bc" property="breadcrumb">
+			<h2>You are here:</h2>
+			<div class="container">
+				<ol class="breadcrumb hidden-xs hidden-sm" typeof="BreadcrumbList">
+					
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="#">
+							<span property="name">Breadcrumb link</span>
+						</a>
+						<meta property="position" content="1">
+					</li>
+				</ol>
+				<div class="hidden-md hidden-lg">
+					<ol>
+						<li>	
+							<a property="item" typeof="WebPage" href="#">
+								<span class="fa fa-arrow-left"></span>
+								<span property="name">Breadcrumb link</span>
+							</a>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</nav>
+    </header>
+
 	<!-- transactional -->
 	<header class="hidden" id="transactional-header" 
 		data-wb-urlmapping='{
@@ -379,7 +579,7 @@
 							
 							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false"><strong class="text-warning">Representing </strong>Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
 							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width" style="position:static; width: 100%; float: left; text-align: left; width: auto;">
-								<li role="none"><a role="menuitem" tabindex="-1" href="#">Switch user</a></li>
+								<!--<li role="none"><a role="menuitem" tabindex="-1" href="#">Switch user</a></li>-->
 								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
 							</ul>
 
@@ -1003,8 +1203,7 @@
 								<div class="row">
 									<div class="col-xs-12">
 										
-				
-										<h2 class="h4">Public</h2>
+									<h2 class="h4">Public</h2>
 										
 									
 								  <div class="btn-group">
@@ -1014,6 +1213,14 @@
 										  "action": "removeClass", 
 										  "source": "#unauthenticated-no-accnt-menu-btn", 
 										  "class": "active" },
+										  "iprov": { 
+											"action": "removeClass", 
+											"source": "#unauthenticated-no-accnt-menu-btn", 
+											"class": "active" },
+											"iprov-poa": { 
+												"action": "removeClass", 
+												"source": "#unauthenticated-no-accnt-menu-btn", 
+												"class": "active" },
 										  "transactional": { 
 											"action": "removeClass", 
 											"source": "#unauthenticated-no-accnt-menu-btn", 
@@ -1043,8 +1250,49 @@
 									 Unauthenticated
 								  </a>
 								</div>
+									
+								<h3 class="h4">Transactional (IPROV)</h3>
+								<div class="btn-group">
+									<a href="?iprov" id="iprov-btn" class="btn btn-primary" 
+									data-wb-urlmapping='{
+									"iprov": { 
+									"action": "addClass", 
+									"source": "#iprov-btn", 
+									"class": "active" }
+									}'>IPROV</a>
 				
-								<h2 class="h4">Transactional</h2>
+									<a href="?iprov-poa" id="iprov-poa-btn" class="btn btn-primary" 
+									   data-wb-urlmapping='{
+									   "iprov-poa": { 
+									   "action": "addClass", 
+									   "source": "#iprov-poa-btn", 
+									   "class": "active" }
+									   }'>IPROV POA
+								   </a>
+								</div>
+
+				
+								  <h3 class="h4">Authenticated</h3>
+								<div class="btn-group">
+									<a href="?authenticated" id="authenticated-btn" class="btn btn-primary" 
+									data-wb-urlmapping='{
+									"authenticated": { 
+									"action": "addClass", 
+									"source": "#authenticated-btn", 
+									"class": "active" }
+									}'>Authenticated</a>
+				
+									<a href="?authenticated-poa" id="authenticated-poa-btn" class="btn btn-primary" 
+									   data-wb-urlmapping='{
+									   "authenticated-poa": { 
+									   "action": "addClass", 
+									   "source": "#authenticated-poa-btn", 
+									   "class": "active" }
+									   }'>Authenticated POA
+								   </a>
+								</div>
+
+								<h2 class="h4">Transactional (Authenticated)</h2>
 								
 								  <div class="btn-group">
 									
@@ -1066,26 +1314,6 @@
 									}'>
 									Transactional POA</a>
 								  </div>
-				
-								  <h3 class="h4">Authenticated</h3>
-								<div class="btn-group">
-									<a href="?authenticated" id="authenticated-btn" class="btn btn-primary" 
-									data-wb-urlmapping='{
-									"authenticated": { 
-									"action": "addClass", 
-									"source": "#authenticated-btn", 
-									"class": "active" }
-									}'>Authenticated</a>
-				
-									<a href="?authenticated-poa" id="authenticated-poa-btn" class="btn btn-primary" 
-									   data-wb-urlmapping='{
-									   "authenticated-poa": { 
-									   "action": "addClass", 
-									   "source": "#authenticated-poa-btn", 
-									   "class": "active" }
-									   }'>Authenticated POA
-								   </a>
-								</div>
 									 
 								  </div>
 								  
@@ -1107,7 +1335,7 @@
 								<div class="col-xs-12">
 									<dl id="wb-dtmd">
 										<dt>Date modified:</dt>
-										<dd><time property="dateModified">2022-04-14</time></dd>
+										<dd><time property="dateModified">2023-03-29</time></dd>
 									</dl>
 								</div>
 							</div>
@@ -1127,6 +1355,14 @@
 	<!-- footer -->
 	<div id="default-footer" 
 	data-wb-urlmapping='{
+		"iprov": { 
+			"action": "addClass", 
+			"source": "#default-footer", 
+			"class": "hidden" },
+			"iprov-poa": { 
+				"action": "addClass", 
+				"source": "#default-footer", 
+				"class": "hidden" },
 		"transactional": { 
 		"action": "addClass", 
 		"source": "#default-footer", 
@@ -1193,6 +1429,14 @@
 	 <!--transactional-->
 	 <div id="transactional-footer" class="hidden" 
 	 data-wb-urlmapping='{
+		"iprov": { 
+			"action": "removeClass", 
+			"source": "#transactional-footer", 
+			"class": "hidden" },
+			"iprov-poa": { 
+				"action": "removeClass", 
+				"source": "#transactional-footer", 
+				"class": "hidden" },
 		"transactional": { 
 		"action": "removeClass", 
 		"source": "#transactional-footer", 
