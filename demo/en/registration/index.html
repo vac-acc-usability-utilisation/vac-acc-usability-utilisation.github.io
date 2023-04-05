@@ -130,15 +130,16 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h1 id="wb-cont" property="name">
-                        Sync sign-in partner with My VAC Account
+                        Connect your sign-in partner with My VAC Account
                     </h1>
 
-                    <div class="wb-frmvld provisional wb-steps ">
+                    <div class="wb-frmvld provisional wb-steps">
                         <form action="#" method="get" id="steps-example">
                             <fieldset id="client" class="row">
-                                <legend>Your information</legend>
+                                <legend class="mrgn-lft-md mrgn-bttm-0">Your personal details</legend>
                                 <div>
-                                    <div class="form-group col-xs-12 ">
+                                    <!--
+                                    <div class="form-group col-xs-12">
                                         <label for="firstname" class="required"><span class="field-name">First
                                                 name</span> <strong class="required">(required)</strong></label>
                                         <input class="form-control input-lg" id="firstname" name="firstname" type="text"
@@ -150,251 +151,167 @@
 
                                         <input class="form-control input-lg" id="lastname" name="lastname" type="text"
                                             data-rule-minlength="2" required="required" />
+                                    </div>-->
+
+                                    <div class="clearfix"></div>
+
+                                        <div class="">
+                                            <fieldset class="subfields">
+                                                <legend class="hidden">Your name</legend>
+    
+                                                <div class="form-group mrgn-lft-md">
+                                                <label for="first-name" class="required"><span class="field-name">First name</span> <strong class="required">(required)</strong></label>
+                                                <input class="form-control input-lg" id="first-name" name="first-name" required="required" type="text" />
+
+                                                </div>
+                                                <!--
+                                                <div class="form-group mrgn-lft-md">
+                                                <label for="mid-name"><span class="field-name">Middle name</span></label>
+                                                <input class="form-control input-lg" id="mid-name" name="mid-name" type="text" />
+
+                                                </div>-->
+
+                                                <div class="form-group mrgn-lft-md">
+                                                <label for="last-name" class="required"><span class="field-name">Last name </span> <strong class="required">(required)</strong></label>
+                                                <input class="form-control input-lg" id="last-name" name="last-name" required="required" />
+
+                                            </div>
+                                                
+                                              </fieldset>
+                                        </div>
                                     </div>
                                    
                                     <div class="clearfix"></div>
                                    
-                                    <div class="form-group form-inline ">
-                                        <fieldset>
+                                    <div class="form-group form-inline">
+                                        <fieldset class="subfields">
                                             <legend style="font-weight: 700; font-size: 16px;" class="mrgn-tp-0 mrgn-bttm-0 mrgn-lft-md required">Date of birth <strong class="required">(required)</strong> <span class="datepicker-format"> (<abbr
                                                 title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></legend>
+                                               
 
                                             <div class="form-group mrgn-lft-md">
-                                                <p class="small mrgn-bttm-0">YYYY</p>
-                                            <label for="min" class="required wb-inv"><span class="field-name">Date of birth (Year) </span>YYYY <strong class="required">(required)</strong></label>
-                                            <input class="form-control input-lg" id="min" name="min" required="required" size="4" maxlength="4" data-rule-minlength="4" min="1900" max="2023"/>
-                                            
+                                            <label for="dob-y" class="required wb-inv"><span class="field-name">Date of birth (Year) </span>YYYY <strong class="required">(required)</strong></label>
+                                            <input class="form-control input-lg" id="dob-y" name="dob-y" aria-describedby='dob' required="required" size="4" maxlength="4" data-rule-minlength="4" min="1900" max="2023"/>
+                                            <p class="small mrgn-bttm-0">YYYY</p>
+
                                             </div>   
-                                            <div class="form-group">
-                                                <p class="small mrgn-bttm-0">MM</p>
-                                            <label for="max" class="required wb-inv"><span class="field-name">Date of birth (Month) </span>MM <strong class="required">(required)</strong></label>
-                                            <input class="form-control input-lg" id="max" name="max" required="required" size="2" maxlength="2" data-rule-minlength="1" min="1" max="12"/>
-                                            
+                                            <div class="form-group mrgn-lft-md">
+                                            <label for="dob-m" class="required wb-inv"><span class="field-name">Date of birth (Month) </span>MM <strong class="required">(required)</strong></label>
+                                            <input class="form-control input-lg" id="dob-m" name="dob-m" aria-describedby='dob' required="required" size="2" maxlength="2" data-rule-minlength="1" min="1" max="12"/>
+                                            <p class="small mrgn-bttm-0">MM</p>
+
                                         </div>
                                         
-                                            <div class="form-group">
-                                                <p class="small mrgn-bttm-0">DD</p>
-                                            <label for="max" class="required wb-inv"><span class="field-name">Date of birth (Day) </span>DD <strong class="required">(required)</strong></label>
-                                            <input class="form-control input-lg" id="max" name="max" required="required" size="2" maxlength="2"  data-rule-minlength="1" min="1" max="31"/>
-                                            
+                                            <div class="form-group mrgn-lft-md">
+                                            <label for="dob-d" class="required wb-inv"><span class="field-name">Date of birth (Day) </span>DD <strong class="required">(required)</strong></label>
+                                            <input class="form-control input-lg" id="dob-d" name="dob-d" aria-describedby='dob' required="required" size="2" maxlength="2"  data-rule-minlength="1" min="1" max="31"/>
+                                            <p class="small mrgn-bttm-0">DD</p>
+
                                         </div>
                                             
                                           </fieldset>
                                     </div>
                                     <div class="clearfix"></div>
-                                  
-                                    <div class="form-group col-xs-12 mrgn-bttm-lg">
-                                        <label for="pcodeca1" class="required"><span class="field-name">Postal code</span> <strong class="required">(required)</strong></label>
-                                        <div class="clearfix"></div>
-                                        <input class="form-control" id="pcodeca1" name="pcodeca1" type="text" autocomplete="postal-code" size="7" maxlength="7" required="required" data-rule-postalCodeCA="true" />
+
+                                    <div class="form-group form-inline mrgn-bttm-lg">
+                                        <fieldset class="sub-fields">
+                                            <legend id="pcode" style="font-weight: 700; font-size: 16px;" class="mrgn-tp-0 mrgn-bttm-0 mrgn-lft-md required">Postal code <strong class="required">(required)</strong></legend>
+
+                                                <div class="form-group mrgn-lft-md">
+                                                    <label for="pcodeca1" class="required wb-inv"><span class="field-name">Postal code</span> <strong class="required">(required)</strong></label>
+                                                    <input class="form-control" id="pcodeca1" name="pcodeca1" aria-describedby="pcode" type="text" autocomplete="postal-code" size="7" maxlength="7" required="required" data-rule-postalCodeCA="true" />
+                                                    <p class="small mrgn-bttm-0">A1A 1A1</p>
+                                                </div>
+                                                <div class="form-group mrgn-lft-md mrgn-tp-0"  style="height:60px;">
+                                                    <label for="country" class="required wb-inv">Country <strong class="required">(required)</strong></label>
+                                                    <select name="country" id="country" class="form-control">
+                                                        <option value="CA" selected="selected">Canada</option>
+                                                        <option value="US">United States</option>                                            
+                                                        <option value="misc">Other</option>
+                                                    
+                                                    
+                                                    </select>
+                                                </div>
+                                            
+                                          </fieldset>
                                     </div>
                                     <div class="clearfix"></div>
-
-                                    <div class="form-group col-xs-12">			
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                            <label for="cafServiceNumberField" class="control-label required ">
-                                                <span class="field-name h3">CAF service number</span>
-                                                <strong class="required">(required)</strong>
-                                            </label>
-                                            <div class="row">
-                                                <div class="col-xs-4 col-sm-6 col-md-3">
-                                                    <input type="text" class="form-control input-lg full-width" 
-                                                    id="cafServiceNumberField" 
-                                                    required="required" 
-                                                    data-rule-nowhitespace="true" 
-                                                    data-rule-alphaornumeric="true" 
-                                                    data-rule-serviceNumber="true" 
-                                                    data-rule-rangelength="[5,9]"
-                                                        />
-                                                </div>
-                                            </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                 
-                                </div>
-                            </fieldset>
-                            <fieldset id="unique_id">
-                                <legend>Your unique identifying number</legend>
-                                <div>
-                                    <div class="clearfix mrgn-bttm-0"></div>
-                                    <div class="wb-fieldflow" id="numbers"
-					
-                                    data-wb-fieldflow='
-                                    {"renderas":"radio", 
-                                    "gcChckbxrdio":false,
-                                    "noForm": true,
-                                    "noreqlabel": false}'
-                                    >
-            
-                                    <p class="wb-fieldflow-label"> <span >Choose an identifying number</span> associated with your account.
-                                    </p>
-                                    
-                                    <ul>
-                                        <li id="cafServiceNumberRadioButton"
-                                        data-wb-fieldflow='{"action": "toggle", "toggle": "#caf-service-number-form-group", "live": true}'>
-                                            CAF service number
-                                            
-                                        </li>
-                                        <li id="rcmpRegimentalNumberRadioButton"
-                                        data-wb-fieldflow='{"action": "toggle", "toggle": "#rcmp-regimental-form-group", "live": true}'>
-                                            RCMP regimental number
-                                        </li>
-                                        
-                                        <li
-                                        data-wb-fieldflow='{"action": "toggle", "toggle": "#csdn-id-form-group", "live": true}'>
-                                            VAC CSDN ID
-                                        </li>
-            
-                                        <!-- todo write verification -->
-                                        <li
-                                        data-wb-fieldflow='{"action": "toggle", "toggle": "#", "live": true}'>
-                                        VAC file number (or Health Care ID)</span>	
-                                        
-                                        </li>
-                                    </ul>
-                                </div>
-            
-                                <div id="caf-service-number-form-group" class="hidden">
-                                    <div class="form-group">			
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                            <label for="cafServiceNumberField" class="control-label required ">
-                                                <span class="field-name h3">CAF service number</span>
-                                                <strong class="required">(required)</strong>
-                                            </label>
-                                            <div class="row">
-                                                <div class="col-xs-4 col-sm-6 col-md-3">
-                                                    <input type="text" class="form-control input-lg full-width" 
-                                                    id="cafServiceNumberField" 
-                                                    required="required" 
-                                                    data-rule-nowhitespace="true" 
-                                                    data-rule-alphaornumeric="true" 
-                                                    data-rule-serviceNumber="true" 
-                                                    data-rule-rangelength="[5,9]"
-                                                        />
-                                                </div>
-                                            </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                        
-                                <div id="rcmp-regimental-form-group" class="hidden">
-                                    <div class="form-group">			
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                            <label for="rcmpRegNumberField" class="control-label required ">
-                                                <span class="field-name h3">RCMP regimental number</span>
-                                                <strong class="required">(required)</strong>
-                                            </label>
-                                            <div class="row">
-                                                <div class="col-xs-4 col-sm-6 col-md-3">
-                                                    <input type="text" class="form-control input-lg full-width" id="rcmpRegNumberField" 
-                                                    required="required" 
-                                                    data-rule-nowhitespace="true" data-rule-rangelength="[3,9]" />
-                        
-                                                </div>
-                                            </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                        
-                                <div id="csdn-id-form-group" class="hidden">
-                                    <div class="form-group">			
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                            <label for="csdnID" class="control-label required ">
-                                                <span class="field-name h3">CSDN ID (VAC)</span>
-                                                <strong class="required">(required)</strong>
-                                            </label>
-                                            <div class="row">
-                                                <div class="col-xs-4 col-sm-6 col-md-3">
-                                                    <input type="number" class="form-control input-lg full-width" id="csdnID" 
-                                                    required="required" data-rule-nowhitespace="true" 
-                                                    data-rule-maxlength="11" data-rule-minlength="11"  />
-                                                </div>
-                                            </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                    
-
                                     <!--
                                     <div class="form-group">
-                                        
-                                        <label for="preferredNumber" class="required">Preferred: <span
-                                                class="field-name">Phone Number</span></label>
-                                        <input class="form-control input-lg" id="preferredNumber" name="preferredNumber"
-                                            type="tel" data-rule-phoneUS="true" required="required" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="secondaryNumber">Secondary: <span class="field-name">Phone
-                                                Number</span></label>
-                                        <input class="form-control input-lg" id="secondaryNumber" name="secondaryNumber"
-                                            type="tel" data-rule-phoneUS="true" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email"><span class="field-name">Email Address</span>
-                                            (test@domain)</label>
-                                        <input class="form-control input-lg" id="email" name="email" type="email" />
+                                        <fieldset class="usa-fieldset">
+                                            <legend class="usa-legend">Date of Birth</legend>
+                                            <span class="usa-hint" id="mdHint">For example: January 19 2000</span>
+                                            <div class="usa-memorable-date">
+                                              <div class="usa-form-group usa-form-group--month usa-form-group--select">
+                                                <label class="usa-label" for="date_of_birth_month">Month</label>
+                                                <select class="usa-select" id="date_of_birth_month" name="date_of_birth_month" aria-describedby="mdHint">
+                                                  <option value="">- Select -</option>
+                                                  <option value="1">01 - January</option>
+                                                  <option value="2">02 - February</option>
+                                                  <option value="3">03 - March</option>
+                                                  <option value="4">04 - April</option>
+                                                  <option value="5">05 - May</option>
+                                                  <option value="6">06 - June</option>
+                                                  <option value="7">07 - July</option>
+                                                  <option value="8">08 - August</option>
+                                                  <option value="9">09 - September</option>
+                                                  <option value="10">10 - October</option>
+                                                  <option value="11">11 - November</option>
+                                                  <option value="12">12 - December</option>
+                                                </select>
+                                              </div>
+                                              <div class="usa-form-group usa-form-group--day">
+                                                <label class="usa-label" for="date_of_birth_day">Day</label>
+                                                <input class="usa-input" aria-describedby="mdHint" id="date_of_birth_day" name="date_of_birth_day" maxlength="2" pattern="[0-9]*" inputmode="numeric" value="">
+                                              </div>
+                                              <div class="usa-form-group usa-form-group--year">
+                                                <label class="usa-label" for="date_of_birth_year">Year</label>
+                                                <input class="usa-input" aria-describedby="mdHint" id="date_of_birth_year" name="date_of_birth_year" minlength="4" maxlength="4" pattern="[0-9]*" inputmode="numeric" value="">
+                                              </div>
+                                            </div>
+                                          </fieldset>
                                     </div>-->
+ 
+                                    <div class="form-group form-inline mrgn-bttm-lg">
+                                            <div class="form-group mrgn-lft-md">
+                                                <label for="country" class="required ">Type of identification number <strong class="required">(required)</strong></label>
+                                                <br>
+                                                <select name="country" id="country" class="form-control">
+                                                    <option value="CAF" selected="selected">Service number (CAF)</option>
+                                                    <option value="RCMP">Regimental number (RCMP)</option>                                            
+                                                    <option value="CSDN">CSDN ID (VAC)</option>
+                                                    <option value="file">File number or Health care ID (VAC)</option>
+                                                
+                                                </select>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                                <div class="form-group mrgn-lft-md mrgn-tp-md">
+                                                    <label for="cafServiceNumberField" class="required"><span class="field-name">Service number (CAF)</span> <strong class="required">(required)</strong></label>
+                                                    <br>
+                                                    <input type="text" class="form-control input-lg full-width" 
+                                                    id="cafServiceNumberField" 
+                                                    required="required" 
+                                                    data-rule-nowhitespace="true" 
+                                                    data-rule-alphaornumeric="true" 
+                                                    data-rule-serviceNumber="true" 
+                                                    data-rule-rangelength="[5,9]"
+                                                        />
+                                                </div>
+                                                
+                                    </div>
+                                    
+                                    <div class="clearfix"></div>
 
-
-                                </div>
+                                    
+                                 
+                                
                             </fieldset>
                             <!--
-                            <fieldset id="questionaire">
-                                <legend>Communication options</legend>
-                                <div>
-                                    <p><small>For each of the following examples, indicate whether or not you feel that
-                                            there is an ethical issue.</small></p>
-                                    <fieldset class="subfields">
-                                        <legend><span class="field-name">Ethics 1</span>: You pay $10.00 bucks for a
-                                            purchase, but receive change for $20.00 bucks. Would you keep the extra
-                                            money?</legend>
-                                        <div class="radio">
-                                            <label for="defNot-1"><input type="radio" name="ethics1" value="defNot-1"
-                                                    id="defNot-1" />&#160;Definitely Not</label>&#160;
-                                            <label for="probNot-1"><input type="radio" name="ethics1" value="probNot-1"
-                                                    id="probNot-1" />&#160;Probably Not</label>&#160;
-                                            <label for="maybe-1"><input type="radio" name="ethics1" value="maybe-1"
-                                                    id="maybe-1" />&#160;Maybe (Not Sure)</label>&#160;
-                                            <label for="probably-1"><input type="radio" name="ethics1"
-                                                    value="probably-1" id="probably-1" />&#160;Probably</label>&#160;
-                                            <label for="definitely-1"><input type="radio" name="ethics1"
-                                                    value="definitely-1" id="definitely-1" />&#160;Definitely</label>
-                                        </div>
-                                    </fieldset>
-                                    <fieldset class="subfields">
-                                        <legend><span class="field-name">Ethics 2</span>: You need a software, but can't
-                                            wait for office to make a decision. Against license restrictions would you
-                                            download it?</legend>
-                                        <div class="radio">
-                                            <label for="defNot-2"><input type="radio" name="ethics2" value="defNot-2"
-                                                    id="defNot-2" />&#160;Definitely Not</label>&#160;
-                                            <label for="probNot-2"><input type="radio" name="ethics2" value="probNot-2"
-                                                    id="probNot-2" />&#160;Probably Not</label>&#160;
-                                            <label for="maybe-2"><input type="radio" name="ethics2" value="maybe-2"
-                                                    id="maybe-2" />&#160;Maybe (Not Sure)</label>&#160;
-                                            <label for="probably-2"><input type="radio" name="ethics2"
-                                                    value="probably-2" id="probably-2" />&#160;Probably</label>&#160;
-                                            <label for="definitely-2"><input type="radio" name="ethics2"
-                                                    value="definitely-2" id="definitely-2" />&#160;Definitely</label>
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </fieldset>-->
-                            <input type="submit" name="submit" value="Submit" class="btn btn-primary" />
+                            <p class="small mrgn-tp-0 mrgn-bttm-lg"><a href="#">Enter a one-time password</a></p>
+                                -->
+                            <input type="submit" name="submit" value="Submit" class="btn btn-primary btn-lg" />
+                            
+
                         </form>
                     </div>
 
@@ -411,7 +328,7 @@
 
                 <dl id="wb-dtmd">
                     <dt>Date modified:</dt>
-                    <dd><time property="dateModified">2023-03-06</time></dd>
+                    <dd><time property="dateModified">2023-03-31</time></dd>
                 </dl>
             </div>
         </footer>
@@ -419,11 +336,11 @@
 
     </main>
 
-    <footer id="wb-info">
+    <footer id="wb-info" class="">
         <h2 class="wb-inv">About this site</h2>
 
 
-        <div class="landscape">
+        <div class="landscape hidden">
             <nav class="container wb-navcurr">
 
                 <ul class="list-unstyled colcount-xs-2 colcount-md-3">
@@ -441,6 +358,7 @@
                 <nav>
 
                     <ul>
+                        <li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
                         <li><a href="https://www.veterans.gc.ca/eng/e_services">About My VAC Account</a></li>
                         <li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Terms and conditions</a></li>
                         <li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Privacy</a></li>
@@ -453,11 +371,18 @@
         </div>
     </footer>
 
+   
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
         integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
         crossorigin="anonymous"></script>
+
+
+        
     <script src="../../../wet-boew/js/wet-boew.min.js"></script>
     <script src="../../../GCWeb/js/theme.min.js"></script>
+
+    
 
 
 </body>
