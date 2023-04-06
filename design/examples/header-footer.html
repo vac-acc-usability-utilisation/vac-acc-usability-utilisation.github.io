@@ -29,9 +29,9 @@
 
 	<style>
 		.accnt-menu [role=menuitem] {
-			
+
 			width: auto;
-			
+
 		}
 
 		.gcweb-menu [role=menu] {
@@ -40,7 +40,7 @@
 		}
 
 		.accnt-menu [role=menu] {
-    		
+
 			position: absolute;
 			right: 1em;
 		}
@@ -49,34 +49,39 @@
 			text-transform: none;
 		}
 
-		#mbl-mnu details.acc-group.brdr-0.on, #app-navigation details.acc-group.brdr-0.on {
+		#mbl-mnu details.acc-group.brdr-0.on,
+		#app-navigation details.acc-group.brdr-0.on {
 			padding-bottom: 0;
 		}
 
 		ul#app-mnu {
-			text-align: left; padding:1.25em 1em 1em; background-color: #f5f5f5; border: 1px solid #000; width: 100%; position:static;
+			text-align: left;
+			padding: 1.25em 1em 1em;
+			background-color: #f5f5f5;
+			border: 1px solid #000;
+			width: 100%;
+			position: static;
 		}
 
 		@media screen and (max-width: 991px) {
 			ul#app-mnu {
-				padding:0;
+				padding: 0;
 			}
 		}
-
-			</style>
+	</style>
 
 </head>
 
-<body class="cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage">
+<body vocab="http://schema.org/" typeof="WebPage">
 	<nav aria-label="Skip Links">
-        <ul id="wb-tphp">
-            <li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
-            <li class="wb-slc visible-xs visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to "About My VAC Account"</a></li>
-        </ul>
-    </nav>
+		<ul id="wb-tphp">
+			<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+			<li class="wb-slc visible-xs visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to
+					"About My VAC Account"</a></li>
+		</ul>
+	</nav>
 	<!-- authenticated (landing page)-->
-    <header id="unauthenticated-no-accnt-menu-header" 
-		data-wb-urlmapping='{
+	<header id="unauthenticated-no-accnt-menu-header" data-wb-urlmapping='{
 		"unauthenticated": { 
 		"action": "addClass", 
 		"source": "#unauthenticated-no-accnt-menu-header", 
@@ -106,7 +111,7 @@
 		  "source": "#unauthenticated-no-accnt-menu-header", 
 		  "class": "hidden" }
 		}'>
-        <div id="wb-bnr" class="container">
+		<div id="wb-bnr" class="container">
 			<div class="row">
 				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
 					<h2 class="wb-inv">Language selection</h2>
@@ -130,44 +135,44 @@
 					<meta property="areaServed" typeof="Country" content="Canada">
 					<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
 				</div>
-				
+
 			</div>
 
 		</div>
-        <div class="app-bar">
-            <div class="container">
-                <div class="row">
-                    <section class="col-xs-7">
-                        <h2 class="wb-inv">Name of Web application</h2><a class="app-name" href="../../en.html">My&nbsp;VAC&nbsp;Account</a>
-                    </section>
-                    
-                    <nav class="hidden col-xs-5 text-right mrgn-tp-sm mrgn-bttm-sm">
-                        <section>    
-                            <h2 class="wb-inv">Account menu</h2>
-                            <div class="hidden-xs">
-                                <button class="btn btn-primary" type="button">Register</button>
-                                <button class="btn btn-default" type="button">Sign in</button>
-                            </div>
-                            <div class="visible-xs mrgn-tp-sm">
-                                <button class="btn btn-default btn-sm" type="button">Sign in</button>
-                            </div>
-                        </section>
-                    </nav>
-                  
-                </div>
-            </div>
-        </div>
-    </header> 
+		<div class="app-bar">
+			<div class="container">
+				<div class="row">
+					<section class="col-xs-7">
+						<h2 class="wb-inv">Name of Web application</h2><a class="app-name"
+							href="../../en.html">My&nbsp;VAC&nbsp;Account</a>
+					</section>
+
+					<nav class="hidden col-xs-5 text-right mrgn-tp-sm mrgn-bttm-sm">
+						<section>
+							<h2 class="wb-inv">Account menu</h2>
+							<div class="hidden-xs">
+								<button class="btn btn-primary" type="button">Register</button>
+								<button class="btn btn-default" type="button">Sign in</button>
+							</div>
+							<div class="visible-xs mrgn-tp-sm">
+								<button class="btn btn-default btn-sm" type="button">Sign in</button>
+							</div>
+						</section>
+					</nav>
+
+				</div>
+			</div>
+		</div>
+	</header>
 
 	<!-- unauthenticated -->
-	<header class="hidden" id="unauthenticated-header" 
-		data-wb-urlmapping='{
+	<header class="hidden" id="unauthenticated-header" data-wb-urlmapping='{
 			"unauthenticated": { 
 			"action": "removeClass", 
 			"source": "#unauthenticated-header", 
 			"class": "hidden" }
 			}'>
-        <div id="wb-bnr" class="container">
+		<div id="wb-bnr" class="container">
 			<div class="row">
 				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
 					<h2 class="wb-inv">Language selection</h2>
@@ -191,38 +196,39 @@
 					<meta property="areaServed" typeof="Country" content="Canada">
 					<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
 				</div>
-				
+
 			</div>
 
 		</div>
-        <div class="app-bar">
-            <div class="container">
-                <div class="row">
-                    <section class="col-xs-6 col-sm-7">
-                        <h2 class="wb-inv">Name of Web application</h2><a class="app-name" href="../../en.html">My VAC Account</a>
-                    </section>
-                    
-                    <nav class="col-xs-6 col-sm-5 text-right mrgn-tp-sm mrgn-bttm-sm accnt-menu">
-                        <section>    
-                            <h2 class="wb-inv">Account menu</h2>
-                            <div class="hidden-xs">
-                                <button class="btn btn-primary" type="button">Register</button>
-                                <button class="btn btn-default" type="button">Sign in</button>
-                            </div>
-                            <div class="visible-xs mrgn-tp-sm">
-                                <button class="btn-sm btn-default" type="button">Sign in</button>
-                            </div>
-                        </section>
-                    </nav>
-                  
-                </div>
-            </div>
-        </div>
+		<div class="app-bar">
+			<div class="container">
+				<div class="row">
+					<section class="col-xs-6 col-sm-7">
+						<h2 class="wb-inv">Name of Web application</h2><a class="app-name" href="../../en.html">My VAC
+							Account</a>
+					</section>
+
+					<nav class="col-xs-6 col-sm-5 text-right mrgn-tp-sm mrgn-bttm-sm accnt-menu">
+						<section>
+							<h2 class="wb-inv">Account menu</h2>
+							<div class="hidden-xs">
+								<button class="btn btn-primary" type="button">Register</button>
+								<button class="btn btn-default" type="button">Sign in</button>
+							</div>
+							<div class="visible-xs mrgn-tp-sm">
+								<button class="btn-sm btn-default" type="button">Sign in</button>
+							</div>
+						</section>
+					</nav>
+
+				</div>
+			</div>
+		</div>
 		<nav id="wb-bc" property="breadcrumb">
 			<h2>You are here:</h2>
 			<div class="container">
 				<ol class="breadcrumb hidden-xs hidden-sm" typeof="BreadcrumbList">
-					
+
 					<li property="itemListElement" typeof="ListItem">
 						<a property="item" typeof="WebPage" href="https://wet-boew.github.io/GCWeb/index-en.html">
 							<span property="name">VAC Usability</span>
@@ -230,7 +236,8 @@
 						<meta property="position" content="1">
 					</li>
 					<li property="itemListElement" typeof="ListItem">
-						<a property="item" typeof="WebPage" href="https://wet-boew.github.io/GCWeb/méli-mélo/méli-mélo-en.html">
+						<a property="item" typeof="WebPage"
+							href="https://wet-boew.github.io/GCWeb/méli-mélo/méli-mélo-en.html">
 							<span property="name">Templates and Components</span>
 						</a>
 						<meta property="position" content="2">
@@ -238,29 +245,29 @@
 				</ol>
 				<div class="hidden-md hidden-lg">
 					<ol>
-						<li>	
-							
+						<li>
+
 							<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
 								<span class="fa fa-arrow-left"></span>
 								<span property="name">Template and components</span>
-							</a></li>
+							</a>
+						</li>
 					</ol>
-								
-							
-					</div>
+
+
+				</div>
 			</div>
 		</nav>
-    </header> 
+	</header>
 
 	<!-- IPROV -->
-	<header class="hidden" id="iprov-header" 
-		data-wb-urlmapping='{
+	<header class="hidden" id="iprov-header" data-wb-urlmapping='{
 			"iprov": { 
 			"action": "removeClass", 
 			"source": "#iprov-header", 
 			"class": "hidden" }
 			}'>
-        <div id="wb-bnr" class="container">
+		<div id="wb-bnr" class="container">
 			<div class="row">
 				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
 					<h2 class="wb-inv">Language selection</h2>
@@ -284,43 +291,43 @@
 					<meta property="areaServed" typeof="Country" content="Canada">
 					<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
 				</div>
-				
+
 			</div>
 
 		</div>
-        <div class="app-bar">
-            <div class="container">
-                <div class="row">
-                    <section class="col-xs-6 col-sm-7">
-                        <h2 class="wb-inv">Name of Web application</h2><a class="app-name" href="../../en.html">My VAC Account</a>
-                    </section>
-                    
-                    <nav class="col-xs-6 col-sm-5 text-right mrgn-tp-sm mrgn-bttm-sm accnt-menu">
-                        <section>    
-                            <h2 class="wb-inv">Account menu</h2>
-                            <div class="hidden-xs">
-                                <button class="btn btn-primary" type="button">Sign out</button>
-                            </div>
-                            <div class="visible-xs mrgn-tp-sm">
-                                <button class="btn btn-primary btn-sm" type="button">Sign out</button>
-                            </div>
-                        </section>
-                    </nav>
-                  
-                </div>
-            </div>
-        </div>
-    </header> 
+		<div class="app-bar">
+			<div class="container">
+				<div class="row">
+					<section class="col-xs-6 col-sm-7">
+						<h2 class="wb-inv">Name of Web application</h2><a class="app-name" href="../../en.html">My VAC
+							Account</a>
+					</section>
+
+					<nav class="col-xs-6 col-sm-5 text-right mrgn-tp-sm mrgn-bttm-sm accnt-menu">
+						<section>
+							<h2 class="wb-inv">Account menu</h2>
+							<div class="hidden-xs">
+								<button class="btn btn-primary" type="button">Sign out</button>
+							</div>
+							<div class="visible-xs mrgn-tp-sm">
+								<button class="btn btn-primary btn-sm" type="button">Sign out</button>
+							</div>
+						</section>
+					</nav>
+
+				</div>
+			</div>
+		</div>
+	</header>
 
 	<!-- IPROV POA -->
-	<header class="hidden" id="iprov-poa-header"
-	data-wb-urlmapping='{
+	<header class="hidden" id="iprov-poa-header" data-wb-urlmapping='{
 		"iprov-poa": { 
 		"action": "removeClass", 
 		"source": "#iprov-poa-header", 
 		"class": "hidden" }
 		}'>
-        <div id="wb-bnr" class="container">
+		<div id="wb-bnr" class="container">
 			<div class="row">
 				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
 					<h2 class="wb-inv">Language selection</h2>
@@ -364,47 +371,59 @@
 			</div>
 
 		</div>
-        <div class="app-bar" style="border-bottom: 4px solid #f90;">
-            <div class="container">
-                <div class="row">
+		<div class="app-bar" style="border-bottom: 4px solid #f90;">
+			<div class="container">
+				<div class="row">
 					<section class="col-xs-8 col-sm-5 col-md-4">
 						<h2 class="wb-inv">Name of Web application</h2>
 						<a href="#" class="app-name" href="../../en.html">My&nbsp;VAC&nbsp;Account</a>
 					</section>
-                    
-                    <nav class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
-                        <section>    
-                            <h2 class="wb-inv">Account menu</h2>
-							
-							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
-							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width" style="position:static; width: 100%; float: left; text-align: left; width: auto;">
+
+					<nav
+						class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
+						<section>
+							<h2 class="wb-inv">Account menu</h2>
+
+							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs"
+								style="background:#eee; color: #000; position: relative;" type="button"
+								aria-haspopup="true" aria-controls="accnt-mnu"
+								aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span
+									class="badge hidden-md hidden-lg">2</span><span
+									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width"
+								style="position:static; width: 100%; float: left; text-align: left; width: auto;">
 								<!--<li role="none"><a role="menuitem" tabindex="-1" href="#">Switch user</a></li>-->
 								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
 							</ul>
 
-							<button class="btn btn-default mrgn-lft-md hidden-xs" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false"><strong class="text-warning"> </strong>Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
-							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" style="text-align: left; width: auto;">
+							<button class="btn btn-default mrgn-lft-md hidden-xs"
+								style="background:#eee; color: #000; position: relative;" type="button"
+								aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false"><strong
+									class="text-warning"> </strong>Noel&nbsp;Knockwood&nbsp;<span
+									class="badge hidden-md hidden-lg">2</span><span
+									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical"
+								style="text-align: left; width: auto;">
 								<li role="none"><a role="menuitem" tabindex="-1" href="#">Cancel</a></li>
 								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
 							</ul>
-							
-                        </section>
-                    </nav>
-                  
-                </div>
-            </div>
-        </div>
-    </header>
+
+						</section>
+					</nav>
+
+				</div>
+			</div>
+		</div>
+	</header>
 
 	<!-- transactional -->
-	<header class="hidden" id="transactional-header" 
-		data-wb-urlmapping='{
+	<header class="hidden" id="transactional-header" data-wb-urlmapping='{
 			"transactional": { 
 			"action": "removeClass", 
 			"source": "#transactional-header", 
 			"class": "hidden" }
 			}'>
-        <div id="wb-bnr" class="container">
+		<div id="wb-bnr" class="container">
 			<div class="row">
 				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
 					<h2 class="wb-inv">Language selection</h2>
@@ -428,37 +447,38 @@
 					<meta property="areaServed" typeof="Country" content="Canada">
 					<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
 				</div>
-				
+
 			</div>
 
 		</div>
-        <div class="app-bar">
-            <div class="container">
-                <div class="row">
-                    <section class="col-xs-6 col-sm-7">
-                        <h2 class="wb-inv">Name of Web application</h2><a class="app-name" href="../../en.html">My VAC Account</a>
-                    </section>
-                    
-                    <nav class="col-xs-6 col-sm-5 text-right mrgn-tp-sm mrgn-bttm-sm accnt-menu">
-                        <section>    
-                            <h2 class="wb-inv">Account menu</h2>
-                            <div class="hidden-xs">
-                                <button class="btn btn-primary" type="button">Sign out</button>
-                            </div>
-                            <div class="visible-xs mrgn-tp-sm">
-                                <button class="btn btn-primary btn-sm" type="button">Sign out</button>
-                            </div>
-                        </section>
-                    </nav>
-                  
-                </div>
-            </div>
-        </div>
+		<div class="app-bar">
+			<div class="container">
+				<div class="row">
+					<section class="col-xs-6 col-sm-7">
+						<h2 class="wb-inv">Name of Web application</h2><a class="app-name" href="../../en.html">My VAC
+							Account</a>
+					</section>
+
+					<nav class="col-xs-6 col-sm-5 text-right mrgn-tp-sm mrgn-bttm-sm accnt-menu">
+						<section>
+							<h2 class="wb-inv">Account menu</h2>
+							<div class="hidden-xs">
+								<button class="btn btn-primary" type="button">Sign out</button>
+							</div>
+							<div class="visible-xs mrgn-tp-sm">
+								<button class="btn btn-primary btn-sm" type="button">Sign out</button>
+							</div>
+						</section>
+					</nav>
+
+				</div>
+			</div>
+		</div>
 		<nav id="wb-bc" property="breadcrumb">
 			<h2>You are here:</h2>
 			<div class="container">
 				<ol class="breadcrumb hidden-xs hidden-sm" typeof="BreadcrumbList">
-					
+
 					<li property="itemListElement" typeof="ListItem">
 						<a property="item" typeof="WebPage" href="#">
 							<span property="name">Breadcrumb link</span>
@@ -468,7 +488,7 @@
 				</ol>
 				<div class="hidden-md hidden-lg">
 					<ol>
-						<li>	
+						<li>
 							<a property="item" typeof="WebPage" href="#">
 								<span class="fa fa-arrow-left"></span>
 								<span property="name">Breadcrumb link</span>
@@ -478,17 +498,16 @@
 				</div>
 			</div>
 		</nav>
-    </header> 
+	</header>
 
 	<!-- transactional POA -->
-	<header class="hidden" id="transactional-poa-header"
-	data-wb-urlmapping='{
+	<header class="hidden" id="transactional-poa-header" data-wb-urlmapping='{
 		"transactional-poa": { 
 		"action": "removeClass", 
 		"source": "#transactional-poa-header", 
 		"class": "hidden" }
 		}'>
-        <div id="wb-bnr" class="container">
+		<div id="wb-bnr" class="container">
 			<div class="row">
 				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
 					<h2 class="wb-inv">Language selection</h2>
@@ -532,41 +551,54 @@
 			</div>
 
 		</div>
-        <div class="app-bar" style="border-bottom: 4px solid #f90;">
-            <div class="container">
-                <div class="row">
+		<div class="app-bar" style="border-bottom: 4px solid #f90;">
+			<div class="container">
+				<div class="row">
 					<section class="col-xs-8 col-sm-5 col-md-4">
 						<h2 class="wb-inv">Name of Web application</h2>
 						<a href="#" class="app-name" href="../../en.html">My&nbsp;VAC&nbsp;Account</a>
 					</section>
-                    
-                    <nav class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
-                        <section>    
-                            <h2 class="wb-inv">Account menu</h2>
-							
-							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false"><strong class="text-warning">Representing </strong>Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
-							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width" style="position:static; width: 100%; float: left; text-align: left; width: auto;">
+
+					<nav
+						class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
+						<section>
+							<h2 class="wb-inv">Account menu</h2>
+
+							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs"
+								style="background:#eee; color: #000; position: relative;" type="button"
+								aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false"><strong
+									class="text-warning">Representing </strong>Noel&nbsp;Knockwood&nbsp;<span
+									class="badge hidden-md hidden-lg">2</span><span
+									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width"
+								style="position:static; width: 100%; float: left; text-align: left; width: auto;">
 								<!--<li role="none"><a role="menuitem" tabindex="-1" href="#">Switch user</a></li>-->
 								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
 							</ul>
 
-							<button class="btn btn-default mrgn-lft-md hidden-xs" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false"><strong class="text-warning">Representing </strong>Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
-							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" style="text-align: left; width: auto;">
+							<button class="btn btn-default mrgn-lft-md hidden-xs"
+								style="background:#eee; color: #000; position: relative;" type="button"
+								aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false"><strong
+									class="text-warning">Representing </strong>Noel&nbsp;Knockwood&nbsp;<span
+									class="badge hidden-md hidden-lg">2</span><span
+									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical"
+								style="text-align: left; width: auto;">
 								<li role="none"><a role="menuitem" tabindex="-1" href="#">Switch user</a></li>
 								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
 							</ul>
-							
-                        </section>
-                    </nav>
-                  
-                </div>
-            </div>
-        </div>
-        <nav id="wb-bc" property="breadcrumb">
+
+						</section>
+					</nav>
+
+				</div>
+			</div>
+		</div>
+		<nav id="wb-bc" property="breadcrumb">
 			<h2>You are here:</h2>
 			<div class="container">
 				<ol class="breadcrumb hidden-xs hidden-sm" typeof="BreadcrumbList">
-					
+
 					<li property="itemListElement" typeof="ListItem">
 						<a property="item" typeof="WebPage" href="#">
 							<span property="name">Breadcrumb link</span>
@@ -576,7 +608,7 @@
 				</ol>
 				<div class="hidden-md hidden-lg">
 					<ol>
-						<li>	
+						<li>
 							<a property="item" typeof="WebPage" href="#">
 								<span class="fa fa-arrow-left"></span>
 								<span property="name">Breadcrumb link</span>
@@ -586,17 +618,16 @@
 				</div>
 			</div>
 		</nav>
-    </header>
+	</header>
 
 	<!-- authenticated -->
-	<header class="hidden" id="authenticated-header"
-	data-wb-urlmapping='{
+	<header class="hidden" id="authenticated-header" data-wb-urlmapping='{
 		"authenticated": { 
 		"action": "removeClass", 
 		"source": "#authenticated-header", 
 		"class": "hidden" }
 		}'>
-        <div id="wb-bnr" class="container">
+		<div id="wb-bnr" class="container">
 			<div class="row">
 				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
 					<h2 class="wb-inv">Language selection</h2>
@@ -640,40 +671,62 @@
 			</div>
 
 		</div>
-        <div class="app-bar">
-            <div class="container">
-                <div class="row">
+		<div class="app-bar">
+			<div class="container">
+				<div class="row">
 					<section class="col-xs-8 col-sm-5 col-md-4">
 						<h2 class="wb-inv">Name of Web application</h2>
 						<a href="#" class="app-name" href="../../en.html">My&nbsp;VAC&nbsp;Account</a>
 					</section>
-                    
-                    <nav class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
-                        <section>    
-                            <h2 class="wb-inv">Account menu</h2>
-							<a href="#" class="btn btn-link text-white hidden-xs hidden-sm"> <span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span class="badge">2</span> </a>
-							<a href="#" class="btn btn-link text-white mrgn-rght-md hidden-xs hidden-sm hidden-md"> <span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a>
-							
-							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
-							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width" style="position:static; width: 100%; float: left; text-align: left; width: auto;">
-								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span class="badge">2</span></a></li>
-								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
+
+					<nav
+						class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
+						<section>
+							<h2 class="wb-inv">Account menu</h2>
+							<a href="#" class="btn btn-link text-white hidden-xs hidden-sm"> <span
+									class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+									class="badge">2</span> </a>
+							<a href="#" class="btn btn-link text-white mrgn-rght-md hidden-xs hidden-sm hidden-md">
+								<span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a>
+
+							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs"
+								style="background:#eee; color: #000; position: relative;" type="button"
+								aria-haspopup="true" aria-controls="accnt-mnu"
+								aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span
+									class="badge hidden-md hidden-lg">2</span><span
+									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width"
+								style="position:static; width: 100%; float: left; text-align: left; width: auto;">
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
+										href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+											class="badge">2</span></a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span
+											class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
 								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
 							</ul>
 
-							<button class="btn btn-default mrgn-lft-md hidden-xs" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
-							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" style="text-align: left; width: auto;">
-								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span class="badge">2</span></a></li>
-								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
+							<button class="btn btn-default mrgn-lft-md hidden-xs"
+								style="background:#eee; color: #000; position: relative;" type="button"
+								aria-haspopup="true" aria-controls="accnt-mnu"
+								aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span
+									class="badge hidden-md hidden-lg">2</span><span
+									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical"
+								style="text-align: left; width: auto;">
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
+										href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+											class="badge">2</span></a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span
+											class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
 								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
 							</ul>
-							
-                        </section>
-                    </nav>
-                  
-                </div>
-            </div>
-        </div>
+
+						</section>
+					</nav>
+
+				</div>
+			</div>
+		</div>
 		<nav id="wb-bc" property="breadcrumb">
 			<h2>You are here:</h2>
 			<div class="container">
@@ -691,27 +744,29 @@
 						<meta property="position" content="2">
 					</li>
 					<li property="itemListElement" typeof="ListItem">
-						<a property="item" typeof="WebPage" href="https://wet-boew.github.io/GCWeb/méli-mélo/méli-mélo-en.html">
+						<a property="item" typeof="WebPage"
+							href="https://wet-boew.github.io/GCWeb/méli-mélo/méli-mélo-en.html">
 							<span property="name">Templates and Components</span>
 						</a>
 						<meta property="position" content="3">
 					</li>
 				</ol>
 				<div class="hidden-sm hidden-md hidden-lg">
-				<ol>
-					<li>	
-						
-						<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
-							<span class="fa fa-arrow-left"></span>
-							<span property="name">Template and components</span>
-						</a></li>
-				</ol>
-							
-						
+					<ol>
+						<li>
+
+							<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
+								<span class="fa fa-arrow-left"></span>
+								<span property="name">Template and components</span>
+							</a>
+						</li>
+					</ol>
+
+
 				</div>
 			</div>
 		</nav>
-        <!--
+		<!--
         <div class="app-bar-mb container visible-xs-block hidden-print">
             <nav>
                 <h2 class="wb-inv">Account menu</h2>
@@ -721,17 +776,16 @@
                 </ul>
             </nav>
         </div>-->
-    </header> 
+	</header>
 
 	<!-- authenticated POA -->
-	<header class="hidden" id="authenticated-poa-header"
-	data-wb-urlmapping='{
+	<header class="hidden" id="authenticated-poa-header" data-wb-urlmapping='{
 		"authenticated-poa": { 
 		"action": "removeClass", 
 		"source": "#authenticated-poa-header", 
 		"class": "hidden" }
 		}'>
-        <div id="wb-bnr" class="container">
+		<div id="wb-bnr" class="container">
 			<div class="row">
 				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
 					<h2 class="wb-inv">Language selection</h2>
@@ -775,42 +829,64 @@
 			</div>
 
 		</div>
-        <div class="app-bar" style="border-bottom: 4px solid #f90;">
-            <div class="container">
-                <div class="row">
+		<div class="app-bar" style="border-bottom: 4px solid #f90;">
+			<div class="container">
+				<div class="row">
 					<section class="col-xs-8 col-sm-5 col-md-4">
 						<h2 class="wb-inv">Name of Web application</h2>
 						<a href="#" class="app-name" href="../../en.html">My&nbsp;VAC&nbsp;Account</a>
 					</section>
-                    
-                    <nav class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
-                        <section>    
-                            <h2 class="wb-inv">Account menu</h2>
-							<a href="#" class="btn btn-link text-white hidden-xs hidden-sm"> <span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span class="badge">2</span> </a>
-							<a href="#" class="btn btn-link text-white mrgn-rght-md hidden-xs hidden-sm hidden-md"> <span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a>
-							
-							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false"><strong class="text-warning">Representing </strong>Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
-							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width" style="position:static; width: 100%; float: left; text-align: left; width: auto;">
-								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span class="badge">2</span></a></li>
-								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
+
+					<nav
+						class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
+						<section>
+							<h2 class="wb-inv">Account menu</h2>
+							<a href="#" class="btn btn-link text-white hidden-xs hidden-sm"> <span
+									class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+									class="badge">2</span> </a>
+							<a href="#" class="btn btn-link text-white mrgn-rght-md hidden-xs hidden-sm hidden-md">
+								<span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a>
+
+							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs"
+								style="background:#eee; color: #000; position: relative;" type="button"
+								aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false"><strong
+									class="text-warning">Representing </strong>Noel&nbsp;Knockwood&nbsp;<span
+									class="badge hidden-md hidden-lg">2</span><span
+									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width"
+								style="position:static; width: 100%; float: left; text-align: left; width: auto;">
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
+										href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+											class="badge">2</span></a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span
+											class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
 								<li role="none"><a role="menuitem" tabindex="-1" href="#">Switch user</a></li>
 								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
 							</ul>
 
-							<button class="btn btn-default mrgn-lft-md hidden-xs" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false"><strong class="text-warning">Representing </strong>Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
-							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" style="text-align: left; width: auto;">
-								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span class="badge">2</span></a></li>
-								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
+							<button class="btn btn-default mrgn-lft-md hidden-xs"
+								style="background:#eee; color: #000; position: relative;" type="button"
+								aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false"><strong
+									class="text-warning">Representing </strong>Noel&nbsp;Knockwood&nbsp;<span
+									class="badge hidden-md hidden-lg">2</span><span
+									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical"
+								style="text-align: left; width: auto;">
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
+										href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+											class="badge">2</span></a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span
+											class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
 								<li role="none"><a role="menuitem" tabindex="-1" href="#">Switch user</a></li>
 								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
 							</ul>
-							
-                        </section>
-                    </nav>
-                  
-                </div>
-            </div>
-        </div>
+
+						</section>
+					</nav>
+
+				</div>
+			</div>
+		</div>
 		<nav id="wb-bc" property="breadcrumb">
 			<h2>You are here:</h2>
 			<div class="container">
@@ -828,27 +904,29 @@
 						<meta property="position" content="2">
 					</li>
 					<li property="itemListElement" typeof="ListItem">
-						<a property="item" typeof="WebPage" href="https://wet-boew.github.io/GCWeb/méli-mélo/méli-mélo-en.html">
+						<a property="item" typeof="WebPage"
+							href="https://wet-boew.github.io/GCWeb/méli-mélo/méli-mélo-en.html">
 							<span property="name">Templates and Components</span>
 						</a>
 						<meta property="position" content="3">
 					</li>
 				</ol>
 				<div class="hidden-sm hidden-md hidden-lg">
-				<ol>
-					<li>	
-						
-						<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
-							<span class="fa fa-arrow-left"></span>
-							<span property="name">Template and components</span>
-						</a></li>
-				</ol>
-							
-						
+					<ol>
+						<li>
+
+							<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
+								<span class="fa fa-arrow-left"></span>
+								<span property="name">Template and components</span>
+							</a>
+						</li>
+					</ol>
+
+
 				</div>
 			</div>
 		</nav>
-        <!--
+		<!--
         <div class="app-bar-mb container visible-xs-block hidden-print">
             <nav>
                 <h2 class="wb-inv">Account menu</h2>
@@ -858,9 +936,9 @@
                 </ul>
             </nav>
         </div>-->
-    </header> 
+	</header>
 
-	<main class="cnt-wdth-lmtd" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
+	<main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
 		<section>
 			<div class="container">
 				<!--
@@ -868,9 +946,9 @@
 				style="letter-spacing: 0.5px;" >
 					MENU <span class="fa fa-bars"></span>
 			</button>-->
-			<!--MOBILE MENU-->
-			<nav id="mbl-mnu" class="gweb-v2 gcweb-menu app-menu hidden-md hidden-lg mrgn-tp-md hidden"
-			data-wb-urlmapping='{
+				<!--MOBILE MENU-->
+				<nav id="mbl-mnu" class="gweb-v2 gcweb-menu app-menu hidden-md hidden-lg mrgn-tp-md hidden"
+					data-wb-urlmapping='{
 				"authenticated": { 
 				"action": "removeClass", 
 				"source": "#mbl-mnu", 
@@ -880,45 +958,57 @@
 					"source": "#mbl-mnu", 
 					"class": "hidden" }
 				}'>
-				<section>    
-					<h2 class="wb-inv">Account menu</h2>
+					<section>
+						<h2 class="wb-inv">Account menu</h2>
 
-					<button id="mbl-mnu-btn" class="btn btn-default btn-lg mrgn-lft-md visible-xs" style="background:#f5f5f5; color:#000;" type="button" aria-haspopup="true" aria-controls="app-mnu" aria-expanded="false"
-					>
-						MENU<span class="fa fa-chevron-down mrgn-lft-sm"></span>
-					</button>
-					
-					<ul id="app-mnu" class="hidden-sm mrgn-tp-lg" role="menu" aria-orientation="vertical">
-						<div class="accordion" >
-							<nav>
-								<ul class="list-unstyled list-group">
-									<li>
-										<a href="#" class="btn btn-link full-width list-group-item brdr-tp brdr-bttm" style="text-align: left; background:none;">
+						<button id="mbl-mnu-btn" class="btn btn-default btn-lg mrgn-lft-md visible-xs"
+							style="background:#f5f5f5; color:#000;" type="button" aria-haspopup="true"
+							aria-controls="app-mnu" aria-expanded="false">
+							MENU<span class="fa fa-chevron-down mrgn-lft-sm"></span>
+						</button>
 
-											Overview
-										</a>
-									</li>
-									<li> 
-										<!-- Accordion section 3 -->
-										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-											<summary class="wb-toggle tgl-tab brdr-bttm"  data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>Apply for benefits and services</summary>
-											<div class="tgl-panel">
-												<!-- Section 3's content -->
-												<ul class="list-unstyled mrgn-lft-sm">
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Find a form</a></li>
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">What can you apply for?</a></li>
-												</ul>
-											</div>
-										</details>
-									</li>
-									<li>
-										<a href="#" class="btn btn-link full-width list-group-item brdr-bttm" style="text-align: left; background:none;">
-											Track your applications
-										</a>
-									</li>
-									<li>
-										 <!-- Accordion section 1 -->
-							<!--<details class="acc-group " style="padding:0; font-size:14px;">
+						<ul id="app-mnu" class="hidden-sm mrgn-tp-lg" role="menu" aria-orientation="vertical">
+							<div class="accordion">
+								<nav>
+									<ul class="list-unstyled list-group">
+										<li>
+											<a href="#"
+												class="btn btn-link full-width list-group-item brdr-tp brdr-bttm"
+												style="text-align: left; background:none;">
+
+												Overview
+											</a>
+										</li>
+										<li>
+											<!-- Accordion section 3 -->
+											<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
+												<summary class="wb-toggle tgl-tab brdr-bttm"
+													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
+													Apply for benefits and services</summary>
+												<div class="tgl-panel">
+													<!-- Section 3's content -->
+													<ul class="list-unstyled mrgn-lft-sm">
+														<li><a href="#"
+																class="btn btn-link list-group-item full-width brdr-bttm"
+																style="text-align: left; background:none;">Find a
+																form</a></li>
+														<li><a href="#"
+																class="btn btn-link list-group-item full-width brdr-bttm"
+																style="text-align: left; background:none;">What can you
+																apply for?</a></li>
+													</ul>
+												</div>
+											</details>
+										</li>
+										<li>
+											<a href="#" class="btn btn-link full-width list-group-item brdr-bttm"
+												style="text-align: left; background:none;">
+												Track your applications
+											</a>
+										</li>
+										<li>
+											<!-- Accordion section 1 -->
+											<!--<details class="acc-group " style="padding:0; font-size:14px;">
 								
 								<summary class="wb-toggle tgl-tab brdr-0" data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>Apply for benefits and services</summary>
 								<div class="tgl-panel">
@@ -932,125 +1022,175 @@
 									</ul>
 								</div>
 							</details>-->
-									</li>
-									
-									
-									<li> 
-										<!-- Accordion section 3 -->
-										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-											<summary class="wb-toggle tgl-tab brdr-bttm" data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>Transition to life after service</summary>
-											<div class="tgl-panel">
-												<!-- Section 3's content -->
-												<ul class="list-unstyled mrgn-lft-sm">
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Your transition task list</a></li>
-												</ul>
-											</div>
-										</details>
-									</li>
-									<li> 
-										<!-- Accordion section 3 -->
-										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-											<summary class="wb-toggle tgl-tab brdr-bttm" data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>Your account</summary>
-											<div class="tgl-panel">
-												<!-- Section 3's content -->
-												<ul class="list-unstyled mrgn-lft-sm">
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Inbox</a></li>
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Profile and settings</a></li>
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Switch accounts</a></li>
-												</ul>
-											</div>
-										</details>
-									</li>
-									<li>
-										<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm" style="text-align: left; background:none;">
-											Your benefits and services
-										</a>
-									</li>
-									
-								</ul>
-							</nav>
-						</div>
-					</ul>
+										</li>
 
-					<button id="mbl-mnu-btn" class="btn btn-default btn-lg mrgn-lft-md visible-sm" style="background:#f5f5f5; color:#000;" type="button" aria-haspopup="true" aria-controls="app-mnu" aria-expanded="false"
-					>
-						MENU<span class="fa fa-chevron-down mrgn-lft-sm"></span>
-					</button>
-					
-					<ul id="app-mnu" class="hidden-xs" role="menu" aria-orientation="vertical" style="text-align: left; padding:1.25em 1em 1em; background-color: #f5f5f5; border: 1px solid #000; width:50%;">
-						<div class="accordion" >
-							<nav>
-								<ul class="list-unstyled list-group" >
-									<li>
-										<a href="#" class="btn btn-link full-width list-group-item brdr-tp brdr-bttm" style="text-align: left; background:none;">
 
-											Overview
-										</a>
-									</li>
-									<li> 
-										<!-- Accordion section 1 -->
-										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-											<summary class="wb-toggle tgl-tab brdr-bttm"  data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>Apply for benefits and services</summary>
-											<div class="tgl-panel">
-												<!-- Section 1's content -->
-												<ul class="list-unstyled mrgn-lft-sm">
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Find a form</a></li>
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">What can you apply for?</a></li>
-												</ul>
-											</div>
-										</details>
-									</li>
-									<li>
-										<a href="#" class="btn btn-link full-width list-group-item brdr-bttm" style="text-align: left; background:none;">
-											Track your applications
-										</a>
-									</li>								
-									
-									<li> 
-										<!-- Accordion section 2 -->
-										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-											<summary class="wb-toggle tgl-tab brdr-bttm" data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>Transition to life after service</summary>
-											<div class="tgl-panel">
-												<!-- Section 2's content -->
-												<ul class="list-unstyled mrgn-lft-sm">
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Benefits for transition</a></li>
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Your transition task list</a></li>
-												</ul>
-											</div>
-										</details>
-									</li>
-									<li> 
-										<!-- Accordion section 3 -->
-										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-											<summary class="wb-toggle tgl-tab brdr-bttm" data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>Your account</summary>
-											<div class="tgl-panel">
-												<!-- Section 3's content -->
-												<ul class="list-unstyled mrgn-lft-sm">
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Inbox</a></li>
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Profile and settings</a></li>
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Switch accounts</a></li>
-												</ul>
-											</div>
-										</details>
-									</li>
-									<li>
-										<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm" style="text-align: left; background:none;">
-											Your benefits and services
-										</a>
-									</li>
-									
-								</ul>
-							</nav>
-						</div>
-					</ul>
-					
-				</section>
-			</nav>
+										<li>
+											<!-- Accordion section 3 -->
+											<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
+												<summary class="wb-toggle tgl-tab brdr-bttm"
+													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
+													Transition to life after service</summary>
+												<div class="tgl-panel">
+													<!-- Section 3's content -->
+													<ul class="list-unstyled mrgn-lft-sm">
+														<li><a href="#"
+																class="btn btn-link list-group-item full-width brdr-bttm"
+																style="text-align: left; background:none;">Your
+																transition task list</a></li>
+													</ul>
+												</div>
+											</details>
+										</li>
+										<li>
+											<!-- Accordion section 3 -->
+											<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
+												<summary class="wb-toggle tgl-tab brdr-bttm"
+													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
+													Your account</summary>
+												<div class="tgl-panel">
+													<!-- Section 3's content -->
+													<ul class="list-unstyled mrgn-lft-sm">
+														<li><a href="#"
+																class="btn btn-link list-group-item full-width brdr-bttm"
+																style="text-align: left; background:none;">Inbox</a>
+														</li>
+														<li><a href="#"
+																class="btn btn-link list-group-item full-width brdr-bttm"
+																style="text-align: left; background:none;">Profile and
+																settings</a></li>
+														<li><a href="#"
+																class="btn btn-link list-group-item full-width brdr-bttm"
+																style="text-align: left; background:none;">Switch
+																accounts</a></li>
+													</ul>
+												</div>
+											</details>
+										</li>
+										<li>
+											<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
+												style="text-align: left; background:none;">
+												Your benefits and services
+											</a>
+										</li>
+
+									</ul>
+								</nav>
+							</div>
+						</ul>
+
+						<button id="mbl-mnu-btn" class="btn btn-default btn-lg mrgn-lft-md visible-sm"
+							style="background:#f5f5f5; color:#000;" type="button" aria-haspopup="true"
+							aria-controls="app-mnu" aria-expanded="false">
+							MENU<span class="fa fa-chevron-down mrgn-lft-sm"></span>
+						</button>
+
+						<ul id="app-mnu" class="hidden-xs" role="menu" aria-orientation="vertical"
+							style="text-align: left; padding:1.25em 1em 1em; background-color: #f5f5f5; border: 1px solid #000; width:50%;">
+							<div class="accordion">
+								<nav>
+									<ul class="list-unstyled list-group">
+										<li>
+											<a href="#"
+												class="btn btn-link full-width list-group-item brdr-tp brdr-bttm"
+												style="text-align: left; background:none;">
+
+												Overview
+											</a>
+										</li>
+										<li>
+											<!-- Accordion section 1 -->
+											<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
+												<summary class="wb-toggle tgl-tab brdr-bttm"
+													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
+													Apply for benefits and services</summary>
+												<div class="tgl-panel">
+													<!-- Section 1's content -->
+													<ul class="list-unstyled mrgn-lft-sm">
+														<li><a href="#"
+																class="btn btn-link list-group-item full-width brdr-bttm"
+																style="text-align: left; background:none;">Find a
+																form</a></li>
+														<li><a href="#"
+																class="btn btn-link list-group-item full-width brdr-bttm"
+																style="text-align: left; background:none;">What can you
+																apply for?</a></li>
+													</ul>
+												</div>
+											</details>
+										</li>
+										<li>
+											<a href="#" class="btn btn-link full-width list-group-item brdr-bttm"
+												style="text-align: left; background:none;">
+												Track your applications
+											</a>
+										</li>
+
+										<li>
+											<!-- Accordion section 2 -->
+											<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
+												<summary class="wb-toggle tgl-tab brdr-bttm"
+													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
+													Transition to life after service</summary>
+												<div class="tgl-panel">
+													<!-- Section 2's content -->
+													<ul class="list-unstyled mrgn-lft-sm">
+														<li><a href="#"
+																class="btn btn-link list-group-item full-width brdr-bttm"
+																style="text-align: left; background:none;">Benefits for
+																transition</a></li>
+														<li><a href="#"
+																class="btn btn-link list-group-item full-width brdr-bttm"
+																style="text-align: left; background:none;">Your
+																transition task list</a></li>
+													</ul>
+												</div>
+											</details>
+										</li>
+										<li>
+											<!-- Accordion section 3 -->
+											<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
+												<summary class="wb-toggle tgl-tab brdr-bttm"
+													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
+													Your account</summary>
+												<div class="tgl-panel">
+													<!-- Section 3's content -->
+													<ul class="list-unstyled mrgn-lft-sm">
+														<li><a href="#"
+																class="btn btn-link list-group-item full-width brdr-bttm"
+																style="text-align: left; background:none;">Inbox</a>
+														</li>
+														<li><a href="#"
+																class="btn btn-link list-group-item full-width brdr-bttm"
+																style="text-align: left; background:none;">Profile and
+																settings</a></li>
+														<li><a href="#"
+																class="btn btn-link list-group-item full-width brdr-bttm"
+																style="text-align: left; background:none;">Switch
+																accounts</a></li>
+													</ul>
+												</div>
+											</details>
+										</li>
+										<li>
+											<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
+												style="text-align: left; background:none;">
+												Your benefits and services
+											</a>
+										</li>
+
+									</ul>
+								</nav>
+							</div>
+						</ul>
+
+					</section>
+				</nav>
 				<div class="row wb-eqht-grd">
 					<!--DESKTOP NAV (LEFT BAR)-->
-					<div id="app-navigation" class="well col-xs-8 col-sm-6 col-lg-3 col-md-4 hidden-xs hidden-sm hidden mrgn-tp-lg brdr-rght"
-
-					data-wb-urlmapping='{
+					<div id="app-navigation"
+						class="well col-xs-8 col-sm-6 col-lg-3 col-md-4 hidden-xs hidden-sm hidden mrgn-tp-lg brdr-rght"
+						data-wb-urlmapping='{
 						"authenticated": { 
 						"action": "removeClass", 
 						"source": "#app-navigation", 
@@ -1060,79 +1200,108 @@
 							"source": "#app-navigation", 
 							"class": "hidden" }
 						}'>
-						<h2 class="h6 hidden-sm hidden-xs" style="letter-spacing: 0.5px;">MENU  </h2>
-						<div class="accordion" >
+						<h2 class="h6 hidden-sm hidden-xs" style="letter-spacing: 0.5px;">MENU </h2>
+						<div class="accordion">
 							<nav>
 								<ul class="list-unstyled list-group">
 									<li>
-										<a href="#" class="btn btn-link full-width list-group-item brdr-tp brdr-bttm" style="text-align: left; background:none;">
+										<a href="#" class="btn btn-link full-width list-group-item brdr-tp brdr-bttm"
+											style="text-align: left; background:none;">
 
 											Overview
 										</a>
 									</li>
-									<li> 
+									<li>
 										<!-- Accordion section 1 -->
 										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-											<summary class="wb-toggle tgl-tab brdr-bttm"  data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>Apply for benefits and services</summary>
+											<summary class="wb-toggle tgl-tab brdr-bttm"
+												data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
+												Apply for benefits and services</summary>
 											<div class="tgl-panel">
 												<!-- Section 1's content -->
 												<ul class="list-unstyled mrgn-lft-sm">
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Find a form</a></li>
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">What can you apply for?</a></li>
+													<li><a href="#"
+															class="btn btn-link list-group-item full-width brdr-bttm"
+															style="text-align: left; background:none;">Find a form</a>
+													</li>
+													<li><a href="#"
+															class="btn btn-link list-group-item full-width brdr-bttm"
+															style="text-align: left; background:none;">What can you
+															apply for?</a></li>
 												</ul>
 											</div>
 										</details>
 									</li>
 									<li>
-										<a href="#" class="btn btn-link full-width list-group-item brdr-bttm" style="text-align: left; background:none;">
+										<a href="#" class="btn btn-link full-width list-group-item brdr-bttm"
+											style="text-align: left; background:none;">
 											Track your applications
 										</a>
-									</li>								
-									
-									<li> 
+									</li>
+
+									<li>
 										<!-- Accordion section 2 -->
 										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-											<summary class="wb-toggle tgl-tab brdr-bttm" data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>Transition to life after service</summary>
+											<summary class="wb-toggle tgl-tab brdr-bttm"
+												data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
+												Transition to life after service</summary>
 											<div class="tgl-panel">
 												<!-- Section 2's content -->
 												<ul class="list-unstyled mrgn-lft-sm">
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Benefits for transition</a></li>
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Your transition task list</a></li>
-												</ul>
-											</div>
-										</details>
-									</li>
-									<li> 
-										<!-- Accordion section 3 -->
-										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-											<summary class="wb-toggle tgl-tab brdr-bttm" data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>Your account</summary>
-											<div class="tgl-panel">
-												<!-- Section 3's content -->
-												<ul class="list-unstyled mrgn-lft-sm">
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Inbox</a></li>
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Profile and settings</a></li>
-													<li><a href="#" class="btn btn-link list-group-item full-width brdr-bttm"  style="text-align: left; background:none;">Switch accounts</a></li>
+													<li><a href="#"
+															class="btn btn-link list-group-item full-width brdr-bttm"
+															style="text-align: left; background:none;">Benefits for
+															transition</a></li>
+													<li><a href="#"
+															class="btn btn-link list-group-item full-width brdr-bttm"
+															style="text-align: left; background:none;">Your transition
+															task list</a></li>
 												</ul>
 											</div>
 										</details>
 									</li>
 									<li>
-										<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm" style="text-align: left; background:none;">
+										<!-- Accordion section 3 -->
+										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
+											<summary class="wb-toggle tgl-tab brdr-bttm"
+												data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
+												Your account</summary>
+											<div class="tgl-panel">
+												<!-- Section 3's content -->
+												<ul class="list-unstyled mrgn-lft-sm">
+													<li><a href="#"
+															class="btn btn-link list-group-item full-width brdr-bttm"
+															style="text-align: left; background:none;">Inbox</a></li>
+													<li><a href="#"
+															class="btn btn-link list-group-item full-width brdr-bttm"
+															style="text-align: left; background:none;">Profile and
+															settings</a></li>
+													<li><a href="#"
+															class="btn btn-link list-group-item full-width brdr-bttm"
+															style="text-align: left; background:none;">Switch
+															accounts</a></li>
+												</ul>
+											</div>
+										</details>
+									</li>
+									<li>
+										<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
+											style="text-align: left; background:none;">
 											Your benefits and services
 										</a>
 									</li>
-									
+
 								</ul>
 							</nav>
 						</div>
 
-						
-						
+
+
 					</div>
 					<div class="col-sm-12 col-lg-9 col-md-8">
 						<section>
 							<div class="mrgn-lft-md">
-								<h1 id="wb-cont"  property="name">
+								<h1 id="wb-cont" property="name">
 									Header, navigation and footer
 								</h1>
 							</div>
@@ -1141,13 +1310,14 @@
 							<div class="mrgn-lft-md mrgn-bttm-lg">
 								<div class="row">
 									<div class="col-xs-12">
-										
-									<h2 class="h4">Public</h2>
-										
-									
-								  <div class="btn-group">
-									<a href="?unauthenticated-hide-accnt-menu" id="unauthenticated-no-accnt-menu-btn" class="btn btn-primary active"
-										data-wb-urlmapping='{
+
+										<h2 class="h4">Public</h2>
+
+
+										<div class="btn-group">
+											<a href="?unauthenticated-hide-accnt-menu"
+												id="unauthenticated-no-accnt-menu-btn" class="btn btn-primary active"
+												data-wb-urlmapping='{
 										  "unauthenticated": { 
 										  "action": "removeClass", 
 										  "source": "#unauthenticated-no-accnt-menu-btn", 
@@ -1177,87 +1347,86 @@
 											"source": "#unauthenticated-no-accnt-menu-btn", 
 											"class": "active" }
 										  }'>
-										   Unauthenticated (landing page)
-										</a>
-									 <a href="?unauthenticated" id="unauthenticated-btn" class="btn btn-primary" 
-									 data-wb-urlmapping='{
+												Unauthenticated (landing page)
+											</a>
+											<a href="?unauthenticated" id="unauthenticated-btn" class="btn btn-primary"
+												data-wb-urlmapping='{
 									 "unauthenticated": { 
 									 "action": "addClass", 
 									 "source": "#unauthenticated-btn", 
 									 "class": "active" }
 									 }'>
-									 Unauthenticated
-								  </a>
-								</div>
-									
-								<h3 class="h4">Transactional (IPROV)</h3>
-								<div class="btn-group">
-									<a href="?iprov" id="iprov-btn" class="btn btn-primary" 
-									data-wb-urlmapping='{
+												Unauthenticated
+											</a>
+										</div>
+
+										<h3 class="h4">Transactional (IPROV)</h3>
+										<div class="btn-group">
+											<a href="?iprov" id="iprov-btn" class="btn btn-primary" data-wb-urlmapping='{
 									"iprov": { 
 									"action": "addClass", 
 									"source": "#iprov-btn", 
 									"class": "active" }
 									}'>IPROV</a>
-				
-									<a href="?iprov-poa" id="iprov-poa-btn" class="btn btn-primary" 
-									   data-wb-urlmapping='{
+
+											<a href="?iprov-poa" id="iprov-poa-btn" class="btn btn-primary"
+												data-wb-urlmapping='{
 									   "iprov-poa": { 
 									   "action": "addClass", 
 									   "source": "#iprov-poa-btn", 
 									   "class": "active" }
 									   }'>IPROV POA
-								   </a>
-								</div>
+											</a>
+										</div>
 
-				
-								  <h3 class="h4">Authenticated</h3>
-								<div class="btn-group">
-									<a href="?authenticated" id="authenticated-btn" class="btn btn-primary" 
-									data-wb-urlmapping='{
+
+										<h3 class="h4">Authenticated</h3>
+										<div class="btn-group">
+											<a href="?authenticated" id="authenticated-btn" class="btn btn-primary"
+												data-wb-urlmapping='{
 									"authenticated": { 
 									"action": "addClass", 
 									"source": "#authenticated-btn", 
 									"class": "active" }
 									}'>Authenticated</a>
-				
-									<a href="?authenticated-poa" id="authenticated-poa-btn" class="btn btn-primary" 
-									   data-wb-urlmapping='{
+
+											<a href="?authenticated-poa" id="authenticated-poa-btn"
+												class="btn btn-primary" data-wb-urlmapping='{
 									   "authenticated-poa": { 
 									   "action": "addClass", 
 									   "source": "#authenticated-poa-btn", 
 									   "class": "active" }
 									   }'>Authenticated POA
-								   </a>
-								</div>
+											</a>
+										</div>
 
-								<h2 class="h4">Transactional (Authenticated)</h2>
-								
-								  <div class="btn-group">
-									
-									<a href="?transactional" id="transactional-btn" class="btn btn-primary"
-									data-wb-urlmapping='{
+										<h2 class="h4">Transactional (Authenticated)</h2>
+
+										<div class="btn-group">
+
+											<a href="?transactional" id="transactional-btn" class="btn btn-primary"
+												data-wb-urlmapping='{
 									"transactional": { 
 									"action": "addClass", 
 									"source": "#transactional-btn", 
 									"class": "active" }
 									}'>
-									Transactional</a>
+												Transactional</a>
 
-									<a href="?transactional-poa" id="transactional-poa-btn" class="btn btn-primary"
-									data-wb-urlmapping='{
+											<a href="?transactional-poa" id="transactional-poa-btn"
+												class="btn btn-primary" data-wb-urlmapping='{
 									"transactional-poa": { 
 									"action": "addClass", 
 									"source": "#transactional-poa-btn", 
 									"class": "active" }
 									}'>
-									Transactional POA</a>
-								  </div>
-									 
-								  </div>
-								  
+												Transactional POA</a>
+										</div>
+
 									</div>
+
 								</div>
+							</div>
 						</section>
 						<section>
 							<div class="mrgn-lft-md">
@@ -1267,33 +1436,58 @@
 							</div>
 							<div class="clearfix mrgn-bttm-lg mrgn-tp-lg"></div>
 						</section>
-						<footer class="pagedetails">
-							<h2 class="wb-inv">Page details</h2>
-							<div class="row">
-								
-								<div class="col-xs-12">
-									<dl id="wb-dtmd">
-										<dt>Date modified:</dt>
-										<dd><time property="dateModified">2023-03-29</time></dd>
-									</dl>
-								</div>
+
+					</div>
+
+				</div>
+
+			</div>
+			</div>
+		</section>
+		<section class="pagedetails container">
+			<h2 class="wb-inv">Page details</h2>
+			<div class="row">
+				<div class="col-sm-8 col-md-9 col-lg-9">
+					<div data-ajax-replace="../assets/ajax/report-problem-en.html">
+						<div class="row row-no-gutters">
+							<div class="col-sm-9 col-md-6 col-lg-5">
+								<a class="btn btn-default btn-block"
+									href="https://www.canada.ca/en/report-problem.html">Report a problem on this
+									page</a>
 							</div>
-						</footer>
+						</div>
 					</div>
-						
+				</div>
+				<!-- Share button
+				<div class="wb-share col-sm-4 col-md-3" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>-->
+
+				<div class="col-xs-12 mrgn-tp-md text-muted">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<div class="clearfix mrgn-tp-sm hidden-xs"></div>
+							<dl id="wb-dtmd">
+								<dt>Date modified:</dt>
+								<dd><time property="dateModified">2023-04-06</time></dd>
+							</dl>
+						</div>
+						<div class="col-xs-12 col-sm-6 hidden-xs text-right">
+							<p class="mrgn-tp-0 mrgn-bttm-0">UX.1.1.1</p>
+							<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
+						</div>
+						<div class="col-xs-12 col-sm-6 visible-xs">
+							<p class="mrgn-tp-0 mrgn-bttm-0">UX.1.1.1</p>
+							<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
+						</div>
 					</div>
-					
 				</div>
 			</div>
 		</section>
-		
 	</main>
 
 
 
 	<!-- footer -->
-	<div id="default-footer" 
-	data-wb-urlmapping='{
+	<div id="default-footer" data-wb-urlmapping='{
 		"transactional": { 
 			"action": "addClass", 
 			"source": "#default-footer", 
@@ -1313,13 +1507,11 @@
 		}'>
 		<footer id="wb-info">
 			<h2 class="wb-inv">About My VAC Account</h2>
-			   <div class="gc-main-footer">
-				  <nav class="container wb-navcurr">
-					 
-					 <ul class="list-unstyled colcount-xs-2 colcount-md-3">
-						<li 
-						id="authenticated-footer-link-1" class="hidden" 
-						data-wb-urlmapping='{
+			<div class="gc-main-footer">
+				<nav class="container wb-navcurr">
+
+					<ul class="list-unstyled colcount-xs-2 colcount-md-3">
+						<li id="authenticated-footer-link-1" class="hidden" data-wb-urlmapping='{
 							"authenticated": { 
 							"action": "removeClass", 
 							"source": "#authenticated-footer-link-1", 
@@ -1329,8 +1521,7 @@
 								"source": "#authenticated-footer-link-1", 
 								"class": "hidden" }
 							}'><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">News and updates</a></li>
-						<li id="authenticated-footer-link-2" class="hidden" 
-						data-wb-urlmapping='{
+						<li id="authenticated-footer-link-2" class="hidden" data-wb-urlmapping='{
 							"authenticated": { 
 							"action": "removeClass", 
 							"source": "#authenticated-footer-link-2", 
@@ -1340,34 +1531,47 @@
 								"source": "#authenticated-footer-link-2", 
 								"class": "hidden" }
 							}'><a href="https://www.veterans.gc.ca/eng/contact">Check in on your well-being</a></li>
-						
-						<li><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">Talk to a mental health professional</a></li>
+
+							<li id="authenticated-footer-link-3" class="hidden" data-wb-urlmapping='{
+								"authenticated": { 
+								"action": "removeClass", 
+								"source": "#authenticated-footer-link-3", 
+								"class": "hidden" },
+								"authenticated-poa": { 
+									"action": "removeClass", 
+									"source": "#authenticated-footer-link-3", 
+									"class": "hidden" }
+								}'><a href="#">Provide feedback</a></li>
+	
+
+						<li><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">Talk to a mental
+								health professional</a></li>
 						<li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
 
-					 </ul>
-				  </nav>
-			   </div>
-			<div class="gc-sub-footer">
-			   <div class="container d-flex align-items-center">
-				  <nav>
-					 <h3 class="wb-inv">Veteran Affairs Canada Corporate</h3>
-					 <ul>
-						<li><a href="https://www.veterans.gc.ca/eng/e_services">About My VAC Account</a></li>
-						<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Terms and conditions</a></li>
-						<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Privacy</a></li></ul>
-				  </nav>
-				  <div class="wtrmrk align-self-end">
-					 <img src="../../../GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
-				  </div>
-			   </div>
+					</ul>
+				</nav>
 			</div>
-		 </footer>
+			<div class="gc-sub-footer">
+				<div class="container d-flex align-items-center">
+					<nav>
+						<h3 class="wb-inv">Veteran Affairs Canada Corporate</h3>
+						<ul>
+							<li><a href="https://www.veterans.gc.ca/eng/e_services">About My VAC Account</a></li>
+							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Terms and conditions</a></li>
+							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Privacy</a></li>
+						</ul>
+					</nav>
+					<div class="wtrmrk align-self-end">
+						<img src="../../../GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+					</div>
+				</div>
+			</div>
+		</footer>
 	</div>
 
-	 
-	 <!--transactional-->
-	 <div id="transactional-footer" class="hidden" 
-	 data-wb-urlmapping='{
+
+	<!--transactional-->
+	<div id="transactional-footer" class="hidden" data-wb-urlmapping='{
 		"iprov": { 
 			"action": "removeClass", 
 			"source": "#transactional-footer", 
@@ -1386,24 +1590,25 @@
 			"class": "hidden" }
 		}'>
 		<footer id="wb-info">
-		<h2 class="wb-inv">About My VAC Account</h2>
-		<div class="gc-sub-footer">
-		   <div class="container d-flex align-items-center">
-			  <nav>
-				 <h3 class="wb-inv">Veteran Affairs Canada Corporate</h3>
-				 <ul>
-					<li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
-					<li><a href="https://www.veterans.gc.ca/eng/e_services">About My VAC Account</a></li>
-					<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Terms and conditions</a></li>
-					<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Privacy</a></li></ul>
-			  </nav>
-			  <div class="wtrmrk align-self-end">
-				 <img src="../../../GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
-			  </div>
-		   </div>
-		</div>
-	 </footer>
-	 </div>
+			<h2 class="wb-inv">About My VAC Account</h2>
+			<div class="gc-sub-footer">
+				<div class="container d-flex align-items-center">
+					<nav>
+						<h3 class="wb-inv">Veteran Affairs Canada Corporate</h3>
+						<ul>
+							<li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
+							<li><a href="https://www.veterans.gc.ca/eng/e_services">About My VAC Account</a></li>
+							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Terms and conditions</a></li>
+							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Privacy</a></li>
+						</ul>
+					</nav>
+					<div class="wtrmrk align-self-end">
+						<img src="../../../GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
 		integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
