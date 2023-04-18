@@ -24,6 +24,20 @@
     </noscript>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
+    <style>
+          .gc-chckbxrdio.small input[type=radio]+label {
+                                            line-height: 1;
+                                            margin-left: 17px;
+                                        }
+
+          .gc-chckbxrdio.small input[type=radio]+label::before {
+                                           
+                                            height: 17px;
+                                            width: 17px;
+                                        }
+                                    
+    </style>
+
 </head>
 
 <body vocab="http://schema.org/" typeof="WebPage">
@@ -85,9 +99,9 @@
                     <li><a href="../../en.html?sign-in" class="btn">Sign-in</a></li>
                 </ul>
             </nav>
-        </div>-->
+        </div>
     </header>
-    <nav id="wb-bc" property="breadcrumb" class="hidden">
+    <nav id="wb-bc" property="breadcrumb">
         <h2>You are here:</h2>
         <div class="container">
             <ol class="breadcrumb hidden-xs hidden-sm" typeof="BreadcrumbList">
@@ -115,7 +129,7 @@
             </div>
 
         </div>
-    </nav>
+    </nav>-->
     <!-- Static header ends -->
     <!-- Page: frontdoor
 
@@ -135,74 +149,172 @@
 
                     <div class="wb-frmvld provisional wb-steps">
                         <form action="#" method="get" id="steps-example">
-                            <fieldset id="client" class="row">
-                                <legend class="mrgn-lft-md mrgn-bttm-0">Your personal details</legend>
+                            <fieldset id="identifier">
+                                <legend>Identification number</legend>
                                 <div>
-                                    <!--
-                                    <div class="form-group col-xs-12">
+                                    <div class="clearfix"></div>
+                                    <div class="wb-fieldflow col-xs-12" id="numbers"
+					
+                                    data-wb-fieldflow='
+                                    {"renderas":"radio", 
+                                    "gcChckbxrdio":true,
+                                    "noForm": true,
+                                    "noreqlabel": true}'
+                                    >
+            
+                                    <p class="wb-fieldflow-label"> <span class="iprov">Choose an identifying number</span> 
+                                    </p>
+                                    
+                                    <ul>
+                                        <li id="cafServiceNumberRadioButton"
+                                        data-wb-fieldflow='{"action": "toggle", "toggle": "#caf-service-number-form-group", "live": true}'>
+                                            CAF  Service number
+                                            
+                                        </li>
+                                        <li id="rcmpRegimentalNumberRadioButton"
+                                        data-wb-fieldflow='{"action": "toggle", "toggle": "#rcmp-regimental-form-group", "live": true}'>
+                                            RCMP Regimental number
+                                        </li>
+                                        
+                                        <li
+                                        data-wb-fieldflow='{"action": "toggle", "toggle": "#csdn-id-form-group", "live": true}'>
+                                            VAC Client ID (CSDN ID)
+                                        </li>
+
+                                        <li
+                                        data-wb-fieldflow='{"action": "toggle", "toggle": "#", "live": true}'>
+                                            VAC File number (or Health Care ID)</span>	
+                                        
+                                        </li>
+                                        
+                                </div>
+            
+                                <div id="caf-service-number-form-group" class="hidden">
+                                    <div class="form-group">			
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                            <label for="cafServiceNumberField" class="control-label required ">
+                                                <span class="field-name h3">Service number</span>
+                                                <strong class="required">(required)</strong>
+                                            </label>
+                                            <div class="row">
+                                                <div class="col-xs-4 col-sm-6 col-md-3">
+                                                    <input type="text" class="form-control input-lg full-width" 
+                                                    id="cafServiceNumberField" 
+                                                    required="required" 
+                                                    data-rule-nowhitespace="true" 
+                                                    data-rule-alphaornumeric="true" 
+                                                    data-rule-serviceNumber="true" 
+                                                    data-rule-rangelength="[5,9]"
+                                                        />
+                                                </div>
+                                            </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div id="rcmp-regimental-form-group" class="hidden">
+                                    <div class="form-group">			
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                            <label for="rcmpRegNumberField" class="control-label required ">
+                                                <span class="field-name h3">Regimental number</span>
+                                                <strong class="required">(required)</strong>
+                                            </label>
+                                            <div class="row">
+                                                <div class="col-xs-4 col-sm-6 col-md-3">
+                                                    <input type="text" class="form-control input-lg full-width" id="rcmpRegNumberField" 
+                                                    required="required" 
+                                                    data-rule-nowhitespace="true" data-rule-rangelength="[3,9]" />
+                        
+                                                </div>
+                                            </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div id="csdn-id-form-group" class="hidden">
+                                    <div class="form-group">			
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                            <label for="csdnID" class="control-label required ">
+                                                <span class="field-name h3">VAC Client ID</span>
+                                                <strong class="required">(required)</strong>
+                                            </label>
+                                            <div class="row">
+                                                <div class="col-xs-4 col-sm-6 col-md-3">
+                                                    <input type="number" class="form-control input-lg full-width" id="csdnID" 
+                                                    required="required" data-rule-nowhitespace="true" 
+                                                    data-rule-maxlength="11" data-rule-minlength="11"  />
+                                                </div>
+                                            </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="small mrgn-bttm-lg"> <a href="#">Enter a one-time verification code</a></p>  
+                                </div>
+                            </fieldset>
+
+                            <fieldset id="client">
+                                <legend>Your details</legend>
+                                <div>
+                                    
+                                    <div class="form-group ">
                                         <label for="firstname" class="required"><span class="field-name">First
                                                 name</span> <strong class="required">(required)</strong></label>
                                         <input class="form-control input-lg" id="firstname" name="firstname" type="text"
                                             data-rule-minlength="2" required="required" />
                                     </div>
-                                    <div class="form-group col-xs-12">
+                                    <div class="form-group">
+                                        <label for="mid-name"><span class="field-name">Middle name</span></label>
+                                        <input class="form-control input-lg" id="mid-name" name="mid-name" type="text" />
+
+                                        </div>
+                                    <div class="form-group ">
                                         <label for="lastname" class="required"><span class="field-name">Last
                                                 name</span> <strong class="required">(required)</strong></label>
 
                                         <input class="form-control input-lg" id="lastname" name="lastname" type="text"
                                             data-rule-minlength="2" required="required" />
-                                    </div>-->
-
-                                    <div class="clearfix"></div>
-
-                                        <div class="">
-                                            <fieldset class="subfields">
-                                                <legend class="hidden">Your name</legend>
-    
-                                                <div class="form-group mrgn-lft-md">
-                                                <label for="first-name" class="required"><span class="field-name">First name</span> <strong class="required">(required)</strong></label>
-                                                <input class="form-control input-lg" id="first-name" name="first-name" required="required" type="text" />
-
-                                                </div>
-                                                <!--
-                                                <div class="form-group mrgn-lft-md">
-                                                <label for="mid-name"><span class="field-name">Middle name</span></label>
-                                                <input class="form-control input-lg" id="mid-name" name="mid-name" type="text" />
-
-                                                </div>-->
-
-                                                <div class="form-group mrgn-lft-md">
-                                                <label for="last-name" class="required"><span class="field-name">Last name </span> <strong class="required">(required)</strong></label>
-                                                <input class="form-control input-lg" id="last-name" name="last-name" required="required" />
-
-                                            </div>
-                                                
-                                              </fieldset>
-                                        </div>
                                     </div>
-                                   
+
+                                    <div class="form-group">
+                                        <label for="lastname"><span class="field-name text-muted">Previous last
+                                                name</span></label>
+                                        
+                                        <input class="form-control input-lg" id="lastname" name="lastname" type="text"
+                                            data-rule-minlength="2" />
+                                            <p class="small mrgn-tp-0 mrgn-bttm-0">Name on your Service Record, if different or maiden name</p>
+                                    </div>
+
                                     <div class="clearfix"></div>
-                                   
+
                                     <div class="form-group form-inline">
                                         <fieldset class="subfields">
-                                            <legend style="font-weight: 700; font-size: 16px;" class="mrgn-tp-0 mrgn-bttm-0 mrgn-lft-md required">Date of birth <strong class="required">(required)</strong> <span class="datepicker-format"> (<abbr
+                                            <legend style="font-weight: 700; font-size: 16px;" class="mrgn-tp-0 mrgn-bttm-0 required">Date of birth <strong class="required">(required)</strong> <span class="datepicker-format"> (<abbr
                                                 title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></legend>
                                                
 
-                                            <div class="form-group mrgn-lft-md">
+                                            <div class="form-group">
                                             <label for="dob-y" class="required wb-inv"><span class="field-name">Date of birth (Year) </span>YYYY <strong class="required">(required)</strong></label>
                                             <input class="form-control input-lg" id="dob-y" name="dob-y" aria-describedby='dob' required="required" size="4" maxlength="4" data-rule-minlength="4" min="1900" max="2023"/>
                                             <p class="small mrgn-bttm-0">YYYY</p>
 
                                             </div>   
-                                            <div class="form-group mrgn-lft-md">
+                                            <div class="form-group ">
                                             <label for="dob-m" class="required wb-inv"><span class="field-name">Date of birth (Month) </span>MM <strong class="required">(required)</strong></label>
                                             <input class="form-control input-lg" id="dob-m" name="dob-m" aria-describedby='dob' required="required" size="2" maxlength="2" data-rule-minlength="1" min="1" max="12"/>
                                             <p class="small mrgn-bttm-0">MM</p>
 
                                         </div>
                                         
-                                            <div class="form-group mrgn-lft-md">
+                                            <div class="form-group ">
                                             <label for="dob-d" class="required wb-inv"><span class="field-name">Date of birth (Day) </span>DD <strong class="required">(required)</strong></label>
                                             <input class="form-control input-lg" id="dob-d" name="dob-d" aria-describedby='dob' required="required" size="2" maxlength="2"  data-rule-minlength="1" min="1" max="31"/>
                                             <p class="small mrgn-bttm-0">DD</p>
@@ -211,18 +323,43 @@
                                             
                                           </fieldset>
                                     </div>
+                                    <hr>
                                     <div class="clearfix"></div>
+
+                                    <!--
+                                        .gc-chckbxrdio input[type=checkbox]+label, .gc-chckbxrdio-sm input[type=radio]+label {
+                                            display: inline-block;
+                                            line-height: 1;
+                                            margin-left: 17px;
+                                            width: auto;
+                                        }
+
+                                        .gc-chckbxrdio input[type=checkbox]+label::before, .gc-chckbxrdio-sm input[type=radio]+label::before {
+                                            border: 4px solid #fff;
+                                            -webkit-box-shadow: 0 0 0 2px #000;
+                                            box-shadow: 0 0 0 2px #000;
+                                            content: "";
+                                            display: inline-block;
+                                            height: 17px;
+                                            left: 0;
+                                            position: absolute;
+                                            top: 2px;
+                                            width: 17px;
+                                        }
+                                    -->
+
+                                    
+
 
                                     <div class="form-group form-inline mrgn-bttm-lg">
                                         <fieldset class="sub-fields">
-                                            <legend id="pcode" style="font-weight: 700; font-size: 16px;" class="mrgn-tp-0 mrgn-bttm-0 mrgn-lft-md required">Postal code <strong class="required">(required)</strong></legend>
+                                            <legend id="pcode" style="font-weight: 700; font-size: 16px;" class="mrgn-tp-0 mrgn-bttm-0 required">Postal code <strong class="required">(required)</strong></legend>
 
-                                                <div class="form-group mrgn-lft-md">
+                                                <div class="form-group">
                                                     <label for="pcodeca1" class="required wb-inv"><span class="field-name">Postal code</span> <strong class="required">(required)</strong></label>
                                                     <input class="form-control" id="pcodeca1" name="pcodeca1" aria-describedby="pcode" type="text" autocomplete="postal-code" size="7" maxlength="7" required="required" data-rule-postalCodeCA="true" />
-                                                    <p class="small mrgn-bttm-0">A1A 1A1</p>
                                                 </div>
-                                                <div class="form-group mrgn-lft-md mrgn-tp-0"  style="height:60px;">
+                                                <div class="form-group">
                                                     <label for="country" class="required wb-inv">Country <strong class="required">(required)</strong></label>
                                                     <select name="country" id="country" class="form-control">
                                                         <option value="CA" selected="selected">Canada</option>
@@ -234,8 +371,15 @@
                                                 </div>
                                             
                                           </fieldset>
+                                         
                                     </div>
-                                    <div class="clearfix"></div>
+                                      
+                                    
+                                   
+                                    </div>
+                                   
+                                    
+                                   
                                     <!--
                                     <div class="form-group">
                                         <fieldset class="usa-fieldset">
@@ -271,45 +415,218 @@
                                             </div>
                                           </fieldset>
                                     </div>-->
- 
-                                    <div class="form-group form-inline mrgn-bttm-lg">
-                                            <div class="form-group mrgn-lft-md">
-                                                <label for="country" class="required ">Type of identification number <strong class="required">(required)</strong></label>
-                                                <br>
-                                                <select name="country" id="country" class="form-control">
-                                                    <option value="CAF" selected="selected">Service number (CAF)</option>
-                                                    <option value="RCMP">Regimental number (RCMP)</option>                                            
-                                                    <option value="CSDN">CSDN ID (VAC)</option>
-                                                    <option value="file">File number or Health care ID (VAC)</option>
-                                                
-                                                </select>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                                <div class="form-group mrgn-lft-md mrgn-tp-md">
-                                                    <label for="cafServiceNumberField" class="required"><span class="field-name">Service number (CAF)</span> <strong class="required">(required)</strong></label>
-                                                    <br>
-                                                    <input type="text" class="form-control input-lg full-width" 
-                                                    id="cafServiceNumberField" 
-                                                    required="required" 
-                                                    data-rule-nowhitespace="true" 
-                                                    data-rule-alphaornumeric="true" 
-                                                    data-rule-serviceNumber="true" 
-                                                    data-rule-rangelength="[5,9]"
-                                                        />
-                                                </div>
-                                                
-                                    </div>
-                                    
-                                    <div class="clearfix"></div>
+                                  
+                                  
 
                                     
                                  
                                 
                             </fieldset>
+
+                            <fieldset id="profile" class="">
+                                <legend>Complete your profile</legend>
+                                <div>
+                                    <h2>Service identifiers</h2>
+                                    <p>You must enter your CAF Service number or RCMP Regimental number. If you have both, please enter them.</p>
+                                        <div id="caf-service-number-form-group-2" class="">
+                                            <div class="form-group">			
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                    <label for="cafServiceNumberField2" class="control-label ">
+                                                        <span class="field-name h3">CAF Service number</span>
+                                                    </label>
+                                                    <div class="row">
+                                                        <div class="col-xs-4 col-sm-6 col-md-3">
+                                                            <input type="text" class="form-control input-lg full-width service-id" 
+                                                            id="cafServiceNumberField2" 
+                                                           
+                                                            data-rule-nowhitespace="true" 
+                                                            data-rule-alphaornumeric="true" 
+                                                            data-rule-serviceNumber="true" 
+                                                            data-rule-rangelength="[5,9]" data-rule-require_from_group='[1,".service-ids"]'
+                                                                />
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                               
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                    <label for="rcmpRegNumberField2" class="control-label ">
+                                                        <span class="field-name h3">RCMP Regimental number</span>
+                                                    </label>
+                                                    <div class="row">
+                                                        <div class="col-xs-4 col-sm-6 col-md-3">
+                                                            <input type="text" class="form-control input-lg full-width service-id" id="rcmpRegNumberField2" 
+                                                            
+                                                            data-rule-nowhitespace="true" data-rule-rangelength="[3,9]"  data-rule-require_from_group='[1,".service-ids"]'/>
+                                
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                
+                                      
+
+                                    <h2>Address</h2>
+                                    <fieldset class="subfields">
+                                        <div class="form-group ">
+                                            <label for="firstname" class="required"><span class="field-name">Street
+                                                    name</span> <strong class="required">(required)</strong></label>
+                                            <input class="form-control input-lg" id="firstname" name="firstname" type="text"
+                                                data-rule-minlength="2" required="required" />
+                                        </div>
+                                        <!--
+                                        <div class="form-group">
+                                            <label for="mid-name"><span class="field-name">Middle name</span></label>
+                                            <input class="form-control input-lg" id="mid-name" name="mid-name" type="text" />
+    
+                                            </div>-->
+                                        <div class="form-group">
+                                            <label for="lastname" class="required"><span class="field-name">Last
+                                                    name</span> <strong class="required">(required)</strong></label>
+    
+                                            <input class="form-control input-lg" id="lastname" name="lastname" type="text"
+                                                data-rule-minlength="2" required="required" />
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <label for="lastname"><span class="field-name text-muted">Previous last
+                                                    name</span></label>
+                                            
+                                            <input class="form-control input-lg" id="lastname" name="lastname" type="text"
+                                                data-rule-minlength="2" />
+                                                <p class="small mrgn-tp-0 mrgn-bttm-0">Name on your Service Record, if different or maiden name</p>
+                                        </div>
+                                    </fieldset>
+                                    <h2>Communication settings</h2>
+                                    <div class="clearfix"></div>
+                                    <div class="form-group form-inline gc-chckbxrdio small">
+                                        <fieldset class="subfields">
+                                            <legend class="mrgn-bttm-0 required" style="font-size: 16px; font-weight: 700; margin-bottom:0;"><span class="field-name">Preferred spoken language</span> <strong class="required">(required)</strong></legend>
+                                            
+                                            <div class="radio label-inline" >
+                                                <input id="spoken1" type="radio" name="optspoken" >
+                                                <label for="spoken1">English</label>
+                                            </div>
+                                            <div class="radio label-inline">
+                                                <input id="spoken2" type="radio" name="optspoken" >
+                                                <label for="spoken2">French</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="form-group form-inline gc-chckbxrdio small">
+                                        <fieldset class="subfields">
+                                            <legend class="mrgn-bttm-0 required" style="font-size: 16px; font-weight: 700; margin-bottom:0;"><span class="field-name">Preferred written language</span> <strong class="required">(required)</strong></legend>
+                                            
+                                            <div class="radio label-inline" >
+                                                <input id="written1" type="radio" name="optwritten" >
+                                                <label for="written1">English</label>
+                                            </div>
+                                            <div class="radio label-inline">
+                                                <input id="written2" type="radio" name="optwritten" >
+                                                <label for="written2">French</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                   <div class="clearfix"></div>
+                                   <hr>
+                                    <div class="form-group form-inline gc-chckbxrdio small">
+                                        <fieldset class="subfields">
+                                            <legend class="mrgn-bttm-0 required" style="font-size: 16px; font-weight: 700; margin-bottom:0;"><span class="field-name">Would you like to be identified by rank or title?</span> <strong class="required">(required)</strong></legend>
+                                            
+                                            <div class="radio label-inline" >
+                                                <input id="id1" type="radio" name="optidentified" >
+                                                <label for="id1">Title</label>
+                                            </div>
+                                            <div class="radio label-inline">
+                                                <input id="id2" type="radio" name="optidentified" >
+                                                <label for="id2">Rank</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="form-group well">
+                                        <label for="title" class="required">Title <strong class="required">(required)</strong></label>
+                                        <select name="title" id="title" class="form-control">
+                                            <option value="mr">Mr</option>
+                                            <option value="mrs">Mrs</option>                                            
+                                            <option value="ms">Ms</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group well">
+                                        <label for="id-number" class="required">Element <strong class="required">(required)</strong></label>
+                                        <select name="id-number" id="id-number" class="form-control">
+                                            <option value="mr">Mr</option>
+                                            <option value="mrs">Mrs</option>                                            
+                                            <option value="ms">Ms</option>
+                                        </select>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="form-group form-inline gc-chckbxrdio small">
+                                        <fieldset class="subfields">
+                                            <legend class="required mrgn-bttm-0" style="font-size: 16px; font-weight: 700; margin-bottom:0;"><span class="field-name">Sex at birth</span> <strong class="required">(required)</strong></legend>
+                                            <div class="radio label-inline">
+                                                <input id="sexAtBirth1" type="radio" name="optradio" >
+                                                <label for="sexAtBirth1">Male</label>
+                                            </div>
+                                            <div class="radio label-inline" >
+                                                <input id="sexAtBirth12" type="radio" name="optradio" >
+                                                <label for="sexAtBirth12">Female</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                    <div class="form-group form-inline gc-chckbxrdio small">
+                                        <fieldset class="subfields">
+                                            <legend class="mrgn-bttm-0" style="font-size: 16px; font-weight: 700; margin-bottom:0;"><span class="field-name">What is your gender?</span></legend>
+                                            <div class="radio label-inline">
+                                                <input id="gender1" type="radio" name="optgender" >
+                                                <label for="gender1">Man</label>
+                                            </div>
+                                            <div class="radio label-inline" >
+                                                <input id="gender2" type="radio" name="optgender" >
+                                                <label for="gender2">Woman</label>
+                                            </div>
+                                            <div class="radio label-inline" >
+                                                <input id="gender3" type="radio" name="optgender" >
+                                                <label for="gender3">Prefer not to say</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <hr>
+                                </div>
+                            </fieldset>
+                            <!--
+                                 <fieldset class="sub-fields">
+                                            <div class="form-group form-inline gc-chckbxrdio small">
+                                                <fieldset class="subfields">
+                                                    <legend class="mrgn-bttm-0 required" style="font-size: 16px; font-weight: 700; margin-bottom:0;"><span class="field-name">Marital status</span> <strong class="required">(required)</strong></legend>
+                                                    
+                                                    <div class="radio label-inline" >
+                                                        <input id="marital1" type="radio" name="optspoken" >
+                                                        <label for="marital1">Single</label>
+                                                    </div>
+                                                    <div class="radio label-inline">
+                                                        <input id="spoken2" type="radio" name="optspoken" >
+                                                        <label for="spoken2">Married</label>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                          </fieldset>
+                            -->
                             <!--
                             <p class="small mrgn-tp-0 mrgn-bttm-lg"><a href="#">Enter a one-time password</a></p>
                                 -->
-                            <input type="submit" name="submit" value="Submit" class="btn btn-primary btn-lg" />
+                            <input type="submit" name="submit" value="Submit" class="btn btn-success"/>
                             
 
                         </form>
