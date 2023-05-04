@@ -21,6 +21,19 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
 	<style>
+		.sub-elps {
+			max-width: 240px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.summ-elps {
+			max-width: 50px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
 
 	</style>
 
@@ -166,428 +179,68 @@
 				style="letter-spacing: 0.5px;" >
 					MENU <span class="fa fa-bars"></span>
 				</button>-->
-				<!--MOBILE MENU-->
-				<nav id="mbl-mnu" class="gweb-v2 gcweb-menu app-menu hidden-md hidden-lg mrgn-tp-md hidden">
-					<section>
-						<h2 class="wb-inv">Account menu</h2>
 
-						<button id="mbl-mnu-btn" class="btn btn-default btn-lg mrgn-lft-md visible-xs"
-							style="background:#f5f5f5; color:#000;" type="button" aria-haspopup="true"
-							aria-controls="app-mnu" aria-expanded="false">
-							MENU<span class="fa fa-chevron-down mrgn-lft-sm"></span>
-						</button>
-
-						<ul id="app-mnu" class="hidden-sm mrgn-tp-lg" role="menu" aria-orientation="vertical">
-							<div class="accordion">
-								<nav>
-									<ul class="list-unstyled list-group">
-										<li>
-											<a href="#"
-												class="btn btn-link full-width list-group-item brdr-tp brdr-bttm"
-												style="text-align: left; background:none;">
-
-												Overview
-											</a>
-										</li>
-										<li>
-											<!-- Accordion section 3 -->
-											<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-												<summary class="wb-toggle tgl-tab brdr-bttm"
-													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-													Apply for benefits and services</summary>
-												<div class="tgl-panel">
-													<!-- Section 3's content -->
-													<ul class="list-unstyled mrgn-lft-sm">
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Find a
-																form</a></li>
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">What can you
-																apply for?</a></li>
-													</ul>
-												</div>
-											</details>
-										</li>
-										<li>
-											<a href="#" class="btn btn-link full-width list-group-item brdr-bttm"
-												style="text-align: left; background:none;">
-												Track your applications
-											</a>
-										</li>
-										<li>
-											<!-- Accordion section 1 -->
-											<!--<details class="acc-group " style="padding:0; font-size:14px;">
-					
-					<summary class="wb-toggle tgl-tab brdr-0" data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>Apply for benefits and services</summary>
-					<div class="tgl-panel">
-						
-						<ul class="list-unstyled mrgn-lft-sm">
-							<li><a href="#" class="btn btn-link full-width brdr-bttm"  style="text-align: left;">Find a form</a></li>
-							<li><a href="#" class="btn btn-link full-width brdr-bttm"  style="text-align: left;">Track your applications</a></li>
-							<li><a href="#" class="btn btn-link full-width brdr-bttm"  style="text-align: left;">What can you apply for?</a></li>
-							<li><a href="#" class="btn btn-link full-width"  style="text-align: left;">Upload files</a></li>
-
-						</ul>
-					</div>
-				</details>-->
-										</li>
-
-
-										<li>
-											<!-- Accordion section 3 -->
-											<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-												<summary class="wb-toggle tgl-tab brdr-bttm"
-													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-													Transition to life after service</summary>
-												<div class="tgl-panel">
-													<!-- Section 3's content -->
-													<ul class="list-unstyled mrgn-lft-sm">
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Your
-																transition task list</a></li>
-													</ul>
-												</div>
-											</details>
-										</li>
-										<li>
-											<!-- Accordion section 3 -->
-											<details class="acc-group brdr-0 hidden"
-												style="padding-left:0; font-size:15px;">
-												<summary class="wb-toggle tgl-tab brdr-bttm"
-													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-													Your account</summary>
-												<div class="tgl-panel">
-													<!-- Section 3's content -->
-													<ul class="list-unstyled mrgn-lft-sm">
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Inbox</a>
-														</li>
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Profile and
-																settings</a></li>
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Switch
-																accounts</a></li>
-													</ul>
-												</div>
-											</details>
-										</li>
-										<li>
-											<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
-												style="text-align: left; background:none;">
-												Your benefits and services
-											</a>
-										</li>
-
-									</ul>
-								</nav>
-							</div>
-						</ul>
-
-						<button id="mbl-mnu-btn" class="btn btn-default btn-lg mrgn-lft-md visible-sm"
-							style="background:#f5f5f5; color:#000;" type="button" aria-haspopup="true"
-							aria-controls="app-mnu" aria-expanded="false">
-							MENU<span class="fa fa-chevron-down mrgn-lft-sm"></span>
-						</button>
-
-						<ul id="app-mnu" class="hidden-xs" role="menu" aria-orientation="vertical"
-							style="text-align: left; padding:1.25em 1em 1em; background-color: #f5f5f5; border: 1px solid #000; width:50%;">
-							<div class="accordion">
-								<nav>
-									<ul class="list-unstyled list-group">
-										<li>
-											<a href="#"
-												class="btn btn-link full-width list-group-item brdr-tp brdr-bttm"
-												style="text-align: left; background:none;">
-
-												Overview
-											</a>
-										</li>
-										<li>
-											<!-- Accordion section 1 -->
-											<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-												<summary class="wb-toggle tgl-tab brdr-bttm"
-													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-													Apply for benefits and services</summary>
-												<div class="tgl-panel">
-													<!-- Section 1's content -->
-													<ul class="list-unstyled mrgn-lft-sm">
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Find a
-																form</a></li>
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">What can you
-																apply for?</a></li>
-													</ul>
-												</div>
-											</details>
-										</li>
-										<li>
-											<a href="#" class="btn btn-link full-width list-group-item brdr-bttm"
-												style="text-align: left; background:none;">
-												Track your applications
-											</a>
-										</li>
-
-										<li>
-											<!-- Accordion section 2 -->
-											<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-												<summary class="wb-toggle tgl-tab brdr-bttm"
-													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-													Transition to life after service</summary>
-												<div class="tgl-panel">
-													<!-- Section 2's content -->
-													<ul class="list-unstyled mrgn-lft-sm">
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Benefits for
-																transition</a></li>
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Your
-																transition task list</a></li>
-													</ul>
-												</div>
-											</details>
-										</li>
-										<li>
-											<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
-												style="text-align: left; background:none;">
-												Upload files or forms
-											</a>
-										</li>
-										<li>
-											<!-- Accordion section 3 -->
-											<details class="acc-group brdr-0 hidden"
-												style="padding-left:0; font-size:15px;">
-												<summary class="wb-toggle tgl-tab brdr-bttm"
-													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-													Your account</summary>
-												<div class="tgl-panel">
-													<!-- Section 3's content -->
-													<ul class="list-unstyled mrgn-lft-sm">
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Inbox</a>
-														</li>
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Profile and
-																settings</a></li>
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Switch
-																accounts</a></li>
-													</ul>
-												</div>
-											</details>
-										</li>
-										<li>
-											<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
-												style="text-align: left; background:none;">
-												Your benefits and services
-											</a>
-										</li>
-
-									</ul>
-								</nav>
-							</div>
-						</ul>
-
-					</section>
-				</nav>
 				<div class="row wb-eqht-grd">
-					<div id="app-navigation"
-						class="well col-xs-8 col-sm-6 col-lg-3 col-md-4 hidden-xs hidden-sm mrgn-tp-lg brdr-rght hidden">
-						<h2 class="h6 hidden-sm hidden-xs" style="letter-spacing: 0.5px;">MENU </h2>
-						<div class="accordion">
-							<nav>
-								<ul class="list-unstyled list-group">
-									<li>
-										<a href="#" class="btn btn-link full-width list-group-item brdr-tp brdr-bttm"
-											style="text-align: left; background:none;">
 
-											Overview
-										</a>
-									</li>
-									<li>
-										<!-- Accordion section 1 -->
-										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-											<summary class="wb-toggle tgl-tab brdr-bttm"
-												data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-												Apply for benefits and services</summary>
-											<div class="tgl-panel">
-												<!-- Section 1's content -->
-												<ul class="list-unstyled mrgn-lft-sm">
-													<li><a href="#"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Find a form</a>
-													</li>
-													<li><a href="#"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">What can you
-															apply for?</a></li>
-												</ul>
-											</div>
-										</details>
-									</li>
-									<li>
-										<a href="#" class="btn btn-link full-width list-group-item brdr-bttm"
-											style="text-align: left; background:none;">
-											Track your applications
-										</a>
-									</li>
-
-									<li>
-										<!-- Accordion section 2 -->
-										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-											<summary class="wb-toggle tgl-tab brdr-bttm"
-												data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-												Transition to life after service</summary>
-											<div class="tgl-panel">
-												<!-- Section 2's content -->
-												<ul class="list-unstyled mrgn-lft-sm">
-													<li><a href="#"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Benefits for
-															transition</a></li>
-													<li><a href="#"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Your transition
-															task list</a></li>
-												</ul>
-											</div>
-										</details>
-									</li>
-									<li>
-										<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
-											style="text-align: left; background:none;">
-											Upload files
-										</a>
-									</li>
-									<li>
-										<!-- Accordion section 3 -->
-										<details class="acc-group brdr-0 hidden"
-											style="padding-left:0; font-size:15px;">
-											<summary class="wb-toggle tgl-tab brdr-bttm"
-												data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-												Your account</summary>
-											<div class="tgl-panel">
-												<!-- Section 3's content -->
-												<ul class="list-unstyled mrgn-lft-sm">
-													<li><a href="#"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Inbox</a></li>
-													<li><a href="#"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Profile and
-															settings</a></li>
-													<li><a href="#"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Switch
-															accounts</a></li>
-												</ul>
-											</div>
-										</details>
-									</li>
-									<li>
-										<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
-											style="text-align: left; background:none;">
-											Your benefits and services
-										</a>
-									</li>
-
-								</ul>
-							</nav>
-						</div>
-
-
-
-					</div>
 					<div class="col-sm-12">
 						<div id="wb-main-in">
 							<h1 id="wb-cont" property="name">Inbox</h1>
+
 							<div class="row">
-								<div class="col-xs-12"><button type="button" class="btn btn-success"><span
-											class="fa fa-envelope mrgn-rght-sm"></span>Send a new message</button></div>
-							</div>
-							<div class="row">
-								<div class="btn-toolbar list-inline col-xs-12 mrgn-tp-md" role="toolbar" id="message-button-toolbar">
+								<div class="btn-toolbar list-inline col-xs-12 " role="toolbar"
+									id="message-button-toolbar">
 									<p>Filter by message type:</p>
-									<ul class="list-inline"  data-wb-actionmng='[
+									<ul class="list-inline" data-wb-actionmng='[
 		{ "trggroup":"clearFilter", "action": "removeClass", "source": ".fltopts", "class": "btn-primary" },
 		{ "trggroup":"clearFilter", "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "" }
 	]'>
-	<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
+										<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
 			{ "action": "run", "trggroup": "clearFilter" },
-			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "Backgrounders" },
+			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "Message" },
 			{ "action": "addClass", "class": "btn-primary" }
-		]'>Backgrounders</button></li>
-	<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
+		]'>Message</button></li>
+										<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
 			{ "action": "run", "trggroup": "clearFilter" },
-			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "Media" },
+			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "Letters and forms" },
 			{ "action": "addClass", "class": "btn-primary" }
-		]'>Media</button></li>
-	<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
+		]'>Letters and forms</button></li>
+										<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
 			{ "action": "run", "trggroup": "clearFilter" },
-			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "News" },
+			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "Archive" },
 			{ "action": "addClass", "class": "btn-primary" }
-		]'>News</button></li>
-	<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
-			{ "action": "run", "trggroup": "clearFilter" },
-			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "Speeches" },
-			{ "action": "addClass", "class": "btn-primary" }
-		]'>Speeches</button></li>
-	<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
-			{ "action": "run", "trggroup": "clearFilter" },
-			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "Statements" },
-			{ "action": "addClass", "class": "btn-primary" }
-		]'>Statements</button></li>
-	<li><button type="button" class="btn btn-link" data-wb-doaction='{ "action": "run", "trggroup": "clearFilter" }'>View all</button></li>
-</ul>
+		]'>Archive</button></li>
+										<li><button type="button" class="btn btn-link"
+												data-wb-doaction='{ "action": "run", "trggroup": "clearFilter" }'>View
+												all</button></li>
+									</ul>
 
-<button type="button" class="btn btn-default" data-wb-doaction='{ "action": "tocsv", "source": "#dataset-filter" }'>Download the following table as CSV</button>
-
-<table class="wb-tables table table-striped table-hover" id="dataset-filter"
-		aria-live="polite"
-		data-wb-tables='{
+									<table class="wb-tables table table-striped table-hover small provisional gc-table"
+										id="dataset-filter" aria-live="polite" data-wb-tables='{
 			"bDeferRender": true,
-			"ajaxSource": "//wet-boew.github.io/wet-boew/demos/tables/ajax/datasource.json",
-			"order": [5, "desc"],
+			"ajaxSource": "../../../design/assets/ajax/inbox-datasource-en.json",
+			"order": [0, "desc"],
+			"autoWidth": false,
 			"columns": [
-				{ "data": "TITLE", "className": "nws-tbl-ttl h4" },
-				{ "data": "PUBDATE", "className": "nws-tbl-date" },
-				{ "data": "DEPT", "className": "nws-tbl-dept" },
-				{ "data": "TYPE", "className": "nws-tbl-type" },
-				{ "data": "TEASER",  "className": "nws-tbl-desc" },
-				{ "data": "LOCATION",  "visible": false },
-				{ "data": "AUDIENCE",  "visible": false },
-				{ "data": "SUBJECT", "visible": false },
-				{ "data": "MINISTER", "visible": false }
-			]
+				{ "data": "DATE", "className": "nws-tbl-date nowrap wb-eqht" },
+				{ "data": "SUBJECT", "className": "nws-tbl-sub wb-eqht sub-elps col-md-5" },
+				{ "data": "SUMMARY", "className": "nws-tbl-summ wb-eqht summ-elps col-md-6" },
+				{ "data": "TYPE",  "visible": false },
+				{ "data": "UNREAD",  "visible": false }]
+				
 		}'>
-	<thead>
-		<tr>
-			<th>Title</th>
-			<th>Publication date</th>
-			<th>Department</th>
-			<th>News Type</th>
-			<th>Summary</th>
-			<th>Location</th>
-			<th>For</th>
-			<th>Subject</th>
-			<th>Minister</th>
-		</tr>
-	</thead>
-</table>	
+										<thead>
+											<tr>
+												<th scope="col" class="col-xs-1">Date</th>
+												<th scope="col" class="col-xs-6">Subject</th>
+												<th scope="col" class="col-xs-1">Details</th>
+
+											</tr>
+										</thead>
+									</table>
+
+
+
+
 
 
 
@@ -603,12 +256,30 @@
 								</div>
 							</div>
 
+							<div class="row mrgn-tp-lg">
+								<div class="">
+								<button type="button" class="btn btn-primary mrgn-rght-md"><span class="fa fa-envelope mrgn-rght-sm"></span>Send a new message</a>
+								<button type="button" class="btn btn-default mrgn-rght-md"><span class="fa fa-upload mrgn-rght-sm"></span>Upload a file or document</a>
+
+								</div>
+							</div>
+
+
+							<div class="row">
+								<div class="col-xs-12">
+									<h2>Help and FAQs</h2>
+									<ul>
+										<li><a href="$">Secure messaging FAQs</a></li>
+									</ul>
+								</div>
+							</div>
+
 							<span class="wb-sessto" data-wb-sessto='{"logouturl": "../en.html"}'></span>
 
 							<section class="pagedetails">
 								<h2 class="wb-inv">Page details</h2>
 								<div class="row">
-									<div class="col-sm-12 col-md-12 col-lg-12">
+									<div class="col-sm-6 col-md-8 col-lg-8">
 										<div data-ajax-replace="../../../design/assets/ajax/report-problem-en.html">
 											<div class="row row-no-gutters">
 												<div class="col-sm-6 col-md-5 col-lg-4">
@@ -711,6 +382,22 @@
 		</footer>
 	</div>
 
+	<script>
+		window["wb-tables"] = {
+			createdRow: function (row, data, dataIndex) {
+				console.log(data.UNREAD);
+				if (data.UNREAD == "true") {
+				$(row).addClass("");
+				$(row).addClass("h5");
+				$(row).children(".nws-tbl-sub").prepend("<span class=\"fa fa-envelope mrgn-rght-sm mrgn-tp-sm \"></span>");
+				}
+				else {
+					$(row).children(".nws-tbl-sub").prepend("<span class=\"fa fa-envelope-open text-muted mrgn-rght-sm mrgn-tp-sm \"></span>");
+				}
+
+			}
+		};
+    </script>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
@@ -718,6 +405,11 @@
 		crossorigin="anonymous"></script>
 	<script src="../../../../wet-boew/js/wet-boew.min.js"></script>
 	<script src="../../../../GCWeb/js/theme.min.js"></script>
+
+	
+
+
+
 
 </body>
 
