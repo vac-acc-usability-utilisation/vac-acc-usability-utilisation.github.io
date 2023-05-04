@@ -1,3 +1,36 @@
+/* header and menu */
+
+
+.accnt-menu [role=menuitem] {
+			
+    width: auto;
+    
+}
+
+.gcweb-menu [role=menu] {
+    position: absolute;
+    width: auto;
+}
+
+.accnt-menu [role=menu] {
+    
+    position: absolute;
+    right: 1em;
+}
+
+#mbl-mnu details.acc-group.brdr-0.on, #app-navigation details.acc-group.brdr-0.on {
+    padding-bottom: 0;
+}
+
+.gcweb-menu button[aria-haspopup=true] {
+    text-transform: none;
+}
+@media screen and (min-width: 970px) { 
+    .overview {
+        padding-left: 2em;
+    }
+}
+
 /* account-chooser */
 p.account-chooser-desc {
     height:2em;
@@ -28,6 +61,7 @@ p.account-chooser-desc {
 .panel-footer.bg-white {
     background-color: white;
 }
+
 
 
 
