@@ -129,12 +129,12 @@
                         <section>    
                             <h2 class="wb-inv">Account menu</h2>
 							<a href="secure-message/inbox.html" class="btn btn-link text-white hidden-xs hidden-sm"> <span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span class="badge">2</span> </a>
-							<a href="#" class="btn btn-link text-white mrgn-rght-md hidden-xs hidden-sm hidden-md"> <span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a>
+							<a href="profile.html" class="btn btn-link text-white mrgn-rght-md hidden-xs hidden-sm hidden-md"> <span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a>
 							
 							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
 							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width" style="position:static; width: 100%; float: left; text-align: left; width: auto;">
 								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span class="badge">2</span></a></li>
-								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="profile.html"><span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
 								<li role="none" class="hidden"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-user mrgn-rght-sm opct-50"></span>Switch user</a></li>
 								<li role="none"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-power-off mrgn-rght-sm opct-50"></span>Sign out</a></li>
 							</ul>
@@ -142,7 +142,7 @@
 							<button class="btn btn-default mrgn-lft-md hidden-xs" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
 							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" style="text-align: left; width: auto;">
 								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1" href="secure-message/inbox.html"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span class="badge">2</span></a></li>
-								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="profile.html"><span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
 								<li role="none" class="hidden"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-users mrgn-rght-sm opct-50"></span>Switch user</a></li>
 								<li role="none"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-power-off mrgn-rght-sm opct-50"></span>Sign out</a></li>
 							</ul>
@@ -273,7 +273,7 @@
 													class="btn btn-link list-group-item full-width brdr-bttm"
 													style="text-align: left; background:none;">Inbox</a>
 											</li>
-											<li><a href="#"
+											<li><a href="profile.html"
 													class="btn btn-link list-group-item full-width brdr-bttm"
 													style="text-align: left; background:none;">Profile and
 													settings</a></li>
@@ -365,12 +365,13 @@
 									</div>
 								</details>
 							</li>
+							<!--
 							<li>
 								<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
 									style="text-align: left; background:none;">
 									Upload files or forms
 								</a>
-							</li>
+							</li>-->
 							<li>
 								<!-- Accordion section 3 -->
 								<details class="acc-group brdr-0 hidden" style="padding-left:0; font-size:15px;">
@@ -474,38 +475,41 @@
 											</div>
 										</details>
 									</li>
+									<!--
 									<li>
 										<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
 											style="text-align: left; background:none;">
 											Upload files
 										</a>
-									</li>
+									</li>-->
 									<li>
 										<!-- Accordion section 3 -->
-										<details class="acc-group brdr-0 hidden" style="padding-left:0; font-size:15px;">
+										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
 											<summary class="wb-toggle tgl-tab brdr-bttm"
 												data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-												Your account</summary>
+												Your forms and documents</summary>
 											<div class="tgl-panel">
 												<!-- Section 3's content -->
 												<ul class="list-unstyled mrgn-lft-sm">
+													
+													<!--<li><a href="#"
+															class="btn btn-link list-group-item full-width brdr-bttm"
+															style="text-align: left; background:none;">Letters and forms from VAC</a></li>-->
 													<li><a href="#"
 															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Inbox</a></li>
+															style="text-align: left; background:none;">Submitted forms and documents</a></li>
 													<li><a href="#"
 															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Profile and
-															settings</a></li>
+															style="text-align: left; background:none;">In-progress forms</a></li>
 													<li><a href="#"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Switch
-															accounts</a></li>
+																class="btn btn-link list-group-item full-width brdr-bttm"
+																style="text-align: left; background:none;">Upload forms and documents</a></li>
 												</ul>
 											</div>
 										</details>
 									</li>
 									<li>
-										<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
+										<a href="your-benefits/index.html" class="btn btn-link full-width list-group-item  brdr-bttm"
 											style="text-align: left; background:none;">
 											Your benefits and services
 										</a>
@@ -604,7 +608,7 @@
 													</tr>
 												</thead>
 												<tbody>
-													<tr class="h5"><td class="nws-tbl-date nowrap">2023-05-04</td><td class="nws-tbl-sub"><span class="fa fa-envelope mrgn-rght-sm mrgn-tp-sm" style="vertical-align: top; min-height: 21px;"></span><a href="#" style="vertical-align: top; min-height: 25px;">Questions about disability application</a></td></tr>
+													<tr class="h5"><td class="nws-tbl-date nowrap">2023-05-04</td><td class="nws-tbl-sub"><span class="fa fa-envelope mrgn-rght-sm mrgn-tp-sm" style="vertical-align: top; min-height: 21px;"></span><a href="secure-message/833362.html" style="vertical-align: top; min-height: 25px;">Questions about disability application</a></td></tr>
 
 													<tr class="h5"><td class="nws-tbl-date nowrap">2023-05-01</td><td class="nws-tbl-sub"><span class="fa fa-envelope mrgn-rght-sm mrgn-tp-sm" style="vertical-align: top; min-height: 21px;"></span><a href="#" style="vertical-align: top; min-height: 25px;">Letters and forms</a></td></tr>
 												</tbody>
@@ -616,7 +620,7 @@
 												<div class="row mrgn-tp-lg">
 													<div class="col-xs-12">
 													<button type="button" class="btn btn-sm btn-primary mrgn-rght-md"><span class="fa fa-envelope mrgn-rght-sm"></span>Send a new message</a>
-													<button type="button" class="btn btn-sm btn-default mrgn-rght-md"><span class="fa fa-upload mrgn-rght-sm"></span>Upload a file or document</a>
+													<button type="button" class="btn btn-sm btn-default mrgn-rght-md"><span class="fa fa-upload mrgn-rght-sm"></span>Upload forms or documents</a>
 					
 													</div>
 												</div>
@@ -648,9 +652,9 @@
 												<tbody>
 													<tr class="h5">
 														<td class="nws-tbl-date nowrap">2023-05-04</td>
-														<td class="nws-tbl-sub"><a href="track-your-application/application.html">Step 3 - Decision making</a></td>
+														<td class="nws-tbl-sub"><a href="track-your-application/application.html">Step 3 - Decision&nbsp;making</a></td>
 
-														<td class="nws-tbl-sub"><a href="track-your-application/application.html">Education and Training Benefit - Plan</a></td>
+														<td class="nws-tbl-sub"><a href="track-your-application/application.html">Education and Training&nbsp;Benefit&nbsp;-&nbsp;Plan</a></td>
 														<td class="nws-tbl-sub"><a href="track-your-application/application.html">Application</a></td>
 
 													</tr>
@@ -756,23 +760,104 @@
 										</div>
 									</section>
 								</div>
+
+								<div class="col-xs-12 mrgn-bttm-md brdr-tp brdr-rght brdr-bttm brdr-lft ">
+									<section class="mrgn-bttm-md ">
+										<div class="well bg-white brdr-0" style="background:#fff;">
+											<h2 class="h3 mrgn-tp-sm"><a href="your-forms/index.html">Your documents and forms</a> </h2>
+											<div>
+												
+											</p>
+											<section class="brdr-bttm">
+												<h3 class="h4"><a href="#">Letters and forms from VAC</a></h3>
+												<table class="table table-striped table-hover provisional gc-table">
+												<thead>
+													<tr>
+														<th>Date</th>
+														<th>Subject</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr><td class="nws-tbl-date nowrap">2023-05-04</td><td class="nws-tbl-sub"><a href="secure-message/833362.html" style="vertical-align: top; min-height: 25px;">Questions about disability application</a></td></tr>
+
+													<tr><td class="nws-tbl-date nowrap">2023-05-01</td><td class="nws-tbl-sub"><a href="#" style="vertical-align: top; min-height: 25px;">Letters and forms</a></td></tr>
+												</tbody>
+
+												</table>
+											</section>
+
+												<section class="brdr-bttm">
+													<h3 class="h4"><a href="#">Submitted forms and documents</a></h3>
+												<table class="table table-striped table-hover provisional gc-table">
+												<thead>
+													<tr>
+														<th>Date</th>
+														<th>Subject</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr><td class="nws-tbl-date nowrap">2023-05-04</td><td class="nws-tbl-sub"><a href="secure-message/833362.html" style="vertical-align: top; min-height: 25px;">Questions about disability application</a></td></tr>
+
+													<tr><td class="nws-tbl-date nowrap">2023-05-01</td><td class="nws-tbl-sub"><a href="#" style="vertical-align: top; min-height: 25px;">Letters and forms</a></td></tr>
+												</tbody>
+
+												</table>
+												<div class="row mrgn-tp-sm mrgn-bttm-lg">
+													<div class="col-xs-12">
+													<button type="button" class="btn btn-sm btn-primary mrgn-rght-md"><span class="fa fa-upload mrgn-rght-sm"></span>Upload forms or documents</a>
+					
+													</div>
+												</div>
+
+												</section>
+												
+												<section class="brdr-bttm">
+													<h3 class="h4"><a href="#">In-progress forms</a></h3>
+												<table class="table table-striped table-hover provisional gc-table">
+												<thead>
+													<tr>
+														<th>Modified</th>
+														<th>Subject</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr><td class="nws-tbl-date nowrap">2023-05-04</td><td class="nws-tbl-sub"><a href="secure-message/833362.html">Questions about disability application</a></td></tr>
+												</tbody>
+
+												</table>
+												</section>
+												
+
+											
+											</div>
+										</div>
+									</section>
+								</div>
 								
 								<div class="col-xs-12 mrgn-bttm-md brdr-tp brdr-rght brdr-bttm brdr-lft ">
 									<section class="mrgn-bttm-md">
 										<div class="well bg-white brdr-0" style="background:#fff;">
-											<h2 class="h3 mrgn-bttm-0"><a href="#">Profile and settings</a></h2>
+											<h2 class="h3 mrgn-bttm-0"><a href="profile.html">Profile and settings</a></h2>
 											<div class="mrgn-bttm-lg">
 												<p class="text-muted small hidden">Manage your account settings and personal&nbsp;information.</p>
 												
 												<div class="row">
-													<ul class="">
+													<div class="col-xs-12 mrgn-tp-md">
+														<ul class="list-col-md-3 lst-spcd">
+														<li>
+															<a href="#">
+																Direct deposit
+
+															</a>
+														</li>
 														<li><a href="#">
-															Change your notification settings
+															Notifications
 														</a></li>
 														<li><a href="#">
-															Update your contact information
+															Contact information
 														</a></li>
 													</ul>
+													</div>
 												</div>
 											</div>
 										</div>
