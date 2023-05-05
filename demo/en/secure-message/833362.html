@@ -34,7 +34,6 @@
 			overflow: hidden;
 			text-overflow: ellipsis;
 		}
-
 	</style>
 
 
@@ -180,14 +179,20 @@
 						</a>
 						<meta property="position" content="1">
 					</li>
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="inbox.html">
+							<span property="name">Inbox</span>
+						</a>
+						<meta property="position" content="1">
+					</li>
 				</ol>
 				<div class="hidden-md hidden-lg">
 					<ol>
 						<li>
 
-							<a property="item" typeof="WebPage" href="../index.html">
+							<a property="item" typeof="WebPage" href="inbox.html">
 								<span class="fa fa-arrow-left mrgn-rght-sm"></span>
-								<span property="name">Overview</span>
+								<span property="name">Inbox</span>
 							</a>
 						</li>
 					</ol>
@@ -211,102 +216,79 @@
 
 					<div class="col-sm-12">
 						<div id="wb-main-in">
-							<h1 id="wb-cont" property="name">Secure messaging</h1>
-
-							<div class="row">
-								<div class="col-md-6">
-									<p>A secure and easy way to reach us, wherever you&nbsp;are.</p>
-								</div>
-								<div class="col-xs-12 col-md-auto pull-right">
-									<p>
-										<a href="#" class="btn btn-primary"><span class="fa fa-envelope mrgn-rght-sm"></span>Send a new message</a>
-										<a href="#" class="btn btn-default"><span class="fa fa-cog mrgn-rght-sm"></span>Update your message settings</a>
-									</p>
-								</div>
-							</div>
-
-
-
-							<h2>Inbox</h2>
-							<div class="row">
-								<div class="btn-toolbar list-inline col-xs-12 " role="toolbar"
-									id="message-button-toolbar">
-									<p>Filter by message type:</p>
-									<ul class="list-inline" data-wb-actionmng='[
-		{ "trggroup":"clearFilter", "action": "removeClass", "source": ".fltopts", "class": "btn-primary" },
-		{ "trggroup":"clearFilter", "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "" }
-	]'>
-										<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
-			{ "action": "run", "trggroup": "clearFilter" },
-			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "Message" },
-			{ "action": "addClass", "class": "btn-primary" }
-		]'>Message</button></li>
-										<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
-			{ "action": "run", "trggroup": "clearFilter" },
-			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "Letters and forms" },
-			{ "action": "addClass", "class": "btn-primary" }
-		]'>Letters and forms</button></li>
-										<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
-			{ "action": "run", "trggroup": "clearFilter" },
-			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "Archive" },
-			{ "action": "addClass", "class": "btn-primary" }
-		]'>Archive</button></li>
-										<li><button type="button" class="btn btn-link"
-												data-wb-doaction='{ "action": "run", "trggroup": "clearFilter" }'>View
-												all</button></li>
-									</ul>
-
-									<table class="wb-tables table table-striped table-hover provisional gc-table"
-										id="dataset-filter" aria-live="polite" data-wb-tables='{
-			"bDeferRender": true,
-			"ajaxSource": "../../../design/assets/ajax/inbox-datasource-en.json",
-			"order": [0, "desc"],
-			"autoWidth": false,
-			"columns": [
-				{ "data": "DATE", "className": "nws-tbl-date nowrap" },
-				{ "data": "SUBJECT", "className": "nws-tbl-sub sub-elps col-md-5" },
-				{ "data": "SUMMARY", "className": "nws-tbl-summ summ-elps col-md-6" },
-				{ "data": "TYPE",  "visible": false },
-				{ "data": "UNREAD",  "visible": false }]
-				
-		}'>
-										<thead>
-											<tr>
-												<th scope="col" class="col-xs-1">Date</th>
-												<th scope="col" class="col-xs-6">Subject</th>
-												<th scope="col" class="col-xs-1">Details</th>
-
-											</tr>
-										</thead>
-									</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-								</div>
-							</div>
-
-							
-
-
+							<h1 id="wb-cont" property="name">Questions about disability application</h1>
 							<div class="row">
 								<div class="col-xs-12">
-									<h2>Help and FAQs</h2>
-									<ul>
-										<li><a href="$">Secure messaging FAQs</a></li>
-									</ul>
+									<p class="small text-muted">ID 833362</p>
+								</div>
+							</div>
+							<!-- button toolbar-->
+
+							<button id="reply" class="btn btn-primary"><span class="fa fa-reply mrgn-rght-sm"
+									aria-hidden="true"></span>Reply</button>
+
+							<!-- Reply -->
+							<div class="clearfix"></div>
+
+							<div id="reply_message" class="mrgn-tp-md col-md-10 hidden">
+																
+								
+								  <div id="reply-message-box" class="form-group">
+									<label for="message-body" class="required">Message <strong class="required">(required)</strong></label>
+									
+									<!-- Show the BPA message if returning with errors and BPA was previously selected. -->
+									
+									
+									<textarea name="model.body" cols="100" rows="8" id="message-body" class="form-control full-width" maxlength="1500"></textarea>
+									<div id="charsLeftLabel" class="small mrgn-tp-sm">
+									  You used <span id="characters-used">0</span> characters. <span id="characters-left">1500</span> characters left.
+									</div>
+									<meter id="count-meter" style="width:100%;" value="0" min="0" high="1125" max="1500"></meter>
+								  </div>
+							  
+								<div id="button-bar" class="mrgn-bttm-lg">
+								  
+						  <button type="submit" id="button-submit" name="submitButton" value="Submit" class="btn btn-success btn-mobile">
+						  
+						  Send message
+						  </button>
+						  
+						  
+						  
+								  <div id="cancel_reply" class="btn btn-default btn-mobile">Cancel</div>
+								</div>
+							  </div>
+
+							<!--message-->
+							
+							<div class="row mrgn-tp-md">
+								<div class="col-xs-10 col-xs-push-2">
+									<div class="panel panel-default">
+										<div class="panel-body">
+											<p>2023-05-04 16:15 UTC</p>
+											<p><strong>Veteran Affairs Canada:</strong></p>
+
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
+												doloribus pariatur fugiat ullam. Nemo deserunt eligendi quia, aspernatur
+												laudantium saepe deleniti totam eos. Placeat alias nisi eius totam
+												officiis impedit.</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="col-xs-10">
+									<div class="panel panel-default">
+										<div class="panel-body">
+											<p>2023-05-13 11:05 UTC</p>
+											<p><strong>You:</strong></p>
+
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
+												doloribus pariatur fugiat ullam. Nemo deserunt eligendi quia, aspernatur
+												laudantium saepe deleniti totam eos. Placeat alias nisi eius totam
+												officiis impedit.</p>
+										</div>
+									</div>
+
 								</div>
 							</div>
 
@@ -418,22 +400,6 @@
 		</footer>
 	</div>
 
-	<script>
-		window["wb-tables"] = {
-			createdRow: function (row, data, dataIndex) {
-				console.log(data.UNREAD);
-				if (data.UNREAD == "true") {
-				$(row).addClass("");
-				$(row).addClass("h5");
-				$(row).children(".nws-tbl-sub").prepend("<span class=\"fa fa-envelope mrgn-rght-sm mrgn-tp-sm \"></span>");
-				}
-				else {
-					$(row).children(".nws-tbl-sub").prepend("<span class=\"fa fa-envelope-open text-muted mrgn-rght-sm mrgn-tp-sm \"></span>");
-				}
-
-			}
-		};
-    </script>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
@@ -442,7 +408,20 @@
 	<script src="../../../../wet-boew/js/wet-boew.min.js"></script>
 	<script src="../../../../GCWeb/js/theme.min.js"></script>
 
-	
+
+	<script>
+		//reply toggle
+
+	$('#reply').click(function (e) {
+		$('#reply_message').removeClass('hidden');
+		$(this).addClass('hidden');
+	}); 
+
+	$('#cancel_reply').click(function (e) {
+		$('#reply_message').addClass('hidden');
+		$('#reply').removeClass('hidden');
+	});
+	</script>
 
 
 

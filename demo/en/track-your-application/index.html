@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) <abbr>WET</abbr>-boew.github.io/wet-boew/License-en.html / <abbr>WET</abbr>-boew.github.io/wet-boew/Licence-fr.html -->
 
-	<title>Inbox - My VAC Account</title>
+	<title>Track your applications - My VAC Account</title>
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<meta name="description" content=" " />
 	<meta name="author" content=" " />
@@ -211,89 +211,42 @@
 
 					<div class="col-sm-12">
 						<div id="wb-main-in">
-							<h1 id="wb-cont" property="name">Secure messaging</h1>
+							<h1 id="wb-cont" property="name">Track your applications</h1>
 
+						
 							<div class="row">
-								<div class="col-md-6">
-									<p>A secure and easy way to reach us, wherever you&nbsp;are.</p>
-								</div>
-								<div class="col-xs-12 col-md-auto pull-right">
-									<p>
-										<a href="#" class="btn btn-primary"><span class="fa fa-envelope mrgn-rght-sm"></span>Send a new message</a>
-										<a href="#" class="btn btn-default"><span class="fa fa-cog mrgn-rght-sm"></span>Update your message settings</a>
-									</p>
-								</div>
-							</div>
-
-
-
-							<h2>Inbox</h2>
-							<div class="row">
-								<div class="btn-toolbar list-inline col-xs-12 " role="toolbar"
-									id="message-button-toolbar">
-									<p>Filter by message type:</p>
-									<ul class="list-inline" data-wb-actionmng='[
-		{ "trggroup":"clearFilter", "action": "removeClass", "source": ".fltopts", "class": "btn-primary" },
-		{ "trggroup":"clearFilter", "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "" }
-	]'>
-										<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
-			{ "action": "run", "trggroup": "clearFilter" },
-			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "Message" },
-			{ "action": "addClass", "class": "btn-primary" }
-		]'>Message</button></li>
-										<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
-			{ "action": "run", "trggroup": "clearFilter" },
-			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "Letters and forms" },
-			{ "action": "addClass", "class": "btn-primary" }
-		]'>Letters and forms</button></li>
-										<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
-			{ "action": "run", "trggroup": "clearFilter" },
-			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "Archive" },
-			{ "action": "addClass", "class": "btn-primary" }
-		]'>Archive</button></li>
-										<li><button type="button" class="btn btn-link"
-												data-wb-doaction='{ "action": "run", "trggroup": "clearFilter" }'>View
-												all</button></li>
-									</ul>
-
+								<div class="col-xs-12">
 									<table class="wb-tables table table-striped table-hover provisional gc-table"
 										id="dataset-filter" aria-live="polite" data-wb-tables='{
 			"bDeferRender": true,
-			"ajaxSource": "../../../design/assets/ajax/inbox-datasource-en.json",
+			"ajaxSource": "../../../design/assets/ajax/status-tracking-datasource-en.json",
 			"order": [0, "desc"],
 			"autoWidth": false,
 			"columns": [
-				{ "data": "DATE", "className": "nws-tbl-date nowrap" },
-				{ "data": "SUBJECT", "className": "nws-tbl-sub sub-elps col-md-5" },
-				{ "data": "SUMMARY", "className": "nws-tbl-summ summ-elps col-md-6" },
-				{ "data": "TYPE",  "visible": false },
+				{ "data": "UPDATE", "className": "ststrck-tbl-date " },
+				{ "data": "STATUS", "className": "ststrck-tbl-status" },
+
+				{ "data": "PROGRAM", "className": "ststrck-tbl-sub" },
+				{ "data": "DESCRIPTION", "className": "ststrck-tbl-desc" },
+
+				{ "data": "APPDATE", "className": "ststrck-tbl-summ " },
+				
 				{ "data": "UNREAD",  "visible": false }]
 				
 		}'>
 										<thead>
 											<tr>
-												<th scope="col" class="col-xs-1">Date</th>
-												<th scope="col" class="col-xs-6">Subject</th>
-												<th scope="col" class="col-xs-1">Details</th>
+												<th scope="col" class="">Last updated</th>
+												<th scope="col" class="">Status</th>
+
+												<th scope="col" class="">Program</th>
+												<th scope="col" class="">Description</th>
+
+												<th scope="col" class="">Application date</th>
 
 											</tr>
 										</thead>
 									</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 								</div>
 							</div>
@@ -305,7 +258,7 @@
 								<div class="col-xs-12">
 									<h2>Help and FAQs</h2>
 									<ul>
-										<li><a href="$">Secure messaging FAQs</a></li>
+										<li><a href="$">Status tracking FAQs</a></li>
 									</ul>
 								</div>
 							</div>
@@ -340,11 +293,11 @@
 												</dl>
 											</div>
 											<div class="col-xs-12 col-sm-6 mrgn-bttm-0 hidden-xs text-right">
-												<p class="mrgn-tp-0 mrgn-bttm-0">UX.7.17.4</p>
+												<p class="mrgn-tp-0 mrgn-bttm-0">UX.6.3</p>
 												<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
 											</div>
 											<div class="col-xs-12 col-sm-6 mrgn-bttm-0 visible-xs">
-												<p class="mrgn-tp-0 mrgn-bttm-0">UX.7.17.4</p>
+												<p class="mrgn-tp-0 mrgn-bttm-0">UX.6.3</p>
 												<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
 											</div>
 										</div>
@@ -425,10 +378,7 @@
 				if (data.UNREAD == "true") {
 				$(row).addClass("");
 				$(row).addClass("h5");
-				$(row).children(".nws-tbl-sub").prepend("<span class=\"fa fa-envelope mrgn-rght-sm mrgn-tp-sm \"></span>");
-				}
-				else {
-					$(row).children(".nws-tbl-sub").prepend("<span class=\"fa fa-envelope-open text-muted mrgn-rght-sm mrgn-tp-sm \"></span>");
+				$(row).children(".nws-tbl-sub").prepend("<span class=\"fa fa-circle mrgn-rght-sm mrgn-tp-sm \"></span>");
 				}
 
 			}

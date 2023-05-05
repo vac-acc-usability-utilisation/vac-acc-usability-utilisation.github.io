@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) <abbr>WET</abbr>-boew.github.io/wet-boew/License-en.html / <abbr>WET</abbr>-boew.github.io/wet-boew/Licence-fr.html -->
 
-	<title>Inbox - My VAC Account</title>
+	<title>Education and Training Benefit - Plan - My VAC Account</title>
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<meta name="description" content=" " />
 	<meta name="author" content=" " />
@@ -20,24 +20,191 @@
 	</noscript>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
-	<style>
-		.sub-elps {
-			max-width: 240px;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
+	<style>	
+	ol.lst-stps, .lst-stps {
+	counter-reset: item;
+	margin-bottom: 30px;
+	padding-left: 0;
+}
+ol.lst-stps, ol.lst-stps-sub, .lst-stps, .lst-stps-sub {
+	list-style-type: none;
+}
+ol.lst-stps>li, .lst-stps>.lst-stps-itm {
+	content: counter(item);
+	counter-increment: item;
+}
+ol.lst-stps>li, ol.lst-stps-sub>li, .lst-stps .lst-stps-itm {
+	min-height: 3em;
+	padding-left: 3.6em;
+	padding-right: 15px;
+}
+ol.lst-stps-sub>li, .lst-stps-sub .lst-stps-itm {
+	padding-left: 2.8em;
+}
+ol.lst-stps.ld-zr ol.lst-stps-sub>li, .lst-stps.ld-zr .lst-stps-itm {
+	padding-left: 4em;
+}
+ol.lst-stps.ld-zr>li, ol.lst-stps.ld-zr ol.lst-stps-sub>li, .lst-stps.ld-zr .lst-stps-itm {
+	min-height: 4em;
+}
+ol.lst-stps>li:not(:first-child), ol.lst-stps-sub>li:not(:first-child), .lst-stps .lst-stps-itm:not(:first-child) {
+	margin-top: 20px;
+}
+ol.lst-stps.ld-zr>li:not(:first-child), .lst-stps.ld-zr .lst-stps-itm:not(:first-child) {
+	margin-top: 40px;
+}
+ol.lst-stps>li:before, .lst-stps .lst-stps-itm:before {
+	content: counter(item);
+}
+ol.lst-stps.ld-zr>li:before, .lst-stps.ld-zr .lst-stps-itm:before {
+	content: counter(item, decimal-leading-zero);
+	counter-increment: li;
+	font-size: 1.6em;
+	margin-left: -2.4em;
+	min-width: 2em;
+}
+ol.lst-stps.ld-zr ol.lst-stps-sub>li:before, .lst-stps.ld-zr .lst-stps-sub .lst-stps-itm:before {
+	margin-left: -3.4em;
+	min-width: 2.8em;
+}
+ol.lst-stps-sub, .lst-stps-sub {
+	clear: both;
+	counter-reset: subitem;
+	margin-top: 15px;
+	padding-left: 0px;
+}
+ol.lst-stps>li:before, ol.lst-stps ol.lst-stps-sub>li:before, .lst-stps .lst-stps-itm:before, .lst-stps-sub .lst-stps-itm:before {
+	border-color: #26374a;
+	border-style: solid;
+	border-width: 3px;
+	float: left;
+	font-family: Lato, sans-serif;
+	font-weight: 600;
+	margin-right: 10px;
+	position: relative;
+	text-align: center;
+}
+ol.lst-stps:not(.ld-zr)>li:before, ol.lst-stps:not(.ld-zr) ol.lst-stps-sub>li:before, .lst-stps:not(.ld-zr) .lst-stps-itm:before, .lst-stps:not(.ld-zr) .lst-stps-sub .lst-stps-itm:before {
+	background-color: #fff;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	box-sizing: content-box;
+	line-height: 2;
+	margin-left: -3.2em;
+	margin-top: -8px;
+	text-align: center;
+	width: 2em;
+}
+ol.lst-stps.ld-zr>li:before, ol.lst-stps.ld-zr>li ol.lst-stps-sub>li:before, .lst-stps.ld-zr .lst-stps-itm:before, .lst-stps.ld-zr .lst-stps-sub .lst-stps-itm:before {
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-width: 0px;
+	line-height: 1.4;
+	padding-bottom: 0.8em;
+	padding-right: 8px;
+}
+ol.lst-stps-sub>li:before, .lst-stps .lst-stps-sub .lst-stps-itm:before {
+	counter-increment: subitem;
+}
+ol.lst-stps:not(.ld-zr)>li ol.lst-stps-sub>li:before, .lst-stps:not(.ld-zr) .lst-stps-sub .lst-stps-itm:before {
+	content: counter(item) "" counter(subitem, lower-alpha) "";
+	font-size: 0.8em;
+	margin-top: -2px;
+}
+ol.lst-stps.ld-zr>li ol.lst-stps-sub>li:before, .lst-stps.ld-zr .lst-stps-sub .lst-stps-itm:before {
+	content: counter(item, decimal-leading-zero) "" counter(subitem, lower-alpha) "";
+	font-size: 1.2em;
+}
+ ol.lst-stps li :first-of-type:is(h2, h3, h4, h5, h6, p), .lst-stps .lst-stps-itm :first-of-type:is(h2, h3, h4, h5, h6, p) {
+ margin-top: auto;
+}
+ol.lst-stps.stps-strpd>li, ol.lst-stps.stps-strpd>li ol.lst-stps-sub.stps-strpd>li, .lst-stps.stps-strpd .lst-stps-itm, .lst-stps.stps-strpd .lst-stps-sub.stps-strpd .lst-stps-itm {
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+ol.lst-stps.stps-strpd>li>:last-child, ol.lst-stps.stps-strpd ol.lst-stps-sub.stps-strpd>li>:last-child, .lst-stps.stps-strpd .lst-stps-itm>:last-child, .lst-stps.stps-strpd .lst-stps-sub.stps-strpd .lst-stps-itm>:last-child {
+	margin-bottom: 0px;
+}
+ol.lst-stps.stps-strpd>li:not(:first-child), ol.lst-stps.stps-strpd ol.lst-stps-sub.stps-strpd>li:not(:first-child), .lst-stps.stps-strpd .lst-stps-itm:not(:first-child), .lst-stps.stps-strpd .lst-stps-sub.stps-strpd .lst-stps-itm:not(:first-child) {
+	margin-top: 0px;
+}
+ol.lst-stps.stps-strpd>li:nth-child(odd), ol.lst-stps.stps-strpd>li:nth-child(even)>ol.lst-stps-sub.stps-strpd>li:nth-child(odd), ol.lst-stps.stps-strpd>li:nth-child(odd)>ol.lst-stps-sub.stps-strpd>li:nth-child(even), .lst-stps.stps-strpd>.lst-stps-itm:nth-child(odd), .lst-stps.stps-strpd>.lst-stps-itm:nth-child(even)>.lst-stps-sub.stps-strpd>.lst-stps-itm:nth-child(odd), .lst-stps.stps-strpd>.lst-stps-itm:nth-child(odd)>.lst-stps-sub.stps-strpd>.lst-stps-itm:nth-child(even).lst-stps.stps-strpd>.lst-stps-itm:nth-child(odd), .lst-stps.stps-strpd>.lst-stps-itm:nth-child(even)>.lst-stps-sub.stps-strpd>.lst-stps-itm:nth-child(odd), .lst-stps.stps-strpd>.lst-stps-itm:nth-child(odd)>.lst-stps-sub.stps-strpd>.lst-stps-itm:nth-child(even) {
+	background-color: #f5f5f5;
+}
+ol.lst-stps.stps-strpd>li:nth-child(odd)>ol.lst-stps-sub.stps-strpd>li:nth-child(odd), .lst-stps.stps-strpd>.lst-stps-itm:nth-child(odd)>.lst-stps-sub.stps-strpd>.lst-stps-itm:nth-child(odd) {
+	background-color: #fff!important;
+}
+ol.lst-stps:not(.ld-zr).stps-strpd ol.lst-stps-sub.stps-strpd>li, .lst-stps:not(.ld-zr).stps-strpd .lst-stps-sub.stps-strpd .lst-stps-itm {
+	padding-left: 3.4em;
+}
+ol.lst-stps.ld-zr.stps-strpd>li, .lst-stps.ld-zr.stps-strpd>.lst-stps-itm {
+	padding-left: 4em;
+}
+ol.lst-stps.ld-zr.stps-strpd>li, ol.ld-zr ol.lst-stps-sub.stps-strpd>li, .lst-stps.ld-zr.stps-strpd .lst-stps-itm, .lst-stps-sub.stps-strpd .lst-stps-itm {
+	min-height: 5em;
+	padding-left: 4.4em;
+}
 
-		.summ-elps {
-			max-width: 50px;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
+@media all and (max-width: 767px) {
+ol.lst-stps.ld-zr>li:before, ol.lst-stps.ld-zr>li ol.lst-stps-sub>li:before, .lst-stps.ld-zr .lst-stps-itm:before, .lst-stps.ld-zr .lst-stps-sub .lst-stps-itm:before {
+	left: 5px;
+}
+ol.lst-stps:not(.ld-zr)>li:before, .lst-stps:not(.ld-zr) .lst-stps-itm:before {
+	font-size: 0.8em;
+	margin-top: -5px;
+}
+ol.lst-stps:not(.ld-zr)>li ol.lst-stps-sub>li:before, .lst-stps:not(.ld-zr) .lst-stps-sub .lst-stps-itm:before {
+	font-size: 0.7em;
+	margin-top: -3px;
+}
+ol.lst-stps>li, ol.lst-stps>li ol.lst-stps-sub>li, .lst-stps .lst-stps-itm, .lst-stps .lst-stps-sub .lst-stps-itm {
+	padding-left: 2.6em;
+}
+ol.lst-stps.ld-zr>li ol.lst-stps-sub>li, .lst-stps.ld-zr .lst-stps-sub .lst-stps-itm {
+	padding-left: 3em;
+}
+ol.lst-stps.ld-zr>li:before, .lst-stps.ld-zr .lst-stps-itm:before {
+	font-size: 1.2em;
+	padding-bottom: 25px;
+}
+ol.lst-stps.ld-zr>li, .lst-stps.ld-zr .lst-stps-itm {
+	min-height: 5em;
+}
+ol.lst-stps.ld-zr>li ol.lst-stps-sub>li:before, .lst-stps.ld-zr .lst-stps-sub .lst-stps-itm:before {
+	font-size: 1em;
+}
+ol.lst-stps.stps-strpd>li, ol.lst-stps.stps-strpd>li ol.lst-stps-sub.stps-strpd>li, .lst-stps.stps-strpd .lst-stps-itm, .lst-stps.stps-strpd .lst-stps-sub.stps-strpd .lst-stps-itm {
+	margin-top: 0px;
+	padding-bottom: 0.8em;
+	padding-top: 0.8em;
+}
+ol.lst-stps.stps-strpd>li, .lst-stps.stps-strpd .lst-stps-itm {
+	padding-left: 3em;
+}
+ol.lst-stps.stps-strpd.ld-zr>li, .lst-stps.stps-strpd.ld-zr .lst-stps-itm {
+	padding-left: 3.4em;
+}
+ol.lst-stps.stps-strpd>li ol.lst-stps-sub.stps-strpd>li, .lst-stps.stps-strpd .lst-stps-sub .lst-stps-itm {
+	padding-left: 3.5em;
+}
+}
+</style>
 
-	</style>
+<style>
+	ol.lst-stps>li.success:before, ol.lst-stps ol.lst-stps-sub>li.success:before {
+		border-color: #3c763d;
+		background-color: #3c763d;
+		color: #fff;
+	}
 
+	ol.lst-stps>li.active:before, ol.lst-stps ol.lst-stps-sub>li.actives:before {
+		background: #26374a;
+		color: #fff;
+	}
 
+	
+</style>
 
 </head>
 
@@ -180,14 +347,20 @@
 						</a>
 						<meta property="position" content="1">
 					</li>
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="index.html">
+							<span property="name">Track your applications</span>
+						</a>
+						<meta property="position" content="2">
+					</li>
 				</ol>
 				<div class="hidden-md hidden-lg">
 					<ol>
 						<li>
 
-							<a property="item" typeof="WebPage" href="../index.html">
-								<span class="fa fa-arrow-left mrgn-rght-sm"></span>
-								<span property="name">Overview</span>
+							<a property="item" typeof="WebPage" href="index.html">
+								
+								<span property="name">Track your applications</span>
 							</a>
 						</li>
 					</ol>
@@ -211,101 +384,50 @@
 
 					<div class="col-sm-12">
 						<div id="wb-main-in">
-							<h1 id="wb-cont" property="name">Secure messaging</h1>
-
-							<div class="row">
-								<div class="col-md-6">
-									<p>A secure and easy way to reach us, wherever you&nbsp;are.</p>
-								</div>
-								<div class="col-xs-12 col-md-auto pull-right">
-									<p>
-										<a href="#" class="btn btn-primary"><span class="fa fa-envelope mrgn-rght-sm"></span>Send a new message</a>
-										<a href="#" class="btn btn-default"><span class="fa fa-cog mrgn-rght-sm"></span>Update your message settings</a>
-									</p>
-								</div>
-							</div>
-
-
-
-							<h2>Inbox</h2>
-							<div class="row">
-								<div class="btn-toolbar list-inline col-xs-12 " role="toolbar"
-									id="message-button-toolbar">
-									<p>Filter by message type:</p>
-									<ul class="list-inline" data-wb-actionmng='[
-		{ "trggroup":"clearFilter", "action": "removeClass", "source": ".fltopts", "class": "btn-primary" },
-		{ "trggroup":"clearFilter", "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "" }
-	]'>
-										<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
-			{ "action": "run", "trggroup": "clearFilter" },
-			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "Message" },
-			{ "action": "addClass", "class": "btn-primary" }
-		]'>Message</button></li>
-										<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
-			{ "action": "run", "trggroup": "clearFilter" },
-			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "Letters and forms" },
-			{ "action": "addClass", "class": "btn-primary" }
-		]'>Letters and forms</button></li>
-										<li><button type="button" class="fltopts btn btn-default" data-wb-doaction='[
-			{ "action": "run", "trggroup": "clearFilter" },
-			{ "action": "tblfilter", "source": "#dataset-filter", "column": 3, "value": "Archive" },
-			{ "action": "addClass", "class": "btn-primary" }
-		]'>Archive</button></li>
-										<li><button type="button" class="btn btn-link"
-												data-wb-doaction='{ "action": "run", "trggroup": "clearFilter" }'>View
-												all</button></li>
-									</ul>
-
-									<table class="wb-tables table table-striped table-hover provisional gc-table"
-										id="dataset-filter" aria-live="polite" data-wb-tables='{
-			"bDeferRender": true,
-			"ajaxSource": "../../../design/assets/ajax/inbox-datasource-en.json",
-			"order": [0, "desc"],
-			"autoWidth": false,
-			"columns": [
-				{ "data": "DATE", "className": "nws-tbl-date nowrap" },
-				{ "data": "SUBJECT", "className": "nws-tbl-sub sub-elps col-md-5" },
-				{ "data": "SUMMARY", "className": "nws-tbl-summ summ-elps col-md-6" },
-				{ "data": "TYPE",  "visible": false },
-				{ "data": "UNREAD",  "visible": false }]
-				
-		}'>
-										<thead>
-											<tr>
-												<th scope="col" class="col-xs-1">Date</th>
-												<th scope="col" class="col-xs-6">Subject</th>
-												<th scope="col" class="col-xs-1">Details</th>
-
-											</tr>
-										</thead>
-									</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-								</div>
-							</div>
+							<h1 id="wb-cont" property="name">Education and Training Benefit - Plan</h1>
+							<p class="lead">Application</p>
 
 							
+							<div class="row">
+								<div class="col-xs-12 mrgn-tp-md ">
+									<ol class="lst-stps stps-strpd">
+										<li class="success">
+													<p class="text-success">Application received</p>
+												<p class="small hidden"><abbr title="">VAC</abbr> has received your application.</p>
+
+										  
+										</li>
+										<li class="success">
+											<p class="text-success">Reviewing application</p>
+											<p class="small hidden">We are reviewing all of the information obtained in support of your claim.</p>
+
+										</li>
+
+										<li class="active">
+											<p class="h3">Decision making</p>
+											<p>Your claim is currently at the decision making level.</p>
+											<!--
+											<ol class="lst-stps-sub">
+											<li>Application is ready to be assigned</li>
+											<li>Decision making in progress</li>
+											<li>Decision processing</li>
+										   </ol>--></li>
+										<li>
+											<p class="text-muted">Application complete</p>
+										 
+										</li>
+									  </ol>
+								</div>
+							</div>
+
+
 
 
 							<div class="row">
 								<div class="col-xs-12">
 									<h2>Help and FAQs</h2>
 									<ul>
-										<li><a href="$">Secure messaging FAQs</a></li>
+										<li><a href="$">Status tracking FAQs</a></li>
 									</ul>
 								</div>
 							</div>
@@ -340,11 +462,11 @@
 												</dl>
 											</div>
 											<div class="col-xs-12 col-sm-6 mrgn-bttm-0 hidden-xs text-right">
-												<p class="mrgn-tp-0 mrgn-bttm-0">UX.7.17.4</p>
+												<p class="mrgn-tp-0 mrgn-bttm-0">UX.6.3</p>
 												<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
 											</div>
 											<div class="col-xs-12 col-sm-6 mrgn-bttm-0 visible-xs">
-												<p class="mrgn-tp-0 mrgn-bttm-0">UX.7.17.4</p>
+												<p class="mrgn-tp-0 mrgn-bttm-0">UX.6.3</p>
 												<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
 											</div>
 										</div>
@@ -423,17 +545,14 @@
 			createdRow: function (row, data, dataIndex) {
 				console.log(data.UNREAD);
 				if (data.UNREAD == "true") {
-				$(row).addClass("");
-				$(row).addClass("h5");
-				$(row).children(".nws-tbl-sub").prepend("<span class=\"fa fa-envelope mrgn-rght-sm mrgn-tp-sm \"></span>");
-				}
-				else {
-					$(row).children(".nws-tbl-sub").prepend("<span class=\"fa fa-envelope-open text-muted mrgn-rght-sm mrgn-tp-sm \"></span>");
+					$(row).addClass("");
+					$(row).addClass("h5");
+					$(row).children(".nws-tbl-sub").prepend("<span class=\"fa fa-circle mrgn-rght-sm mrgn-tp-sm \"></span>");
 				}
 
 			}
 		};
-    </script>
+	</script>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
@@ -442,7 +561,7 @@
 	<script src="../../../../wet-boew/js/wet-boew.min.js"></script>
 	<script src="../../../../GCWeb/js/theme.min.js"></script>
 
-	
+
 
 
 
