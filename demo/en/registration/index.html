@@ -35,7 +35,9 @@
                                             height: 17px;
                                             width: 17px;
                                         }
-                                    
+        .form-control.input-lg {
+            padding: 10px 16px;
+        }
     </style>
 
 </head>
@@ -146,15 +148,16 @@
                     <h1 id="wb-cont" property="name">
                         Connect your sign-in partner with My VAC Account
                     </h1>
+                    <p class="small">This is the first time you've signed in using this sign-in partner.</p>
                     <!--
                     <p>This is the first time you've signed in using this sign-in partner.</p>
                     <p>Let's get you connected to your My VAC Account.</p>-->
 
-                    <div class="wb-frmvld ">
+                    <div class="wb-frmvld mrgn-tp-lg">
                         <form action="#" method="get" id="steps-example">
                             
                             <fieldset id="identifier">
-                                <legend>Basic information</legend>
+                                <legend class="wb-inv">Basic information</legend>
                                 <div>
                                     <div class="form-group">
                                         <div class="row">
@@ -224,7 +227,7 @@
                                         </div>
 
                                         <div class="row">
-                                            <fieldset class="subfields">
+                                            <fieldset class="subfields ">
                                             <div class="col-sm-6 col-md-3 text-right">
                                                 <legend id="pcode" style="font-weight: 700; font-size: 16px;" class="mrgn-tp-0 mrgn-bttm-0 required">Postal code <strong class="required">(required)</strong></legend>
 
@@ -233,13 +236,13 @@
                                             
                                             <div class="col-sm-6 col-md-9">
                                                <div class="pull-left mrgn-rght-sm">
-                                                <input class="form-control" id="pcodeca1" name="pcodeca1" aria-describedby="pcode" type="text" autocomplete="postal-code" size="7" maxlength="7" required="required" data-rule-postalCodeCA="true" />
+                                                <input class="form-control input-lg" id="pcodeca1" name="pcodeca1" aria-describedby="pcode" type="text" autocomplete="postal-code" size="7" maxlength="7" required="required" data-rule-postalCodeCA="true" />
 
                                                </div>
                                                <div class="pull-left mrgn-rght-sm">
                                                 
                                                 <label for="country" class="required wb-inv">Country <strong class="required">(required)</strong></label>
-                                                <select name="country" id="country" class="form-control">
+                                                <select name="country" id="country" class="form-control input-lg">
                                                     <option value="CA" selected="selected">Canada</option>
                                                     <option value="US">United States</option>                                            
                                                     <option value="misc">Other</option>
@@ -264,7 +267,7 @@
                                                
                                                 
                                                 <label for="country" class="required wb-inv">Number <strong class="required">(required)</strong></label>
-                                                <select name="country" id="country" class="form-control" multiple="multiple">
+                                                <select name="country" id="country" class="form-control input-lg" multiple="multiple">
                                                     <option value="CA" selected>Service number (CAF)</option>
                                                     <option value="US">Regimental number (RCMP)</option>                                            
                                                     <option value="misc">Client ID or CDSN ID (VAC)</option>
@@ -784,7 +787,11 @@
                             <!--
                             <p class="small mrgn-tp-0 mrgn-bttm-lg"><a href="#">Enter a one-time password</a></p>
                                 -->
-                            <input type="submit" name="submit" value="Submit" class="btn btn-success"/>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <input type="submit" name="submit" value="Next" class="btn btn-primary btn-lg pull-right"/>
+                                </div>
+                            </div>
                             
 
                         </form>
