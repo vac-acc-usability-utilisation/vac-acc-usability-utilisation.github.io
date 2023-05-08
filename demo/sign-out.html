@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+      <title>DEMO - Sign in to or register for My Veterans Affairs Canada Account</title>
+      <meta content="width=device-width, initial-scale=1" name="viewport">
+      <meta name="description" content=" " />
+      <meta name="author" content=" "/>
+      <meta name="dcterms.title" content="My VAC Account Sign-In Services"/>
+      <meta name="dcterms.description" content=" "/>
+      <meta name="dcterms.creator" content=" "/>
+      <meta name="dcterms.language" content="eng"/>
+      <meta name="dcterms.subject" content=""/>
+      <meta name="dcterms.issued" content=""/>
+      <meta name="dcterms.modified" content="2017-09-29"/>
+      <link href="../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
+      <link rel="stylesheet" href="../GCWeb/css/theme.min.css" />
+      <link rel="stylesheet" href="../cdts/css/cdts.css" />
+      <link rel="stylesheet" href="../mva-mda/css/theme.css" />
+      <noscript>
+         <link rel="stylesheet" href="wet-boew/css/noscript.min.css" />
+      </noscript>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+
+   </head>
+   <body class="cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage">
+      
+	<!-- Global (National) Header (not signed in)
+		states: ?sign-in | ?register
+
+		VAC   .\^/.   ACC    
+		ACC  \=%¥%=/  VAC 
+		VAC   ^`|`^   ACC 
+		
+		-->
+      <nav aria-label="Skip Links">
+         <ul id="wb-tphp">
+         <li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+         <li class="wb-slc visible-xs visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to "About My VAC Account"</a></li>
+         </ul>
+      </nav>
+      <header>
+            <div id="wb-bnr" class="container">
+                <div class="row">
+                    <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+                        <h2 class="wb-inv">Language selection</h2>
+                        <ul class="list-inline mrgn-bttm-0">
+                            <li>
+                                <a lang="fr" hreflang="fr" href="fr.html">
+                                    <span class="hidden-xs">Français</span>
+                                    <abbr title="Français"
+                                        class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" resource="#wb-publisher"
+                        typeof="GovernmentOrganization">
+                        <a href="en.html" property="url">
+                            <img src="../../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv"
+                                property="name">
+                                Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+                        </a>
+                        <meta property="areaServed" typeof="Country" content="Canada">
+                        <link property="logo" href="..hea/../GCWeb/assets/wmms-blk.svg">
+                    </div>
+                    
+                </div>
+    
+            </div>
+            
+            <!-- app bar -->
+            <div class="app-bar">
+               <div class="container">
+                   <div class="row">
+                       <section class="col-xs-6 col-sm-7">
+                           <h2 class="wb-inv">Name of Web application</h2><a class="app-name" href="../../en.html">My VAC Account</a>
+                       </section>
+                       
+                       <nav class="col-xs-6 col-sm-5 text-right mrgn-tp-sm mrgn-bttm-sm hidden">
+                           <section>    
+                               <h2 class="wb-inv">Account menu</h2>
+                               <div class="hidden-xs">
+                                   <button class="btn btn-primary" type="button">Register</button>
+                                   <button class="btn btn-default" type="button">Sign in</button>
+                               </div>
+                               <div class="visible-xs mrgn-tp-sm">
+                                   <button class="btn btn-primary btn-sm" type="button">Register</button>
+                                   <button class="btn btn-default btn-sm" type="button">Sign in</button>
+                               </div>
+                           </section>
+                       </nav>
+                     
+                   </div>
+               </div>
+           </div>
+
+            
+            
+      </header>
+        <!-- Static header ends -->
+         
+	  <!-- Page: frontdoor
+
+            VAC   .\^/.   ACC    
+            ACC  \=%¥%=/  VAC 
+            VAC   ^`|`^   ACC 
+            
+            -->
+      <main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
+      
+      <!-- Landing page heading-->
+      <div class="container">
+         <div class="alert alert-success h3"><h3>Successfully signed out</h3></div>
+         <!-- h1 with URLMapping on spans-->
+         <h1 id="wb-cont" property="name">
+         <!-- Show Sign in content when url?sign-in -->
+         <span id="sign-in-h1-span" class="hidden"
+                     data-wb-urlmapping='{
+                     "sign-in": { 
+                     "action": "removeClass", 
+                     "source": "#sign-in-h1-span", 
+                     "class": "hidden" } 
+                     }
+                     '>
+                     Sign in to </span>
+         <!-- Show Register content when url?register -->
+         <span id="register-h1-span" class="hidden"
+                     data-wb-urlmapping='{
+                     "register": { 
+                     "action": "removeClass", 
+                     "source": "#register-h1-span", 
+                     "class": "hidden" }}'>
+                     Register for </span>
+      
+         <!-- Hide default when url?register or url?sign-in -->
+         <span id="default-h1-span" data-wb-urlmapping='{
+                     "sign-in": { 
+                     "action": "addClass", 
+                     "source": "#default-h1-span", 
+                     "class": "hidden" },
+                     "register": { 
+                        "action": "addClass", 
+                        "source": "#default-h1-span", 
+                        "class": "hidden" }
+                     }'>
+                     <!--Default empty ?-->
+                     Sign in to or register for
+                  </span>
+         My&nbsp;<abbr title="Veterans Affairs Canada">VAC</abbr>&nbsp;Account
+         </h1>
+         <p class="lead">
+         <span id="sign-in-p-lead" class="hidden" data-wb-urlmapping='
+                  {
+                  "sign-in": { 
+                  "action": "removeClass", 
+                  "source": "#sign-in-p-lead", 
+                  "class": "hidden" } 
+                  }
+                  '>
+      
+                  Choose from one of two ways to sign in to </span>
+      
+         <!-- If html?sign-in Hide the register for span-->
+         <span id="register-p-lead" class="hidden" data-wb-urlmapping='{
+                              "register": { 
+                              "action": "removeClass", 
+                              "source": "#register-p-lead", 
+                              "class": "hidden" }}'>
+                     <!-- EN/FR content for "Register for"-->
+                     Choose from one of two ways to register for  </span>
+      
+         <span id="default-p-lead" data-wb-urlmapping='{
+                              "sign-in": { 
+                              "action": "addClass", 
+                              "source": "#default-p-lead", 
+                              "class": "hidden" },
+                              "register": { 
+                                 "action": "addClass", 
+                                 "source": "#default-p-lead", 
+                                 "class": "hidden" }
+                              }'>
+                     <!--Default-->
+                     Choose from one of two ways to access 
+                  </span>
+         My&nbsp;<abbr>VAC</abbr>&nbsp;Account:
+      
+         </p>
+         <!-- register and sign-in links -->
+         <div>
+         <p id="register-link" class="hidden mrgn-bttm-md" data-wb-urlmapping='
+                     {
+                              "sign-in": { 
+                              "action": "removeClass", 
+                              "source": "#register-link", 
+                              "class": "hidden" } 
+                              }
+                              '>
+            <!-- EN/FR content for "Sign in to"-->
+            New to My&nbsp;<abbr>VAC</abbr>&nbsp;Account? <a href="?register">Register</a>
+         </p>
+         <!--" hide and if either query is true"-->
+      
+         <!-- If html?sign-in Hide the register for span-->
+         <p id="sign-in-link" class="hidden mrgn-bttm-md" data-wb-urlmapping='{
+                              "register": { 
+                              "action": "removeClass", 
+                              "source": "#sign-in-link", 
+                              "class": "hidden" }}'>
+      
+            <a href="?sign-in">Sign in to My&nbsp;<abbr>VAC</abbr>&nbsp;Account</a>
+         </p>
+      
+         </div>
+      </div>
+      <!-- Landing page call-to-action panels -->
+      <div class="container" id="sign-in-services-panels">
+         <div class="row wb-eqht-grd">
+            <!-- Panel 1 Sign-in partner -->
+            <div class="col-sm-12 col-md-6">
+               <!-- panel is target of equal height-->
+               <section class="panel panel-default hght-inhrt">
+                  <!-- panel heading -->
+                  <div class="panel-heading">
+                     <!-- panel title -->
+                     <h2 class="panel-title">
+                        <span>Option 1&nbsp;<span class="wb-inv">of 2&nbsp;</span>-</span> Sign-in Partner
+                     </h2>
+                  </div>
+                  <!-- panel-body -->
+                  <div class="panel-body hidden-xs">
+                     <!--Description of sign-in method with URL mapping-->
+                     <!-- currently has a set height depending on media query because the eqht and eqhtgrd wasn't working on the panel body -->
+                     <p class="account-chooser-desc">
+                        <!-- Show Sign in content when url?sign-in -->
+                        <span id="sign-in-partner-desc" class="hidden" data-wb-urlmapping='
+                                    {
+                                    "sign-in": { 
+                                    "action": "removeClass", 
+                                    "source": "#sign-in-partner-desc", 
+                                    "class": "hidden" } 
+                                    }
+                                    '>
+                           Sign in </span>
+                        <!-- Show Register content when url?register -->
+                        <span id="register-partner-desc" class="hidden" data-wb-urlmapping='{
+                                    "register": { 
+                                    "action": "removeClass", 
+                                    "source": "#register-partner-desc", 
+                                    "class": "hidden" }}'>
+                           Register </span>
+                        <!-- Hide default when url?register or url?sign-in -->
+                        <span id="default-partner-desc" data-wb-urlmapping='{
+                                    "sign-in": { 
+                                    "action": "addClass", 
+                                    "source": "#default-partner-desc", 
+                                    "class": "hidden" },
+                                    "register": { 
+                                       "action": "addClass", 
+                                       "source": "#default-partner-desc", 
+                                       "class": "hidden" }
+                                    }'>
+                           <!--Default empty ?-->
+                           Sign in to, or register,
+                        </span>
+                        with the same sign-in information you use for online&nbsp;banking.</p>
+                     
+                  
+                     
+                  </div>
+                  <!-- panel footer -->
+                  <footer class="panel-footer brdr-0 bg-white mrgn-tp-0">
+                     <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text-center">
+                           <!-- panel call to action button -->
+                           <a href="redirect_place_holder.html" class="btn btn-call-to-action full-width">
+                              Sign-in Partner
+                           </a>
+                        </div>
+                     </div>
+                     <!-- drop down of bank logos (adding 15px of padding to each liin mva stylesheet)-->
+                     <details class="text-center">
+                        <summary>View list of Sign-in Partners</summary>
+                        <section class="row" id="logos">
+      
+                           <div class="col-xs-12">
+      
+                              <ul class="list-unstyled list-col-xs-2 list-col-sm-3 list-col-md-2 list-col-lg-3">
+      
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/affinity.png"
+                                          alt="Affinity Credit Union">
+                                    </div>
+                                 </li>
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/atb.png" alt="ATB Financial">
+                                    </div>
+                                 </li>
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/bmo.png" alt="BMO Bank of Montreal">
+                                    </div>
+                                 </li>
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/cais.png" alt="Caisse Alliance">
+                                    </div>
+                                 </li>
+      
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/cibc.png"
+                                          alt="CIBC - Banking that fits your life.">
+                                    </div>
+                                 </li>
+      
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/coast.png" alt="Coast Capital">
+                                    </div>
+                                 </li>
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/conexus.png" alt="Conexus">
+                                    </div>
+                                 </li>
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/desj.png" alt="Desjardins">
+                                    </div>
+                                 </li>
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/libro.png" alt="Libro">
+                                    </div>
+                                 </li>
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/nbc.png" alt="National Bank">
+                                    </div>
+                                 </li>
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/rbc.png" alt="RBC Royal Bank">
+                                    </div>
+                                 </li>
+      
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/bns.png" alt="Scotiabank">
+                                    </div>
+                                 </li>
+      
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/servus.png"
+                                          alt="Servus Credit Union">
+                                    </div>
+                                 </li>
+      
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/simplii.png"
+                                          alt="Simplii Financial">
+                                    </div>
+                                 </li>
+      
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/tang.png"
+                                          alt="Tangerine - Forward Banking">
+                                    </div>
+                                 </li>
+      
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/td.png" alt="TD Canada Trust">
+                                    </div>
+                                 </li>
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/uni.png"
+                                          alt="UNI Financial Cooperation">
+                                    </div>
+                                 </li>
+      
+                                 <li>
+                                    <div class="brdr-tp brdr-rght brdr-bttm brdr-lft">
+                                       <img class="img-responsive center-block"
+                                          src="../mva-mda/assets/sign-in-partner-logos/en/vancity.png" alt="Vancity">
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </section>
+                     </details>
+                  </footer>
+               </section>
+            </div>
+            <!-- Panel 2 GCKey -->
+            <div class="col-sm-12 col-md-6">
+               <!-- panel is target of equal height-->
+               <section class="panel panel-default hght-inhrt">
+                  <!-- panel heading -->
+                  <div class="panel-heading">
+                     <!-- panel title -->
+                     <h3 class="panel-title">
+                        Option 2 - GCKey
+                     </h3>
+                  </div>
+                  <!--panel body-->
+                  <div class="panel-body hidden-xs">
+                     <!--Description of sign-in method-->
+                     <!-- currently has a set height depending on media query because the eqht and eqhtgrd wasn't working on the panel body -->
+                     <p class="account-chooser-desc ">
+                        <span id="sign-in-gckey-desc" class="hidden" data-wb-urlmapping='
+                                    {
+                                    "sign-in": { 
+                                    "action": "removeClass", 
+                                    "source": "#sign-in-gckey-desc", 
+                                    "class": "hidden" } 
+                                    }
+                                    '>
+                           <!-- EN/FR content for "Sign in to"-->
+                           Sign in </span><!--" hide and if either query is true"-->
+         
+                        <!-- If html?sign-in Hide the register for span-->
+                        <span id="register-gckey-desc" class="hidden" data-wb-urlmapping='{
+                                    "register": { 
+                                    "action": "removeClass", 
+                                    "source": "#register-gckey-desc", 
+                                    "class": "hidden" }}'>
+                           <!-- EN/FR content for "Register for"-->
+                           Register  </span>
+         
+                        <span id="default-gckey-desc" data-wb-urlmapping='{
+                                    "sign-in": { 
+                                    "action": "addClass", 
+                                    "source": "#default-gckey-desc", 
+                                    "class": "hidden" },
+                                    "register": { 
+                                       "action": "addClass", 
+                                       "source": "#default-gckey-desc", 
+                                       "class": "hidden" }
+                                    }'>
+                           <!--Default-->
+                           Sign in, or register,
+                        </span>
+                        with a GCKey user&nbsp;ID and&nbsp;password. 
+                     </p>
+                     
+                  
+                     
+                  
+                  </div>
+                  <footer class="panel-footer bg-white brdr-0">
+                     <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text-center">
+                           <a href="redirect_place_holder.html" class="btn btn-call-to-action full-width">
+                              GCKey
+                           </a>
+                        </div>
+                     </div>
+                     <div class="clearfix hidden-xs hidden-sm" style="margin-bottom: 50px;"></div>
+                  </footer>
+                  
+               </section>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-xs-12 visible-xs">
+               <h2 class="h4">Sign-in Partner</h2>
+               <p>
+                  <span id="sign-in-partner-dfn" class="hidden" data-wb-urlmapping='
+                              {
+                              "sign-in": { 
+                              "action": "removeClass", 
+                              "source": "#sign-in-partner-dfn", 
+                              "class": "hidden" } 
+                              }
+                              '>
+                     
+                     Sign in to </span>
+   
+                  
+                  <span id="register-partner-dfn" class="hidden" data-wb-urlmapping='{
+                              "register": { 
+                              "action": "removeClass", 
+                              "source": "#register-partner-dfn", 
+                              "class": "hidden" }}'>
+                     
+                     Register for </span>
+   
+                  <span id="default-partner-dfn" data-wb-urlmapping='{
+                              "sign-in": { 
+                              "action": "addClass", 
+                              "source": "#default-partner-dfn", 
+                              "class": "hidden" },
+                              "register": { 
+                                 "action": "addClass", 
+                                 "source": "#default-partner-dfn", 
+                                 "class": "hidden" }
+                              }'>
+                     <!--Default-->
+                     Sign in, or register,
+                  </span>
+                  with the same sign-in information you use for online&nbsp;banking.
+               </p>
+               <h2 class="h4">GCKey</h2>
+               <p class="account-chooser-dfn">
+                  <span id="sign-in-gckey-dfn" class="hidden" data-wb-urlmapping='
+                              {
+                              "sign-in": { 
+                              "action": "removeClass", 
+                              "source": "#sign-in-gckey-dfn", 
+                              "class": "hidden" } 
+                              }
+                              '>
+                     <!-- EN/FR content for "Sign in to"-->
+                     Sign in </span>
+   
+                  <!-- If html?sign-in Hide the register for span-->
+                  <span id="register-gckey-dfn" class="hidden" data-wb-urlmapping='{
+                              "register": { 
+                              "action": "removeClass", 
+                              "source": "#register-gckey-dfn", 
+                              "class": "hidden" }}'>
+                     <!-- EN/FR content for "Register for"-->
+                     Register for </span>
+   
+                  <span id="default-gckey-dfn" data-wb-urlmapping='{
+                              "sign-in": { 
+                              "action": "addClass", 
+                              "source": "#default-gckey-dfn", 
+                              "class": "hidden" },
+                              "register": { 
+                                 "action": "addClass", 
+                                 "source": "#default-gckey-dfn", 
+                                 "class": "hidden" }
+                              }'>
+                     <!--Default-->
+                     Sign in, or register,
+                  </span>
+                  with your GCKey user&nbsp;ID and password, or create a&nbsp;GCKey.
+               </p>
+            </div>
+            <div class="col-xs-12"> 
+            
+               <h2>Help and FAQs:</h2>
+              
+               <ul>
+                  
+
+                  <li><a href="en/sign-in-register-help/gckey-help-faqs.html#gckey">GCKey</a></li>
+                  <ul>
+                     <li>
+                        <a href="en/sign-in-register-help/gckey-help-faqs.html#forgotten">Forgot your GCKey password or user ID?</a>
+                     </li>
+                     <li>
+                        <a href="en/sign-in-register-help/gckey-help-faqs.html#revoked">Revoked GCKey</a>
+                     </li>
+                  </ul>
+                  <li><a href="en/sign-in-register-help/sign-in-partner-help-faqs.html">Sign-in Partner</a></li>
+
+                  <li>
+                     <a href="en/sign-in-register-help/your-browser.html">Your browser and troubleshooting tips</a></li>
+                  </li>
+                  
+                  
+               </ul>
+               
+            </div>
+            
+            
+         </div>
+         
+      </div>
+
+		<footer class="container">
+			<div class="pagedetails">
+            <dl id="wb-dtmd">
+                <dt>Date modified:</dt>
+                <dd><time property="dateModified">2023-01-23</time></dd>
+            </dl>
+         </div>
+		</footer>
+
+      
+         
+      </main>
+
+      <footer id="wb-info">
+         <h2 class="wb-inv">About My VAC Account</h2>
+      
+         
+            <div class="gc-main-footer">
+               <nav class="container wb-navcurr">
+                  
+                  <ul class="list-unstyled colcount-xs-2 colcount-md-3">
+                     <li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
+                     <li><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">Talk to a mental health professional</a></li>
+                     <!--<li><a href="#">News</a></li>-->
+                  </ul>
+               </nav>
+            </div>
+        
+      
+         <div class="gc-sub-footer">
+            <div class="container d-flex align-items-center">
+               <nav>
+                  <h3 class="wb-inv">Veteran Affairs Canada Corporate</h3>
+                  <ul>
+                     <li><a href="https://www.veterans.gc.ca/eng/e_services">About My VAC Account</a></li>
+                     <li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Terms and conditions</a></li>
+                     <li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Privacy</a></li></ul>
+               </nav>
+               <div class="wtrmrk align-self-end">
+                  <img src="../GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
+      <script src="../wet-boew/js/wet-boew.min.js"></script>
+      <script src="../GCWeb/js/theme.min.js"></script>
+      <script src="../cdts/js/cdtscustom.js"></script>
+
+
+   </body>
+</html>

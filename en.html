@@ -1,216 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8"/>
-		<title>MVA Design System</title>
-		<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
-		<meta content="width=device-width, initial-scale=1" name="viewport" />
-		<meta name="description" content="The [institution/service name] website is a single point of access [contextual description]." />
-		<meta name="dcterms.description" content="The [institution/service name] website is a single point of access [contextual description]." />
-		<meta name="dcterms.creator" content="Government of Canada" />
-		<meta name="dcterms.title" content="Canada.ca" />
-		<meta name="dcterms.issued" title="W3CDTF" content="2023-01-03" />
-		<meta name="dcterms.modified" title="W3CDTF" content="2023-01-03" />
-		<meta name="dcterms.subject" content="GV Government and Politics" />
-		<meta name="dcterms.language" title="ISO639-2" content="eng" />
-		<meta name="robots" content="noindex, follow" />
 
-      <link href="GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
-      <link rel="stylesheet" href="GCWeb/css/theme.min.css" />
-      <noscript><link rel="stylesheet" href="GCWeb/wet-boew/css/noscript.min.css" /></noscript>
-		<link rel="stylesheet" href="GCWeb/css/messages.min.css" />
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	</head>
+<head>
+   <meta charset="utf-8" />
+   <title>MVA Design System</title>
+   <link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" />
+   <meta name="description"
+      content="The [institution/service name] website is a single point of access [contextual description]." />
+   <meta name="dcterms.description"
+      content="The [institution/service name] website is a single point of access [contextual description]." />
+   <meta name="dcterms.creator" content="Government of Canada" />
+   <meta name="dcterms.title" content="Canada.ca" />
+   <meta name="dcterms.issued" title="W3CDTF" content="2023-01-03" />
+   <meta name="dcterms.modified" title="W3CDTF" content="2023-01-03" />
+   <meta name="dcterms.subject" content="GV Government and Politics" />
+   <meta name="dcterms.language" title="ISO639-2" content="eng" />
+   <meta name="robots" content="noindex, follow" />
 
-	<body vocab="http://schema.org/" resource="#wb-webpage" typeof="WebPage">
-      <!--
+   <link href="GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
+   <link rel="stylesheet" href="GCWeb/css/theme.min.css" />
+   <noscript>
+      <link rel="stylesheet" href="GCWeb/wet-boew/css/noscript.min.css" />
+   </noscript>
+   <link rel="stylesheet" href="GCWeb/css/messages.min.css" />
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body vocab="http://schema.org/" resource="#wb-webpage" typeof="WebPage">
+   <!--
       <div class="container">
          <div class="wb-dismissable  alert alert-info">
             <h2 class="h4">This Github.io site is a conceptual example of applying GCWeb to My VAC Account</h2>
          </div>
       </div>-->
-		<header>
+   <header>
 
-         
-            <div id="wb-bnr" class="container">
-               <div class="row">
-                  <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
-                     <h2 class="wb-inv">Language selection</h2>
-                     <ul class="list-inline mrgn-bttm-0">
-                        <li>
-                           <a lang="fr" hreflang="fr" href="content-fr.html">
-                           <span class="hidden-xs">Français</span>
-                           <abbr title="Français" class="visible-xs h2 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
-                           </a>
-                        </li>
-                     </ul>
-                  </section>
-                  <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
-                     <a href="https://wet-boew.github.io/GCWeb/" property="url">
-                     <img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo" /><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
+
+      <div id="wb-bnr" class="container">
+         <div class="row">
+            <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+               <h2 class="wb-inv">Language selection</h2>
+               <ul class="list-inline mrgn-bttm-0">
+                  <li>
+                     <a lang="fr" hreflang="fr" href="content-fr.html">
+                        <span class="hidden-xs">Français</span>
+                        <abbr title="Français" class="visible-xs h2 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
                      </a>
-                     <meta property="name" content="Government of Canada">
-                     <meta property="areaServed" typeof="Country" content="Canada" />
-                     <link property="logo" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" />
-                  </div>
-                  <section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4 hidden">
-                     <h2>Search</h2>
-                     <form action="#" method="post" name="cse-search-box" role="search">
-                        <div class="form-group wb-srch-qry">
-                           <label for="wb-srch-q" class="wb-inv">Search Canada.ca</label>
-                           <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search Canada.ca" />
-                           <datalist id="wb-srch-q-ac"></datalist>
-                        </div>
-                        <div class="form-group submit">
-                           <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
-                           <span class="glyphicon-search glyphicon"></span>
-                           <span class="wb-inv">Search</span>
-                           </button>
-                        </div>
-                     </form>
-                  </section>
-               </div>
+                  </li>
+               </ul>
+            </section>
+            <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+               <a href="https://wet-boew.github.io/GCWeb/" property="url">
+                  <img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg"
+                     alt="Government of Canada" property="logo" /><span class="wb-inv"> / <span lang="fr">Gouvernement
+                        du Canada</span></span>
+               </a>
+               <meta property="name" content="Government of Canada">
+               <meta property="areaServed" typeof="Country" content="Canada" />
+               <link property="logo" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" />
             </div>
-            <hr>
-            <div class="container hidden">
-               <div class="row">
-                  <div class="col-md-8">
-                     <nav class="gcweb-menu" typeof="SiteNavigationElement">
-                        <h2 class="wb-inv">Menu</h2>
-                        <button type="button" aria-haspopup="true" aria-expanded="false"><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
-                        <ul role="menu" aria-orientation="vertical" data-ajax-replace="https://www.canada.ca/content/dam/canada/sitemenu/sitemenu-v2-en.html">
-                           <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/jobs.html">Jobs and the workplace</a></li>
-                           <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/immigration-citizenship.html">Immigration and citizenship</a></li>
-                           <li role="presentation"><a role="menuitem" href="https://travel.gc.ca/">Travel and tourism</a></li>
-                           <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/business.html">Business and industry</a></li>
-                           <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/benefits.html">Benefits</a></li>
-                           <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/health.html">Health</a></li>
-                           <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/taxes.html">Taxes</a></li>
-                           <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/environment.html">Environment and natural resources</a></li>
-                           <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/defence.html">National security and defence</a></li>
-                           <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
-                           <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
-                           <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
-                           <li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
-                           <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
-                           <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
-                        </ul>
-                     </nav>
+            <section id="wb-srch"
+               class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4 hidden">
+               <h2>Search</h2>
+               <form action="#" method="post" name="cse-search-box" role="search">
+                  <div class="form-group wb-srch-qry">
+                     <label for="wb-srch-q" class="wb-inv">Search Canada.ca</label>
+                     <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search"
+                        value="" size="34" maxlength="170" placeholder="Search Canada.ca" />
+                     <datalist id="wb-srch-q-ac"></datalist>
                   </div>
-                  <div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-md-4 hidden">
-                     <section id="wb-so">
-                        <h2 class="wb-inv">Sign-on information</h2>
-                        <button class="btn btn-default" type="button">My account</button>
-                        <button class="btn btn-primary" type="button">Sign out</button>
-                        <p class="small mrgn-tp-sm">Signed in as <span class="bold"></span>
-                        </p>
-                     </section>
+                  <div class="form-group submit">
+                     <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
+                        <span class="glyphicon-search glyphicon"></span>
+                        <span class="wb-inv">Search</span>
+                     </button>
                   </div>
-               </div>
+               </form>
+            </section>
+         </div>
+      </div>
+      <hr>
+      <div class="container hidden">
+         <div class="row">
+            <div class="col-md-8">
+               <nav class="gcweb-menu" typeof="SiteNavigationElement">
+                  <h2 class="wb-inv">Menu</h2>
+                  <button type="button" aria-haspopup="true" aria-expanded="false"><span class="wb-inv">Main </span>Menu
+                     <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
+                  <ul role="menu" aria-orientation="vertical"
+                     data-ajax-replace="https://www.canada.ca/content/dam/canada/sitemenu/sitemenu-v2-en.html">
+                     <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/jobs.html">Jobs
+                           and the workplace</a></li>
+                     <li role="presentation"><a role="menuitem"
+                           href="https://www.canada.ca/en/services/immigration-citizenship.html">Immigration and
+                           citizenship</a></li>
+                     <li role="presentation"><a role="menuitem" href="https://travel.gc.ca/">Travel and tourism</a></li>
+                     <li role="presentation"><a role="menuitem"
+                           href="https://www.canada.ca/en/services/business.html">Business and industry</a></li>
+                     <li role="presentation"><a role="menuitem"
+                           href="https://www.canada.ca/en/services/benefits.html">Benefits</a></li>
+                     <li role="presentation"><a role="menuitem"
+                           href="https://www.canada.ca/en/services/health.html">Health</a></li>
+                     <li role="presentation"><a role="menuitem"
+                           href="https://www.canada.ca/en/services/taxes.html">Taxes</a></li>
+                     <li role="presentation"><a role="menuitem"
+                           href="https://www.canada.ca/en/services/environment.html">Environment and natural
+                           resources</a></li>
+                     <li role="presentation"><a role="menuitem"
+                           href="https://www.canada.ca/en/services/defence.html">National security and defence</a></li>
+                     <li role="presentation"><a role="menuitem"
+                           href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
+                     <li role="presentation"><a role="menuitem"
+                           href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a>
+                     </li>
+                     <li role="presentation"><a role="menuitem"
+                           href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
+                     <li role="presentation"><a role="menuitem"
+                           href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a>
+                     </li>
+                     <li role="presentation"><a role="menuitem"
+                           href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
+                     <li role="presentation"><a role="menuitem"
+                           href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
+                  </ul>
+               </nav>
             </div>
-            <nav id="wb-bc" property="breadcrumb" class="hidden">
-               <h2>You are here:</h2>
-               <div class="container">
-                  <ol class="breadcrumb" typeof="BreadcrumbList">
-                     <li property="itemListElement" typeof="ListItem">
-                        <a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
-                        <span property="name">Canada.ca</span>
-                        </a>
-                        <meta property="position" content="1">
-                     </li>
-                     <li property="itemListElement" typeof="ListItem">
-                        <a property="item" typeof="WebPage" href="https://www.veterans.gc.ca/eng">
-                        <span property="name">Veteran Affairs Canada</span>
-                        </a>
-                        <meta property="position" content="2">
-                     </li>
-                     <li property="itemListElement" typeof="ListItem">
-                        <a property="item" typeof="WebPage" href="https://mva-mda.vac-acc.gc.ca/pub/MVA_7_24_1">
-                        <span property="name">My <abbr title="Veteran Affairs Canada">VAC</abbr> Account</span>
-                        </a>
-                        <meta property="position" content="3">
-                     </li>
-                     <li property="itemListElement" typeof="ListItem">
-                        <a property="item" typeof="WebPage" href="#">
-                        <span property="name">Usability</span>
-                        </a>
-                        <meta property="position" content="4">
-                     </li>
-                  </ol>
-               </div>
-            </nav>
-         </header>
-         <!-- Page: https://vac-acc-usability-utilisation.github.io/en.html
+            <div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-md-4 hidden">
+               <section id="wb-so">
+                  <h2 class="wb-inv">Sign-on information</h2>
+                  <button class="btn btn-default" type="button">My account</button>
+                  <button class="btn btn-primary" type="button">Sign out</button>
+                  <p class="small mrgn-tp-sm">Signed in as <span class="bold"></span>
+                  </p>
+               </section>
+            </div>
+         </div>
+      </div>
+      <nav id="wb-bc" property="breadcrumb" class="hidden">
+         <h2>You are here:</h2>
+         <div class="container">
+            <ol class="breadcrumb" typeof="BreadcrumbList">
+               <li property="itemListElement" typeof="ListItem">
+                  <a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
+                     <span property="name">Canada.ca</span>
+                  </a>
+                  <meta property="position" content="1">
+               </li>
+               <li property="itemListElement" typeof="ListItem">
+                  <a property="item" typeof="WebPage" href="https://www.veterans.gc.ca/eng">
+                     <span property="name">Veteran Affairs Canada</span>
+                  </a>
+                  <meta property="position" content="2">
+               </li>
+               <li property="itemListElement" typeof="ListItem">
+                  <a property="item" typeof="WebPage" href="https://mva-mda.vac-acc.gc.ca/pub/MVA_7_24_1">
+                     <span property="name">My <abbr title="Veteran Affairs Canada">VAC</abbr> Account</span>
+                  </a>
+                  <meta property="position" content="3">
+               </li>
+               <li property="itemListElement" typeof="ListItem">
+                  <a property="item" typeof="WebPage" href="#">
+                     <span property="name">Usability</span>
+                  </a>
+                  <meta property="position" content="4">
+               </li>
+            </ol>
+         </div>
+      </nav>
+   </header>
+   <!-- Page: https://vac-acc-usability-utilisation.github.io/en.html
    
                VAC   .\^/.   ACC    
                ACC  \=%¥%=/  VAC 
                VAC   ^`|`^   ACC 
                
                -->
-         <main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
-            
-            <section class="container">  
-               <h1 id="wb-cont" property="name">
-                   My VAC Account Design System
-               </h1>
-               <p class="lead mrgn-tp-md">
-                  A design system for My VAC Account.
-                </p>
-                <nav role="navigation" class="gc-toc">
-                  <h2>Table of contents</h2>
-                  <ul>
-                     <li><a href="#download">Components and templates</a></li>
-                     <li><a href="#toc">Demo</a></li>
-                     <li><a href="#min-port">Design blog</a></li>
-                  </ul>
-               </nav>
-            </section>
+   <main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
 
-            <section class="container">
-                <h2>Components and templates</h2>
-                <ol class="list-unstyled">
-                  <li> 
-                     <h3 id="pages" class="mrgn-bttm-lg">Pages</h3>
-                     <ul class="row list-unstyled wb-eqht-grd wb-filter mrgn-tp-md pb-4" data-wb-filter='{ "selector": ">li" }'>
-                     
-                        
-                        <li class="col-xs-12 col-md-6 mrgn-tp-md mrgn-bttm-md">
-                           <div class="brdr-tp brdr-rght brdr-bttm brdr-lft hght-inhrt">
-                              <h3 class="mrgn-tp-md mrgn-rght-md mrgn-bttm-md mrgn-lft-md">Landing page
-                              
-                              <span class="label label-success mrgn-lft-sm"><span class="wb-inv">State: </span>Stable</span>
-                              
-                              </h3>
-                              <div class="mrgn-rght-md mrgn-bttm-md mrgn-lft-md">
-                                 <p>My VAC Account's public landing page.</p>
-                                 <!--
+      <section class="container">
+         <h1 id="wb-cont" property="name">
+            My VAC Account Design System
+         </h1>
+         <p class="lead mrgn-tp-md">
+            A design system for My VAC Account.
+         </p>
+         <nav role="navigation" class="gc-toc">
+            <h2>Table of contents</h2>
+            <ul>
+               <li><a href="#download">Components and templates</a></li>
+               <li><a href="#toc">Demo</a></li>
+               <li><a href="#min-port">Design blog</a></li>
+            </ul>
+         </nav>
+      </section>
+
+      <section class="container">
+         <h2>Components and templates</h2>
+         <ol class="list-unstyled">
+            <li>
+               <h3 id="pages" class="mrgn-bttm-lg">Pages</h3>
+               <ul class="row list-unstyled wb-eqht-grd wb-filter mrgn-tp-md pb-4"
+                  data-wb-filter='{ "selector": ">li" }'>
+
+
+                  <li class="col-xs-12 col-md-6 mrgn-tp-md mrgn-bttm-md">
+                     <div class="brdr-tp brdr-rght brdr-bttm brdr-lft hght-inhrt">
+                        <h3 class="mrgn-tp-md mrgn-rght-md mrgn-bttm-md mrgn-lft-md">Landing page
+
+                           <span class="label label-success mrgn-lft-sm"><span class="wb-inv">State:
+                              </span>Stable</span>
+
+                        </h3>
+                        <div class="mrgn-rght-md mrgn-bttm-md mrgn-lft-md">
+                           <p>My VAC Account's public landing page.</p>
+                           <!--
                                  Main working example
                                  - First working example in the example list where the language match
                                  -->
-                                 
-                                 <ul class="list-unstyled mrgn-bttm-lg mrgn-lft-md">
-                                 
-                                 <li>
-                                 
-                                 <a href="design/library/pages/front-door.html" lang="en" hreflang="en"><span class="fas fa-eye small mrgn-rght-sm" aria-hidden="true"></span>Working example</a>
-                                 
-                                 </li>
-                                 
-                                 <!--
+
+                           <ul class="list-unstyled mrgn-bttm-lg mrgn-lft-md">
+
+                              <li>
+
+                                 <a href="design/library/pages/front-door.html" lang="en" hreflang="en"><span
+                                       class="fas fa-eye small mrgn-rght-sm" aria-hidden="true"></span>Working
+                                    example</a>
+
+                              </li>
+
+                              <!--
                                  Documentation
                                  - Link to the documentations if any
                                  -->
-                                 
-                                 <!--<ul class="list-unstyled mrgn-bttm-lg mrgn-lft-md">-->
-                                 
-                                 
-                                    <li><a href="design/library/pages/front-door-doc.html"><span class="fas fa-info-circle small mrgn-rght-sm" aria-hidden="true"></span>Documentation</a></li>
-                                 
-                                 <!--
+
+                              <!--<ul class="list-unstyled mrgn-bttm-lg mrgn-lft-md">-->
+
+
+                              <li><a href="design/library/pages/front-door-doc.html"><span
+                                       class="fas fa-info-circle small mrgn-rght-sm"
+                                       aria-hidden="true"></span>Documentation</a></li>
+
+                              <!--
                                  <li><a href="https://github.com/wet-boew/GCWeb/tree/master/components/gc-chckbxrdio" hreflang="en"><span class="fas fa-code small mrgn-rght-sm" aria-hidden="true"></span>Source code</a></li>-->
-                                 
-                                 </ul>
-                                 <!--
+
+                           </ul>
+                           <!--
                                  > All examples and info
                                  * Example
                                  * Documentation
@@ -269,57 +305,62 @@
                                  </ul>
                                  
                                  </details>-->
-                              </div>
-                           </div>
-                        </li>
-                     
-                        
-                     </ul>
-                     
+                        </div>
+                     </div>
+                  </li>
 
-                 
-                  <li>
-                     <h3>Organisms</h3>
-                     <ul class="row list-unstyled wb-eqht-grd wb-filter mrgn-tp-md pb-4" data-wb-filter='{ "selector": ">li" }'>
-	
-		
-                        <li class="col-xs-12 col-md-6 mrgn-tp-md mrgn-bttm-md">
-                           <div class="brdr-tp brdr-rght brdr-bttm brdr-lft hght-inhrt">
-                              <h3 class="mrgn-tp-md mrgn-rght-md mrgn-bttm-md mrgn-lft-md">Header and footer
-                              
-                              <span class="label label-warning mrgn-lft-sm"><span class="wb-inv">State: </span>In Progress</span>
-                              
-                              </h3>
-                              <div class="mrgn-rght-md mrgn-bttm-md mrgn-lft-md">
-                                 <p>My VAC Account's public landing page.</p>
-                                 <!--
+
+               </ul>
+
+
+
+            <li>
+               <h3>Organisms</h3>
+               <ul class="row list-unstyled wb-eqht-grd wb-filter mrgn-tp-md pb-4"
+                  data-wb-filter='{ "selector": ">li" }'>
+
+
+                  <li class="col-xs-12 col-md-6 mrgn-tp-md mrgn-bttm-md">
+                     <div class="brdr-tp brdr-rght brdr-bttm brdr-lft hght-inhrt">
+                        <h3 class="mrgn-tp-md mrgn-rght-md mrgn-bttm-md mrgn-lft-md">Header and footer
+
+                           <span class="label label-warning mrgn-lft-sm"><span class="wb-inv">State: </span>In
+                              Progress</span>
+
+                        </h3>
+                        <div class="mrgn-rght-md mrgn-bttm-md mrgn-lft-md">
+                           <p>My VAC Account's public landing page.</p>
+                           <!--
                                  Main working example
                                  - First working example in the example list where the language match
                                  -->
-                                 
-                                 <ul class="list-unstyled mrgn-bttm-lg mrgn-lft-md">
-                                 
-                                 <li>
-                                 
-                                 <a href="design/examples/header-footer.html" lang="en" hreflang="en"><span class="fas fa-eye small mrgn-rght-sm" aria-hidden="true"></span>Working example</a>
-                                 
-                                 </li>
-                                 
-                                 <!--
+
+                           <ul class="list-unstyled mrgn-bttm-lg mrgn-lft-md">
+
+                              <li>
+
+                                 <a href="design/examples/header-footer.html" lang="en" hreflang="en"><span
+                                       class="fas fa-eye small mrgn-rght-sm" aria-hidden="true"></span>Working
+                                    example</a>
+
+                              </li>
+
+                              <!--
                                  Documentation
                                  - Link to the documentations if any
                                  -->
-                                 
-                                 <!--<ul class="list-unstyled mrgn-bttm-lg mrgn-lft-md">-->
-                                 
-                                 
-                                    <li><a href="#"><span class="fas fa-info-circle small mrgn-rght-sm" aria-hidden="true"></span>Documentation</a></li>
-                                 
-                                 <!--
+
+                              <!--<ul class="list-unstyled mrgn-bttm-lg mrgn-lft-md">-->
+
+
+                              <li><a href="#"><span class="fas fa-info-circle small mrgn-rght-sm"
+                                       aria-hidden="true"></span>Documentation</a></li>
+
+                              <!--
                                  <li><a href="https://github.com/wet-boew/GCWeb/tree/master/components/gc-chckbxrdio" hreflang="en"><span class="fas fa-code small mrgn-rght-sm" aria-hidden="true"></span>Source code</a></li>-->
-                                 
-                                 </ul>
-                                 <!--
+
+                           </ul>
+                           <!--
                                  > All examples and info
                                  * Example
                                  * Documentation
@@ -378,84 +419,92 @@
                                  </ul>
                                   
                                  </details>-->
-                              </div>
-                           </div>
-                        </li>
-                     
-                        
-                     </ul>
-                    
+                        </div>
+                     </div>
                   </li>
-                  <li><h3>Molecules</h3></li>
-                  <ul class="row list-unstyled wb-eqht-grd wb-filter mrgn-tp-md pb-4" data-wb-filter='{ "selector": ">li" }'>
-	
-		
-                     <li class="col-xs-12 col-md-6 mrgn-tp-md mrgn-bttm-md">
-                        <div class="brdr-tp brdr-rght brdr-bttm brdr-lft hght-inhrt">
-                           <h3 class="mrgn-tp-md mrgn-rght-md mrgn-bttm-md mrgn-lft-md">Page details
-                           
-                           <span class="label label-success mrgn-lft-sm"><span class="wb-inv">State: </span>Stable</span>
-                           
-                           </h3>
-                           <div class="mrgn-rght-md mrgn-bttm-md mrgn-lft-md">
-                              <p>Date modified, page identifier, and user web ID. </p>
-                              <!--
+
+
+               </ul>
+
+            </li>
+            <li>
+               <h3>Molecules</h3>
+            </li>
+            <ul class="row list-unstyled wb-eqht-grd wb-filter mrgn-tp-md pb-4" data-wb-filter='{ "selector": ">li" }'>
+
+
+               <li class="col-xs-12 col-md-6 mrgn-tp-md mrgn-bttm-md">
+                  <div class="brdr-tp brdr-rght brdr-bttm brdr-lft hght-inhrt">
+                     <h3 class="mrgn-tp-md mrgn-rght-md mrgn-bttm-md mrgn-lft-md">Page details
+
+                        <span class="label label-success mrgn-lft-sm"><span class="wb-inv">State: </span>Stable</span>
+
+                     </h3>
+                     <div class="mrgn-rght-md mrgn-bttm-md mrgn-lft-md">
+                        <p>Date modified, page identifier, and user web ID. </p>
+                        <!--
                               Main working example
                               - First working example in the example list where the language match
                               -->
-                              
-                              <ul class="list-unstyled mrgn-bttm-lg mrgn-lft-md">
-                              
-                              <li>
-                              
-                              <a href="#" lang="en" hreflang="en"><span class="fas fa-eye small mrgn-rght-sm" aria-hidden="true"></span>Working example</a>
-                              
-                              </li>
-                          
-                             
-                           </div>
-                        </div>
-                     </li>
-                  
-                     
-                  </ul>
-                  <li><h3>Atoms</h3></li>
-                </ol>
 
-               
-                
-            </section>
-            
-            <section class="container">
-               <h2>Demo</h2>
+                        <ul class="list-unstyled mrgn-bttm-lg mrgn-lft-md">
+
+                           <li>
+
+                              <a href="#" lang="en" hreflang="en"><span class="fas fa-eye small mrgn-rght-sm"
+                                    aria-hidden="true"></span>Working example</a>
+
+                           </li>
+
+
+                     </div>
+                  </div>
+               </li>
+
+
+            </ul>
+            <li>
+               <h3>Atoms</h3>
+            </li>
+         </ol>
+
+
+
+      </section>
+
+      <section class="container">
+         <h2>Demo</h2>
+         <ul>
+            <li><a href="#">My <abbr>VAC</abbr> Account Overview</a></li>
+            <li>
+               <a href="demo/en.html">Landing page</a>
                <ul>
-                  <li><a href="#">My <abbr>VAC</abbr> Account Overview</a></li>
-                 <li>                
-                    <a href="demo/en.html">Landing page</a>
-                    <ul>
-                       <li><a href="demo/en.html?sign-in">Sign-in state</a></li>
-                       <li><a href="demo/en.html?register">Register state</a></li>
-                    </ul>
-                 </li>
-                 <li><a href="demo/">Splash page</a></li>
-                 <!--
+                  <li><a href="demo/en.html?sign-in">Sign-in state</a></li>
+                  <li><a href="demo/en.html?register">Register state</a></li>
+               </ul>
+            </li>
+            <li><a href="demo/">Splash page</a></li>
+            <!--
                  <li>
                     <a class="" href="demo/en/overview/">MVA + GCWeb Overview demonstration</a>
                  </li>-->
-               </ul>
-           </section>
+         </ul>
+      </section>
 
-            <section class="container pb-4">
-               <div class="row">
-                   <section class="col-md-8 wb-feeds limit-3 gc-nws cnt-wdth-lmtd">
-                       <h2>Design blog</h2>
-                       <!-- demonstrates the layout - use json feed where applicable -->
-                       <ul class="feeds-cont list-unstyled lst-spcd feed-active">
-                        <li><a href="/design/posts/2023-02-10/slips-mistakes.html">Slips and mistakes</a><br><small class="feeds-date">2023-02-10</small></li>
-                        <li><a href="/design/posts/2023-01-27/url-mapping-use-case.html">GCWeb URL Mapping Use Case: MVA Landing page</a><br><small class="feeds-date">2023-01-27</small></li>
-                        <li><a href="/design/posts/2023-01-13/mva-gcweb-redesign.html">Redesigning MVA with GCWeb</a><br> <small class="feeds-date">2023-01-13</small></li>
-                       </ul>
-                       <!-- json feed for news example
+      <section class="container pb-4">
+         <div class="row">
+            <section class="col-md-8 wb-feeds limit-3 gc-nws cnt-wdth-lmtd">
+               <h2>Design blog</h2>
+               <!-- demonstrates the layout - use json feed where applicable -->
+               <ul class="feeds-cont list-unstyled lst-spcd feed-active">
+                  <li><a href="/design/posts/2023-02-10/slips-mistakes.html">Slips and mistakes</a><br><small
+                        class="feeds-date">2023-02-10</small></li>
+                  <li><a href="/design/posts/2023-01-27/url-mapping-use-case.html">GCWeb URL Mapping Use Case: MVA
+                        Landing page</a><br><small class="feeds-date">2023-01-27</small></li>
+                  <li><a href="/design/posts/2023-01-13/mva-gcweb-redesign.html">Redesigning MVA with GCWeb</a><br>
+                     <small class="feeds-date">2023-01-13</small></li>
+               </ul>
+               <!-- json feed for news example
                            <ul class="feeds-cont list-unstyled lst-spcd">
                                <li> <a data-ajax="https://www.canada.ca/content/canadasite/api/nws/fds/en/web-feeds/revenue-agency.json" 
                                    href="https://www.canada.ca/en/revenue-agency.atom.xml" rel="external">Canada Revenue Agency news items</a> 
@@ -463,148 +512,158 @@
                            </ul>
                            
                        <p>More: <a href="#" class="admin"><abbr title="">VAC</abbr> news</a></p>-->
-                   </section>
-                  
-               </div>
-               </div>
-           </section>
-            
-            <section class="container">
-               <h2 class="h3">vac-acc-usability-utilisation.github.io updates:</h2>
-              
-               <ul class="list-unstyled">
-                  <li>
-                     <details>
-                        <summary>2023-02-10 updates</summary>
+            </section>
 
+         </div>
+         </div>
+      </section>
+
+      <section class="container">
+         <h2 class="h3">vac-acc-usability-utilisation.github.io updates:</h2>
+
+         <ul class="list-unstyled">
+            <li>
+               <details>
+                  <summary>2023-02-10 updates</summary>
+
+                  <ul>
+                     <li>Added hierarchy of components and templates (atoms, molecules, and organisms)</li>
+                     <li>Completed header and footer working example with states</li>
+                     <ul>
+                        <li>Redesigned a navigation menu</li>
+                     </ul>
+                     <li>
+                        Article <a href="design/posts/2023-02-10/slips-mistakes.html">Slips and mistakes</a> released
+                     </li>
+                  </ul>
+
+               </details>
+            </li>
+
+            <li>
+               <details>
+                  <summary>2023-01-27 updates</summary>
+                  <ul>
+                     <li>
+                        Article <a href="design/posts/2023-01-27/url-mapping-use-case.html">GCWeb URL Mapping Use Case:
+                           MVA Landing page</a> released
+                     </li>
+                     <li>
+                        Began documentation template and writing <a
+                           href="design/library/pages/front-door-doc.html">documentation for Front door page</a>
+                     </li>
+                     <li>Separated design library samples and static demo site</li>
+                     <li>Created French working example of front door (in progress)</li>
+                     <li>Created sample of how to manage content with a markdown file and git</li>
+                  </ul>
+               </details>
+            </li>
+            <li>
+               <details>
+
+                  <summary>2023-01-13 updates</summary>
+                  <p>Base directory and repositories created:</p>
+                  <p>This is Github repository hosted with Github Pages:<br><a
+                        href="https://vac-acc-usability-utilisation.github.io/">https://vac-acc-usability-utilisation.github.io/</a>
+                  </p>
+                  <ul>
+                     <li><code>index.html</code> (<a href="index.html">Splash page</a>)</li>
+                     <li>
+                        Assets (CSS, JS, images) for distribution:
                         <ul>
-                           <li>Added hierarchy of components and templates (atoms, molecules, and organisms)</li>
-                           <li>Completed header and footer working example with states</li>
-                           <ul>
-                              <li>Redesigned a navigation menu</li>
-                           </ul>
+                           <li><code>wet-boew/</code></li>
+                           <li><code>GCWeb/</code></li>
+                           <li><code>cdts/</code></li>
+                           <li><code>mva-mda/</code></li>
+                        </ul>
+                     </li>
+                     <li>
+                        Design samples, components, and blog posts
+                        <ul>
                            <li>
-                              Article <a href="design/posts/2023-02-10/slips-mistakes.html">Slips and mistakes</a> released
+                              <code>design/</code>
+                              <ul>
+                                 <li><code>design/assets</code>: Assets for prototypes</li>
+                                 <li><code>design/posts</code>: Dated folders containing a blog post and any assets</li>
+                                 <li><code>design/library</code>: Templates, components, partials (work in progress)
+                                 </li>
+                              </ul>
                            </li>
                         </ul>
-
-                     </details>
-                  </li>
-                 
-                  <li>
-                     <details>
-                        <summary>2023-01-27 updates</summary>
+                     </li>
+                     <li>
+                        Static version of My VAC Account (work in progress)
                         <ul>
-                           <li>
-                              Article <a href="design/posts/2023-01-27/url-mapping-use-case.html">GCWeb URL Mapping Use Case: MVA Landing page</a> released
-                           </li>
-                           <li>
-                              Began documentation template and writing <a href="design/library/pages/front-door-doc.html">documentation for Front door page</a>
-                           </li>
-                           <li>Separated design library samples and static demo site</li>
-                           <li>Created French working example of front door (in progress)</li>
-                           <li>Created sample of how to manage content with a  markdown file and git</li>
+                           <li><code>demo/</code> (<a href="demo/index.html">Splash page</a>)
+                           <li><code>demo/en.html</code> (<a href="demo/en.html">Sign-in/Register page</a>)</li>
                         </ul>
-                     </details>
-                  </li>
-                  <li>
-                     <details>
+                     </li>
 
-                     <summary>2023-01-13 updates</summary>
-                           <p>Base directory and repositories created:</p>
-                           <p>This is Github repository hosted with Github Pages:<br><a href="https://vac-acc-usability-utilisation.github.io/">https://vac-acc-usability-utilisation.github.io/</a></p> 
-                           <ul>
-                              <li><code>index.html</code> (<a href="index.html">Splash page</a>)</li>
-                              <li>
-                                  Assets (CSS, JS, images) for distribution:
-                                 <ul>
-                                    <li><code>wet-boew/</code></li>
-                                    <li><code>GCWeb/</code></li>
-                                    <li><code>cdts/</code></li>
-                                    <li><code>mva-mda/</code></li>
-                                 </ul>
-                              </li>
-                              <li>
-                                 Design samples, components, and blog posts
-                                 <ul>
-                                    <li>
-                                       <code>design/</code>
-                                       <ul>
-                                          <li><code>design/assets</code>: Assets for prototypes</li>
-                                          <li><code>design/posts</code>: Dated folders containing a blog post and any assets</li>
-                                          <li><code>design/library</code>: Templates, components, partials (work in progress)</li>
-                                       </ul>
-                                    </li>
-                                 </ul>
-                              </li>
-                              <li>
-                                 Static version of My VAC Account (work in progress)
-                                 <ul>
-                                    <li><code>demo/</code> (<a href="demo/index.html">Splash page</a>)
-                                    <li><code>demo/en.html</code> (<a href="demo/en.html">Sign-in/Register page</a>)</li>
-                                 </ul>
-                              </li>
-                              
-                           </ul>
-                     </details> </li>
-               </ul>
-           </section>
+                  </ul>
+               </details>
+            </li>
+         </ul>
+      </section>
 
-            
-           
-   
-           <footer class="pagedetails container">
-               <h2 class="wb-inv">Page details</h2>
-               <div class="row">
-               <div class="col-sm-8 col-md-9 col-lg-9">
+
+
+
+      <footer class="pagedetails container">
+         <h2 class="wb-inv">Page details</h2>
+         <div class="row">
+            <div class="col-sm-8 col-md-9 col-lg-9">
                <div class="col-xs-12">
-                   <dl id="wb-dtmd">
-                       <dt>Date modified:</dt>
-                       <dd><time property="dateModified">2023-01-03</time></dd>
-                   </dl>
+                  <dl id="wb-dtmd">
+                     <dt>Date modified:</dt>
+                     <dd><time property="dateModified">2023-01-03</time></dd>
+                  </dl>
                </div>
-              
-           </footer>
-            
-         </main>
-      
-         <footer id="wb-info">
-            <h2 class="wb-inv">About this site</h2>
-            <div class="gc-contextual">
-               <div class="container">
-                  <nav>
-                     <h2>My VAC Account Usability</h2>
-                     <ul class="list-col-xs-1 list-col-sm-2 list-col-md-3">
-                        <li><a href="http://canada.ca/en">Contact us</a></li>
-                        <!--
+
+      </footer>
+
+   </main>
+
+   <footer id="wb-info">
+      <h2 class="wb-inv">About this site</h2>
+      <div class="gc-contextual">
+         <div class="container">
+            <nav>
+               <h2>My VAC Account Usability</h2>
+               <ul class="list-col-xs-1 list-col-sm-2 list-col-md-3">
+                  <li><a href="http://canada.ca/en">Contact us</a></li>
+                  <!--
                         <li><a href="http://canada.ca/en">Contextual link 2</a></li>
                         <li><a href="http://canada.ca/en">Contextual link 3</a></li>-->
-                     </ul>
-                  </nav>
+               </ul>
+            </nav>
+         </div>
+      </div>
+      <div class="brand">
+         <div class="container">
+            <div class="row ">
+               <nav class="col-md-9 col-lg-10 ftr-urlt-lnk">
+                  <h2 class="wb-inv">About this site</h2>
+                  <ul>
+                     <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+                     <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+                  </ul>
+               </nav>
+               <div class="col-xs-6 visible-sm visible-xs tofpg">
+                  <a href="#wb-cont">Top of page <span class="glyphicon glyphicon-chevron-up"></span></a>
+               </div>
+               <div class="col-xs-6 col-md-3 col-lg-2 text-right"><img src="../GCWeb/assets/wmms-blk.svg"
+                     alt="Symbol of the Government of Canada" />
                </div>
             </div>
-            <div class="brand">
-               <div class="container">
-                  <div class="row ">
-                     <nav class="col-md-9 col-lg-10 ftr-urlt-lnk">
-                        <h2 class="wb-inv">About this site</h2>
-                        <ul>
-                           <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-                           <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-                        </ul>
-                     </nav>
-                     <div class="col-xs-6 visible-sm visible-xs tofpg">
-                        <a href="#wb-cont">Top of page <span class="glyphicon glyphicon-chevron-up"></span></a>
-                     </div>
-                     <div class="col-xs-6 col-md-3 col-lg-2 text-right"><img src="../GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </footer>
-		
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
-        <script src="wet-boew/js/wet-boew.min.js"></script>
-        <script src="GCWeb/js/theme.min.js"></script>
-	</body>
+         </div>
+      </div>
+   </footer>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+      integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
+      crossorigin="anonymous"></script>
+   <script src="wet-boew/js/wet-boew.min.js"></script>
+   <script src="GCWeb/js/theme.min.js"></script>
+</body>
+
 </html>
