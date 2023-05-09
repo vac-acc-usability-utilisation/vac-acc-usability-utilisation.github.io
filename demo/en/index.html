@@ -59,7 +59,123 @@
 				padding-left: 2em;
 			}
 		}
+
+
+		@media screen and (max-width: 991px) {
+			.provisional.gc-table.text-left td {
+				text-align: left;
+			}
+		}
+
+		@media screen and (max-width:1199px) {
+
+			/*
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
+ *
+ * GC Table provisional style
+ * -- Responsive table - part of design, not responsive part --
+ */
+			.provisional.gc-table caption {
+				text-align: left;
+			}
+
+			.provisional.gc-table td ul {
+				-webkit-padding-start: 20px;
+				padding-inline-start: 20px;
+			}
+
+			/*
+ PROVISIONAL features: Responsive tables cards
+*/
+	.provisional.gc-table.table-bordered {
+		border: 0; }
+		.provisional.gc-table.table-bordered > thead > tr > th,
+		.provisional.gc-table.table-bordered > thead > tr > td,
+		.provisional.gc-table.table-bordered > tbody > tr > th,
+		.provisional.gc-table.table-bordered > tbody > tr > td,
+		.provisional.gc-table.table-bordered > tfoot > tr > th,
+		.provisional.gc-table.table-bordered > tfoot > tr > td {
+			border-bottom: 0;
+			border-left: 0;
+			border-right: 0; }
+	.provisional.gc-table.dataTable.no-footer {
+		border-bottom: 0; }
+	.provisional.gc-table .text-left {
+		clear: both;
+		display: block; }
+	.provisional.gc-table > tbody > tr > td:first-child,
+	.provisional.gc-table > tfoot > tr > td:first-child {
+		border-top: none; }
+	.provisional.gc-table tr {
+		border: 1px solid #ddd;
+		display: block;
+		margin-bottom: 0.625em;
+		padding: .35em; }
+	.provisional.gc-table > :last-child > tr:last-of-type {
+		margin-bottom: 0; }
+	.provisional.gc-table caption {
+		font-size: 1.1em; }
+	.provisional.gc-table thead {
+		border: none;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px; }
+	.provisional.gc-table tbody + tbody > tr:first-of-type {
+		margin-top: 0.625em; }
+	.provisional.gc-table td {
+		display: block;
+		font-size: 1em;
+		 }
+		.provisional.gc-table td::before {
+			content: attr(data-label);
+			float: left;
+			font-weight: bold;
+			text-align: left; }
+		.provisional.gc-table td:last-child {
+			border-bottom: 0; }
+
+		}
+
+		details summary,
+		.list-group-item:last-child,
+		.list-group-item:first-child,
+		.list-group-item {
+			border-bottom-right-radius: 0px;
+			border-bottom-left-radius: 0px;
+			border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+			background-color: #f5f5f5;
+		}
+
+		.list-group-item.active,
+		.list-group-item.active:focus,
+		.list-group-item.active:hover {
+
+			background-color: #38414d;
+			opacity: 50%;
+		}
+
+		.list-group-item.active:hover {
+			cursor: default;
+			text-decoration: none;
+		}
+
+
+		a.list-group-item:hover {
+			text-decoration: underline;
+			color: #0535d2;
+		}
+
+		.btn-link:hover {
+			border-color: #ccc;
+		}
 	</style>
+
 
 
 
@@ -224,7 +340,7 @@
 									<ul class="list-unstyled list-group">
 										<li>
 											<a href="#"
-												class="btn btn-link full-width list-group-item brdr-tp brdr-bttm"
+												class="btn btn-link full-width list-group-item  brdr-tp brdr-bttm"
 												style="text-align: left; background:none;">
 
 												Overview
@@ -238,21 +354,20 @@
 													Apply for benefits and services</summary>
 												<div class="tgl-panel">
 													<!-- Section 3's content -->
-													<ul class="list-unstyled mrgn-lft-sm">
+													<ul class="list-unstyled">
+														<!--
 														<li><a href="#"
 															class="btn btn-link list-group-item full-width brdr-bttm"
 															style="text-align: left; background:none;">Benefits by audience</a></li>
 														<li><a href="#"
 															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Benefits by type</a></li>
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
+															style="text-align: left; background:none;">Benefits by type</a></li>-->
+														<li><a href="#" class="btn btn-link list-group-item full-width "
 																style="text-align: left; background:none;">Find a
 																form</a></li>
-														
-														
-															<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
+
+
+														<li><a href="apply-for.html" class="btn btn-link list-group-item full-width "
 																style="text-align: left; background:none;">What can you
 																apply for?</a></li>
 													</ul>
@@ -372,7 +487,7 @@
 																class="btn btn-link list-group-item full-width brdr-bttm"
 																style="text-align: left; background:none;">Find a
 																form</a></li>
-														<li><a href="#"
+														<li><a href="apply-for.html"
 																class="btn btn-link list-group-item full-width brdr-bttm"
 																style="text-align: left; background:none;">What can you
 																apply for?</a></li>
@@ -460,38 +575,41 @@
 					<div id="app-navigation"
 						class="well col-xs-8 col-sm-6 col-lg-3 col-md-4 hidden-xs hidden-sm mrgn-tp-lg brdr-rght">
 						<h2 class="h6 hidden-sm hidden-xs" style="letter-spacing: 0.5px;">MENU </h2>
-						<div class="accordion">
-							<nav>
-								<ul class="list-unstyled list-group">
-									<li>
-										<a href="#" class="btn btn-link full-width list-group-item brdr-tp brdr-bttm"
-											style="text-align: left; background:none;">
+						<div>
+							<nav typeof="SiteNavigationElement" class="accordion mva-vertical-nav">
+								<ul class="list-unstyled list-group " role="menu" aria-orientation="vertical">
+									<li role="presentation">
+										<a href="index.html" role="menuitem" tabindex="-1" aria-haspopup="false"
+											class="btn btn-link full-width list-group-item brdr-tp brdr-bttm active acc-group"
+											style="text-align: left;">
 
 											Overview
 										</a>
 									</li>
-									<li>
+									<li role="presentation" role="menuitem" tabindex="-1" aria-haspopup="true">
 										<!-- Accordion section 1 -->
-										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
+										<details class="acc-group brdr-0" style="padding-left:17px; font-size:15px; ">
 											<summary class="wb-toggle tgl-tab brdr-bttm"
+												style="padding-left: 0; padding-right: 0;"
 												data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
 												Apply for benefits and services</summary>
 											<div class="tgl-panel">
 												<!-- Section 1's content -->
 												<ul class="list-unstyled mrgn-lft-sm">
+													<!--
 													<li><a href="#"
 														class="btn btn-link list-group-item full-width brdr-bttm"
 														style="text-align: left; background:none;">Benefits by audience</a></li>
 													<li><a href="#"
 														class="btn btn-link list-group-item full-width brdr-bttm"
-														style="text-align: left; background:none;">Benefits by type</a></li>
-													<li><a href="#"
+														style="text-align: left; background:none;">Benefits by type</a></li>-->
+													<li><a href="#" role="menuitem" tabindex="-1" aria-haspopup="false"
 															class="btn btn-link list-group-item full-width brdr-bttm"
 															style="text-align: left; background:none;">Find a
 															form</a></li>
-													
-													
-														<li><a href="#"
+
+
+													<li><a href="apply-for.html" role="menuitem" tabindex="-1" aria-haspopup="false"
 															class="btn btn-link list-group-item full-width brdr-bttm"
 															style="text-align: left; background:none;">What can you
 															apply for?</a></li>
@@ -509,8 +627,9 @@
 
 									<li>
 										<!-- Accordion section 2 -->
-										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-											<summary class="wb-toggle tgl-tab brdr-bttm"
+										<details class="acc-group brdr-0"
+											style="padding-left:17px; padding-right: 17px; font-size:15px;">
+											<summary class="wb-toggle tgl-tab brdr-bttm" style="padding-left: 0;"
 												data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
 												Transition to life after service</summary>
 											<div class="tgl-panel">
@@ -537,8 +656,9 @@
 									</li>-->
 									<li>
 										<!-- Accordion section 3 -->
-										<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-											<summary class="wb-toggle tgl-tab brdr-bttm"
+										<details class="acc-group brdr-0"
+											style="padding-left:17px; padding-right: 17px; font-size:15px;">
+											<summary class="wb-toggle tgl-tab brdr-bttm" style="padding-left: 0;"
 												data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
 												Your forms and documents</summary>
 											<div class="tgl-panel">
@@ -558,8 +678,8 @@
 															forms</a></li>
 													<li><a href="#"
 															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Upload forms and
-															documents</a></li>
+															style="text-align: left; background:none;">Upload files</a>
+													</li>
 												</ul>
 											</div>
 										</details>
@@ -631,7 +751,7 @@
 						</section>
 
 
-						<section class="container-fluid">
+						<section class="">
 							<div class="row ">
 								<!--
 								<div class="col-xs-12 mrgn-bttm-md brdr-tp brdr-rght brdr-bttm brdr-lft ">
@@ -654,15 +774,17 @@
 									<section class="mrgn-bttm-md ">
 										<div class="well bg-white brdr-0" style="background:#fff;">
 											<h2 class="h3 mrgn-tp-sm"><a href="secure-message/inbox.html">Inbox</a>
-												<span class="badge">2</span></h2>
+												<span class="badge">2</span>
+											</h2>
 											<div>
 
 
 												<p class="wb-inv">You have <a href="secure-message/inbox.html">2 unread
 														messages.</a></p>
 												</p>
-												<table class="table table-striped provisional gc-table">
-													<thead>
+												<table
+													class="table table-striped provisional gc-table small mrgn-tp-lg text-left">
+													<thead class="wb-inv">
 														<tr>
 															<th>Date</th>
 															<th>Subject</th>
@@ -672,7 +794,7 @@
 														<tr class="h5">
 															<td class="nws-tbl-date nowrap">2023-05-04</td>
 															<td class="nws-tbl-sub"><span
-																	class="fa fa-envelope mrgn-rght-sm mrgn-tp-sm "></span><a
+																	class="fa fa-envelope opct-80 mrgn-rght-sm mrgn-tp-sm "></span><a
 																	href="secure-message/833362.html">Questions
 																	about disability application</a></td>
 														</tr>
@@ -680,15 +802,17 @@
 														<tr class="h5">
 															<td class="nws-tbl-date nowrap">2023-05-01</td>
 															<td class="nws-tbl-sub"><span
-																	class="fa fa-envelope mrgn-rght-sm mrgn-tp-sm"></span><a
-																	href="#">	Education and Training Benefit - Approval Letter (VAC1562)</a></td>
+																	class="fa fa-envelope opct-80 mrgn-rght-sm mrgn-tp-sm"></span><a
+																	href="#"> Education and Training Benefit - Approval
+																	Letter (VAC1562)</a></td>
 														</tr>
 
 														<tr>
 															<td class="nws-tbl-date nowrap">2023-05-01</td>
 															<td class="nws-tbl-sub"><span
-																	class="fa fa-envelope-open mrgn-rght-sm mrgn-tp-sm opct-50"></span><a
-																	href="#">IRB Adjustment Letter for Indexation (VAC1711)</a></td>
+																	class="fa fa-envelope-open opct-50 mrgn-rght-sm mrgn-tp-sm opct-50"></span><a
+																	href="#">IRB Adjustment Letter for Indexation
+																	(VAC1711)</a></td>
 														</tr>
 													</tbody>
 
@@ -699,13 +823,14 @@
 												<div class="row mrgn-tp-lg">
 													<div class="col-xs-12">
 														<a href="#" role="button"
-															class="btn btn-sm btn-primary mrgn-rght-md"><span
-																class="fa fa-envelope mrgn-rght-sm"></span>Send a new
+															class="btn btn-sm btn-default mrgn-rght-md"><span
+																class="fa fa-envelope opct-80 mrgn-rght-sm"></span>Send
+															a new
 															message</a>
 														<a href="your-forms/upload.html" role="button"
 															class="btn btn-sm btn-default mrgn-rght-md"><span
-																class="fa fa-upload mrgn-rght-sm"></span>Upload forms or
-															documents</a>
+																class="fa fa-upload opct-80 mrgn-rght-sm"></span>Upload
+															files</a>
 
 													</div>
 												</div>
@@ -721,64 +846,49 @@
 													your applications</a> <span class="badge">1</span></h2>
 											<div>
 
-
-
-
-
-
-												<table class="table table-striped provisional gc-table">
+												<table class="table table-striped provisional gc-table small text-left">
 													<thead>
 														<tr>
 															<th>Modified</th>
-															<th>Status</th>
 															<th>Program</th>
 															<th>Description</th>
+															<th>Status</th>
+
 														</tr>
 													</thead>
 													<tbody>
 														<tr class="h5">
-															<td class="nws-tbl-date nowrap">2023-05-04</td>
-															<td class="nws-tbl-sub"><a
+															<td class="nws-tbl-date nowrap text-left ">2023-05-04</td>
+
+
+															<td class="nws-tbl-sub nowrap text-left"><a
+																	href="track-your-application/application.html">Education
+																	and Training&nbsp;Benefit&nbsp;-&nbsp;Plan</a></td>
+															<td class="nws-tbl-sub text-left"><a
+																	href="track-your-application/application.html">Application</a>
+															</td>
+															<td class="nws-tbl-sub nowrap text-left"><a
 																	href="track-your-application/application.html">Step
 																	3 - Decision&nbsp;making</a></td>
-
-															<td class="nws-tbl-sub"><a
-																	href="track-your-application/application.html">Education
-																	and Training&nbsp;Benefit&nbsp;-&nbsp;Plan</a></td>
-															<td class="nws-tbl-sub"><a
-																	href="track-your-application/application.html">Application</a>
-															</td>
-
-														</tr>
-
-														<tr >
-															<td class="nws-tbl-date nowrap">2023-05-03</td>
-															<td class="nws-tbl-sub"><a
-																	href="track-your-application/application.html">
-																	Step 1 - Application&nbsp;recieved</a></td>
-
-															<td class="nws-tbl-sub"><a
-																	href="track-your-application/application.html">Education
-																	and Training&nbsp;Benefit&nbsp;-&nbsp;Plan</a></td>
-															<td class="nws-tbl-sub"><a
-																	href="track-your-application/application.html">Application</a>
-															</td>
-
 														</tr>
 
 														<tr>
-															<td class="nws-tbl-date nowrap">2023-04-24</td>
-															<td class="nws-tbl-sub"><a
-																	href="track-your-application/application.html">Step
-																	2 - Awaiting&nbsp;information</a></td>
+															<td class="nws-tbl-date nowrap text-left">2023-05-03</td>
 
-															<td class="nws-tbl-sub"><a
-																	href="track-your-application/application.html">Priority hiring - Medical release attributable to service determination</a></td>
-															<td class="nws-tbl-sub"><a
-																	href="track-your-application/application.html">Major Depressive Disorder</a>
+
+															<td class="nws-tbl-sub nowrap text-left"><a
+																	href="track-your-application/application.html">Education
+																	and Training&nbsp;Benefit&nbsp;-&nbsp;Plan</a></td>
+															<td class="nws-tbl-sub text-left"><a
+																	href="track-your-application/application.html">Application</a>
 															</td>
+															<td class="nws-tbl-sub nowrap text-left"><a
+																	href="track-your-application/application.html">
+																	Step 1 - Application&nbsp;received</a></td>
 
 														</tr>
+
+
 
 													</tbody>
 
@@ -791,7 +901,7 @@
 								</div>
 
 								<div class="col-xs-12 mrgn-bttm-md brdr-tp brdr-rght brdr-bttm brdr-lft ">
-									<section class="mrgn-bttm-md ">
+									<section class="mrgn-bttm-md">
 										<div class="well bg-white brdr-0" style="background:#fff;">
 											<h2 class="h3 mrgn-tp-sm"><a href="your-benefits/index.html">Your benefits
 													and services</a> </h2>
@@ -799,10 +909,12 @@
 
 
 
-												<section class="brdr-bttm pb-4">
+												<section class="">
 													<div class="row mrgn-tp-lg">
 														<div class="col-sm-8">
-															<h3 class="h4 mrgn-tp-0"><a href="your-benefits/index.html#disability">Disability benefits</a>
+															<h3 class="h5 mrgn-tp-0"><a
+																	href="your-benefits/index.html#disability">Disability
+																	benefits</a>
 															</h3>
 
 														</div> <!--
@@ -813,22 +925,22 @@
 
 														</div>-->
 													</div>
-													<div class="row ">
+													<div class="row brdr-bttm">
 														<div class="col-xs-8">
-															<p class="h5 mrgn-tp-sm">Net entitlement</p>
+															<p class="mrgn-tp-0 small">Net entitlement</p>
 														</div>
 														<div class="col-xs-4 text-right">
-															<p class="h5 mrgn-tp-sm">$2,005.68</p>
+															<p class="h5 mrgn-tp-0 small">$2,005.68</p>
 														</div>
-													</div>
-													<div class="small pull-right mrgn-bttm-md">
 													</div>
 												</section>
 
-												<section class="brdr-bttm pb-4">
-													<div class="row mrgn-tp-lg">
+												<section class="">
+													<div class="row">
 														<div class="col-sm-8">
-															<h3 class="h4 mrgn-tp-0"><a href="your-benefits/index.html#financial">Financial benefits</a>
+															<h3 class="h5"><a
+																	href="your-benefits/index.html#financial">Financial
+																	benefits</a>
 															</h3>
 
 														</div><!--
@@ -839,22 +951,26 @@
 
 														</div>-->
 													</div>
-													<h4 class="h5 mrgn-tp-sm"><a href="your-benefits/index.html#financial">Income Replacement Benefit</a>
+													<h4 class="h6 mrgn-tp-sm"><a
+															href="your-benefits/index.html#financial">Income Replacement
+															Benefit</a>
 													</h4>
-													<div class="row mrgn-tp-0">
+													<div class="row brdr-bttm">
 														<div class="col-xs-8">
-															<p class="h5 mrgn-tp-sm">Net entitlement</p>
+															<p class="mrgn-tp-0 small">Net entitlement</p>
 														</div>
 														<div class="col-xs-4 text-right">
-															<p class="h5 mrgn-tp-sm">$3,032.72</p>
+															<p class="h5 mrgn-tp-0 small">$3,032.72</p>
 														</div>
 													</div>
 												</section>
 
-												<section class="brdr-bttm pb-4">
-													<div class="row mrgn-tp-lg">
+												<section class="brdr-bttm">
+													<div class="row">
 														<div class="col-sm-8">
-															<h3 class="h4 mrgn-tp-0"><a href="your-benefits/index.html#other">Other benefits</a></h3>
+															<h3 class="h5"><a
+																	href="your-benefits/index.html#other">Other
+																	benefits</a></h3>
 
 														</div><!--
 														<div class="col-sm-4 text-right small">
@@ -864,14 +980,17 @@
 
 														</div>-->
 													</div>
-													<h4 class="h5"><a href="#">Additional lump sum payment</a></h4>
+													<h4 class="h6 mrgn-tp-sm mrgn-bttm-lg"><a href="#">Additional lump
+															sum payment</a></h4>
 
 												</section>
 
-												<section class="brdr-bttm pb-4">
-													<div class="row mrgn-tp-lg">
+												<section class="">
+													<div class="row">
 														<div class="col-sm-8">
-															<h3 class="h4 mrgn-tp-0"><a href="your-benefits/index.html#vip">Veterans Independence
+															<h3 class="h5"><a
+																	href="your-benefits/index.html#vip">Veterans
+																	Independence
 																	Program</a></h3>
 
 														</div>
@@ -882,13 +1001,14 @@
 
 														</div>-->
 													</div>
-													<div class="row mrgn-tp-0">
+													<div class="row">
 														<div class="col-xs-6">
-															<p class="h5 mrgn-tp-sm">Total annual amount (all benefits)
+															<p class="small mrgn-tp-0">Total annual amount (all
+																benefits)
 															</p>
 														</div>
 														<div class="col-xs-6 text-right">
-															<p class="h5 mrgn-tp-sm">$3,532.53</p>
+															<p class="small h5 mrgn-tp-0">$3,532.53</p>
 														</div>
 													</div>
 												</section>
@@ -900,17 +1020,38 @@
 									</section>
 								</div>
 
-								<div class="col-xs-12 mrgn-bttm-md brdr-tp brdr-rght brdr-bttm brdr-lft ">
+								<div class="col-xs-12 mrgn-bttm-md brdr-tp brdr-rght brdr-bttm brdr-lft hidden">
 									<section class="mrgn-bttm-md ">
 										<div class="well bg-white brdr-0" style="background:#fff;">
-											<h2 class="h3 mrgn-tp-sm"><a href="your-forms/index.html">Your documents and
-													forms</a> </h2>
+											<h2 class="h4 mrgn-tp-sm"><a href="your-forms/index.html">Your documents and&nbsp;forms</a> </h2>
 											<div>
 
 												</p>
+
+												<div class="row">
+													<div class="col-xs-12 mrgn-tp-md">
+														<ul class="list-unstyled list-col-md-2 lst-spcd small">
+															<li>
+																<a href="#">
+																	Submitted forms and&nbsp;documents
+
+																</a>
+															</li>
+															<li><a href="#">
+																	Saved forms
+																</a></li>
+															<li><a href="#">
+																	Letters and forms from&nbsp;<abbr
+																		title="">VAC</abbr>
+																</a></li>
+														</ul>
+													</div>
+												</div>
+
+												<!--
 											
 												<section class="">
-													<h3 class="h4"><a href="your-forms/index.html#submitted">Submitted forms and documents</a></h3>
+													<p><a href="your-forms/index.html#submitted">Submitted forms and documents</a></p>
 													<table class="table table-striped provisional gc-table hidden">
 														<thead>
 															<tr>
@@ -936,20 +1077,12 @@
 														</tbody>
 
 													</table>
-													<div class="row mrgn-tp-sm mrgn-bttm-lg">
-														<div class="col-xs-12">
-															<button type="button"
-																class="btn btn-sm btn-primary mrgn-rght-md"><span
-																	class="fa fa-upload mrgn-rght-sm"></span>Upload
-																forms or documents</a>
-
-														</div>
-													</div>
+												
 
 												</section>
 
 												<section class="">
-													<h3 class="h4"><a href="your-forms/index.html#in-progress">In-progress forms</a></h3>
+													<p><a href="your-forms/index.html#in-progress">In-progress forms</a></p>
 													<table class="table table-striped provisional gc-table hidden">
 														<thead>
 															<tr>
@@ -970,7 +1103,7 @@
 												</section>
 
 												<section class="">
-													<h3 class="h4"><a href="your-forms/index.html#vac-letters">Letters and forms from VAC</a></h3>
+													<p><a href="your-forms/index.html#vac-letters">Letters and forms from VAC</a></p>
 													<table class="table table-striped provisional gc-table hidden">
 														<thead>
 															<tr>
@@ -996,8 +1129,17 @@
 														</tbody>
 
 													</table>
-												</section>
+												</section>-->
 
+												<div class="row mrgn-tp-lg">
+													<div class="col-xs-12">
+														<button type="button"
+															class="btn btn-sm btn-default mrgn-rght-md"><span
+																class="fa fa-upload opct-80 mrgn-rght-sm"></span>Upload
+															files</a>
+
+													</div>
+												</div>
 
 
 											</div>
@@ -1010,13 +1152,13 @@
 										<div class="well bg-white brdr-0" style="background:#fff;">
 											<h2 class="h3 mrgn-bttm-0"><a href="profile.html">Profile and settings</a>
 											</h2>
-											<div class="mrgn-bttm-lg">
+											<div class="">
 												<p class="text-muted small hidden">Manage your account settings and
 													personal&nbsp;information.</p>
 
 												<div class="row">
 													<div class="col-xs-12 mrgn-tp-md">
-														<ul class="list-col-md-3 lst-spcd">
+														<ul class="list-unstyled list-col-md-2 lst-spcd small">
 															<li>
 																<a href="#">
 																	Direct deposit
