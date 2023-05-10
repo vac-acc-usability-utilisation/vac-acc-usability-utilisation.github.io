@@ -17,13 +17,13 @@
 	<meta name="dcterms.issued" content="" />
 	<meta name="dcterms.modified" content="2023-01-16" />
 
-	<link href="../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
+	<link href="/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
 
-	<link rel="stylesheet" href="../../GCWeb/css/theme.min.css" />
-	<link rel="stylesheet" href="../../mva-mda/css/theme.css" />
-	<link rel="stylesheet" href="../../cdts/css/cdts.css" />
+	<link rel="stylesheet" href="/GCWeb/css/theme.min.css" />
+	<link rel="stylesheet" href="/mva-mda/css/theme.css" />
+	<link rel="stylesheet" href="/cdts/css/cdts.css" />
 	<noscript>
-		<link rel="stylesheet" href="wet-boew/css/noscript.min.css" />
+		<link rel="stylesheet" href="/wet-boew/css/noscript.min.css" />
 	</noscript>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
@@ -61,6 +61,8 @@
 		}
 
 
+
+
 		@media screen and (max-width: 991px) {
 			.provisional.gc-table.text-left td {
 				text-align: left;
@@ -70,12 +72,12 @@
 		@media screen and (max-width:1199px) {
 
 			/*
- * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
- * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
- *
- * GC Table provisional style
- * -- Responsive table - part of design, not responsive part --
- */
+* Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+* wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
+*
+* GC Table provisional style
+* -- Responsive table - part of design, not responsive part --
+*/
 			.provisional.gc-table caption {
 				text-align: left;
 			}
@@ -86,58 +88,82 @@
 			}
 
 			/*
- PROVISIONAL features: Responsive tables cards
+PROVISIONAL features: Responsive tables cards
 */
-	.provisional.gc-table.table-bordered {
-		border: 0; }
-		.provisional.gc-table.table-bordered > thead > tr > th,
-		.provisional.gc-table.table-bordered > thead > tr > td,
-		.provisional.gc-table.table-bordered > tbody > tr > th,
-		.provisional.gc-table.table-bordered > tbody > tr > td,
-		.provisional.gc-table.table-bordered > tfoot > tr > th,
-		.provisional.gc-table.table-bordered > tfoot > tr > td {
-			border-bottom: 0;
-			border-left: 0;
-			border-right: 0; }
-	.provisional.gc-table.dataTable.no-footer {
-		border-bottom: 0; }
-	.provisional.gc-table .text-left {
-		clear: both;
-		display: block; }
-	.provisional.gc-table > tbody > tr > td:first-child,
-	.provisional.gc-table > tfoot > tr > td:first-child {
-		border-top: none; }
-	.provisional.gc-table tr {
-		border: 1px solid #ddd;
-		display: block;
-		margin-bottom: 0.625em;
-		padding: .35em; }
-	.provisional.gc-table > :last-child > tr:last-of-type {
-		margin-bottom: 0; }
-	.provisional.gc-table caption {
-		font-size: 1.1em; }
-	.provisional.gc-table thead {
-		border: none;
-		clip: rect(0 0 0 0);
-		height: 1px;
-		margin: -1px;
-		overflow: hidden;
-		padding: 0;
-		position: absolute;
-		width: 1px; }
-	.provisional.gc-table tbody + tbody > tr:first-of-type {
-		margin-top: 0.625em; }
-	.provisional.gc-table td {
-		display: block;
-		font-size: 1em;
-		 }
-		.provisional.gc-table td::before {
-			content: attr(data-label);
-			float: left;
-			font-weight: bold;
-			text-align: left; }
-		.provisional.gc-table td:last-child {
-			border-bottom: 0; }
+			.provisional.gc-table.table-bordered {
+				border: 0;
+			}
+
+			.provisional.gc-table.table-bordered>thead>tr>th,
+			.provisional.gc-table.table-bordered>thead>tr>td,
+			.provisional.gc-table.table-bordered>tbody>tr>th,
+			.provisional.gc-table.table-bordered>tbody>tr>td,
+			.provisional.gc-table.table-bordered>tfoot>tr>th,
+			.provisional.gc-table.table-bordered>tfoot>tr>td {
+				border-bottom: 0;
+				border-left: 0;
+				border-right: 0;
+			}
+
+			.provisional.gc-table.dataTable.no-footer {
+				border-bottom: 0;
+			}
+
+			.provisional.gc-table .text-left {
+				clear: both;
+				display: block;
+			}
+
+			.provisional.gc-table>tbody>tr>td:first-child,
+			.provisional.gc-table>tfoot>tr>td:first-child {
+				border-top: none;
+			}
+
+			.provisional.gc-table tr {
+				border: 1px solid #ddd;
+				display: block;
+				margin-bottom: 0.625em;
+				padding: .35em;
+			}
+
+			.provisional.gc-table> :last-child>tr:last-of-type {
+				margin-bottom: 0;
+			}
+
+			.provisional.gc-table caption {
+				font-size: 1.1em;
+			}
+
+			.provisional.gc-table thead {
+				border: none;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+
+			.provisional.gc-table tbody+tbody>tr:first-of-type {
+				margin-top: 0.625em;
+			}
+
+			.provisional.gc-table td {
+				display: block;
+				font-size: 1em;
+			}
+
+			.provisional.gc-table td::before {
+				content: attr(data-label);
+				float: left;
+				font-weight: bold;
+				text-align: left;
+			}
+
+			.provisional.gc-table td:last-child {
+				border-bottom: 0;
+			}
 
 		}
 
@@ -175,18 +201,15 @@
 			border-color: #ccc;
 		}
 	</style>
-
-
-
-
 </head>
 
 <body class="cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage">
 	<nav aria-label="Skip Links">
 		<ul id="wb-tphp">
 			<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
-			<li class="wb-slc visible-xs visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to
-					"About My VAC Account"</a></li>
+			<li class="wb-slc visible-xs visible-sm visible-md visible-lg">
+				<a class="wb-sl" href="#wb-info">Skip to "About My VAC Account"</a>
+			</li>
 		</ul>
 	</nav>
 
@@ -208,7 +231,7 @@
 				</section>
 				<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" resource="#wb-publisher"
 					typeof="GovernmentOrganization">
-					<a href="en.html" property="url">
+					<a href="/demo/en/" property="url">
 						<img src="../../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv"
 							property="name">
 							Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
@@ -367,7 +390,8 @@
 																form</a></li>
 
 
-														<li><a href="apply-for.html" class="btn btn-link list-group-item full-width "
+														<li><a href="apply-for.html"
+																class="btn btn-link list-group-item full-width "
 																style="text-align: left; background:none;">What can you
 																apply for?</a></li>
 													</ul>
@@ -574,42 +598,75 @@
 				<div class="row wb-eqht-grd">
 					<div id="app-navigation"
 						class="well col-xs-8 col-sm-6 col-lg-3 col-md-4 hidden-xs hidden-sm mrgn-tp-lg brdr-rght">
-						<h2 class="h6 hidden-sm hidden-xs" style="letter-spacing: 0.5px;">MENU </h2>
+
+						<nav role="navigation" typeof="SiteNavigationElement" id="info-pnl" class="info-pnl wb-menu">
+							<div class="pnl-strt container visible-md visible-lg nvbar">
+								<h2>Topics menu</h2>
+								<div class="row">
+								<ul class="list-inline menu" role="menubar">
+								<li><a href="#project" class="item">WET project</a>
+								<ul class="sm list-unstyled" id="project" role="menu">
+								<li><a href="https://wet-boew.github.io/v4.0-ci/index-en.html#about">About the Web Experience Toolkit</a></li>
+								<li><a href="https://wet-boew.github.io/v4.0-ci/index-en.html#benefits">Benefits</a></li>
+								<li><a href="https://wet-boew.github.io/wet-boew/docs/ref/accolades-en.html">Awards, articles and videos</a></li>
+								<li><a href="https://wet-boew.github.io/wet-boew/docs/events-en.html">Events</a></li>
+								<li><a href="https://github.com/wet-boew/wet-boew/">Main project page</a></li>
+								<li><a href="https://wet-boew.github.io/v4.0-ci/License-en.html">Terms and conditions</a></li>
+								<li><a href="https://wet-boew.github.io/wet-boew/docs/versions/rdmp-en.html">Roadmap of past and future releases</a></li>
+								<li><a href="https://wet-boew.github.io/wet-boew/docs/versions/index-en.html">Version history</a></li>
+								<li><a href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a></li>
+								</ul>
+								</li>
+								<li><a href="#implement" class="item">Implement WET</a>
+								<ul class="sm list-unstyled" id="implement" role="menu">
+								<li><a href="https://wet-boew.github.io/wet-boew/docs/start-en.html">Getting started with WET</a></li>
+								<li><a href="https://wet-boew.github.io/wet-boew/docs/versions/dwnld-en.html">Download WET</a></li>
+								<li><a href="https://wet-boew.github.io/v4.0-ci/demos/index-en.html">Working examples</a></li>
+								<li><a href="https://wet-boew.github.io/wet-boew/docs/index-en.html">Documentation</a></li>
+								</ul>
+								</li>
+								<li><a href="#contribute" class="item">Contribute to WET</a>
+								<ul class="sm list-unstyled" id="contribute" role="menu">
+								<li><a href="https://wet-boew.github.io/wet-boew/docs/bugs-en.html">Filing a bug or an issue</a></li>
+								<li><a href="https://wet-boew.github.io/wet-boew/docs/pull-en.html">Creating a pull request</a></li>
+								<li><a href="https://wet-boew.github.io/wet-boew/docs/pull-en.html#test">Testing your code</a></li>
+								<li><a href="https://wet-boew.github.io/wet-boew/docs/start-en.html#develop">Developing for WET</a></li>
+								</ul>
+								</li>
+								</ul>
+								</div>
+								</div>
+						</nav>
+
 						<div>
+							<!--
+
 							<nav typeof="SiteNavigationElement" class="accordion mva-vertical-nav">
 								<ul class="list-unstyled list-group " role="menu" aria-orientation="vertical">
-									<li role="presentation">
-										<a href="index.html" role="menuitem" tabindex="-1" aria-haspopup="false"
-											class="btn btn-link full-width list-group-item brdr-tp brdr-bttm active acc-group"
+									<li role="presentation" role="menuitem" tabindex="-1" aria-haspopup="false">
+										<a href="index.html"
+											class="btn btn-link full-width list-group-item brdr-tp brdr-bttm"
 											style="text-align: left;">
 
 											Overview
 										</a>
 									</li>
 									<li role="presentation" role="menuitem" tabindex="-1" aria-haspopup="true">
-										<!-- Accordion section 1 -->
 										<details class="acc-group brdr-0" style="padding-left:17px; font-size:15px; ">
 											<summary class="wb-toggle tgl-tab brdr-bttm"
 												style="padding-left: 0; padding-right: 0;"
 												data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
 												Apply for benefits and services</summary>
 											<div class="tgl-panel">
-												<!-- Section 1's content -->
 												<ul class="list-unstyled mrgn-lft-sm">
-													<!--
-													<li><a href="#"
-														class="btn btn-link list-group-item full-width brdr-bttm"
-														style="text-align: left; background:none;">Benefits by audience</a></li>
-													<li><a href="#"
-														class="btn btn-link list-group-item full-width brdr-bttm"
-														style="text-align: left; background:none;">Benefits by type</a></li>-->
 													<li><a href="#" role="menuitem" tabindex="-1" aria-haspopup="false"
 															class="btn btn-link list-group-item full-width brdr-bttm"
 															style="text-align: left; background:none;">Find a
 															form</a></li>
 
 
-													<li><a href="apply-for.html" role="menuitem" tabindex="-1" aria-haspopup="false"
+													<li><a href="apply-for.html" role="menuitem" tabindex="-1"
+															aria-haspopup="false"
 															class="btn btn-link list-group-item full-width brdr-bttm"
 															style="text-align: left; background:none;">What can you
 															apply for?</a></li>
@@ -626,14 +683,12 @@
 									</li>
 
 									<li>
-										<!-- Accordion section 2 -->
 										<details class="acc-group brdr-0"
 											style="padding-left:17px; padding-right: 17px; font-size:15px;">
 											<summary class="wb-toggle tgl-tab brdr-bttm" style="padding-left: 0;"
 												data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
 												Transition to life after service</summary>
 											<div class="tgl-panel">
-												<!-- Section 2's content -->
 												<ul class="list-unstyled mrgn-lft-sm">
 													<li><a href="#"
 															class="btn btn-link list-group-item full-width brdr-bttm"
@@ -647,27 +702,16 @@
 											</div>
 										</details>
 									</li>
-									<!--
+									
 									<li>
-										<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
-											style="text-align: left; background:none;">
-											Upload files
-										</a>
-									</li>-->
-									<li>
-										<!-- Accordion section 3 -->
 										<details class="acc-group brdr-0"
 											style="padding-left:17px; padding-right: 17px; font-size:15px;">
 											<summary class="wb-toggle tgl-tab brdr-bttm" style="padding-left: 0;"
 												data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
 												Your forms and documents</summary>
 											<div class="tgl-panel">
-												<!-- Section 3's content -->
 												<ul class="list-unstyled mrgn-lft-sm">
 
-													<!--<li><a href="#"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Letters and forms from VAC</a></li>-->
 													<li><a href="#"
 															class="btn btn-link list-group-item full-width brdr-bttm"
 															style="text-align: left; background:none;">Submitted forms
@@ -693,7 +737,7 @@
 									</li>
 
 								</ul>
-							</nav>
+							</nav>-->
 						</div>
 
 
@@ -704,8 +748,8 @@
 						<section>
 							<div class="">
 								<div class="">
-									<h1 id="wb-cont" property="name">Overview</h1>
-									<h2 class="lead mrgn-tp-sm">Welcome, Mr. Noel Knockwood</h2>
+									<h1 id="wb-cont" property="name" class="wb-inv">Overview</h1>
+									<h2 class="lead mrgn-tp-lg h1">Welcome, Mr. Noel Knockwood</h2>
 								</div>
 							</div>
 
@@ -851,7 +895,6 @@
 														<tr>
 															<th>Modified</th>
 															<th>Program</th>
-															<th>Description</th>
 															<th>Status</th>
 
 														</tr>
@@ -864,12 +907,10 @@
 															<td class="nws-tbl-sub nowrap text-left"><a
 																	href="track-your-application/application.html">Education
 																	and Training&nbsp;Benefit&nbsp;-&nbsp;Plan</a></td>
-															<td class="nws-tbl-sub text-left"><a
-																	href="track-your-application/application.html">Application</a>
-															</td>
+
 															<td class="nws-tbl-sub nowrap text-left"><a
 																	href="track-your-application/application.html">Step
-																	3 - Decision&nbsp;making</a></td>
+																	1 - Application&nbsp;received</a></td>
 														</tr>
 
 														<tr>
@@ -877,14 +918,13 @@
 
 
 															<td class="nws-tbl-sub nowrap text-left"><a
-																	href="track-your-application/application.html">Education
-																	and Training&nbsp;Benefit&nbsp;-&nbsp;Plan</a></td>
-															<td class="nws-tbl-sub text-left"><a
-																	href="track-your-application/application.html">Application</a>
-															</td>
+																	href="track-your-application/application.html">Income
+																	Replacement&nbsp;Benefit
+																</a></td>
+
 															<td class="nws-tbl-sub nowrap text-left"><a
 																	href="track-your-application/application.html">
-																	Step 1 - Application&nbsp;received</a></td>
+																	Step 3 - Decision&nbsp;making</a></td>
 
 														</tr>
 
@@ -1023,7 +1063,8 @@
 								<div class="col-xs-12 mrgn-bttm-md brdr-tp brdr-rght brdr-bttm brdr-lft hidden">
 									<section class="mrgn-bttm-md ">
 										<div class="well bg-white brdr-0" style="background:#fff;">
-											<h2 class="h4 mrgn-tp-sm"><a href="your-forms/index.html">Your documents and&nbsp;forms</a> </h2>
+											<h2 class="h4 mrgn-tp-sm"><a href="your-forms/index.html">Your documents
+													and&nbsp;forms</a> </h2>
 											<div>
 
 												</p>
@@ -1230,7 +1271,7 @@
 								<div class="col-xs-12">
 									<dl id="wb-dtmd">
 										<dt>Date modified:</dt>
-										<dd><time property="dateModified">2022-04-14</time></dd>
+										<dd><time property="dateModified">2023-05-10</time></dd>
 									</dl>
 								</div>
 							</div>
@@ -1240,7 +1281,7 @@
 				</div>
 
 			</div>
-			</div>
+
 		</section>
 
 	</main>
@@ -1290,8 +1331,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
 		integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
 		crossorigin="anonymous"></script>
-	<script src="../../../wet-boew/js/wet-boew.min.js"></script>
-	<script src="../../../GCWeb/js/theme.min.js"></script>
+	<script src="/wet-boew/js/wet-boew.min.js"></script>
+	<script src="/GCWeb/js/theme.min.js"></script>
 
 </body>
 

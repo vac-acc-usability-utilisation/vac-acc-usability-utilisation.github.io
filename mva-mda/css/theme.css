@@ -2,9 +2,9 @@
 
 
 .accnt-menu [role=menuitem] {
-			
+
     width: auto;
-    
+
 }
 
 .gcweb-menu [role=menu] {
@@ -13,19 +13,48 @@
 }
 
 .accnt-menu [role=menu] {
-    
+
     position: absolute;
     right: 1em;
 }
 
-#mbl-mnu details.acc-group.brdr-0.on, #app-navigation details.acc-group.brdr-0.on {
+#mbl-mnu details.acc-group.brdr-0.on,
+#app-navigation details.acc-group.brdr-0.on {
     padding-bottom: 0;
 }
 
 .gcweb-menu button[aria-haspopup=true] {
     text-transform: none;
 }
-@media screen and (min-width: 970px) { 
+
+
+/* vertical menu */
+
+.mva-vertical-nav .btn {
+    text-align: left;
+}
+
+.mva-vertical-nav summary {
+    font-size: 15px;
+    padding-left: 0px;
+}
+
+.mva-vertical-nav summary details {
+    padding-left:17px; 
+    font-size:15px;
+}
+
+.mva-vertical-nav details[open] {
+    padding-bottom: 0;
+}
+
+.list-group-item {
+    background: none;
+}
+
+
+
+@media screen and (min-width: 970px) {
     .overview {
         padding-left: 2em;
     }
@@ -33,12 +62,10 @@
 
 /* account-chooser */
 p.account-chooser-desc {
-    height:2em;
+    height: 2em;
 }
 
-@media (min-width: 576px) {
-    
-}
+@media (min-width: 576px) {}
 
 @media (min-width: 992px) {
     p.account-chooser-desc {
@@ -53,8 +80,9 @@ p.account-chooser-desc {
 }
 
 /* sign-in partner logos */
-#logos ul li, #logos ul li img { 
-    padding:5px;
+#logos ul li,
+#logos ul li img {
+    padding: 5px;
 }
 
 /* making bg-white available to panel-footer */
@@ -131,4 +159,3 @@ progress[value]::-webkit-progress-bar {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
 
 }
-
