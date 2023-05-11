@@ -27,32 +27,386 @@
     text-transform: none;
 }
 
-
-/* vertical menu */
-
-.mva-vertical-nav .btn {
+/* GCWeb Menu overrides for custom MVA Account Menu */
+#mva-accnt-menu,
+.mva-accnt-menu .btn {
     text-align: left;
 }
 
-.mva-vertical-nav summary {
-    font-size: 15px;
-    padding-left: 0px;
+.mva-accnt-menu.gcweb-menu [role=menu] {
+    max-width: 300px;
+    position: absolute;
+    right: 1em;
 }
 
-.mva-vertical-nav summary details {
-    padding-left:17px; 
-    font-size:15px;
+.mva-accnt-menu.gcweb-menu [role=menuitem] {
+    width: auto;
+    padding-left: 15px;
 }
 
-.mva-vertical-nav details[open] {
+#mbl-mnu details.acc-group.brdr-0.on,
+#app-navigation details.acc-group.brdr-0.on {
     padding-bottom: 0;
 }
 
-.list-group-item {
-    background: none;
+.mva-accnt-menu.gcweb-menu button[aria-haspopup=true] {
+    text-transform: none;
+}
+
+nav.mva-accnt-menu .btn-default {
+    background: #eee;
+    color: #000;
+    position: relative;
+}
+
+/* using .hidden-sm breaks compliance with screen reader/keyboard, so here are .wb-inv for different media queries */
+
+/*medium and below*/
+@media screen and (max-width:1199px) {
+    .wb-inv-md {
+        clip: rect(1px, 1px, 1px, 1px);
+        height: 1px;
+        margin: 0;
+        overflow: hidden;
+        position: absolute;
+        width: 1px;
+        display: hidden;
+        visibility: hidden;
+    }
+
+    .wb-inv-show-md {
+        clip: unset;
+        height: auto;
+        overflow: auto;
+        position: inherit;
+        width: auto;
+        display: contents;
+        visibility: visible;
+    }
+}
+
+/*small and below*/
+@media screen and (max-width: 991px) {
+    .wb-inv-sm {
+        clip: rect(1px, 1px, 1px, 1px);
+        height: 1px;
+        margin: 0;
+        overflow: hidden;
+        position: absolute;
+        width: 1px;
+        display: hidden;
+        visibility: hidden;
+    }
+
+    .wb-inv-show-sm {
+        clip: unset;
+        height: auto;
+        overflow: auto;
+        position: inherit;
+        width: auto;
+        display: contents;
+        visibility: visible;
+    }
+
+    .mva-accnt-menu,
+    #mva-accnt-menu {
+        float: left;
+        text-align: left;
+    }
+
+
+    .mva-accnt-menu.gcweb-menu [role=menu] {
+        position: absolute;
+        left: 16px;
+        right: 0;
+    }
+
+    .gcweb-menu.mva-accnt-menu button[aria-haspopup=true][aria-expanded=true]+[role=menu] {
+        border-right: none;
+    }
+
 }
 
 
+/* Vertical navigation */
+
+#app-navigation {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.well#app-navigation {
+    background-color: white;
+    border: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-top: 12px;
+    padding-left: 15px;
+
+}
+
+#mva-nav-btn[aria-expanded=false]+[role=menu] {
+    display: none;
+}
+
+#mva-nav-btn [aria-expanded=true]+[role=menu] {
+    display: block;
+}
+
+
+#mb-pnl.mva-nav .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    opacity: 1;
+}
+
+#mb-pnl.mva-nav {
+    background: none;
+    padding-left: 0;
+}
+
+#mb-pnl.mva-nav .btn.btn-link {
+    text-align: left;
+}
+
+#mb-pnl.wb-menu summary {
+    color: #555;
+}
+
+#mb-pnl.wb-menu summary:hover {
+    color: #0535d2;
+    text-decoration: underline;
+    background-color: #f5f5f5;
+}
+
+#mb-pnl.mva-nav details ul {
+    padding-left: 0;
+    margin-right: -18px;
+    width: 100%;
+    margin-bottom: -1px;
+}
+
+
+@media screen and (min-width: 480px) {
+    #mb-pnl.mva-nav {
+        min-width: 200px;
+    }
+
+}
+
+#mb-pnl.wb-menu  details>summary {
+    margin-left: -18px;
+    margin-right: -18px;
+}
+
+
+#mb-pnl.wb-menu details summary,
+.wb-menu details[open] summary {
+    border: 1px solid #ddd;
+    background: #fff;
+    margin-bottom: -1px;
+    padding-right: 18px;
+}
+
+#mb-pnl.wb-menu  .list-group-item {
+    background: #fff;
+    }
+
+#mb-pnl.wb-menu details,
+#mb-pnl.wb-menu ul>li>ul>.list-group-item {
+    border-radius: 0;
+    margin-right: -15px;
+}
+
+#mb-pnl.wb-menu details,
+#mb-pnl>ul>li>details>ul>li>a {
+    border-radius: 0;
+    margin-right: -18px;
+}
+
+#mb-pnl>ul>li>a {
+    padding-left: 30px;
+}
+
+#mb-pnl.wb-menu details {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    padding-left: 18px;
+    margin-right: 18px;
+    background: #fff;
+}
+
+#mb-pnl.wb-menu a.list-group-item:first-child, #mb-pnl.wb-menu summary.list-group-item:first-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px
+}
+
+#mb-pnl.wb-menu a.list-group-item:last-child {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px
+}
+
+#mva-nav-mnu {
+    box-shadow: #e3e3e3 2px 2px 1px;
+    z-index: 9;
+    position: absolute;
+}   
+
+/*small and above*/
+@media screen and (max-width: 991px) { 
+    #mva-nav-mnu {
+        max-width: 350px;
+        position: relative; 
+    }   
+}
+ 
+
+
+/*small and above*/
+@media screen and (min-width: 991px) {
+    .overview {
+        padding-left: 2em;
+    }
+
+
+}
+
+
+
+@media screen and (max-width:1199px) {
+
+    /*
+* Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+* wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
+*
+* GC Table provisional style
+* -- Responsive table - part of design, not responsive part --
+*/
+    .provisional.gc-table caption {
+        text-align: left;
+    }
+
+    .provisional.gc-table td ul {
+        -webkit-padding-start: 20px;
+        padding-inline-start: 20px;
+    }
+
+    /*
+PROVISIONAL features: Responsive tables cards
+*/
+    .provisional.gc-table.table-bordered {
+        border: 0;
+    }
+
+    .provisional.gc-table.table-bordered>thead>tr>th,
+    .provisional.gc-table.table-bordered>thead>tr>td,
+    .provisional.gc-table.table-bordered>tbody>tr>th,
+    .provisional.gc-table.table-bordered>tbody>tr>td,
+    .provisional.gc-table.table-bordered>tfoot>tr>th,
+    .provisional.gc-table.table-bordered>tfoot>tr>td {
+        border-bottom: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .provisional.gc-table.dataTable.no-footer {
+        border-bottom: 0;
+    }
+
+   /* table > tbody > tr:nth-child(1) > td.nws-tbl-date.nowrap*/
+
+    .provisional.gc-table.text-left > tbody > tr >  td {
+        clear: both;
+        display: block;
+        text-align: left;
+    }
+
+    .provisional.gc-table>tbody>tr>td:first-child,
+    .provisional.gc-table>tfoot>tr>td:first-child {
+        border-top: none;
+    }
+
+    .provisional.gc-table tr {
+        border: 1px solid #ddd;
+        display: block;
+        margin-bottom: 0.625em;
+        padding: .35em;
+    }
+
+    .provisional.gc-table> :last-child>tr:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .provisional.gc-table caption {
+        font-size: 1.1em;
+    }
+
+    .provisional.gc-table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .provisional.gc-table tbody+tbody>tr:first-of-type {
+        margin-top: 0.625em;
+    }
+
+    .provisional.gc-table td {
+        display: block;
+        font-size: 1em;
+    }
+
+    .provisional.gc-table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .provisional.gc-table td:last-child {
+        border-bottom: 0;
+    }
+
+}
+
+#mb-pnl.wb-menu details summary,
+#mb-pnl.wb-menu .list-group-item:last-child,
+#mb-pnl.wb-menu .list-group-item:first-child,
+.#mb-pnl.wb-menu .list-group-item {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+#mb-pnl.wb-menu .list-group-item.active,
+#mb-pnl.wb-menu .list-group-item.active:focus,
+#mb-pnl.wb-menu .list-group-item.active:hover {
+    border-color: #38414d;
+    background-color: #38414d;
+}
+
+#mb-pnl.wb-menu .list-group-item.active:hover {
+    cursor: default;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+#mb-pnl.wb-menu a.list-group-item:hover {
+    text-decoration: underline;
+    color: #0535d2;
+}
+
+#mb-pnl.wb-menu .btn-link:hover {
+    border-color: #ccc;
+}
 
 @media screen and (min-width: 970px) {
     .overview {
