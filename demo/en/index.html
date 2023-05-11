@@ -142,9 +142,17 @@
 			border-radius: 0;
 			-webkit-box-shadow: none;
 			box-shadow: none;
-			padding-top: 17px;
+			padding-top: 12px;
 			padding-left: 15px;
 
+		}
+
+		#mva-nav-btn[aria-expanded=false]+[role=menu] {
+			display: none;
+		}
+
+		#mva-nav-btn [aria-expanded=true]+[role=menu] {
+			display: block;
 		}
 		
 
@@ -503,126 +511,24 @@ PROVISIONAL features: Responsive tables cards
 			</div>
 		</div>
 
-		<!--
-        <div class="app-bar-mb container visible-xs-block hidden-print">
-            <nav>
-                <h2 class="wb-inv">Account menu</h2>
-                <ul class="app-list-account list-unstyled">
-                    <li><a href="../../en.html?register" class="btn">Register</a></li>
-                    <li><a href="../../en.html?sign-in" class="btn">Sign-in</a></li>
-                </ul>
-            </nav>
-        </div>-->
+
 	</header>
 
 	<main class="cnt-wdth-lmtd" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
 		<section>
 			<div class="container">
 
-
-				<!--
-				<button id="menu-btn" class="h6 btn btn-link brdr-tp brdr-rght brdr-bttm brdr-lft hidden" 
-				style="letter-spacing: 0.5px;" >
-					MENU <span class="fa fa-bars"></span>
-				</button>-->
-
-				<!--MOBILE MENU-->
-				<nav id="mb-mnu" class="app-menu hidden-md hidden-lg mrgn-tp-md">
-					<section>
-						<h2 class="wb-inv">Account menu</h2>
-
-				
-						<button id="mbl-mnu-btn" class="btn btn-default btn-lg mrgn-lft-md visible-sm"
-							style="background:#f5f5f5; color:#000;" type="button" aria-haspopup="true"
-							aria-controls="app-mnu" aria-expanded="false">
-							MENU<span class="fa fa-chevron-down mrgn-lft-sm"></span>
-						</button>
-
-						<ul id="app-mnu" class="list-unstyled list-group mva-nav-menu hidden" role="menu">
-							<li>
-								<a role="menuitem" tabindex="0" href="/demo/en/index.html"
-									class="list-group-item btn btn-link">
-									Overview
-								</a>
-							</li>
-							<li>
-								<details>
-									<summary class="list-group-item btn btn-link" role="menuitem"
-										aria-haspopup="true" tabindex="0">Apply for benefits and services</summary>
-									<ul class="list-unstyled list-group" role="menu" aria-expanded="false"
-										aria-hidden="true">
-										<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
-												href="/demo/en/forms.html">
-												Find a form</a></li>
-										<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
-												href="/demo/en/apply-for.html">
-												What can I apply for?
-											</a>
-										</li>
-
-									</ul>
-								</details>
-							</li>
-							<li>
-								<a role="menuitem" tabindex="0" href="/demo/en/track-your-application/index.html"
-									class="list-group-item btn btn-link">
-									Track your application</a>
-							</li>
-							<li>
-								<details>
-									<summary class="list-group-item btn btn-link" role="menuitem"
-										aria-haspopup="true" tabindex="-1">Transition to life after service
-									</summary>
-									<ul class="list-unstyled list-group" role="menu" aria-expanded="false"
-										aria-hidden="true">
-										<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
-												href="https://wet-boew.github.io/wet-boew/docs/start-en.html">Benefits
-												for transition</a></li>
-										<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
-												href="https://wet-boew.github.io/wet-boew/docs/versions/dwnld-en.html">Your
-												transition task list</a></li>
-
-
-									</ul>
-								</details>
-							</li>
-							<li>
-								<details>
-									<summary class="list-group-item btn btn-link" role="menuitem"
-										aria-haspopup="true" tabindex="-1">Your documents and forms</summary>
-									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
-										aria-hidden="true">
-										<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
-												href="https://wet-boew.github.io/wet-boew/docs/pull-en.html">Saved
-												forms</a></li>
-										<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
-												href="https://wet-boew.github.io/wet-boew/docs/pull-en.html#test">Submitted
-												forms and&nbsp;documents</a></li>
-										<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
-												href="https://wet-boew.github.io/wet-boew/docs/start-en.html#develop">Upload
-												documents</a></li>
-									</ul>
-								</details>
-							</li>
-							<li>
-								<a role="menuitem" tabindex="0" href="#" class="list-group-item btn btn-link">Your
-									benefits and services</a>
-							</li>
-						</ul>
-
-					</section>
-				</nav>
-				<div class="row wb-eqht-grd">
-					<div id="app-navigation" class="well col-xs-8 col-sm-6 col-lg-3 col-md-4 hidden-sm">
+				<div class="row">
+					<div id="app-navigation" class="well col-xs-8 col-sm-6 col-lg-3 col-md-4">
 						<!-- using id="mb-pnl" to leverage WET's keyboard controls for menu -->
 						<nav role="navigation" typeof="SiteNavigationElement" id="mb-pnl" class="wb-menu mva-nav">
 							<h3>Main menu</h3>
-							<div class="btn btn-default btn-lg disabled"
-								style="letter-spacing: 1px; color: #fff; background-color: #38414d; border:none; border-radius: 0;">
-								<strong>MENU</strong>
-								<span class="fa fa-chevron-down hidden"></span>
-							</div>
-							<ul class="list-unstyled list-group " role="menu">
+							<button id="mva-nav-btn" class="btn btn-default btn-lg" aria-haspopup="true" aria-controls="mva-nav-mnu" aria-expanded="true"
+								style="letter-spacing: 1.5px; color: #fff; background-color: #38414d; border:none; border-radius: 0;">
+								MENU
+								<span class="fa fa-chevron-down small"></span>
+							</button>
+							<ul class="list-unstyled list-group" role="menu" id="mva-nav-mnu" aria-orientation="vertical">
 								<li>
 									<a role="menuitem" tabindex="0" href="/demo/en/index.html"
 										class="list-group-item btn btn-link active">
@@ -1346,7 +1252,7 @@ PROVISIONAL features: Responsive tables cards
 						
 							<li id="authenticated-footer-link-1"><a href="#">News and updates</a></li>
 
-							<li id="authenticated-footer-link-3"  ><a href="#">Provide feedback</a></li>
+							<li id="authenticated	-footer-link-3"  ><a href="#">Provide feedback</a></li>
 	
 
 						
@@ -1372,12 +1278,37 @@ PROVISIONAL features: Responsive tables cards
 		</footer>
 	</div>
 
+	
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
 		integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
 		crossorigin="anonymous"></script>
 	<script src="/wet-boew/js/wet-boew.min.js"></script>
 	<script src="/GCWeb/js/theme.min.js"></script>
+
+	<script>
+
+$( document ).ready(function() {
+        console.log( "document loaded" );
+		$('#mva-nav-btn').click(function() {
+			console.log( "= click" );
+			console.log($(this).attr("aria-expanded"));
+			var expanded = $(this).attr("aria-expanded")
+			if (expanded == "true") {
+				console.log("expanded");
+				$(this).attr("aria-expanded", "false");
+			}
+			else if (expanded == "false") {
+				console.log("collapsed");
+				$(this).attr("aria-expanded", "true");
+			}
+		});
+    });
+
+
+		
+	</script>
 
 </body>
 
