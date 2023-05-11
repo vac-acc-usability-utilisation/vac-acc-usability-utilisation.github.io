@@ -36,7 +36,7 @@ $( document ).ready(function() {
        }
    });
 
-   if (location.pathname == "/demo/en/index.html") {
+   if ((location.pathname == "/demo/en/index.html") || (location.pathname == "/demo/fr/index.html")) {
 
     if  ($('#mva-nav-btn').attr("aria-expanded")) {
         if (window.matchMedia('(max-width: 991px)').matches) 

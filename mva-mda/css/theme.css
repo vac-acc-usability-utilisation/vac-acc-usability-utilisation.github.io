@@ -173,6 +173,14 @@ nav.mva-accnt-menu .btn-default {
     color: #555;
 }
 
+#mb-pnl.wb-menu ul {
+    width: 265px;
+}
+
+
+
+
+
 #mb-pnl.wb-menu summary:hover {
     color: #0535d2;
     text-decoration: underline;
