@@ -157,6 +157,7 @@ nav.mva-accnt-menu .btn-default {
 
 #mb-pnl.mva-nav .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
     opacity: 1;
+    cursor: default;
 }
 
 #mb-pnl.mva-nav {

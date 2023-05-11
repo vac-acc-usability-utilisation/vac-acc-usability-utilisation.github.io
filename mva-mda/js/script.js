@@ -18,9 +18,15 @@ $( document ).ready(function() {
         {
             // for overview page, if 
             $('#mva-nav-btn').attr("aria-expanded", false)
-        }
+        }       
+    }
 
-       
+    if  ($('#mva-nav-btn').attr("aria-expanded")) {
+        if (window.matchMedia('(max-width: 991px)').matches) 
+        {
+            // for overview page, if 
+            $('#mva-nav-btn').attr("aria-expanded", false)
+        }       
     }
 
      //hide is user presses ESC key
@@ -30,7 +36,38 @@ $( document ).ready(function() {
        }
    });
 
+   if (location.pathname == "/demo/en/index.html") {
 
+    if  ($('#mva-nav-btn').attr("aria-expanded")) {
+        if (window.matchMedia('(max-width: 991px)').matches) 
+            {
+                // for overview page, if page is mobile, collapse menu 
+                $('#mva-nav-btn').attr("aria-expanded", false);
+                $('#mva-nav-btn').attr("disabled", false);
+            }       
+        }
+
+        if (window.matchMedia('(min-width: 991px)').matches) {
+            $('#mva-nav-btn').attr("aria-expanded", true);
+            $('#mva-nav-btn').attr("disabled", true);
+        }
+
+        window.matchMedia("(max-width:991px)").onchange = (e) => {
+            if (e.matches) {
+              /* the viewport is 600 pixels wide or less */
+              $('#mva-nav-btn').attr("aria-expanded", false);
+                $('#mva-nav-btn').attr("disabled", false);
+            } else {
+              /* the viewport is more than 600 pixels wide */
+              $('#mva-nav-btn').attr("aria-expanded", true);
+            $('#mva-nav-btn').attr("disabled", true);
+            }
+          };
+   }
+
+ 
    
     
 });
+
+
