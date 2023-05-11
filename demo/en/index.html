@@ -28,21 +28,21 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
 	<style>
-		.accnt-menu [role=menuitem] {
-
-			width: auto;
-
+		/* GCWeb Menu overrides for custom MVA Account Menu */
+		#mva-accnt-menu,
+		.mva-accnt-menu .btn {
+			text-align: left;
 		}
 
-		.gcweb-menu [role=menu] {
-			position: absolute;
-			width: auto;
-		}
-
-		.accnt-menu [role=menu] {
-
+		.mva-accnt-menu.gcweb-menu [role=menu] {
+			max-width: 300px;
 			position: absolute;
 			right: 1em;
+		}
+
+		.mva-accnt-menu.gcweb-menu [role=menuitem] {
+			width: auto;
+			padding-left: 15px;
 		}
 
 		#mbl-mnu details.acc-group.brdr-0.on,
@@ -50,24 +50,208 @@
 			padding-bottom: 0;
 		}
 
-		.gcweb-menu button[aria-haspopup=true] {
+		.mva-accnt-menu.gcweb-menu button[aria-haspopup=true] {
 			text-transform: none;
 		}
 
-		@media screen and (min-width: 970px) {
-			.overview {
-				padding-left: 2em;
+		nav.mva-accnt-menu .btn-default {
+			background: #eee;
+			color: #000;
+			position: relative;
+		}
+
+		/* using .hidden-sm breaks compliance with screen reader/keyboard, so here are .wb-inv for different media queries */
+
+		/*medium and below*/
+		@media screen and (max-width:1199px) {
+			.wb-inv-md {
+				clip: rect(1px, 1px, 1px, 1px);
+				height: 1px;
+				margin: 0;
+				overflow: hidden;
+				position: absolute;
+				width: 1px;
+				display: hidden;
+				visibility: hidden;
+			}
+
+			.wb-inv-show-md {
+				clip: unset;
+				height: auto;
+				overflow: auto;
+				position: inherit;
+				width: auto;
+				display: contents;
+				visibility: visible;
 			}
 		}
 
-
-
-
+		/*small and below*/
 		@media screen and (max-width: 991px) {
+			.wb-inv-sm {
+				clip: rect(1px, 1px, 1px, 1px);
+				height: 1px;
+				margin: 0;
+				overflow: hidden;
+				position: absolute;
+				width: 1px;
+				display: hidden;
+				visibility: hidden;
+			}
+
+			.wb-inv-show-sm {
+				clip: unset;
+				height: auto;
+				overflow: auto;
+				position: inherit;
+				width: auto;
+				display: contents;
+				visibility: visible;
+			}
+
+			.mva-accnt-menu,
+			#mva-accnt-menu {
+				float: left;
+				text-align: left;
+			}
+
+
+			.mva-accnt-menu.gcweb-menu [role=menu] {
+				position: absolute;
+				left: 16px;
+				right: 0;
+			}
+
+			.gcweb-menu.mva-accnt-menu button[aria-haspopup=true][aria-expanded=true]+[role=menu] {
+				border-right: none;
+			}
+
+		}
+
+
+		/* Vertical navigation */
+
+		#app-navigation {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.well#app-navigation {
+			background-color: white;
+			border: 0;
+			border-radius: 0;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			padding-top: 17px;
+			padding-left: 15px;
+
+		}
+		
+
+		#mb-pnl.mva-nav .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+			opacity: 1;
+		}
+
+		#mb-pnl.mva-nav {
+			background: none;
+			padding-left: 0;
+		}
+
+		#mb-pnl.mva-nav .btn.btn-link {
+			text-align: left;
+		}
+
+		#mb-pnl.wb-menu summary {
+			color: #555;
+		}
+
+		#mb-pnl.wb-menu summary:hover {
+			color: #0535d2;
+			text-decoration: underline;
+			background-color: #f5f5f5;
+		}
+
+		#mb-pnl.mva-nav details ul {
+			padding-left: 0;
+			margin-right: -18px;
+			width: 100%;
+			margin-bottom: -1px;
+		}
+
+
+		@media screen and (min-width: 480px) {
+			#mb-pnl.mva-nav {
+				min-width: 200px;
+			}
+
+		}
+
+		#mb-pnl.wb-menu  details>summary {
+			margin-left: -18px;
+			margin-right: -18px;
+		}
+
+
+		#mb-pnl.wb-menu details summary,
+		.wb-menu details[open] summary {
+			border: 1px solid #ddd;
+			background: #fff;
+			margin-bottom: -1px;
+			padding-right: 18px;
+		}
+
+		#mb-pnl.wb-menu  .list-group-item {
+			background: #fff;
+			}
+
+		#mb-pnl.wb-menu details,
+		#mb-pnl.wb-menu ul>li>ul>.list-group-item {
+			border-radius: 0;
+			margin-right: -15px;
+		}
+
+		#mb-pnl.wb-menu details,
+		#mb-pnl>ul>li>details>ul>li>a {
+			border-radius: 0;
+			margin-right: -18px;
+		}
+
+		#mb-pnl>ul>li>a {
+			padding-left: 30px;
+		}
+
+		#mb-pnl.wb-menu details {
+			padding: 0;
+			margin: 0;
+			border-radius: 0;
+			padding-left: 18px;
+			margin-right: 18px
+		}
+
+		#mb-pnl.wb-menu a.list-group-item:first-child, #mb-pnl.wb-menu summary.list-group-item:first-child {
+			border-top-left-radius: 0px;
+    		border-top-right-radius: 0px
+		}
+
+		#mb-pnl.wb-menu a.list-group-item:last-child {
+			margin-bottom: -1px;
+			border-bottom-right-radius: 0px;
+    		border-bottom-left-radius: 0px
+		}
+
+
+		/*small and above*/
+		@media screen and (min-width: 991px) {
+			.overview {
+				padding-left: 2em;
+			}
+
 			.provisional.gc-table.text-left td {
 				text-align: left;
 			}
 		}
+
+
 
 		@media screen and (max-width:1199px) {
 
@@ -167,37 +351,36 @@ PROVISIONAL features: Responsive tables cards
 
 		}
 
-		details summary,
-		.list-group-item:last-child,
-		.list-group-item:first-child,
-		.list-group-item {
+		#mb-pnl.wb-menu details summary,
+		#mb-pnl.wb-menu .list-group-item:last-child,
+		#mb-pnl.wb-menu .list-group-item:first-child,
+		.#mb-pnl.wb-menu .list-group-item {
 			border-bottom-right-radius: 0px;
 			border-bottom-left-radius: 0px;
 			border-top-left-radius: 0px;
 			border-top-right-radius: 0px;
-			background-color: #f5f5f5;
 		}
 
-		.list-group-item.active,
-		.list-group-item.active:focus,
-		.list-group-item.active:hover {
-
+		#mb-pnl.wb-menu .list-group-item.active,
+		#mb-pnl.wb-menu .list-group-item.active:focus,
+		#mb-pnl.wb-menu .list-group-item.active:hover {
+			border-color: #38414d;
 			background-color: #38414d;
-			opacity: 50%;
 		}
 
-		.list-group-item.active:hover {
+		#mb-pnl.wb-menu .list-group-item.active:hover {
 			cursor: default;
 			text-decoration: none;
+			color: #fff;
 		}
 
 
-		a.list-group-item:hover {
+		#mb-pnl.wb-menu a.list-group-item:hover {
 			text-decoration: underline;
 			color: #0535d2;
 		}
 
-		.btn-link:hover {
+		#mb-pnl.wb-menu .btn-link:hover {
 			border-color: #ccc;
 		}
 	</style>
@@ -266,60 +449,54 @@ PROVISIONAL features: Responsive tables cards
 						<h2 class="wb-inv">Name of Web application</h2>
 						<a href="#" class="app-name" href="../../en.html">My&nbsp;VAC&nbsp;Account</a>
 					</section>
-
+					<!--account menu / nav-->
 					<nav
-						class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
-						<section>
-							<h2 class="wb-inv">Account menu</h2>
-							<a href="secure-message/inbox.html" class="btn btn-link text-white hidden-xs hidden-sm">
-								<span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
-									class="badge">2</span> </a>
-							<a href="profile.html"
-								class="btn btn-link text-white mrgn-rght-md hidden-xs hidden-sm hidden-md"> <span
-									class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a>
+						class="col-xs-12 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu mva-accnt-menu">
 
-							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs"
-								style="background:#eee; color: #000; position: relative;" type="button"
-								aria-haspopup="true" aria-controls="accnt-mnu"
-								aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span
-									class="badge hidden-md hidden-lg">2</span><span
-									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
-							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width"
-								style="position:static; width: 100%; float: left; text-align: left; width: auto;">
-								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
-										href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
-											class="badge">2</span></a></li>
-								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1"
-										href="profile.html"><span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile
-										and settings</a></li>
-								<li role="none" class="hidden"><a role="menuitem" tabindex="-1" href="#"><span
-											class="fa fa-user mrgn-rght-sm opct-50"></span>Switch user</a></li>
-								<li role="none"><a role="menuitem" tabindex="-1" href="#"><span
-											class="fa fa-power-off mrgn-rght-sm opct-50"></span>Sign out</a></li>
-							</ul>
+						<!--title-->
+						<h2 class="wb-inv">Account menu</h2>
+						<!--shortcuts-->
+						<a href="secure-message/inbox.html" class="btn btn-link text-white wb-inv-sm hidden-sm">
+							<span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span class="badge">2</span>
+						</a>
+						<a href="profile.html" class="btn btn-link text-white mrgn-rght-md wb-inv-md hidden-md">
+							<span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings
+						</a>
 
-							<button class="btn btn-default mrgn-lft-md hidden-xs"
-								style="background:#eee; color: #000; position: relative;" type="button"
-								aria-haspopup="true" aria-controls="accnt-mnu"
-								aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span
-									class="badge hidden-md hidden-lg">2</span><span
-									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
-							<ul id="accnt-mnu" role="menu" aria-orientation="vertical"
-								style="text-align: left; width: auto;">
-								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
-										href="secure-message/inbox.html"><span
-											class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
-											class="badge">2</span></a></li>
-								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1"
-										href="profile.html"><span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile
-										and settings</a></li>
-								<li role="none" class="hidden"><a role="menuitem" tabindex="-1" href="#"><span
-											class="fa fa-users mrgn-rght-sm opct-50"></span>Switch user</a></li>
-								<li role="none"><a role="menuitem" tabindex="-1" href="#"><span
-											class="fa fa-power-off mrgn-rght-sm opct-50"></span>Sign out</a></li>
-							</ul>
+						<!--account menu button / name-->
+						<button class="btn btn-default mrgn-lft-md" type="button" aria-haspopup="true"
+							aria-controls="mva-accnt-menu" aria-expanded="false">
+							<!-- name -->
+							Noel&nbsp;Knockwood&nbsp;
+							<span class="badge hidden-md hidden-lg">2</span>
+							<span class="fa fa-chevron-down mrgn-lft-sm"></span>
+						</button>
 
-						</section>
+						<!--account drop down menu -->
+						<ul id="mva-accnt-menu" role="menu" aria-orientation="vertical">
+							<li role="none" class="text-left wb-inv wb-inv-show-sm">
+								<a role="menuitem" tabindex="-1" href="secure-message/inbox.html">
+									<span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+										class="badge">2</span>
+								</a>
+							</li>
+							<li role="none" class="text-left wb-inv wb-inv-show-md">
+								<a role="menuitem" tabindex="-1" href="profile.html">
+									<span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings
+								</a>
+							</li>
+							<li role="none" class="text-left">
+								<a role="menuitem" tabindex="-1" href="#">
+									<span class="fa fa-users mrgn-rght-sm opct-50"></span>Switch user
+								</a>
+							</li>
+							<li role="none" class="text-left">
+								<a role="menuitem" tabindex="-1" href="#">
+									<span class="fa fa-power-off mrgn-rght-sm opct-50"></span>Sign out
+								</a>
+							</li>
+						</ul>
+
 					</nav>
 
 				</div>
@@ -341,404 +518,184 @@ PROVISIONAL features: Responsive tables cards
 	<main class="cnt-wdth-lmtd" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
 		<section>
 			<div class="container">
+
+
 				<!--
 				<button id="menu-btn" class="h6 btn btn-link brdr-tp brdr-rght brdr-bttm brdr-lft hidden" 
 				style="letter-spacing: 0.5px;" >
 					MENU <span class="fa fa-bars"></span>
 				</button>-->
+
 				<!--MOBILE MENU-->
-				<nav id="mbl-mnu" class="gweb-v2 gcweb-menu app-menu hidden-md hidden-lg mrgn-tp-md">
+				<nav id="mb-mnu" class="app-menu hidden-md hidden-lg mrgn-tp-md">
 					<section>
 						<h2 class="wb-inv">Account menu</h2>
 
-						<button id="mbl-mnu-btn" class="btn btn-default btn-lg mrgn-lft-md visible-xs"
-							style="background:#f5f5f5; color:#000;" type="button" aria-haspopup="true"
-							aria-controls="app-mnu" aria-expanded="false">
-							MENU<span class="fa fa-chevron-down mrgn-lft-sm"></span>
-						</button>
-
-						<ul id="app-mnu" class="hidden-sm mrgn-tp-lg" role="menu" aria-orientation="vertical">
-							<div class="accordion">
-								<nav>
-									<ul class="list-unstyled list-group">
-										<li>
-											<a href="#"
-												class="btn btn-link full-width list-group-item  brdr-tp brdr-bttm"
-												style="text-align: left; background:none;">
-
-												Overview
-											</a>
-										</li>
-										<li>
-											<!-- Accordion section 3 -->
-											<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-												<summary class="wb-toggle tgl-tab brdr-bttm"
-													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-													Apply for benefits and services</summary>
-												<div class="tgl-panel">
-													<!-- Section 3's content -->
-													<ul class="list-unstyled">
-														<!--
-														<li><a href="#"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Benefits by audience</a></li>
-														<li><a href="#"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Benefits by type</a></li>-->
-														<li><a href="#" class="btn btn-link list-group-item full-width "
-																style="text-align: left; background:none;">Find a
-																form</a></li>
-
-
-														<li><a href="apply-for.html"
-																class="btn btn-link list-group-item full-width "
-																style="text-align: left; background:none;">What can you
-																apply for?</a></li>
-													</ul>
-												</div>
-											</details>
-										</li>
-										<li>
-											<a href="track-your-application/index.html"
-												class="btn btn-link full-width list-group-item brdr-bttm"
-												style="text-align: left; background:none;">
-												Track your applications
-											</a>
-										</li>
-										<li>
-											<!-- Accordion section 1 -->
-											<!--<details class="acc-group " style="padding:0; font-size:14px;">
-					
-					<summary class="wb-toggle tgl-tab brdr-0" data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>Apply for benefits and services</summary>
-					<div class="tgl-panel">
-						
-						<ul class="list-unstyled mrgn-lft-sm">
-							<li><a href="#" class="btn btn-link full-width brdr-bttm"  style="text-align: left;">Find a form</a></li>
-							<li><a href="#" class="btn btn-link full-width brdr-bttm"  style="text-align: left;">Track your applications</a></li>
-							<li><a href="#" class="btn btn-link full-width brdr-bttm"  style="text-align: left;">What can you apply for?</a></li>
-							<li><a href="#" class="btn btn-link full-width"  style="text-align: left;">Upload files</a></li>
-
-						</ul>
-					</div>
-				</details>-->
-										</li>
-
-
-										<li>
-											<!-- Accordion section 3 -->
-											<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-												<summary class="wb-toggle tgl-tab brdr-bttm"
-													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-													Transition to life after service</summary>
-												<div class="tgl-panel">
-													<!-- Section 3's content -->
-													<ul class="list-unstyled mrgn-lft-sm">
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Your
-																transition task list</a></li>
-													</ul>
-												</div>
-											</details>
-										</li>
-										<li>
-											<!-- Accordion section 3 -->
-											<details class="acc-group brdr-0 hidden"
-												style="padding-left:0; font-size:15px;">
-												<summary class="wb-toggle tgl-tab brdr-bttm"
-													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-													Your account</summary>
-												<div class="tgl-panel">
-													<!-- Section 3's content -->
-													<ul class="list-unstyled mrgn-lft-sm">
-														<li><a href="secure-message/inbox.html"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Inbox</a>
-														</li>
-														<li><a href="profile.html"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Profile and
-																settings</a></li>
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Switch
-																accounts</a></li>
-													</ul>
-												</div>
-											</details>
-										</li>
-										<li>
-											<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
-												style="text-align: left; background:none;">
-												Your benefits and services
-											</a>
-										</li>
-
-									</ul>
-								</nav>
-							</div>
-						</ul>
-
+				
 						<button id="mbl-mnu-btn" class="btn btn-default btn-lg mrgn-lft-md visible-sm"
 							style="background:#f5f5f5; color:#000;" type="button" aria-haspopup="true"
 							aria-controls="app-mnu" aria-expanded="false">
 							MENU<span class="fa fa-chevron-down mrgn-lft-sm"></span>
 						</button>
 
-						<ul id="app-mnu" class="hidden-xs" role="menu" aria-orientation="vertical"
-							style="text-align: left; padding:1.25em 1em 1em; background-color: #f5f5f5; border: 1px solid #000; width:50%;">
-							<div class="accordion">
-								<nav>
-									<ul class="list-unstyled list-group">
-										<li>
-											<a href="#"
-												class="btn btn-link full-width list-group-item brdr-tp brdr-bttm"
-												style="text-align: left; background:none;">
-
-												Overview
-											</a>
-										</li>
-										<li>
-											<!-- Accordion section 1 -->
-											<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-												<summary class="wb-toggle tgl-tab brdr-bttm"
-													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-													Apply for benefits and services</summary>
-												<div class="tgl-panel">
-													<!-- Section 1's content -->
-													<ul class="list-unstyled mrgn-lft-sm">
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Find a
-																form</a></li>
-														<li><a href="apply-for.html"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">What can you
-																apply for?</a></li>
-													</ul>
-												</div>
-											</details>
-										</li>
-										<li>
-											<a href="track-your-application/index.html"
-												class="btn btn-link full-width list-group-item brdr-bttm"
-												style="text-align: left; background:none;">
-												Track your applications
-											</a>
-										</li>
-
-										<li>
-											<!-- Accordion section 2 -->
-											<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
-												<summary class="wb-toggle tgl-tab brdr-bttm"
-													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-													Transition to life after service</summary>
-												<div class="tgl-panel">
-													<!-- Section 2's content -->
-													<ul class="list-unstyled mrgn-lft-sm">
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Benefits for
-																transition</a></li>
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Your
-																transition task list</a></li>
-													</ul>
-												</div>
-											</details>
-										</li>
-										<!--
+						<ul id="app-mnu" class="list-unstyled list-group mva-nav-menu hidden" role="menu">
 							<li>
-								<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
-									style="text-align: left; background:none;">
-									Upload files or forms
+								<a role="menuitem" tabindex="0" href="/demo/en/index.html"
+									class="list-group-item btn btn-link">
+									Overview
 								</a>
-							</li>-->
-										<li>
-											<!-- Accordion section 3 -->
-											<details class="acc-group brdr-0 hidden"
-												style="padding-left:0; font-size:15px;">
-												<summary class="wb-toggle tgl-tab brdr-bttm"
-													data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-													Your account</summary>
-												<div class="tgl-panel">
-													<!-- Section 3's content -->
-													<ul class="list-unstyled mrgn-lft-sm">
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Inbox</a>
-														</li>
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Profile and
-																settings</a></li>
-														<li><a href="#"
-																class="btn btn-link list-group-item full-width brdr-bttm"
-																style="text-align: left; background:none;">Switch
-																accounts</a></li>
-													</ul>
-												</div>
-											</details>
-										</li>
-										<li>
-											<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
-												style="text-align: left; background:none;">
-												Your benefits and services
+							</li>
+							<li>
+								<details>
+									<summary class="list-group-item btn btn-link" role="menuitem"
+										aria-haspopup="true" tabindex="0">Apply for benefits and services</summary>
+									<ul class="list-unstyled list-group" role="menu" aria-expanded="false"
+										aria-hidden="true">
+										<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+												href="/demo/en/forms.html">
+												Find a form</a></li>
+										<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+												href="/demo/en/apply-for.html">
+												What can I apply for?
 											</a>
 										</li>
 
 									</ul>
-								</nav>
-							</div>
+								</details>
+							</li>
+							<li>
+								<a role="menuitem" tabindex="0" href="/demo/en/track-your-application/index.html"
+									class="list-group-item btn btn-link">
+									Track your application</a>
+							</li>
+							<li>
+								<details>
+									<summary class="list-group-item btn btn-link" role="menuitem"
+										aria-haspopup="true" tabindex="-1">Transition to life after service
+									</summary>
+									<ul class="list-unstyled list-group" role="menu" aria-expanded="false"
+										aria-hidden="true">
+										<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+												href="https://wet-boew.github.io/wet-boew/docs/start-en.html">Benefits
+												for transition</a></li>
+										<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+												href="https://wet-boew.github.io/wet-boew/docs/versions/dwnld-en.html">Your
+												transition task list</a></li>
+
+
+									</ul>
+								</details>
+							</li>
+							<li>
+								<details>
+									<summary class="list-group-item btn btn-link" role="menuitem"
+										aria-haspopup="true" tabindex="-1">Your documents and forms</summary>
+									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
+										aria-hidden="true">
+										<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+												href="https://wet-boew.github.io/wet-boew/docs/pull-en.html">Saved
+												forms</a></li>
+										<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+												href="https://wet-boew.github.io/wet-boew/docs/pull-en.html#test">Submitted
+												forms and&nbsp;documents</a></li>
+										<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+												href="https://wet-boew.github.io/wet-boew/docs/start-en.html#develop">Upload
+												documents</a></li>
+									</ul>
+								</details>
+							</li>
+							<li>
+								<a role="menuitem" tabindex="0" href="#" class="list-group-item btn btn-link">Your
+									benefits and services</a>
+							</li>
 						</ul>
 
 					</section>
 				</nav>
 				<div class="row wb-eqht-grd">
-					<div id="app-navigation"
-						class="well col-xs-8 col-sm-6 col-lg-3 col-md-4 hidden-xs hidden-sm mrgn-tp-lg brdr-rght">
+					<div id="app-navigation" class="well col-xs-8 col-sm-6 col-lg-3 col-md-4 hidden-sm">
+						<!-- using id="mb-pnl" to leverage WET's keyboard controls for menu -->
+						<nav role="navigation" typeof="SiteNavigationElement" id="mb-pnl" class="wb-menu mva-nav">
+							<h3>Main menu</h3>
+							<div class="btn btn-default btn-lg disabled"
+								style="letter-spacing: 1px; color: #fff; background-color: #38414d; border:none; border-radius: 0;">
+								<strong>MENU</strong>
+								<span class="fa fa-chevron-down hidden"></span>
+							</div>
+							<ul class="list-unstyled list-group " role="menu">
+								<li>
+									<a role="menuitem" tabindex="0" href="/demo/en/index.html"
+										class="list-group-item btn btn-link active">
+										Overview
+									</a>
+								</li>
+								<li>
+									<details>
+										<summary class="list-group-item btn btn-link" role="menuitem"
+											aria-haspopup="true" tabindex="0">Apply for benefits and services</summary>
+										<ul class="list-unstyled list-group" role="menu" aria-expanded="false"
+											aria-hidden="true">
+											<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+													href="/demo/en/forms.html">
+													Find a form</a></li>
+											<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+													href="/demo/en/apply-for.html">
+													What can I apply for?
+												</a>
+											</li>
 
-						<nav role="navigation" typeof="SiteNavigationElement" id="info-pnl" class="info-pnl wb-menu">
-							<div class="pnl-strt container visible-md visible-lg nvbar">
-								<h2>Topics menu</h2>
-								<div class="row">
-								<ul class="list-inline menu" role="menubar">
-								<li><a href="#project" class="item">WET project</a>
-								<ul class="sm list-unstyled" id="project" role="menu">
-								<li><a href="https://wet-boew.github.io/v4.0-ci/index-en.html#about">About the Web Experience Toolkit</a></li>
-								<li><a href="https://wet-boew.github.io/v4.0-ci/index-en.html#benefits">Benefits</a></li>
-								<li><a href="https://wet-boew.github.io/wet-boew/docs/ref/accolades-en.html">Awards, articles and videos</a></li>
-								<li><a href="https://wet-boew.github.io/wet-boew/docs/events-en.html">Events</a></li>
-								<li><a href="https://github.com/wet-boew/wet-boew/">Main project page</a></li>
-								<li><a href="https://wet-boew.github.io/v4.0-ci/License-en.html">Terms and conditions</a></li>
-								<li><a href="https://wet-boew.github.io/wet-boew/docs/versions/rdmp-en.html">Roadmap of past and future releases</a></li>
-								<li><a href="https://wet-boew.github.io/wet-boew/docs/versions/index-en.html">Version history</a></li>
-								<li><a href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a></li>
-								</ul>
+										</ul>
+									</details>
 								</li>
-								<li><a href="#implement" class="item">Implement WET</a>
-								<ul class="sm list-unstyled" id="implement" role="menu">
-								<li><a href="https://wet-boew.github.io/wet-boew/docs/start-en.html">Getting started with WET</a></li>
-								<li><a href="https://wet-boew.github.io/wet-boew/docs/versions/dwnld-en.html">Download WET</a></li>
-								<li><a href="https://wet-boew.github.io/v4.0-ci/demos/index-en.html">Working examples</a></li>
-								<li><a href="https://wet-boew.github.io/wet-boew/docs/index-en.html">Documentation</a></li>
-								</ul>
+								<li>
+									<a role="menuitem" tabindex="0" href="/demo/en/track-your-application/index.html"
+										class="list-group-item btn btn-link">
+										Track your application</a>
 								</li>
-								<li><a href="#contribute" class="item">Contribute to WET</a>
-								<ul class="sm list-unstyled" id="contribute" role="menu">
-								<li><a href="https://wet-boew.github.io/wet-boew/docs/bugs-en.html">Filing a bug or an issue</a></li>
-								<li><a href="https://wet-boew.github.io/wet-boew/docs/pull-en.html">Creating a pull request</a></li>
-								<li><a href="https://wet-boew.github.io/wet-boew/docs/pull-en.html#test">Testing your code</a></li>
-								<li><a href="https://wet-boew.github.io/wet-boew/docs/start-en.html#develop">Developing for WET</a></li>
-								</ul>
+								<li>
+									<details>
+										<summary class="list-group-item btn btn-link" role="menuitem"
+											aria-haspopup="true" tabindex="-1">Transition to life after service
+										</summary>
+										<ul class="list-unstyled list-group" role="menu" aria-expanded="false"
+											aria-hidden="true">
+											<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+													href="https://wet-boew.github.io/wet-boew/docs/start-en.html">Benefits
+													for transition</a></li>
+											<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+													href="https://wet-boew.github.io/wet-boew/docs/versions/dwnld-en.html">Your
+													transition task list</a></li>
+
+
+										</ul>
+									</details>
 								</li>
-								</ul>
-								</div>
-								</div>
+								<li>
+									<details>
+										<summary class="list-group-item btn btn-link" role="menuitem"
+											aria-haspopup="true" tabindex="-1">Your documents and forms</summary>
+										<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
+											aria-hidden="true">
+											<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+													href="https://wet-boew.github.io/wet-boew/docs/pull-en.html">Saved
+													forms</a></li>
+											<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+													href="https://wet-boew.github.io/wet-boew/docs/pull-en.html#test">Submitted
+													forms and&nbsp;files</a></li>
+											<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+													href="https://wet-boew.github.io/wet-boew/docs/start-en.html#develop">Upload
+													files</a></li>
+										</ul>
+									</details>
+								</li>
+								<li>
+									<a role="menuitem" tabindex="0" href="#" class="list-group-item btn btn-link">Your
+										benefits and services</a>
+								</li>
+							</ul>
 						</nav>
 
-						<div>
-							<!--
 
-							<nav typeof="SiteNavigationElement" class="accordion mva-vertical-nav">
-								<ul class="list-unstyled list-group " role="menu" aria-orientation="vertical">
-									<li role="presentation" role="menuitem" tabindex="-1" aria-haspopup="false">
-										<a href="index.html"
-											class="btn btn-link full-width list-group-item brdr-tp brdr-bttm"
-											style="text-align: left;">
-
-											Overview
-										</a>
-									</li>
-									<li role="presentation" role="menuitem" tabindex="-1" aria-haspopup="true">
-										<details class="acc-group brdr-0" style="padding-left:17px; font-size:15px; ">
-											<summary class="wb-toggle tgl-tab brdr-bttm"
-												style="padding-left: 0; padding-right: 0;"
-												data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-												Apply for benefits and services</summary>
-											<div class="tgl-panel">
-												<ul class="list-unstyled mrgn-lft-sm">
-													<li><a href="#" role="menuitem" tabindex="-1" aria-haspopup="false"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Find a
-															form</a></li>
-
-
-													<li><a href="apply-for.html" role="menuitem" tabindex="-1"
-															aria-haspopup="false"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">What can you
-															apply for?</a></li>
-												</ul>
-											</div>
-										</details>
-									</li>
-									<li>
-										<a href="track-your-application/index.html"
-											class="btn btn-link full-width list-group-item brdr-bttm"
-											style="text-align: left; background:none;">
-											Track your applications
-										</a>
-									</li>
-
-									<li>
-										<details class="acc-group brdr-0"
-											style="padding-left:17px; padding-right: 17px; font-size:15px;">
-											<summary class="wb-toggle tgl-tab brdr-bttm" style="padding-left: 0;"
-												data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-												Transition to life after service</summary>
-											<div class="tgl-panel">
-												<ul class="list-unstyled mrgn-lft-sm">
-													<li><a href="#"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Benefits for
-															transition</a></li>
-													<li><a href="#"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Your transition
-															task list</a></li>
-												</ul>
-											</div>
-										</details>
-									</li>
-									
-									<li>
-										<details class="acc-group brdr-0"
-											style="padding-left:17px; padding-right: 17px; font-size:15px;">
-											<summary class="wb-toggle tgl-tab brdr-bttm" style="padding-left: 0;"
-												data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
-												Your forms and documents</summary>
-											<div class="tgl-panel">
-												<ul class="list-unstyled mrgn-lft-sm">
-
-													<li><a href="#"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Submitted forms
-															and documents</a></li>
-													<li><a href="#"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">In-progress
-															forms</a></li>
-													<li><a href="#"
-															class="btn btn-link list-group-item full-width brdr-bttm"
-															style="text-align: left; background:none;">Upload files</a>
-													</li>
-												</ul>
-											</div>
-										</details>
-									</li>
-									<li>
-										<a href="your-benefits/index.html"
-											class="btn btn-link full-width list-group-item  brdr-bttm"
-											style="text-align: left; background:none;">
-											Your benefits and services
-										</a>
-									</li>
-
-								</ul>
-							</nav>-->
-						</div>
 
 
 
@@ -746,30 +703,28 @@ PROVISIONAL features: Responsive tables cards
 					<div class="col-sm-12 col-md-7 col-lg-9 overview">
 
 						<section>
-							<div class="">
-								<div class="">
+							<div class="mrgn-tp-md">
+								<div class="mrgn-tp-sm">
 									<h1 id="wb-cont" property="name" class="wb-inv">Overview</h1>
-									<h2 class="lead mrgn-tp-lg h1">Welcome, Mr. Noel Knockwood</h2>
+									<!--
+									<h2 class="lead h1">Welcome, Mr. Noel Knockwood</h2>-->
+									<h2 class="h3 mrgn-tp-sm mrgn-bttm-md">Welcome, Mr. Noel Knockwood</h2>
 								</div>
 							</div>
 
 						</section>
+						<!--
 						<section class="hidden">
 							<h2 class="wb-inv">Your overview</h2>
 
 							<div class="row wb-eqht-grd small hidden">
-								<!-- Panel 1 Sign-in partner -->
 								<div class="col-sm-12 col-md-7">
-									<!-- panel is target of equal height-->
 									<section class="panel panel-success hght-inhrt">
-										<!-- panel heading -->
 										<div class="panel-heading small brdr-0">
-											<!-- panel title -->
 											<h2 class="panel-title h5">
 												Complete <a href="#">your profile</a>
 											</h2>
 										</div>
-										<!-- panel-body -->
 										<div class="panel-body ">
 											<ul class="fa-ul mrgn-lft-0 mrgn-tp-0" style="margin-left: 1em;">
 												<li>
@@ -779,9 +734,7 @@ PROVISIONAL features: Responsive tables cards
 											</ul>
 
 										</div>
-										<!-- panel footer -->
 										<footer class="panel-footer brdr-0 bg-white">
-
 
 											<div class="col-xs-12">
 												<progress class="full-width" value="1" max="3"><span
@@ -792,7 +745,7 @@ PROVISIONAL features: Responsive tables cards
 									</section>
 								</div>
 
-						</section>
+						</section>-->
 
 
 						<section class="">
@@ -1074,7 +1027,7 @@ PROVISIONAL features: Responsive tables cards
 														<ul class="list-unstyled list-col-md-2 lst-spcd small">
 															<li>
 																<a href="#">
-																	Submitted forms and&nbsp;documents
+																	Submitted forms and&nbsp;files
 
 																</a>
 															</li>
@@ -1220,26 +1173,30 @@ PROVISIONAL features: Responsive tables cards
 									</section>
 								</div>
 
-								<section class="col-xs-12 wb-feeds limit-3 gc-nws cnt-wdth-lmtd">
-									<h2 class="h3">News</h2>
-									<!-- demonstrates the layout - use json feed where applicable -->
-									<ul class="feeds-cont list-unstyled lst-spcd feed-active">
-										<li><a href="#">Notice: Information on recent winter storms throughout the
-												country</a><br> <small class="feeds-date">2022-12-19</small></li>
-										<li><a href="#">Due to COVID-19, our office in Sunnybrook, Toronto will not be
-												accessible until further notice.</a><br> <small
-												class="feeds-date">2022-11-15</small></li>
-										<li><a href="#">Submit a claim: Spieser v. Attorney General of Canada et
-												al.</a><br> <small class="feeds-date">2022-04-24</small></li>
-									</ul>
-									<!-- json feed for news example
+								<section
+									class="col-xs-12 wb-feeds limit-3 gc-nws cnt-wdth-lmtd mrgn-bttm-md brdr-tp brdr-rght brdr-bttm brdr-lft">
+									<div class="well bg-white brdr-0" style="background:#fff;">
+										<h2 class="h3">News</h2>
+										<!-- demonstrates the layout - use json feed where applicable -->
+										<ul class="feeds-cont list-unstyled lst-spcd feed-active">
+											<li><a href="#">Notice: Information on recent winter storms throughout the
+													country</a><br> <small class="feeds-date">2022-12-19</small></li>
+											<li><a href="#">Due to COVID-19, our office in Sunnybrook, Toronto will not
+													be
+													accessible until further notice.</a><br> <small
+													class="feeds-date">2022-11-15</small></li>
+											<li><a href="#">Submit a claim: Spieser v. Attorney General of Canada et
+													al.</a><br> <small class="feeds-date">2022-04-24</small></li>
+										</ul>
+										<!-- json feed for news example
 										<ul class="feeds-cont list-unstyled lst-spcd">
 											<li> <a data-ajax="https://www.canada.ca/content/canadasite/api/nws/fds/en/web-feeds/revenue-agency.json" 
 												href="https://www.canada.ca/en/revenue-agency.atom.xml" rel="external">Canada Revenue Agency news items</a> 
 											</li>
 										</ul>
 										-->
-									<p>More: <a href="#" class="admin"><abbr title="">VAC</abbr> news</a></p>
+										<p>More: <a href="#" class="admin"><abbr title="">VAC</abbr> news</a></p>
+									</div>
 								</section>
 
 
@@ -1264,24 +1221,105 @@ PROVISIONAL features: Responsive tables cards
 									<p>There are no applications in progress.</p>
 								</div>
 							</section>-->
-						<footer class="pagedetails">
-							<h2 class="wb-inv">Page details</h2>
-							<div class="row">
-
-								<div class="col-xs-12">
-									<dl id="wb-dtmd">
-										<dt>Date modified:</dt>
-										<dd><time property="dateModified">2023-05-10</time></dd>
-									</dl>
-								</div>
-							</div>
-						</footer>
+						
 					</div>
 
 				</div>
 
 			</div>
 
+		</section>
+		<section class="pagedetails container">
+			<h2 class="wb-inv">Page details</h2>
+			<div class="row">
+				<div class="row">
+					<div class="col-sm-6 col-md-5 col-lg-4">
+					 <details class="brdr-0">
+					  <summary class="btn btn-default text-center">Report a problem on this page</summary>
+					  <div class="well row">
+					   <div class="gc-rprt-prblm">
+						<div class="gc-rprt-prblm-tggl" id="wb-auto-7">
+						 <form action="#">
+						  <fieldset>
+						   <legend><span class="field-name">Please select all that apply: </span></legend>
+						   <div class="checkbox">
+							<label for="problem1"><input type="checkbox" data-reveal="#broken" name="problem" value="Something is broken" id="problem1">Something is broken</label>
+						   </div>
+						   <div class="form-group hide" id="broken">
+							<label for="problem1-detail">Provide more details (optional):</label>
+							<input type="text" class="form-control full-width" id="problem1-detail">
+						   </div>
+						   <div class="checkbox">
+							<label for="problem2"><input type="checkbox" data-reveal="#spelling" name="problem" value="It has spelling or grammar mistakes" id="problem2">It has spelling or grammar mistakes</label>
+						   </div>
+						   <div class="form-group hide" id="spelling">
+							<label for="problem2-detail">Provide more details (optional):</label>
+							<input type="text" class="form-control full-width" id="problem2-detail">
+						   </div>
+						   <div class="checkbox">
+							<label for="problem3"><input type="checkbox" data-reveal="#wrong" name="problem" value="The information is wrong" id="problem3">The information is wrong</label>
+						   </div>
+						   <div class="form-group hide" id="wrong">
+							<label for="problem3-detail">Provide more details (optional):</label>
+							<input type="text" class="form-control full-width" id="problem3-detail">
+						   </div>
+						   <div class="checkbox">
+							<label for="problem4"><input type="checkbox" data-reveal="#outdated" name="problem" value="The information is outdated" id="problem4">The information is outdated</label>
+						   </div>
+						   <div class="form-group hide" id="outdated">
+							<label for="problem4-detail">Provide more details (optional):</label>
+							<input type="text" class="form-control full-width" id="problem4-detail">
+						   </div>
+						   <div class="checkbox">
+							<label for="problem5"><input type="checkbox" data-reveal="#find" name="problem" value="I can’t find what I’m looking for" id="problem5">I can’t find what I’m looking for</label>
+						   </div>
+						   <div class="form-group hide" id="find">
+							<label for="problem5-detail">Describe what you’re looking for (optional):</label>
+							<input type="text" class="form-control full-width" id="problem5-detail">
+						   </div>
+						   <div class="checkbox">
+							<label for="problem6"><input type="checkbox" data-reveal="#confusing" name="problem" value="Other" id="problem6">Other</label>
+						   </div>
+						   <div class="form-group hide" id="confusing">
+							<label for="problem6-detail">Provide more details (optional):</label>
+							<input type="text" class="form-control full-width" id="problem6-detail">
+						   </div>
+						  </fieldset>
+						  <button type="submit" class="btn btn-primary wb-toggle wb-init wb-toggle-inited" data-toggle="{&quot;stateOff&quot;: &quot;hide&quot;, &quot;stateOn&quot;: &quot;show&quot;, &quot;selector&quot;: &quot;.gc-rprt-prblm-tggl&quot;}" aria-controls="wb-auto-7 wb-auto-8">Submit</button>
+						 </form>
+						</div>
+						<div class="gc-rprt-prblm-thnk gc-rprt-prblm-tggl hide" id="wb-auto-8">
+						 <h3>Thank you for your help!</h3>
+						 <p>You will not receive a reply. For enquiries, please <a href="https://www.canada.ca/en/contact.html">contact us</a>.</p>
+						</div>
+					   </div>
+					  </div>
+					 </details>
+					</div>
+				   </div>
+				<!-- Share button
+				<div class="wb-share col-sm-4 col-md-3" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>-->
+
+				<div class="col-xs-12 mrgn-tp-sm text-muted">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 mrgn-bttm-0">
+							<div class="clearfix hidden-xs"></div>
+							<dl id="wb-dtmd">
+								<dt>Date modified:</dt>
+								<dd><time property="dateModified">2023-04-06</time></dd>
+							</dl>
+						</div>
+						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 hidden-xs text-right">
+							<p class="mrgn-tp-0 mrgn-bttm-0">UX.1.1.1</p>
+							<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
+						</div>
+						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 visible-xs">
+							<p class="mrgn-tp-0 mrgn-bttm-0">UX.1.1.1</p>
+							<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 
 	</main>
@@ -1296,15 +1334,22 @@ PROVISIONAL features: Responsive tables cards
 				<nav class="container wb-navcurr">
 
 					<ul class="list-unstyled colcount-xs-2 colcount-md-3">
-						<li id="authenticated-footer-link-1"><a
-								href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">News and
-								updates</a></li>
-						<li id="authenticated-footer-link-2"><a href="https://www.veterans.gc.ca/eng/contact">Check in
-								on your well-being</a></li>
-
-						<li><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">Talk to a mental
-								health professional</a></li>
 						<li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
+
+						<li id="authenticated-footer-link-2" >
+						<a href="#">Check in on your well-being</a></li>
+						
+						<li><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">Talk to a mental
+							health professional</a></li>
+						
+
+						
+							<li id="authenticated-footer-link-1"><a href="#">News and updates</a></li>
+
+							<li id="authenticated-footer-link-3"  ><a href="#">Provide feedback</a></li>
+	
+
+						
 
 					</ul>
 				</nav>
