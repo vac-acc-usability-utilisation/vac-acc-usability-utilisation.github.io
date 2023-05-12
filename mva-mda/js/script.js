@@ -21,13 +21,6 @@ $( document ).ready(function() {
         }       
     }
 
-    if  ($('#mva-nav-btn').attr("aria-expanded")) {
-        if (window.matchMedia('(max-width: 991px)').matches) 
-        {
-            // for overview page, if 
-            $('#mva-nav-btn').attr("aria-expanded", false)
-        }       
-    }
 
      //hide is user presses ESC key
      $(document).keyup(function(e) {
