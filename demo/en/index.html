@@ -155,15 +155,14 @@
 
 				<div class="row">
 					<div id="app-navigation" class="well col-xs-8 col-sm-6 col-lg-3 col-md-4">
-						<!-- using id="mb-pnl" to leverage WET's keyboard controls for menu -->
-						<nav role="navigation" typeof="SiteNavigationElement" id="mb-pnl" class="wb-menu mva-nav">
-							<h3>Main menu</h3>
-							<button id="mva-nav-btn" class="btn btn-default btn-lg" aria-haspopup="true" aria-controls="mva-nav-mnu" aria-expanded="false"
-								style="letter-spacing: 1.5px; color: #fff; background-color: #38414d; border:none; border-radius: 0;">
+						<!-- WAS using .wb-menu to leverage WET's keyboard controls for menu but it was through errors and interupting WET -->
+						<nav role="navigation" typeof="SiteNavigationElement" class="mva-nav">
+							<h3 class="hidden">Main menu</h3>
+							<button id="mva-nav-btn" class="btn btn-default btn-lg" aria-haspopup="true" aria-controls="mva-nav-mnu" aria-expanded="false">
 								MENU
 								<span class="fa fa-chevron-down small hidden-md hidden-lg"></span>
 							</button>
-							<ul class="list-unstyled list-group" role="menu" id="mva-nav-mnu" aria-orientation="vertical">
+							<ul class="list-unstyled list-group " role="menu" id="mva-nav-mnu" aria-orientation="vertical">
 								<li>
 									<a role="menuitem" tabindex="0" href="/demo/en/index.html"
 										class="list-group-item btn btn-link active">
@@ -196,7 +195,7 @@
 								<li>
 									<details>
 										<summary class="list-group-item btn btn-link" role="menuitem"
-											aria-haspopup="true" tabindex="-1">Life after service
+											aria-haspopup="true" tabindex="0">Life after service
 										</summary>
 										<ul class="list-unstyled list-group" role="menu" aria-expanded="false"
 											aria-hidden="true">
@@ -214,7 +213,7 @@
 								<li>
 									<details>
 										<summary class="list-group-item btn btn-link" role="menuitem"
-											aria-haspopup="true" tabindex="-1">Your documents and forms</summary>
+											aria-haspopup="true" tabindex="0">Your documents and forms</summary>
 										<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
 											aria-hidden="true">
 											<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
@@ -241,7 +240,7 @@
 
 
 					</div>
-					<div class="col-sm-12 col-md-7 col-lg-9 overview">
+					<div class="col-sm-12 col-md-8 col-lg-9 overview">
 
 						<section>
 							
@@ -769,7 +768,7 @@
 
 			</div>
 
-		</section>
+		</section>Y
 		<section class="pagedetails container">
 			<h2 class="wb-inv">Page details</h2>
 			<div class="row">
