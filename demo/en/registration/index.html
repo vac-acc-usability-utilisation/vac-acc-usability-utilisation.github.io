@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
     <style>
-        
         .form-control.input-lg {
             padding: 10px 16px;
         }
@@ -123,211 +122,327 @@
 
         </div>
     </nav>-->
-    <!-- Static header ends -->
-    <!-- Page: frontdoor
+        <!-- Static header ends -->
+        <!-- Page: frontdoor
 
             VAC   .\^/.   ACC    
             ACC  \=%¥%=/  VAC 
             VAC   ^`|`^   ACC 
             
             -->
-    <main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
+        <main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
 
-        <section class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h1 id="wb-cont" property="name">
-                        Connect your sign-in partner to My VAC Account
-                    </h1>
-                    <!--
+            <section class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <!--
                     <p>This is the first time you've signed in using this sign-in partner.</p>
                     <p>Let's get you connected to your My VAC Account.</p>-->
 
-                    <div class="wb-frmvld mrgn-tp-lg mrgn-bttm-xl">
-                        <form action="#" method="get" id="steps-example">
-                            
-                            <fieldset id="identifier">
-                                <legend class="wb-inv">Basic information</legend>
-                                <div>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-sm-6 col-md-3 text-right">
-                                                <label for="firstname" class="required"><span class="field-name">First
-                                                    name</span><br class="hidden-sm"> <strong class="required">(required)</strong></label>
+                        <div class="wb-frmvld mrgn-tp-lg mrgn-bttm-xl" id="validate-identity">
+                            <h1 id="wb-cont" property="name">
+                                Connect your sign-in partner to My&nbsp;<abbr title="">VAC</abbr>&nbsp;Account
+                            </h1>
+
+                            <div class="spinner">
+                                <div class="text-center pull-left mrgn-tp-md">
+                                    <i class="fa fa-spinner fa-spin fa-3x fa-fw opct-50"></i>
+                                    <br>
+                                    <span class="lead">Loading...</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+
+                            <form action="#" method="post" class="hidden mrgn-tp-lg" id="id-check">
+
+                                <fieldset id="identifier">
+                                    <legend class="wb-inv">Basic information</legend>
+                                    <div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-6 col-md-3 text-right">
+                                                    <label for="firstname" class="required"><span
+                                                            class="field-name">First
+                                                            name</span><br class="hidden-sm"> <strong
+                                                            class="required">(required)</strong></label>
+                                                </div>
+                                                <div class="col-sm-6">
+
+                                                    <input class="form-control input-lg" id="firstname" name="firstname"
+                                                        autocomplete="name" type="text" data-rule-minlength="2"
+                                                        required="required" />
+                                                </div>
                                             </div>
-                                            <div class="col-sm-6">
-                                                
-                                            <input class="form-control input-lg" id="firstname" name="firstname" type="text"
-                                                data-rule-minlength="2" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-6 col-md-3 text-right">
+                                                    <label for="lastname" class="required"><span class="field-name">Last
+                                                            name</span><br class="hidden-sm"> <strong
+                                                            class="required">(required)</strong></label>
+                                                </div>
+                                                <div class="col-sm-6">
+
+                                                    <input class="form-control input-lg" id="lastname" name="lastname"
+                                                        type="text" data-rule-minlength="2" required="required" />
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                       <div class="row">
-                                        <div class="col-sm-6 col-md-3 text-right">
-                                            <label for="lastname" class="required"><span class="field-name">Last
-                                                name</span><br class="hidden-sm"> <strong class="required">(required)</strong></label>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            
-                                        <input class="form-control input-lg" id="lastname" name="lastname" type="text"
-                                            data-rule-minlength="2" required="required" />
-                                        </div>
-                                       </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <!--  -->
-                                    
+                                        <div class="clearfix"></div>
+
+
+                                        <!--  -->
+
                                         <div class="row">
                                             <fieldset class="subfields">
-                                            <div class="col-sm-6 col-md-3">
-                                                <div class="">
-                                                    
-                                                        <legend style="font-weight: 700; font-size: 16px;" class="mrgn-tp-0 mrgn-bttm-0 required text-right">Date of birth <br class="hidden-sm"> <strong class="required">(required)</strong> <span class="datepicker-format"> (<abbr
-                                                            title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></legend>
-                                                           
-            
-                                                        
-            
+                                                <div class="col-sm-6 col-md-3">
+                                                    <div class="">
+
+                                                        <legend
+                                                            style="font-weight: 700; font-size: 16px; line-height: 23px;"
+                                                            class="mrgn-tp-0 mrgn-bttm-0 required text-right">Date of
+                                                            birth <br class="hidden-sm"> <strong
+                                                                class="required">(required)</strong> <span
+                                                                class="datepicker-format"> (<abbr
+                                                                    title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>
+                                                        </legend>
+
+
+
+
                                                     </div>
-                                                        
+
                                                 </div>
-                                            
-                                            <div class="col-sm-6 col-md-6">
-                                                <div class="form-group pull-left mrgn-rght-sm">
-                                                    <label for="dob-y" class="required wb-inv"><span class="field-name">Date of birth (Year) </span>YYYY <strong class="required">(required)</strong></label>
-                                                    <input class="form-control input-lg" id="dob-y" name="dob-y" aria-describedby='dob' required="required" size="4" maxlength="4" data-rule-minlength="4" min="1900" max="2023"/>
-                                                    <p class="small mrgn-lft-md mrgn-bttm-0">YYYY</p>
-        
-                                                    </div>   
+
+                                                <div class="col-sm-6 col-md-6">
                                                     <div class="form-group pull-left mrgn-rght-sm">
-                                                    <label for="dob-m" class="required wb-inv"><span class="field-name">Date of birth (Month) </span>MM <strong class="required">(required)</strong></label>
-                                                    <input class="form-control input-lg" id="dob-m" name="dob-m" aria-describedby='dob' required="required" size="2" maxlength="2" data-rule-minlength="1" min="1" max="12"/>
-                                                    <p class="small mrgn-lft-md mrgn-bttm-0">MM</p>
-        
-                                                </div>
-                                                
+                                                        <label for="dob-y" class="required wb-inv"><span
+                                                                class="field-name">Date of birth (Year) </span>YYYY
+                                                            <strong class="required">(required)</strong></label>
+                                                        <input class="form-control input-lg" id="dob-y" name="dob-y"
+                                                            aria-describedby='dob' required="required" size="4"
+                                                            maxlength="4" data-rule-minlength="4" min="1900"
+                                                            max="2023" />
+                                                        <p class="small mrgn-lft-md mrgn-bttm-0">YYYY</p>
+
+                                                    </div>
                                                     <div class="form-group pull-left mrgn-rght-sm">
-                                                    <label for="dob-d" class="required wb-inv"><span class="field-name">Date of birth (Day) </span>DD <strong class="required">(required)</strong></label>
-                                                    <input class="form-control input-lg" id="dob-d" name="dob-d" aria-describedby='dob' required="required" size="2" maxlength="2"  data-rule-minlength="1" min="1" max="31"/>
-                                                    <p class="small mrgn-lft-md mrgn-bttm-0">DD</p>
-                                            </div>
-                                            </div>
-                                        </fieldset>
-                                        </div>
+                                                        <label for="dob-m" class="required wb-inv"><span
+                                                                class="field-name">Date of birth (Month) </span>MM
+                                                            <strong class="required">(required)</strong></label>
+                                                        <input class="form-control input-lg" id="dob-m" name="dob-m"
+                                                            aria-describedby='dob' required="required" size="2"
+                                                            maxlength="2" data-rule-minlength="1" min="1" max="12" />
+                                                        <p class="small mrgn-lft-md mrgn-bttm-0">MM</p>
 
-                                        <div class="row">
-                                            <fieldset class="subfields ">
-                                            <div class="col-sm-6 col-md-3 text-right">
-                                                <legend id="pcode" style="font-weight: 700; font-size: 16px;" class="mrgn-tp-0 mrgn-bttm-0 required">Postal code <br class="hidden-sm"><strong class="required">(required)</strong></legend>
+                                                    </div>
 
-                                                        
+                                                    <div class="form-group pull-left mrgn-rght-sm">
+                                                        <label for="dob-d" class="required wb-inv"><span
+                                                                class="field-name">Date of birth (Day) </span>DD <strong
+                                                                class="required">(required)</strong></label>
+                                                        <input class="form-control input-lg" id="dob-d" name="dob-d"
+                                                            aria-describedby='dob' required="required" size="2"
+                                                            maxlength="2" data-rule-minlength="1" min="1" max="31" />
+                                                        <p class="small mrgn-lft-md mrgn-bttm-0">DD</p>
+                                                    </div>
                                                 </div>
-                                            
-                                            <div class="col-sm-6 col-md-9">
-                                               <div class="pull-left mrgn-rght-sm">
-                                                <input class="form-control input-lg" id="pcodeca1" name="pcodeca1" aria-describedby="pcode" type="text" autocomplete="postal-code" size="7" maxlength="7" required="required" data-rule-postalCodeCA="true" />
-
-                                               </div>
-                                               <div class="pull-left mrgn-rght-sm">
-                                                
-                                                <label for="country" class="required wb-inv">Country <strong class="required">(required)</strong></label>
-                                                <select name="country" id="country" class="form-control input-lg">
-                                                    <option value="CA" selected="selected">Canada</option>
-                                                    <option value="US">United States</option>                                            
-                                                    <option value="misc">Other</option>
-                                                
-                                                
-                                                </select>
-                                               </div>
-                                            </div>
-                                        </fieldset>
+                                            </fieldset>
                                         </div>
 
-                                        <hr>
+                                        <div class="row mrgn-bttm-lg">
+                                            <fieldset class="subfields form-group">
+                                                <div class="col-sm-6 col-md-3 text-right">
+                                                    <legend id="pcode"
+                                                        style="font-weight: 700; font-size: 16px; line-height: 23px;"
+                                                        class="mrgn-tp-0 mrgn-bttm-0 required"><span
+                                                            class="field-name">Postal code</span> <br
+                                                            class="hidden-sm"><strong
+                                                            class="required">(required)</strong></legend>
 
-                                        <div class="row">
-                                            <fieldset class="subfields">
-                                            <div class="col-sm-6 col-md-3 text-right">
-                                                <legend id="pcode" style="font-weight: 700; font-size: 16px;" class="required mrgn-bttm-sm">Identifying number<br class="hidden-sm"> <strong class="required">(required)</strong></legend>
-                                                     
+
                                                 </div>
-                                            
-                                            <div class="col-sm-6 col-md-9 mrgn-bttm-md">
-                                               
-                                             
-                                                <label for="country" class="required wb-inv">Number <strong class="required">(required)</strong></label>
-                                                <select name="country" id="country" class="form-control input-lg" multiple="multiple">
-                                                    <option value="CA" selected>Service number (CAF)</option>
-                                                    <option value="US">Regimental number (RCMP)</option>                                            
-                                                    <option value="misc">Client ID / CSDN ID (VAC)</option>
-                                                    <option value="misc">File or Health card number (VAC)</option>
-                                                </select>
-                                               
-                                            </div>
-                                        </fieldset>
+
+                                                <div class="col-sm-6 col-md-9">
+                                                    <div class="pull-left mrgn-rght-sm">
+                                                        <input class="form-control input-lg" id="pcodeca1"
+                                                            name="pcodeca1" aria-describedby="pcode" type="text"
+                                                            autocomplete="postal-code" size="7" maxlength="7"
+                                                            required="required" data-rule-postalCodeCA="true" />
+
+                                                    </div>
+                                                    <div class="pull-left mrgn-rght-sm">
+
+                                                        <label for="country" class="required wb-inv">Country <strong
+                                                                class="required">(required)</strong></label>
+                                                        <select name="country" id="country"
+                                                            class="form-control input-lg">
+                                                            <option value="CA" selected="selected">Canada</option>
+                                                            <option value="US">United States</option>
+                                                            <option value="misc">Other</option>
+
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="row">
+                                            <fieldset class="subfields form-group">
+                                                <div class="col-sm-6 col-md-3 text-right">
+                                                    <legend id="pcode"
+                                                        style="font-weight: 700; font-size: 16px; line-height: 23px;"
+                                                        class="required mrgn-bttm-sm">Identifying number<br
+                                                            class="hidden-sm"> <strong
+                                                            class="required">(required)</strong></legend>
+
+                                                </div>
+
+                                                <div class="col-sm-6 col-md-9 mrgn-bttm-md">
+
+
+                                                    <label for="id-number" class="required wb-inv">Number <strong
+                                                            class="required">(required)</strong></label>
+                                                    <select name="id-number" id="id-number"
+                                                        class="form-control input-lg" multiple="multiple">
+                                                        <option value="cafServiceNumber" selected>Service number (CAF)
+                                                        </option>
+                                                        <option value="reg-number-section">Regimental number (RCMP)
+                                                        </option>
+                                                        <option value="CSDNNumber">Client ID / CSDN ID (VAC)</option>
+                                                        <option value="file-number">File or Health card number (VAC)
+                                                        </option>
+                                                    </select>
+
+                                                </div>
+                                            </fieldset>
                                         </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-6 col-md-3 text-right">  
+                                        <div class="row form-group" id="service-number-section">
+                                            <div class="col-sm-6 col-md-3 text-right">
 
                                                 <label for="cafServiceNumberField" class="control-label required ">
-                                                    <span class="field-name ">Service number</span><br class="hidden-sm"> 
+                                                    <span class="field-name ">Service number</span><br
+                                                        class="hidden-sm">
                                                     <strong class="required">(required)</strong>
                                                 </label>
 
-                                                        
-                                                </div>
-                                            
+
+                                            </div>
+
                                             <div class="col-sm-6 col-md-9">
-                                               
-                                                <input type="text" class="form-control input-lg" 
-                                                id="cafServiceNumberField" 
-                                                required="required" 
-                                                data-rule-nowhitespace="true" 
-                                                data-rule-alphaornumeric="true" 
-                                                data-rule-serviceNumber="true" 
-                                                data-rule-rangelength="[5,9]"
-                                                    />
-                                               
+
+                                                <input type="text" class="form-control input-lg"
+                                                    id="cafServiceNumberField" required="required"
+                                                    data-rule-nowhitespace="true" data-rule-alphaornumeric="true"
+                                                    data-rule-serviceNumber="true" data-rule-rangelength="[5,9]" />
+
                                             </div>
-                                        </div>
-                                        
-                                       
-                                        <div class="row">
-                                            <div class="col-sm-12 col-md-3 col-md-offset-3">
-                                                <p class="small mrgn-bttm-lg mrgn-tp-md"> <a href="#">Enter a one-time verification code</a></p>  
-                                            </div>
-                                            
                                         </div>
 
-                                        <div class="row hidden">
-                                            <div class="col-sm-6 col-md-3 text-right ">  
+                                        <div class="row form-group hidden" id="reg-number-section">
+                                            <div class="col-sm-6 col-md-3 text-right">
+
+                                                <label for="regimentalNumberField" class="control-label required ">
+                                                    <span class="field-name ">Regimental number</span><br
+                                                        class="hidden-sm">
+                                                    <strong class="required">(required)</strong>
+                                                </label>
+
+
+                                            </div>
+
+                                            <div class="col-sm-6 col-md-9">
+
+                                                <input type="text" class="form-control input-lg"
+                                                    id="regimentalNumberField" required="required"
+                                                    data-rule-nowhitespace="true" data-rule-alphaornumeric="true"
+                                                    data-rule-serviceNumber="true" data-rule-rangelength="[2,9]" />
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group hidden" id="CSDN-number-section">
+                                            <div class="col-sm-6 col-md-3 text-right">
+
+                                                <label for="CSDNNumberField" class="control-label required ">
+                                                    <span class="field-name ">CSDN number</span><br class="hidden-sm">
+                                                    <strong class="required">(required)</strong>
+                                                </label>
+
+
+                                            </div>
+
+                                            <div class="col-sm-6 col-md-9">
+
+                                                <input type="text" class="form-control input-lg" id="CSDNNumberField"
+                                                    required="required" data-rule-nowhitespace="true"
+                                                    data-rule-alphaornumeric="true" data-rule-serviceNumber="true"
+                                                    data-rule-rangelength="[2,9]" />
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group hidden" id="file-number-section">
+                                            <div class="col-sm-6 col-md-3 text-right">
+
+                                                <label for="fileNumberField" class="control-label required ">
+                                                    <span class="field-name ">File or Health card number</span>
+                                                    <strong class="required">(required)</strong>
+                                                </label>
+
+
+                                            </div>
+
+                                            <div class="col-sm-6 col-md-9">
+
+                                                <input type="text" class="form-control input-lg" id="fileNumberField"
+                                                    required="required" data-rule-nowhitespace="true"
+                                                    data-rule-alphaornumeric="true" data-rule-serviceNumber="true"
+                                                    data-rule-rangelength="[2,9]" />
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-6 col-md-offset-3">
+                                                <p class="small mrgn-bttm-lg mrgn-tp-lg"> <a
+                                                        href="#verification-code">Enter a
+                                                        one-time verification code.</a></p>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="verification-code" class="row form-group hidden">
+                                            <div class="col-sm-6 col-md-3 text-right ">
 
                                                 <label for="cafServiceNumberField" class="control-label required ">
                                                     <span class="field-name ">One-time verification code</span>
                                                     <strong class="required">(required)</strong>
                                                 </label>
 
-                                                        
-                                                </div>
-                                            
+
+                                            </div>
+
                                             <div class="col-sm-6 col-md-9">
-                                               
-                                                <input type="text" class="form-control input-lg" 
-                                                id="cafServiceNumberField" 
-                                                required="required" 
-                                                data-rule-nowhitespace="true" 
-                                                data-rule-alphaornumeric="true" 
-                                                data-rule-serviceNumber="true" 
-                                                data-rule-rangelength="[5,9]"
-                                                    />
-                                               
+
+                                                <input type="text" class="form-control input-lg"
+                                                    id="cafServiceNumberField" required="required"
+                                                    data-rule-nowhitespace="true" data-rule-alphaornumeric="true"
+                                                    data-rule-serviceNumber="true" data-rule-rangelength="[5,9]" />
+
+                                                <p class="small mrgn-bttm-lg mrgn-tp-sm"> <a
+                                                        href="#verification-code-cancel">I do not have a
+                                                        one-time verification code.</a></p>
+
                                             </div>
                                         </div>
-                            
-                                    <div class="clearfix"></div>
-                                    <!--
+
+                                        <div class="clearfix"></div>
+                                        <!--
                                     <div class="wb-fieldflow col-xs-12 hidden" id="numbers"
 					
                                     data-wb-fieldflow='
@@ -432,10 +547,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p class="small mrgn-bttm-lg"> <a href="#">Enter a one-time verification code</a></p>-->  
-                                </div>
-                            </fieldset>
-                            <!--
+                                <p class="small mrgn-bttm-lg"> <a href="#">Enter a one-time verification code</a></p>-->
+                                    </div>
+                                </fieldset>
+                                <!--
                             <fieldset id="client">
                                 <legend>Your details</legend>
                                 <div>
@@ -472,7 +587,7 @@
 
                                     <div class="form-group form-inline">
                                         <fieldset class="subfields">
-                                            <legend id="pcode" style="font-weight: 700; font-size: 16px;" class="mrgn-tp-0 mrgn-bttm-0 required">Postal code <strong class="required">(required)</strong></legend>
+                                            <legend id="pcode" style="font-weight: 700; font-size: 16px; line-height: 23px;" class="mrgn-tp-0 mrgn-bttm-0 required">Postal code <strong class="required">(required)</strong></legend>
 
                                                
 
@@ -501,7 +616,7 @@
                                     <hr>
                                     <div class="clearfix"></div>-->
 
-                                    <!--
+                                <!--
                                         .gc-chckbxrdio input[type=checkbox]+label, .gc-chckbxrdio-sm input[type=radio]+label {
                                             display: inline-block;
                                             line-height: 1;
@@ -523,12 +638,12 @@
                                         }
                                     -->
 
-                                    
 
-                                    <!--
+
+                                <!--
                                     <div class="form-group form-inline mrgn-bttm-lg">
                                         <fieldset class="sub-fields">
-                                            <legend id="pcode" style="font-weight: 700; font-size: 16px;" class="mrgn-tp-0 mrgn-bttm-0 required">Postal code <strong class="required">(required)</strong></legend>
+                                            <legend id="pcode" style="font-weight: 700; font-size: 16px; line-height: 23px;" class="mrgn-tp-0 mrgn-bttm-0 required">Postal code <strong class="required">(required)</strong></legend>
 
                                                 <div class="form-group">
                                                     <label for="pcodeca1" class="required wb-inv"><span class="field-name">Postal code</span> <strong class="required">(required)</strong></label>
@@ -552,10 +667,10 @@
                                     
                                    
                                     </div>-->
-                                   
-                                    
-                                   
-                                    <!--
+
+
+
+                                <!--
                                     <div class="form-group">
                                         <fieldset class="usa-fieldset">
                                             <legend class="usa-legend">Date of Birth</legend>
@@ -597,7 +712,7 @@
                                  
                               
                             </fieldset>-->
-                            <!--
+                                <!--
                             <fieldset id="profile" class="">
                                 <legend>Complete your profile</legend>
                                 <div>
@@ -657,13 +772,13 @@
                                             <input class="form-control input-lg" id="firstname" name="firstname" type="text"
                                                 data-rule-minlength="2" required="required" />
                                         </div>-->
-                                        <!--
+                                <!--
                                         <div class="form-group">
                                             <label for="mid-name"><span class="field-name">Middle name</span></label>
                                             <input class="form-control input-lg" id="mid-name" name="mid-name" type="text" />
     
                                             </div>-->
-                                            <!--
+                                <!--
                                         <div class="form-group">
                                             <label for="lastname" class="required"><span class="field-name">Last
                                                     name</span> <strong class="required">(required)</strong></label>
@@ -716,7 +831,7 @@
                                    <hr>
                                     <div class="form-group form-inline gc-chckbxrdio small">
                                         <fieldset class="subfields">
-                                            <legend class="mrgn-bttm-0 required" style="font-size: 16px; font-weight: 700; margin-bottom:0;"><span class="field-name">Would you like to be identified by rank or title?</span> <strong class="required">(required)</strong></legend>
+                                            <legend class="mrgn-bttm-0 required" style="font-size: 16px; font-weight: 700; margin-bottom:0;"><span class="field-name">Would you like to be identified by Title or rank?</span> <strong class="required">(required)</strong></legend>
                                             
                                             <div class="radio label-inline" >
                                                 <input id="id1" type="radio" name="optidentified" >
@@ -781,7 +896,7 @@
                                     <hr>
                                 </div>
                             </fieldset>-->
-                            <!--
+                                <!--
                                  <fieldset class="sub-fields">
                                             <div class="form-group form-inline gc-chckbxrdio small">
                                                 <fieldset class="subfields">
@@ -799,96 +914,157 @@
                                             </div>
                                           </fieldset>
                             -->
-                            <!--
+                                <!--
                             <p class="small mrgn-tp-0 mrgn-bttm-lg"><a href="#">Enter a one-time password</a></p>
                                 -->
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <input type="submit" name="submit" value="Next" class="btn btn-primary btn-lg pull-right mrgn-tp-lg"/>
-                                </div>
-                            </div>
-
-
-                   
-                            
-
-                        </form>
-                    </div>
-
-
-                    
-                    <h2 class="">Register for My VAC Account</h2>
-                    <div class="wb-frmvld mrgn-tp-lg">
-                        
-                        <form action="#">
-                            <section class="container">
-                                <div class="form-group ">
-                                    <div class="row">
-                                        <div class="col-sm-6 col-md-3 text-right">
-                                            <label for="firstname" class="required"><span class="field-name">First
-                                                name</span><div class="clearfix hidden-sm"></div><strong class="required">(required)</strong></label>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            
-                                        <input class="form-control input-lg" id="firstname" name="firstname" type="text"
-                                            data-rule-minlength="2" required="required" value="Steven"/>
-                                        </div>
+                                <div class="row">
+                                    <div class="col-md-offset-3">
+                                        <button id="validate-identity-btn" class="btn btn-primary btn-lg mrgn-tp-lg">
+                                            Next
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                   <div class="row">
-                                    <div class="col-sm-6 col-md-3 text-right">
-                                        <label for="name" class="required" style="margin-bottom: 0;"><span class="field-name">Middle
-                                            name</span><div class="clearfix hidden-sm"></div><strong class="required">(required)</strong></label>
-                                            
-                                    </div>
-                                    <div class="col-sm-6">
-                                        
-                                    <input class="form-control input-lg" id="name" name="name" type="text"
-                                        data-rule-minlength="2" required="required" />
-                                        <div class="checkbox" style="padding-left:18px;">
-                                            <input id="remember2" type="checkbox" style=" margin-top: 4px; ">
-                                            <label for="remember2" class="text-muted" style="font-size: 14px; padding-left: 0px;">I don't have a middle name</label>
-                                        </div>
-                                    </div>
-                                    
-                                   </div>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <div class="row">
-                                     <div class="col-sm-6 col-md-3 text-right">
-                                         <label for="lastname" class="required"><span class="field-name">Last
-                                             name</span><div class="clearfix hidden-sm"></div><strong class="required">(required)</strong></label>
-                                     </div>
-                                     <div class="col-sm-6">
-                                         
-                                     <input class="form-control input-lg" id="lastname" name="lastname" type="text"
-                                         data-rule-minlength="2" required="required" value="Timmins"/>
-                                     </div>
-                                    </div>
-                                 </div>
-                                 <section>
-                                    <div class="row">
-                                        <fieldset class="gc-chckbxrdio mrgn-tp-lg">
-                                            <div class="col-sm-6 col-md-3 text-right small">
-                                                <legend class="required" style="font-size: 16px;">Sex at birth<br class="hidden-sm"> <strong class="required">(required)</strong></legend>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <p>What was your sex at birth?</p>
-                                                <div class="radio label-inline mrgn-bttm-md">
-                                                    <input id="inlineRadioSex1" type="radio" name="sexradio">
-                                                    <label for="inlineRadioSex1">Male</label>
+
+
+
+
+
+                            </form>
+                        </div>
+
+
+
+                        <section id="registration" class="hidden">
+                            <h1>Register for My VAC Account</h1>
+                            <div class="wb-frmvld mrgn-tp-lg">
+
+                                <form action="#" action="post">
+                                    <section class="container">
+                                        <div class="form-group ">
+                                            <div class="row">
+                                                <div class="col-sm-6 col-md-3 text-right">
+                                                    <label><span class="field-name">First
+                                                            name</span></label>
                                                 </div>
-                                                <div class="radio label-inline mrgn-bttm-md">
-                                                    <input id="inlineRadioSex2" type="radio" name="sexradio">
-                                                    <label for="inlineRadioSex2">Female</label>
+                                                <div class="col-sm-6">
+
+                                                    <p style="font-size: 18px; line-height: 1.45;;">
+                                                        <a href="#firstname"><!--insert--><span
+                                                                class="fa fa-edit small opct-50 mrgn-lft-sm"></span></a>
+
+                                                    </p>
                                                 </div>
                                             </div>
-                                        </fieldset>
-                                    </div>
-                                    
-                                </section>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-6 col-md-3 text-right">
+                                                    <label for="mid-name" class="required mid-name-group"
+                                                        style="margin-bottom: 0;"><span class="field-name">Middle
+                                                            name</span>
+                                                        <div class="clearfix hidden-sm"></div><strong
+                                                            class="required">(required)</strong>
+                                                    </label>
+
+                                                </div>
+                                                <div class="col-sm-6">
+
+                                                    <div class="">
+                                                        <div class=""> <input
+                                                                class="form-control input-lg mid-name-group"
+                                                                id="mid-name" name="mid-name" type="text"
+                                                                data-rule-minlength="2" required="required" /></div>
+                                                        <div class="form-inline mrgn-tp-md">
+                                                            <div class="checkbox text-muted">
+                                                                <input id="no-middle-name" type="checkbox">
+                                                                <label for="no-middle-name" class="text-muted"
+                                                                    style="font-size: 14px; padding-left: 0px;">I don't
+                                                                    have a middle name</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-6 col-md-3 text-right">
+                                                    <label><span class="field-name">Last
+                                                            name</span></label>
+                                                </div>
+                                                <div class="col-sm-6">
+
+                                                    <p style="font-size: 18px; line-height: 1.45;">
+                                                        <a href="#lastname"><span
+                                                                class="fa fa-edit small opct-50 mrgn-lft-sm"></span></a>
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-6 col-md-3 text-right">
+                                                    <label><span class="field-name">Date of birth</span></label>
+                                                </div>
+                                                <div class="col-sm-6">
+
+                                                    <p style="font-size: 18px; line-height: 1.45;">
+                                                        <a href="#dob"><span
+                                                                class="fa fa-edit small opct-50 mrgn-lft-sm"></span></a>
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-6 col-md-3 text-right">
+                                                    <label><span class="field-name">Service number</span></label>
+                                                </div>
+                                                <div class="col-sm-6">
+
+                                                    <p style="font-size: 18px; line-height: 1.45;">
+                                                        <a href="#service"><!----><span
+                                                                class="fa fa-edit small opct-50 mrgn-lft-sm"></span></a>
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <section>
+                                            <div class="row">
+                                                <fieldset class="gc-chckbxrdio form-inline mrgn-tp-lg">
+                                                    <div class="col-md-offset-3">
+                                                        <p>What is your sex assigned at birth?</p>
+
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-3 text-right small">
+                                                        <legend class="required"
+                                                            style="font-size: 16px; line-height: 23px;">Sex at birth<br
+                                                                class="hidden-sm"> <strong
+                                                                class="required">(required)</strong></legend>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="radio label-inline mrgn-bttm-md">
+                                                            <input id="inlineRadioSex1" type="radio" name="sexradio">
+                                                            <label for="inlineRadioSex1">Male</label>
+                                                        </div>
+                                                        <div class="radio label-inline mrgn-bttm-md">
+                                                            <input id="inlineRadioSex2" type="radio" name="sexradio">
+                                                            <label for="inlineRadioSex2">Female</label>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+
+                                        </section>
+                                        <!--       
                                 <section>
                                     <div class="row">
                                         <fieldset class="gc-chckbxrdio  mrgn-tp-lg">
@@ -896,7 +1072,7 @@
                                                 <legend style="font-size: 16px;">Gender </legend>
                                             </div>
                                             <div class="col-sm-6">
-                                                <p>What is your gender?</p>
+                                                <p style="padding-top: 2px;">What is your gender?</p>
                                                 <div class="radio label-inline mrgn-bttm-md">
                                                     <input id="inlineRadioGender1" type="radio" name="genderradio">
                                                     <label for="inlineRadioGender1">Man</label>
@@ -917,206 +1093,469 @@
                                         </fieldset>
                                     </div>
                                     
-                                </section>
-                                 <section>
-                                    <div class="row">
-                                        <fieldset class="gc-chckbxrdio mrgn-tp-lg">
-                                            <div class="col-sm-6 col-md-3 text-right small">
-                                                <legend class="required" style="font-size: 16px;">Rank or title<br class="hidden-sm"> <strong class="required">(required)</strong></legend>
+                                </section>-->
+                                        <section>
+                                            <div class="row">
+                                                <fieldset class="gc-chckbxrdio form-inline mrgn-tp-lg">
+                                                    <div class="col-md-offset-3">
+                                                        <p>Would you like to be addressed by title or rank?</p>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-3 text-right small">
+                                                        <legend class="required"
+                                                            style="font-size: 16px; line-height: 23px;">Title or rank<br
+                                                                class="hidden-sm"> <strong
+                                                                class="required">(required)</strong></legend>
+                                                    </div>
+                                                    <div class="col-sm-6">
+
+                                                        <div class="radio label-inline mrgn-bttm-md">
+                                                            <input id="inlineRadio1" type="radio" name="titleradio">
+                                                            <label for="inlineRadio1">Title</label>
+                                                        </div>
+                                                        <div class="radio label-inline mrgn-bttm-md">
+                                                            <input id="inlineRadio2" type="radio" name="titleradio">
+                                                            <label for="inlineRadio2">Rank</label>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
                                             </div>
-                                            <div class="col-sm-6">
-                                                <p>Would you like to be identified by rank or title?</p>
-                                                <div class="radio label-inline mrgn-bttm-md">
-                                                    <input id="inlineRadio1" type="radio" name="titleradio">
-                                                    <label for="inlineRadio1">Title</label>
-                                                </div>
-                                                <div class="radio label-inline mrgn-bttm-md">
-                                                    <input id="inlineRadio2" type="radio" name="titleradio">
-                                                    <label for="inlineRadio2">Rank</label>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                    </div>
-                                    
-                                </section>
-                                <section >
-                                    <div class="row">
-                                        <fieldset class="gc-chckbxrdio form-inline mrgn-tp-lg">
-                                            <div class="col-sm-6 col-md-3 text-right">
-                                                <label class="required" for="title" style="font-size:16px;">Select your title:<br class="hidden-sm"> <strong class="required">(required)</strong></label>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <select name="title" id="title" class="form-control input-lg">
-                                                    <option value="0" selected></option>
-                                                    <option value="1">Mr.</option>
-                                                    <option value="2">Mrs.</option>
-                                                    <option value="3">Miss</option>
-                                                    <option value="4">Ms.</option>
-                                                    <option value="8">Other</option>
-                                                
-                                                
-                                                </select>
-                                            </div>
-                                        </fieldset>
-                                    </div>
-                                    
-                                </section>
+
+                                        </section>
+                                        <section id="title-section" class="hidden">
+                                            <div class="row">
+                                                <fieldset class="gc-chckbxrdio form-inline mrgn-tp-lg">
+                                                    <div class="col-sm-6 col-md-3 text-right">
+                                                        <label class="required" for="title"
+                                                            style="font-size:16px; line-height: 23px;">Title<br
+                                                                class="hidden-sm"> <strong
+                                                                class="required">(required)</strong></label>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <select name="title" id="title" class="form-control input-lg">
+                                                            <option value="0" selected></option>
+                                                            <option value="1">Mr.</option>
+                                                            <option value="2">Mrs.</option>
+                                                            <option value="3">Miss</option>
+                                                            <option value="4">Ms.</option>
+                                                            <option value="8">Other</option>
 
 
-                                 <hr>
-
-                                 <section >
-                                    <div class="row">
-                                        <div class="col-sm-6 col-md-offset-2">
-                                            <h2 class="mrgn-tp-0 ">Home address</h2>
-                                        </div>  
-                                    </div>
-                                    <div class="row">
-                                        <fieldset class="gc-chckbxrdio form-inline mrgn-tp-lg">
-                                            <div class="col-sm-6 col-md-3 text-right">
-                                                
-                                                <label class="required" for="title" style="font-size:16px;">Street number<br class="hidden-sm"> <strong class="required">(required)</strong></label>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <!--text and prefix-->
-                                                <div class="row">
-                                                    <div class="pull-left mrgn-rght-sm col-sm-4 col-md-3" style="padding-right: 0;">
-                                                        <input class="form-control input-lg " id="street-suffix" name="street-suffix" type="number" autocomplete="address-line1" required="required" />
-        
-                                                       </div>
-                                                       <div class="pull-left mrgn-rght-sm col-sm-4 col-md-3">
-                                                        
-                                                        <label for="street-suffix" class="required wb-inv">Street address suffix <strong class="required">(required)</strong></label>
-                                                        <select name="street-suffix" id="street-suffix" class="form-control input-lg">
-                                                            <option value=""></option>
-                                                            <option value="A">A</option>
-                                                            <option value="B">B</option>
-                                                            <option value="C">C</option>
-                                                            <option value="D">D</option>
-                                                            <option value="E">E</option>
-                                                            <option value="F">F</option>
-                                                            <option value="G">G</option>
-                                                            <option value="H">H</option>
-                                                            <option value="I">I</option>
-                                                            <option value="J">J</option>
-                                                            <option value="K">K</option>
-                                                            <option value="L">L</option>
-                                                            <option value="M">M</option>
-                                                            <option value="N">N</option>
-                                                            <option value="O">O</option>
-                                                            <option value="P">P</option>
-                                                            <option value="Q">Q</option>
-                                                            <option value="R">R</option>
-                                                            <option value="S">S</option>
-                                                            <option value="T">T</option>
-                                                            <option value="U">U</option>
-                                                            <option value="V">V</option>
-                                                            <option value="W">W</option>
-                                                            <option value="X">X</option>
-                                                            <option value="Y">Y</option>
-                                                            <option value="Z">Z</option>
-                                                            <option value="1/4">1/4</option>
-                                                            <option value="1/2">1/2</option>
-                                                            <option value="3/4">3/4</option>
-                                                        
-                                                        
                                                         </select>
-                                                       </div>
-                                                </div> 
+                                                    </div>
+                                                </fieldset>
                                             </div>
-                                        </fieldset>
-                                    </div>
 
-                                    <div class="row">
-                                        <fieldset class="form-inline">
-                                            <div class="col-sm-6 col-md-3 text-right">
-                                                
-                                                <label for="title" style="font-size:16px;">Apartment number </label>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <!--text and prefix-->
-                                                <div class="row">
-                                                    <div class="pull-left mrgn-rght-sm col-sm-4 col-md-3" style="padding-right: 0;">
-                                                        <input class="form-control input-lg " id="pcodeca1" name="pcodeca1"  type="number" autocomplete="address-line1" required="required" required="required" />
-        
-                                                       </div>
-                                                       <div class="pull-left mrgn-rght-sm col-sm-4 col-md-3">
-                                                        
-                                                        <label for="apt-suffix" class="wb-inv">Apartment suffix</label>
-                                                        <select name="apt-suffix" id="apt-suffix" class="form-control input-lg">
-                                                            <option value=""></option>
-                                                            <option value="A">A</option>
-                                                            <option value="B">B</option>
-                                                            <option value="C">C</option>
-                                                            <option value="D">D</option>
-                                                            <option value="E">E</option>
-                                                            <option value="F">F</option>
-                                                            <option value="G">G</option>
-                                                            <option value="H">H</option>
-                                                            <option value="I">I</option>
-                                                            <option value="J">J</option>
-                                                            <option value="K">K</option>
-                                                            <option value="L">L</option>
-                                                            <option value="M">M</option>
-                                                            <option value="N">N</option>
-                                                            <option value="O">O</option>
-                                                            <option value="P">P</option>
-                                                            <option value="Q">Q</option>
-                                                            <option value="R">R</option>
-                                                            <option value="S">S</option>
-                                                            <option value="T">T</option>
-                                                            <option value="U">U</option>
-                                                            <option value="V">V</option>
-                                                            <option value="W">W</option>
-                                                            <option value="X">X</option>
-                                                            <option value="Y">Y</option>
-                                                            <option value="Z">Z</option>
-                                                            <option value="1/4">1/4</option>
-                                                            <option value="1/2">1/2</option>
-                                                            <option value="3/4">3/4</option>
-                                                        
+                                        </section>
+
+                                        <section id="rank-section" class="hidden">
+                                            <div class="row">
+                                                <fieldset class="gc-chckbxrdio form-inline mrgn-tp-lg">
+                                                    <div class="col-sm-6 col-md-3 text-right">
+                                                        <label class="required" for="title"
+                                                            style="font-size:16px; line-height: 23px;">Element<br
+                                                                class="hidden-sm"> <strong
+                                                                class="required">(required)</strong></label>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <select name="element" id="element"
+                                                            class="form-control input-lg">
+                                                            <option value="" selected></option>
+                                                            <option value="navy">Royal Canadian Navy (RCN)</option>
+                                                            <option value="army">Canadian Army (CA)</option>
+                                                            <option value="rcaf">Royal Canadian Air Force (RCAF)
+                                                            </option>
+                                                            <option value="air-pre">Pre-Unification</option>
+                                                            <option value="rcmp">Royal Canadian Mounted Police (RCMP)
+                                                            </option>
+
+
+
                                                         </select>
-                                                       </div>
-                                                </div>
-                                                   <div class="clearfix"></div>
-                                                   <p style="font-size: 20px; line-height: 1.45;" class="mrgn-tp-md">
-                                                    CLYDE AVE N<br>
-                                                    OTTAWA, ON<br>
-                                                    <a href="#">K1Z 5A5<span class="fa fa-edit small opct-50 mrgn-lft-sm"></span></a>
-                                                </p>    
+                                                    </div>
+                                                </fieldset>
                                             </div>
-                                        </fieldset>
-                                    </div>
+                                            <div class="row">
+                                                <fieldset class="gc-chckbxrdio form-inline mrgn-tp-lg">
+                                                    <div class="col-sm-6 col-md-3 text-right">
+                                                        <label class="required" for="title"
+                                                            style="font-size:16px; line-height: 23px;">Rank<br
+                                                                class="hidden-sm"> <strong
+                                                                class="required">(required)</strong></label>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <select name="rank" id="rank" class="form-control input-lg">
+                                                            <option value="" selected></option>
+                                                            <option value="31">Private(Recruit)</option>
+                                                            <option value="32">Private</option>
+                                                            <option value="33">Corporal</option>
+                                                            <option value="34">Master Corporal</option>
+                                                            <option value="35">Sergeant</option>
+                                                            <option value="36">Warrant Officer</option>
+                                                            <option value="37">Master Warrant Officer</option>
+                                                            <option value="38">Chief Warrant Officer</option>
+                                                            <option value="42">Officer Cadet</option>
+                                                            <option value="43">Second Lieutenant</option>
+                                                            <option value="44">Lieutenant</option>
+                                                            <option value="45">Captain</option>
+                                                            <option value="46">Major</option>
+                                                            <option value="47">Lieutenant-Colonel</option>
+                                                            <option value="48">Colonel</option>
+                                                            <option value="49">Brigadier-General</option>
+                                                            <option value="50">Major-General</option>
+                                                            <option value="51">Lieutenant-General</option>
+                                                            <option value="52">General</option>
+                                                            <option value="82">Trooper</option>
+                                                            <option value="83">Gunner</option>
+                                                            <option value="84">Sapper</option>
+                                                            <option value="85">Signalman</option>
+                                                            <option value="86">Driver</option>
+                                                            <option value="87">Rifleman</option>
+                                                            <option value="88">Guardsman</option>
+                                                            <option value="89">Fusilier</option>
+                                                            <option value="90">Craftsman</option>
+                                                            <option value="96">Bombardier</option>
+                                                            <option value="110">Ensign</option>
+                                                            <option value="111">Colour Sergeant</option>
+                                                            <option value="112">Master Bombardier</option>
+                                                            <option value="113">Ranger</option>
+                                                            <!--populated depending on element choice-->
 
-                                    
-                             
-                                    
-                                </section>
+                                                        </select>
 
-                                <section>
-                                    <div class="row">
-                                        <div class="col-sm-6 col-md-offset-2">
-                                            <h3>Mailing address</h3>
-                                        </div>  
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-offset-3">
-                                            <ul class="list-unstyled lst-spcd-2">
-                                                <div class="checkbox gc-chckbxrdio">
-                                                    <input id="addresssame2" type="checkbox" checked="true"/>
-                                                    <label for="addresssame2">Mailing address is the same as home address.</label>
+                                                    </div>
+                                                </fieldset>
+                                                <div class="row">
+
+                                                    <div class="col-md-offset-3 col-md-9 gc-chckbxrdio mrgn-tp-md">
+
+                                                        <div class="checkbox label-inline mrgn-tp-lg">
+                                                            <input id="retired" type="checkbox">
+                                                            <label for="retired">Retired </label>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                            </div>
 
-                                    
-                             
-                                    
-                                </section>
-                                 
-                                 <div class="clearfix"></div>
-                                 <!--
+
+                                        </section>
+
+
+                                        <hr>
+
+                                        <section>
+                                            <div class="row">
+                                                <div class="col-md-offset-3 col-md-9">
+                                                    <h2>Address</h2>
+                                                    <h3>Home address</h3>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <fieldset class="form-inline">
+                                                    <div class="col-sm-6 col-md-3 text-right">
+
+                                                        <label for="title"
+                                                            style="font-size:16px; line-height: 23px;">Apartment number
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <!--text and prefix-->
+                                                        <div class="row">
+                                                            <div class="pull-left mrgn-rght-sm col-sm-4 col-md-3"
+                                                                style="padding-right: 0;">
+                                                                <input class="form-control input-lg " id="apt-number"
+                                                                    name="apt-number" type="number"
+                                                                    autocomplete="address-line1" required="required"
+                                                                    required="required" />
+
+                                                            </div>
+                                                            <div class="pull-left mrgn-rght-sm col-sm-4 col-md-3">
+
+                                                                <label for="apt-suffix" class="wb-inv">Apartment
+                                                                    suffix</label>
+                                                                <select name="apt-suffix" id="apt-suffix"
+                                                                    class="form-control input-lg">
+                                                                    <option value=""></option>
+                                                                    <option value="A">A</option>
+                                                                    <option value="B">B</option>
+                                                                    <option value="C">C</option>
+                                                                    <option value="D">D</option>
+                                                                    <option value="E">E</option>
+                                                                    <option value="F">F</option>
+                                                                    <option value="G">G</option>
+                                                                    <option value="H">H</option>
+                                                                    <option value="I">I</option>
+                                                                    <option value="J">J</option>
+                                                                    <option value="K">K</option>
+                                                                    <option value="L">L</option>
+                                                                    <option value="M">M</option>
+                                                                    <option value="N">N</option>
+                                                                    <option value="O">O</option>
+                                                                    <option value="P">P</option>
+                                                                    <option value="Q">Q</option>
+                                                                    <option value="R">R</option>
+                                                                    <option value="S">S</option>
+                                                                    <option value="T">T</option>
+                                                                    <option value="U">U</option>
+                                                                    <option value="V">V</option>
+                                                                    <option value="W">W</option>
+                                                                    <option value="X">X</option>
+                                                                    <option value="Y">Y</option>
+                                                                    <option value="Z">Z</option>
+                                                                    <option value="1/4">1/4</option>
+                                                                    <option value="1/2">1/2</option>
+                                                                    <option value="3/4">3/4</option>
+
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                            <div class="row">
+                                                <fieldset class="gc-chckbxrdio form-inline mrgn-tp-md">
+                                                    <div class="col-sm-6 col-md-3 text-right">
+
+                                                        <label class="required" for="title"
+                                                            style="font-size:16px;">Street number<br class="hidden-sm">
+                                                            <strong class="required">(required)</strong></label>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <!--text and prefix-->
+                                                        <div class="row">
+                                                            <div class="pull-left mrgn-rght-sm col-sm-4 col-md-3"
+                                                                style="padding-right: 0;">
+                                                                <input class="form-control input-lg " id="street-number"
+                                                                    name="street-number" type="number"
+                                                                    autocomplete="address-line1" required="required" />
+
+                                                            </div>
+                                                            <div class="pull-left mrgn-rght-sm col-sm-4 col-md-3">
+
+                                                                <label for="street-suffix"
+                                                                    class="required wb-inv">Street address suffix
+                                                                    <strong class="required">(required)</strong></label>
+                                                                <select name="street-suffix" id="street-suffix"
+                                                                    class="form-control input-lg">
+                                                                    <option value=""></option>
+                                                                    <option value="A">A</option>
+                                                                    <option value="B">B</option>
+                                                                    <option value="C">C</option>
+                                                                    <option value="D">D</option>
+                                                                    <option value="E">E</option>
+                                                                    <option value="F">F</option>
+                                                                    <option value="G">G</option>
+                                                                    <option value="H">H</option>
+                                                                    <option value="I">I</option>
+                                                                    <option value="J">J</option>
+                                                                    <option value="K">K</option>
+                                                                    <option value="L">L</option>
+                                                                    <option value="M">M</option>
+                                                                    <option value="N">N</option>
+                                                                    <option value="O">O</option>
+                                                                    <option value="P">P</option>
+                                                                    <option value="Q">Q</option>
+                                                                    <option value="R">R</option>
+                                                                    <option value="S">S</option>
+                                                                    <option value="T">T</option>
+                                                                    <option value="U">U</option>
+                                                                    <option value="V">V</option>
+                                                                    <option value="W">W</option>
+                                                                    <option value="X">X</option>
+                                                                    <option value="Y">Y</option>
+                                                                    <option value="Z">Z</option>
+                                                                    <option value="1/4">1/4</option>
+                                                                    <option value="1/2">1/2</option>
+                                                                    <option value="3/4">3/4</option>
+
+
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                        <p style="font-size: 24px; line-height: 1.45;"
+                                                            class="mrgn-tp-md h4">
+                                                            <span id="apt-number-home"><!--apt number--></span>
+                                                            <span id="street-number-home"><!--street number--></span>
+                                                            <span class="text-muted">
+                                                            CLYDE AVE N<br>
+                                                            OTTAWA, ON<br>
+                                                            <a href="#postalcode"><!-----><span
+                                                                    class="fa fa-edit small opct-50 mrgn-lft-sm"></span></a>
+                                                                </span>
+                                                                    
+                                                        </p>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+
+
+
+                                        </section>
+
+                                        <section class="mrgn-tp-md">
+                                            <div class="row">
+
+                                                <div class="col-md-offset-3 col-md-9 gc-chckbxrdio mrgn-tp-md">
+                                                    <h3>Mailing address</h3>
+                                                    <div class="checkbox label-inline mrgn-tp-lg">
+                                                        <input id="sameAddress" type="checkbox" checked="true">
+                                                        <label for="sameAddress">Same as home address</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+
+                                            </div>
+
+                                            <section class="hidden">
+                                                <div class="row">
+                                                    <fieldset class="form-inline">
+                                                        <div class="col-sm-6 col-md-3 text-right">
+
+                                                            <label for="title" style="font-size:16px;">Apartment number
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <!--text and prefix-->
+                                                            <div class="row">
+                                                                <div class="pull-left mrgn-rght-sm col-sm-4 col-md-3"
+                                                                    style="padding-right: 0;">
+                                                                    <input class="form-control input-lg " id="pcodeca1"
+                                                                        name="pcodeca1" type="number"
+                                                                        autocomplete="address-line1" required="required"
+                                                                        required="required" />
+
+                                                                </div>
+                                                                <div class="pull-left mrgn-rght-sm col-sm-4 col-md-3">
+
+                                                                    <label for="apt-suffix" class="wb-inv">Apartment
+                                                                        suffix</label>
+                                                                    <select name="apt-suffix" id="apt-suffix"
+                                                                        class="form-control input-lg">
+                                                                        <option value=""></option>
+                                                                        <option value="A">A</option>
+                                                                        <option value="B">B</option>
+                                                                        <option value="C">C</option>
+                                                                        <option value="D">D</option>
+                                                                        <option value="E">E</option>
+                                                                        <option value="F">F</option>
+                                                                        <option value="G">G</option>
+                                                                        <option value="H">H</option>
+                                                                        <option value="I">I</option>
+                                                                        <option value="J">J</option>
+                                                                        <option value="K">K</option>
+                                                                        <option value="L">L</option>
+                                                                        <option value="M">M</option>
+                                                                        <option value="N">N</option>
+                                                                        <option value="O">O</option>
+                                                                        <option value="P">P</option>
+                                                                        <option value="Q">Q</option>
+                                                                        <option value="R">R</option>
+                                                                        <option value="S">S</option>
+                                                                        <option value="T">T</option>
+                                                                        <option value="U">U</option>
+                                                                        <option value="V">V</option>
+                                                                        <option value="W">W</option>
+                                                                        <option value="X">X</option>
+                                                                        <option value="Y">Y</option>
+                                                                        <option value="Z">Z</option>
+                                                                        <option value="1/4">1/4</option>
+                                                                        <option value="1/2">1/2</option>
+                                                                        <option value="3/4">3/4</option>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="row">
+                                                    <fieldset class="gc-chckbxrdio form-inline mrgn-tp-md">
+                                                        <div class="col-sm-6 col-md-3 text-right">
+
+                                                            <label class="required" for="title"
+                                                                style="font-size:16px;">Street number<br
+                                                                    class="hidden-sm"> <strong
+                                                                    class="required">(required)</strong></label>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <!--text and prefix-->
+                                                            <div class="row">
+                                                                <div class="pull-left mrgn-rght-sm col-sm-4 col-md-3"
+                                                                    style="padding-right: 0;">
+                                                                    <input class="form-control input-lg "
+                                                                        id="street-suffix" name="street-suffix"
+                                                                        type="number" autocomplete="address-line1"
+                                                                        required="required" />
+
+                                                                </div>
+                                                                <div class="pull-left mrgn-rght-sm col-sm-4 col-md-3">
+
+                                                                    <label for="street-suffix"
+                                                                        class="required wb-inv">Street address suffix
+                                                                        <strong
+                                                                            class="required">(required)</strong></label>
+                                                                    <select name="street-suffix" id="street-suffix"
+                                                                        class="form-control input-lg">
+                                                                        <option value=""></option>
+                                                                        <option value="A">A</option>
+                                                                        <option value="B">B</option>
+                                                                        <option value="C">C</option>
+                                                                        <option value="D">D</option>
+                                                                        <option value="E">E</option>
+                                                                        <option value="F">F</option>
+                                                                        <option value="G">G</option>
+                                                                        <option value="H">H</option>
+                                                                        <option value="I">I</option>
+                                                                        <option value="J">J</option>
+                                                                        <option value="K">K</option>
+                                                                        <option value="L">L</option>
+                                                                        <option value="M">M</option>
+                                                                        <option value="N">N</option>
+                                                                        <option value="O">O</option>
+                                                                        <option value="P">P</option>
+                                                                        <option value="Q">Q</option>
+                                                                        <option value="R">R</option>
+                                                                        <option value="S">S</option>
+                                                                        <option value="T">T</option>
+                                                                        <option value="U">U</option>
+                                                                        <option value="V">V</option>
+                                                                        <option value="W">W</option>
+                                                                        <option value="X">X</option>
+                                                                        <option value="Y">Y</option>
+                                                                        <option value="Z">Z</option>
+                                                                        <option value="1/4">1/4</option>
+                                                                        <option value="1/2">1/2</option>
+                                                                        <option value="3/4">3/4</option>
+
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <p style="font-size: 18px; line-height: 1.45;"
+                                                                class="mrgn-tp-md">
+                                                                CLYDE AVE N<br>
+                                                                OTTAWA, ON<br>
+                                                                <a href="#">K1Z 5A5<span
+                                                                        class="fa fa-edit small opct-50 mrgn-lft-sm"></span></a>
+                                                            </p>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </section>
+
+
+
+
+                                        </section>
+
+                                        <div class="clearfix"></div>
+                                        <!--
                                 <h3>Personal information</h3>
                                 <p>Personal info</p>
                                 <p>Name</p>
@@ -1125,75 +1564,237 @@
                                 <p>Gender</p>
                                 <p>Address</p>
                                 <p>Communication settings</p>-->
-                            </section>
-                        </form>
+                                    </section>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-offset-3">
+                                            <button class="btn btn-call-to-action">
+                                                Continue to My VAC Account
+                                            </button>
+                                            <button class="btn btn-link mrgn-bttm-sm mrgn-lft-md">
+                                                Back
+                                            </button>
+                                            <div class="clearfix"></div>
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                        <hr>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <section>
+                                    <h2>Still have questions?</h2>
+                                    <p>Contact the National Contact Centre Network (NCCN) at <a href="tel:1-866-522-2122">1-866-522-2122</a>.</p>
+                                </section>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
+            </section>
+
+
+
+
+            <footer class="container">
+                <div class="pagedetails">
+
+                    <dl id="wb-dtmd">
+                        <dt>Date modified:</dt>
+                        <dd><time property="dateModified">2023-03-31</time></dd>
+                    </dl>
+                </div>
+            </footer>
+
+
+        </main>
+
+        <footer id="wb-info" class="">
+            <h2 class="wb-inv">About this site</h2>
+
+
+            <div class="landscape hidden">
+                <nav class="container wb-navcurr">
+
+                    <ul class="list-unstyled colcount-xs-2 colcount-md-3">
+                        <li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
+                        <li><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">Talk to a mental
+                                health
+                                professional</a></li>
+
+                    </ul>
+                </nav>
             </div>
-        </section>
-        
 
-        <footer class="container">
-            <div class="pagedetails">
 
-                <dl id="wb-dtmd">
-                    <dt>Date modified:</dt>
-                    <dd><time property="dateModified">2023-03-31</time></dd>
-                </dl>
+            <div class="gc-sub-footer">
+                <div class="container d-flex align-items-center">
+                    <nav>
+
+                        <ul>
+                            <li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
+                            <li><a href="https://www.veterans.gc.ca/eng/e_services">About My VAC Account</a></li>
+                            <li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Terms and conditions</a></li>
+                            <li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Privacy</a></li>
+                        </ul>
+                    </nav>
+                    <div class="wtrmrk align-self-end">
+                        <img src="../../../GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+                    </div>
+                </div>
             </div>
         </footer>
 
 
-    </main>
 
-    <footer id="wb-info" class="">
-        <h2 class="wb-inv">About this site</h2>
-
-
-        <div class="landscape hidden">
-            <nav class="container wb-navcurr">
-
-                <ul class="list-unstyled colcount-xs-2 colcount-md-3">
-                    <li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
-                    <li><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">Talk to a mental health
-                            professional</a></li>
-
-                </ul>
-            </nav>
-        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+            integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
+            crossorigin="anonymous"></script>
 
 
-        <div class="gc-sub-footer">
-            <div class="container d-flex align-items-center">
-                <nav>
 
-                    <ul>
-                        <li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
-                        <li><a href="https://www.veterans.gc.ca/eng/e_services">About My VAC Account</a></li>
-                        <li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Terms and conditions</a></li>
-                        <li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Privacy</a></li>
-                    </ul>
-                </nav>
-                <div class="wtrmrk align-self-end">
-                    <img src="../../../GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
-                </div>
-            </div>
-        </div>
-    </footer>
-
-   
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
-        integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
-        crossorigin="anonymous"></script>
+        <script src="../../../wet-boew/js/wet-boew.min.js"></script>
+        <script src="../../../GCWeb/js/theme.min.js"></script>
 
 
-        
-    <script src="../../../wet-boew/js/wet-boew.min.js"></script>
-    <script src="../../../GCWeb/js/theme.min.js"></script>
+        <script>
 
-    
+            //spinner
+
+            //all WET plugins and polyfills have finished loading and executing.
+            $(document).on("wb-ready.wb", function (event) {
+                $(".spinner").addClass("hidden");
+                $("#id-check").removeClass("hidden");
+
+
+                //change ID number selection and field
+
+                $("#id-number").change(function () {
+
+                    if ($("#id-number").val() == "reg-number-section") {
+                        $("#service-number-section, #CSDN-number-section, #file-number-section").addClass("hidden");
+                        $("#reg-number-section").removeClass("hidden");
+                    }
+                    else if ($("#id-number").val() == "CSDNNumber") {
+                        $("#service-number-section, #reg-number-section, #file-number-section").addClass("hidden");
+                        $("#CSDN-number-section").removeClass("hidden");
+
+                    }
+                    else if ($("#id-number").val() == "file-number") {
+                        $("#service-number-section, #reg-number-section, #CSDN-number-section").addClass("hidden");
+                        $("#file-number-section").removeClass("hidden");
+
+                    }
+                    else if ($("#id-number").val() == "cafServiceNumber") {
+                        $("#reg-number-section, #CSDN-number-section, #file-number-section").addClass("hidden");
+                        $("#service-number-section").removeClass("hidden");
+                    }
+
+                });
+
+                $("a[href='#verification-code']").click(function () {
+                    $(this).addClass("hidden");
+                    $("#verification-code").removeClass("hidden");
+                });
+
+                $("a[href='#verification-code-cancel']").click(function () {
+                    $("a[href='#verification-code']").removeClass("hidden");
+                    $("#verification-code").addClass("hidden");
+                });
+
+                $("#validate-identity-btn").click(function (e) {
+
+                    //prevent refreshing/submitting
+                    e.preventDefault();
+
+                    //validate inputs
+                    $(this).closest("form").valid();
+
+
+                    //if any form groups have errors return
+                    if ($(this).closest("form").find(".form-group.has-error").length == 0) {
+                        //continue, no errors
+                        //console.log("inputs valid");
+
+                        //stpre first name, last name, date-of-birth postal code, service number
+
+                        var firstName = $("#firstname").val();
+                        var lastName = $("#lastname").val();
+                        var dob = $("#dob-y").val() + "-" + $("#dob-m").val() + "-" + $("#dob-d").val();
+                        var serviceNumber = $("#cafServiceNumberField").val();
+                        var pcodeca1 = $("#pcodeca1").val();
+
+                        $("a[href='#firstname']").prepend(toTitleCase(firstName));
+                        $("a[href='#lastname']").prepend(toTitleCase(lastName));
+                        $("a[href='#dob']").prepend(dob);
+                        $("a[href='#service']").prepend(serviceNumber.toUpperCase());
+                        $("a[href='#postalcode']").prepend(pcodeca1.toUpperCase());
+
+                        // show hide validate identity and registration section
+                        $("#validate-identity, #registration").toggleClass("hidden");
+
+
+                    }
+                    else {
+                        return;
+                    }
+
+
+
+                });
+
+
+                $("#no-middle-name").click(function (e) {
+
+                    if ($(this).is(':checked')) {
+                        $(".mid-name-group").addClass("hidden");
+
+                    }
+                    else {
+                        console.log("unchecked");
+                        $(".mid-name-group").removeClass("hidden");
+                    }
+                });
+
+
+                $("input[name='titleradio'").change(function (e) {
+
+                    if ($(this).attr("id") == "inlineRadio1") {
+                        $("#title-section").removeClass("hidden");
+                        $("#rank-section").addClass("hidden");
+                    }
+
+                    else if ($(this).attr("id") == "inlineRadio2") {
+                        $("#title-section").addClass("hidden");
+                        $("#rank-section").removeClass("hidden");
+
+                    }
+                });
+
+                $("#street-number, #street-suffix, #apt-number, #apt-suffix").on("keyup change", function (e) {
+
+                    var aptNumber = $("#apt-number").val() + $("#apt-suffix").val() +  " - " ;
+                    var addressNumber = $("#street-number").val() + $("#street-suffix").val() ;
+
+                    // write address
+
+                    $("#apt-number-home").text(aptNumber);
+                    $("#street-number-home").text(addressNumber);
+
+                   
+                });
+
+            });
+
+
+            function toTitleCase(str) {
+                return str.replace(/(?:^|\s)\w/g, function (match) {
+                    return match.toUpperCase();
+                });
+            }
+        </script>
+
 
 
 </body>
