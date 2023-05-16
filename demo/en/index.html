@@ -158,11 +158,13 @@
 						<!-- WAS using .wb-menu to leverage WET's keyboard controls for menu but it was through errors and interupting WET -->
 						<nav role="navigation" typeof="SiteNavigationElement" class="mva-nav">
 							<h3 class="hidden">Main menu</h3>
-							<button id="mva-nav-btn" class="btn btn-default btn-lg" aria-haspopup="true" aria-controls="mva-nav-mnu" aria-expanded="false">
+							<button id="mva-nav-btn" class="btn btn-default btn-lg" aria-haspopup="true"
+								aria-controls="mva-nav-mnu" aria-expanded="false">
 								MENU
 								<span class="fa fa-chevron-down small hidden-md hidden-lg"></span>
 							</button>
-							<ul class="list-unstyled list-group " role="menu" id="mva-nav-mnu" aria-orientation="vertical">
+							<ul class="list-unstyled list-group " role="menu" id="mva-nav-mnu"
+								aria-orientation="vertical">
 								<li>
 									<a role="menuitem" tabindex="0" href="/demo/en/index.html"
 										class="list-group-item btn btn-link active">
@@ -243,15 +245,24 @@
 					<div class="col-sm-12 col-md-8 col-lg-9 overview">
 
 						<section>
-							
-								<div class="clearfix mrgn-tp-md"></div>
-								<div class="mrgn-tp-0">
-									<h1 id="wb-cont" property="name" class="hidden">Overview</h1>
-									<!--
-									<h2 class="lead h1">Welcome, Mr. Noel Knockwood</h2>-->
-									<h2 class="h3 mrgn-tp-0 mrgn-bttm-md">Welcome, Mr. Noel Knockwood</h2>
-								</div>
 
+							<div class="clearfix mrgn-tp-md"></div>
+							<div class="mrgn-tp-0">
+								<h1 id="wb-cont" property="name" class="hidden">Overview</h1>
+								<!--
+									<h2 class="lead h1">Welcome, Mr. Noel Knockwood</h2>
+								<h2 class="h3 mrgn-tp-0 mrgn-bttm-md">Welcome, Mr. Noel Knockwood</h2>-->
+							</div>
+
+						</section>
+
+				
+						<!--alerts-->
+						<section id="welcome-message" class="hidden" data-wb-urlmapping='{ "welcome": { "action": "removeClass", "source": "#welcome-message", "class": "hidden" } }'>						'>
+							<div class="alert alert-success">
+								<h3>Welcome to My VAC Account</h3>
+								<p>Thank you for your service</p>
+							</div>
 						</section>
 						<!--
 						<section class="hidden">
@@ -761,7 +772,7 @@
 									<p>There are no applications in progress.</p>
 								</div>
 							</section>-->
-						
+
 					</div>
 
 				</div>
@@ -774,69 +785,98 @@
 			<div class="row">
 				<div class="row">
 					<div class="col-sm-6 col-md-5 col-lg-4">
-					 <details class="brdr-0">
-					  <summary class="btn btn-default text-center">Report a problem on this page</summary>
-					  <div class="well row">
-					   <div class="gc-rprt-prblm">
-						<div class="gc-rprt-prblm-tggl" id="wb-auto-7">
-						 <form action="#">
-						  <fieldset>
-						   <legend><span class="field-name">Please select all that apply: </span></legend>
-						   <div class="checkbox">
-							<label for="problem1"><input type="checkbox" data-reveal="#broken" name="problem" value="Something is broken" id="problem1">Something is broken</label>
-						   </div>
-						   <div class="form-group hide" id="broken">
-							<label for="problem1-detail">Provide more details (optional):</label>
-							<input type="text" class="form-control full-width" id="problem1-detail">
-						   </div>
-						   <div class="checkbox">
-							<label for="problem2"><input type="checkbox" data-reveal="#spelling" name="problem" value="It has spelling or grammar mistakes" id="problem2">It has spelling or grammar mistakes</label>
-						   </div>
-						   <div class="form-group hide" id="spelling">
-							<label for="problem2-detail">Provide more details (optional):</label>
-							<input type="text" class="form-control full-width" id="problem2-detail">
-						   </div>
-						   <div class="checkbox">
-							<label for="problem3"><input type="checkbox" data-reveal="#wrong" name="problem" value="The information is wrong" id="problem3">The information is wrong</label>
-						   </div>
-						   <div class="form-group hide" id="wrong">
-							<label for="problem3-detail">Provide more details (optional):</label>
-							<input type="text" class="form-control full-width" id="problem3-detail">
-						   </div>
-						   <div class="checkbox">
-							<label for="problem4"><input type="checkbox" data-reveal="#outdated" name="problem" value="The information is outdated" id="problem4">The information is outdated</label>
-						   </div>
-						   <div class="form-group hide" id="outdated">
-							<label for="problem4-detail">Provide more details (optional):</label>
-							<input type="text" class="form-control full-width" id="problem4-detail">
-						   </div>
-						   <div class="checkbox">
-							<label for="problem5"><input type="checkbox" data-reveal="#find" name="problem" value="I can’t find what I’m looking for" id="problem5">I can’t find what I’m looking for</label>
-						   </div>
-						   <div class="form-group hide" id="find">
-							<label for="problem5-detail">Describe what you’re looking for (optional):</label>
-							<input type="text" class="form-control full-width" id="problem5-detail">
-						   </div>
-						   <div class="checkbox">
-							<label for="problem6"><input type="checkbox" data-reveal="#confusing" name="problem" value="Other" id="problem6">Other</label>
-						   </div>
-						   <div class="form-group hide" id="confusing">
-							<label for="problem6-detail">Provide more details (optional):</label>
-							<input type="text" class="form-control full-width" id="problem6-detail">
-						   </div>
-						  </fieldset>
-						  <button type="submit" class="btn btn-primary wb-toggle wb-init wb-toggle-inited" data-toggle="{&quot;stateOff&quot;: &quot;hide&quot;, &quot;stateOn&quot;: &quot;show&quot;, &quot;selector&quot;: &quot;.gc-rprt-prblm-tggl&quot;}" aria-controls="wb-auto-7 wb-auto-8">Submit</button>
-						 </form>
-						</div>
-						<div class="gc-rprt-prblm-thnk gc-rprt-prblm-tggl hide" id="wb-auto-8">
-						 <h3>Thank you for your help!</h3>
-						 <p>You will not receive a reply. For enquiries, please <a href="https://www.canada.ca/en/contact.html">contact us</a>.</p>
-						</div>
-					   </div>
-					  </div>
-					 </details>
+						<details class="brdr-0">
+							<summary class="btn btn-default text-center">Report a problem on this page</summary>
+							<div class="well row">
+								<div class="gc-rprt-prblm">
+									<div class="gc-rprt-prblm-tggl" id="wb-auto-7">
+										<form action="#">
+											<fieldset>
+												<legend><span class="field-name">Please select all that apply: </span>
+												</legend>
+												<div class="checkbox">
+													<label for="problem1"><input type="checkbox" data-reveal="#broken"
+															name="problem" value="Something is broken"
+															id="problem1">Something is broken</label>
+												</div>
+												<div class="form-group hide" id="broken">
+													<label for="problem1-detail">Provide more details
+														(optional):</label>
+													<input type="text" class="form-control full-width"
+														id="problem1-detail">
+												</div>
+												<div class="checkbox">
+													<label for="problem2"><input type="checkbox" data-reveal="#spelling"
+															name="problem" value="It has spelling or grammar mistakes"
+															id="problem2">It has spelling or grammar mistakes</label>
+												</div>
+												<div class="form-group hide" id="spelling">
+													<label for="problem2-detail">Provide more details
+														(optional):</label>
+													<input type="text" class="form-control full-width"
+														id="problem2-detail">
+												</div>
+												<div class="checkbox">
+													<label for="problem3"><input type="checkbox" data-reveal="#wrong"
+															name="problem" value="The information is wrong"
+															id="problem3">The information is wrong</label>
+												</div>
+												<div class="form-group hide" id="wrong">
+													<label for="problem3-detail">Provide more details
+														(optional):</label>
+													<input type="text" class="form-control full-width"
+														id="problem3-detail">
+												</div>
+												<div class="checkbox">
+													<label for="problem4"><input type="checkbox" data-reveal="#outdated"
+															name="problem" value="The information is outdated"
+															id="problem4">The information is outdated</label>
+												</div>
+												<div class="form-group hide" id="outdated">
+													<label for="problem4-detail">Provide more details
+														(optional):</label>
+													<input type="text" class="form-control full-width"
+														id="problem4-detail">
+												</div>
+												<div class="checkbox">
+													<label for="problem5"><input type="checkbox" data-reveal="#find"
+															name="problem" value="I can’t find what I’m looking for"
+															id="problem5">I can’t find what I’m looking for</label>
+												</div>
+												<div class="form-group hide" id="find">
+													<label for="problem5-detail">Describe what you’re looking for
+														(optional):</label>
+													<input type="text" class="form-control full-width"
+														id="problem5-detail">
+												</div>
+												<div class="checkbox">
+													<label for="problem6"><input type="checkbox"
+															data-reveal="#confusing" name="problem" value="Other"
+															id="problem6">Other</label>
+												</div>
+												<div class="form-group hide" id="confusing">
+													<label for="problem6-detail">Provide more details
+														(optional):</label>
+													<input type="text" class="form-control full-width"
+														id="problem6-detail">
+												</div>
+											</fieldset>
+											<button type="submit"
+												class="btn btn-primary wb-toggle wb-init wb-toggle-inited"
+												data-toggle="{&quot;stateOff&quot;: &quot;hide&quot;, &quot;stateOn&quot;: &quot;show&quot;, &quot;selector&quot;: &quot;.gc-rprt-prblm-tggl&quot;}"
+												aria-controls="wb-auto-7 wb-auto-8">Submit</button>
+										</form>
+									</div>
+									<div class="gc-rprt-prblm-thnk gc-rprt-prblm-tggl hide" id="wb-auto-8">
+										<h3>Thank you for your help!</h3>
+										<p>You will not receive a reply. For enquiries, please <a
+												href="https://www.canada.ca/en/contact.html">contact us</a>.</p>
+									</div>
+								</div>
+							</div>
+						</details>
 					</div>
-				   </div>
+				</div>
 				<!-- Share button
 				<div class="wb-share col-sm-4 col-md-3" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>-->
 
@@ -876,22 +916,23 @@
 					<ul class="list-unstyled colcount-xs-2 colcount-md-3">
 						<li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
 
-						<li id="authenticated-footer-link-2" >
-						<a href="#">Check in on your well-being</a></li>
-						
+						<li id="authenticated-footer-link-2">
+							<a href="#">Check in on your well-being</a>
+						</li>
+
 						<li><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">Talk to a mental
-							health professional</a></li>
-						
+								health professional</a></li>
 
-						
-							<li id="authenticated-footer-link-1"><a href="#">News and updates</a></li>
 
-							<li id="authenticated-footer-link-3"  ><a href="#">Provide feedback</a></li>
 
-							<li id="authenticated-footer-link"><a href="#">Useful links</a></li>
-	
+						<li id="authenticated-footer-link-1"><a href="#">News and updates</a></li>
 
-						
+						<li id="authenticated-footer-link-3"><a href="#">Provide feedback</a></li>
+
+						<li id="authenticated-footer-link"><a href="#">Useful links</a></li>
+
+
+
 
 					</ul>
 				</nav>
@@ -914,7 +955,7 @@
 		</footer>
 	</div>
 
-	
+
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
@@ -923,13 +964,6 @@
 	<script src="/wet-boew/js/wet-boew.min.js"></script>
 	<script src="/GCWeb/js/theme.min.js"></script>
 	<script src="/mva-mda/js/script.js"></script>
-
-	<script>
-
-
-
-		
-	</script>
 
 </body>
 

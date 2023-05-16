@@ -656,6 +656,18 @@ html:lang(fr) .cnjnctn-type-or [class*=cnjnctn-col]:not(:first-child):before {
                 </ul>
             </nav>
         </div>-->
+		<nav role="navigation" typeof="SiteNavigationElement" class="mva-nav">
+			<h3 class="hidden">Main menu</h3>
+			<button id="mva-nav-btn" class="btn btn-default btn-lg" aria-haspopup="true"
+				aria-controls="mva-nav-mnu" aria-expanded="false">
+				MENU
+				<span class="fa fa-chevron-down small"></span>
+			</button>
+			<ul class="list-unstyled list-group " role="menu" id="mva-nav-mnu" data-ajax-replace="/design/assets/ajax/site-menu-en.html"
+				aria-orientation="vertical">
+				
+			</ul>
+		</nav>
 		<nav id="wb-bc" property="breadcrumb">
 			<h2>You are here:</h2>
 			<div class="container">

@@ -172,86 +172,18 @@
 		</div>
 		<div class="container" style="padding-top:12px;">
 			<!-- using id="mb-pnl" to leverage WET's keyboard controls for menu -->
-			<nav role="navigation" typeof="SiteNavigationElement" id="mb-pnl" class="wb-menu mva-nav">
-				<h3>Main menu</h3>
-				<button id="mva-nav-btn" class="btn btn-default btn-lg" aria-haspopup="true" aria-controls="mva-nav-mnu" aria-expanded="false"
-					style="letter-spacing: 1.5px; color: #fff; background-color: #38414d; border:none; border-radius: 0;">
+			<nav role="navigation" typeof="SiteNavigationElement" class="mva-nav">
+				<h3 class="hidden">Main menu</h3>
+				<button id="mva-nav-btn" class="btn btn-default btn-lg" aria-haspopup="true"
+					aria-controls="mva-nav-mnu" aria-expanded="false">
 					MENU
 					<span class="fa fa-chevron-down small"></span>
 				</button>
-				<ul class="list-unstyled list-group" role="menu" id="mva-nav-mnu" aria-orientation="vertical">
-					<li>
-						<a role="menuitem" tabindex="0" href="/demo/en/index.html"
-							class="list-group-item btn btn-link ">
-							Overview
-						</a>
-					</li>
-					<li>
-						<details>
-							<summary class="list-group-item btn btn-link" role="menuitem"
-								aria-haspopup="true" tabindex="0">Apply for benefits and services</summary>
-							<ul class="list-unstyled list-group" role="menu" aria-expanded="false"
-								aria-hidden="true">
-								<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link active"
-										href="/demo/en/forms.html">
-										Find a form</a></li>
-								<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
-										href="/demo/en/apply-for.html">
-										What can I apply for?
-									</a>
-								</li>
-
-							</ul>
-						</details>
-					</li>
-					<li>
-						<a role="menuitem" tabindex="0" href="/demo/en/track-your-application/index.html"
-							class="list-group-item btn btn-link">
-							Track your application</a>
-					</li>
-					<li>
-						<details>
-							<summary class="list-group-item btn btn-link" role="menuitem"
-								aria-haspopup="true" tabindex="-1">Transition to life after service
-							</summary>
-							<ul class="list-unstyled list-group" role="menu" aria-expanded="false"
-								aria-hidden="true">
-								<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
-										href="https://wet-boew.github.io/wet-boew/docs/start-en.html">Benefits
-										for transition</a></li>
-								<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
-										href="https://wet-boew.github.io/wet-boew/docs/versions/dwnld-en.html">Your
-										transition task list</a></li>
-
-
-							</ul>
-						</details>
-					</li>
-					<li>
-						<details>
-							<summary class="list-group-item btn btn-link" role="menuitem"
-								aria-haspopup="true" tabindex="-1">Your documents and forms</summary>
-							<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
-								aria-hidden="true">
-								<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
-										href="https://wet-boew.github.io/wet-boew/docs/pull-en.html">Saved
-										forms</a></li>
-								<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
-										href="https://wet-boew.github.io/wet-boew/docs/pull-en.html#test">Submitted
-										forms and&nbsp;files</a></li>
-								<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
-										href="https://wet-boew.github.io/wet-boew/docs/start-en.html#develop">Upload
-										files</a></li>
-							</ul>
-						</details>
-					</li>
-					<li>
-						<a role="menuitem" tabindex="0" href="#" class="list-group-item btn btn-link">Your
-							benefits and services</a>
-					</li>
+				<ul class="list-unstyled list-group " role="menu" id="mva-nav-mnu" data-ajax-replace="/design/assets/ajax/site-menu-en.html"
+					aria-orientation="vertical">
+					
 				</ul>
 			</nav>
-
 		</div>
 	</header>
 
