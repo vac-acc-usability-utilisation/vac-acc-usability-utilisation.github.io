@@ -1792,10 +1792,19 @@
 
                     var aptNumber = $("#apt-number").val() + $("#apt-suffix").val() + " - ";
                     var addressNumber = $("#street-number").val() + $("#street-suffix").val();
-
+                    console.log($(this));
                     // write address
 
-                    $("#apt-number-home").text(aptNumber);
+                    console.log($(this).val());
+
+                    if (($(this).attr("id") == "apt-number") || ($(this).attr("id") == "apt-suffix"))  {
+                        $("#apt-number-home").text(aptNumber);
+                        if ( ($("input#apt-number").val().length == 0) && ($("#apt-suffix").val().length == 0)) {
+                            $("#apt-number-home").empty();
+                        }
+                    }
+                    
+
                     $("#street-number-home").text(addressNumber);
 
 
