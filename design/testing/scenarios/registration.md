@@ -7,18 +7,16 @@ Create an account using a Sign-in Partner.
 
 Please complete the registration using the following information:
 
-Noel Knockwood
-
+Mr. Noel Lewis Knockwood
+Male
+May 17, 1952
 T92641932
 
-July 17, 1952
-
-
 2605 CLYDE AVE N 
-
 OROMOCTO, NB
-
 E2V 4R5
+
+(Home and mailing address are the same)
 
 
 ## Overview and navigation
