@@ -76,7 +76,6 @@
 		.syrup .h1-text {
 			height: 1.7em;
 			background: #777;
-			margin-top: 20px;
 		}
 
 		.syrup .p-text {
@@ -143,6 +142,7 @@
 			
 			
 		</div>
+		<div id="syrup-content" class="hidden">
 		<h1 id="wb-cont" property="name">Content page - Limited width content</h1>
 		<p><strong>From <a href="#">[Institution name]</a></strong></p>
 
@@ -216,6 +216,7 @@
 
 		<p>Example text. Example text. Example text. Example text. Example text. Example text. Example text. Example
 			text. Example text. Example text. Example text. Example text. Example text. Example text. Example text.</p>
+		</div>
 
 		<section class="pagedetails container hidden">
 			<h2 class="wb-inv">Page details</h2>
@@ -268,18 +269,20 @@
 	<script src="../../../GCWeb/js/theme.min.js"></script>
 
 	<script>
-		$("form").submit(function (e) {
+		$( document ).on( "wb-ready.wb", function( event ) {
 
-			e.preventDefault();
+			//
 
-			inputs = $('form').find('fieldset input:checked');
+			setTimeout(
+				function() 
+				{
+					//alert("3 seconds");
+					$(".syrup").remove();
+					$("#syrup-content").removeClass("hidden");
 
-			console.log(inputs.length);
+				}, 3000);
 
-			alert("Thank you!");
-
-
-		});
+						});
 	</script>
 
 </body>
