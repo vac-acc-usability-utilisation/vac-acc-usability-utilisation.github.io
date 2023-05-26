@@ -134,14 +134,82 @@
 						<nav role="navigation" typeof="SiteNavigationElement" class="mva-nav">
 							<h3 class="hidden">Main menu</h3>
 							<button id="mva-nav-btn" class="btn btn-default btn-lg" aria-haspopup="true"
-								aria-controls="mva-nav-mnu" aria-expanded="false">
+								aria-controls="mva-nav-mnu" aria-expanded="true">
 								MENU
 								<span class="fa fa-chevron-down small hidden-md hidden-lg"></span>
 							</button>
-							<ul class="list-unstyled list-group " role="menu" id="mva-nav-mnu" data-ajax-replace="/design/assets/ajax/site-menu-en.html"
-								aria-orientation="vertical">
-								
-							</ul>
+							<ul class="list-unstyled list-group accordion" role="menu" id="mva-nav-mnu" 
+				aria-orientation="vertical">
+				<li>
+					<a role="menuitem" tabindex="0" href="/demo/en/index.html"
+						class="list-group-item btn btn-link">
+						Overview
+					</a>
+				</li>
+				<li>
+					<details>
+						<summary class="list-group-item btn btn-link" role="menuitem"
+							aria-haspopup="true" tabindex="0">Apply for benefits</summary>
+						<ul class="list-unstyled list-group" role="menu" aria-expanded="false"
+							aria-hidden="true">
+							<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+									href="/demo/en/forms.html">
+									Find a form</a></li>
+							<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+									href="/demo/en/apply-for.html">
+									Benefits
+								</a>
+							</li>
+
+						</ul>
+					</details>
+				</li>
+				<li>
+					<a role="menuitem" tabindex="0" href="/demo/en/track-your-application/index.html"
+						class="list-group-item btn btn-link">
+						Track your applications</a>
+				</li>
+				<li>
+					<details>
+						<summary class="list-group-item btn btn-link" role="menuitem"
+							aria-haspopup="true" tabindex="0">Life after service
+						</summary>
+						<ul class="list-unstyled list-group" role="menu" aria-expanded="false"
+							aria-hidden="true">
+							<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+									href="/demo/en/benefits/">Benefits
+									for transition</a></li>
+							<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+									href="#">Your
+									transition task list</a></li>
+
+
+						</ul>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary class="list-group-item btn btn-link" role="menuitem"
+							aria-haspopup="true" tabindex="0">Your documents and forms</summary>
+						<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
+							aria-hidden="true">
+							<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+									href="/demo/en/your-forms/index.html">Saved
+									forms</a></li>
+							<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+									href="/demo/en/your-forms/index.html">Submitted
+									forms and&nbsp;files</a></li>
+							<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+									href="/demo/en/your-forms/upload.html">Upload
+									files</a></li>
+						</ul>
+					</details>
+				</li>
+				<li>
+					<a role="menuitem" tabindex="0" href="/demo/en/your-benefits/index.html" class="list-group-item btn btn-link">Your
+						benefits</a>
+				</li>
+			</ul>
 						</nav>
 
 
