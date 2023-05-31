@@ -59,6 +59,48 @@ nav.mva-accnt-menu .btn-default {
     position: relative;
 }
 
+.gcweb-menu button[aria-haspopup=true] {background: #fff;}
+
+		.gcweb-menu button .text-warning {color: #6C552D;}
+		
+		#mb-pnl {
+			padding-left: 0px;
+			background-position: 0;
+			background-repeat: none;
+			box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 6px 2px !important;
+			--webkit-box-shadow:  rgba(0, 0, 0, 0.25) 0px 2px 6px 2px !important;
+			transition: all .5s ease-in-out;
+		}
+
+
+		#mb-pnl .modal-header {
+			border-bottom: 1px solid #fff;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+
+		a#menu-btn,
+		#mb-pnl,
+		#mb-pnl .modal-header,
+		#mb-pnl .modal-body,
+		#mb-pnl .sm-pnl,
+		#mb-pnl .modal-footer,
+		#mb-pnl .modal-body summary:focus,
+		#mb-pnl .modal-body summary:hover,
+		.wb-menu details[open] summary {
+
+			background: #38414d;
+		}
+
+		a#menu-btn {
+			margin-top: 10px;
+			font-weight: bold;
+			letter-spacing: 1.1px;
+			border-radius: 0;
+			border-top: 0;
+			border-color: #26374a;
+		}
+
 /* using .hidden-sm breaks compliance with screen reader/keyboard, so here are .wb-inv for different media queries */
 
 /*medium and below*/
