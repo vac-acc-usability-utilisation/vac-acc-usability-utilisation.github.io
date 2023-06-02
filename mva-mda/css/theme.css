@@ -1,10 +1,6 @@
 /* header and menu */
-
-
 .accnt-menu [role=menuitem] {
-
     width: auto;
-
 }
 
 .gcweb-menu [role=menu] {
@@ -59,47 +55,74 @@ nav.mva-accnt-menu .btn-default {
     position: relative;
 }
 
-.gcweb-menu button[aria-haspopup=true] {background: #fff;}
-
-		.gcweb-menu button .text-warning {color: #6C552D;}
-		
-		#mb-pnl {
-			padding-left: 0px;
-			background-position: 0;
-			background-repeat: none;
-			box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 6px 2px !important;
-			--webkit-box-shadow:  rgba(0, 0, 0, 0.25) 0px 2px 6px 2px !important;
-			transition: all .5s ease-in-out;
-		}
+.gcweb-menu button[aria-haspopup=true],
+.gcweb-menu button.btn:focus,
+.gcweb-menu button.btn:focus:hover {
+    background: #fff;
+    color: #000;
+}
 
 
-		#mb-pnl .modal-header {
-			border-bottom: 1px solid #fff;
-			-webkit-box-shadow: none;
-			box-shadow: none;
-		}
+.gcweb-menu button[aria-haspopup=true]:hover {
+    color: #fff;
+}
 
-		a#menu-btn,
-		#mb-pnl,
-		#mb-pnl .modal-header,
-		#mb-pnl .modal-body,
-		#mb-pnl .sm-pnl,
-		#mb-pnl .modal-footer,
-		#mb-pnl .modal-body summary:focus,
-		#mb-pnl .modal-body summary:hover,
-		.wb-menu details[open] summary {
+.gcweb-menu button.btn:hover>.text-warning,
+.gcweb-menu button[aria-expanded=true]>.text-warning {
+    color: #fff;
+}
 
-			background: #38414d;
-		}
 
-		a#menu-btn {
-			margin-top: 10px;
-			font-weight: bold;
-			letter-spacing: 1.1px;
-			border-radius: 0;
-			border-top: 0;
-			border-color: #26374a;
-		}
+.gcweb-menu button .text-warning,
+.gcweb-menu button.btn:focus>.text-warning {
+    color: #6C552D;
+}
+
+#mb-pnl {
+    padding-left: 0px;
+    background-position: 0;
+    background-repeat: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 6px 2px !important;
+    --webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 6px 2px !important;
+    transition: all .5s ease-in-out;
+}
+
+
+#mb-pnl .modal-header {
+    border-bottom: 1px solid #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+a#menu-btn,
+#mb-pnl,
+#mb-pnl .modal-header,
+#mb-pnl .modal-body,
+#mb-pnl .sm-pnl,
+#mb-pnl .modal-footer,
+#mb-pnl .modal-body summary:focus,
+#mb-pnl .modal-body summary:hover,
+.wb-menu details[open] summary {
+
+    background: #38414d;
+}
+
+a#menu-btn {
+    margin-top: 10px;
+    font-weight: bold;
+    letter-spacing: 1.1px;
+    border-top: 0;
+    border-color: #26374a;
+}
+
+#mb-pnl .wb-menu details[open] summary {
+    background: #38414d !important;
+}
+
+#mb-pnl a:hover, #mb-pnl summary:hover {text-decoration: underline;}
+
+#mb-pnl li.active a:hover {text-decoration: none;}
+
 
 /* using .hidden-sm breaks compliance with screen reader/keyboard, so here are .wb-inv for different media queries */
 
@@ -190,7 +213,11 @@ nav.mva-accnt-menu .btn-default {
 
 /* Vertical navigation */
 #mva-nav-btn {
-    letter-spacing: 1.5px; color: #fff; background-color: #38414d; border:none; border-radius: 0;
+    letter-spacing: 1.5px;
+    color: #fff;
+    background-color: #38414d;
+    border: none;
+    border-radius: 0;
 }
 
 #mva-nav-btn[aria-expanded=false]+[role=menu] {
@@ -202,7 +229,9 @@ nav.mva-accnt-menu .btn-default {
 }
 
 
-nav.mva-nav .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+nav.mva-nav .btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
     opacity: 1;
     cursor: default;
 }
@@ -225,14 +254,15 @@ nav.mva-nav ul {
 }
 
 
-nav.mva-nav summary:hover, nav.mva-nav a.list-group-item:hover {
+nav.mva-nav summary:hover,
+nav.mva-nav a.list-group-item:hover {
     color: #0535d2;
     text-decoration: underline;
     background-color: #f5f5f5;
 }
 
 nav.mva-nav summary::marker {
-    color:rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
 }
 
 nav.mva-nav details ul {
@@ -250,7 +280,7 @@ nav.mva-nav details ul {
 
 }
 
-nav.mva-nav  details>summary {
+nav.mva-nav details>summary {
     margin-left: -18px;
     margin-right: -18px;
 }
@@ -264,7 +294,7 @@ nav.mva-nav details summary,
     padding-right: 18px;
 }
 
-#mva-nav-mnu > li > details > ul > li > a {
+#mva-nav-mnu>li>details>ul>li>a {
     border-left: 3px solid rgba(56, 65, 77, 0.25);
 }
 
@@ -273,7 +303,7 @@ nav.mva-nav .list-group-item {
     background: #fff;
 }
 
-#mva-nav-mnu > li > a.list-group-item {
+#mva-nav-mnu>li>a.list-group-item {
     padding-left: 30px;
 }
 
@@ -304,11 +334,13 @@ nav.mva-nav details {
     background: #fff;
 }
 
-nav.mva-nav details[open], nav.mva-nav details[open]>summary {
+nav.mva-nav details[open],
+nav.mva-nav details[open]>summary {
     margin-right: 0px;
 }
 
-nav.mva-nav a.list-group-item:first-child, nav.mva-nav summary.list-group-item:first-child {
+nav.mva-nav a.list-group-item:first-child,
+nav.mva-nav summary.list-group-item:first-child {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px
 }
@@ -323,16 +355,16 @@ nav.mva-nav a.list-group-item:last-child {
     box-shadow: #e3e3e3 2px 2px 1px;
     z-index: 9;
     position: absolute;
-}   
+}
 
 /*small and above*/
-@media screen and (max-width: 991px) { 
+@media screen and (max-width: 991px) {
     #mva-nav-mnu {
         max-width: 350px;
-        position: relative; 
-    }   
+        position: relative;
+    }
 }
- 
+
 
 
 /*small and above*/
@@ -386,9 +418,9 @@ PROVISIONAL features: Responsive tables cards
         border-bottom: 0;
     }
 
-   /* table > tbody > tr:nth-child(1) > td.nws-tbl-date.nowrap*/
+    /* table > tbody > tr:nth-child(1) > td.nws-tbl-date.nowrap*/
 
-    .provisional.gc-table.text-left > tbody > tr >  td {
+    .provisional.gc-table.text-left>tbody>tr>td {
         clear: both;
         display: block;
         text-align: left;
@@ -514,74 +546,4 @@ p.account-chooser-desc {
 /* making bg-white available to panel-footer */
 .panel-footer.bg-white {
     background-color: white;
-}
-
-
-
-
-/* custom mva-cards with dismissable (for session)*/
-
-.mva-cards .wb-dismissable {
-    padding: 0;
-    margin: 0;
-    min-height: inherit;
-
-}
-
-.mva-cards .wb-dismissable-wrapper {
-
-    width: unset;
-    min-height: inherit;
-    display: flex;
-}
-
-.mva-cards .wb-dismissable-container {
-    background-color: rgba(0, 0, 0, 0);
-    display: inline-block;
-
-    position: relative;
-    min-height: inherit;
-    margin: 0;
-    padding: 0 10px 10px 10px;
-}
-
-
-
-@media (min-width: 576px) {
-    .mva-cards .wb-dismissable-container {
-        width: 100%;
-    }
-}
-
-
-.mva-cards .wb-dismissable-container .mfp-close {
-    color: #555;
-    display: block;
-    position: absolute;
-    right: 8px;
-    z-index: 1;
-}
-
-.mva-cards .panel {
-    position: relative;
-
-}
-
-.mva-cards .panel-footer {
-    width: 100%;
-    text-align: center;
-    display: unset;
-    position: absolute;
-    bottom: 0;
-    background-color: #fff;
-}
-
-progress,
-progress[value]::-webkit-progress-bar {
-
-    height: 1em;
-    background-color: whitesmoke;
-    border-radius: 2px;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
-
 }
