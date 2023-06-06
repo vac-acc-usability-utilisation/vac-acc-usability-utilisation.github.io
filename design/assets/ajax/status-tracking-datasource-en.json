@@ -3,7 +3,7 @@
     "DESCRIPTION": "<a href=\"application.html\">Application</a>",
     "UPDATE": "2023-05-04",
     "APPDATE": "2023-05-03",
-    "STATUS": "<a href=\"application.html\">Step 3 - In Progress</a>",
+    "STATUS": "<a href=\"application.html\"><span class=\"wb-inv\">Step 3 - </span>In Progress</a>",
     "PROGRAM": "<a href=\"application.html\">Education and Training Benefit - Plan</a>",
     "UNREAD": "true"
   },
@@ -11,7 +11,7 @@
     "DESCRIPTION": "<a href=\"#\">Application</a>",
     "UPDATE": "2023-04-28",
     "APPDATE": "2023-01-01",
-    "STATUS": "<a href=\"#\">Step 2 - Awaiting information</a>",
+    "STATUS": "<a href=\"#\"><span class=\"wb-inv\">Step 2 - </span>In Progress</a>",
     "PROGRAM": "<a href=\"#\">Education and Training Benefit - Plan</a>",
     "UNREAD": "false"
   },
@@ -19,7 +19,7 @@
     "DESCRIPTION": "<a href=\"#\">Major Depressive Disorder</a>",
     "UPDATE": "2022-09-23",
     "APPDATE": "2022-06-28",
-    "STATUS": "<a href=\"#\">Step 1 - Application recieved</a>",
+    "STATUS": "<a href=\"#\"><span class=\"wb-inv\">Step 1 - </span>Application recieved</a>",
     "PROGRAM": "<a href=\"#\">Priority hiring - Medical release attributable to service determination</a>",
     "UNREAD": "false"
   },

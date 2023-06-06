@@ -9,7 +9,6 @@
 }
 
 .accnt-menu [role=menu] {
-
     position: absolute;
     right: 1em;
 }
@@ -547,3 +546,309 @@ p.account-chooser-desc {
 .panel-footer.bg-white {
     background-color: white;
 }
+
+
+/*dashboard toggle panels*/
+#mva-dashboard .cardsRow {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+  #mva-dashboard summary p {
+    margin: 0 16px 16px;
+  }
+  #mva-dashboard .panel footer {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  @media screen and (max-width: 767px) {
+    #mva-dashboard div.cardsRow div details {
+      margin-bottom: 8px;
+    }
+  }
+  #mva-dashboard details {
+    padding-bottom: 0;
+  }
+  #mva-dashboard .list-group {
+    margin-bottom: 0;
+  }
+  #mva-dashboard div.panel-body {
+    padding: 0;
+    margin: 0 -18px;
+  }
+  .dashboard-panel-badge {
+    margin-top: -4px;
+    margin-left: 2px;
+  }
+  .dashboard-panel details, .dashboard-panel details[open] {
+    padding-bottom: 0;
+  }
+  .dashboard-panel .list-group {
+    margin-bottom: 0;
+  }
+  .dashboard-panel .list-group-item {
+    overflow: auto;
+    border-left: 0px solid #000;
+    border-right: 0px solid #000;
+    border-radius: 0px;
+    color: #555 !important;
+  }
+  .dashboard-panel div.panel-body {
+    padding: 0;
+    margin: 0;
+  }
+  .dashboard-panel footer {
+    margin: 0;
+  }
+  .dashboard-panel .read-link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: -5px;
+  }
+  .dashboard-panel .unread-link {
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: -5px;
+  }
+  .dashboard-panel summary:focus {
+    outline: 0 !important;
+  }
+  .dashboard-panel .panel:focus-within {
+    outline: 2px dotted black !important;
+    outline-offset: 2px !important;
+    z-index: 999 !important;
+  }
+  .dashboard-panel .panel:hover {
+    outline: 0 !important;
+  }
+  .dashboard-panel .panel-heading {
+    border-color: #bbb;
+  }
+  .dashboard-panel-card summary {
+    min-height: 203px;
+    display: list-item !important;
+  }
+  .french-dashboard .dashboard-panel-card summary {
+    min-height: 236px !important;
+  }
+  .dashboard-panel-card summary p {
+    padding-left: 19px;
+    padding-top: 5px;
+  }
+  .brand img {
+    min-width: 300px !important;
+  }
+  .brand a {
+    display: inline-block !important;
+  }
+  .signon-username {
+    white-space: nowrap;
+  }
+  .no-gutter {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .news-container .unread-badge {
+    float: right;
+  }
+  .news-container details[open] {
+    padding-bottom: 0px !important;
+    border-color: #8e8e8e !important;
+  }
+  .beta-design .signon-section .btn {
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.05);
+    padding: 7px 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 3px;
+  }
+  .beta-design .signon-section #poa_account_settings {
+    border: 0.55px solid #999;
+    padding: 7px 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 3px;
+  }
+  @media screen and (min-width: 1200px) {
+    .beta-design .signon-section #signed_on_user {
+      width: 300px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: -5px;
+      display: inline-block;
+      text-align: right;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .dashboard-panel-card summary {
+      min-height: 270px !important;
+    }
+    .french-dashboard .dashboard-panel-card summary {
+      min-height: 270px !important;
+    }
+    #wb-sm .menu>li a {
+      padding: 1.15em 0.8em;
+      font-size: 14px;
+    }
+    .beta-design .signon-section {
+      float: left;
+      margin-top: 10px;
+    }
+    .beta-design .signon-section p {
+      font-size: 16px;
+    }
+    .beta-design .signon-section .btn {
+      margin-top: -3px;
+      padding: 7px 12px;
+    }
+    .beta-design .signon-section span {
+      display: inline-block !important;
+    }
+    .beta-design .signon-state {
+      text-align: left;
+      max-width: 100% !important;
+      margin-bottom: 10px;
+    }
+    .beta-design .signon {
+        text-align: left;
+    }
+    
+  }
+  @media screen and (max-width: 991px) {
+    .dashboard-panel-card summary {
+      min-height: 203px !important;
+    }
+    .french-dashboard .dashboard-panel-card summary {
+      min-height: 270px !important;
+    }
+    .poa-unavailable a {
+      margin-left: 10px !important;
+      white-space: normal !important;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .dashboard-panel-card summary {
+      min-height: 103px !important;
+    }
+    .french-dashboard .dashboard-panel-card summary {
+      min-height: 123px !important;
+    }
+    .beta-design .signon-section {
+      float: left;
+      margin-top: 10px;
+    }
+    .beta-design .signon-section p {
+      font-size: 16px;
+    }
+    .beta-design .signon-section .btn {
+      margin-top: -3px;
+    }
+    .beta-design .signon-section span {
+      display: inline-block !important;
+    }
+    .beta-design .signon-state {
+      text-align: left;
+      max-width: 100% !important;
+      margin-bottom: 10px;
+    }
+    .beta-design .signon-section .signon-section-buttons {
+      display: block !important;
+    }
+    .beta-design .signon-section .signon-section-buttons .btn {
+      padding: 5px 10px !important;
+      font-size: 14px;
+      line-height: 1.5;
+      border-radius: 3px;
+      margin-top: 5px !important;
+    }
+    .beta-design #poa-account-select {
+      display: block;
+      padding: 0px;
+      text-align: left;
+      margin-top: -5px;
+      margin-bottom: 5px;
+    }
+    
+    #poa-chooser-panel .well label {
+      font-size: 1.25em;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .mobile-menu {
+      position: absolute;
+      right: 20px;
+      top: -53px;
+    }
+    .beta-design .signon-header {
+      font-size: 26px;
+    }
+    .beta-design .signon-section p {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    
+    #poa-chooser-panel .well label {
+      font-size: 1.15em;
+    }
+    
+    .brand img {
+      min-width: 250px !important;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .mobile-menu {
+      position: static;
+      width: 100%;
+      text-align: right;
+    }
+  }
+  @media screen and (min-width: 991px) {
+    .footer-logo {
+      height: 30px !important;
+      margin-top: -45px !important;
+      position: absolute;
+      right: 0;
+    }
+    .brand {
+      padding-bottom: 0 !important;
+      margin-top: -15px !important;
+      margin-bottom: 25px !important;
+    }
+    .brand img {
+      max-height: 30px !important;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    #button-print {
+      position: unset;
+      text-align: inherit;
+    }
+    #print-row {
+      text-align: left;
+    }
+  }
+  /* End of BETA Redesign Styles */
+  
+  /* dashboard (2022 beta) WET overrides */
+  
+  .dashboard-panel>details {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .dashboard-panel>details>summary {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .dashboard-panel>details[open]>summary {
+    margin-bottom: 0;
+  }
