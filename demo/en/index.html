@@ -39,7 +39,7 @@
 
 </head>
 
-<body class="cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage">
+<body vocab="http://schema.org/" typeof="WebPage">
 	<nav aria-label="Skip Links">
 		<ul id="wb-tphp">
 			<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
@@ -189,90 +189,8 @@
 				<nav role="navigation" typeof="SiteNavigationElement" id="sm-pnl"
 					class="sm-pnl wb-menu wb-menu-inited wb-init wb-navcurr-inited">
 					<h3>Topics menu</h3>
-					<ul class="list-unstyled mb-menu" role="menu">
-						<li class="no-sect active"><a class="mb-item" role="menuitem" aria-setsize="7" aria-posinset="1"
-								tabindex="-1" href="/demo/en/index.html">Overview</a></li>
-						<li>
-							<details>
-								<summary class="mb-item" role="menuitem" aria-setsize="7" aria-posinset="2"
-									aria-haspopup="true" tabindex="0">Applications and forms</summary>
-								<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
-									<li><a role="menuitem" aria-setsize="6" aria-posinset="1" tabindex="-1"
-											href="#">Track your applications</a></li>
-									<li><a role="menuitem" aria-setsize="6" aria-posinset="2" tabindex="-1"
-											href="#">What can I apply for?</a></li>
-									<li><a role="menuitem" aria-setsize="6" aria-posinset="3" tabindex="-1"
-											href="#">Find a form</a></li>
-									<li><a role="menuitem" aria-setsize="6" aria-posinset="4" tabindex="-1"
-											href="#">Submitted forms and documents</a></li>
-									<li><a role="menuitem" aria-setsize="6" aria-posinset="5" tabindex="-1"
-											href="#">Upload files</a></li>
-								</ul>
-							</details>
-						</li>
-						<li>
-							<details>
-								<summary class="mb-item" role="menuitem" aria-setsize="7" aria-posinset="3"
-									aria-haspopup="true" tabindex="-1">Your benefits and services</summary>
-								<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
-									<li><a role="menuitem" aria-setsize="3" aria-posinset="1" tabindex="-1"
-											href="#">Current benefits</a></li>
-									<li><a role="menuitem" aria-setsize="3" aria-posinset="2" tabindex="-1"
-											href="#">Payment history</a></li>
-									<li><a role="menuitem" aria-setsize="3" aria-posinset="3" tabindex="-1"
-											href="#">What can I apply for?</a></li>
-								</ul>
-							</details>
-						</li>
-						<li>
-							<details>
-								<summary class="mb-item" role="menuitem" aria-setsize="7" aria-posinset="4"
-									aria-haspopup="true" tabindex="-1">Transition and wellness</summary>
-								<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
-									<li><a role="menuitem" aria-setsize="3" aria-posinset="1" tabindex="-1"
-											href="#">Member transition task list</a></li>
-									<li><a role="menuitem" aria-setsize="3" aria-posinset="2" tabindex="-1"
-											href="#">Find a transition centre</a></li>
-									<li><a role="menuitem" aria-setsize="3" aria-posinset="3" tabindex="-1" href="#">My
-											well-being check-in</a></li>
-								</ul>
-							</details>
-						</li>
-						<li>
-							<details>
-								<summary class="mb-item" role="menuitem" aria-setsize="7" aria-posinset="5"
-									aria-haspopup="true" tabindex="-1">Messages</summary>
-								<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
-									<li><a role="menuitem" aria-setsize="4" aria-posinset="1" tabindex="-1"
-											href="#">Inbox</a></li>
-									<li><a role="menuitem" aria-setsize="4" aria-posinset="2" tabindex="-1"
-											href="#">Send a message</a></li>
-									<li><a role="menuitem" aria-setsize="4" aria-posinset="3" tabindex="-1"
-											href="#">Upload files</a></li>
-									<li><a role="menuitem" aria-setsize="4" aria-posinset="4" tabindex="-1"
-											href="#">Manage notifications</a></li>
-								</ul>
-							</details>
-						</li>
-						<li class="no-sect" t><a href="#" class="mb-item" role="menuitem" aria-setsize="7"
-								aria-posinset="6" aria-haspopup="false" tabindex="-1">Profile</a>
-						</li>
-						<li>
-							<details>
-								<summary class="mb-item" role="menuitem" aria-setsize="5" aria-posinset="4"
-									aria-haspopup="true" tabindex="-1">Contact and support</summary>
-								<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
-									<li><a role="menuitem" aria-setsize="4" aria-posinset="1" tabindex="-1"
-											href="#">Contact <abbr title="">VAC</abbr></a></li>
-									<li><a role="menuitem" aria-setsize="4" aria-posinset="2" tabindex="-1"
-											href="#">Frequently asked questions</a></li>
-									<li><a role="menuitem" aria-setsize="4" aria-posinset="3" tabindex="-1"
-											href="#">Find an office</a></li>
-									<li><a role="menuitem" aria-setsize="4" aria-posinset="4" tabindex="-1" href="#">How
-											to use My VAC Account</a></li>
-								</ul>
-							</details>
-						</li>
+					<ul class="list-unstyled mb-menu" role="menu" data-ajax-prepend="/design/assets/ajax/site-menu-en.html">
+						
 					</ul>
 				</nav>
 				<!--
@@ -374,13 +292,114 @@
 	</header>
 
 	<main class="cnt-wdth-lmtd" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
-		<section class="container">
-			<h1 class="">Overview</h1>
+		
+<!--
+		<section class="container mrgn-tp-md">
+			<div class="alert alert-warning col-md-12 mrgn-bttm-0">
+					<h3>System maintence or emergecny that impacts the whole site</h3>
+					<p>This is an alert that would appear above the h1 on each page <a href="#">href</a>.</p>
+				</div>
+		</section>-->
+
+		
+		<section class="container mrgn-bttm-md">
+			
+
+			<h1 class="">Overview <br></h1>
+			<h2 class="mrgn-tp-sm h4"><span class="h3">Welcome, Noel</span></h2>
+			
 		</section>
+		
+		
+		<section class="container mrgn-tp-md mrgn-bttm-md hidden">
+			<div class="alert alert-warning col-md-12 ">
+				<h3>Account level alerts</h3>
+				<p>Account level notices like a reminder to <a href="#">vertify your email address</a></p>
+			</div>
+			
+		</section>
+		<section class=" provisional gc-most-requested well well-sm">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-2">
+						<h2>Most requested</h2>
+					</div>
+					<div class="col-md-8">
+						<ul class="colcount-md-2 list-unstyled lst-spcd">
+							
+
+							<li><a href="#1">Track your applications</a></li>
+							<li><a href="#3">Open your inbox</a></li>
+							<li><a href="#4">Upload a file</a></li>
+							<li><a href="#2">Find a form</a></li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<section class="container">
+
+			<div class="wb-eqht-grd row small">
+
+				
+				<div class="col-lg-4 col-md-6">
+					<h3><a href="#5">Track your applications</a></h3>
+					<p>Check the status of your&nbsp;applications.</p>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<h3><a href="#4">Apply for benefits</a></h3>
+					<p>Discover and apply for benefits and&nbsp;services.</p>
+				</div>
+				
+				<div class="col-lg-4 col-md-6">
+					<h3><a href="#4">Forms</a></h3>
+					<p>Find a form in our catalogue.</p>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<h3><a href="#5">Transition task-list</a></h3>
+					<p>Keep track of what you need to do before (and after) you are released from the Canadian Armed Forces.</p>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<h3><a href="#6">Your documents and forms</a></h3>
+					<p>View your saved and submitted documents.</p>
+				</div>
+
+				<div class="col-lg-4 col-md-6">
+					<h3><a href="#6">Your benefits</a></h3>
+					<p>Your current benefits and services.</p>
+				</div>
+		</section>
+		<!--
+		<div class="container-fluid">
+			<div class="row">
+				<div class="well well-lg mrgn-tp-md bg-gctheme text-white" style="background: #38414d;">
+					<div class="container mrgn-bttm-lg">
+
+						
+						<h2 id="experiment" class="mrgn-tp-md mrgn-bttm-0">Special features</h2>
+							<div class="row">
+								<div class="col-md-6">
+									<h3 id="méli-mélo">Méli-mélo</h3>
+								<p>The experimentation hub you have been waiting for! Méli-mélos allow you to bring in some awesome new code you would usually consider "custom" to the Canada.ca theme.</p>
+								<p class="mrgn-tp-lg"><a href="méli-mélo/méli-mélo-en.html" class="btn btn-default btn-lg">Learn more<span class="wb-inv"> about méli-mélo</span></a></p>
+								</div>
+								<div class="col-md-6">
+								<h3 id="thematics">Promotional thematics</h3><p>Do you have a set of pages that use an original look related to a specific promotion? Try this special hub for promotional thematics instead.</p>
+								<p class="mrgn-tp-lg"><a href="th%C3%A9matique/gc-th%C3%A9matique-en.html" class="btn btn-default btn-lg">Learn more<span class="wb-inv"> about promotional thematics</span></a></p>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="">
+			<div class="container">
 			<div class="row mrgn-tp-md mrgn-bttm-md">
 				<div class="col-xs-12 col-sm-6">
-					<p class="h3 mrgn-tp-sm mrgn-bttm-0">Welcome, Noel</p>
+					<p class="h3 mrgn-tp-sm mrgn-bttm-0"></p>
 				</div>
 				<div class="col-xs-12 col-sm-6 text-right">
 					<div class="btn-group mrgn-tp-0 mrgn-bttm-md">
@@ -392,33 +411,27 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		
 
+			
+<div class="container">
 			<div class="row">
 				<div class="wb-eqht">
 					<div class="col-xs-12 col-sm-6 col-md-4">
 						<div class="dashboard-panel dashboard-panel-card">
 							<details class="panel panel-default">
 								<summary class="eqht-trgt panel-heading wb-toggle" data-toggle='{"persist": "local"}'>
-									<h3>Applications and forms</h3>
-									<p>Discover and apply for benefits and services, upload documents and track the
-										status of your applications.</p>
+									<h3>Apply for benefits</h3>
+									<p>Discover and apply for benefits and services.</p>
 								</summary>
 								<div class="panel-body">
 									<div class="list-group" id="applications">
 										<a href="/prot/mv-ca/STATINQ_6_3"
-											class="list-group-item nav-link-status disable-link-on-click">Track your
-											applications</a>
+											class="list-group-item nav-link-status disable-link-on-click">Find a form</a>
 										<a href="/prot/mv-ca/STATINQ_6_2"
 											class="list-group-item nav-link-apply disable-link-on-click"></span>What can
 											I apply for?</a>
-										<a href="/prot/mv-ca/MVA_7_23_5"
-											class="list-group-item nav-link-forms disable-link-on-click">Find a form</a>
-										<a href="/prot/mv-ca/MVA_7_23_7"
-											class="list-group-item nav-link-submitted disable-link-on-click">Submitted
-											forms and documents</a>
-										<a href="/prot/mv-ca/MVA_7_27_1"
-											class="list-group-item nav-link-upload disable-link-on-click">Upload
-											files</a>
 									</div>
 								</div>
 							</details>
@@ -427,26 +440,12 @@
 
 					<div class="col-xs-12 col-sm-6 col-md-4">
 						<div class="dashboard-panel dashboard-panel-card">
-							<details class="panel panel-default">
-								<summary class="eqht-trgt panel-heading wb-toggle" data-toggle='{"persist": "local"}'>
-									<h3>My benefits and services</h3>
-									<p>A look at your current benefits and payment history.</p>
-								</summary>
-								<div class="panel-body">
-									<div class="list-group" id="benefits">
-										<a href='/prot/mv-ca/STATINQ_6_4'
-											class="list-group-item nav-link-current disable-link-on-click"
-											data-show-spinner-modal-on-click>Current benefits</a>
-										<a href='/prot/mv-ca/STATINQ_6_4'
-											class="list-group-item nav-link-payment disable-link-on-click"
-											data-show-spinner-modal-on-click>Payment history</a>
-
-										<a href="/prot/mv-ca/STATINQ_6_2"
-											class="list-group-item nav-link-apply disable-link-on-click">What can I
-											apply for?</a>
-									</div>
+							<div class="panel panel-default">
+								<div class="eqht-trgt panel-heading">
+									<h3><a href="#">Track your applications</a></h3>
+									<p>Check the status of your applications.</p>
 								</div>
-							</details>
+							</div>
 						</div>
 					</div>
 
@@ -454,31 +453,12 @@
 
 					<div class="col-xs-12 col-sm-6 col-md-4">
 						<div class="dashboard-panel dashboard-panel-card">
-							<details class="panel panel-default">
-								<summary class="eqht-trgt panel-heading wb-toggle" data-toggle='{"persist": "local"}'>
-									<h3>Transition and wellness</h3>
-									<p>Keep track of what you need to do before (and after) you are released from the
-										Canadian Armed Forces.</p>
-								</summary>
-								<div class="panel-body">
-									<div class="list-group" id="transition">
-
-										<a href='/prot/mv-ca/MVA_7_4_1'
-											class="list-group-item nav-link-mttl disable-link-on-click"
-											data-show-spinner-modal-on-click>Member transition task list</a>
-
-
-										<a href="https://www.canada.ca/en/department-national-defence/services/benefits-military/transition/understanding-transition/transition-centres.html"
-											class="list-group-item nav-link-transition" role="button"
-											target="_blank">Find a transition centre<span
-												class="fa fa-external-link mrgn-lft-sm" aria-hidden="true"></span><span
-												class="wb-inv screen-reader-text">Opens a new window</span></a>
-										<a href="/prot/mv-ca/MVA_7_7"
-											class="list-group-item nav-link-wellness disable-link-on-click">My
-											well-being check-in</a>
-									</div>
+							<div class="panel panel-default">
+								<div class="eqht-trgt panel-heading">
+									<h3><a href="#">Member transition task list</a></h3>
+									<p>Keep track of what you need to do before (and after) you are released from the Canadian Armed Forces.</p>
 								</div>
-							</details>
+							</div>
 						</div>
 					</div>
 
@@ -583,8 +563,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
-
+			</div></div>
+<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 mrgn-tp-md mrgn-bttm-md news-container">
 					<div class="dashboard-panel">
@@ -635,19 +615,76 @@
 						</details>
 					</div>
 				</div>
+			</div></div>-->
+
+			<div class="container mrgn-tp-xl ">
+				<div class="row">
+					<section
+					class="col-xs-12 col-md-12 wb-feeds limit-3 gc-nws cnt-wdth-lmtd mrgn-bttm-md ">
+					<div>
+						<h2 class="h3">News and notifications</h2>
+						<!-- demonstrates the layout - use json feed where applicable -->
+						<ul class="feeds-cont list-unstyled lst-spcd feed-active">
+							<li><a href="#">Notice: Information on recent winter storms throughout the
+									country</a><br> <small class="feeds-date">2022-12-19</small></li>
+							<li><a href="#">Due to COVID-19, our office in Sunnybrook, Toronto will not
+									be
+									accessible until further notice.</a><br> <small
+									class="feeds-date">2022-11-15</small></li>
+							<li><a href="#">Submit a claim: Spieser v. Attorney General of Canada et
+									al.</a><br> <small class="feeds-date">2022-04-24</small></li>
+						</ul>
+						<!-- json feed for news example
+						<ul class="feeds-cont list-unstyled lst-spcd">
+							<li> <a data-ajax="https://www.canada.ca/content/canadasite/api/nws/fds/en/web-feeds/revenue-agency.json" 
+								href="https://www.canada.ca/en/revenue-agency.atom.xml" rel="external">Canada Revenue Agency news items</a> 
+							</li>
+						</ul>
+						-->
+						<p>More: <a href="#" class="admin">View all news and notifications</a></p>
+					</div>
+				</section>
+				<div class="clearfix mrgn-tp-lg mrgn-bttm-lg"></div>
+			
+				</div>
+				
+								
 			</div>
 
-			<!-- start crisis -->
-			<section class="alert alert-info static-alert">
-				<h3><abbr title="Veterans Affairs Canada">VAC</abbr> assistance service</h3>
-				<p>Personal problems can affect your quality of life. A <a id="assistanceServiceLink"
-						href="http://10.199.41.150/eng/contact/crisis-referral-centre"><abbr
-							title="Veterans Affairs Canada">VAC</abbr> Assistance Service</a> mental health professional
-					can help you maintain and improve your well-being.
-				</p>
+			
+
+			<section class="container">
+				<h3>Other services</h3>
+				<div class="row">
+					<section class="col-md-10">
+						<section class="well ">
+							<h4 class="mrgn-tp-md"><a href="#"><abbr title="Veterans Affairs Canada">VAC</abbr> assistance service</a></h4>
+							<p>Personal problems can affect your quality of life. A&nbsp;<a id="assistanceServiceLink"
+									href="http://10.199.41.150/eng/contact/crisis-referral-centre"><abbr
+										title="Veterans Affairs Canada">VAC</abbr>&nbsp;Assistance&nbsp;Service</a> mental health professional
+								can help you maintain and improve your well-being.
+							</p>
+						</section>
+					</section>
+				</div>
+				<div class="wb-eqht-grd row small">
+	
+					
+					<div class="col-lg-4 col-md-6">
+						<h3><a href="#5">Member transition task list</a></h3>
+						<p>Keep track of what you need to do before (and after) you are released from the Canadian Armed Forces.</p>
+					</div>
+				
+					
+					<div class="col-lg-4 col-md-6">
+						<h3><a href="#6">Well-being check-in tool</a></h3>
+						<p>...</p>
+					</div>
+	
 			</section>
 			</div>
 		</section>
+	
 		<section class="pagedetails container">
 			<h2 class="wb-inv">Page details</h2>
 			<div class="row">
@@ -784,9 +821,10 @@
 					<ul class="list-unstyled colcount-xs-2 colcount-md-3">
 						<li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
 
+							<!--
 						<li id="authenticated-footer-link-2">
 							<a href="#">Check in on your well-being</a>
-						</li>
+						</li>-->
 
 						<li><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">Talk to a mental
 								health professional</a></li>
