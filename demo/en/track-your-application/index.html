@@ -223,6 +223,7 @@
 		<div>
 			<div class="container">
 				<h1>Track your applications</h1>
+				<p>Track the status of your applications.</p>
 				<!--
 				<button id="menu-btn" class="h6 btn btn-link brdr-tp brdr-rght brdr-bttm brdr-lft hidden" 
 				style="letter-spacing: 0.5px;" >
@@ -236,61 +237,94 @@
 							<summary>
 								<h4 class="h4">Filter Options</h4>
 							</summary>
-							
-							<p class="mrgn-tp-md">Use filters...</p>
+
 							<form class="wb-tables-filter" data-bind-to="dataset-filter1">
-								<div class="form-group">
-									<fieldset>
-										<legend>
-											<span class="field-name">Application date</span>
-										</legend>
-										<div class="form-group">
-											<label for="dt_mindate" class="small">Applications after</label>
-											<input type="date" class="form-control date-group" id="dt_mindate" name="dt_mindate"
-												data-column="0" data-rule-require_from_group='[2,".date-group"]'>
-										</div>
-										<div class="form-group">
-											<label for="dt_maxdate" class="small">Applications before</label>
-											<input type="date" class="form-control date-group" id="dt_maxdate" name="dt_maxdate"
-												data-column="0" data-rule-require_from_group='[2,".date-group"]'>
-										</div>
-									</fieldset>
-								</div>
-								<div class="form-group">
-									<label for="dt_type">Application Type</label>
-									<select class="form-control" id="dt_type" name="dt_type" data-column="3">
-										<option value="">All types</option>
-										<option value="Application">Application</option>
-										<option value="Departmental Review">Departmental Review</option>
-										<option value="Reassessment">Reassessment</option>
-										<option value="Withdrawn">Withdrawn</option>
-									</select>
-								</div>
-								<div class="form-group">
-									<label for="dt_department">Status</label>
-									<select class="form-control" id="dt_department" name="dt_department"
-										data-column="2">
-										<option value="">Any status</option>
-										<option value="Agriculture and Agri-Food Canada">Agriculture and Agri-Food
-											Canada</option>
-										<option value="Atlantic Canada Opportunities Agency">Atlantic Canada
-											Opportunities Agency</option>
-										<option value="Canadian Heritage">Canadian Heritage</option>
-										<option value="Infrastructure Canada">Infrastructure Canada</option>
-										<option value="Innovation, Science and Economic Development Canada">Innovation,
-											Science and Economic Development Canada</option>
-										<option value="National Defence and the Canadian Armed Forces">National Defence
-											and the Canadian Armed Forces</option>
-										<option value="Employment and Social Development Canada">Employment and Social
-											Development Canada</option>
-										<option value="Global Affairs Canada">Global Affairs Canada</option>
-										<option value="Indigenous and Northern Affairs Canada">Indigenous and Northern
-											Affairs Canada</option>
-										<option value="Competition Bureau">Competition Bureau</option>
-										<option value="Canadian Grain Commission">Canadian Grain Commission</option>
-										<option value="National Energy Board">National Energy Board</option>
+								<div class="mrgn-tp-md">
+									<div class="form-group">
+										<label for="dt_date">Application date</label>
+										<select class="form-control" id="dt_date" name="dt_date" data-column="3">
+											<option value="">Any time</option>
+											<option value="Older than a week">Older than a week</option>
+											<option value="Older than a month">Older than a month</option>
+											<option value="Older than a six months">Older than six months</option>
+											<option value="Older than a year">Older than a year</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="dt_date-mode">Date modified</label>
+										<select class="form-control" id="dt_date-mode" name="dt_date-mode" data-column="3">
+											<option value="">Any time</option>
+											<option value="Older than a week">Older than a week</option>
+											<option value="Older than a month">Older than a month</option>
+											<option value="Older than a six months">Older than six months</option>
+											<option value="Older than a year">Older than a year</option>
+										</select>
+									</div>
+									<div class="form-group">
 										
-									</select>
+										<fieldset>
+											<legend class="mrgn-bttm-0"><span class="field-name"
+													style="font-weight: 700; font-size: 16px;">Benefits</span>
+											</legend>
+											<ul class="list-unstyled">
+												<li class="checkbox"><label for="dt_audience3"><input
+													type="checkbox" id="dt_audience3" name="dt_audience"
+													data-column="6" value="Farmers"> Career Impact
+												Allowance</label></li>
+										<li class="checkbox"><label for="dt_audience5"><input
+													type="checkbox" id="dt_audience5" name="dt_audience"
+													data-column="6" value="Rural Community"> Career
+												Transition Services</label></li>
+												<li class="checkbox"><label for="dt_audience1"><input
+															type="checkbox" id="dt_audience1" name="dt_audience"
+															data-column="6" value=""> Disability benefits</label>
+												</li>
+												<li class="checkbox"><label for="dt_audience7"><input
+													type="checkbox" id="dt_audience7" name="dt_audience"
+													data-column="6" value="Visitors"> Earnings Loss</label>
+										</li>
+												<li class="checkbox"><label for="dt_audience2"><input
+															type="checkbox" id="dt_audience2" name="dt_audience"
+															data-column="6" value="Media"> Education and Training Benefit</label></li>
+											
+												<li class="checkbox"><label for="dt_audience6"><input
+															type="checkbox" id="dt_audience6" name="dt_audience"
+															data-column="6" value="Travellers"> Health Benefits
+													</label></li>
+												
+												<li class="checkbox"><label for="dt_audience8"><input
+															type="checkbox" id="dt_audience8" name="dt_audience"
+															data-column="6" value="Business"> Pain and Suffering Compenstation</label></li>
+											</ul>
+										</fieldset>
+									
+								</div>
+									<div class="form-group">
+										<label for="dt_type">Type</label>
+										<select class="form-control" id="dt_type" name="dt_type" data-column="3">
+											<option value="">All types</option>
+											<option value="Application">Application</option>
+											<option value="Departmental Review">Departmental Review</option>
+											<option value="Reassessment">Reassessment</option>
+											<option value="Withdrawn">Withdrawn</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="dt_department">Status</label>
+										<select class="form-control" id="dt_department" name="dt_department"
+											data-column="2">
+											<option value="">Any status</option>
+											<option value="Agriculture and Agri-Food Canada">Step 1</option>
+											<option value="Atlantic Canada Opportunities Agency">Step 2</option>
+											<option value="Canadian Heritage">Step 3</option>
+											<option value="Infrastructure Canada">Step 4</option>
+											<option value="Innovation, Science and Economic Development Canada">
+												Withdrawn</option>
+											<option value="Needs more information">Needs more information</option>
+
+										</select>
+									</div>
+									
 								</div>
 								<!--
 								<div class="form-group">
@@ -475,26 +509,32 @@
 						</details>
 					</div>
 					<div class="col-md-9">
-						<table class="wb-tables table table-striped table-hover small" id="dataset-filter1" data-wb-tables='{
+						<table class="wb-tables table table-striped table-hover small  provisional gc-table" id="dataset-filter1"
+							data-wb-tables='{
 								"bDeferRender": true,
 								"ajaxSource": "ajax/datasource.json",
-								"order": [5, "desc"],
+								"order": [0, "desc"],
 								"columns": [
-									{ "data": "APPDATE", "className": "st-tbl-date" },
-									{ "data": "PROGRAM", "className": "st-tbl-ttl h4" },
-									{ "data": "TYPE", "className": "st-tbl-type" },
-									{ "data": "DESC", "className": "st-tbl-desc" },
+								
+									
+									{ "data": "UPDATE", "className": "st-tbl-update"},
 									{ "data": "STATUS",  "className": "st-tbl-status" },
-									{ "data": "UPDATE", "className": "st-tbl-update hidden"}
+									{ "data": "PROGRAM", "className": "st-tbl-ttl h4" },
+									{ "data": "DESC", "className": "st-tbl-desc" },
+									{ "data": "TYPE", "className": "st-tbl-type" },
+									{ "data": "APPDATE", "className": "st-tbl-date" }
 								]}'>
 							<thead>
 								<tr>
-									<th>Application date</th>
-									<th>Program</th>
-									<th>Type</th>
-									<th>Description</th>
-									<th>Status</th>
 									<th>Date modified</th>
+
+									<th>Status</th>
+									<th>Program</th>
+									<th>Description</th>
+									<th>Type</th>
+
+									<th>Application date</th>
+
 								</tr>
 							</thead>
 						</table>
@@ -505,47 +545,9 @@
 					<div class="row">
 
 						<div class="col-sm-12">
-							<div id="wb-main-in">
-								<h1 id="wb-cont" property="name">Track your applications</h1>
 
 
-								<div class="row">
-									<div class="col-xs-12">
-										<table
-											class="wb-tables table table-striped table-hover provisional gc-table small text-left"
-											id="dataset-filter" aria-live="polite" data-wb-tables='{
-			"bDeferRender": true,
-			"ajaxSource": "../../../design/assets/ajax/status-tracking-datasource-en.json",
-			"order": [0, "desc"],
-			"autoWidth": false,
-			"columns": [
-				{ "data": "UPDATE", "className": "ststrck-tbl-date " },
-				{ "data": "STATUS", "className": "ststrck-tbl-status" },
-
-				{ "data": "PROGRAM", "className": "ststrck-tbl-sub" },
-				{ "data": "DESCRIPTION", "className": "ststrck-tbl-desc" },
-
-				{ "data": "APPDATE", "className": "ststrck-tbl-summ " },
-				
-				{ "data": "UNREAD",  "visible": false }]
-				
-		}'>
-											<thead>
-												<tr>
-													<th scope="col" class="">Date modified</th>
-													<th scope="col" class="">Status</th>
-
-													<th scope="col" class="">Program</th>
-													<th scope="col" class="">Description</th>
-
-													<th scope="col" class="">Application date</th>
-
-												</tr>
-											</thead>
-										</table>
-
-									</div>
-								</div>
+								
 
 
 
@@ -600,7 +602,7 @@
 										</div>
 									</div>
 								</section>
-							</div>
+							
 
 
 						</div>
