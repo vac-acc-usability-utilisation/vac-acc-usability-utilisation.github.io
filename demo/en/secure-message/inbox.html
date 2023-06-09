@@ -306,7 +306,18 @@
 											<h4 class="h4">Filter Options</h4>
 										</summary>
 										<form class="wb-tables-filter" data-bind-to="dataset-filter1">
-											<div class="mrgn-tp-md">
+											<div class="form-group mrgn-bttm-sm">
+												<fieldset class="">
+													<legend class="mrgn-bttm-sm" style="font-weight: 700; font-size: 16px;">Status</legend>
+												
+												<ul class="list-unstyled mrgn-bttm-sm">
+														<li class="radio"><label for="unread"><input type="radio" id="unread" name="status" data-column="6" value="Unread"> Unread</label></li>
+														<li class="radio"><label for="read"><input type="radio" id="read" name="status" data-column="6" value="Read"> Read</label></li>
+
+														<li class="radio"><label for="archived"><input type="radio" id="archived" name="status" data-column="6" value="Unread"> Archived</label></li>
+													</fieldset> 
+											</div>
+											<div class="">
 												<div class="form-group">
 													<label for="dt_date">Date</label>
 													<select class="form-control" id="dt_date" name="dt_date"
@@ -363,17 +374,7 @@
 												</select>
 											</div>
 
-											<div class="form-group">
-												<fieldset>
-													<legend class="mrgn-bttm-sm" style="font-weight: 700; font-size: 16px;">Status</legend>
-												
-												<ul class="list-unstyled mrg">
-														<li class="radio"><label for="unread"><input type="radio" id="unread" name="status" data-column="6" value="Unread"> Unread</label></li>
-														<li class="radio"><label for="read"><input type="radio" id="read" name="status" data-column="6" value="Read"> Read</label></li>
-
-														<li class="radio"><label for="archived"><input type="radio" id="archived" name="status" data-column="6" value="Unread"> Archived</label></li>
-													</fieldset> 
-											</div>
+											
 											<!---->
 											<div class="form-group">
 												<button type="submit" class="btn btn-primary"
