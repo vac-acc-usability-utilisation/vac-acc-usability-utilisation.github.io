@@ -398,13 +398,13 @@
 									id="dataset-filter" aria-live="polite" data-wb-tables='{
 			"bDeferRender": true,
 			"ajaxSource": "../../../design/assets/ajax/inbox-datasource-en.json",
-			"order": [1, "desc"],
+			"order": [3, "desc"],
 			"autoWidth": false,
 			"columns": [
 				{ "data": "UNREAD", "className": "st-tbl-status"},
-				{ "data": "DATE", "className": "nws-tbl-date nowrap" },
 				{ "data": "SUBJECT", "className": "nws-tbl-sub sub-elps col-md-5" },
 				{ "data": "SUMMARY", "className": "nws-tbl-summ summ-elps col-md-6" },
+				{ "data": "DATE", "className": "nws-tbl-date nowrap" },
 				{ "data": "TYPE",  "visible": false },
 				{ "data": "ID", "visible": false}]
 				
@@ -412,9 +412,10 @@
 									<thead>
 										<tr>
 											<th scope="col">Status</th>
-											<th scope="col">Date</th>
+											
 											<th scope="col">Subject</th>
 											<th scope="col">Details</th>
+											<th scope="col">Date</th>
 
 										</tr>
 									</thead>
