@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) <abbr>WET</abbr>-boew.github.io/wet-boew/License-en.html / <abbr>WET</abbr>-boew.github.io/wet-boew/Licence-fr.html -->
+
+	<title>Overview</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta name="description" content=" " />
+	<meta name="author" content=" " />
+	<meta name="dcterms.title" content="My VAC Account Sign-In Services" />
+	<meta name="dcterms.description" content=" " />
+	<meta name="dcterms.creator" content=" " />
+	<meta name="dcterms.language" content="eng" />
+	<meta name="dcterms.subject" content="" />
+	<meta name="dcterms.issued" content="" />
+	<meta name="dcterms.modified" content="2023-01-16" />
+
+	<link href="/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
+
+	<link rel="stylesheet" href="/GCWeb/css/theme.min.css" />
+	<link rel="stylesheet" href="/mva-mda/css/theme.css" />
+	<link rel="stylesheet" href="/cdts/css/cdts.css" />
+	<noscript>
+		<link rel="stylesheet" href="/wet-boew/css/noscript.min.css" />
+	</noscript>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+
+	<style>
+		.gcweb-menu button[aria-haspopup=true] {background: #fff;}
+
+		.accnt-menu {color: #6C552D;}
+	</style>
+
+</head>
+
+<body class="cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage">
+	<nav aria-label="Skip Links">
+		<ul id="wb-tphp">
+			<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+			<li class="wb-slc visible-xs visible-sm visible-md visible-lg">
+				<a class="wb-sl" href="#wb-info">Skip to "About My VAC Account"</a>
+			</li>
+		</ul>
+	</nav>
+
+	<header>
+		<div id="wb-bnr" class="container">
+			<div class="row">
+				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+					<h2 class="wb-inv">Language selection</h2>
+					<ul class="list-inline mrgn-bttm-0">
+						<li>
+							<a lang="fr" hreflang="fr" href="/demo/fr/index.html">
+								<span class="hidden-xs">Français</span>
+								<abbr title="Français"
+									class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+							</a>
+						</li>
+					</ul>
+				</section>
+				<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" resource="#wb-publisher"
+					typeof="GovernmentOrganization">
+					<a href="/demo/en/" property="url">
+						<img src="../../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv"
+							property="name">
+							Government of Canada / <span lang="fr">Gouvernement du Canada</span>
+					</a>
+					<meta property="areaServed" typeof="Country" content="Canada">
+					<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
+				</div>
+				<!--
+				<section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
+					<h2>Search</h2>
+					<form action="#" method="post" name="cse-search-box" role="search">
+						<div class="form-group wb-srch-qry">
+							<label for="wb-srch-q" class="wb-inv">Search</label>
+							<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search VAC">
+							<datalist id="wb-srch-q-ac"></datalist>
+						</div>
+						<div class="form-group submit">
+							<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
+								<span class="glyphicon-search glyphicon"></span>
+								<span class="wb-inv">Search</span>
+							</button>
+						</div>
+					</form>
+				</section>-->
+			</div>
+
+		</div>
+		<div class="app-bar">
+			<div class="container">
+				<div class="row">
+					<section class="col-xs-8 col-sm-5 col-md-4">
+						<h2 class="wb-inv">Name of Web application</h2>
+						<a href="#" class="app-name" href="../../en.html">My&nbsp;VAC&nbsp;Account</a>
+					</section>
+					<!--account menu / nav-->
+					<nav class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
+                        <section>    
+                            <h2 class="wb-inv">Account menu</h2>
+							<a href="/demo/en/secure-message/inbox.html" class="btn btn-link text-white hidden-xs hidden-sm"> <span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span class="badge">2</span> </a>
+							<a href="/demo/en/profile.html" class="btn btn-link text-white mrgn-rght-md hidden-xs hidden-sm hidden-md"> <span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a>
+							
+							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs" style="position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width" style="position:static; width: 100%; float: left; text-align: left; width: auto;">
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1" href="/demo/en/secure-message/inbox.html"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span class="badge">2</span></a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="/demo/en/profile.html"><span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
+								<li role="none" class="hidden"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-user mrgn-rght-sm opct-50"></span>Switch user</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="/demo/sign-out.html"><span class="fa fa-power-off mrgn-rght-sm opct-50"></span>Sign out</a></li>
+							</ul>
+
+							<button class="btn btn-default mrgn-lft-md hidden-xs" style="background:#eee; color: #000; position: relative;" type="button" aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" style="text-align: left; width: auto;">
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1" href="/demo/en/secure-message/inbox.html"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span class="badge">2</span></a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="/demo/en/profile.html"><span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
+								<li role="none" class="hidden"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-users mrgn-rght-sm opct-50"></span>Switch user</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="/demo/sign-out.html"><span class="fa fa-power-off mrgn-rght-sm opct-50"></span>Sign out</a></li>
+							</ul>
+							
+                        </section>
+                    </nav>
+
+				</div>
+			</div>
+		</div>
+
+
+	</header>
+
+	<main class="cnt-wdth-lmtd" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
+		<section>
+			<div class="container">
+
+				<div class="">
+					<div id="app-navigation" class="col-xs-8 col-sm-6 col-lg-3 col-md-4">
+						<!-- WAS using .wb-menu to leverage WET's keyboard controls for menu but it was through errors and interupting WET -->
+						<nav role="navigation" typeof="SiteNavigationElement" class="mva-nav">
+							<h3 class="hidden">Main menu</h3>
+							<button id="mva-nav-btn" class="btn btn-default btn-lg" aria-haspopup="true"
+								aria-controls="mva-nav-mnu" aria-expanded="true">
+								MENU
+								<span class="fa fa-chevron-down small hidden-md hidden-lg"></span>
+							</button>
+							<ul class="list-unstyled list-group accordion" role="menu" id="mva-nav-mnu" 
+				aria-orientation="vertical">
+				<li>
+					<a role="menuitem" tabindex="0" href="/demo/en/index.html"
+						class="list-group-item btn btn-link active">
+						Overview
+					</a>
+				</li>
+				<li>
+					<details>
+						<summary class="list-group-item btn btn-link" role="menuitem"
+							aria-haspopup="true" tabindex="0">Apply for benefits</summary>
+						<ul class="list-unstyled list-group" role="menu" aria-expanded="false"
+							aria-hidden="true">
+							<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+									href="/demo/en/forms.html">
+									Find a form</a></li>
+							<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+									href="/demo/en/apply-for.html">
+									Benefits
+								</a>
+							</li>
+
+						</ul>
+					</details>
+				</li>
+				<li>
+					<a role="menuitem" tabindex="0" href="/demo/en/track-your-application/index.html"
+						class="list-group-item btn btn-link">
+						Track your applications</a>
+				</li>
+				<li>
+					<details>
+						<summary class="list-group-item btn btn-link" role="menuitem"
+							aria-haspopup="true" tabindex="0">Life after service
+						</summary>
+						<ul class="list-unstyled list-group" role="menu" aria-expanded="false"
+							aria-hidden="true">
+							<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+									href="/demo/en/benefits/">Benefits
+									for transition</a></li>
+							<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+									href="#">Your
+									transition task list</a></li>
+
+
+						</ul>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary class="list-group-item btn btn-link" role="menuitem"
+							aria-haspopup="true" tabindex="0">Your documents and forms</summary>
+						<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
+							aria-hidden="true">
+							<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+									href="/demo/en/your-forms/index.html">Saved
+									forms</a></li>
+							<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+									href="/demo/en/your-forms/index.html">Submitted
+									forms and&nbsp;files</a></li>
+							<li><a role="menuitem" tabindex="-1" class="list-group-item btn btn-link"
+									href="/demo/en/your-forms/upload.html">Upload
+									files</a></li>
+						</ul>
+					</details>
+				</li>
+				<li>
+					<a role="menuitem" tabindex="0" href="/demo/en/your-benefits/index.html" class="list-group-item btn btn-link">Your
+						benefits</a>
+				</li>
+			</ul>
+						</nav>
+
+
+
+
+
+					</div>
+					<div class="col-sm-12 col-md-8 col-lg-9 overview">
+
+						<section>
+
+							
+							<div>
+								<h1 id="wb-cont" property="name">Overview</h1>
+								
+									<h2 class="lead h1">Welcome, Mr. Noel Knockwood</h2>
+								<!--<h2 class="h3 mrgn-tp-0 mrgn-bttm-md">Welcome, Mr. Noel Knockwood</h2>-->
+							</div>
+
+						</section>
+
+				
+					
+						<!--
+						<section class="hidden">
+							<h2 class="wb-inv">Your overview</h2>
+
+							<div class="row wb-eqht-grd small hidden">
+								<div class="col-sm-12 col-md-7">
+									<section class="panel panel-success hght-inhrt">
+										<div class="panel-heading small brdr-0">
+											<h2 class="panel-title h5">
+												Complete <a href="#">your profile</a>
+											</h2>
+										</div>
+										<div class="panel-body ">
+											<ul class="fa-ul mrgn-lft-0 mrgn-tp-0" style="margin-left: 1em;">
+												<li>
+													<a href="#"><span class="far fa-circle mrgn-rght-md"></span>Review
+														your communication settings</a>
+												</li>
+											</ul>
+
+										</div>
+										<footer class="panel-footer brdr-0 bg-white">
+
+											<div class="col-xs-12">
+												<progress class="full-width" value="1" max="3"><span
+														class="wb-inv">33%</span></progress>
+											</div>
+
+										</footer>
+									</section>
+								</div>
+
+						</section>-->
+
+
+						<section class="">
+							<div class="row ">
+								<!--
+								<div class="col-xs-12 mrgn-bttm-md brdr-tp brdr-rght brdr-bttm brdr-lft ">
+									<section class="mrgn-bttm-md ">
+										<div class="well bg-white brdr-0" style="background:#fff;">
+											<h2 class="h3 mrgn-bttm-0"><a href="#">Mail</a></h2>
+											<div class="">
+												<p class="text-muted small hidden">A secure and easy way to reach us, wherever you&nbsp;are.</p>
+												<p>Your inbox is empty.</p>
+												<ul class="">
+													<li><a href="#">Submit forms or files</a></li>
+													<li><a href="#">Send a new message</a></li>
+												</ul>
+											</div>
+										</div>
+									</section>
+								</div>-->
+
+								<div class="col-xs-12 mrgn-bttm-md brdr-tp brdr-rght brdr-bttm brdr-lft ">
+									<section class="mrgn-bttm-md ">
+										<div class="well bg-white brdr-0" style="background:#fff;">
+											<h2 class="h3 mrgn-tp-sm"><a href="secure-message/inbox.html">Inbox</a>
+												<span class="badge">2</span>
+											</h2>
+											<div>
+
+
+												<p class="wb-inv">You have <a href="secure-message/inbox.html">2 unread
+														messages.</a></p>
+												</p>
+												<table
+													class="table table-striped provisional gc-table small mrgn-tp-lg text-left">
+													<thead class="wb-inv">
+														<tr>
+															<th>Date</th>
+															<th>Subject</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="h5">
+															<td class="nws-tbl-date nowrap">2023-05-04</td>
+															<td class="nws-tbl-sub"><span
+																	class="fa fa-envelope opct-80 mrgn-rght-sm mrgn-tp-sm "></span><a
+																	href="secure-message/833362.html">Questions
+																	about disability application</a></td>
+														</tr>
+
+														<tr class="h5">
+															<td class="nws-tbl-date nowrap">2023-05-01</td>
+															<td class="nws-tbl-sub"><span
+																	class="fa fa-envelope opct-80 mrgn-rght-sm mrgn-tp-sm"></span><a
+																	href="#"> Education and Training Benefit - Approval
+																	Letter (VAC1562)</a></td>
+														</tr>
+
+														<tr>
+															<td class="nws-tbl-date nowrap">2023-05-01</td>
+															<td class="nws-tbl-sub"><span
+																	class="fa fa-envelope-open opct-50 mrgn-rght-sm mrgn-tp-sm opct-50"></span><a
+																	href="#">IRB Adjustment Letter for Indexation
+																	(VAC1711)</a></td>
+														</tr>
+													</tbody>
+
+												</table>
+
+
+
+												<div class="row mrgn-tp-lg">
+													<div class="col-xs-12">
+														<a href="#" role="button"
+															class="btn btn-sm btn-primary mrgn-rght-md"><span
+																class="fa fa-envelope opct-80 mrgn-rght-sm"></span>Send
+															a new
+															message</a>
+														<a href="your-forms/upload.html" role="button"
+															class="btn btn-sm btn-primary mrgn-rght-md"><span
+																class="fa fa-upload opct-80 mrgn-rght-sm"></span>Upload
+															files</a>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+								</div>
+
+								<div class="col-xs-12 mrgn-bttm-md brdr-tp brdr-rght brdr-bttm brdr-lft ">
+									<section class="mrgn-bttm-md ">
+										<div class="well bg-white brdr-0" style="background:#fff;">
+											<h2 class="h3 mrgn-tp-sm"><a href="track-your-application/index.html">Track
+													your applications</a> <span class="badge">1</span></h2>
+											<div>
+
+												<table class="table table-striped provisional gc-table small text-left">
+													<thead>
+														<tr>
+															<th>Modified</th>
+															<th>Program</th>
+															<th>Status</th>
+
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="h5">
+															<td class="nws-tbl-date nowrap text-left ">2023-05-04</td>
+
+
+															<td class="nws-tbl-sub nowrap text-left"><a
+																	href="track-your-application/application.html">Education
+																	and Training&nbsp;Benefit&nbsp;-&nbsp;Plan</a></td>
+
+															<td class="nws-tbl-sub nowrap text-left"><a
+																	href="track-your-application/application.html">Step
+																	1 - Application&nbsp;received</a></td>
+														</tr>
+
+														<tr>
+															<td class="nws-tbl-date nowrap text-left">2023-05-03</td>
+
+
+															<td class="nws-tbl-sub nowrap text-left"><a
+																	href="track-your-application/application.html">Income
+																	Replacement&nbsp;Benefit
+																</a></td>
+
+															<td class="nws-tbl-sub nowrap text-left"><a
+																	href="track-your-application/application.html">
+																	Step 3 - Decision&nbsp;making</a></td>
+
+														</tr>
+
+
+
+													</tbody>
+
+												</table>
+
+
+											</div>
+										</div>
+									</section>
+								</div>
+
+								<div class="col-xs-12 mrgn-bttm-md brdr-tp brdr-rght brdr-bttm brdr-lft ">
+									<section class="mrgn-bttm-md">
+										<div class="well bg-white brdr-0" style="background:#fff;">
+											<h2 class="h3 mrgn-tp-sm"><a href="your-benefits/index.html">Your benefits
+													and services</a> </h2>
+											<div>
+
+
+
+												<section class="">
+													<div class="row mrgn-tp-lg">
+														<div class="col-sm-8">
+															<h3 class="h5 mrgn-tp-0"><a
+																	href="your-benefits/index.html#disability">Disability
+																	benefits</a>
+															</h3>
+
+														</div> <!--
+														<div class="col-sm-4 text-right small">
+														
+															<p class="small mrng-tp-0"><a href="#">Payment history</a></p>
+
+
+														</div>-->
+													</div>
+													<div class="row brdr-bttm">
+														<div class="col-xs-8">
+															<p class="mrgn-tp-0 small">Net entitlement</p>
+														</div>
+														<div class="col-xs-4 text-right">
+															<p class="h5 mrgn-tp-0 small">$2,005.68</p>
+														</div>
+													</div>
+												</section>
+
+												<section class="">
+													<div class="row">
+														<div class="col-sm-8">
+															<h3 class="h5"><a
+																	href="your-benefits/index.html#financial">Financial
+																	benefits</a>
+															</h3>
+
+														</div><!--
+														<div class="col-sm-4 text-right small">
+															
+															<p class="small mrng-tp-0"><a href="#">Payment history</a></p>
+
+
+														</div>-->
+													</div>
+													<h4 class="h6 mrgn-tp-sm"><a
+															href="your-benefits/index.html#financial">Income Replacement
+															Benefit</a>
+													</h4>
+													<div class="row brdr-bttm">
+														<div class="col-xs-8">
+															<p class="mrgn-tp-0 small">Net entitlement</p>
+														</div>
+														<div class="col-xs-4 text-right">
+															<p class="h5 mrgn-tp-0 small">$3,032.72</p>
+														</div>
+													</div>
+												</section>
+
+												<section class="brdr-bttm">
+													<div class="row">
+														<div class="col-sm-8">
+															<h3 class="h5"><a
+																	href="your-benefits/index.html#other">Other
+																	benefits</a></h3>
+
+														</div><!--
+														<div class="col-sm-4 text-right small">
+															
+															<p class="small mrng-tp-0"><a href="#">Payment history</a></p>
+
+
+														</div>-->
+													</div>
+													<h4 class="h6 mrgn-tp-sm mrgn-bttm-lg"><a href="#">Additional lump
+															sum payment</a></h4>
+
+												</section>
+
+												<section class="">
+													<div class="row">
+														<div class="col-sm-8">
+															<h3 class="h5"><a
+																	href="your-benefits/index.html#vip">Veterans
+																	Independence
+																	Program</a></h3>
+
+														</div>
+														<!--
+														<div class="col-sm-4 text-right small">
+															<p class="small mrng-tp-0"><a href="#">Payment history</a></p>
+
+
+														</div>-->
+													</div>
+													<div class="row">
+														<div class="col-xs-6">
+															<p class="small mrgn-tp-0">Total annual amount (all
+																benefits)
+															</p>
+														</div>
+														<div class="col-xs-6 text-right">
+															<p class="small h5 mrgn-tp-0">$3,532.53</p>
+														</div>
+													</div>
+												</section>
+
+
+
+											</div>
+										</div>
+									</section>
+								</div>
+
+								<div class="col-xs-12 mrgn-bttm-md brdr-tp brdr-rght brdr-bttm brdr-lft hidden">
+									<section class="mrgn-bttm-md ">
+										<div class="well bg-white brdr-0" style="background:#fff;">
+											<h2 class="h4 mrgn-tp-sm"><a href="your-forms/index.html">Your documents
+													and&nbsp;forms</a> </h2>
+											<div>
+
+												</p>
+
+												<div class="row">
+													<div class="col-xs-12 mrgn-tp-md">
+														<ul class="list-unstyled list-col-md-2 lst-spcd small">
+															<li>
+																<a href="#">
+																	Submitted forms and&nbsp;files
+
+																</a>
+															</li>
+															<li><a href="#">
+																	Saved forms
+																</a></li>
+															<li><a href="#">
+																	Letters and forms from&nbsp;<abbr
+																		title="">VAC</abbr>
+																</a></li>
+														</ul>
+													</div>
+												</div>
+
+												<!--
+											
+												<section class="">
+													<p><a href="your-forms/index.html#submitted">Submitted forms and documents</a></p>
+													<table class="table table-striped provisional gc-table hidden">
+														<thead>
+															<tr>
+																<th>Date</th>
+																<th>Subject</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="nws-tbl-date nowrap">2023-05-04</td>
+																<td class="nws-tbl-sub"><a
+																		href="secure-message/833362.html"
+																		style="vertical-align: top; min-height: 25px;">Questions
+																		about disability application</a></td>
+															</tr>
+
+															<tr>
+																<td class="nws-tbl-date nowrap">2023-05-01</td>
+																<td class="nws-tbl-sub"><a href="#"
+																		style="vertical-align: top; min-height: 25px;">Letters
+																		and forms</a></td>
+															</tr>
+														</tbody>
+
+													</table>
+												
+
+												</section>
+
+												<section class="">
+													<p><a href="your-forms/index.html#in-progress">In-progress forms</a></p>
+													<table class="table table-striped provisional gc-table hidden">
+														<thead>
+															<tr>
+																<th>Modified</th>
+																<th>Subject</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="nws-tbl-date nowrap">2023-05-04</td>
+																<td class="nws-tbl-sub"><a
+																		href="secure-message/833362.html">Questions
+																		about disability application</a></td>
+															</tr>
+														</tbody>
+
+													</table>
+												</section>
+
+												<section class="">
+													<p><a href="your-forms/index.html#vac-letters">Letters and forms from VAC</a></p>
+													<table class="table table-striped provisional gc-table hidden">
+														<thead>
+															<tr>
+																<th>Date</th>
+																<th>Subject</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="nws-tbl-date nowrap">2023-05-04</td>
+																<td class="nws-tbl-sub"><a
+																		href="secure-message/833362.html"
+																		style="vertical-align: top; min-height: 25px;">Questions
+																		about disability application</a></td>
+															</tr>
+
+															<tr>
+																<td class="nws-tbl-date nowrap">2023-05-01</td>
+																<td class="nws-tbl-sub"><a href="#"
+																		style="vertical-align: top; min-height: 25px;">Letters
+																		and forms</a></td>
+															</tr>
+														</tbody>
+
+													</table>
+												</section>-->
+
+												<div class="row mrgn-tp-lg">
+													<div class="col-xs-12">
+														<button type="button"
+															class="btn btn-sm btn-default mrgn-rght-md"><span
+																class="fa fa-upload opct-80 mrgn-rght-sm"></span>Upload
+															files</a>
+
+													</div>
+												</div>
+
+
+											</div>
+										</div>
+									</section>
+								</div>
+
+								<div class="col-xs-12 mrgn-bttm-md brdr-tp brdr-rght brdr-bttm brdr-lft ">
+									<section class="mrgn-bttm-md">
+										<div class="well bg-white brdr-0" style="background:#fff;">
+											<h2 class="h3 mrgn-bttm-0"><a href="profile.html">Profile and settings</a>
+											</h2>
+											<div class="">
+												<p class="text-muted small hidden">Manage your account settings and
+													personal&nbsp;information.</p>
+
+												<div class="row">
+													<div class="col-xs-12 mrgn-tp-md">
+														<ul class="list-unstyled list-col-md-2 lst-spcd small">
+															<li>
+																<a href="#">
+																	Direct deposit
+
+																</a>
+															</li>
+															<li><a href="#">
+																	Notifications
+																</a></li>
+															<li><a href="#">
+																	Contact information
+																</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+								</div>
+
+								<section
+									class="col-xs-12 wb-feeds limit-3 gc-nws cnt-wdth-lmtd mrgn-bttm-md brdr-tp brdr-rght brdr-bttm brdr-lft">
+									<div class="well bg-white brdr-0" style="background:#fff;">
+										<h2 class="h3">News</h2>
+										<!-- demonstrates the layout - use json feed where applicable -->
+										<ul class="feeds-cont list-unstyled lst-spcd feed-active">
+											<li><a href="#">Notice: Information on recent winter storms throughout the
+													country</a><br> <small class="feeds-date">2022-12-19</small></li>
+											<li><a href="#">Due to COVID-19, our office in Sunnybrook, Toronto will not
+													be
+													accessible until further notice.</a><br> <small
+													class="feeds-date">2022-11-15</small></li>
+											<li><a href="#">Submit a claim: Spieser v. Attorney General of Canada et
+													al.</a><br> <small class="feeds-date">2022-04-24</small></li>
+										</ul>
+										<!-- json feed for news example
+										<ul class="feeds-cont list-unstyled lst-spcd">
+											<li> <a data-ajax="https://www.canada.ca/content/canadasite/api/nws/fds/en/web-feeds/revenue-agency.json" 
+												href="https://www.canada.ca/en/revenue-agency.atom.xml" rel="external">Canada Revenue Agency news items</a> 
+											</li>
+										</ul>
+										-->
+										<p>More: <a href="#" class="admin"><abbr title="">VAC</abbr> news</a></p>
+									</div>
+								</section>
+
+
+							</div>
+
+
+						</section>
+						<!--
+						<section class="col-xs-12 mrgn-bttm-md brdr-tp brdr-rght brdr-bttm brdr-lft">
+							<div class="well bg-white brdr-0" style="background:#fff;">
+								<h2 class="h3 mrgn-bttm-0"><a href="#">Your benefits and services</a></h2>
+							<p class="text-muted small hidden">A look at your current benefits and payment history.</p>
+							<p>There are no programs or services on record.</p>
+							<p><a href="#">Find benefits and services you can apply for.</a></p>
+							</div>
+						</section>
+						
+							<section class="col-xs-12 brdr-tp brdr-rght brdr-bttm brdr-lft mrgn-bttm-md">
+								<div class="well bg-white brdr-0" style="background:#fff;">
+									<h2 class="h3 mrgn-bttm-0"><a href="track-your-application/index.html">Track your applications</a></h2>
+									<p class="text-muted small hidden">View the status of files that you have submitted to VAC.</p>
+									<p>There are no applications in progress.</p>
+								</div>
+							</section>-->
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>Y
+		<section class="pagedetails container">
+			<h2 class="wb-inv">Page details</h2>
+			<div class="row">
+				<div class="row">
+					<div class="col-sm-6 col-md-5 col-lg-4">
+						<details class="brdr-0">
+							<summary class="btn btn-default text-center">Report a problem on this page</summary>
+							<div class="well row">
+								<div class="gc-rprt-prblm">
+									<div class="gc-rprt-prblm-tggl" id="wb-auto-7">
+										<form action="#">
+											<fieldset>
+												<legend><span class="field-name">Please select all that apply: </span>
+												</legend>
+												<div class="checkbox">
+													<label for="problem1"><input type="checkbox" data-reveal="#broken"
+															name="problem" value="Something is broken"
+															id="problem1">Something is broken</label>
+												</div>
+												<div class="form-group hide" id="broken">
+													<label for="problem1-detail">Provide more details
+														(optional):</label>
+													<input type="text" class="form-control full-width"
+														id="problem1-detail">
+												</div>
+												<div class="checkbox">
+													<label for="problem2"><input type="checkbox" data-reveal="#spelling"
+															name="problem" value="It has spelling or grammar mistakes"
+															id="problem2">It has spelling or grammar mistakes</label>
+												</div>
+												<div class="form-group hide" id="spelling">
+													<label for="problem2-detail">Provide more details
+														(optional):</label>
+													<input type="text" class="form-control full-width"
+														id="problem2-detail">
+												</div>
+												<div class="checkbox">
+													<label for="problem3"><input type="checkbox" data-reveal="#wrong"
+															name="problem" value="The information is wrong"
+															id="problem3">The information is wrong</label>
+												</div>
+												<div class="form-group hide" id="wrong">
+													<label for="problem3-detail">Provide more details
+														(optional):</label>
+													<input type="text" class="form-control full-width"
+														id="problem3-detail">
+												</div>
+												<div class="checkbox">
+													<label for="problem4"><input type="checkbox" data-reveal="#outdated"
+															name="problem" value="The information is outdated"
+															id="problem4">The information is outdated</label>
+												</div>
+												<div class="form-group hide" id="outdated">
+													<label for="problem4-detail">Provide more details
+														(optional):</label>
+													<input type="text" class="form-control full-width"
+														id="problem4-detail">
+												</div>
+												<div class="checkbox">
+													<label for="problem5"><input type="checkbox" data-reveal="#find"
+															name="problem" value="I can’t find what I’m looking for"
+															id="problem5">I can’t find what I’m looking for</label>
+												</div>
+												<div class="form-group hide" id="find">
+													<label for="problem5-detail">Describe what you’re looking for
+														(optional):</label>
+													<input type="text" class="form-control full-width"
+														id="problem5-detail">
+												</div>
+												<div class="checkbox">
+													<label for="problem6"><input type="checkbox"
+															data-reveal="#confusing" name="problem" value="Other"
+															id="problem6">Other</label>
+												</div>
+												<div class="form-group hide" id="confusing">
+													<label for="problem6-detail">Provide more details
+														(optional):</label>
+													<input type="text" class="form-control full-width"
+														id="problem6-detail">
+												</div>
+											</fieldset>
+											<button type="submit"
+												class="btn btn-primary wb-toggle wb-init wb-toggle-inited"
+												data-toggle="{&quot;stateOff&quot;: &quot;hide&quot;, &quot;stateOn&quot;: &quot;show&quot;, &quot;selector&quot;: &quot;.gc-rprt-prblm-tggl&quot;}"
+												aria-controls="wb-auto-7 wb-auto-8">Submit</button>
+										</form>
+									</div>
+									<div class="gc-rprt-prblm-thnk gc-rprt-prblm-tggl hide" id="wb-auto-8">
+										<h3>Thank you for your help!</h3>
+										<p>You will not receive a reply. For enquiries, please <a
+												href="https://www.canada.ca/en/contact.html">contact us</a>.</p>
+									</div>
+								</div>
+							</div>
+						</details>
+					</div>
+				</div>
+				<!-- Share button
+				<div class="wb-share col-sm-4 col-md-3" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>-->
+
+				<div class="col-xs-12 mrgn-tp-sm text-muted">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 mrgn-bttm-0">
+							<div class="clearfix hidden-xs"></div>
+							<dl id="wb-dtmd">
+								<dt>Date modified:</dt>
+								<dd><time property="dateModified">2023-04-06</time></dd>
+							</dl>
+						</div>
+						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 hidden-xs text-right">
+							<p class="mrgn-tp-0 mrgn-bttm-0">UX.1.1.1</p>
+							<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
+						</div>
+						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 visible-xs">
+							<p class="mrgn-tp-0 mrgn-bttm-0">UX.1.1.1</p>
+							<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+
+
+	<!-- footer -->
+	<div id="default-footer">
+		<footer id="wb-info">
+			<h2 class="wb-inv">About My VAC Account</h2>
+			<div class="gc-main-footer">
+				<nav class="container wb-navcurr">
+
+					<ul class="list-unstyled colcount-xs-2 colcount-md-3">
+						<li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
+
+						<li id="authenticated-footer-link-2">
+							<a href="#">Check in on your well-being</a>
+						</li>
+
+						<li><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">Talk to a mental
+								health professional</a></li>
+
+
+
+						<li id="authenticated-footer-link-1"><a href="#">News and updates</a></li>
+
+						<li id="authenticated-footer-link-3"><a href="#">Provide feedback</a></li>
+
+						<li id="authenticated-footer-link"><a href="#">Useful links</a></li>
+
+
+
+
+					</ul>
+				</nav>
+			</div>
+			<div class="gc-sub-footer">
+				<div class="container d-flex align-items-center">
+					<nav>
+						<h3 class="wb-inv">Veteran Affairs Canada Corporate</h3>
+						<ul>
+							<li><a href="https://www.veterans.gc.ca/eng/e_services">About My VAC Account</a></li>
+							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Terms and conditions</a></li>
+							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Privacy</a></li>
+						</ul>
+					</nav>
+					<div class="wtrmrk align-self-end">
+						<img src="../../../GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+		integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
+		crossorigin="anonymous"></script>
+	<script src="/wet-boew/js/wet-boew.min.js"></script>
+	<script src="/GCWeb/js/theme.min.js"></script>
+	<script src="/mva-mda/js/script.js"></script>
+
+</body>
+
+</html>
