@@ -239,74 +239,17 @@
 							</summary>
 
 							<form class="wb-tables-filter" data-bind-to="dataset-filter1">
+								
 								<div class="mrgn-tp-md">
-									<div class="form-group">
-										<label for="dt_date">Application date</label>
-										<select class="form-control" id="dt_date" name="dt_date" data-column="3">
-											<option value="">Any time</option>
-											<option value="Older than a week">Older than a week</option>
-											<option value="Older than a month">Older than a month</option>
-											<option value="Older than a six months">Older than six months</option>
-											<option value="Older than a year">Older than a year</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label for="dt_date-mode">Date modified</label>
-										<select class="form-control" id="dt_date-mode" name="dt_date-mode" data-column="3">
-											<option value="">Any time</option>
-											<option value="Older than a week">Older than a week</option>
-											<option value="Older than a month">Older than a month</option>
-											<option value="Older than a six months">Older than six months</option>
-											<option value="Older than a year">Older than a year</option>
-										</select>
-									</div>
-									<div class="form-group">
-										
-										<fieldset>
-											<legend class="mrgn-bttm-0 mrgn-tp-0"><span class="field-name"
-													style="font-weight: 700; font-size: 16px;">Benefits</span>
-											</legend>
-											<ul class="list-unstyled">
-												<li class="checkbox"><label for="dt_audience3"><input
-													type="checkbox" id="dt_audience3" name="dt_audience"
-													data-column="6" value="Farmers"> Career Impact
-												Allowance</label></li>
-										<li class="checkbox"><label for="dt_audience5"><input
-													type="checkbox" id="dt_audience5" name="dt_audience"
-													data-column="6" value="Rural Community"> Career
-												Transition Services</label></li>
-												<li class="checkbox"><label for="dt_audience1"><input
-															type="checkbox" id="dt_audience1" name="dt_audience"
-															data-column="6" value=""> Disability benefits</label>
-												</li>
-												<li class="checkbox"><label for="dt_audience7"><input
-													type="checkbox" id="dt_audience7" name="dt_audience"
-													data-column="6" value="Visitors"> Earnings Loss</label>
-										</li>
-												<li class="checkbox"><label for="dt_audience2"><input
-															type="checkbox" id="dt_audience2" name="dt_audience"
-															data-column="6" value="Media"> Education and Training Benefit</label></li>
-											
-												<li class="checkbox"><label for="dt_audience6"><input
-															type="checkbox" id="dt_audience6" name="dt_audience"
-															data-column="6" value="Travellers"> Health Benefits
-													</label></li>
-												
-												<li class="checkbox"><label for="dt_audience8"><input
-															type="checkbox" id="dt_audience8" name="dt_audience"
-															data-column="6" value="Business"> Pain and Suffering Compenstation</label></li>
-											</ul>
-										</fieldset>
 									
-								</div>
 									<div class="form-group">
-										<label for="dt_type">Type</label>
-										<select class="form-control" id="dt_type" name="dt_type" data-column="3">
-											<option value="">All types</option>
-											<option value="Application">Application</option>
-											<option value="Departmental Review">Departmental Review</option>
-											<option value="Reassessment">Reassessment</option>
-											<option value="Withdrawn">Withdrawn</option>
+										<label for="dt_date-mod">Date modified</label>
+										<select class="form-control" id="dt_date-mod" name="dt_date-mod" data-column="3">
+											<option value="">Any time</option>
+											<option value="Older than a week">Older than a week</option>
+											<option value="Older than a month">Older than a month</option>
+											<option value="Older than a six months">Older than six months</option>
+											<option value="Older than a year">Older than a year</option>
 										</select>
 									</div>
 									<div class="form-group">
@@ -324,6 +267,40 @@
 											<option value="Withdrawn">
 												Withdrawn</option>
 
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="dt_benefits">Benefits</label>
+										<select class="form-control" id="dt_benefits" name="dt_benefits" data-column="4">
+											<option value="">Any benefits</option>
+											<option value="Career Impact Allowance">Career Impact Allowance</option>
+											<option value="Career Transition Services">Career Transition Services</option>
+											<option value="Disability benefits">Disability Benefits</option>
+											<option value="Earnings Loss">Earnings Loss</option>
+											<option value="Education and Training Benefit">Education and Training Benefit</option>
+											<option value="Health Benefits">Health Benefits</option>
+										</select>
+									</div>
+									
+									<div class="form-group">
+										<label for="dt_type">Type</label>
+										<select class="form-control" id="dt_type" name="dt_type" data-column="3">
+											<option value="">All types</option>
+											<option value="Application">Application</option>
+											<option value="Departmental Review">Departmental Review</option>
+											<option value="Reassessment">Reassessment</option>
+											<option value="Withdrawn">Withdrawn</option>
+										</select>
+									</div>
+									
+									<div class="form-group">
+										<label for="dt_date">Application date</label>
+										<select class="form-control" id="dt_date" name="dt_date" data-column="3">
+											<option value="">Any time</option>
+											<option value="Older than a week">Older than a week</option>
+											<option value="Older than a month">Older than a month</option>
+											<option value="Older than a six months">Older than six months</option>
+											<option value="Older than a year">Older than a year</option>
 										</select>
 									</div>
 									
