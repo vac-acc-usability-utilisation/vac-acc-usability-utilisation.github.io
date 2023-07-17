@@ -236,7 +236,7 @@
 							<div class="row mrgn-bttm-md">
 								<div class="col-sm-12">
 									<p>A secure and easy way to reach us, wherever you&nbsp;are.</p>
-									<p >You can expect a response within 1&ndash;5 business days.</p>
+									<p class="hidden">You can expect a response within 1&ndash;5 business days.</p>
 									
 			
 										
@@ -300,37 +300,48 @@
 
 
 							<div class="row mrgn-tp-md">
-								<div class="col-md-3 ">
+								<div class="col-lg-3 col-md-10 col-sm-12">
 									<h4 class="wb-inv">Filtering Options</h4>
 									<details open>
 										<summary>
-											<h4 class="h4">Filter Options</h4>
+											<h4>Filter options</h4>
 										</summary>
 										<form class="wb-tables-filter" data-bind-to="dataset-filter1">
-											<div class="form-group mrgn-bttm-sm">
-												<fieldset class="">
-													<legend class="mrgn-bttm-sm" style="font-weight: 700; font-size: 16px;">Status</legend>
-												
-												<ul class="list-unstyled mrgn-bttm-sm">
-														<li class="radio"><label for="unread"><input type="radio" id="unread" name="status" data-column="6" value="Unread"> Unread</label></li>
-														<li class="radio"><label for="read"><input type="radio" id="read" name="status" data-column="6" value="Read"> Read</label></li>
-
-														<li class="radio"><label for="archived"><input type="radio" id="archived" name="status" data-column="6" value="Unread"> Archived</label></li>
-													</fieldset> 
-											</div>
-											<div class="">
-												<div class="form-group">
-													<label for="dt_date">Date</label>
-													<select class="form-control" id="dt_date" name="dt_date"
-														data-column="3">
-														<option value="">Any time</option>
-														<option value="Older than a week">Older than a week</option>
-														<option value="Older than a month">Older than a month</option>
-														<option value="Older than a six months">Older than six months</option>
-														<option value="Older than a year">Older than a year</option>
+											<div class="row">
+												<div class="clearfix col-lg-12 mrgn-bttm-md"></div>
+												<div class="form-group col-xs-3 col-lg-12">
+													<label for="dt_status">Status</label>
+													<select class="form-control" id="dt_status" name="dt_status"
+														data-column="0">
+														<option value=""></option>
+														<option value="Unread">Unread</option>
+														<option value="Read">Read</option>
+														<option value="Archived">Archived</option>
+														<option value="All">All</option>
 													</select>
 												</div>
-													
+												
+												
+												<div class="form-group col-xs-4 col-lg-12">
+													<label for="dt_type">Type</label>
+													<select class="form-control" id="dt_type" name="dt_type"
+														data-column="3">
+														<option value=""></option>
+														<option value="Messages">Messages</option>
+														<option value="Letters and Forms">Letters and Forms</option>
+													</select>
+												</div>
+												<div class="form-group col-xs-2 col-lg-12">
+													<div class="clearfix hidden-lg" style="margin-top: 28px;"></div>
+													<button type="submit" class="btn btn-primary"
+														aria-controls="dataset-filter1">Filter</button>
+												</div>
+												<div class="form-group col-xs-3 col-lg-12">
+													<div class="clearfix hidden-lg" style="margin-top: 28px;"></div>
+													<button type="reset" class="btn btn-link btn-sm p-0">Reset to
+														defaults</button>
+												</div>
+											</div>	
 													<!--
 													<div class="form-group">
 														<label for="dt_mindate" class="small">Start date</label>
@@ -344,7 +355,7 @@
 															name="dt_maxdate" data-column="1">
 													</div>-->
 												
-											</div><!--
+											<!--
 											<div class="form-group">
 												<fieldset>
 													<legend class="mrgn-bttm-sm" style="font-weight: 700;font-size: 16px;">
@@ -365,26 +376,11 @@
 													<option value="Archived">Archived</option>
 												</select>
 											</div>-->
-											<div class="form-group">
-												<label for="dt_type">Message type</label>
-												<select class="form-control" id="dt_type" name="dt_type"
-													data-column="3">
-													<option value="">All message types</option>
-													<option value="Messages">Messages</option>
-													<option value="Letters and Forms">Letters and Forms</option>
-												</select>
-											</div>
+											
 
 											
 											<!---->
-											<div class="form-group">
-												<button type="submit" class="btn btn-primary"
-													aria-controls="dataset-filter1">Filter</button>
-											</div>
-											<div class="form-group">
-												<button type="reset" class="btn btn-link btn-sm p-0">Reset to
-													defaults</button>
-											</div>
+											
 										</form>
 									</details>
 								
@@ -393,9 +389,9 @@
 
 
 							</div>
-
-							<div class="col-md-9">
-								<table class="wb-tables table table-striped table-hover provisional gc-table small"
+							<div class="clearfix hidden-lg mrgn-tp-md mrgn-bttm-md"></div>
+							<div class="col-lg-9 col-md-12">
+								<table class="wb-tables table table-striped table-hover"
 									id="dataset-filter" aria-live="polite" data-wb-tables='{
 			"bDeferRender": true,
 			"ajaxSource": "../../../design/assets/ajax/inbox-datasource-en.json",
@@ -403,8 +399,8 @@
 			"autoWidth": false,
 			"columns": [
 				{ "data": "UNREAD", "className": "st-tbl-status", "searchable": "false"},
-				{ "data": "SUBJECT", "className": "nws-tbl-sub sub-elps col-md-5" },
-				{ "data": "SUMMARY", "className": "nws-tbl-summ summ-elps col-md-6" },
+				{ "data": "SUBJECT", "className": "nws-tbl-sub sub-elps col-sm-4 hidden-xs" },
+				{ "data": "SUMMARY", "className": "nws-tbl-summ summ-elps col-sm-6 col-xs-10" },
 				{ "data": "DATE", "className": "nws-tbl-date nowrap" },
 				{ "data": "TYPE",  "visible": false },
 				{ "data": "ID", "visible": false}]
