@@ -185,6 +185,7 @@
 	<main class="cnt-wdth-lmtd" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
 		<section>
 			<div class="container">
+				
 				<!--
 				<button id="menu-btn" class="h6 btn btn-link brdr-tp brdr-rght brdr-bttm brdr-lft hidden" 
 				style="letter-spacing: 0.5px;" >
@@ -203,9 +204,10 @@
 								<div class="pull-right">
 									<button id="archive" class="btn btn-default"><span class="fa fa-archive mrgn-rght-sm"
 										aria-hidden="true"></span>Archive</button>
-							<button id="print" class="btn btn-link"><span class="fa fa-print mrgn-rght-sm"
+							<button id="print" class="btn btn-default"><span class="fa fa-print mrgn-rght-sm"
 										aria-hidden="true"></span>Print</button>
 								</div>
+								
 							</div>
 							<!-- button toolbar-->
 
@@ -246,13 +248,47 @@
 									</div>
 
 								</div>
+								<div class="col-xs-10 col-xs-push-2 hidden">
+									<div class="panel panel-default">
+										<div class="panel-body">
+											<p>2023-05-21 06:05 UTC</p>
+											<p><strong>You:</strong></p>
+
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
+												doloribus pariatur fugiat ullam. Nemo deserunt eligendi quia, aspernatur
+												laudantium saepe deleniti totam eos. Placeat alias nisi eius totam
+												officiis impedit.</p>
+										</div>
+									</div>
+									<div class="alert alert-success wb-dismissable" >
+										<h3>Messsage sent successfully</h3>
+										<p>You can expect a response within 1-5 business days.</p>
+									</div>
+								</div>
 							</div>
 
-							<button id="reply" class="btn btn-lg btn-primary col-xs-offset-2"><span class="fa fa-reply mrgn-rght-sm opct-50"
-								aria-hidden="true"></span>Reply</button>
+							
+								
 
 								<!-- Reply -->
 							<div class="clearfix"></div>
+							<section class="wb-inview show-none" data-inview="bottom-bar">
+								<!--<h3 class="no-gutter">Section with a conditional bottom bar</h3>-->
+								<button id="reply" class="btn btn-lg btn-primary col-xs-offset-2"><span class="fa fa-reply mrgn-rght-sm opct-50"
+									aria-hidden="true"></span>Reply</button>
+							</section>
+							
+							<section id="bottom-bar" class="wb-overlay modal-content overlay-def wb-bar-b container-fluid" style="background: rgba(0, 0, 0, .50);">
+									<div class="container">
+										<div class="col-xs-offset-2">
+											<div class="mrgn-tp-md mrgn-bttm-md">
+												<a id="bar-reply" href="#reply_message" class="btn btn-lg btn-primary"><span class="fa fa-reply mrgn-rght-sm opct-50"
+													aria-hidden="true"></span>Reply</a>
+											</div>
+										</div>
+									</div>
+								
+							</section>
 
 							<div id="reply_message" class="mrgn-tp-md col-md-10 col-sm-offset-2 hidden">
 																
@@ -418,10 +454,10 @@
 	<script>
 		//reply toggle
 
-	$('#reply').click(function (e) {
+	$('#reply, #bar-reply').click(function (e) {
 		$('#reply_message').removeClass('hidden');
 		$('#archive').addClass('hidden');
-		$(this).addClass('hidden');
+		$('#reply').addClass('hidden');
 	}); 
 
 	$('#cancel_reply').click(function (e) {
