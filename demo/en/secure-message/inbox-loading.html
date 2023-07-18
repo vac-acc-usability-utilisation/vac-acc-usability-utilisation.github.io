@@ -34,6 +34,41 @@
 			overflow: hidden;
 			text-overflow: ellipsis;
 		}
+
+		.syrup .h1 {
+			border-bottom: 1px solid #af3c43;
+			margin-bottom: 0.2em;
+			margin-top: 1em;
+			padding-bottom: 0.2em;
+		}
+
+		.syrup .h1-text {
+			height: 1.7em;
+			background: #777;
+		}
+
+		.syrup .p-text {
+			height: 24px;
+			background: #777;
+			margin-bottom: 11.5px;
+			padding
+		}
+
+		.syrup .animate {
+			animation: shimmer 2s infinite;
+			background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
+			background-size: 1000px 100%;
+		}
+
+		@keyframes shimmer {
+			0% {
+				background-position: -1000px 0;
+			}
+
+			100% {
+				background-position: 1000px 0;
+			}
+		}
 	</style>
 
 
@@ -237,18 +272,18 @@
 								<div class="col-sm-12">
 									<p>A secure and easy way to reach us, wherever you&nbsp;are.</p>
 									<p>You can expect a response within 1&ndash;5 business days.</p>
-									
-			
-										
-									
+
+
+
+
 								</div>
 
 								<div class="col-sm-12">
-										
+
 									<a href="#" class="btn btn-primary">Send a new message</a>
-									
-								
-							</div>
+
+
+								</div>
 
 							</div>
 
@@ -286,7 +321,7 @@
 
 										</div>
 										<!---->
-										<!--<div class="form-group">
+									<!--<div class="form-group">
 											<button type="submit" class="btn btn-primary mrgn-rght-md"
 												aria-controls="dataset-filter1">Filter</button>
 										</div>
@@ -320,8 +355,8 @@
 														<option value="All">All</option>
 													</select>
 												</div>
-												
-												
+
+
 												<div class="form-group col-xs-4 col-lg-12">
 													<label for="dt_type">Type</label>
 													<select class="form-control" id="dt_type" name="dt_type"
@@ -337,14 +372,16 @@
 														aria-controls="dataset-filter1">Filter</button>
 												</div>
 												<div class="form-group col-xs-12 col-sm-3 col-lg-12">
-													<div class="clearfix hidden-lg hidden-xs" style="margin-top: 30px;"></div>
-													<button type="reset" class="btn btn-link btn-sm p-0">Reset to default
+													<div class="clearfix hidden-lg hidden-xs" style="margin-top: 30px;">
+													</div>
+													<button type="reset" class="btn btn-link btn-sm p-0">Reset to
+														default
 
 
 													</button>
 												</div>
-											</div>	
-													<!--
+											</div>
+											<!--
 													<div class="form-group">
 														<label for="dt_mindate" class="small">Start date</label>
 														<input type="date" class="form-control" id="dt_mindate"
@@ -356,7 +393,7 @@
 														<input type="date" class="form-control" id="dt_maxdate"
 															name="dt_maxdate" data-column="1">
 													</div>-->
-												
+
 											<!--
 											<div class="form-group">
 												<fieldset>
@@ -378,109 +415,175 @@
 													<option value="Archived">Archived</option>
 												</select>
 											</div>-->
-											
 
-											
+
+
 											<!---->
-											
+
 										</form>
 									</details>
-								
 
 
 
 
-							</div>
-							<div class="clearfix hidden-lg mrgn-tp-md mrgn-bttm-md"></div>
-							<div class="col-lg-9 col-md-12">
-								<table class="wb-tables table table-striped table-hover"
-									id="dataset-filter" aria-live="polite" data-wb-tables='{
-			"bDeferRender": true,
+
+								</div>
+								<div class="clearfix hidden-lg mrgn-tp-md mrgn-bttm-md"></div>
+								<div class="col-lg-9 col-md-12">
+									<table class="wb-tables table table-striped table-hover" id="dataset-filter"
+										aria-live="polite" data-wb-tables='{
 			"ajaxSource": "../../../design/assets/ajax/inbox-datasource-en.json",
 			"order": [3, "desc"],
 			"autoWidth": false,
-			"columns": [
-				{ "data": "UNREAD", "className": "st-tbl-status", "searchable": "false"},
-				{ "data": "SUBJECT", "className": "nws-tbl-sub sub-elps col-sm-4 hidden-xs" },
-				{ "data": "SUMMARY", "className": "nws-tbl-summ summ-elps col-sm-6 col-xs-10" },
-				{ "data": "DATE", "className": "nws-tbl-date nowrap" },
-				{ "data": "TYPE",  "visible": false },
-				{ "data": "ID", "visible": false}]
+			
 				
 		}'>
-									<thead>
-										<tr>
-											<th scope="col">Status</th>
-											
-											<th scope="col">Subject</th>
-											<th scope="col">Details</th>
-											<th scope="col">Date</th>
+										<thead>
+											<tr>
+												<th scope="col">Status</th>
 
-										</tr>
-									</thead>
-								</table>
+												<th scope="col">Subject</th>
+												<th scope="col">Details</th>
+												<th scope="col">Date</th>
+
+											</tr>
+										</thead>
+										<tbody class="syrup">
+											<tr class="">
+												<td class=" st-tbl-status"><div class="animate p-text"></div>
+												</td>
+												<td class=" nws-tbl-sub sub-elps col-sm-4 hidden-xs"><div class="animate p-text"></div>
+												</td>
+												<td class=" nws-tbl-summ summ-elps col-sm-6 col-xs-10"><div class="animate p-text"></div></td>
+												<td class="nws-tbl-date nowrap sorting_1 col-xs-2"><div class="animate p-text"></div></td>
+											</tr>
+											<tr class="">
+												<td class=" st-tbl-status"><div class="animate p-text"></div>
+												</td>
+												<td class=" nws-tbl-sub sub-elps col-sm-4 hidden-xs"><div class="animate p-text"></div></td>
+												<td class=" nws-tbl-summ summ-elps col-sm-6 col-xs-10"><div class="animate p-text"></div></td>
+												<td class="nws-tbl-date nowrap sorting_1"><div class="animate p-text"></div></td>
+											</tr>
+											<tr class="">
+												<td class=" st-tbl-status"><div class="animate p-text"></div>
+												</td>
+												<td class=" nws-tbl-sub sub-elps col-sm-4 hidden-xs"><div class="animate p-text"></div></td>
+												<td class=" nws-tbl-summ summ-elps col-sm-6 col-xs-10"><div class="animate p-text"></div></td>
+												<td class="nws-tbl-date nowrap sorting_1"><div class="animate p-text"></div></td>
+											</tr>
+											<tr class="">
+												<td class=" st-tbl-status"><div class="animate p-text"></div>
+												</td>
+												<td class=" nws-tbl-sub sub-elps col-sm-4 hidden-xs"><div class="animate p-text"></div></td>
+												<td class=" nws-tbl-summ summ-elps col-sm-6 col-xs-10"><div class="animate p-text"></div></td>
+												<td class="nws-tbl-date nowrap sorting_1"><div class="animate p-text"></div></td>
+											</tr>
+											<tr class="">
+												<td class=" st-tbl-status"><div class="animate p-text"></div>
+												</td>
+												<td class=" nws-tbl-sub sub-elps col-sm-4 hidden-xs"><div class="animate p-text"></div></td>
+												<td class=" nws-tbl-summ summ-elps col-sm-6 col-xs-10"><div class="animate p-text"></div></td>
+												<td class="nws-tbl-date nowrap sorting_1"><div class="animate p-text"></div></td>
+											</tr>
+											<tr class="">
+												<td class=" st-tbl-status"><div class="animate p-text"></div>
+												</td>
+												<td class=" nws-tbl-sub sub-elps col-sm-4 hidden-xs"><div class="animate p-text"></div></td>
+												<td class=" nws-tbl-summ summ-elps col-sm-6 col-xs-10"><div class="animate p-text"></div></td>
+												<td class="nws-tbl-date nowrap sorting_1"><div class="animate p-text"></div></td>
+											</tr>
+											<tr class="">
+												<td class=" st-tbl-status"><div class="animate p-text"></div>
+												</td>
+												<td class=" nws-tbl-sub sub-elps col-sm-4 hidden-xs"><div class="animate p-text"></div></td>
+												<td class=" nws-tbl-summ summ-elps col-sm-6 col-xs-10"><div class="animate p-text"></div></td>
+												<td class="nws-tbl-date nowrap sorting_1"><div class="animate p-text"></div></td>
+											</tr>
+											<tr class="">
+												<td class=" st-tbl-status"><div class="animate p-text"></div>
+												</td>
+												<td class=" nws-tbl-sub sub-elps col-sm-4 hidden-xs"><div class="animate p-text"></div></td>
+												<td class=" nws-tbl-summ summ-elps col-sm-6 col-xs-10"><div class="animate p-text"></div></td>
+												<td class="nws-tbl-date nowrap sorting_1"><div class="animate p-text"></div></td>
+											</tr>
+											<tr class="">
+												<td class=" st-tbl-status"><div class="animate p-text"></div>
+												</td>
+												<td class=" nws-tbl-sub sub-elps col-sm-4 hidden-xs"><div class="animate p-text"></div></td>
+												<td class=" nws-tbl-summ summ-elps col-sm-6 col-xs-10"><div class="animate p-text"></div></td>
+												<td class="nws-tbl-date nowrap sorting_1"><div class="animate p-text"></div></td>
+											</tr>
+											<tr class="">
+												<td class=" st-tbl-status"><div class="animate p-text"></div>
+												</td>
+												<td class=" nws-tbl-sub sub-elps col-sm-4 hidden-xs"><div class="animate p-text"></div></td>
+												<td class=" nws-tbl-summ summ-elps col-sm-6 col-xs-10"><div class="animate p-text"></div></td>
+												<td class="nws-tbl-date nowrap sorting_1"><div class="animate p-text"></div></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-						</div>
-						
-						
 
 
-						<div class="row">
-							<div class="col-xs-12">
-								
-								<h2>Help and FAQs</h2>
-								<ul>
-									<li><a href="$">Secure messaging FAQs</a></li>
-								</ul>
-							</div>
-						</div>
 
-						<span class="wb-sessto" data-wb-sessto='{"logouturl": "../en.html"}'></span>
 
-						<section class="pagedetails">
-							<h2 class="wb-inv">Page details</h2>
 							<div class="row">
-								<div class="col-sm-6 col-md-8 col-lg-8">
-									<div data-ajax-replace="../../../design/assets/ajax/report-problem-en.html">
-										<div class="row row-no-gutters">
-											<div class="col-sm-6 col-md-5 col-lg-4">
-												<a class="btn btn-default btn-block"
-													href="https://www.canada.ca/en/report-problem.html">
-													Report a problem on this page
-												</a>
+								<div class="col-xs-12">
+
+									<h2>Help and FAQs</h2>
+									<ul>
+										<li><a href="$">Secure messaging FAQs</a></li>
+									</ul>
+								</div>
+							</div>
+
+							<span class="wb-sessto" data-wb-sessto='{"logouturl": "../en.html"}'></span>
+
+							<section class="pagedetails">
+								<h2 class="wb-inv">Page details</h2>
+								<div class="row">
+									<div class="col-sm-6 col-md-8 col-lg-8">
+										<div data-ajax-replace="../../../design/assets/ajax/report-problem-en.html">
+											<div class="row row-no-gutters">
+												<div class="col-sm-6 col-md-5 col-lg-4">
+													<a class="btn btn-default btn-block"
+														href="https://www.canada.ca/en/report-problem.html">
+														Report a problem on this page
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Share button
+								<div class="wb-share col-sm-4 col-md-3" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>-->
+
+									<div class="col-xs-12 mrgn-tp-sm text-muted">
+										<div class="row">
+											<div class="col-xs-12 col-sm-6 mrgn-bttm-0">
+												<div class="clearfix hidden-xs"></div>
+												<dl id="wb-dtmd">
+													<dt>Date modified:</dt>
+													<dd><time property="dateModified">2023-05-04</time></dd>
+												</dl>
+											</div>
+											<div class="col-xs-12 col-sm-6 mrgn-bttm-0 hidden-xs text-right">
+												<p class="mrgn-tp-0 mrgn-bttm-0">UX.7.17.4</p>
+												<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
+											</div>
+											<div class="col-xs-12 col-sm-6 mrgn-bttm-0 visible-xs">
+												<p class="mrgn-tp-0 mrgn-bttm-0">UX.7.17.4</p>
+												<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
 											</div>
 										</div>
 									</div>
 								</div>
-								<!-- Share button
-								<div class="wb-share col-sm-4 col-md-3" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>-->
+							</section>
+						</div>
 
-								<div class="col-xs-12 mrgn-tp-sm text-muted">
-									<div class="row">
-										<div class="col-xs-12 col-sm-6 mrgn-bttm-0">
-											<div class="clearfix hidden-xs"></div>
-											<dl id="wb-dtmd">
-												<dt>Date modified:</dt>
-												<dd><time property="dateModified">2023-05-04</time></dd>
-											</dl>
-										</div>
-										<div class="col-xs-12 col-sm-6 mrgn-bttm-0 hidden-xs text-right">
-											<p class="mrgn-tp-0 mrgn-bttm-0">UX.7.17.4</p>
-											<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
-										</div>
-										<div class="col-xs-12 col-sm-6 mrgn-bttm-0 visible-xs">
-											<p class="mrgn-tp-0 mrgn-bttm-0">UX.7.17.4</p>
-											<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
+
 					</div>
-
-
 				</div>
-			</div>
 
 			</div>
 
