@@ -28,9 +28,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
 	<style>
-		#nav-menu-pdf-actions .mfp-close {
-			display: none;
-		}
+		
 	</style>
 
 </head>
@@ -43,28 +41,28 @@
 					"About My VAC Account"</a></li>
 		</ul>
 	</nav>
-
-
-
-
-
 	<main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
-		<nav id="nav-menu-pdf-actions" class="wb-overlay modal-content overlay-def wb-bar-t open no-print" aria-hidden="false" role="dialog">		
+		<nav id="nav-menu-pdf-actions" class="wb-overlay modal-content overlay-def wb-bar-t no-print hidden-xs open" aria-hidden="false" role="dialog">		
 			<ul class="pull-left list-inline mrgn-lft-md mrgn-tp-sm">
 				<li>
 					<a href="#return" class="btn btn-link text-white"><span aria-hidden="true" class="fas fa-home mrgn-rght-sm"></span>Return</a>
 				</li>
+				<div class="clearfix visible-xs"></div>
 				<li class="mrgn-lft-sm">
 					<a href="#save" class="btn btn-link text-white"><span aria-hidden="true" class="fas fa-save mrgn-rght-sm"></span>Save and continue</a>
 				</li>
+				<div class="clearfix visible-xs"></div>
 				<li class="mrgn-lft-sm">
 					<a href="#submit" class="btn btn-link text-white"><span aria-hidden="true" class="fas fa-check mrgn-rght-sm"></span>Submit</a>
 				</li>
+				<div class="clearfix visible-xs"></div>
 				<li class="mrgn-lft-sm">
 					<a href="#print" class="btn btn-link text-white"><span aria-hidden="true" class="fas fa-print mrgn-rght-sm"></span>Printable PDF</a>
 				</li>
 			</ul>
 		</nav>
+
+		<a href="#nav-menu-pdf-actions" aria-controls="top-bar" role="button" class="btn btn-link mrgn-tp-md mrgn-lft-md overlay-lnk"><span class="fa fa-bars opct-50 mrgn-rght-md"></span>FORM MENU</a>
 
 		<section class="pagedetails container hidden">
 			<h2 class="wb-inv">Page details</h2>
@@ -115,6 +113,14 @@
 		crossorigin="anonymous"></script>
 	<script src="../../../wet-boew/js/wet-boew.min.js"></script>
 	<script src="../../../GCWeb/js/theme.min.js"></script>
+
+	<script>
+
+		$("a[href='#nav-menu-pdf-actions'").click(function(){
+			$("#nav-menu-pdf-actions").removeClass("hidden-xs");
+		});
+	
+	</script>
 
 
 </body>
