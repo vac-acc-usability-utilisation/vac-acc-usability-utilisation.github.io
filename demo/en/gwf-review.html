@@ -29,9 +29,12 @@
 
 
 	<style>
+		#review .md-float-right {
+				float: right;
+			}
 		@media screen and (max-width: 991px) {
-			#review .text-right {
-				text-align: left;
+			#review .md-float-right {
+				float: left;
 			}
 		}
 	</style>
@@ -39,7 +42,7 @@
 
 </head>
 
-<body class="cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage">
+<body vocab="http://schema.org/" typeof="WebPage">
 	<nav aria-label="Skip Links">
 		<ul id="wb-tphp">
 			<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
@@ -52,7 +55,7 @@
 	<header>
 		<div id="wb-bnr" class="container">
 			<div class="row">
-				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+				<section id="wb-lng" class="col-xs-3 col-sm-12 text-right">
 					<h2 class="wb-inv">Language selection</h2>
 					<ul class="list-inline mrgn-bttm-0">
 						<li>
@@ -359,7 +362,7 @@
 					</div>
 					<div class="col-xs-12 col-sm-6">
 						
-							<ul class=" lst-spcd" style="padding-left:1em;">
+							<ul class="lst-spcd" style="padding-left:1em;">
 								<li>Cleaning, vacuuming or other housekeeping activities</li>
 								<li>Grass cutting, snow removal or other grounds maintenance</li>
 
@@ -368,7 +371,7 @@
 					</div>
 
 					<div class="col-sm-2">
-						<a href="#1" class="btn btn-link pull-right"><span
+						<a href="#1" class="btn btn-link md-float-right"><span
 							class="fa fa-pen mrgn-lft-sm opct-80"></span> Edit</a>
 					</div>
 					
@@ -382,9 +385,9 @@
 					</div>
 					<div class="col-xs-12 col-sm-8">
 						<div class="row">
-							<div class="col-xs-6"><p>Yes</p></div>
-							<div class="col-xs-6">
-								<a href="#1" class="btn btn-link pull-right"><span
+							<div class="col-xs-12"><p>Yes</p></div>
+							<div class="col-xs-12">
+								<a href="#1" class="btn btn-link md-float-right"><span
 									class="fa fa-pen mrgn-rght-sm opct-80"></span>Edit</a></div>
 						</div>
 					</div>
@@ -393,15 +396,15 @@
 
 				<!-- Date of birth -->
 				<div class="row mrgn-tp-lg mrgn-bttm-lg">
-					<div class="col-xs-12 col-sm-4">
+					<div class="col-sm-4">
 						<strong class="">Date</strong>
 					</div>
-					<div class="col-xs-12 col-sm-8">
+					<div class="col-sm-8">
 
 							<div class="row">
-								<div class="col-xs-6"><p>2023-07-05</p></div>
-								<div class="col-xs-6">
-									<a href="#1" class="btn btn-link pull-right"><span
+								<div class="col-md-9"><p>2023-07-05</p></div>
+								<div class="col-md-3">
+									<a href="#1" class="btn btn-link md-float-right"><span
 										class="fa fa-pen mrgn-rght-sm opct-80"></span>Edit</a></div>
 							</div>
 					</div>
@@ -443,7 +446,7 @@
 									</div>
 								</div>
 								<div class="col-lg-2">
-									<a href="#1" class="btn btn-link pull-right"><span
+									<a href="#1" class="btn btn-link md-float-right"><span
 										class="fa fa-pen mrgn-lft-sm opct-80"></span> Edit</a>
 								</div>
 								
@@ -452,6 +455,7 @@
 						</details>
 						<details id="details-panel20">
 							<summary>Service period 2</summary>
+							
 							<div class="col-lg-12 pb-4">
 								<div class="col-lg-12">
 									<h3>Service period 2</h3>
@@ -481,7 +485,7 @@
 									</div>
 								</div>
 								<div class="col-lg-2">
-									<a href="#1" class="btn btn-link pull-right"><span
+									<a href="#1" class="btn btn-link md-float-right"><span
 										class="fa fa-pen mrgn-lft-sm opct-80"></span> Edit</a>
 								</div>
 				
@@ -501,7 +505,7 @@
 							itaque repellendus mollitia sit maiores consequatur earum. Delectus.</p>
 					</div>
 					<div class="col-xs-12 col-sm-2">
-						<a href="#1" class="btn btn-link pull-right"><span
+						<a href="#1" class="btn btn-link md-float-right"><span
 							class="fa fa-pen mrgn-lft-sm opct-80"></span> Edit</a>
 					</div>
 				</div>
@@ -510,7 +514,10 @@
 
 				</div>
 			</section>
-			<button class="btn btn-primary mrgn-tp-md mrgn-bttm-xl">Continue</button>
+
+			<button class="btn btn-primary mrgn-tp-md mrgn-bttm-xl pull-right mrgn-lft-sm">Continue</button>
+			<button class="btn btn-default mrgn-tp-md mrgn-bttm-xl pull-right">Back</button>
+
 		</section>
 		<!---->
 		<div class="clearfix mrgn-bttm-md"></div>
