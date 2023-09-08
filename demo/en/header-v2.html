@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) <abbr>WET</abbr>-boew.github.io/wet-boew/License-en.html / <abbr>WET</abbr>-boew.github.io/wet-boew/Licence-fr.html -->
+
+	<title>Overview</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta name="description" content=" " />
+	<meta name="author" content=" " />
+	<meta name="dcterms.title" content="My VAC Account Sign-In Services" />
+	<meta name="dcterms.description" content=" " />
+	<meta name="dcterms.creator" content=" " />
+	<meta name="dcterms.language" content="eng" />
+	<meta name="dcterms.subject" content="" />
+	<meta name="dcterms.issued" content="" />
+	<meta name="dcterms.modified" content="2023-01-16" />
+
+	<link href="/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
+
+	<link rel="stylesheet" href="/GCWeb/css/theme.min.css" />
+	<link rel="stylesheet" href="/mva-mda/css/theme.css" />
+	<link rel="stylesheet" href="/cdts/css/cdts.css" />
+	<noscript>
+		<link rel="stylesheet" href="/wet-boew/css/noscript.min.css" />
+	</noscript>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+
+
+	<style>
+		@media screen and (max-width: 991px) {
+			#btn-accnt-mnu {
+				padding-bottom: 1px;
+			}
+		}
+	</style>
+
+</head>
+
+<body class="cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage">
+	<nav aria-label="Skip Links">
+		<ul id="wb-tphp">
+			<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+			<li class="wb-slc visible-xs visible-sm visible-md visible-lg">
+				<a class="wb-sl" href="#wb-info">Skip to "About My VAC Account"</a>
+			</li>
+		</ul>
+	</nav>
+
+	<header>
+		<div id="wb-bnr" class="container">
+			<div class="row">
+				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+					<h2 class="wb-inv">Language selection</h2>
+					<ul class="list-inline mrgn-bttm-0">
+						<li>
+							<a lang="fr" hreflang="fr" href="/demo/fr/index.html">
+								<span class="hidden-xs">Français</span>
+								<abbr title="Français"
+									class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+							</a>
+						</li>
+					</ul>
+				</section>
+				<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" resource="#wb-publisher"
+					typeof="GovernmentOrganization">
+					<a href="/demo/en/" property="url">
+						<img src="../../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv"
+							property="name">
+							Government of Canada / <span lang="fr">Gouvernement du Canada</span>
+					</a>
+					<meta property="areaServed" typeof="Country" content="Canada">
+					<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
+				</div>
+				<!--
+				<section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
+					<h2>Search</h2>
+					<form action="#" method="post" name="cse-search-box" role="search">
+						<div class="form-group wb-srch-qry">
+							<label for="wb-srch-q" class="wb-inv">Search</label>
+							<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search VAC">
+							<datalist id="wb-srch-q-ac"></datalist>
+						</div>
+						<div class="form-group submit">
+							<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
+								<span class="glyphicon-search glyphicon"></span>
+								<span class="wb-inv">Search</span>
+							</button>
+						</div>
+					</form>
+				</section>-->
+			</div>
+
+		</div>
+		<div class="app-bar" style="border-bottom: 4px solid #f90;">
+			<div class="container">
+				<div class="row">
+					<section class="col-xs-8 col-sm-6 col-md-4">
+						<h2 class="wb-inv">Name of Web application</h2>
+						<a href="#mb-pnl" id="menu-btn" title="Menu" aria-controls="mb-pnl" class="app-name overlay-lnk">
+							<span class="fa fa-bars mrgn-rght-md" style="font-size: 0.7em; position: relative; bottom: 2px"></span>My&nbsp;VAC&nbsp;Account
+						</a>
+					</section>
+					<!--account menu / nav-->
+					<nav
+						class="col-xs-4 col-sm-6 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
+						<section>
+							<h2 class="wb-inv">Account menu</h2>
+							<a href="/demo/en/secure-message/inbox.html"
+								class="btn btn-link text-white hidden-xs hidden-sm"> <span
+									class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox 
+									<span class="badge">2</span> </a>
+							<a href="/demo/en/profile.html"
+								class="btn btn-link text-white mrgn-rght-md hidden-xs hidden-sm"> <span
+									class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile</a>
+
+							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-right visible-xs"
+								id="btn-accnt-mnu"
+								style="position: relative;" type="button"
+								aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false">
+								<span class="fa fa-user-circle text-warning mrgn-rght-sm" style="font-size:1.25em;"></span><sup><span class="badge hidden-md hidden-lg">2</span></sup>
+									<span
+									class="fa fa-chevron-down mrgn-lft-sm hidden-xs"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width"
+								style="position:static; width: 100%; float: left; text-align: left; width: auto;">
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
+										href="/demo/en/secure-message/inbox.html"><span
+											class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+											class="badge">2</span></a></li>
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
+										href="/demo/en/profile.html"><span
+											class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile</a></li>
+								<li role="none" class="hidden"><a role="menuitem" tabindex="-1" href="#"><span
+											class="fa fa-user mrgn-rght-sm opct-50"></span>Switch user</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="/demo/sign-out.html"><span
+											class="fa fa-power-off mrgn-rght-sm opct-50"></span>Sign out</a></li>
+							</ul>
+
+							<button class="btn btn-default mrgn-lft-md hidden-xs"
+								style="position: relative;" type="button"
+								aria-haspopup="true" aria-controls="accnt-mnu-1" aria-expanded="false"><strong
+									class="text-warning">Representing</strong>
+								Noel&nbsp;Knockwood&nbsp;<span class="badge hidden-md hidden-lg">2</span><span
+									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu-1" role="menu" aria-orientation="vertical"
+								style="text-align: left; width: auto;">
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
+										href="/demo/en/secure-message/inbox.html"><span
+											class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+											class="badge">2</span></a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1"
+										href="/demo/en/profile.html"><span
+											class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile</a></li>
+								<li role="none" class="hidden"><a role="menuitem" tabindex="-1" href="#"><span
+											class="fa fa-users mrgn-rght-sm opct-50"></span>Switch user</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="/demo/sign-out.html"><span
+											class="fa fa-power-off mrgn-rght-sm opct-50"></span>Sign out</a></li>
+							</ul>
+
+						</section>
+					</nav>
+
+				</div>
+			</div>
+		</div>
+		<!--
+		<nav role="navigation" id="wb-sm" data-ajax-replace="/design/assets/ajax/menu-include-en.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+			<div class="container nvbar">
+				<h2>Topics menu</h2>
+				<div class="row">
+					<ul class="list-inline menu">
+						<li><a href="#">Section 1</a></li>
+						<li><a href="#">Section 2</a></li>
+						<li><a href="#">Section 3</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>-->
+		<!--
+		<div class="container">
+			<nav>
+				<a href="#mb-pnl" id="menu-btn" title="Menu" aria-controls="mb-pnl" class="overlay-lnk btn btn-primary"
+					role="button"><span class="fa fa-bars mrgn-rght-sm opct-80"></span>MENU</a>
+			</nav>
+		</div>-->
+
+
+		<div id="mb-pnl" class="wb-overlay modal-content overlay-def wb-panel-l" aria-hidden="false" role="dialog"
+			tabindex="-1">
+			<header class="modal-header">
+				<div class="modal-title">MENU</div>
+			</header>
+			<div class="modal-body">
+				<!--<section class="srch-pnl hidden">
+					<h3>Search</h3>
+			<form action="https://google.ca/search" method="get" role="search" class="form-inline">
+			<div class="form-group">
+			<label for="wb-srch-q-imprt">Search website</label>
+			<input id="wb-srch-q-imprt" class="form-control" name="q" type="search" value="" size="27" maxlength="150">
+			<input type="hidden" name="q" value="site:wet-boew.github.io OR site:github.com/wet-boew/">
+			</div>
+			<button type="submit" id="wb-srch-sub-imprt" class="btn btn-default">Search</button>
+			</form>
+			</section><section class="lng-ofr hidden"><h3>Language selection</h3><ul class="list-inline"><li><a lang="fr" hreflang="fr" href="menu-fr.html">Français</a></li></ul></section>-->
+				<nav role="navigation" typeof="SiteNavigationElement" id="sm-pnl"
+					class="sm-pnl wb-menu wb-menu-inited wb-init wb-navcurr-inited">
+					<h3>Topics menu</h3>
+					
+						
+					
+
+					<div data-ajax-replace="/design/assets/ajax/site-menu-en.html">
+
+					</div>
+				</nav>
+				<!--
+					<nav role="navigation" typeof="SiteNavigationElement" id="info-pnl"
+						class="info-pnl wb-menu wb-menu-inited wb-init">
+						<h3>About this site</h3>
+						<ul class="list-unstyled mb-menu" role="menu">
+							<li>
+								<details>
+									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="1"
+										aria-haspopup="true" tabindex="0">Contact us</summary>
+									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
+										aria-hidden="true">
+										<li><a role="menuitem" aria-setsize="1" aria-posinset="1" tabindex="-1"
+												href="https://github.com/wet-boew/wet-boew/issues/new">Questions or
+												comments?</a></li>
+									</ul>
+								</details>
+							</li>
+							<li>
+								<details>
+									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="2"
+										aria-haspopup="true" tabindex="-1">About</summary>
+									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
+										aria-hidden="true">
+										<li><a role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1"
+												href="../../index-en.html#about">About the Web Experience Toolkit</a>
+										</li>
+										<li><a role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1"
+												rel="external"
+												href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web
+												Standards</a></li>
+									</ul>
+								</details>
+							</li>
+							<li>
+								<details>
+									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="3"
+										aria-haspopup="true" tabindex="-1">News</summary>
+									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
+										aria-hidden="true">
+										<li><a role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1"
+												href="https://github.com/wet-boew/wet-boew/pulse">Recent project
+												activity</a></li>
+										<li><a role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1"
+												href="https://github.com/wet-boew/wet-boew/graphs">Project
+												statistics</a></li>
+									</ul>
+								</details>
+							</li>
+							<li>
+								<details>
+									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="4"
+										aria-haspopup="true" tabindex="-1">Stay connected</summary>
+									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
+										aria-hidden="true">
+										<li><a role="menuitem" aria-setsize="1" aria-posinset="1" tabindex="-1"
+												rel="external" href="https://twitter.com/WebExpToolkit">Twitter</a></li>
+									</ul>
+								</details>
+							</li>
+						</ul>
+					</nav>-->
+			</div>
+			<div class="modal-footer"><button title="Close overlay"
+					class="btn btn-sm btn-default pull-left overlay-close" type="button">Close<span class="wb-inv">Close
+						overlay</span></button></div><button title="Close: Menus (escape key)"
+				class="mfp-close overlay-close" type="button">×<span class="wb-inv"> Close: menus (escape
+					key)</span></button>
+		</div>
+
+		<nav id="wb-bc" property="breadcrumb">
+			<h2>You are here:</h2>
+			<div class="container">
+				<ol class="breadcrumb hidden-xs hidden-sm" typeof="BreadcrumbList">
+
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="../index.html">
+							<span property="name">My <abbr title="">VAC</abbr> Account</span>
+						</a>
+						<meta property="position" content="1">
+					</li>
+				</ol>
+				<div class="hidden-md hidden-lg">
+					<ol>
+						<li>
+
+							<a property="item" typeof="WebPage" href="../index.html">
+								<span class="fa fa-arrow-left mrgn-rght-sm"></span>
+								<span property="name">Overview</span>
+							</a>
+						</li>
+					</ol>
+
+
+				</div>
+			</div>
+		</nav>
+
+	</header>
+
+	<main class="cnt-wdth-lmtd container" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
+		<h1>Header v2</h1>
+	
+		<section class="pagedetails container">
+			<h2 class="wb-inv">Page details</h2>
+			<div class="row">
+
+				<!-- Share button
+				<div class="wb-share col-sm-4 col-md-3" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>-->
+
+				<div class="col-xs-12 mrgn-tp-sm text-muted">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 mrgn-bttm-0">
+							<div class="clearfix hidden-xs"></div>
+							<dl id="wb-dtmd">
+								<dt>Date modified:</dt>
+								<dd><time property="dateModified">2023-04-06</time></dd>
+							</dl>
+						</div>
+						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 hidden-xs text-right">
+							<p class="mrgn-tp-0 mrgn-bttm-0">UX.1.1.1</p>
+							<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
+						</div>
+						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 visible-xs">
+							<p class="mrgn-tp-0 mrgn-bttm-0">UX.1.1.1</p>
+							<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+
+
+	<!-- footer -->
+	<div id="default-footer">
+		<footer id="wb-info">
+			<h2 class="wb-inv">About My VAC Account</h2>
+			<div class="gc-main-footer">
+				<nav class="container wb-navcurr">
+
+					<ul class="list-unstyled colcount-xs-2 colcount-md-3">
+						<li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
+
+						<li id="authenticated-footer-link-2">
+							<a href="#">Check in on your well-being</a>
+						</li>
+
+						<li><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">Talk to a mental
+								health professional</a></li>
+
+
+
+						<li id="authenticated-footer-link-1"><a href="#">News and updates</a></li>
+
+						<li id="authenticated-footer-link-3"><a href="#">Provide feedback</a></li>
+
+						<li id="authenticated-footer-link"><a href="#">Useful links</a></li>
+
+
+
+
+					</ul>
+				</nav>
+			</div>
+			<div class="gc-sub-footer">
+				<div class="container d-flex align-items-center">
+					<nav>
+						<h3 class="wb-inv">Veteran Affairs Canada Corporate</h3>
+						<ul>
+							<li><a href="https://www.veterans.gc.ca/eng/e_services">About My VAC Account</a></li>
+							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Terms and conditions</a></li>
+							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Privacy</a></li>
+						</ul>
+					</nav>
+					<div class="wtrmrk align-self-end">
+						<img src="../../../GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+		integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
+		crossorigin="anonymous"></script>
+	<script src="/wet-boew/js/wet-boew.min.js"></script>
+	<script src="/GCWeb/js/theme.min.js"></script>
+	<!--
+	<script src="/mva-mda/js/script.js"></script>-->
+
+</body>
+
+</html>
