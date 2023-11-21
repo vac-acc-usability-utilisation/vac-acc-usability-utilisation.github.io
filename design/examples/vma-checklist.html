@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) <abbr>WET</abbr>-boew.github.io/wet-boew/License-en.html / <abbr>WET</abbr>-boew.github.io/wet-boew/Licence-fr.html -->
+
+	<title>Header and footer</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta name="description" content=" " />
+	<meta name="author" content=" " />
+	<meta name="dcterms.title" content="My VAC Account Sign-In Services" />
+	<meta name="dcterms.description" content=" " />
+	<meta name="dcterms.creator" content=" " />
+	<meta name="dcterms.language" content="eng" />
+	<meta name="dcterms.subject" content="" />
+	<meta name="dcterms.issued" content="" />
+	<meta name="dcterms.modified" content="2023-01-16" />
+
+	<link href="../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
+
+	<link rel="stylesheet" href="../../GCWeb/css/theme.min.css" />
+	<link rel="stylesheet" href="../../mva-mda/css/theme.css" />
+	<link rel="stylesheet" href="../../cdts/css/cdts.css" />
+	<noscript>
+		<link rel="stylesheet" href="wet-boew/css/noscript.min.css" />
+	</noscript>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+
+	<style>
+		.accnt-menu [role=menuitem] {
+
+			width: auto;
+
+		}
+
+
+		.accnt-menu [role=menu] {
+
+			position: absolute;
+			right: 1em;
+		}
+
+		.gcweb-menu button[aria-haspopup=true] {
+			text-transform: none;
+		}
+
+		#mbl-mnu details.acc-group.brdr-0.on,
+		#app-navigation details.acc-group.brdr-0.on {
+			padding-bottom: 0;
+		}
+
+		ul#app-mnu {
+		}
+
+		@media screen and (max-width: 991px) {
+			ul#app-mnu {
+				padding: 0;
+			}
+		}
+	</style>
+
+</head>
+
+<body vocab="http://schema.org/" typeof="WebPage">
+	<nav aria-label="Skip Links">
+		<ul id="wb-tphp">
+			<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+			<li class="wb-slc visible-xs visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to
+					"About My VAC Account"</a></li>
+		</ul>
+	</nav>
+
+
+	<!-- authenticated -->
+	<header id="authenticated-header">
+		<div id="wb-bnr" class="container">
+			<div class="row">
+				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+					<h2 class="wb-inv">Language selection</h2>
+					<ul class="list-inline mrgn-bttm-0">
+						<li>
+							<a lang="fr" hreflang="fr" href="fr.html">
+								<span class="hidden-xs">Français</span>
+								<abbr title="Français"
+									class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+							</a>
+						</li>
+					</ul>
+				</section>
+				<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" resource="#wb-publisher"
+					typeof="GovernmentOrganization">
+					<a href="en.html" property="url">
+						<img src="../../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv"
+							property="name">
+							Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+					</a>
+					<meta property="areaServed" typeof="Country" content="Canada">
+					<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
+				</div>
+				<!--
+				<section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
+					<h2>Search</h2>
+					<form action="#" method="post" name="cse-search-box" role="search">
+						<div class="form-group wb-srch-qry">
+							<label for="wb-srch-q" class="wb-inv">Search</label>
+							<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search VAC">
+							<datalist id="wb-srch-q-ac"></datalist>
+						</div>
+						<div class="form-group submit">
+							<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
+								<span class="glyphicon-search glyphicon"></span>
+								<span class="wb-inv">Search</span>
+							</button>
+						</div>
+					</form>
+				</section>-->
+			</div>
+
+		</div>
+		<div class="app-bar">
+			<div class="container">
+				<div class="row">
+					<section class="col-xs-8 col-sm-5 col-md-4">
+						<h2 class="wb-inv">Name of Web application</h2>
+						<a href="#" class="app-name" href="../../en.html">My&nbsp;VAC&nbsp;Account</a>
+					</section>
+
+					<nav
+						class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
+						<section>
+							<h2 class="wb-inv">Account menu</h2>
+							<a href="#" class="btn btn-link text-white hidden-xs hidden-sm"> <span
+									class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+									class="badge">2</span> </a>
+							<a href="#" class="btn btn-link text-white mrgn-rght-md hidden-xs hidden-sm hidden-md">
+								<span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a>
+
+							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs"
+								style="background:#eee; color: #000; position: relative;" type="button"
+								aria-haspopup="true" aria-controls="accnt-mnu"
+								aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span
+									class="badge hidden-md hidden-lg">2</span><span
+									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width"
+								style="position:static; width: 100%; float: left; text-align: left; width: auto;">
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
+										href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+											class="badge">2</span></a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span
+											class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
+							</ul>
+
+							<button class="btn btn-default mrgn-lft-md hidden-xs"
+								style="background:#eee; color: #000; position: relative;" type="button"
+								aria-haspopup="true" aria-controls="accnt-mnu"
+								aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span
+									class="badge hidden-md hidden-lg">2</span><span
+									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical"
+								style="text-align: left; width: auto;">
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
+										href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+											class="badge">2</span></a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span
+											class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
+							</ul>
+
+						</section>
+					</nav>
+
+				</div>
+			</div>
+		</div>
+		<!--MOBILE MENU-->
+		<nav id="mbl-mnu" class="gweb-v2 gcweb-menu app-menu hidden-md hidden-lg mrgn-tp-md container hidden"
+		data-wb-urlmapping='{
+	"authenticated": { 
+	"action": "removeClass", 
+	"source": "#mbl-mnu", 
+	"class": "hidden" },
+	"authenticated-poa": { 
+		"action": "removeClass", 
+		"source": "#mbl-mnu", 
+		"class": "hidden" }
+	}'>
+		<section class="">
+			<h2 class="wb-inv">Account menu</h2>
+
+			<button id="mbl-mnu-btn" class="btn btn-default btn-lg mrgn-lft-md visible-sm visible-xs" type="button" aria-haspopup="true"
+				aria-controls="app-mnu" aria-expanded="false">
+				MENU<span class="fa fa-chevron-down mrgn-lft-sm"></span>
+			</button>
+
+			<ul id="app-mnu" class="hidden-sm mrgn-tp-lg" role="menu" aria-orientation="vertical">
+				<li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Overview</a></li>
+<li role="presentation"> <a role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-apply" aria-expanded="false" href="#">Apply for benefits and services</a>
+  <ul id="gc-mnu-jobs" role="menu" aria-orientation="vertical">
+    <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Apply<span class="hidden-xs hidden-sm"> for benefits and services</span><span class="visible-xs-inline visible-sm-inline">: home</span></a> </li>
+    <li role="separator"></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/jobs/opportunities.html">Find a form</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/jobs/training.html">What can you apply for?</a></li>
+    <li role="separator" aria-orientation="vertical"></li>
+    <li role="presentation"> <a data-keep-expanded="md-min" href="#" role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs-sub" aria-expanded="true">Most requested</a>
+      <ul id="gc-mnu-jobs-sub" role="menu" aria-orientation="vertical">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/employment-social-development/programs/ei/ei-list/ei-roe/access-roe.html">View your Records of Employment</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/employment-social-development/services/sin.html">Apply for a Social Insurance Number (SIN)</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/employment-social-development/services/foreign-workers.html">Hire a temporary foreign worker</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html">Immigrate as a skilled worker</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+<li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Track your applications</a>
+			</ul>
+
+			
+
+		</section>
+	</nav>
+		<nav id="wb-bc" property="breadcrumb">
+			<h2>You are here:</h2>
+			<div class="container">
+				<ol class="breadcrumb hidden-xs" typeof="BreadcrumbList">
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
+							<span property="name">My VAC Account</span>
+						</a>
+						<meta property="position" content="1">
+					</li>
+				</ol>
+				<div class="hidden-sm hidden-md hidden-lg">
+					<ol>
+						<li>
+
+							<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
+								<span class="fa fa-arrow-left"></span>
+								<span property="name">My VAC Account</span>
+							</a>
+						</li>
+					</ol>
+
+
+				</div>
+			</div>
+		</nav>
+		<!--
+        <div class="app-bar-mb container visible-xs-block hidden-print">
+            <nav>
+                <h2 class="wb-inv">Account menu</h2>
+                <ul class="app-list-account list-unstyled">
+                    <li><a href="../../en.html?register" class="btn">Register</a></li>
+                    <li><a href="../../en.html?sign-in" class="btn">Sign-in</a></li>
+                </ul>
+            </nav>
+        </div>-->
+	</header>
+
+	<!-- authenticated POA -->
+	<header class="hidden" id="authenticated-poa-header" data-wb-urlmapping='{
+		"authenticated-poa": { 
+		"action": "removeClass", 
+		"source": "#authenticated-poa-header", 
+		"class": "hidden" }
+		}'>
+		<div id="wb-bnr" class="container">
+			<div class="row">
+				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+					<h2 class="wb-inv">Language selection</h2>
+					<ul class="list-inline mrgn-bttm-0">
+						<li>
+							<a lang="fr" hreflang="fr" href="fr.html">
+								<span class="hidden-xs">Français</span>
+								<abbr title="Français"
+									class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+							</a>
+						</li>
+					</ul>
+				</section>
+				<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" resource="#wb-publisher"
+					typeof="GovernmentOrganization">
+					<a href="en.html" property="url">
+						<img src="../../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv"
+							property="name">
+							Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+					</a>
+					<meta property="areaServed" typeof="Country" content="Canada">
+					<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
+				</div>
+				<!--
+				<section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
+					<h2>Search</h2>
+					<form action="#" method="post" name="cse-search-box" role="search">
+						<div class="form-group wb-srch-qry">
+							<label for="wb-srch-q" class="wb-inv">Search</label>
+							<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search VAC">
+							<datalist id="wb-srch-q-ac"></datalist>
+						</div>
+						<div class="form-group submit">
+							<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
+								<span class="glyphicon-search glyphicon"></span>
+								<span class="wb-inv">Search</span>
+							</button>
+						</div>
+					</form>
+				</section>-->
+			</div>
+
+		</div>
+		<div class="app-bar" style="border-bottom: 4px solid #f90;">
+			<div class="container">
+				<div class="row">
+					<section class="col-xs-8 col-sm-5 col-md-4">
+						<h2 class="wb-inv">Name of Web application</h2>
+						<a href="#" class="app-name" href="../../en.html">My&nbsp;VAC&nbsp;Account</a>
+					</section>
+
+					<nav
+						class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
+						<section>
+							<h2 class="wb-inv">Account menu</h2>
+							<a href="#" class="btn btn-link text-white hidden-xs hidden-sm"> <span
+									class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+									class="badge">2</span> </a>
+							<a href="#" class="btn btn-link text-white mrgn-rght-md hidden-xs hidden-sm hidden-md">
+								<span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a>
+
+							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs"
+								style="background:#eee; color: #000; position: relative;" type="button"
+								aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false"><strong
+									class="text-warning">Representing </strong>Noel&nbsp;Knockwood&nbsp;<span
+									class="badge hidden-md hidden-lg">2</span><span
+									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width"
+								style="position:static; width: 100%; float: left; text-align: left; width: auto;">
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
+										href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+											class="badge">2</span></a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span
+											class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-user mrgn-rght-sm opct-50 wb-inv"></span>Switch user</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-power-off mrgn-rght-sm opct-50 wb-inv"></span>Sign out</a></li>
+							</ul>
+
+							<button class="btn btn-default mrgn-lft-md hidden-xs"
+								style="background:#eee; color: #000; position: relative;" type="button"
+								aria-haspopup="true" aria-controls="accnt-mnu" aria-expanded="false"><strong
+									class="text-warning">Representing </strong>Noel&nbsp;Knockwood&nbsp;<span
+									class="badge hidden-md hidden-lg">2</span><span
+									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical"
+								style="text-align: left; width: auto;">
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
+										href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+											class="badge">2</span></a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span
+											class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-user mrgn-rght-sm opct-50 wb-inv"></span>Switch user</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="#"><span class="fa fa-power-off mrgn-rght-sm opct-50 wb-inv"></span>Sign out</a></li>
+							</ul>
+
+						</section>
+					</nav>
+
+				</div>
+			</div>
+		</div>
+		<!--MOBILE MENU-->
+		<nav id="mbl-mnu" class="gweb-v2 gcweb-menu app-menu hidden-md hidden-lg mrgn-tp-md hidden"
+		data-wb-urlmapping='{
+	"authenticated": { 
+	"action": "removeClass", 
+	"source": "#mbl-mnu", 
+	"class": "hidden" },
+	"authenticated-poa": { 
+		"action": "removeClass", 
+		"source": "#mbl-mnu", 
+		"class": "hidden" }
+	}'>
+		<section>
+			<h2 class="wb-inv">Account menu</h2>
+
+			<button id="mbl-mnu-btn" class="btn btn-default btn-lg mrgn-lft-md visible-xs"
+				style="background:#f5f5f5; color:#000;" type="button" aria-haspopup="true"
+				aria-controls="app-mnu" aria-expanded="false">
+				MENU<span class="fa fa-chevron-down mrgn-lft-sm"></span>
+			</button>
+
+			<ul id="app-mnu" class="hidden-sm mrgn-tp-lg" role="menu" aria-orientation="vertical">
+				<div class="accordion">
+					<nav>
+						<ul class="list-unstyled list-group">
+							<li>
+								<a href="#"
+									class="btn btn-link full-width list-group-item brdr-tp brdr-bttm"
+									style="text-align: left; background:none;">
+
+									Overview
+								</a>
+							</li>
+							<li>
+								<!-- Accordion section 3 -->
+								<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
+									<summary class="wb-toggle tgl-tab brdr-bttm"
+										data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
+										Apply for benefits and services</summary>
+									<div class="tgl-panel">
+										<!-- Section 3's content -->
+										<ul class="list-unstyled mrgn-lft-sm">
+											<li><a href="#"
+													class="btn btn-link list-group-item full-width brdr-bttm"
+													style="text-align: left; background:none;">Find a
+													form</a></li>
+											<li><a href="#"
+													class="btn btn-link list-group-item full-width brdr-bttm"
+													style="text-align: left; background:none;">What can you
+													apply for?</a></li>
+										</ul>
+									</div>
+								</details>
+							</li>
+							<li>
+								<a href="#" class="btn btn-link full-width list-group-item brdr-bttm"
+									style="text-align: left; background:none;">
+									Track your applications
+								</a>
+							</li>
+							<li>
+								<!-- Accordion section 1 -->
+								<!--<details class="acc-group " style="padding:0; font-size:14px;">
+					
+					<summary class="wb-toggle tgl-tab brdr-0" data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>Apply for benefits and services</summary>
+					<div class="tgl-panel">
+						
+						<ul class="list-unstyled mrgn-lft-sm">
+							<li><a href="#" class="btn btn-link full-width brdr-bttm"  style="text-align: left;">Find a form</a></li>
+							<li><a href="#" class="btn btn-link full-width brdr-bttm"  style="text-align: left;">Track your applications</a></li>
+							<li><a href="#" class="btn btn-link full-width brdr-bttm"  style="text-align: left;">What can you apply for?</a></li>
+							<li><a href="#" class="btn btn-link full-width"  style="text-align: left;">Upload files</a></li>
+
+						</ul>
+					</div>
+				</details>-->
+							</li>
+
+
+							<li>
+								<!-- Accordion section 3 -->
+								<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
+									<summary class="wb-toggle tgl-tab brdr-bttm"
+										data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
+										Transition to life after service</summary>
+									<div class="tgl-panel">
+										<!-- Section 3's content -->
+										<ul class="list-unstyled mrgn-lft-sm">
+											<li><a href="#"
+													class="btn btn-link list-group-item full-width brdr-bttm"
+													style="text-align: left; background:none;">Your
+													transition task list</a></li>
+										</ul>
+									</div>
+								</details>
+							</li>
+							<li>
+								<!-- Accordion section 3 -->
+								<details class="acc-group brdr-0 hidden" style="padding-left:0; font-size:15px;">
+									<summary class="wb-toggle tgl-tab brdr-bttm"
+										data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
+										Your account</summary>
+									<div class="tgl-panel">
+										<!-- Section 3's content -->
+										<ul class="list-unstyled mrgn-lft-sm">
+											<li><a href="#"
+													class="btn btn-link list-group-item full-width brdr-bttm"
+													style="text-align: left; background:none;">Inbox</a>
+											</li>
+											<li><a href="#"
+													class="btn btn-link list-group-item full-width brdr-bttm"
+													style="text-align: left; background:none;">Profile and
+													settings</a></li>
+											<li><a href="#"
+													class="btn btn-link list-group-item full-width brdr-bttm"
+													style="text-align: left; background:none;">Switch
+													accounts</a></li>
+										</ul>
+									</div>
+								</details>
+							</li>
+							<li>
+								<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
+									style="text-align: left; background:none;">
+									Your benefits and services
+								</a>
+							</li>
+
+						</ul>
+					</nav>
+				</div>
+			</ul>
+
+			<button id="mbl-mnu-btn" class="btn btn-default btn-lg mrgn-lft-md visible-sm"
+				style="background:#f5f5f5; color:#000;" type="button" aria-haspopup="true"
+				aria-controls="app-mnu" aria-expanded="false">
+				MENU<span class="fa fa-chevron-down mrgn-lft-sm"></span>
+			</button>
+
+			<ul id="app-mnu" class="hidden-xs" role="menu" aria-orientation="vertical"
+				style="text-align: left; padding:1.25em 1em 1em; background-color: #f5f5f5; border: 1px solid #000; width:50%;">
+				<div class="accordion">
+					<nav>
+						<ul class="list-unstyled list-group">
+							<li>
+								<a href="#"
+									class="btn btn-link full-width list-group-item brdr-tp brdr-bttm"
+									style="text-align: left; background:none;">
+
+									Overview
+								</a>
+							</li>
+							<li>
+								<!-- Accordion section 1 -->
+								<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
+									<summary class="wb-toggle tgl-tab brdr-bttm"
+										data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
+										Apply for benefits and services</summary>
+									<div class="tgl-panel">
+										<!-- Section 1's content -->
+										<ul class="list-unstyled mrgn-lft-sm">
+											<li><a href="#"
+													class="btn btn-link list-group-item full-width brdr-bttm"
+													style="text-align: left; background:none;">Find a
+													form</a></li>
+											<li><a href="#"
+													class="btn btn-link list-group-item full-width brdr-bttm"
+													style="text-align: left; background:none;">What can you
+													apply for?</a></li>
+										</ul>
+									</div>
+								</details>
+							</li>
+							<li>
+								<a href="#" class="btn btn-link full-width list-group-item brdr-bttm"
+									style="text-align: left; background:none;">
+									Track your applications
+								</a>
+							</li>
+
+							<li>
+								<!-- Accordion section 2 -->
+								<details class="acc-group brdr-0" style="padding-left:0; font-size:15px;">
+									<summary class="wb-toggle tgl-tab brdr-bttm"
+										data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
+										Transition to life after service</summary>
+									<div class="tgl-panel">
+										<!-- Section 2's content -->
+										<ul class="list-unstyled mrgn-lft-sm">
+											<li><a href="#"
+													class="btn btn-link list-group-item full-width brdr-bttm"
+													style="text-align: left; background:none;">Benefits for
+													transition</a></li>
+											<li><a href="#"
+													class="btn btn-link list-group-item full-width brdr-bttm"
+													style="text-align: left; background:none;">Your
+													transition task list</a></li>
+										</ul>
+									</div>
+								</details>
+							</li>
+							<li>
+								<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
+									style="text-align: left; background:none;">
+									Upload files or forms
+								</a>
+							</li>
+							<li>
+								<!-- Accordion section 3 -->
+								<details class="acc-group brdr-0 hidden" style="padding-left:0; font-size:15px;">
+									<summary class="wb-toggle tgl-tab brdr-bttm"
+										data-toggle='{"parent": ".accordion", "group": ".acc-group", "persist": "session"}'>
+										Your account</summary>
+									<div class="tgl-panel">
+										<!-- Section 3's content -->
+										<ul class="list-unstyled mrgn-lft-sm">
+											<li><a href="#"
+													class="btn btn-link list-group-item full-width brdr-bttm"
+													style="text-align: left; background:none;">Inbox</a>
+											</li>
+											<li><a href="#"
+													class="btn btn-link list-group-item full-width brdr-bttm"
+													style="text-align: left; background:none;">Profile and
+													settings</a></li>
+											<li><a href="#"
+													class="btn btn-link list-group-item full-width brdr-bttm"
+													style="text-align: left; background:none;">Switch
+													accounts</a></li>
+										</ul>
+									</div>
+								</details>
+							</li>
+							<li>
+								<a href="#" class="btn btn-link full-width list-group-item  brdr-bttm"
+									style="text-align: left; background:none;">
+									Your benefits and services
+								</a>
+							</li>
+
+						</ul>
+					</nav>
+				</div>
+			</ul>
+
+		</section>
+		</nav>
+		<nav id="wb-bc" property="breadcrumb">
+			<h2>You are here:</h2>
+			<div class="container">
+				<ol class="breadcrumb hidden-xs" typeof="BreadcrumbList">
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
+							<span property="name">My VAC Account</span>
+						</a>
+						<meta property="position" content="1">
+					</li>
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="https://wet-boew.github.io/GCWeb/index-en.html">
+							<span property="name">Virtual Medical Assessment Checklist</span>
+						</a>
+						<meta property="position" content="2">
+					</li>
+				</ol>
+			</div>
+		</nav>
+		<!--
+        <div class="app-bar-mb container visible-xs-block hidden-print">
+            <nav>
+                <h2 class="wb-inv">Account menu</h2>
+                <ul class="app-list-account list-unstyled">
+                    <li><a href="../../en.html?register" class="btn">Register</a></li>
+                    <li><a href="../../en.html?sign-in" class="btn">Sign-in</a></li>
+                </ul>
+            </nav>
+        </div>-->
+	</header>
+
+	<main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
+		<section>
+			<div class="container">
+				<!--
+				<button id="menu-btn" class="h6 btn btn-link brdr-tp brdr-rght brdr-bttm brdr-lft hidden" 
+				style="letter-spacing: 0.5px;" >
+					MENU <span class="fa fa-bars"></span>
+			</button>-->
+				
+				<div class="row">
+					
+					<div class="col-sm-12">
+						<section>
+							<div>
+								<h1 id="wb-cont" property="name">
+									Checklist
+								</h1>
+							</div>
+						</section>
+				
+						<div class="container">
+							<h2>Before your virtual assessment </h2>
+							<fieldset class="gc-chckbxrdio">
+								<legend><h3>What to bring</h3></legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="cond1">
+										<label for="cond1">Your CSDN ID: <strong>500012478602</strong></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond2">
+										<label for="cond2">Your file number: <strong>756439</strong></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond3">
+										<label for="cond3">Medical documentation related to your illness or injury</label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond4">
+										<label for="cond4">A list of your current medications 
+										</label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond5">
+										<label for="cond5">Forms or letters? QOL Questionnaire?
+										</label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond6">
+										<label for="cond6">Something to take notes with (pen and paper, tablet, etc.)
+										</label>
+									</li>
+								</ul>
+							</fieldset>
+							<fieldset class="gc-chckbxrdio">
+								<legend><h3>Prepare and test your equipment</h3></legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="cond12">
+										<label for="cond12">Download and install <a href="https://www.microsoft.com/en-ca/microsoft-teams/download-app" target="_blank">Microsoft Teams</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond13">
+										<label for="cond13">Make a <a href="#" target="_blank">test call</a></label>
+									</li>
+								</ul>
+							</fieldset>
+							<fieldset class="gc-chckbxrdio">
+								<legend><h3>Prepare your space</h3></legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="cond21">
+										<label for="cond21">Find a private, quiet, and well-lit place for your visit</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond22">
+										<label for="cond22">Have a way to position the device so you're in the frame</a></label>
+									</li>
+								</ul>
+							</fieldset>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+			</div>
+		</section>
+		<section class="pagedetails container">
+			<h2 class="wb-inv">Page details</h2>
+			<div class="row">
+				<div class="col-sm-8 col-md-9 col-lg-9">
+					<div data-ajax-replace="../assets/ajax/report-problem-en.html">
+						<div class="row row-no-gutters">
+							<div class="col-sm-9 col-md-6 col-lg-5">
+								<a class="btn btn-default btn-block"
+									href="https://www.canada.ca/en/report-problem.html">Report a problem on this
+									page</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Share button
+				<div class="wb-share col-sm-4 col-md-3" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>-->
+
+				<div class="col-xs-12 mrgn-tp-sm text-muted">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 mrgn-bttm-0">
+							<div class="clearfix hidden-xs"></div>
+							<dl id="wb-dtmd">
+								<dt>Date modified:</dt>
+								<dd><time property="dateModified">2023-11-21</time></dd>
+							</dl>
+						</div>
+						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 hidden-xs text-right">
+							<p class="mrgn-tp-0 mrgn-bttm-0">UX.1.1.1</p>
+							<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
+						</div>
+						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 visible-xs">
+							<p class="mrgn-tp-0 mrgn-bttm-0">UX.1.1.1</p>
+							<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+
+
+	<!-- footer -->
+	<div id="default-footer" data-wb-urlmapping='{
+		"transactional": { 
+			"action": "addClass", 
+			"source": "#default-footer", 
+			"class": "hidden" },
+			"transactional-poa": { 
+				"action": "addClass", 
+				"source": "#default-footer", 
+				"class": "hidden" },
+		"iprov": { 
+		"action": "addClass", 
+		"source": "#default-footer", 
+		"class": "hidden" },
+		"iprov-poa": { 
+			"action": "addClass", 
+			"source": "#default-footer", 
+			"class": "hidden" }
+		}'>
+		<footer id="wb-info">
+			<h2 class="wb-inv">About My VAC Account</h2>
+			<div class="gc-main-footer">
+				<nav class="container wb-navcurr">
+
+					<ul class="list-unstyled colcount-xs-2 colcount-md-3">
+						<li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
+
+						<li id="authenticated-footer-link-2" class="hidden" data-wb-urlmapping='{
+							"authenticated": { 
+							"action": "removeClass", 
+							"source": "#authenticated-footer-link-2", 
+							"class": "hidden" },
+							"authenticated-poa": { 
+								"action": "removeClass", 
+								"source": "#authenticated-footer-link-2", 
+								"class": "hidden" }
+							}'>
+						<a href="#">Check in on your well-being</a></li>
+						
+						<li><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">Talk to a mental
+							health professional</a></li>
+						
+
+						
+							<li id="authenticated-footer-link-1" class="hidden" data-wb-urlmapping='{
+								"authenticated": { 
+								"action": "removeClass", 
+								"source": "#authenticated-footer-link-1", 
+								"class": "hidden" },
+								"authenticated-poa": { 
+									"action": "removeClass", 
+									"source": "#authenticated-footer-link-1", 
+									"class": "hidden" }
+								}'><a href="#">News and updates</a></li>
+
+							<li id="authenticated-footer-link-3" class="hidden" data-wb-urlmapping='{
+								"authenticated": { 
+								"action": "removeClass", 
+								"source": "#authenticated-footer-link-3", 
+								"class": "hidden" },
+								"authenticated-poa": { 
+									"action": "removeClass", 
+									"source": "#authenticated-footer-link-3", 
+									"class": "hidden" }
+								}'><a href="#">Provide feedback</a></li>
+	
+
+						
+
+					</ul>
+				</nav>
+			</div>
+			<div class="gc-sub-footer">
+				<div class="container d-flex align-items-center">
+					<nav>
+						<h3 class="wb-inv">Veteran Affairs Canada Corporate</h3>
+						<ul>
+							<li><a href="https://www.veterans.gc.ca/eng/e_services">About My VAC Account</a></li>
+							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Terms and conditions</a></li>
+							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Privacy</a></li>
+						</ul>
+					</nav>
+					<div class="wtrmrk align-self-end">
+						<img src="../../../GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+	<!--transactional-->
+	<div id="transactional-footer" class="hidden" data-wb-urlmapping='{
+		"iprov": { 
+			"action": "removeClass", 
+			"source": "#transactional-footer", 
+			"class": "hidden" },
+			"iprov-poa": { 
+				"action": "removeClass", 
+				"source": "#transactional-footer", 
+				"class": "hidden" },
+		"transactional": { 
+		"action": "removeClass", 
+		"source": "#transactional-footer", 
+		"class": "hidden" },
+		"transactional-poa": { 
+			"action": "removeClass", 
+			"source": "#transactional-footer", 
+			"class": "hidden" }
+		}'>
+		<footer id="wb-info">
+			<h2 class="wb-inv">About My VAC Account</h2>
+			<div class="gc-sub-footer">
+				<div class="container d-flex align-items-center">
+					<nav>
+						<h3 class="wb-inv">Veteran Affairs Canada Corporate</h3>
+						<ul>
+							<li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
+							<li><a href="https://www.veterans.gc.ca/eng/e_services">About My VAC Account</a></li>
+							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Terms and conditions</a></li>
+							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Privacy</a></li>
+						</ul>
+					</nav>
+					<div class="wtrmrk align-self-end">
+						<img src="../../../GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+		integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
+		crossorigin="anonymous"></script>
+	<script src="../../../wet-boew/js/wet-boew.min.js"></script>
+	<script src="../../../GCWeb/js/theme.min.js"></script>
+
+</body>
+
+</html>
