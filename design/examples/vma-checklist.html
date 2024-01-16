@@ -166,51 +166,110 @@
 			</div>
 		</div>
 		<!--MOBILE MENU-->
-		<nav id="mbl-mnu" class="gweb-v2 gcweb-menu app-menu hidden-md hidden-lg mrgn-tp-md container hidden"
-		data-wb-urlmapping='{
-	"authenticated": { 
-	"action": "removeClass", 
-	"source": "#mbl-mnu", 
-	"class": "hidden" },
-	"authenticated-poa": { 
-		"action": "removeClass", 
-		"source": "#mbl-mnu", 
-		"class": "hidden" }
-	}'>
-		<section class="">
-			<h2 class="wb-inv">Account menu</h2>
+		<div class="container">
+			<nav>
+				<a href="#mb-pnl" id="menu-btn" title="Menu" aria-controls="mb-pnl" class="overlay-lnk btn btn-primary"
+					role="button"><span class="fa fa-bars mrgn-rght-sm opct-80"></span>MENU</a>
+			</nav>
+		</div>
 
-			<button id="mbl-mnu-btn" class="btn btn-default btn-lg mrgn-lft-md visible-sm visible-xs" type="button" aria-haspopup="true"
-				aria-controls="app-mnu" aria-expanded="false">
-				MENU<span class="fa fa-chevron-down mrgn-lft-sm"></span>
-			</button>
 
-			<ul id="app-mnu" class="hidden-sm mrgn-tp-lg" role="menu" aria-orientation="vertical">
-				<li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Overview</a></li>
-<li role="presentation"> <a role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-apply" aria-expanded="false" href="#">Apply for benefits and services</a>
-  <ul id="gc-mnu-jobs" role="menu" aria-orientation="vertical">
-    <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Apply<span class="hidden-xs hidden-sm"> for benefits and services</span><span class="visible-xs-inline visible-sm-inline">: home</span></a> </li>
-    <li role="separator"></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/jobs/opportunities.html">Find a form</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/jobs/training.html">What can you apply for?</a></li>
-    <li role="separator" aria-orientation="vertical"></li>
-    <li role="presentation"> <a data-keep-expanded="md-min" href="#" role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs-sub" aria-expanded="true">Most requested</a>
-      <ul id="gc-mnu-jobs-sub" role="menu" aria-orientation="vertical">
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/employment-social-development/programs/ei/ei-list/ei-roe/access-roe.html">View your Records of Employment</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/employment-social-development/services/sin.html">Apply for a Social Insurance Number (SIN)</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/employment-social-development/services/foreign-workers.html">Hire a temporary foreign worker</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html">Immigrate as a skilled worker</a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-<li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Track your applications</a>
-			</ul>
+		<div id="mb-pnl" class="wb-overlay modal-content overlay-def wb-panel-l" aria-hidden="false" role="dialog"
+			tabindex="-1">
+			<header class="modal-header">
+				<div class="modal-title">MENU</div>
+			</header>
+			<div class="modal-body">
+				<!--<section class="srch-pnl hidden">
+					<h3>Search</h3>
+			<form action="https://google.ca/search" method="get" role="search" class="form-inline">
+			<div class="form-group">
+			<label for="wb-srch-q-imprt">Search website</label>
+			<input id="wb-srch-q-imprt" class="form-control" name="q" type="search" value="" size="27" maxlength="150">
+			<input type="hidden" name="q" value="site:wet-boew.github.io OR site:github.com/wet-boew/">
+			</div>
+			<button type="submit" id="wb-srch-sub-imprt" class="btn btn-default">Search</button>
+			</form>
+			</section><section class="lng-ofr hidden"><h3>Language selection</h3><ul class="list-inline"><li><a lang="fr" hreflang="fr" href="menu-fr.html">Français</a></li></ul></section>-->
+				<nav role="navigation" typeof="SiteNavigationElement" id="sm-pnl"
+					class="sm-pnl wb-menu wb-menu-inited wb-init wb-navcurr-inited">
+					<h3>Topics menu</h3>
+					
+						
+					
 
-			
+					<div data-ajax-replace="/design/assets/ajax/site-menu-en.html">
 
-		</section>
-	</nav>
+					</div>
+				</nav>
+				<!--
+					<nav role="navigation" typeof="SiteNavigationElement" id="info-pnl"
+						class="info-pnl wb-menu wb-menu-inited wb-init">
+						<h3>About this site</h3>
+						<ul class="list-unstyled mb-menu" role="menu">
+							<li>
+								<details>
+									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="1"
+										aria-haspopup="true" tabindex="0">Contact us</summary>
+									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
+										aria-hidden="true">
+										<li><a role="menuitem" aria-setsize="1" aria-posinset="1" tabindex="-1"
+												href="https://github.com/wet-boew/wet-boew/issues/new">Questions or
+												comments?</a></li>
+									</ul>
+								</details>
+							</li>
+							<li>
+								<details>
+									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="2"
+										aria-haspopup="true" tabindex="-1">About</summary>
+									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
+										aria-hidden="true">
+										<li><a role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1"
+												href="../../index-en.html#about">About the Web Experience Toolkit</a>
+										</li>
+										<li><a role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1"
+												rel="external"
+												href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web
+												Standards</a></li>
+									</ul>
+								</details>
+							</li>
+							<li>
+								<details>
+									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="3"
+										aria-haspopup="true" tabindex="-1">News</summary>
+									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
+										aria-hidden="true">
+										<li><a role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1"
+												href="https://github.com/wet-boew/wet-boew/pulse">Recent project
+												activity</a></li>
+										<li><a role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1"
+												href="https://github.com/wet-boew/wet-boew/graphs">Project
+												statistics</a></li>
+									</ul>
+								</details>
+							</li>
+							<li>
+								<details>
+									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="4"
+										aria-haspopup="true" tabindex="-1">Stay connected</summary>
+									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
+										aria-hidden="true">
+										<li><a role="menuitem" aria-setsize="1" aria-posinset="1" tabindex="-1"
+												rel="external" href="https://twitter.com/WebExpToolkit">Twitter</a></li>
+									</ul>
+								</details>
+							</li>
+						</ul>
+					</nav>-->
+			</div>
+			<div class="modal-footer"><button title="Close overlay"
+					class="btn btn-sm btn-default pull-left overlay-close" type="button">Close<span class="wb-inv">Close
+						overlay</span></button></div><button title="Close: Menus (escape key)"
+				class="mfp-close overlay-close" type="button">×<span class="wb-inv"> Close: menus (escape
+					key)</span></button>
+		</div>
 		<nav id="wb-bc" property="breadcrumb">
 			<h2>You are here:</h2>
 			<div class="container">
@@ -250,7 +309,7 @@
 	</header>
 
 	<main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
-		<section>
+		<section class="">
 			<div class="container">
 				<!--
 				<button id="menu-btn" class="h6 btn btn-link brdr-tp brdr-rght brdr-bttm brdr-lft hidden" 
@@ -259,112 +318,114 @@
 			</button>-->
 				
 				<div class="row">
-					<section>
-						<div>
-							<h1 id="wb-cont" property="name">
-								Before your virtual assessment
-							</h1>
+					<div class="col-xs-12">
+						<section>
+							<div>
+								<h1 id="wb-cont" property="name">
+									Before your virtual assessment
+								</h1>
+							</div>
+						</section>
+						<nav class="provisional gc-subway pull-right col-md-4 col-sm-12 col-xs-12" style="border-right:0; border-top:0; border-bottom: 0;">
+							<p class="h3 mrgn-tp-lg hidden-sm">Sections</p>
+							<p class="h3 mrgn-tp-0 visible-sm">Sections</p>
+							<ul>
+								<li>
+									<a href="#what-to-bring">What to bring</a>
+								</li>
+								<li>
+									<a href="#test-your-equipment">Prepare and test your&nbsp;equipment</a>
+								</li>
+								<li style="border-bottom: 0; border-left: 4px solid transparent;">
+									<a href="#prepare-your-space">Prepare your space</a>
+								</li>
+								<!--
+								<li>
+									<a href="#" class="hidden-xs hidden-sm">[Page 4]</a>
+									<a href="#gc-document-nav" class="visible-xs visible-sm">[Page 4]</a>
+								</li>
+								<li>
+									<a href="#" class="hidden-xs hidden-sm">[Page 5]</a>
+									<a href="#gc-document-nav" class="visible-xs visible-sm">[Page 5]</a>
+								</li>
+								<li>
+									<a href="#" class="hidden-xs hidden-sm">[Page 6]</a>
+									<a href="#gc-document-nav" class="visible-xs visible-sm">[Page 6]</a>
+								</li>-->
+							</ul>
+						</nav>
+						
+						<div class="col-md-8 col-sm-12 col-xs-12" style="padding-left: 0;">
+							<fieldset class="gc-chckbxrdio">
+								<legend><h2 id="what-to-bring">What to bring</h2></legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="cond1">
+										<label for="cond1">Your CSDN ID</label>: <strong style="font-size: 20px;">500012478602</strong>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond2">
+										<label for="cond2">Your file number</label>: <strong style="font-size: 20px;">756439</strong>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond3">
+										<label for="cond3">Medical documentation related to your illness or injury</label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond4">
+										<label for="cond4">A list of your current medications 
+										</label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond5">
+										<label for="cond5">Your completed <a href="https://www.veterans.gc.ca/eng/forms/document/pen50" target="_blank">Quality of Life Questionnaire (PEN 50e)</a>
+	
+										</label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond6">
+										<label for="cond6">Something to take notes with (pen and paper, tablet, etc.)
+										</label>
+									</li>
+								</ul>
+							</fieldset>
+							<fieldset class="gc-chckbxrdio">
+								<legend><h2 id="test-your-equipment">Prepare and test your equipment</h2></legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="cond12">
+										<label for="cond12">Download and install <a href="https://www.microsoft.com/en-ca/microsoft-teams/download-app" target="_blank">Microsoft Teams</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond13">
+										<label for="cond13">Make a <a href="#" target="_blank">test call</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond14">
+										<label for="cond14">Join from a non-Canadian Armed Forces network</label>
+									</li>
+									
+								</ul>
+							</fieldset>
+							<fieldset class="gc-chckbxrdio">
+								<legend><h2 id="prepare-your-space">Prepare your space</h2></legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="cond21">
+										<label for="cond21">Find a private, quiet, and well-lit place for your visit</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond22">
+										<label for="cond22">Have a way to position the device so you're in the frame</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond23">
+										<label for="cond23">Relocate pets to another room
+										</label>
+									</li>
+								</ul>
+							</fieldset>
 						</div>
-					</section>
-					<nav class="provisional gc-subway pull-right col-md-4 col-sm-12 col-xs-12" style="border-right:0; border-top:0; border-bottom: 0;">
-						<p class="h3 mrgn-tp-lg hidden-sm">Sections</p>
-						<p class="h3 mrgn-tp-0 visible-sm">Sections</p>
-						<ul>
-							<li>
-								<a href="#">What to bring</a>
-							</li>
-							<li>
-								<a href="#">Prepare and test your&nbsp;equipment</a>
-							</li>
-							<li style="border-bottom: 0; border-left: 4px solid transparent;">
-								<a href="#">Prepare your space</a>
-							</li>
-							<!--
-							<li>
-								<a href="#" class="hidden-xs hidden-sm">[Page 4]</a>
-								<a href="#gc-document-nav" class="visible-xs visible-sm">[Page 4]</a>
-							</li>
-							<li>
-								<a href="#" class="hidden-xs hidden-sm">[Page 5]</a>
-								<a href="#gc-document-nav" class="visible-xs visible-sm">[Page 5]</a>
-							</li>
-							<li>
-								<a href="#" class="hidden-xs hidden-sm">[Page 6]</a>
-								<a href="#gc-document-nav" class="visible-xs visible-sm">[Page 6]</a>
-							</li>-->
-						</ul>
-					</nav>
-					
-					<div class="col-md-8 col-sm-12 col-xs-12" style="padding-left: 0;">
-						<fieldset class="gc-chckbxrdio">
-							<legend><h2>What to bring</h2></legend>
-							<ul class="list-unstyled lst-spcd-2">
-								<li class="checkbox">
-									<input type="checkbox" id="cond1">
-									<label for="cond1">Your CSDN ID</label>: <strong style="font-size: 20px;">500012478602</strong>
-								</li>
-								<li class="checkbox">
-									<input type="checkbox" id="cond2">
-									<label for="cond2">Your file number</label>: <strong style="font-size: 20px;">756439</strong>
-								</li>
-								<li class="checkbox">
-									<input type="checkbox" id="cond3">
-									<label for="cond3">Medical documentation related to your illness or injury</label>
-								</li>
-								<li class="checkbox">
-									<input type="checkbox" id="cond4">
-									<label for="cond4">A list of your current medications 
-									</label>
-								</li>
-								<li class="checkbox">
-									<input type="checkbox" id="cond5">
-									<label for="cond5">Your completed <a href="https://www.veterans.gc.ca/eng/forms/document/pen50" target="_blank">Quality of Life Questionnaire (PEN 50e)</a>
-
-									</label>
-								</li>
-								<li class="checkbox">
-									<input type="checkbox" id="cond6">
-									<label for="cond6">Something to take notes with (pen and paper, tablet, etc.)
-									</label>
-								</li>
-							</ul>
-						</fieldset>
-						<fieldset class="gc-chckbxrdio">
-							<legend><h2>Prepare and test your equipment</h2></legend>
-							<ul class="list-unstyled lst-spcd-2">
-								<li class="checkbox">
-									<input type="checkbox" id="cond12">
-									<label for="cond12">Download and install <a href="https://www.microsoft.com/en-ca/microsoft-teams/download-app" target="_blank">Microsoft Teams</a></label>
-								</li>
-								<li class="checkbox">
-									<input type="checkbox" id="cond13">
-									<label for="cond13">Make a <a href="#" target="_blank">test call</a></label>
-								</li>
-								<li class="checkbox">
-									<input type="checkbox" id="cond14">
-									<label for="cond14">Join from a non-Canadian Armed Forces network</label>
-								</li>
-								
-							</ul>
-						</fieldset>
-						<fieldset class="gc-chckbxrdio">
-							<legend><h2>Prepare your space</h2></legend>
-							<ul class="list-unstyled lst-spcd-2">
-								<li class="checkbox">
-									<input type="checkbox" id="cond21">
-									<label for="cond21">Find a private, quiet, and well-lit place for your visit</a></label>
-								</li>
-								<li class="checkbox">
-									<input type="checkbox" id="cond22">
-									<label for="cond22">Have a way to position the device so you're in the frame</a></label>
-								</li>
-								<li class="checkbox">
-									<input type="checkbox" id="cond23">
-									<label for="cond23">Relocate pets to another room
-									</label>
-								</li>
-							</ul>
-						</fieldset>
 					</div>
 				</div>
 
@@ -394,7 +455,7 @@
 							<div class="clearfix hidden-xs"></div>
 							<dl id="wb-dtmd">
 								<dt>Date modified:</dt>
-								<dd><time property="dateModified">2023-11-21</time></dd>
+								<dd><time property="dateModified">2024-01-16</time></dd>
 							</dl>
 						</div>
 						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 hidden-xs text-right">
