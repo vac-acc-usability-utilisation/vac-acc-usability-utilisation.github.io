@@ -52,7 +52,7 @@
 
 </head>
 
-<body vocab="http://schema.org/" typeof="WebPage">
+<body vocab="http://schema.org/" typeof="WebPage" class="cnt-wdth-lmtd">
 	<div class="bg-warning" style="padding:16px;">
 		<div class="container">
 			<p>This is a conceptual prototype. It may not represent the final design or functionality.</p>
@@ -328,6 +328,7 @@
 								<h1 id="wb-cont" property="name">
 									Before your virtual medical reassessment
 								</h1>
+								<p class="lead">Use this checklist to prepare for your virtual medical assessment.</p>
 							</div>
 						</section>
 						<!--
@@ -365,13 +366,101 @@
 							</ul>
 						</nav>
 
+						<div class="col-md-8 col-sm-12 col-xs-12" style="padding-left: 0;"> 
+							<fieldset class="gc-chckbxrdio">
+								<legend>
+									<h2 id="checklist">Gather your information</h2>
+								</legend>
+								<li class="checkbox">
+									<input type="checkbox" id="cond5" checked>
+									<label for="cond5">Your <abbr title="">VAC</abbr> identification numbers
+									</label>
+									<ul class="list-unstyled mrgn-tp-sm mrgn-bttm-lg mrgn-lft-xl lst-spcd">
+										<li class="mrgn-lft-md">
+											Your CSDN ID: <strong
+											style="font-size: 20px;">500012478602</strong>
+										</li>
+										<li class="mrgn-lft-md">
+											Your file number: <strong
+											style="font-size: 20px;">756439</strong>
+										</li>
+									</ul>
+									
+								</li>
+								<li class="checkbox mrgn-bttm-lg">
+									<input type="checkbox" id="cond4">
+									<label for="cond4">Your current medications
+									</label>
+									<ul id="medication-list" class="mrgn-tp-sm mrgn-bttm-sm mrgn-lft-xl lst-spcd" style="font-size: 18px;">
+										<!--<li>Medication 1</li>-->
+									</ul>
+									<div class="row mrgn-tp-md">
+										<div class="col-sm-offset-1 col-md-11">
+											<label for="med1" class="wb-inv">Medication 1</label>
+											<div class="row">
+												<div class="col-sm-10 col-md-8">
+													<input id="med-input" name="med1" type="text" class="form-control mrgn-lft-md full-width">
+													
+												</div>
+												<div class="col-sm-2">
+													<a href="#" class="btn btn-default btn-sm full-width" id="add-medication">Add</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</li>
+								<li class="checkbox mrgn-bttm-lg">
+									<input type="checkbox" id="q1">
+									<label for="q1">Questions you'd like to ask the Medical Officer
+									</label>
+									<ul id="q-list" class="mrgn-tp-sm mrgn-bttm-sm mrgn-lft-xl lst-spcd" style="font-size: 18px;">
+										<!--<li>Medication 1</li>-->
+									</ul>
+									<div class="row mrgn-tp-md">
+										<div class="col-sm-offset-1 col-md-11">
+											<label for="q1" class="wb-inv">Questions 1</label>
+											<div class="row">
+												<div class="col-sm-10 col-md-8">
+													<input id="q-input" name="q1" type="text" class="form-control mrgn-lft-md full-width">
+													
+												</div>
+												<div class="col-sm-2">
+													<a href="#" class="btn btn-default btn-sm full-width" id="add-question">Add</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</li>
+								<li class="checkbox">
+									<input type="checkbox" id="cond3">
+									<label for="cond3">Medical documents related to your illness or injury</label>
+								</li>
+							</fieldset>
+						</div>
+
 						<div id="vma-checklist" class="col-md-8 col-sm-12 col-xs-12" style="padding-left: 0;">
-						
+							<fieldset class="gc-chckbxrdio">
+								<legend>
+									<h2 id="checklist">Checklist</h2>
+								</legend>
+								<h3>You have...</h3>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="check1">
+										<label for="check1">Filled out and returned any forms, such as, Quality&nbsp;of&nbsp;Life&nbsp;Questionnaire(s) (PEN&nbsp;50e)</label>
+									</li>
+									
+								</ul>
+							</fieldset>
 							<fieldset class="gc-chckbxrdio">
 								<legend>
 									<h2 id="what-to-bring">What to bring</h2>
 								</legend>
+								
 								<ul class="list-unstyled lst-spcd-2">
+									<!--
 									<li class="checkbox">
 										<input type="checkbox" id="cond1">
 										<label for="cond1">Your CSDN ID</label>: <strong
@@ -381,38 +470,26 @@
 										<input type="checkbox" id="cond2">
 										<label for="cond2">Your file number</label>: <strong
 											style="font-size: 20px;">756439</strong>
-									</li>
+									</li>-->
+									<!--
 									<li class="checkbox">
 										<input type="checkbox" id="cond3">
 										<label for="cond3">Medical documents related to your illness or
 											injury</label>
-									</li>
-									<li class="checkbox">
-										<input type="checkbox" id="cond4">
-										<label for="cond4">A list of your current medications
-										</label>
-										<div class="row mrgn-tp-md">
-											<div class="col-sm-offset-1 col-md-11">
-												<label for="med1" class="wb-inv">Medication 1</label>
-												<div class="row">
-													<input name="med1" type="text" class="form-control mrgn-lft-md col-sm-10">
-													<a href="#" class="btn btn-default btn-sm col-sm-1 mrgn-lft-md">Add</a>
-												</div>
-											</div>
-										</div>
-										
-									</li>
+									</li>-->
+									
+									<!--
 									<li class="checkbox">
 										<input type="checkbox" id="cond5">
 										<label for="cond5">Your completed <a
 												href="https://www.veterans.gc.ca/eng/forms/document/pen50"
-												target="_blank">Quality of Life Questionnaire (PEN 50e)</a>
+												target="_blank">Quality of Life Questionnaires (PEN&nbsp;50e)</a>
 
 										</label>
-									</li>
+									</li>-->
 									<li class="checkbox">
 										<input type="checkbox" id="cond6">
-										<label for="cond6">Something to take notes with (pen and paper, tablet, etc.)
+										<label for="cond6">Something to take notes with (pen and paper, tablet,&nbsp;etc.)
 										</label>
 									</li>
 								</ul>
@@ -447,7 +524,7 @@
 									<li class="checkbox">
 										<input type="checkbox" id="cond21">
 										<label for="cond21">Find a private, quiet, and well-lit place for your
-											visit</a></label>
+											visit without&nbsp;distractions</a></label>
 									</li>
 									<li class="checkbox">
 										<input type="checkbox" id="cond22">
@@ -613,29 +690,18 @@
 
 	<script>
 		$(document).ready(function () {
-			vmaChecklistInputs = $('#vma-checklist').find('input');
-
-			// load checkbox status
-			vmaChecklistInputs.each(function (i) {
-				var checkboxStatus = localStorage.getItem('vmaCheckbox' + i);
-
-				if (checkboxStatus === 'checked') {
-					this.checked = true;
-				} else {
-					this.checked = false;
-				}
+			$('#add-medication').on('click', function(e){
+				e.preventDefault();
+				console.log($('#med-input').val());
+				$('#medication-list').append("<li>" + $('#med-input').val() + "</li>")
+				$('#med-input').val('');
 			});
 
-			// change event
-			$(vmaChecklistInputs).on('click', function (e) {
-
-				vmaChecklistInputs.each(function (i) {
-
-					//update localStorage
-					localStorage.setItem('vmaCheckbox' + i, this.checked ? 'checked' : 'not checked')
-
-				});
-
+			$('#add-question').on('click', function(e){
+				e.preventDefault();
+				console.log($('#q-input').val());
+				$('#q-list').append("<li>" + $('#q-input').val() + "</li>")
+				$('#q-input').val('');
 			});
 		});
 
