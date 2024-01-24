@@ -19,6 +19,14 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
 	<style>
+
+		#appt-select-label:before {
+			content: "* ";
+			margin-left: -0.87em;
+			vertical-align: top;
+			color: #d3080c;
+		}
+
 		.accnt-menu [role=menuitem] {
 
 			width: auto;
@@ -326,37 +334,104 @@
 						<section>
 							<div>
 								<h1 id="wb-cont" property="name">
-									Before your virtual medical reassessment
+									Set up your virtual medical reassessment
 								</h1>
 							</div>
 						</section>
 						<div class="alert alert-success mrgn-tp-md">
-							<h2 class="h3">Consent submitted</h2>
-							<p>You've submitted <a href="#">Form ID 35832</a></p>
+							<h2 class="h3">Your consent for virtual medical reassessment has been documented</h2>
+							<p>You can find a copy of the submitted consent in your <a href="#">submitted forms and documents</a></p>
 						</div>
 
-						<div id="vma-checklist" class="col-md-8 col-sm-12 col-xs-12" style="padding-left: 0;">
-							<fieldset class="gc-chckbxrdio form-inline">
-								<legend class="required">Are you in need of a chaperone for your virtual&nbsp;medical&nbsp;reassessment? <strong class="required">(required)</strong></legend>
-								<div class="label-inline">
-									<input id="inlineRadio1" type="radio" name="optradio">
-									<label for="inlineRadio1">Yes</label>
-								</div>
-								<div class="label-inline">
-									<input id="inlineRadio2" type="radio" name="optradio">
-									<label for="inlineRadio2">No</label>
-								</div>
+						<fieldset class="gc-chckbxrdio mrgn-bttm-lg" id="conditions">
+							<legend class="required">Which conditions would you like to review at your virtual&nbsp;medical&nbsp;reassessment?&nbsp;<strong class="required">(required)</strong></legend>
+							<ul class="list-unstyled lst-spcd-2">
+								<li class="checkbox">
+									<input type="checkbox" id="cond3">
+									<label for="cond3">Obstructive Sleep Apnea</label>
+								</li>
+								<li class="checkbox">
+									<input type="checkbox" id="cond1">
+									<label for="cond1">Tinnitus</label>
+								</li>
+								<li class="checkbox">
+									<input type="checkbox" id="cond2">
+									<label for="cond2">Tuberculosis</label>
+								</li>
+							</ul>
+						</fieldset>
+
+						<p id="appt-select-label" style="font-size: 22px;"><strong>Select an appointment date and time <span style="color: #d3080c;">(required)</span></strong></p>
+						<div class="mrgn-bttm-lg row">
+
+							<div class="wb-calevt col-md-5" data-calevt-src="calendar1">
+								<fieldset class="gc-chckbxrdio">
+									<ul class="list-unstyled lst-spcd-2">
+										<li class="radio">
+											<input type="radio" name="appt" id="appt-1" name="appt">
+											<label for="appt-1">March 11th 2024 at 2:00 PM</label>
+											<section class="hidden">
+												<h4><a href="https://www.canada.gc.ca"><time datetime="2024-03-11">March 11th 2024 at 2:00 PM</time></a></h4>
+											</section>
+										</li>
+										<li class="radio">
+											<input type="radio" name="appt" id="appt-2" name="appt">
+											<label for="appt-2">March 14th 2024 at 11:30 AM</label>
+											<section class="hidden">
+												<h4><a href="#"><time datetime="2024-03-14">March 14th 2024 at 11:00 AM </time></a></h4>
+											</section>
+										</li>
+										<li class="radio">
+											<input type="radio" name="appt" id="appt-3" name="appt">
+											<label for="appt-3">March 14th 2024 at 2:30 PM</label>
+											<section class="hidden">
+												<h4><a href="#"><time datetime="2024-03-14">March 14th 2024 at 3:30 PM </time></a></h4>
+											</section>
+										</li>
+										<li class="radio">
+											<input type="radio" name="appt" id="appt-4" name="appt">
+											<label for="appt-4">March 15th 2024 at 10:30 AM</label>
+											<section class="hidden">
+												<h4><a href="#"><time datetime="2024-03-15">March 15th 2024 at 10:30 AM </time></a></h4>
+											</section>
+										</li>
+										<li class="radio">
+											<input type="radio" name="appt" id="appt-5" name="appt">
+											<label for="appt-5">March 15th 2024 at 1:30 PM</label>
+											<section class="hidden">
+												<h4><a href="#"><time datetime="2024-03-15">March 15th 2024 at 1:30 PM</time></a></h4>
+											</section>
+										</li>
+									</ul>
+								</fieldset>
+							</div>
+							<div id="calendar1" class="col-md-6"></div>
+
+						</div>
+						
+						<div id="vma-chaperone" class="col-md-8 col-sm-12 col-xs-12" style="padding-left: 0;">
+							<fieldset class="gc-chckbxrdio">
+								<legend class="required">Would you like a chaperone to accompany you at your virtual&nbsp;medical&nbsp;reassessment? <strong class="required">(required)</strong></legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="radio">
+										<input type="radio" name="appt" id="inlineRadio1" name="appt">
+										<label for="inlineRadio1">Yes</label>
+										
+									</li>
+									<li class="radio">
+										<input type="radio" name="appt" id="inlineRadio2" name="appt">
+										<label for="inlineRadio2">No</label>
+										
+									</li>
+									
+								</ul>
 								
-								<div class="label-inline">
-									<input id="inlineRadio3" type="radio" name="optradio">
-									<label for="inlineRadio3">Not sure</label>
-								</div>
 								<div class="clearfix mrgn-tp-lg"></div>
 								
 							</fieldset>
 
 	
-							<fieldset class="gc-chckbxrdio ">
+							<fieldset class="gc-chckbxrdio hidden" id="chaperone-type">
 								<legend class="required">Do you have a chaperone, or would you prefer us to provide&nbsp;one?&nbsp;<strong class="required">(required)</strong></legend>
 								<ul class="list-unstyled lst-spcd-2">
 									<li class="radio">
@@ -369,6 +444,7 @@
 									</li>
 									
 								</ul>
+							</fieldset>
 							<div class="mrgn-tp-lg">
 								<a class="btn btn-success btn-lg" href="vma-checklist.html">Continue</a>
 		
@@ -528,30 +604,19 @@
 
 	<script>
 		$(document).ready(function () {
-			vmaChecklistInputs = $('#vma-checklist').find('input');
-
-			// load checkbox status
-			vmaChecklistInputs.each(function (i) {
-				var checkboxStatus = localStorage.getItem('vmaCheckbox' + i);
-
-				if (checkboxStatus === 'checked') {
-					this.checked = true;
+			
+			$( '#vma-chaperone').find('input').on( 'change', function() {
+			
+				if ($('#inlineRadio1').prop('checked')) {
+					$('#chaperone-type').removeClass('hidden');
 				} else {
-					this.checked = false;
-				}
-			});
+					$('#chaperone-type').addClass('hidden');
+				}	
+			} );
 
-			// change event
-			$(vmaChecklistInputs).on('click', function (e) {
+				
+			//#inlineRadio1
 
-				vmaChecklistInputs.each(function (i) {
-
-					//update localStorage
-					localStorage.setItem('vmaCheckbox' + i, this.checked ? 'checked' : 'not checked')
-
-				});
-
-			});
 		});
 
 	</script>
