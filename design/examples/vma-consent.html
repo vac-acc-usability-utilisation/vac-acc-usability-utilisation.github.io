@@ -374,7 +374,21 @@
 						<div class="mrgn-tp-lg">
 						<a class="btn btn-success btn-lg" href="vma-details.html">Continue</a>
 
-						<a class="btn btn-text btn-lg">Cancel</a>
+						<a href="#centred-popup" aria-controls="centred-popup" class="wb-lbx btn btn-text btn-lg" role="button">Cancel your reassessment</a>
+
+						<section id="centred-popup" class="mfp-hide modal-dialog modal-content overlay-def">
+							<header class="modal-header">
+								<h2 class="modal-title">Cancel your assessment</h2>
+							</header>
+							<div class="modal-body">
+								This will notify VAC that you are canceling your scheduled assessment.
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-warning pull-left">Cancel your assessment</button>
+								<button class="btn btn-default overlay-close popup-modal-dismiss pull-left">Close</button>
+							</div>
+						</section>
+
 						</div>
 						<!--
 						<nav class="provisional gc-subway pull-right col-md-4 col-sm-12 col-xs-12"

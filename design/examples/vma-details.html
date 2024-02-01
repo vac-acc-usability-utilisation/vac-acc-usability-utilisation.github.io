@@ -338,29 +338,33 @@
 								</h1>
 							</div>
 						</section>
+						<!--
 						<div class="alert alert-success mrgn-tp-md">
 							<h2 class="h3">Your consent for virtual medical reassessment has been documented</h2>
 							<p>You can find a copy of the submitted consent in your <a href="#">submitted forms and documents</a></p>
-						</div>
-
-						<fieldset class="gc-chckbxrdio mrgn-bttm-lg" id="conditions">
-							<legend class="required">Which conditions would you like to review at your virtual&nbsp;medical&nbsp;reassessment?&nbsp;<strong class="required">(required)</strong></legend>
+						</div>-->
+						<!---->
+						<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-lg" id="conditions">
+							<legend class="required">Are the conditions you would like to talk about at your reassessment?&nbsp;<strong class="required">(required)</strong></legend>
+							<ul class="mrgn-lft-md mrgn-bttm-md">
+								<li>Obstructive Sleep Apnea</li>
+								<li>Tinnitus</li>
+								<li>Tuberculosis</li>
+							</ul>
 							<ul class="list-unstyled lst-spcd-2">
-								<li class="checkbox">
-									<input type="checkbox" id="cond3">
-									<label for="cond3">Obstructive Sleep Apnea</label>
+								<li class="radio">
+									<input type="radio"  id="conditions1" name="conditions">
+									<label for="conditions1">Yes</label>
+									
 								</li>
-								<li class="checkbox">
-									<input type="checkbox" id="cond1">
-									<label for="cond1">Tinnitus</label>
+								<li class="radio">
+									<input type="radio"  id="conditions2" name="conditions">
+									<label for="conditions2">No</label>
 								</li>
-								<li class="checkbox">
-									<input type="checkbox" id="cond2">
-									<label for="cond2">Tuberculosis</label>
-								</li>
+								
 							</ul>
 						</fieldset>
-
+						<!--
 						<p id="appt-select-label" style="font-size: 22px;"><strong>Select an appointment date and time <span style="color: #d3080c;">(required)</span></strong></p>
 						<div class="mrgn-bttm-lg row">
 
@@ -407,19 +411,19 @@
 							</div>
 							<div id="calendar1" class="col-md-6"></div>
 
-						</div>
+						</div>-->
 						
 						<div id="vma-chaperone" class="col-md-8 col-sm-12 col-xs-12" style="padding-left: 0;">
 							<fieldset class="gc-chckbxrdio">
 								<legend class="required">Would you like a chaperone to accompany you at your virtual&nbsp;medical&nbsp;reassessment? <strong class="required">(required)</strong></legend>
 								<ul class="list-unstyled lst-spcd-2">
 									<li class="radio">
-										<input type="radio" name="appt" id="inlineRadio1" name="appt">
+										<input type="radio" id="inlineRadio1" name="appt">
 										<label for="inlineRadio1">Yes</label>
 										
 									</li>
 									<li class="radio">
-										<input type="radio" name="appt" id="inlineRadio2" name="appt">
+										<input type="radio" id="inlineRadio2" name="appt">
 										<label for="inlineRadio2">No</label>
 										
 									</li>
@@ -445,7 +449,20 @@
 									
 								</ul>
 							</fieldset>
-							<div class="mrgn-tp-lg">
+
+							<div id="chaperone-details" class="hidden">
+								<div class="form-group">
+									<label for="fname1"><span class="field-name">Your chaperone's name</span> (optional)</label>
+									<input class="form-control" id="fname1" name="fname1" type="text" autocomplete="given-name" data-rule-minlength="2" />
+								</div>
+	
+								<div class="form-group">
+									<label for="relationship1"><span class="field-name">Your relationship to your chaperone</span> (optional)</label>
+									<input class="form-control" id="relationship1" name="relationship1" type="text" data-rule-minlength="2" />
+								</div>
+							</div>
+
+							<div class="mrgn-tp-lg mrgn-bttm-lg">
 								<a class="btn btn-success btn-lg" href="vma-checklist.html">Continue</a>
 		
 								<a class="btn btn-text btn-lg">Cancel</a>
@@ -484,7 +501,7 @@
 							<div class="clearfix hidden-xs"></div>
 							<dl id="wb-dtmd">
 								<dt>Date modified:</dt>
-								<dd><time property="dateModified">2024-01-16</time></dd>
+								<dd><time property="dateModified">2024-01-31</time></dd>
 							</dl>
 						</div>
 						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 hidden-xs text-right">
@@ -613,6 +630,17 @@
 					$('#chaperone-type').addClass('hidden');
 				}	
 			} );
+
+			$( '#chaperone-type').find('input').on( 'change', function() {
+			
+					if ($('#chaperone-1').prop('checked')) {
+						$('#chaperone-details').removeClass('hidden');
+					} else {
+						$('#chaperone-details').addClass('hidden');
+					}	
+				} 
+			);
+
 
 				
 			//#inlineRadio1
