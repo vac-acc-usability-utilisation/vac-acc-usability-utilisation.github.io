@@ -344,9 +344,9 @@
 							<p>You can find a copy of the submitted consent in your <a href="#">submitted forms and documents</a></p>
 						</div>-->
 						<!---->
-						<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-lg" id="conditions">
+						<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0" id="conditions">
 							<legend class="required">Are the conditions you would like to talk about at your reassessment?&nbsp;<strong class="required">(required)</strong></legend>
-							<ul class="mrgn-lft-md mrgn-bttm-md">
+							<ul class="mrgn-lft-md">
 								<li>Obstructive Sleep Apnea</li>
 								<li>Tinnitus</li>
 								<li>Tuberculosis</li>
@@ -364,6 +364,11 @@
 								
 							</ul>
 						</fieldset>
+
+						<section id="incorrect-conditions" class="hidden alert alert-warning mrgn-tp-0">
+							<h3>Contact us before continuing</h3>
+							<p>If the conditions display above are incorrect please <a href="#">contact us</a> before continuing.</p>
+						</section>
 						<!--
 						<p id="appt-select-label" style="font-size: 22px;"><strong>Select an appointment date and time <span style="color: #d3080c;">(required)</span></strong></p>
 						<div class="mrgn-bttm-lg row">
@@ -621,6 +626,15 @@
 
 	<script>
 		$(document).ready(function () {
+
+			$( '#conditions').find('input').on( 'change', function() {
+			
+				if ($('#conditions2').prop('checked')) {
+					$('#incorrect-conditions').removeClass('hidden');
+				} else {
+					$('#incorrect-conditions').addClass('hidden');
+				}	
+			} );
 			
 			$( '#vma-chaperone').find('input').on( 'change', function() {
 			
