@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) <abbr>WET</abbr>-boew.github.io/wet-boew/License-en.html / <abbr>WET</abbr>-boew.github.io/wet-boew/Licence-fr.html -->
+
+	<title>Vitural assessment</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+
+	<link href="../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
+
+	<link rel="stylesheet" href="../../../GCWeb/css/theme.min.css" />
+	<link rel="stylesheet" href="../../../mva-mda/css/theme.css" />
+	<link rel="stylesheet" href="../../../cdts/css/cdts.css" />
+	<noscript>
+		<link rel="stylesheet" href="wet-boew/css/noscript.min.css" />
+	</noscript>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+
+	<style>
+		.accnt-menu [role=menuitem] {
+
+			width: auto;
+
+		}
+
+
+		.accnt-menu [role=menu] {
+
+			position: absolute;
+			right: 1em;
+		}
+
+		.gcweb-menu button[aria-haspopup=true] {
+			text-transform: none;
+		}
+
+		#mbl-mnu details.acc-group.brdr-0.on,
+		#app-navigation details.acc-group.brdr-0.on {
+			padding-bottom: 0;
+		}
+
+		ul#app-mnu {}
+
+		@media screen and (max-width: 991px) {
+			ul#app-mnu {
+				padding: 0;
+			}
+		}
+	</style>
+
+</head>
+
+<body vocab="http://schema.org/" typeof="WebPage" class="cnt-wdth-lmtd">
+	<div class="bg-warning" style="padding:16px;">
+		<div class="container">
+			<p>This is a conceptual prototype. It may not represent the final design or functionality.</p>
+		</div>
+	</div>
+	<nav aria-label="Skip Links">
+		<ul id="wb-tphp">
+			<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+			<li class="wb-slc visible-xs visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to
+					"About My VAC Account"</a></li>
+		</ul>
+	</nav>
+
+
+	<!-- authenticated -->
+	<header id="authenticated-header">
+		<div id="wb-bnr" class="container">
+			<div class="row">
+				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+					<h2 class="wb-inv">Language selection</h2>
+					<ul class="list-inline mrgn-bttm-0">
+						<li>
+							<a lang="fr" hreflang="fr" href="fr.html">
+								<span class="hidden-xs">Français</span>
+								<abbr title="Français"
+									class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+							</a>
+						</li>
+					</ul>
+				</section>
+				<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" resource="#wb-publisher"
+					typeof="GovernmentOrganization">
+					<a href="en.html" property="url">
+						<img src="../../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv"
+							property="name">
+							Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+					</a>
+					<meta property="areaServed" typeof="Country" content="Canada">
+					<link property="logo" href="../../../GCWeb/assets/wmms-blk.svg">
+				</div>
+				<!--
+				<section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
+					<h2>Search</h2>
+					<form action="#" method="post" name="cse-search-box" role="search">
+						<div class="form-group wb-srch-qry">
+							<label for="wb-srch-q" class="wb-inv">Search</label>
+							<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search VAC">
+							<datalist id="wb-srch-q-ac"></datalist>
+						</div>
+						<div class="form-group submit">
+							<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
+								<span class="glyphicon-search glyphicon"></span>
+								<span class="wb-inv">Search</span>
+							</button>
+						</div>
+					</form>
+				</section>-->
+			</div>
+
+		</div>
+		<div class="app-bar">
+			<div class="container">
+				<div class="row">
+					<section class="col-xs-8 col-sm-5 col-md-4">
+						<h2 class="wb-inv">Name of Web application</h2>
+						<a href="#" class="app-name" href="../../../en.html">My&nbsp;VAC&nbsp;Account</a>
+					</section>
+
+					<nav
+						class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
+						<section>
+							<h2 class="wb-inv">Account menu</h2>
+							<a href="#" class="btn btn-link text-white hidden-xs hidden-sm"> <span
+									class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+									class="badge">2</span> </a>
+							<a href="#" class="btn btn-link text-white mrgn-rght-md hidden-xs hidden-sm hidden-md">
+								<span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a>
+
+							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs"
+								style="background:#eee; color: #000; position: relative;" type="button"
+								aria-haspopup="true" aria-controls="accnt-mnu"
+								aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span
+									class="badge hidden-md hidden-lg">2</span><span
+									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width"
+								style="position:static; width: 100%; float: left; text-align: left; width: auto;">
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
+										href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+											class="badge">2</span></a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span
+											class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
+							</ul>
+
+							<button class="btn btn-default mrgn-lft-md hidden-xs"
+								style="background:#eee; color: #000; position: relative;" type="button"
+								aria-haspopup="true" aria-controls="accnt-mnu"
+								aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span
+									class="badge hidden-md hidden-lg">2</span><span
+									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
+							<ul id="accnt-mnu" role="menu" aria-orientation="vertical"
+								style="text-align: left; width: auto;">
+								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
+										href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
+											class="badge">2</span></a></li>
+								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span
+											class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
+								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
+							</ul>
+
+						</section>
+					</nav>
+
+				</div>
+			</div>
+		</div>
+		<!--MOBILE MENU-->
+		<div class="container">
+			<nav>
+				<a href="#mb-pnl" id="menu-btn" title="Menu" aria-controls="mb-pnl" class="overlay-lnk btn btn-primary"
+					role="button"><span class="fa fa-bars mrgn-rght-sm opct-80"></span>MENU</a>
+			</nav>
+		</div>
+
+
+		<div id="mb-pnl" class="wb-overlay modal-content overlay-def wb-panel-l" aria-hidden="false" role="dialog"
+			tabindex="-1">
+			<header class="modal-header">
+				<div class="modal-title">MENU</div>
+			</header>
+			<div class="modal-body">
+				<!--<section class="srch-pnl hidden">
+					<h3>Search</h3>
+			<form action="https://google.ca/search" method="get" role="search" class="form-inline">
+			<div class="form-group">
+			<label for="wb-srch-q-imprt">Search website</label>
+			<input id="wb-srch-q-imprt" class="form-control" name="q" type="search" value="" size="27" maxlength="150">
+			<input type="hidden" name="q" value="site:wet-boew.github.io OR site:github.com/wet-boew/">
+			</div>
+			<button type="submit" id="wb-srch-sub-imprt" class="btn btn-default">Search</button>
+			</form>
+			</section><section class="lng-ofr hidden"><h3>Language selection</h3><ul class="list-inline"><li><a lang="fr" hreflang="fr" href="menu-fr.html">Français</a></li></ul></section>-->
+				<nav role="navigation" typeof="SiteNavigationElement" id="sm-pnl"
+					class="sm-pnl wb-menu wb-menu-inited wb-init wb-navcurr-inited">
+					<h3>Topics menu</h3>
+
+
+
+
+					<div data-ajax-replace="/design/assets/ajax/site-menu-en.html">
+
+					</div>
+				</nav>
+				<!--
+					<nav role="navigation" typeof="SiteNavigationElement" id="info-pnl"
+						class="info-pnl wb-menu wb-menu-inited wb-init">
+						<h3>About this site</h3>
+						<ul class="list-unstyled mb-menu" role="menu">
+							<li>
+								<details>
+									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="1"
+										aria-haspopup="true" tabindex="0">Contact us</summary>
+									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
+										aria-hidden="true">
+										<li><a role="menuitem" aria-setsize="1" aria-posinset="1" tabindex="-1"
+												href="https://github.com/wet-boew/wet-boew/issues/new">Questions or
+												comments?</a></li>
+									</ul>
+								</details>
+							</li>
+							<li>
+								<details>
+									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="2"
+										aria-haspopup="true" tabindex="-1">About</summary>
+									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
+										aria-hidden="true">
+										<li><a role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1"
+												href="../../../index-en.html#about">About the Web Experience Toolkit</a>
+										</li>
+										<li><a role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1"
+												rel="external"
+												href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web
+												Standards</a></li>
+									</ul>
+								</details>
+							</li>
+							<li>
+								<details>
+									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="3"
+										aria-haspopup="true" tabindex="-1">News</summary>
+									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
+										aria-hidden="true">
+										<li><a role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1"
+												href="https://github.com/wet-boew/wet-boew/pulse">Recent project
+												activity</a></li>
+										<li><a role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1"
+												href="https://github.com/wet-boew/wet-boew/graphs">Project
+												statistics</a></li>
+									</ul>
+								</details>
+							</li>
+							<li>
+								<details>
+									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="4"
+										aria-haspopup="true" tabindex="-1">Stay connected</summary>
+									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
+										aria-hidden="true">
+										<li><a role="menuitem" aria-setsize="1" aria-posinset="1" tabindex="-1"
+												rel="external" href="https://twitter.com/WebExpToolkit">Twitter</a></li>
+									</ul>
+								</details>
+							</li>
+						</ul>
+					</nav>-->
+			</div>
+			<div class="modal-footer"><button title="Close overlay"
+					class="btn btn-sm btn-default pull-left overlay-close" type="button">Close<span class="wb-inv">Close
+						overlay</span></button></div><button title="Close: Menus (escape key)"
+				class="mfp-close overlay-close" type="button">×<span class="wb-inv"> Close: menus (escape
+					key)</span></button>
+		</div>
+		<nav id="wb-bc" property="breadcrumb">
+			<h2>You are here:</h2>
+			<div class="container">
+				<ol class="breadcrumb hidden-xs" typeof="BreadcrumbList">
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
+							<span property="name">My VAC Account</span>
+						</a>
+						<meta property="position" content="1">
+					</li>
+				</ol>
+				<div class="hidden-sm hidden-md hidden-lg">
+					<ol>
+						<li>
+
+							<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
+								<span class="fa fa-arrow-left"></span>
+								<span property="name">My VAC Account</span>
+							</a>
+						</li>
+					</ol>
+
+
+				</div>
+			</div>
+		</nav>
+		<!--
+        <div class="app-bar-mb container visible-xs-block hidden-print">
+            <nav>
+                <h2 class="wb-inv">Account menu</h2>
+                <ul class="app-list-account list-unstyled">
+                    <li><a href="../../../en.html?register" class="btn">Register</a></li>
+                    <li><a href="../../../en.html?sign-in" class="btn">Sign-in</a></li>
+                </ul>
+            </nav>
+        </div>-->
+	</header>
+
+	<main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
+		<section class="">
+			<div class="container">
+				<!--
+				<button id="menu-btn" class="h6 btn btn-link brdr-tp brdr-rght brdr-bttm brdr-lft hidden" 
+				style="letter-spacing: 0.5px;" >
+					MENU <span class="fa fa-bars"></span>
+			</button>-->
+			
+				<div class="row">
+					<div class="col-xs-12">
+						<section>
+							<div>
+								<h1 id="wb-cont" property="name">
+									Virtual medical reassessment
+								</h1>
+							</div>
+						</section>
+
+
+
+						<p class="lead">A virtual medical reassessment allows you to meet online with a <abbr title="">VAC</abbr>&nbsp;Medical&nbsp;Officer about a worsening condition.</p>
+						
+					</div>
+					<!--
+					<nav class="provisional gc-subway pull-right col-md-4 col-sm-12 col-xs-12"
+						style="border-right:0; border-top:0; border-bottom: 0;">
+						<p class="h3 mrgn-tp-lg hidden-sm">Sections</p>
+						<p class="h3 mrgn-tp-0 visible-sm">Sections</p>
+						<ul>
+							<li>
+								<a href="#what-to-bring" class="active">Consent and guidelines</a>
+							</li>
+							<li>
+								<a href="#" class="disabled" disabled>What to bring</a>
+							</li>
+							<li>
+								<a href="#test-your-equipment">Prepare and test your&nbsp;equipment</a>
+							</li>
+							<li style="border-bottom: 0; border-left: 4px solid transparent;">
+								<a href="#prepare-your-space">Prepare your space</a>
+							</li>
+						</ul>
+					</nav>-->
+					<div class="col-sm-12 ">
+						<h2>Consent and guidelines</h2>
+
+						<h3>Meeting platform</h3>
+						<p>The reassessment will be conducted on Microsoft Teams, a videoconferencing platform.</p>
+
+						<h3>Potential impact on benefits</h3>
+
+						<p>If the reassessment confirms that your condition has worsened, your Disability Benefit will be adjusted accordingly – unless you already receive the maximum amount.</p>
+
+						<h3>Right to have a chaperone</h3>
+
+						<p>You have the right to a chaperone during the virtual medical reassessment.</p>
+						<p>You may:</p>
+						<ul>
+							<li>ask <abbr title="Veterans Affairs Canada">VAC</abbr> to provide a chaperone for the virtual medical reassessment</li>
+							<li>stop the virtual medical reassessment at any time to ask questions about what the Medical Officer is doing</li>
+							<li>stop the virtual medical reassessment and ask for a chaperone, even if you refused one at first</li>
+						</ul>
+						<p>If you have questions or feel uncomfortable with a part of the reassessment, please ask the Medical Officer to stop and tell them about your concerns.
+						</p>
+
+						<!--https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/medical-exams/requirements-permanent-residents.html-->
+
+					
+
+						<h3>Information disclosure</h3>
+
+						<p>You may need to disclose personal and medical information and attendance details during the virtual medical reassessment. This information is crucial for an accurate evaluation of your condition.</p>
+
+						<!--
+							- Do you consent to use MS Teams Video for this VMA?
+							- Do you hereby give your informed consent for the use of VMAs in your disability assessment?
+							- Do you understand and consent to disclosing Personal, Medical Information and Attendance during the VMA?
+						-->
+
+						<h3>Consent acknowledgment</h3>
+
+						<p>By clicking <strong>Continue</strong>, you acknowledge that you have read and understand the virtual medical reassessment consent information above. This acknowledgment signifies your agreement to participate in the reassessment process.</p>
+
+						<div class="mrgn-tp-lg">
+						<a class="btn btn-success btn-lg" href="vma-details.html">Continue</a>
+
+						<a href="#centred-popup" aria-controls="centred-popup" class="wb-lbx btn btn-text btn-lg" role="button">Cancel your reassessment</a>
+
+						<section id="centred-popup" class="mfp-hide modal-dialog modal-content overlay-def">
+							<header class="modal-header">
+								<h2 class="modal-title">Cancel your assessment</h2>
+							</header>
+							<div class="modal-body">
+								This will notify VAC that you are canceling your scheduled assessment.
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-warning pull-left">Cancel your assessment</button>
+								<button class="btn btn-default overlay-close popup-modal-dismiss pull-left">Close</button>
+							</div>
+						</section>
+
+						</div>
+						<!--
+						<nav class="provisional gc-subway pull-right col-md-4 col-sm-12 col-xs-12"
+							style="border-right:0; border-top:0; border-bottom: 0;">
+							<p class="h3 mrgn-tp-lg hidden-sm">Sections</p>
+							<p class="h3 mrgn-tp-0 visible-sm">Sections</p>
+							<ul>
+								<li>
+									<a href="#what-to-bring">What to bring</a>
+								</li>
+								<li>
+									<a href="#test-your-equipment">Prepare and test your&nbsp;equipment</a>
+								</li>
+								<li style="border-bottom: 0; border-left: 4px solid transparent;">
+									<a href="#prepare-your-space">Prepare your space</a>
+								</li>
+								
+								<li>
+									<a href="#" class="hidden-xs hidden-sm">[Page 4]</a>
+									<a href="#gc-document-nav" class="visible-xs visible-sm">[Page 4]</a>
+								</li>
+								<li>
+									<a href="#" class="hidden-xs hidden-sm">[Page 5]</a>
+									<a href="#gc-document-nav" class="visible-xs visible-sm">[Page 5]</a>
+								</li>
+								<li>
+									<a href="#" class="hidden-xs hidden-sm">[Page 6]</a>
+									<a href="#gc-document-nav" class="visible-xs visible-sm">[Page 6]</a>
+								</li>
+							</ul>
+						</nav>-->
+						<!--
+						<div id="vma-checklist" class="col-md-8 col-sm-12 col-xs-12" style="padding-left: 0;">
+							<fieldset class="gc-chckbxrdio">
+								<legend>
+									<h2 id="what-to-bring">What to bring</h2>
+								</legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="cond1">
+										<label for="cond1">Your CSDN ID</label>: <strong
+											style="font-size: 20px;">500012478602</strong>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond2">
+										<label for="cond2">Your file number</label>: <strong
+											style="font-size: 20px;">756439</strong>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond3">
+										<label for="cond3">Medical documents related to your illness or
+											injury</label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond4">
+										<label for="cond4">A list of your current medications
+										</label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond5">
+										<label for="cond5">Your completed <a
+												href="https://www.veterans.gc.ca/eng/forms/document/pen50"
+												target="_blank">Quality of Life Questionnaire (PEN 50e)</a>
+
+										</label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond6">
+										<label for="cond6">Something to take notes with (pen and paper, tablet, etc.)
+										</label>
+									</li>
+								</ul>
+							</fieldset>
+							<fieldset class="gc-chckbxrdio">
+								<legend>
+									<h2 id="test-your-equipment">Prepare and test your equipment</h2>
+								</legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="cond12">
+										<label for="cond12">Download and install <a
+												href="https://www.microsoft.com/en-ca/microsoft-teams/download-app"
+												target="_blank">Microsoft Teams</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond13">
+										<label for="cond13">Make a <a href="https://support.microsoft.com/en-au/office/manage-your-call-settings-in-microsoft-teams-456cb611-3477-496f-b31a-6ab752a7595f#ID0EDPBBDDBD" target="_blank">test call</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond14">
+										<label for="cond14">Join from a non-Canadian Armed Forces network</label>
+									</li>
+
+								</ul>
+							</fieldset>
+							<fieldset class="gc-chckbxrdio">
+								<legend>
+									<h2 id="prepare-your-space">Prepare your space</h2>
+								</legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="cond21">
+										<label for="cond21">Find a private, quiet, and well-lit place for your
+											visit</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond22">
+										<label for="cond22">Have a way to position the device so you're in the
+											frame</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond23">
+										<label for="cond23">Relocate pets to another room
+										</label>
+									</li>
+								</ul>
+							</fieldset>
+						</div>-->
+					</div>
+				</div>
+
+			</div>
+			</div>
+		</section>
+		<section class="pagedetails container">
+			<h2 class="wb-inv">Page details</h2>
+			<div class="row">
+				<div class="col-sm-8 col-md-9 col-lg-9">
+					<div data-ajax-replace="../assets/ajax/report-problem-en.html">
+						<div class="row row-no-gutters">
+							<div class="col-sm-9 col-md-6 col-lg-5">
+								<a class="btn btn-default btn-block"
+									href="https://www.canada.ca/en/report-problem.html">Report a problem on this
+									page</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Share button
+				<div class="wb-share col-sm-4 col-md-3" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>-->
+
+				<div class="col-xs-12 mrgn-tp-sm text-muted">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 mrgn-bttm-0">
+							<div class="clearfix hidden-xs"></div>
+							<dl id="wb-dtmd">
+								<dt>Date modified:</dt>
+								<dd><time property="dateModified">2024-01-23</time></dd>
+							</dl>
+						</div>
+						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 hidden-xs text-right">
+							<p class="mrgn-tp-0 mrgn-bttm-0">UX.1.1.1</p>
+							<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
+						</div>
+						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 visible-xs">
+							<p class="mrgn-tp-0 mrgn-bttm-0">UX.1.1.1</p>
+							<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+
+
+	<!-- footer -->
+	<div id="default-footer" data-wb-urlmapping='{
+		"transactional": { 
+			"action": "addClass", 
+			"source": "#default-footer", 
+			"class": "hidden" },
+			"transactional-poa": { 
+				"action": "addClass", 
+				"source": "#default-footer", 
+				"class": "hidden" },
+		"iprov": { 
+		"action": "addClass", 
+		"source": "#default-footer", 
+		"class": "hidden" },
+		"iprov-poa": { 
+			"action": "addClass", 
+			"source": "#default-footer", 
+			"class": "hidden" }
+		}'>
+		<footer id="wb-info">
+			<h2 class="wb-inv">About My VAC Account</h2>
+			<div class="gc-main-footer">
+				<nav class="container wb-navcurr">
+
+					<ul class="list-unstyled colcount-xs-2 colcount-md-3">
+						<li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
+
+						<li id="authenticated-footer-link-2" class="hidden" data-wb-urlmapping='{
+							"authenticated": { 
+							"action": "removeClass", 
+							"source": "#authenticated-footer-link-2", 
+							"class": "hidden" },
+							"authenticated-poa": { 
+								"action": "removeClass", 
+								"source": "#authenticated-footer-link-2", 
+								"class": "hidden" }
+							}'>
+							<a href="#">Check in on your well-being</a>
+						</li>
+
+						<li><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">Talk to a mental
+								health professional</a></li>
+
+
+
+						<li id="authenticated-footer-link-1" class="hidden" data-wb-urlmapping='{
+								"authenticated": { 
+								"action": "removeClass", 
+								"source": "#authenticated-footer-link-1", 
+								"class": "hidden" },
+								"authenticated-poa": { 
+									"action": "removeClass", 
+									"source": "#authenticated-footer-link-1", 
+									"class": "hidden" }
+								}'><a href="#">News and updates</a></li>
+
+						<li id="authenticated-footer-link-3" class="hidden" data-wb-urlmapping='{
+								"authenticated": { 
+								"action": "removeClass", 
+								"source": "#authenticated-footer-link-3", 
+								"class": "hidden" },
+								"authenticated-poa": { 
+									"action": "removeClass", 
+									"source": "#authenticated-footer-link-3", 
+									"class": "hidden" }
+								}'><a href="#">Provide feedback</a></li>
+
+
+
+
+					</ul>
+				</nav>
+			</div>
+			<div class="gc-sub-footer">
+				<div class="container d-flex align-items-center">
+					<nav>
+						<h3 class="wb-inv">Veteran Affairs Canada Corporate</h3>
+						<ul>
+							<li><a href="https://www.veterans.gc.ca/eng/e_services">About My VAC Account</a></li>
+							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Terms and conditions</a></li>
+							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Privacy</a></li>
+						</ul>
+					</nav>
+					<div class="wtrmrk align-self-end">
+						<img src="../../../GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+		integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
+		crossorigin="anonymous"></script>
+	<script src="../../../wet-boew/js/wet-boew.min.js"></script>
+	<script src="../../../GCWeb/js/theme.min.js"></script>
+
+
+	<script>
+		$(document).ready(function () {
+			vmaChecklistInputs = $('#vma-checklist').find('input');
+
+			// load checkbox status
+			vmaChecklistInputs.each(function (i) {
+				var checkboxStatus = localStorage.getItem('vmaCheckbox' + i);
+
+				if (checkboxStatus === 'checked') {
+					this.checked = true;
+				} else {
+					this.checked = false;
+				}
+			});
+
+			// change event
+			$(vmaChecklistInputs).on('click', function (e) {
+
+				vmaChecklistInputs.each(function (i) {
+
+					//update localStorage
+					localStorage.setItem('vmaCheckbox' + i, this.checked ? 'checked' : 'not checked')
+
+				});
+
+			});
+		});
+
+	</script>
+
+</body>
+
+</html>
