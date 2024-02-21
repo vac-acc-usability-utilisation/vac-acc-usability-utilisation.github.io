@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) <abbr>WET</abbr>-boew.github.io/wet-boew/License-en.html / <abbr>WET</abbr>-boew.github.io/wet-boew/Licence-fr.html -->
 
-	<title>Before your virtual medical reassessment</title>
+	<title>Before your vitural medical reassessment</title>
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<link href="../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
@@ -19,12 +19,73 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
 	<style>
-		.accnt-menu [role=menuitem] {
+		/* */
+		.gc-subway a.disabled {
+			text-decoration: none;
+			cursor: not-allowed;
+		}
 
-			width: auto;
+		.gc-subway a.disabled:visited {
+			color: #333;
+		}
+s
+		.provisional.gc-subway dl li a,
+		.provisional.gc-subway ul li a {
+			position: relative;
+		}
+
+		.provisional.gc-subway dl li a::before,
+		.provisional.gc-subway ul li a::before {
+			position: absolute;
+			left: -34px;
 
 		}
 
+		
+		.provisional.gc-subway dl li a:focus::before,
+		.provisional.gc-subway dl li a:hover::before,
+		.provisional.gc-subway ul li a:focus::before,
+		.provisional.gc-subway ul li a:hover::before {
+			height: 1.2em;
+			position: absolute;
+			top: 4px !important;
+			left: -34px !important;
+			margin-top: 0 !important;
+			width: 1.2em !important;
+			height: 1.2em !important;
+		}
+
+		.provisional.gc-subway dl li.complete,
+		.provisional.gc-subway ul li.complete {
+			border-left: 4px solid #1b6c1c;
+			padding: 0 20px 30px 1em;
+		}
+
+
+		.provisional.gc-subway dl li.complete a::before,
+		.provisional.gc-subway ul li.complete a::before {
+			background-color: #1b6c1c;
+			border-color: #1b6c1c;
+			
+
+		}
+
+		.provisional.gc-subway dl li.complete a::after,
+		.provisional.gc-subway ul li.complete a::after {
+			color: #fff;
+			font-family: "Font Awesome 5 Free";
+			font-size: 13px;
+			font-weight: 600;
+			content: "\f00c";
+			position: absolute;
+			left: -28px;
+			top: 0px;
+			
+		}
+
+		.accnt-menu [role=menuitem] {
+			width: auto;
+		}
 
 		.accnt-menu [role=menu] {
 
@@ -41,30 +102,18 @@
 			padding-bottom: 0;
 		}
 
-		ul#app-mnu {}
-
 		@media screen and (max-width: 991px) {
 			ul#app-mnu {
 				padding: 0;
 			}
 		}
 
-		.gc-chckbxrdio input[type=checkbox]:disabled+label::before, .gc-chckbxrdio input[type=radio]:disabled+label::before,
-		.gc-chckbxrdio input[type=checkbox]:disabled+label::after, .gc-chckbxrdio input[type=radio]:disabled+label::after {
-			opacity: 0.5;
+
+		input[type=file] {
+			display: none;
 		}
 
-		.fileinput-button input {
-			position: absolute;
-			top: 0;
-			right: 0;
-			margin: 0;
-			opacity: 0;
-			-ms-filter: 'alpha(opacity=0)';
-			font-size: 200px !important;
-			direction: ltr;
-			cursor: pointer;
-		}
+		
 	</style>
 
 </head>
@@ -301,14 +350,26 @@
 						</a>
 						<meta property="position" content="1">
 					</li>
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="vma-appointments.html">
+							<span property="name">Disability reassessments</span>
+						</a>
+						<meta property="position" content="2">
+					</li>
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="vma-overview.html">
+							<span property="name">Virtual medical assessment overview</span>
+						</a>
+						<meta property="position" content="3">
+					</li>
 				</ol>
 				<div class="hidden-sm hidden-md hidden-lg">
 					<ol>
 						<li>
 
-							<a property="item" typeof="WebPage" href="index.html">
+							<a property="item" typeof="WebPage" href="vma-overview.html">
 								<span class="fa fa-arrow-left"></span>
-								<span property="name">My VAC Account</span>
+								<span property="name">Virtual medical assessment overview</span>
 							</a>
 						</li>
 					</ol>
@@ -343,294 +404,270 @@
 						<section>
 							<div>
 								<h1 id="wb-cont" property="name">
-									Get ready for your virtual&nbsp;medical&nbsp;reassessment
+									Quality of Life Questionnaire
 								</h1>
-								<p class="lead">Use this checklist and appointment guide to prepare for your virtual&nbsp;medical&nbsp;reassessment.</p>
+								<p class="lead">This questionnaire is intended to evaluate how your daily life is affected by your
+									condition.</p>
+								<h2>Tuberculosis</h2>
+								
 							</div>
 						</section>
-						
-
-						<div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 0;"> 
-							
-							
-
-							
-							<div style="background: none;" class="well well-lg brdr-bttm brdr-tp brdr-lft brdr-rght">
-								
-								<div class="row">
-									<div class="col-sm-8"><h2 class="mrgn-tp-0 mrgn-bttm-lg">Appointment guide</h2></div>
-									<div class="col-sm-4"><a href="#" class="btn btn-link pull-right"> <span class="fa fa-print mrgn-rght-sm"></span> Print</a></div>
-								</div>
-								<div class="row mrgn-tp-md">
-									<div class="col-md-3 col-sm-4">
-										<dl class="">
-											<dd class="mrgn-bttm-0">CSDN ID</dd>
-											<dt class="mrgn-tp-0">500012478602</dt>
-										</dl>
-									</div>
-									<div class="col-md-6 col-sm-6">
-										<dl class="">
-											<dd class="mrgn-bttm-0">File number</dd>
-											<dt class="mrgn-tp-0">756439</dt>
-										</dl>
-									</div>
-								</div>
-								<div class="row mrgn-tp-0 mrgn-bttm-lg">
-									<div class="col-sm-12">
-										<dl class="">
-											<dd class="mrgn-bttm-0">Chaperone</dd>
-											<dt class="mrgn-tp-0">Keith Knockwood</dt>
-										</dl>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-sm-6">
-										<p class="mrgn-bttm-0">Conditions</p>
-									<ul>
-										<li>Obstructive Sleep Apnea</li>
-										<li>Tinnitus</li>
-										<li>Tuberculosis</li>
+						<nav class="provisional gc-subway pull-right mrgn-tp-0 col-md-4 col-sm-12 col-xs-12"
+							style="border-right:0; border-top:0; border-bottom: 0;">
+							<p class="h3 mrgn-tp-lg hidden-sm">Sections</p>
+							<p class="h3 mrgn-tp-0 visible-sm">Sections</p>
+							<ul>
+								<li class="complete">
+									<a href="#" class="disabled ">Consent and guidelines</a>
+								</li>
+								<li class="complete">
+									<a href="#" class="active">Confirm your details</a>
+								</li>
+								<li>
+									<a href="#" class="active">Quality of life questionnaire</a>
+									<ul class="">
+										<li class="complete">
+											<a href="#" class="hidden-xs hidden-sm">Obstructive Sleep Apnea</a>
+										</li>
+										<li class="complete">
+											<a href="#" class="hidden-xs hidden-sm ">Tinnitus</a>
+										</li>
+										<li>
+											<a href="#" class="hidden-xs hidden-sm active">Tuberculosis</a>
+										</li>
+										<li>
+											<a href="#" class="hidden-xs hidden-sm ">Review and submit</a>
+										</li>
 									</ul>
-									</div>
-									<div class="col-md-3 col-sm-4">
-										<p class="mrgn-bttm-0">Medications</p>
-									<ul>
-										<li>Modafilin</li>
-										<li>Alprazolam</li>
-										<li>Rifapentine</li>
-										<li>Moxifloxacin</li>
-									</ul>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-12">
-										<p class="mrgn-bttm-0">Questions</p>
-									<ul>
-										<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vitae dolore&nbsp;rerum?</li>
-										<li>Veritatis dignissimos nulla eveniet, molestiae dolor fugit optio fugiat&nbsp;atque?</li>
-									</ul>
-									</div>
-								</div>
-							</div>
-							<div class="mrgn-tp-lg mrgn-bttm-lg"><!--
-								<a class="btn btn-success btn-lg" href="vma-checklist.html">Continue</a>
-								
-								<a class="btn btn-text btn-lg">Cancel</a>-->
-							</div>
-						
-								
+								</li>
+								<li>
+									<a href="#" class="disabled">Gather your information</a>
+								</li>
+								<li>
+									<a href="#" class="disabled">Get ready for your assessment</a>
+								</li>
+								<li>
+									<a href="#" class="disabled">Appointment guide</a>
+								</li>
+							</ul>
+						</nav>
 
-
-								<!-- uploading documents -->
-
-								<!-- pull medication lists out of per condition -->	
-
-
-
-
-
-
-								<!--
-								<div class="wb-tabs">
-									<div class="tabpanels">
-										<details id="details-panel1" style="padding:32px;">
-											<summary>Obstructive Sleep Apnea</summary>
-											<li class="checkbox mrgn-bttm-lg">
-												<input type="checkbox" id="cond4">
-												<label for="cond4">Your current medications
-												</label>
-												<ul id="medication-list" class="mrgn-tp-sm mrgn-bttm-sm mrgn-lft-xl lst-spcd" style="font-size: 18px;">
-												</ul>
-												<div class="row mrgn-tp-md">
-													<div class="col-sm-offset-1 col-md-11">
-														<label for="med1" class="wb-inv">Medication 1</label>
-														<div class="row">
-															<div class="col-sm-10 col-md-8">
-																<input id="med-input" name="med1" type="text" class="form-control mrgn-lft-md full-width">
-																
-															</div>
-															<div class="col-sm-2">
-																<a href="#" class="btn btn-default btn-sm full-width" id="add-medication">Add</a>
-															</div>
-														</div>
-													</div>
-												</div>
-												
-											</li>
-											<li class="checkbox mrgn-bttm-lg">
-												<input type="checkbox" id="q1">
-												<label for="q1">Questions you'd like to ask the Medical Officer
-												</label>
-												<ul id="q-list" class="mrgn-tp-sm mrgn-bttm-sm mrgn-lft-xl lst-spcd" style="font-size: 18px;">
-												</ul>
-												<div class="row mrgn-tp-md">
-													<div class="col-sm-offset-1 col-md-11">
-														<label for="q1" class="wb-inv">Questions 1</label>
-														<div class="row">
-															<div class="col-sm-10 col-md-8">
-																<input id="q-input" name="q1" type="text" class="form-control mrgn-lft-md full-width">
-																
-															</div>
-															<div class="col-sm-2">
-																<a href="#" class="btn btn-default btn-sm full-width" id="add-question">Add</a>
-															</div>
-														</div>
-													</div>
-												</div>
-												
-											</li>
-											<li class="checkbox">
-												<input type="checkbox" id="cond3">
-												<label for="cond3">Medical documents related to your illness or injury</label>
-											</li>
-										</details>
-										<details id="details-panel2" style="padding:32px;">
-											<summary>Tinnitus</summary>
-											<li class="checkbox mrgn-bttm-lg">
-												<input type="checkbox" id="panel2-cond4">
-												<label for="panel2-cond4">Your current medications
-												</label>
-												<ul id="panel2-medication-list" class="mrgn-tp-sm mrgn-bttm-sm mrgn-lft-xl lst-spcd" style="font-size: 18px;">
-												</ul>
-												<div class="row mrgn-tp-md">
-													<div class="col-sm-offset-1 col-md-11">
-														<label for="panel2-med1" class="wb-inv">Medication 1</label>
-														<div class="row">
-															<div class="col-sm-10 col-md-8">
-																<input id="panel2-med-input" name="panel2-med1" type="text" class="form-control mrgn-lft-md full-width">
-																
-															</div>
-															<div class="col-sm-2">
-																<a href="#" class="btn btn-default btn-sm full-width" id="panel2-add-medication">Add</a>
-															</div>
-														</div>
-													</div>
-												</div>
-												
-											</li>
-											<li class="checkbox mrgn-bttm-lg">
-												<input type="checkbox" id="panel2-q1">
-												<label for="panel2-q1">Questions you'd like to ask the Medical Officer
-												</label>
-												<ul id="panel2-q-list" class="mrgn-tp-sm mrgn-bttm-sm mrgn-lft-xl lst-spcd" style="font-size: 18px;">
-												</ul>
-												<div class="row mrgn-tp-md">
-													<div class="col-sm-offset-1 col-md-11">
-														<label for="panel2-q1" class="wb-inv">Questions 1</label>
-														<div class="row">
-															<div class="col-sm-10 col-md-8">
-																<input id="panel2-q-input" name="panel2-q1" type="text" class="form-control mrgn-lft-md full-width">
-																
-															</div>
-															<div class="col-sm-2">
-																<a href="#" class="btn btn-default btn-sm full-width" id="panel2-add-question">Add</a>
-															</div>
-														</div>
-													</div>
-												</div>
-												
-											</li>
-											<li class="checkbox">
-												<input type="checkbox" id="panel2-cond3">
-												<label for="panel2-cond3">Medical documents related to your illness or injury</label>
-											</li>
-										</details>
-										<details id="details-panel3" style="padding:32px;">
-											<summary>Tuberculosis</summary>
-											<li class="checkbox mrgn-bttm-lg">
-												<input type="checkbox" id="panel3-cond4">
-												<label for="panel3-cond4">Your current medications
-												</label>
-												<ul id="panel3-medication-list" class="mrgn-tp-sm mrgn-bttm-sm mrgn-lft-xl lst-spcd" style="font-size: 18px;">
-												</ul>
-												<div class="row mrgn-tp-md">
-													<div class="col-sm-offset-1 col-md-11">
-														<label for="panel3-med1" class="wb-inv">Medication 1</label>
-														<div class="row">
-															<div class="col-sm-10 col-md-8">
-																<input id="panel3-med-input" name="panel3-med1" type="text" class="form-control mrgn-lft-md full-width">
-																
-															</div>
-															<div class="col-sm-2">
-																<a href="#" class="btn btn-default btn-sm full-width" id="panel3-add-medication">Add</a>
-															</div>
-														</div>
-													</div>
-												</div>
-												
-											</li>
-											<li class="checkbox mrgn-bttm-lg">
-												<input type="checkbox" id="panel3-q1">
-												<label for="panel3-q1">Questions you'd like to ask the Medical Officer
-												</label>
-												<ul id="panel3-q-list" class="mrgn-tp-sm mrgn-bttm-sm mrgn-lft-xl lst-spcd" style="font-size: 18px;">
-												</ul>
-												<div class="row mrgn-tp-md">
-													<div class="col-sm-offset-1 col-md-11">
-														<label for="panel3-q1" class="wb-inv">Questions 1</label>
-														<div class="row">
-															<div class="col-sm-10 col-md-8">
-																<input id="panel3-q-input" name="panel3-q1" type="text" class="form-control mrgn-lft-md full-width">
-																
-															</div>
-															<div class="col-sm-2">
-																<a href="#" class="btn btn-default btn-sm full-width" id="panel3-add-question">Add</a>
-															</div>
-														</div>
-													</div>
-												</div>
-												
-											</li>
-											<li class="checkbox">
-												<input type="checkbox" id="panel3-cond3">
-												<label for="panel3-cond3">Medical documents related to your illness or injury</label>
-											</li>
-										</details>
-									</div>
-								
-								</div>
-
-								
-							</fieldset>
+						<div class="col-md-8">
+							<!--
+						<div class="alert alert-success mrgn-tp-md">
+							<h2 class="h3">Your consent for virtual medical reassessment has been documented</h2>
+							<p>You can find a copy of the submitted consent in your <a href="#">submitted forms and documents</a></p>
 						</div>-->
-<!--
-						<div id="vma-checklist" class="col-md-8 col-sm-12 col-xs-12" style="padding-left: 0;">
-							<fieldset class="gc-chckbxrdio">
-								<legend>
-									<h2 id="checklist">Checklist</h2>
-								</legend>
-								<h3>You have...</h3>
+
+						<!--
+						<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0" id="questionnaire0">
+							<legend class="required">I can do my usual household activities (prepare meals, do basic household maintenance, etc.).&nbsp;<strong class="required">(required)</strong></legend>
+							<ul class="list-unstyled lst-spcd-2">
+								<li class="radio ">
+									<input type="radio" id="questionnaire0-1" name="questionnaire0">
+									<label for="questionnaire0-1">Yes</label>
+								</li>
+								<li class="radio ">
+									<input type="radio" id="questionnaire0-2" name="questionnaire0">
+									<label for="questionnaire0-2">Yes, with adaptations or assistance</label>
+								</li>
+								<li class="radio ">
+									<input type="radio" id="questionnaire0-3" name="questionnaire0">
+									<label for="questionnaire0-3">No</label>
+								</li>
+
+							</ul>
+						</fieldset>-->
+
+							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline" id="questionnaire1">
+								<legend class="required">I can do my usual household activities (prepare meals, do basic household maintenance, etc.).&nbsp;<strong class="required">(required)</strong></legend>
 								<ul class="list-unstyled lst-spcd-2">
-									<li class="checkbox">
-										<input type="checkbox" id="check1">
-										<label for="check1">Filled out and returned any forms, such as, Quality&nbsp;of&nbsp;Life&nbsp;Questionnaire(s) (PEN&nbsp;50e)</label>
+									<li class="radio label-inline">
+										<input type="radio" id="questionnaire1-1" name="questionnaire1">
+										<label for="questionnaire1-1">Yes</label>
 									</li>
-									
+									<li class="radio label-inline">
+										<input type="radio" id="questionnaire1-2" name="questionnaire1">
+										<label for="questionnaire1-2">Yes, with adaptations or assistance</label>
+									</li>
+									<li class="radio label-inline">
+										<input type="radio" id="questionnaire1-3" name="questionnaire1">
+										<label for="questionnaire1-3">No</label>
+									</li>
+
 								</ul>
 							</fieldset>
-							<fieldset class="gc-chckbxrdio">
-								<legend>
-									<h2 id="what-to-bring">What to bring</h2>
-								</legend>
-								
+
+							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline" id="questionnaire2">
+								<legend class="required">I can shop and/or do errands.&nbsp;<strong class="required">(required)</strong></legend>
 								<ul class="list-unstyled lst-spcd-2">
-									<li class="checkbox">
-										<input type="checkbox" id="cond6">
-										<label for="cond6">Something to take notes with (pen and paper, tablet,&nbsp;etc.)
-										</label>
+									<li class="radio label-inline">
+										<input type="radio" id="questionnaire2-1" name="questionnaire2">
+										<label for="questionnaire2-1">Yes</label>
 									</li>
+									<li class="radio label-inline">
+										<input type="radio" id="questionnaire2-2" name="questionnaire2">
+										<label for="questionnaire2-2">Yes, with adaptations or assistance</label>
+									</li>
+									<li class="radio label-inline">
+										<input type="radio" id="questionnaire2-3" name="questionnaire2">
+										<label for="questionnaire2-3">No</label>
+									</li>
+
 								</ul>
 							</fieldset>
-							
+
+							<p class="mrgn-tp-lg">....</p>
+
+							<!--
+						<p id="appt-select-label" style="font-size: 22px;"><strong>Select an appointment date and time <span style="color: #d3080c;">(required)</span></strong></p>
+						<div class="mrgn-bttm-lg row">
+
+							<div class="wb-calevt col-md-5" data-calevt-src="calendar1">
+								<fieldset class="gc-chckbxrdio">
+									<ul class="list-unstyled lst-spcd-2">
+										<li class="radio">
+											<input type="radio" name="appt" id="appt-1" name="appt">
+											<label for="appt-1">2024-03-11 at 2:00 PM</label>
+											<section class="hidden">
+												<h4><a href="https://www.canada.gc.ca"><time datetime="2024-03-11">March 11th 2024 at 2:00 PM</time></a></h4>
+											</section>
+										</li>
+										<li class="radio">
+											<input type="radio" name="appt" id="appt-2" name="appt">
+											<label for="appt-2">2024-03-14 at 11:30 AM</label>
+											<section class="hidden">
+												<h4><a href="#"><time datetime="2024-03-14">March 14th 2024 at 11:00 AM </time></a></h4>
+											</section>
+										</li>
+										<li class="radio">
+											<input type="radio" name="appt" id="appt-3" name="appt">
+											<label for="appt-3">2024-03-14 at 3:30 PM</label>
+											<section class="hidden">
+												<h4><a href="#"><time datetime="2024-03-14">March 14th 2024 at 3:30 PM </time></a></h4>
+											</section>
+										</li>
+										<li class="radio">
+											<input type="radio" name="appt" id="appt-4" name="appt">
+											<label for="appt-4">2024-03-15 at 10:30 AM</label>
+											<section class="hidden">
+												<h4><a href="#"><time datetime="2024-03-15">March 15th 2024 at 10:30 AM </time></a></h4>
+											</section>
+										</li>
+										<li class="radio">
+											<input type="radio" name="appt" id="appt-5" name="appt">
+											<label for="appt-5">2024-03-15 at 1:30 PM</label>
+											<section class="hidden">
+												<h4><a href="#"><time datetime="2024-03-15">March 15th 2024 at 1:30 PM</time></a></h4>
+											</section>
+										</li>
+									</ul>
+								</fieldset>
+							</div>
+							<div id="calendar1" class="col-md-6"></div>
+
+						</div>-->
+
+							<!--
+							<div id="vma-chaperone" class="col-xs-12" style="padding-left: 0;">
+								<fieldset class="gc-chckbxrdio">
+									<legend class="required">Would you like a chaperone to accompany you at your
+										virtual&nbsp;medical&nbsp;reassessment? <strong
+											class="required">(required)</strong></legend>
+									<ul class="list-unstyled lst-spcd-2">
+										<li class="radio">
+											<input type="radio" id="inlineRadio1" name="appt">
+											<label for="inlineRadio1">Yes</label>
+
+										</li>
+										<li class="radio">
+											<input type="radio" id="inlineRadio2" name="appt">
+											<label for="inlineRadio2">No</label>
+
+										</li>
+
+									</ul>
+
+									<div class="clearfix mrgn-tp-lg"></div>
+
+								</fieldset>
+
+
+								<fieldset class="gc-chckbxrdio hidden" id="chaperone-type">
+									<legend class="required">Do you have a chaperone, or would you prefer us to
+										provide&nbsp;one?&nbsp;<strong class="required">(required)</strong></legend>
+									<ul class="list-unstyled lst-spcd-2">
+										<li class="radio">
+											<input type="radio" name="chaperone" id="chaperone-1">
+											<label for="chaperone-1">You have your chaperone</label>
+										</li>
+										<li class="radio">
+											<input type="radio" name="chaperone" id="chaperone">
+											<label for="chaperone">You would prefer a chaperone is provided</label>
+										</li>
+
+									</ul>
+								</fieldset>
+
+								<div id="chaperone-details" class="hidden">
+									<div class="form-group">
+										<label for="fname1"><span class="field-name">Your chaperone's name</span>
+											(optional)</label>
+										<input class="form-control" id="fname1" name="fname1" type="text"
+											autocomplete="given-name" data-rule-minlength="2" />
+									</div>
+
+									<div class="form-group">
+										<label for="relationship1"><span class="field-name">Your relationship to your
+												chaperone</span> (optional)</label>
+										<input class="form-control" id="relationship1" name="relationship1" type="text"
+											data-rule-minlength="2" />
+									</div>
+								</div>
+
+
+							</div>
+
+							<div class="col-sm-12" style="padding-left: 0;">
+								<fieldset class="gc-chckbxrdio">
+									<legend class="required">What device will you be using for your virtual assessment?
+										<strong class="required">(required)</strong></legend>
+									<ul class="list-unstyled lst-spcd-2">
+										<li class="radio">
+											<input type="radio" name="device" id="device-1">
+											<label for="device-1">Mobile device</label>
+										</li>
+										<li class="radio">
+											<input type="radio" name="device" id="device">
+											<label for="device">Personal computer</label>
+										</li>
+
+									</ul>
+								</fieldset>
+
+							</div>
+						</div>
+
+					</div>
+					<div>
+
+					</div>
+				</div>-->
+
+
+							<div class="mrgn-tp-lg mrgn-bttm-lg">
+								<a class="btn btn-default btn-lg" href="vma-details.html"><span class="fa fa-arrow-left mrgn-rght-sm"></span> Previous: Tuberculosis</a>
+								<a class="btn btn-primary btn-lg" href="vma-review-questionnaire.html">Next: Review and submit<span class="fa fa-arrow-right mrgn-lft-sm"></span></a>
+								<!--
+					<a class="btn btn-text btn-lg">Cancel</a>-->
+							</div>
+							<!--
+				<h2 class="mrgn-tp-lg">Related links</h2>
+				<p ><a href="#">Virtul medical reassessment consent and guidelines</a></p>-->
+
 						</div>
 					</div>
-				</div>
-				<h2 class="mrgn-tp-lg">Related links</h2>
-				<p ><a href="#">Virtul medical reassessment consent and guidelines</a></p>
-
-			</div>
-			</div>
-		</section>-->
+		</section>
 		<section class="pagedetails container">
 			<h2 class="wb-inv">Page details</h2>
 			<div class="row">
@@ -654,7 +691,7 @@
 							<div class="clearfix hidden-xs"></div>
 							<dl id="wb-dtmd">
 								<dt>Date modified:</dt>
-								<dd><time property="dateModified">2024-01-16</time></dd>
+								<dd><time property="dateModified">2024-01-31</time></dd>
 							</dl>
 						</div>
 						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 hidden-xs text-right">
@@ -773,61 +810,42 @@
 
 
 	<script>
-		$( document ).on( "wb-ready.wb", function( event ) {
-			$('#add-medication').on('click', function(e){
-				e.preventDefault();
-				if ($('#med-input').val().length > 0) {
-					$('#medication-list').append("<li>" + $('#med-input').val() + "</li>")
-					$('#med-input').val('');
-				}
-				
-			});
+		$(document).ready(function () {
 
-			$('#panel2-add-medication').on('click', function(e){
-				e.preventDefault();
-				if ($('#panel2-med-input').val().length > 0) {
-					$('#panel2-medication-list').append("<li>" + $('#panel2-med-input').val() + "</li>")
-					$('#panel2-med-input').val('');
-				}
-				
-			});
+			$('#conditions').find('input').on('change', function () {
 
-			$('#panel3-add-medication').on('click', function(e){
-				e.preventDefault();
-				if ($('#panel3-med-input').val().length > 0) {
-					$('#panel3-medication-list').append("<li>" + $('#panel3-med-input').val() + "</li>")
-					$('#panel3-med-input').val('');
-				}
-				
-			});
-
-			$('#add-question').on('click', function(e){
-				e.preventDefault();
-				
-				if ($('#q-input').val().length > 0) { 
-					$('#q-list').append("<li>" + $('#q-input').val() + "</li>")
-					$('#q-input').val('');
+				if ($('#conditions2').prop('checked')) {
+					$('#incorrect-conditions').removeClass('hidden');
+				} else {
+					$('#incorrect-conditions').addClass('hidden');
 				}
 			});
 
-			$('#panel2-add-question').on('click', function(e){
-				e.preventDefault();
-				
-				if ($('#panel2-q-input').val().length > 0) { 
-					$('#panel2-q-list').append("<li>" + $('#panel2-q-input').val() + "</li>")
-					$('#panel2-q-input').val('');
+			$('#vma-chaperone').find('input').on('change', function () {
+
+				if ($('#inlineRadio1').prop('checked')) {
+					$('#chaperone-type').removeClass('hidden');
+				} else {
+					$('#chaperone-type').addClass('hidden');
 				}
 			});
 
-			$('#panel3-add-question').on('click', function(e){
-				e.preventDefault();
-				
-				if ($('#panel3-q-input').val().length > 0) { 
-					$('#panel3-q-list').append("<li>" + $('#panel3-q-input').val() + "</li>")
-					$('#panel3-q-input').val('');
+			$('#chaperone-type').find('input').on('change', function () {
+
+				if ($('#chaperone-1').prop('checked')) {
+					$('#chaperone-details').removeClass('hidden');
+				} else {
+					$('#chaperone-details').addClass('hidden');
 				}
-			});
+			}
+			);
+
+
+
+			//#inlineRadio1
+
 		});
+
 	</script>
 
 </body>

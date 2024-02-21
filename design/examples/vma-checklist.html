@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) <abbr>WET</abbr>-boew.github.io/wet-boew/License-en.html / <abbr>WET</abbr>-boew.github.io/wet-boew/Licence-fr.html -->
 
-	<title>Before your vitural medical reassessment</title>
+	<title>Gather your information</title>
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<link href="../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
@@ -350,14 +350,26 @@ s
 						</a>
 						<meta property="position" content="1">
 					</li>
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="vma-appointments.html">
+							<span property="name">Disability reassessments</span>
+						</a>
+						<meta property="position" content="2">
+					</li>
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="vma-overview.html">
+							<span property="name">Virtual medical assessment overview</span>
+						</a>
+						<meta property="position" content="3">
+					</li>
 				</ol>
 				<div class="hidden-sm hidden-md hidden-lg">
 					<ol>
 						<li>
 
-							<a property="item" typeof="WebPage" href="index.html">
+							<a property="item" typeof="WebPage" href="vma-overview.html">
 								<span class="fa fa-arrow-left"></span>
-								<span property="name">My VAC Account</span>
+								<span property="name">Virtual medical assessment overview</span>
 							</a>
 						</li>
 					</ol>
@@ -365,6 +377,7 @@ s
 
 				</div>
 			</div>
+		</nav>iv>
 		</nav>
 		<!--
         <div class="app-bar-mb container visible-xs-block hidden-print">
@@ -392,7 +405,7 @@ s
 						<section>
 							<div>
 								<h1 id="wb-cont" property="name">
-									Before your virtual medical reassessment
+									Gather your information
 								</h1>
 								<p class="lead">Gather necessary information and documents.</p>
 							</div>
@@ -413,7 +426,10 @@ s
 									<a href="vma-questionnaire.html" class="">Quality of life questionaire</a>
 								</li>
 								<li>
-									<a href="#" class="active">Before your assessment</a>
+									<a href="#" class="active">Gather your information</a>
+								</li>
+								<li>
+									<a href="#" class="disabled">Get ready for your assessment</a>
 								</li>
 								<li>
 									<a href="#" class="disabled">Appointment guide</a>
@@ -423,7 +439,7 @@ s
 
 						
 
-						<div class="col-md-8 col-sm-12 col-xs-12" style="padding-left: 0;"> 
+						<div class="col-md-7 col-sm-12 col-xs-12" style="padding-left: 0;"> 
 							<!--<fieldset class="gc-chckbxrdio">
 								<legend><h2>Quality of life questionaires</h2></legend>
 								<li class="checkbox">
@@ -560,26 +576,49 @@ s
 								</div>
 							</fieldset>-->
 							
-							
+							<fieldset class="gc-chckbxrdio">	
+								<h3 class="mrgn-tp-sm mrgn-bttm-0">Upload supporting documents (optional)</h3>
+								<p>Upload documents such as medical reports, medication lists</p>
+								<div class="well fileupload-buttonbar">
+									<label for="fileUpload" class="margin-left-none margin-bottom-none"> Select your file(s)
+									</label>
+									<ul>
+									  <li>Only send information related to your own file.</li>
+									  <li>Please keep the originals for your records.</li>
+									  <li>Files must be uploaded in one of the following formats: pdf, bmp, png, jpg, tiff, gif</li>
+									  
+									  <li>You may upload a total of 20 files (maximum upload size: 25&nbsp;MB)</li>
+									  
+									</ul>
+									<span id="user-id" class="btn btn-lg btn-default fileinput-button" title="No File Chosen"> <i class="glyphicon glyphicon-plus"></i>
+									  <span>Choose file(s)...</span>
+								
+									  <input type="file" name="fileUpload" accept="image/gif, image/png, image/jpeg, image/jpg, image/bmp, image/tif, image/tiff, application/pdf, .tif" id="fileUpload" multiple="">
+									  
+									</span>
+								
+									<div class="files"></div>
+								  </div>
+							</fieldset>
 							
 							<fieldset class="gc-chckbxrdio">
 								
-								<legend>
-									<h2 id="gather-info">Gather your information</h2>
-								</legend>
-								<h3 class="mrgn-tp-sm mrgn-bttm-lg">Medications</h3>
+								
+								<!---->
+								<h3 class="mrgn-tp-sm mrgn-bttm-lg">Your current medications (optional)</h3>
 								<li class="checkbox mrgn-bttm-lg">
-									<input type="checkbox" id="cond4">
-									<label for="cond4">Your current medications
+									<!--
+									<input type="checkbox" id="cond4">-->
+									<label for="cond4" class="wb-inv">Your current medications
 									</label>
-									<ul id="medication-list" class="mrgn-tp-sm mrgn-bttm-sm mrgn-lft-xl lst-spcd" style="font-size: 18px;">
+									<ul id="medication-list" class="mrgn-tp-sm mrgn-bttm-sm lst-spcd" style="font-size: 18px;">
 									</ul>
 									<div class="row mrgn-tp-md">
-										<div class="col-sm-offset-1 col-md-11">
+										<div class="col-md-11">
 											<label for="med1" class="wb-inv">Medication 1</label>
 											<div class="row">
 												<div class="col-sm-10 col-md-8">
-													<input id="med-input" name="med1" type="text" class="form-control mrgn-lft-md full-width">
+													<input id="med-input" name="med1" type="text" class="form-control full-width">
 													
 												</div>
 												<div class="col-sm-2">
@@ -593,20 +632,21 @@ s
 								
 							</fieldset>
 							<fieldset class="gc-chckbxrdio">
-								<h3 class="mrgn-tp-sm mrgn-bttm-lg">Questions</h3>
+								<h3 class="mrgn-tp-sm mrgn-bttm-lg">Questions you'd like to ask (optional)</h3>
 								<li class="checkbox mrgn-bttm-lg">
 									<li class="checkbox mrgn-bttm-lg">
+										<!--
 										<input type="checkbox" id="q1">
 										<label for="q1">Questions you'd like to ask the Medical Officer
-										</label>
-										<ul id="q-list" class="mrgn-tp-sm mrgn-bttm-sm mrgn-lft-xl lst-spcd" style="font-size: 18px;">
+										</label>-->
+										<ul id="q-list" class="mrgn-tp-sm mrgn-bttm-sm lst-spcd" style="font-size: 18px;">
 										</ul>
 										<div class="row mrgn-tp-md">
-											<div class="col-sm-offset-1 col-md-11">
+											<div class="col-md-11">
 												<label for="q1" class="wb-inv">Questions 1</label>
 												<div class="row">
 													<div class="col-sm-10 col-md-8">
-														<input id="q-input" name="q1" type="text" class="form-control mrgn-lft-md full-width">
+														<input id="q-input" name="q1" type="text" class="form-control full-width">
 														
 													</div>
 													<div class="col-sm-2">
@@ -619,29 +659,7 @@ s
 									</li>
 
 							</fieldset>
-							<fieldset class="gc-chckbxrdio">	
-								<h3 class="mrgn-tp-sm mrgn-bttm-lg">Supporting documents</h3>
-								<div class="well fileupload-buttonbar">
-									<label for="fileUpload" class="margin-left-none margin-bottom-none"> Select your file(s)
-									</label>
-									<ul>
-									  <li>Only send information related to your own file.</li>
-									  <li>Please keep the originals for your records.</li>
-									  <li>Files must be uploaded in one of the following formats: pdf, bmp, png, jpg, tiff, gif</li>
-									  
-									  <li>You may upload a total of 20 files (maximum upload size: 25 MB)</li>
-									  
-									</ul>
-									<span id="user-id" class="btn btn-lg btn-default fileinput-button" title="No File Chosen"> <i class="glyphicon glyphicon-plus"></i>
-									  <span>Choose file(s)...</span>
-								
-									  <input type="file" name="fileUpload" accept="image/gif, image/png, image/jpeg, image/jpg, image/bmp, image/tif, image/tiff, application/pdf, .tif" id="fileUpload" multiple="">
-									  
-									</span>
-								
-									<div class="files"></div>
-								  </div>
-							</fieldset>
+							<!--
 							<fieldset class="gc-chckbxrdio">
 								<legend>
 									<h2 id="test-your-equipment">Prepare and test your equipment</h2>
@@ -657,11 +675,6 @@ s
 										<input type="checkbox" id="cond13">
 										<label for="cond13">Make a <a href="https://support.microsoft.com/en-au/office/manage-your-call-settings-in-microsoft-teams-456cb611-3477-496f-b31a-6ab752a7595f#ID0EDPBBDDBD" target="_blank">test call</a></label>
 									</li>
-									<!--
-									<li class="checkbox">
-										<input type="checkbox" id="cond14">
-										<label for="cond14">Join from a non-Canadian Armed Forces network</label>
-									</li>-->
 
 								</ul>
 							</fieldset>
@@ -681,7 +694,7 @@ s
 										<label for="cond22">Have a way to position the device so you're in&nbsp;frame</a></label>
 									</li>
 								</ul>
-							</fieldset>
+							</fieldset>-->
 							<!--
 							<fieldset class="gc-chckbxrdio">
 								<legend>
@@ -717,18 +730,14 @@ s
 								</ul>
 							</fieldset>-->
 							<div class="mrgn-tp-lg mrgn-bttm-lg">
-								<a class="btn btn-primary btn-lg" href="vma-prepare.html">Continue</a>
+								<a class="btn btn-primary btn-lg" href="vma-get-ready.html">Next: Get ready for your assessment <span class="fa fa-arrow-right"></span> </a>
 							
 							</div>
 						</div>	
 
 						<div class="clearfix mrgn-tp-lg"></div>
 
-						<h2 class="mrgn-tp-lg">Related links</h2>
-						<ul>
-							<li><a href="#">Setting up your space</a></li>
-							<li><a href="#">Clothing tips</a></li>
-						</ul>
+				
 								
 
 
