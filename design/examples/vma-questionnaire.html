@@ -29,10 +29,10 @@
 			color: #333;
 		}
 
-		
-		
-		.provisional.gc-subway dl li ,
-		.provisional.gc-subway ul li  {
+
+
+		.provisional.gc-subway dl li,
+		.provisional.gc-subway ul li {
 			position: re;
 		}
 
@@ -106,7 +106,7 @@
 
 </head>
 
-<body vocab="http://schema.org/" typeof="WebPage">
+<body vocab="http://schema.org/" typeof="WebPage" class="cnt-wdth-lmtd">
 	<div class="bg-warning" style="padding:16px;">
 		<div class="container">
 			<p>This is a conceptual prototype. It may not represent the final design or functionality.</p>
@@ -380,8 +380,12 @@
 						<section>
 							<div>
 								<h1 id="wb-cont" property="name">
-									Confirm your virtual medical assessment details
+									Quality of Life Questionnaire
 								</h1>
+								<p class="lead">This questionnaire is intended to evaluate how your daily life is affected by your
+									condition.</p>
+								<h2>Obstructive Sleep Apnea</h2>
+								
 							</div>
 						</section>
 						<nav class="provisional gc-subway pull-right mrgn-tp-0 col-md-4 col-sm-12 col-xs-12"
@@ -392,11 +396,22 @@
 								<li class="complete">
 									<a href="#" class="disabled ">Consent and guidelines</a>
 								</li>
-								<li>
+								<li class="complete">
 									<a href="#" class="active">Confirm your details</a>
 								</li>
 								<li>
-									<a href="#" class="disabled">Quality of life questionnaire</a>
+									<a href="#" class="active">Quality of life questionnaire</a>
+									<ul class="">
+										<li>
+											<a href="#" class="hidden-xs hidden-sm active">Obstructive Sleep Apnea</a>
+										</li>
+										<li>
+											<a href="#" class="hidden-xs hidden-sm ">Tinnitus</a>
+										</li>
+										<li>
+											<a href="#" class="hidden-xs hidden-sm ">Tuberculosis</a>
+										</li>
+									</ul>
 								</li>
 								<li>
 									<a href="#" class="disabled">Before your assessment</a>
@@ -413,34 +428,47 @@
 							<h2 class="h3">Your consent for virtual medical reassessment has been documented</h2>
 							<p>You can find a copy of the submitted consent in your <a href="#">submitted forms and documents</a></p>
 						</div>-->
-							<!---->
-							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0" id="conditions">
-								<legend class="required">Are the conditions you would like to talk about at your
-									reassessment?&nbsp;<strong class="required">(required)</strong></legend>
-								<ul class="mrgn-lft-md">
-									<li>Obstructive Sleep Apnea</li>
-									<li>Tinnitus</li>
-									<li>Tuberculosis</li>
-								</ul>
-								<ul class="list-unstyled lst-spcd-2">
-									<li class="radio">
-										<input type="radio" id="conditions1" name="conditions">
-										<label for="conditions1">Yes</label>
 
+							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline" id="questionnaire1">
+								<legend class="required">I can do my usual household activities (prepare meals, do basic household maintenance, etc.).&nbsp;<strong class="required">(required)</strong></legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="radio label-inline">
+										<input type="radio" id="questionnaire1-1" name="questionnaire1">
+										<label for="questionnaire1-1">Yes</label>
 									</li>
-									<li class="radio">
-										<input type="radio" id="conditions2" name="conditions">
-										<label for="conditions2">No</label>
+									<li class="radio label-inline">
+										<input type="radio" id="questionnaire1-2" name="questionnaire1">
+										<label for="questionnaire1-2">Yes, with adaptations or assistance</label>
+									</li>
+									<li class="radio label-inline">
+										<input type="radio" id="questionnaire1-3" name="questionnaire1">
+										<label for="questionnaire1-3">No</label>
 									</li>
 
 								</ul>
 							</fieldset>
 
-							<section id="incorrect-conditions" class="hidden alert alert-warning mrgn-tp-0">
-								<h3>Contact us before continuing</h3>
-								<p>If the conditions display above are incorrect please <a href="#">contact us</a>
-									before continuing.</p>
-							</section>
+							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline" id="questionnaire2">
+								<legend class="required">I can shop and/or do errands.&nbsp;<strong class="required">(required)</strong></legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="radio label-inline">
+										<input type="radio" id="questionnaire2-1" name="questionnaire2">
+										<label for="questionnaire2-1">Yes</label>
+									</li>
+									<li class="radio label-inline">
+										<input type="radio" id="questionnaire2-2" name="questionnaire2">
+										<label for="questionnaire2-2">Yes, with adaptations or assistance</label>
+									</li>
+									<li class="radio label-inline">
+										<input type="radio" id="questionnaire2-3" name="questionnaire2">
+										<label for="questionnaire2-3">No</label>
+									</li>
+
+								</ul>
+							</fieldset>
+
+							<p class="mrgn-tp-lg">....</p>
+
 							<!--
 						<p id="appt-select-label" style="font-size: 22px;"><strong>Select an appointment date and time <span style="color: #d3080c;">(required)</span></strong></p>
 						<div class="mrgn-bttm-lg row">
@@ -490,7 +518,7 @@
 
 						</div>-->
 
-
+							<!--
 							<div id="vma-chaperone" class="col-xs-12" style="padding-left: 0;">
 								<fieldset class="gc-chckbxrdio">
 									<legend class="required">Would you like a chaperone to accompany you at your
@@ -574,20 +602,20 @@
 					<div>
 
 					</div>
-				</div>
+				</div>-->
 
 
-				<div class="mrgn-tp-lg mrgn-bttm-lg">
-					<a class="btn btn-success btn-lg" href="vma-questionnaire.html">Continue</a>
-					<!--
+							<div class="mrgn-tp-lg mrgn-bttm-lg">
+								<a class="btn btn-primary btn-lg" href="vma-checklist.html">Continue</a>
+								<!--
 					<a class="btn btn-text btn-lg">Cancel</a>-->
-				</div>
-				<!--
+							</div>
+							<!--
 				<h2 class="mrgn-tp-lg">Related links</h2>
 				<p ><a href="#">Virtul medical reassessment consent and guidelines</a></p>-->
 
-			</div>
-			</div>
+						</div>
+					</div>
 		</section>
 		<section class="pagedetails container">
 			<h2 class="wb-inv">Page details</h2>

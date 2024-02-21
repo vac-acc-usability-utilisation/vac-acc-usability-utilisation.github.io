@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) <abbr>WET</abbr>-boew.github.io/wet-boew/License-en.html / <abbr>WET</abbr>-boew.github.io/wet-boew/Licence-fr.html -->
 
-	<title>Vitural assessment</title>
+	<title>Virtual assessment</title>
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<link href="../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
@@ -19,6 +19,25 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
 	<style>
+
+		/* */
+		.gc-subway a.disabled {
+			text-decoration: none;
+			cursor: not-allowed;
+		}
+
+		.gc-subway a.disabled:visited {
+			color: #333;
+		}
+
+
+		.provisional.gc-subway dl li a.disabled:focus::before, .provisional.gc-subway dl li a.disabled:hover::before, .provisional.gc-subway ul li a.disabled:focus::before, .provisional.gc-subway ul li a.disabled:hover::before {
+			height: 1.2em;
+			left:  .05em;
+			margin-top:  0;
+			width: 1.2em;
+		}
+		
 		.accnt-menu [role=menuitem] {
 
 			width: auto;
@@ -279,7 +298,7 @@
 			<div class="container">
 				<ol class="breadcrumb hidden-xs" typeof="BreadcrumbList">
 					<li property="itemListElement" typeof="ListItem">
-						<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
+						<a property="item" typeof="WebPage" href="index.html">
 							<span property="name">My VAC Account</span>
 						</a>
 						<meta property="position" content="1">
@@ -289,7 +308,7 @@
 					<ol>
 						<li>
 
-							<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
+							<a property="item" typeof="WebPage" href="index.html">
 								<span class="fa fa-arrow-left"></span>
 								<span property="name">My VAC Account</span>
 							</a>
@@ -322,60 +341,62 @@
 			</button>-->
 			
 				<div class="row">
-					<div class="col-xs-12">
+					<div class="col-xs-12 col-md-7">
 						<section>
 							<div>
 								<h1 id="wb-cont" property="name">
-									Virtual medical reassessment
+									Consent and guidelines
 								</h1>
 							</div>
-						</section>
-
-
-
-						<p class="lead">A virtual medical reassessment allows you to meet online with a <abbr title="">VAC</abbr>&nbsp;Medical&nbsp;Officer about a worsening condition.</p>
+						</section>						
 						
+						<p class="">Before you continue, please read through the consent and guidelines.</p>
+
 					</div>
-					<!--
+					
 					<nav class="provisional gc-subway pull-right col-md-4 col-sm-12 col-xs-12"
 						style="border-right:0; border-top:0; border-bottom: 0;">
 						<p class="h3 mrgn-tp-lg hidden-sm">Sections</p>
 						<p class="h3 mrgn-tp-0 visible-sm">Sections</p>
 						<ul>
 							<li>
-								<a href="#what-to-bring" class="active">Consent and guidelines</a>
+								<a href="#" class="active">Consent and guidelines</a>
 							</li>
 							<li>
-								<a href="#" class="disabled" disabled>What to bring</a>
+								<a href="#" class="disabled">Confirm your details</a>
 							</li>
 							<li>
-								<a href="#test-your-equipment">Prepare and test your&nbsp;equipment</a>
+								<a href="#" class="disabled">Quality of life questionnaire</a>
 							</li>
-							<li style="border-bottom: 0; border-left: 4px solid transparent;">
-								<a href="#prepare-your-space">Prepare your space</a>
+							<li>
+								<a href="#" class="disabled">Before your assessment</a>
+							</li>
+							<li>
+								<a href="#" class="disabled">Appointment guide</a>
 							</li>
 						</ul>
-					</nav>-->
-					<div class="col-sm-12 ">
-						<h2>Consent and guidelines</h2>
+					</nav>
+					<div class="col-sm-12 col-md-7">
+						<h2></h2>
+						
 
 						<h3>Meeting platform</h3>
-						<p>The reassessment will be conducted on Microsoft Teams, a videoconferencing platform.</p>
+						<p>The assessment will be conducted on Microsoft Teams, a videoconferencing platform.</p>
 
 						<h3>Potential impact on benefits</h3>
 
-						<p>If the reassessment confirms that your condition has worsened, your Disability Benefit will be adjusted accordingly – unless you already receive the maximum amount.</p>
+						<p>If the assessment confirms that your condition has worsened, your Disability Benefit will be adjusted accordingly – unless you already receive the maximum amount.</p>
 
 						<h3>Right to have a chaperone</h3>
 
-						<p>You have the right to a chaperone during the virtual medical reassessment.</p>
+						<p>You have the right to a chaperone during the virtual medical assessment.</p>
 						<p>You may:</p>
 						<ul>
-							<li>ask <abbr title="Veterans Affairs Canada">VAC</abbr> to provide a chaperone for the virtual medical reassessment</li>
-							<li>stop the virtual medical reassessment at any time to ask questions about what the Medical Officer is doing</li>
-							<li>stop the virtual medical reassessment and ask for a chaperone, even if you refused one at first</li>
+							<li>ask <abbr title="Veterans Affairs Canada">VAC</abbr> to provide a chaperone for the virtual medical assessment</li>
+							<li>stop the virtual medical assessment at any time to ask questions about what the Medical Officer is doing</li>
+							<li>stop the virtual medical assessment and ask for a chaperone, even if you refused one at first</li>
 						</ul>
-						<p>If you have questions or feel uncomfortable with a part of the reassessment, please ask the Medical Officer to stop and tell them about your concerns.
+						<p>If you have questions or feel uncomfortable with a part of the assessment, please ask the Medical Officer to stop and tell them about your concerns.
 						</p>
 
 						<!--https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/medical-exams/requirements-permanent-residents.html-->
@@ -384,7 +405,7 @@
 
 						<h3>Information disclosure</h3>
 
-						<p>You may need to disclose personal and medical information and attendance details during the virtual medical reassessment. This information is crucial for an accurate evaluation of your condition.</p>
+						<p>You may need to disclose personal and medical information and attendance details during the virtual medical assessment. This information is crucial for an accurate evaluation of your condition.</p>
 
 						<!--
 							- Do you consent to use MS Teams Video for this VMA?
@@ -394,22 +415,32 @@
 
 						<h3>Consent acknowledgment</h3>
 
-						<p>By clicking <strong>Continue</strong>, you acknowledge that you have read and understand the virtual medical reassessment consent information above. This acknowledgment signifies your agreement to participate in the reassessment process.</p>
+						<p>By clicking <strong>Continue</strong>, you acknowledge that you have read and understand the virtual medical assessment consent information above. This acknowledgment signifies your agreement to participate in the reassessment process.</p>
 
 						<div class="mrgn-tp-lg">
 						<a class="btn btn-success btn-lg" href="vma-details.html">Continue</a>
 
-						<a href="#centred-popup" aria-controls="centred-popup" class="wb-lbx btn btn-text btn-lg" role="button">Cancel your reassessment</a>
+						<a href="#centred-popup" aria-controls="centred-popup" class="wb-lbx btn btn-text btn-lg" role="button">Cancel your virtual assessment</a>
 
 						<section id="centred-popup" class="mfp-hide modal-dialog modal-content overlay-def">
 							<header class="modal-header">
-								<h2 class="modal-title">Cancel your assessment</h2>
+								<h2 class="modal-title">Cancel your virtual assessment</h2>
 							</header>
 							<div class="modal-body">
-								This will notify VAC that you are canceling your scheduled assessment.
+								<p>This will notify VAC that you are canceling your scheduled virutal&nbsp;assessment.</p>
+								<div class="wb-frmvld">
+									<form action="#" method="get" id="validation-example">
+										<div class="row">
+											<div class="form-group col-sm-11">
+												<label for="fname1" class="required"><span class="field-name">Type 'cancel my virtual assessment' to confirm.</span> <strong class="required">(required)</strong></label>
+												<input class="form-control full-width" id="fname1" name="fname1" type="text" autocomplete="given-name" required="required" data-rule-minlength="2" />
+											</div>
+										</div>
+									</form>
+								</div>
 							</div>
 							<div class="modal-footer">
-								<button class="btn btn-warning pull-left">Cancel your assessment</button>
+								<button class="btn btn-warning pull-left">Cancel your virtual assessment</button>
 								<button class="btn btn-default overlay-close popup-modal-dismiss pull-left">Close</button>
 							</div>
 						</section>

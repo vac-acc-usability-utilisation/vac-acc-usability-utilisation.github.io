@@ -19,12 +19,73 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
 	<style>
-		.accnt-menu [role=menuitem] {
+		/* */
+		.gc-subway a.disabled {
+			text-decoration: none;
+			cursor: not-allowed;
+		}
 
-			width: auto;
+		.gc-subway a.disabled:visited {
+			color: #333;
+		}
+s
+		.provisional.gc-subway dl li a,
+		.provisional.gc-subway ul li a {
+			position: relative;
+		}
+
+		.provisional.gc-subway dl li a::before,
+		.provisional.gc-subway ul li a::before {
+			position: absolute;
+			left: -34px;
 
 		}
 
+		
+		.provisional.gc-subway dl li a:focus::before,
+		.provisional.gc-subway dl li a:hover::before,
+		.provisional.gc-subway ul li a:focus::before,
+		.provisional.gc-subway ul li a:hover::before {
+			height: 1.2em;
+			position: absolute;
+			top: 4px !important;
+			left: -34px !important;
+			margin-top: 0 !important;
+			width: 1.2em !important;
+			height: 1.2em !important;
+		}
+
+		.provisional.gc-subway dl li.complete,
+		.provisional.gc-subway ul li.complete {
+			border-left: 4px solid #1b6c1c;
+			padding: 0 20px 30px 1em;
+		}
+
+
+		.provisional.gc-subway dl li.complete a::before,
+		.provisional.gc-subway ul li.complete a::before {
+			background-color: #1b6c1c;
+			border-color: #1b6c1c;
+			
+
+		}
+
+		.provisional.gc-subway dl li.complete a::after,
+		.provisional.gc-subway ul li.complete a::after {
+			color: #fff;
+			font-family: "Font Awesome 5 Free";
+			font-size: 13px;
+			font-weight: 600;
+			content: "\f00c";
+			position: absolute;
+			left: -28px;
+			top: 0px;
+			
+		}
+
+		.accnt-menu [role=menuitem] {
+			width: auto;
+		}
 
 		.accnt-menu [role=menu] {
 
@@ -41,34 +102,18 @@
 			padding-bottom: 0;
 		}
 
-		ul#app-mnu {}
-
 		@media screen and (max-width: 991px) {
 			ul#app-mnu {
 				padding: 0;
 			}
 		}
 
-		.gc-chckbxrdio input[type=checkbox]:disabled+label::before, .gc-chckbxrdio input[type=radio]:disabled+label::before,
-		.gc-chckbxrdio input[type=checkbox]:disabled+label::after, .gc-chckbxrdio input[type=radio]:disabled+label::after {
-			opacity: 0.5;
+
+		input[type=file] {
+			display: none;
 		}
 
-		#user-id {
-			position: relative;
-		}
-
-		.fileinput-button input {
-			position: absolute;
-			top: 0;
-			right: 0;
-			margin: 0;
-			opacity: 0;
-			-ms-filter: 'alpha(opacity=0)';
-			/*font-size: 200px !important;*/
-			direction: ltr;
-			cursor: pointer;
-		}
+		
 	</style>
 
 </head>
@@ -300,7 +345,7 @@
 			<div class="container">
 				<ol class="breadcrumb hidden-xs" typeof="BreadcrumbList">
 					<li property="itemListElement" typeof="ListItem">
-						<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
+						<a property="item" typeof="WebPage" href="index.html">
 							<span property="name">My VAC Account</span>
 						</a>
 						<meta property="position" content="1">
@@ -310,7 +355,7 @@
 					<ol>
 						<li>
 
-							<a property="item" typeof="WebPage" href="https://www.canada.ca/en.html">
+							<a property="item" typeof="WebPage" href="index.html">
 								<span class="fa fa-arrow-left"></span>
 								<span property="name">My VAC Account</span>
 							</a>
@@ -352,15 +397,74 @@
 								<p class="lead">Gather necessary information and documents.</p>
 							</div>
 						</section>
+
+						<nav class="provisional gc-subway pull-right mrgn-tp-0 col-md-4 col-sm-12 col-xs-12"
+							style="border-right:0; border-top:0; border-bottom: 0;">
+							<p class="h3 mrgn-tp-lg hidden-sm">Sections</p>
+							<p class="h3 mrgn-tp-0 visible-sm">Sections</p>
+							<ul>
+								<li class="complete">
+									<a href="#" class="disabled ">Consent and guidelines</a>
+								</li>
+								<li class="complete">
+									<a href="vma-details.html" class="">Confirm your details</a>
+								</li>
+								<li class="complete">
+									<a href="vma-questionnaire.html" class="">Quality of life questionaire</a>
+								</li>
+								<li>
+									<a href="#" class="active">Before your assessment</a>
+								</li>
+								<li>
+									<a href="#" class="disabled">Appointment guide</a>
+								</li>
+							</ul>
+						</nav>
+
 						
 
-						<div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 0;"> 
+						<div class="col-md-8 col-sm-12 col-xs-12" style="padding-left: 0;"> 
+							<!--<fieldset class="gc-chckbxrdio">
+								<legend><h2>Quality of life questionaires</h2></legend>
+								<li class="checkbox">
+									<input type="checkbox" id="qol1">
+									<label for="qol1">
+										Quality of Life Questionnaire for Obstructive&nbsp;Sleep&nbsp;Apnea
+									</label>
+									<ul class="list-unstyled mrgn-tp-sm mrgn-bttm-lg mrgn-lft-xl lst-spcd">
+										<li class="mrgn-lft-md"></strong>
+										</li>
+									</ul>
+									
+								</li>
+								<li class="checkbox">
+									<input type="checkbox" id="qol2">
+									<label for="qol2">
+										Quality of Life Questionnaire for Tinnitus
+									</label>
+									<ul class="list-unstyled mrgn-tp-sm mrgn-bttm-lg mrgn-lft-xl lst-spcd">
+										<li class="mrgn-lft-md"></strong>
+										</li>
+									</ul>
+									
+								</li>
+								<li class="checkbox">
+									<input type="checkbox" id="qol3">
+									<label for="qol3">
+										Quality of Life Questionnaire for Tuberculosis
+									</label>
+									<ul class="list-unstyled mrgn-tp-sm mrgn-bttm-lg mrgn-lft-xl lst-spcd">
+										<li class="mrgn-lft-md"></strong>
+										</li>
+									</ul>
+									
+								</li>
+							</fieldset> -->
+
+							<!--
 							<fieldset class="gc-chckbxrdio">
-								<!--
-								<legend>
-									<h2 id="checklist">heading</h2>
-								</legend>-->
 								
+							
 								<li class="checkbox">
 									<input type="checkbox" id="cond5" style="opacity: 0.5;" checked disabled>
 									<label for="cond5" style="opacity:1;">
@@ -454,43 +558,8 @@
 									  </table>
 									  
 								</div>
-							</fieldset>
-							<fieldset class="gc-chckbxrdio">
-								<legend><h2>Quality of life questionaires</h2></legend>
-								<li class="checkbox">
-									<input type="checkbox" id="qol1">
-									<label for="qol1">
-										Quality of Life Questionnaire for Obstructive&nbsp;Sleep&nbsp;Apnea
-									</label>
-									<ul class="list-unstyled mrgn-tp-sm mrgn-bttm-lg mrgn-lft-xl lst-spcd">
-										<li class="mrgn-lft-md"></strong>
-										</li>
-									</ul>
-									
-								</li>
-								<li class="checkbox">
-									<input type="checkbox" id="qol2">
-									<label for="qol2">
-										Quality of Life Questionnaire for Tinnitus
-									</label>
-									<ul class="list-unstyled mrgn-tp-sm mrgn-bttm-lg mrgn-lft-xl lst-spcd">
-										<li class="mrgn-lft-md"></strong>
-										</li>
-									</ul>
-									
-								</li>
-								<li class="checkbox">
-									<input type="checkbox" id="qol3">
-									<label for="qol3">
-										Quality of Life Questionnaire for Tuberculosis
-									</label>
-									<ul class="list-unstyled mrgn-tp-sm mrgn-bttm-lg mrgn-lft-xl lst-spcd">
-										<li class="mrgn-lft-md"></strong>
-										</li>
-									</ul>
-									
-								</li>
-							</fieldset>
+							</fieldset>-->
+							
 							
 							
 							<fieldset class="gc-chckbxrdio">
@@ -573,6 +642,46 @@
 									<div class="files"></div>
 								  </div>
 							</fieldset>
+							<fieldset class="gc-chckbxrdio">
+								<legend>
+									<h2 id="test-your-equipment">Prepare and test your equipment</h2>
+								</legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="cond12">
+										<label for="cond12">Download and install <a
+												href="https://www.microsoft.com/en-ca/microsoft-teams/download-app"
+												target="_blank">Microsoft Teams</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond13">
+										<label for="cond13">Make a <a href="https://support.microsoft.com/en-au/office/manage-your-call-settings-in-microsoft-teams-456cb611-3477-496f-b31a-6ab752a7595f#ID0EDPBBDDBD" target="_blank">test call</a></label>
+									</li>
+									<!--
+									<li class="checkbox">
+										<input type="checkbox" id="cond14">
+										<label for="cond14">Join from a non-Canadian Armed Forces network</label>
+									</li>-->
+
+								</ul>
+							</fieldset>
+							<p><strong>Note:</strong> Still-serving <abbr title="Canadian Armed Forces">CAF</abbr> members must access the virtual assessment from outside the <abbr title="Canadian Armed Forces">CAF</abbr> firewall.</p>
+							<fieldset class="gc-chckbxrdio">
+								<legend>
+									<h2 id="prepare-your-space">Prepare your space</h2>
+								</legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="cond21">
+										<label for="cond21">Find a private, quiet, and well-lit place for your
+											visit without&nbsp;distractions</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond22">
+										<label for="cond22">Have a way to position the device so you're in&nbsp;frame</a></label>
+									</li>
+								</ul>
+							</fieldset>
 							<!--
 							<fieldset class="gc-chckbxrdio">
 								<legend>
@@ -608,10 +717,18 @@
 								</ul>
 							</fieldset>-->
 							<div class="mrgn-tp-lg mrgn-bttm-lg">
-								<a class="btn btn-success btn-lg" href="vma-prepare.html">Continue</a>
+								<a class="btn btn-primary btn-lg" href="vma-prepare.html">Continue</a>
 							
 							</div>
 						</div>	
+
+						<div class="clearfix mrgn-tp-lg"></div>
+
+						<h2 class="mrgn-tp-lg">Related links</h2>
+						<ul>
+							<li><a href="#">Setting up your space</a></li>
+							<li><a href="#">Clothing tips</a></li>
+						</ul>
 								
 
 
