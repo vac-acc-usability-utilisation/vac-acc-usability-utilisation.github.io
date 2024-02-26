@@ -19,12 +19,73 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
 	<style>
-		.accnt-menu [role=menuitem] {
+		/* */
+		.gc-subway a.disabled {
+			text-decoration: none;
+			cursor: not-allowed;
+		}
 
-			width: auto;
+		.gc-subway a.disabled:visited {
+			color: #333;
+		}
+s
+		.provisional.gc-subway dl li a,
+		.provisional.gc-subway ul li a {
+			position: relative;
+		}
+
+		.provisional.gc-subway dl li a::before,
+		.provisional.gc-subway ul li a::before {
+			position: absolute;
+			left: -34px;
 
 		}
 
+		
+		.provisional.gc-subway dl li a:focus::before,
+		.provisional.gc-subway dl li a:hover::before,
+		.provisional.gc-subway ul li a:focus::before,
+		.provisional.gc-subway ul li a:hover::before {
+			height: 1.2em;
+			position: absolute;
+			top: 4px !important;
+			left: -34px !important;
+			margin-top: 0 !important;
+			width: 1.2em !important;
+			height: 1.2em !important;
+		}
+
+		.provisional.gc-subway dl li.complete,
+		.provisional.gc-subway ul li.complete {
+			border-left: 4px solid #1b6c1c;
+			padding: 0 20px 30px 1em;
+		}
+
+
+		.provisional.gc-subway dl li.complete a::before,
+		.provisional.gc-subway ul li.complete a::before {
+			background-color: #1b6c1c;
+			border-color: #1b6c1c;
+			
+
+		}
+
+		.provisional.gc-subway dl li.complete a::after,
+		.provisional.gc-subway ul li.complete a::after {
+			color: #fff;
+			font-family: "Font Awesome 5 Free";
+			font-size: 13px;
+			font-weight: 600;
+			content: "\f00c";
+			position: absolute;
+			left: -28px;
+			top: 0px;
+			
+		}
+
+		.accnt-menu [role=menuitem] {
+			width: auto;
+		}
 
 		.accnt-menu [role=menu] {
 
@@ -41,30 +102,18 @@
 			padding-bottom: 0;
 		}
 
-		ul#app-mnu {}
-
 		@media screen and (max-width: 991px) {
 			ul#app-mnu {
 				padding: 0;
 			}
 		}
 
-		.gc-chckbxrdio input[type=checkbox]:disabled+label::before, .gc-chckbxrdio input[type=radio]:disabled+label::before,
-		.gc-chckbxrdio input[type=checkbox]:disabled+label::after, .gc-chckbxrdio input[type=radio]:disabled+label::after {
-			opacity: 0.5;
+
+		input[type=file] {
+			display: none;
 		}
 
-		.fileinput-button input {
-			position: absolute;
-			top: 0;
-			right: 0;
-			margin: 0;
-			opacity: 0;
-			-ms-filter: 'alpha(opacity=0)';
-			font-size: 200px !important;
-			direction: ltr;
-			cursor: pointer;
-		}
+		
 	</style>
 
 </head>
@@ -361,14 +410,40 @@
 								<p class="lead">Use this appointment guide during your virtual&nbsp;medical&nbsp;reassessment.</p>
 							</div>
 						</section>
+
+						<nav class="provisional gc-subway pull-right mrgn-tp-0 col-md-4 col-sm-12 col-xs-12"
+							style="border-right:0; border-top:0; border-bottom: 0;">
+							<p class="h3 mrgn-tp-0 hidden-sm">Steps</p>
+							<p class="h3 mrgn-tp-0 visible-sm">Steps</p>
+							<ul>
+								<li class="complete">
+									<a href="#" class="disabled ">Consent and guidelines</a>
+								</li>
+								<li class="complete">
+									<a href="vma-details.html" class="">Confirm your details</a>
+								</li>
+								<li class="complete">
+									<a href="vma-questionnaire.html" class="">Quality of life questionaire</a>
+								</li>
+								<li class="complete">
+									<a href="#" class="">Gather your information</a>
+								</li>
+								<li class="complete">
+									<a href="#" class="">Get ready for your&nbsp;assessment</a>
+								</li>
+								<li>
+									<a href="#" class="active">Appointment guide</a>
+								</li>
+							</ul>
+						</nav>
 						
 
-						<div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 0;"> 
+						<div class="col-md-7 col-sm-12 col-xs-12" style="padding-left: 0;"> 
 							
 							
 
 							
-							<div style="background: none;" class="well well-lg brdr-bttm brdr-tp brdr-lft brdr-rght">
+							<div style="background: none;" class="">
 								
 								<div class="row">
 									<div class="col-sm-8">

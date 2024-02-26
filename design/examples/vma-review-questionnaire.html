@@ -28,8 +28,8 @@
 		.gc-subway a.disabled:visited {
 			color: #333;
 		}
-s
-		.provisional.gc-subway dl li a,
+
+		s .provisional.gc-subway dl li a,
 		.provisional.gc-subway ul li a {
 			position: relative;
 		}
@@ -41,7 +41,7 @@ s
 
 		}
 
-		
+
 		.provisional.gc-subway dl li a:focus::before,
 		.provisional.gc-subway dl li a:hover::before,
 		.provisional.gc-subway ul li a:focus::before,
@@ -66,7 +66,7 @@ s
 		.provisional.gc-subway ul li.complete a::before {
 			background-color: #1b6c1c;
 			border-color: #1b6c1c;
-			
+
 
 		}
 
@@ -80,7 +80,7 @@ s
 			position: absolute;
 			left: -28px;
 			top: 0px;
-			
+
 		}
 
 		.accnt-menu [role=menuitem] {
@@ -112,8 +112,6 @@ s
 		input[type=file] {
 			display: none;
 		}
-
-		
 	</style>
 
 </head>
@@ -406,10 +404,12 @@ s
 								<h1 id="wb-cont" property="name">
 									Quality of Life Questionnaire
 								</h1>
-								<p class="lead">This questionnaire is intended to evaluate how your daily life is affected by your
+								<p class="lead">This questionnaire is intended to evaluate how your daily life is
+									affected by your
 									condition.</p>
 								<h2>Review and submit</h2>
-								
+
+
 							</div>
 						</section>
 						<nav class="provisional gc-subway pull-right mrgn-tp-0 col-md-4 col-sm-12 col-xs-12"
@@ -452,163 +452,91 @@ s
 							</ul>
 						</nav>
 
-						<div class="col-md-8">
-							<!--
-						<div class="alert alert-success mrgn-tp-md">
-							<h2 class="h3">Your consent for virtual medical reassessment has been documented</h2>
-							<p>You can find a copy of the submitted consent in your <a href="#">submitted forms and documents</a></p>
-						</div>-->
+						<div class="col-md-7">
+							<h3>Obstructive Sleep Apnea</h3>
+							<div class="table-responsive">
+								<table id="use-of-funds-table" class="mrgn-bttm-0 table brdr-bttm">
+									<tbody>
 
 
-							<p class="mrgn-tp-lg">....</p>
 
-							<!--
-						<p id="appt-select-label" style="font-size: 22px;"><strong>Select an appointment date and time <span style="color: #d3080c;">(required)</span></strong></p>
-						<div class="mrgn-bttm-lg row">
+										<tr>
 
-							<div class="wb-calevt col-md-5" data-calevt-src="calendar1">
-								<fieldset class="gc-chckbxrdio">
-									<ul class="list-unstyled lst-spcd-2">
-										<li class="radio">
-											<input type="radio" name="appt" id="appt-1" name="appt">
-											<label for="appt-1">2024-03-11 at 2:00 PM</label>
-											<section class="hidden">
-												<h4><a href="https://www.canada.gc.ca"><time datetime="2024-03-11">March 11th 2024 at 2:00 PM</time></a></h4>
-											</section>
-										</li>
-										<li class="radio">
-											<input type="radio" name="appt" id="appt-2" name="appt">
-											<label for="appt-2">2024-03-14 at 11:30 AM</label>
-											<section class="hidden">
-												<h4><a href="#"><time datetime="2024-03-14">March 14th 2024 at 11:00 AM </time></a></h4>
-											</section>
-										</li>
-										<li class="radio">
-											<input type="radio" name="appt" id="appt-3" name="appt">
-											<label for="appt-3">2024-03-14 at 3:30 PM</label>
-											<section class="hidden">
-												<h4><a href="#"><time datetime="2024-03-14">March 14th 2024 at 3:30 PM </time></a></h4>
-											</section>
-										</li>
-										<li class="radio">
-											<input type="radio" name="appt" id="appt-4" name="appt">
-											<label for="appt-4">2024-03-15 at 10:30 AM</label>
-											<section class="hidden">
-												<h4><a href="#"><time datetime="2024-03-15">March 15th 2024 at 10:30 AM </time></a></h4>
-											</section>
-										</li>
-										<li class="radio">
-											<input type="radio" name="appt" id="appt-5" name="appt">
-											<label for="appt-5">2024-03-15 at 1:30 PM</label>
-											<section class="hidden">
-												<h4><a href="#"><time datetime="2024-03-15">March 15th 2024 at 1:30 PM</time></a></h4>
-											</section>
-										</li>
-									</ul>
-								</fieldset>
+											<th scope="row" class=" col-sm-7">
+												I can do my usual household activities (prepare meals, do basic household maintenance, etc.).
+											</th>
+
+
+
+											<td id="ans-describe-circumstances">
+												Yes, with adaptations or assistance
+											</td>
+											<td class="col-sm-1 text-right">
+
+												<a id="edit-describe-circumstances"
+													href="#"><span
+														class="fa fa-pencil mrgn-rght-sm"
+														aria-hidden="true"></span>Edit</a>
+
+											</td>
+										</tr>
+
+
+
+
+
+
+
+
+
+
+										<tr>
+
+											<th scope="row" class=" col-sm-7">
+												I can shop and/or do errands.
+
+											</th>
+
+
+
+											<td id="ans-liquid-assets-attestation">
+												Yes, with adaptations or assistance
+											</td>
+											<td class="col-sm-1 text-right">
+
+												<a id="edit-liquid-assets-attestation"
+													href="#"><span
+														class="fa fa-pencil mrgn-rght-sm"
+														aria-hidden="true"></span>Edit</a>
+
+											</td>
+										</tr>
+
+
+
+
+									</tbody>
+								</table>
 							</div>
-							<div id="calendar1" class="col-md-6"></div>
-
-						</div>-->
-
-							<!--
-							<div id="vma-chaperone" class="col-xs-12" style="padding-left: 0;">
-								<fieldset class="gc-chckbxrdio">
-									<legend class="required">Would you like a chaperone to accompany you at your
-										virtual&nbsp;medical&nbsp;reassessment? <strong
-											class="required">(required)</strong></legend>
-									<ul class="list-unstyled lst-spcd-2">
-										<li class="radio">
-											<input type="radio" id="inlineRadio1" name="appt">
-											<label for="inlineRadio1">Yes</label>
-
-										</li>
-										<li class="radio">
-											<input type="radio" id="inlineRadio2" name="appt">
-											<label for="inlineRadio2">No</label>
-
-										</li>
-
-									</ul>
-
-									<div class="clearfix mrgn-tp-lg"></div>
-
-								</fieldset>
-
-
-								<fieldset class="gc-chckbxrdio hidden" id="chaperone-type">
-									<legend class="required">Do you have a chaperone, or would you prefer us to
-										provide&nbsp;one?&nbsp;<strong class="required">(required)</strong></legend>
-									<ul class="list-unstyled lst-spcd-2">
-										<li class="radio">
-											<input type="radio" name="chaperone" id="chaperone-1">
-											<label for="chaperone-1">You have your chaperone</label>
-										</li>
-										<li class="radio">
-											<input type="radio" name="chaperone" id="chaperone">
-											<label for="chaperone">You would prefer a chaperone is provided</label>
-										</li>
-
-									</ul>
-								</fieldset>
-
-								<div id="chaperone-details" class="hidden">
-									<div class="form-group">
-										<label for="fname1"><span class="field-name">Your chaperone's name</span>
-											(optional)</label>
-										<input class="form-control" id="fname1" name="fname1" type="text"
-											autocomplete="given-name" data-rule-minlength="2" />
-									</div>
-
-									<div class="form-group">
-										<label for="relationship1"><span class="field-name">Your relationship to your
-												chaperone</span> (optional)</label>
-										<input class="form-control" id="relationship1" name="relationship1" type="text"
-											data-rule-minlength="2" />
-									</div>
-								</div>
-
-
-							</div>
-
-							<div class="col-sm-12" style="padding-left: 0;">
-								<fieldset class="gc-chckbxrdio">
-									<legend class="required">What device will you be using for your virtual assessment?
-										<strong class="required">(required)</strong></legend>
-									<ul class="list-unstyled lst-spcd-2">
-										<li class="radio">
-											<input type="radio" name="device" id="device-1">
-											<label for="device-1">Mobile device</label>
-										</li>
-										<li class="radio">
-											<input type="radio" name="device" id="device">
-											<label for="device">Personal computer</label>
-										</li>
-
-									</ul>
-								</fieldset>
-
-							</div>
-						</div>
-
-					</div>
-					<div>
-
-					</div>
-				</div>-->
-
-
+							<p>...</p>
 							<div class="mrgn-tp-lg mrgn-bttm-lg">
-								<a class="btn btn-primary btn-lg" href="vma-checklist.html">Next: Gather your information <span class="fa fa-arrow-right mrgn-lft-sm"></span></a>
+								<a class="btn btn-primary btn-lg" href="vma-checklist.html">Next: Gather your
+									information <span class="fa fa-arrow-right mrgn-lft-sm"></span></a>
 								<!--
-					<a class="btn btn-text btn-lg">Cancel</a>-->
+								<a class="btn btn-text btn-lg">Cancel</a>-->
 							</div>
-							<!--
+
+					</div>
+				</div>
+
+
+				
+				<!--
 				<h2 class="mrgn-tp-lg">Related links</h2>
 				<p ><a href="#">Virtul medical reassessment consent and guidelines</a></p>-->
 
-						</div>
-					</div>
+			</div>
+			</div>
 		</section>
 		<section class="pagedetails container">
 			<h2 class="wb-inv">Page details</h2>
