@@ -532,7 +532,7 @@
 
 
 								<fieldset class="gc-chckbxrdio hidden" id="chaperone-type">
-									<legend class="required">Do you have a chaperone, or would you fer us to
+									<legend class="required">Do you have a chaperone, or would you prefer us to
 										provide&nbsp;one?&nbsp;<strong class="required">(required)</strong></legend>
 									<ul class="list-unstyled lst-spcd-2">
 										<li class="radio">
@@ -764,8 +764,10 @@
 
 				if ($('#inlineRadio1').prop('checked')) {
 					$('#chaperone-type').removeClass('hidden');
+					$('#chaperone-details').removeClass('hidden');
 				} else {
 					$('#chaperone-type').addClass('hidden');
+					$('#chaperone-details').addClass('hidden');
 				}
 			});
 
