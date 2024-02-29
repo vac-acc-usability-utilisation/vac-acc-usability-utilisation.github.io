@@ -436,7 +436,7 @@
 								<ul class="mrgn-lft-0 mrgn-bttm-md" style="margin-left: -20px;">
 									<li>Obstructive Sleep Apnea</li>
 									<li>Tinnitus</li>
-									<li>Tuberculosis</li>
+									<li>Hearing Loss</li>
 								</ul>
 								<ul class="list-unstyled lst-spcd-2">
 									<li class="radio">
@@ -764,11 +764,18 @@
 
 				if ($('#inlineRadio1').prop('checked')) {
 					$('#chaperone-type').removeClass('hidden');
-					$('#chaperone-details').removeClass('hidden');
+					if ($('#chaperone-1').prop('checked')) {
+						$('#chaperone-details').removeClass('hidden');
+					}
 				} else {
 					$('#chaperone-type').addClass('hidden');
 					$('#chaperone-details').addClass('hidden');
+					if ($('#chaperone-1').prop('checked')) {
+						$('#chaperone-details').addClass('hidden');
+					}
 				}
+
+				
 			});
 
 			$('#chaperone-type').find('input').on('change', function () {
