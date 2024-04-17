@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) <abbr>WET</abbr>-boew.github.io/wet-boew/License-en.html / <abbr>WET</abbr>-boew.github.io/wet-boew/Licence-fr.html -->
 
-	<title>Disability reassessments</title>
+	<title>Quality of Life Questionnaire</title>
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<link href="../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
@@ -28,24 +28,64 @@
 		.gc-subway a.disabled:visited {
 			color: #333;
 		}
+s
+		.provisional.gc-subway dl li a,
+		.provisional.gc-subway ul li a {
+			position: relative;
+		}
 
+		.provisional.gc-subway dl li a::before,
+		.provisional.gc-subway ul li a::before {
+			position: absolute;
+			left: -34px;
 
-		.provisional.gc-subway dl li a.disabled:focus::before,
-		.provisional.gc-subway dl li a.disabled:hover::before,
-		.provisional.gc-subway ul li a.disabled:focus::before,
-		.provisional.gc-subway ul li a.disabled:hover::before {
+		}
+
+		
+		.provisional.gc-subway dl li a:focus::before,
+		.provisional.gc-subway dl li a:hover::before,
+		.provisional.gc-subway ul li a:focus::before,
+		.provisional.gc-subway ul li a:hover::before {
 			height: 1.2em;
-			left: .05em;
-			margin-top: 0;
-			width: 1.2em;
+			position: absolute;
+			top: 4px !important;
+			left: -34px !important;
+			margin-top: 0 !important;
+			width: 1.2em !important;
+			height: 1.2em !important;
+		}
+
+		.provisional.gc-subway dl li.complete,
+		.provisional.gc-subway ul li.complete {
+			border-left: 4px solid #1b6c1c;
+			padding: 0 20px 30px 1em;
+		}
+
+
+		.provisional.gc-subway dl li.complete a::before,
+		.provisional.gc-subway ul li.complete a::before {
+			background-color: #1b6c1c;
+			border-color: #1b6c1c;
+			
+
+		}
+
+		.provisional.gc-subway dl li.complete a::after,
+		.provisional.gc-subway ul li.complete a::after {
+			color: #fff;
+			font-family: "Font Awesome 5 Free";
+			font-size: 13px;
+			font-weight: 600;
+			content: "\f00c";
+			position: absolute;
+			left: -28px;
+			top: 0px;
+			
 		}
 
 		.accnt-menu [role=menuitem] {
-
 			width: auto;
-
 		}
-
 
 		.accnt-menu [role=menu] {
 
@@ -62,20 +102,20 @@
 			padding-bottom: 0;
 		}
 
-		ul#app-mnu {}
-
 		@media screen and (max-width: 991px) {
 			ul#app-mnu {
 				padding: 0;
 			}
 		}
 
-		/* Custom table selections */
 
-		tr:hover {
-			cursor: pointer;
+		input[type=file] {
+			display: none;
 		}
+
+		
 	</style>
+
 
 </head>
 
@@ -311,14 +351,26 @@
 						</a>
 						<meta property="position" content="1">
 					</li>
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="vma-appointments.html">
+							<span property="name">Disability reassessments</span>
+						</a>
+						<meta property="position" content="2">
+					</li>
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="vma-overview.html">
+							<span property="name">Virtual medical assessment overview</span>
+						</a>
+						<meta property="position" content="3">
+					</li>
 				</ol>
 				<div class="hidden-sm hidden-md hidden-lg">
 					<ol>
 						<li>
 
-							<a property="item" typeof="WebPage" href="index.html">
+							<a property="item" typeof="WebPage" href="vma-overview.html">
 								<span class="fa fa-arrow-left"></span>
-								<span property="name">My VAC Account</span>
+								<span property="name">Virtual medical assessment overview</span>
 							</a>
 						</li>
 					</ol>
@@ -349,120 +401,104 @@
 			</button>-->
 
 				<div class="row">
-					<div class="col-xs-12 ">
+					<div class="col-xs-12">
 						<section>
 							<div>
 								<h1 id="wb-cont" property="name">
-									Disability reassessments
+									Quality of Life Questionnaire
 								</h1>
+								<p class="lead">The questionnaire is intended to evaluate how your daily life is affected by your
+									condition.</p>
+								
 							</div>
 						</section>
+						<nav class="provisional gc-subway pull-right mrgn-tp-0 col-md-4 col-sm-12 col-xs-12"
+							style="border-right:0; border-top:0; border-bottom: 0;">
+							<p class="h3 mrgn-tp-lg hidden-sm">Steps</p>
+							<p class="h3 mrgn-tp-0 visible-sm">Steps</p>
+							<ul>
+								<li class="complete">
+									<a href="#" class="disabled ">Consent and guidelines</a>
+								</li>
+								<li class="complete">
+									<a href="#" class="active">Confirm your details</a>
+								</li>
+								<li>
+									<a href="#" class="active">Quality of Life Questionnaire</a>
+									<!--
+									<ul class="">
+										<li class="">
+											<a href="#" class="hidden-xs hidden-sm">Obstructive Sleep Apnea</a>
+										</li>
+										<li class="">
+											<a href="#" class="hidden-xs hidden-sm ">Tinnitus</a>
+										</li>
+										<li>
+											<a href="#" class="hidden-xs hidden-sm ">Hearing Loss</a>
+										</li>
+										<li>
+											<a href="#" class="hidden-xs hidden-sm ">Review and submit</a>
+										</li>
+									</ul>-->
+								</li>
+								<li>
+									<a href="#" class="disabled">Gather your information</a>
+								</li>
+								<li>
+									<a href="#" class="disabled">Get ready for your assessment</a>
+								</li>
+								<li>
+									<a href="#" class="disabled">Appointment guide</a>
+								</li>
+							</ul>
+						</nav>
+
+						<div class="col-md-8">
+							<!--
+						<div class="alert alert-success mrgn-tp-md">
+							<h2 class="h3">Your consent for virtual medical reassessment has been documented</h2>
+							<p>You can find a copy of the submitted consent in your <a href="#">submitted forms and documents</a></p>
+						</div>-->
+
+						
+						<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0" id="questionnaire0">
+							<legend class="required">Would you like to complete the Quality&nbsp;of&nbsp;Life&nbsp;Questionnaire&nbsp;now?&nbsp;<strong class="required">(required)</strong></legend>
+							<ul class="list-unstyled lst-spcd-2">
+								<li class="radio ">
+									<input type="radio" id="questionnaire0-1" name="questionnaire0" checked>
+									<label for="questionnaire0-1">Yes</label>
+								</li>
+								<li class="radio ">
+									<input type="radio" id="questionnaire0-2" name="questionnaire0">
+									<label for="questionnaire0-2">No</label>
+								</li>
+								<li class="radio ">
+									<input type="radio" id="questionnaire0-3" name="questionnaire0">
+									<label for="questionnaire0-3">You have already submitted the questionnaire </label>
+								</li>
+
+							</ul>
+						</fieldset>
+
+						<div id="recommend-questionnaire" class="alert alert-info hidden">
+							<h3>Quality of Life Questionnaire</h3>
+							<p> We recommend you complete the Quality of Life Questionnaire for an accurate assessment.</p>
+						</div>
 
 
-						<!--
-						<p class="lead">A virtual medical assessment allows you to meet online with a <abbr title="">VAC</abbr>&nbsp;Medical&nbsp;Officer about a worsening condition.</p>
-						-->
+							<div class="mrgn-tp-lg mrgn-bttm-lg">
+								<!--<a class="btn btn-default btn-lg mrgn-bttm-md" href="vma-details.html"><span class="fa fa-arrow-left mrgn-rght-sm"></span> Previous: Confirm your details</a>-->
+								<a id="next-questionnaire" class="btn btn-primary btn-lg mrgn-bttm-md" href="vma-questionnaire-condition.html">Next: Questionnaire for Obstructive Sleep Apnea <span class="fa fa-arrow-right mrgn-lft-sm"></span></a>
+								<a id="next-gather" class="btn btn-primary btn-lg mrgn-bttm-md hidden" href="vma-checklist.html">Next: Gather your information <span class="fa fa-arrow-right mrgn-lft-sm"></span></a>
+								<!--
+					<a class="btn btn-text btn-lg">Cancel</a>-->
+							</div>
+							<!--
+				<h2 class="mrgn-tp-lg">Related links</h2>
+				<p ><a href="#">Virtul medical reassessment consent and guidelines</a></p>-->
 
-
+						</div>
 					</div>
-					<!--
-					<nav class="provisional gc-subway pull-right col-md-4 col-sm-12 col-xs-12"
-						style="border-right:0; border-top:0; border-bottom: 0;">
-						<p class="h3 mrgn-tp-lg hidden-sm">Sections</p>
-						<p class="h3 mrgn-tp-0 visible-sm">Sections</p>
-						<ul>
-							<li>
-								<a href="#" class="active">Consent and guidelines</a>
-							</li>
-							<li>
-								<a href="#" class="disabled">Confirm your details</a>
-							</li>
-							<li>
-								<a href="#" class="disabled">Before your assessment</a>
-							</li>
-							<li>
-								<a href="#" class="disabled">Appointment guide</a>
-							</li>
-						</ul>
-					</nav>-->
-					<div class="col-sm-12 col-md-12">
-						<h2>Current virtual appointments</h2>
-
-						<!--<h3>Current</h3>-->
-						<table class="table table-striped table-hover" id="" aria-live="polite">
-							<thead>
-								<tr>
-
-									<th scope="col">Conditions</th>
-									<!--<th scope="col">Status</th>-->
-
-									<th scope="col">Requested date</th>
-
-									<th></th>
-
-								</tr>
-							</thead>
-							<tbody>
-								<tr id="virtual-appt-row-link">
-									<td>Obstructive Sleep Apnea, Tinnitus, Hearing Loss
-									</td>
-									<!--<td>Not started</td>-->
-
-									<td>2025-04-04</td>
-
-									<td> Not started </td>
-								</tr>
-
-								<tr>
-									<td><a href="vma-consent.html">Obstructive Sleep Apnea, Tinnitus, Hearing Loss</a>
-									</td>
-									<!--<td>Not started</td>-->
-
-									<td>2025-04-04</td>
-
-									<td> <a href="vma-consent.html" class="btn btn-sm btn-primary">Begin</a></td>
-								</tr>
-							</tbody>
-						</table>
-
-						<h2>Past virtual appointments</h2>
-						<table class="table table-striped " id="" aria-live="polite">
-							<thead>
-								<tr > 
-
-									<th scope="col">Conditions</th>
-									<!--<th scope="col">Status</th>-->
-
-									<th scope="col">Requested date</th>
-
-									<th></th>
-
-								</tr>
-							</thead>
-							<tbody>
-								<tr >
-									<td>Obstructive Sleep Apnea, Tinnitus, Hearing Loss	
-									</td>
-									<!--<td>Complete</td>-->
-
-									<td>2024-04-16</td>
-									<td>Canceled</td>
-								</tr>
-								<tr>
-									<td>Obstructive Sleep Apnea, Tinnitus, Hearing Loss	
-									</td>
-									<!--<td>Complete</td>-->
-
-									<td>2023-05-04</td>
-									<td>Completed</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-
-			</div>
-			</div>
 		</section>
 		<section class="pagedetails container">
 			<h2 class="wb-inv">Page details</h2>
@@ -487,7 +523,7 @@
 							<div class="clearfix hidden-xs"></div>
 							<dl id="wb-dtmd">
 								<dt>Date modified:</dt>
-								<dd><time property="dateModified">2024-01-23</time></dd>
+								<dd><time property="dateModified">2024-01-31</time></dd>
 							</dl>
 						</div>
 						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 hidden-xs text-right">
@@ -607,12 +643,30 @@
 
 	<script>
 		$(document).ready(function () {
-			rowLink = $('#virtual-appt-row-link');
 
-			$(rowLink).on('click', function(e) {
-				window.location.href = 'vma-consent.html';
-			})
-			
+			$('#questionnaire0').find('input').on('change', function () {
+				//console.log('quesionnaire change');
+				if ($('#questionnaire0-1').prop('checked')) {
+					//console.log('yes');
+					$('#next-questionnaire').removeClass('hidden');
+					$('#next-gather').addClass('hidden');
+					$('#recommend-questionnaire').addClass('hidden');
+				} 
+				else if ($('#questionnaire0-2').prop('checked') || $('#questionnaire0-3').prop('checked')) {
+					//console.log('no or already done');
+					$('#next-questionnaire').addClass('hidden');
+					$('#next-gather').removeClass('hidden');
+
+					if ($('#questionnaire0-2').prop('checked')) {
+						$('#recommend-questionnaire').removeClass('hidden');
+					}
+					else {
+						$('#recommend-questionnaire').addClass('hidden');
+					}
+				}
+			});
+
+			//#inlineRadio1
 
 		});
 

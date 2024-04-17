@@ -69,12 +69,6 @@
 				padding: 0;
 			}
 		}
-
-		/* Custom table selections */
-
-		tr:hover {
-			cursor: pointer;
-		}
 	</style>
 
 </head>
@@ -396,57 +390,40 @@
 									<th scope="col">Conditions</th>
 									<!--<th scope="col">Status</th>-->
 
-									<th scope="col">Requested date</th>
-
-									<th></th>
+									<th scope="col">Created date</th>
 
 								</tr>
 							</thead>
 							<tbody>
-								<tr id="virtual-appt-row-link">
-									<td>Obstructive Sleep Apnea, Tinnitus, Hearing Loss
-									</td>
-									<!--<td>Not started</td>-->
-
-									<td>2025-04-04</td>
-
-									<td> Not started </td>
-								</tr>
-
 								<tr>
 									<td><a href="vma-consent.html">Obstructive Sleep Apnea, Tinnitus, Hearing Loss</a>
 									</td>
 									<!--<td>Not started</td>-->
 
 									<td>2025-04-04</td>
-
-									<td> <a href="vma-consent.html" class="btn btn-sm btn-primary">Begin</a></td>
 								</tr>
 							</tbody>
 						</table>
 
 						<h2>Past virtual appointments</h2>
-						<table class="table table-striped " id="" aria-live="polite">
+						<table class="table table-striped" id="" aria-live="polite">
 							<thead>
-								<tr > 
+								<tr>
 
 									<th scope="col">Conditions</th>
 									<!--<th scope="col">Status</th>-->
 
-									<th scope="col">Requested date</th>
-
-									<th></th>
+									<th scope="col">Created date</th>
 
 								</tr>
 							</thead>
 							<tbody>
-								<tr >
+								<tr>
 									<td>Obstructive Sleep Apnea, Tinnitus, Hearing Loss	
 									</td>
 									<!--<td>Complete</td>-->
 
 									<td>2024-04-16</td>
-									<td>Canceled</td>
 								</tr>
 								<tr>
 									<td>Obstructive Sleep Apnea, Tinnitus, Hearing Loss	
@@ -454,7 +431,6 @@
 									<!--<td>Complete</td>-->
 
 									<td>2023-05-04</td>
-									<td>Completed</td>
 								</tr>
 							</tbody>
 						</table>
@@ -607,13 +583,30 @@
 
 	<script>
 		$(document).ready(function () {
-			rowLink = $('#virtual-appt-row-link');
+			vmaChecklistInputs = $('#vma-checklist').find('input');
 
-			$(rowLink).on('click', function(e) {
-				window.location.href = 'vma-consent.html';
-			})
-			
+			// load checkbox status
+			vmaChecklistInputs.each(function (i) {
+				var checkboxStatus = localStorage.getItem('vmaCheckbox' + i);
 
+				if (checkboxStatus === 'checked') {
+					this.checked = true;
+				} else {
+					this.checked = false;
+				}
+			});
+
+			// change event
+			$(vmaChecklistInputs).on('click', function (e) {
+
+				vmaChecklistInputs.each(function (i) {
+
+					//update localStorage
+					localStorage.setItem('vmaCheckbox' + i, this.checked ? 'checked' : 'not checked')
+
+				});
+
+			});
 		});
 
 	</script>

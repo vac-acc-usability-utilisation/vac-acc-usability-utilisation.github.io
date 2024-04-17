@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) <abbr>WET</abbr>-boew.github.io/wet-boew/License-en.html / <abbr>WET</abbr>-boew.github.io/wet-boew/Licence-fr.html -->
 
-	<title>Disability reassessments</title>
+	<title>Virtual assessment</title>
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<link href="../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
@@ -68,12 +68,6 @@
 			ul#app-mnu {
 				padding: 0;
 			}
-		}
-
-		/* Custom table selections */
-
-		tr:hover {
-			cursor: pointer;
 		}
 	</style>
 
@@ -311,6 +305,12 @@
 						</a>
 						<meta property="position" content="1">
 					</li>
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="vma-appointments.html">
+							<span property="name">Disability reassessments</span>
+						</a>
+						<meta property="position" content="2">
+					</li>
 				</ol>
 				<div class="hidden-sm hidden-md hidden-lg">
 					<ol>
@@ -353,16 +353,72 @@
 						<section>
 							<div>
 								<h1 id="wb-cont" property="name">
-									Disability reassessments
+									Virtual medical assessment
 								</h1>
 							</div>
 						</section>
 
 
-						<!--
+						
 						<p class="lead">A virtual medical assessment allows you to meet online with a <abbr title="">VAC</abbr>&nbsp;Medical&nbsp;Officer about a worsening condition.</p>
-						-->
+						
 
+						<dl>
+							<dt>Conditions</dt>
+							<dd>Obstructive Sleep Apnea, Tinnitus, Tuberculosis</dd>
+							<!--
+							<dt>Status</dt>
+							<dd>Not started</dd>
+
+							<dt>Created date</dt>
+							<dd>2024-03-01</dd>-->
+						</dl>
+						<!--
+						<nav class="provisional gc-subway">
+							<h2>Steps</h2>
+							<p>Use these steps to prepare for your virtual assessment.</p>
+							<dl>
+								<dt>
+									<a href="vma-consent.html">Consent and guidelines</a>
+								</dt>
+								<dd>
+									Before you continue, please read through the consent and guidelines.
+								</dd>
+								<dt>
+									<a href="#" class="disabled" style="text-decoration: underline;">Confirm your details</a>
+								</dt>
+								<dd>
+									Take a moment to review and confirm your assessment details.
+								</dd>
+								<dt>
+									<a href="#" class="disabled" style="text-decoration: underline;">Quality of life questionnaire</a>
+								</dt>
+								<dd>
+									This questionnaire is intended to evaluate how your daily life is affected by your condition.
+
+								</dd>
+								<dt>
+									<a href="#" class="disabled" style="text-decoration: underline;">Gather your information</a>
+								</dt>
+								<dd>
+									Gather necessary information and documents.
+								</dd>
+								<dt>
+									<a href="#" class="disabled" style="text-decoration: underline;">Get ready for your assessment</a>
+								</dt>
+								<dd>
+									Prepare your equipement and space for an effective assessment.
+								</dd>
+								<dt>
+									<a href="#" class="disabled" style="text-decoration: underline;">Appointment guide</a>
+								</dt>
+								<dd>
+									Use this appointment guide during your virtual medical reassessment.
+								</dd>
+							</dl>
+						</nav>-->
+
+						<a class="btn btn-lg btn-primary" href="vma-consent.html">Begin</a>
 
 					</div>
 					<!--
@@ -385,80 +441,7 @@
 							</li>
 						</ul>
 					</nav>-->
-					<div class="col-sm-12 col-md-12">
-						<h2>Current virtual appointments</h2>
-
-						<!--<h3>Current</h3>-->
-						<table class="table table-striped table-hover" id="" aria-live="polite">
-							<thead>
-								<tr>
-
-									<th scope="col">Conditions</th>
-									<!--<th scope="col">Status</th>-->
-
-									<th scope="col">Requested date</th>
-
-									<th></th>
-
-								</tr>
-							</thead>
-							<tbody>
-								<tr id="virtual-appt-row-link">
-									<td>Obstructive Sleep Apnea, Tinnitus, Hearing Loss
-									</td>
-									<!--<td>Not started</td>-->
-
-									<td>2025-04-04</td>
-
-									<td> Not started </td>
-								</tr>
-
-								<tr>
-									<td><a href="vma-consent.html">Obstructive Sleep Apnea, Tinnitus, Hearing Loss</a>
-									</td>
-									<!--<td>Not started</td>-->
-
-									<td>2025-04-04</td>
-
-									<td> <a href="vma-consent.html" class="btn btn-sm btn-primary">Begin</a></td>
-								</tr>
-							</tbody>
-						</table>
-
-						<h2>Past virtual appointments</h2>
-						<table class="table table-striped " id="" aria-live="polite">
-							<thead>
-								<tr > 
-
-									<th scope="col">Conditions</th>
-									<!--<th scope="col">Status</th>-->
-
-									<th scope="col">Requested date</th>
-
-									<th></th>
-
-								</tr>
-							</thead>
-							<tbody>
-								<tr >
-									<td>Obstructive Sleep Apnea, Tinnitus, Hearing Loss	
-									</td>
-									<!--<td>Complete</td>-->
-
-									<td>2024-04-16</td>
-									<td>Canceled</td>
-								</tr>
-								<tr>
-									<td>Obstructive Sleep Apnea, Tinnitus, Hearing Loss	
-									</td>
-									<!--<td>Complete</td>-->
-
-									<td>2023-05-04</td>
-									<td>Completed</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+					
 				</div>
 
 			</div>
@@ -607,13 +590,30 @@
 
 	<script>
 		$(document).ready(function () {
-			rowLink = $('#virtual-appt-row-link');
+			vmaChecklistInputs = $('#vma-checklist').find('input');
 
-			$(rowLink).on('click', function(e) {
-				window.location.href = 'vma-consent.html';
-			})
-			
+			// load checkbox status
+			vmaChecklistInputs.each(function (i) {
+				var checkboxStatus = localStorage.getItem('vmaCheckbox' + i);
 
+				if (checkboxStatus === 'checked') {
+					this.checked = true;
+				} else {
+					this.checked = false;
+				}
+			});
+
+			// change event
+			$(vmaChecklistInputs).on('click', function (e) {
+
+				vmaChecklistInputs.each(function (i) {
+
+					//update localStorage
+					localStorage.setItem('vmaCheckbox' + i, this.checked ? 'checked' : 'not checked')
+
+				});
+
+			});
 		});
 
 	</script>
