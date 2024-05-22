@@ -30,11 +30,7 @@
 		}
 
 		
-		
-		.provisional.gc-subway dl li ,
-		.provisional.gc-subway ul li  {
-			position: re;
-		}
+	
 
 
 		.provisional.gc-subway dl li a.disabled:focus::before,
@@ -60,7 +56,18 @@
 			border-color: #1b6c1c;
 
 		}
-
+		.provisional.gc-subway dl li.active a::after,
+		.provisional.gc-subway ul li.active a::after {
+			color: #fff;
+			font-family: "Font Awesome 5 Free";
+			font-size: 16px;
+			font-weight: 600;
+			content: "\f054";
+			position: absolute;
+			left: 10px;
+			top: 56px;
+			
+		}
 		.provisional.gc-subway dl li.complete a::after,
 		.provisional.gc-subway ul li.complete a::after {
 			color: #fff;
@@ -405,7 +412,7 @@
 								<li class="complete">
 									<a href="#" class="disabled ">Consent and guidelines</a>
 								</li>
-								<li>
+								<li class="active"> 
 									<a href="#" class="active">Confirm your details</a>
 								</li>
 								<li>

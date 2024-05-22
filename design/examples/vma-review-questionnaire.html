@@ -19,6 +19,19 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
 	<style>
+	.provisional.gc-subway dl li.active a::after,
+		.provisional.gc-subway ul li.active a::after {
+			color: #fff;
+			font-family: "Font Awesome 5 Free";
+			font-size: 16px;
+			font-weight: 600;
+			content: "\f054";
+			position:absolute;
+			left:-26px;
+			top:0px;		
+		}
+
+
 		/* */
 		.gc-subway a.disabled {
 			text-decoration: none;
@@ -423,7 +436,7 @@
 								<li class="complete">
 									<a href="#" class="active">Confirm your details</a>
 								</li>
-								<li class="">
+								<li class="active">
 									<a href="#" class="active">Quality of life questionnaire</a>
 									<ul class="">
 										<li class="complete">

@@ -55,6 +55,18 @@ s
 			height: 1.2em !important;
 		}
 
+		.provisional.gc-subway dl li.active a::after,
+		.provisional.gc-subway ul li.active a::after {
+			color: #fff;
+			font-family: "Font Awesome 5 Free";
+			font-size: 16px;
+			font-weight: 600;
+			content: "\f054";
+			position:absolute;
+			left:-26px;
+			top:0px;		
+		}
+
 		.provisional.gc-subway dl li.complete,
 		.provisional.gc-subway ul li.complete {
 			border-left: 4px solid #1b6c1c;
@@ -428,7 +440,7 @@ s
 								<li class="complete">
 									<a href="#" class="">Gather your information</a>
 								</li>
-								<li>
+								<li class="active">
 									<a href="#" class="active">Get ready for your&nbsp;assessment</a>
 								</li>
 								<li>

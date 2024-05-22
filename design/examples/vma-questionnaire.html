@@ -41,7 +41,18 @@ s
 
 		}
 
-		
+		.provisional.gc-subway dl li.active a::after,
+		.provisional.gc-subway ul li.active a::after {
+			color: #fff;
+			font-family: "Font Awesome 5 Free";
+			font-size: 16px;
+			font-weight: 600;
+			content: "\f054";
+			position:absolute;
+			left:-26px;
+			top:0px;		
+		}
+
 		.provisional.gc-subway dl li a:focus::before,
 		.provisional.gc-subway dl li a:hover::before,
 		.provisional.gc-subway ul li a:focus::before,
@@ -423,7 +434,7 @@ s
 								<li class="complete">
 									<a href="#" class="active">Confirm your details</a>
 								</li>
-								<li>
+								<li class="active">
 									<a href="#" class="active">Quality of Life Questionnaire</a>
 									<!--
 									<ul class="">
