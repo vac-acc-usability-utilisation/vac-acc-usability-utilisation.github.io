@@ -37,6 +37,19 @@
 			margin-top:  0;
 			width: 1.2em;
 		}
+
+		.provisional.gc-subway dl li.active a::after,
+		.provisional.gc-subway ul li.active a::after {
+			color: #fff;
+			font-family: "Font Awesome 5 Free";
+			font-size: 16px;
+			font-weight: 600;
+			content: "\f054";
+			position: absolute;
+			left: 10px;
+			top: 5px;
+			
+		}
 		
 		.accnt-menu [role=menuitem] {
 
@@ -372,7 +385,7 @@
 						<p class="h3 mrgn-tp-lg hidden-sm">Steps</p>
 						<p class="h3 mrgn-tp-0 visible-sm">Steps</p>
 						<ul>
-							<li>
+							<li class="active">
 								<a href="#" class="active">Consent and guidelines</a>
 							</li>
 							<li>
