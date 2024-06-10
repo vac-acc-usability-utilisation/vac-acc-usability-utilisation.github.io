@@ -1,176 +1,189 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) <abbr>WET</abbr>-boew.github.io/wet-boew/License-en.html / <abbr>WET</abbr>-boew.github.io/wet-boew/Licence-fr.html -->
 
-<head>
-	<meta charset="utf-8">
-	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) <abbr>WET</abbr>-boew.github.io/wet-boew/License-en.html / <abbr>WET</abbr>-boew.github.io/wet-boew/Licence-fr.html -->
+    <title>Before your vitural medical reassessment</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
 
-	<title>Before your vitural medical reassessment</title>
-	<meta content="width=device-width, initial-scale=1" name="viewport">
+    <link
+      href="../../GCWeb/assets/favicon.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
 
-	<link href="../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="../../GCWeb/css/theme.min.css" />
+    <link rel="stylesheet" href="../../mva-mda/css/theme.css" />
+    <link rel="stylesheet" href="../../cdts/css/cdts.css" />
+    <noscript>
+      <link rel="stylesheet" href="wet-boew/css/noscript.min.css" />
+    </noscript>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
 
-	<link rel="stylesheet" href="../../GCWeb/css/theme.min.css" />
-	<link rel="stylesheet" href="../../mva-mda/css/theme.css" />
-	<link rel="stylesheet" href="../../cdts/css/cdts.css" />
-	<noscript>
-		<link rel="stylesheet" href="wet-boew/css/noscript.min.css" />
-	</noscript>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+    <style>
+      .provisional.gc-subway dl li.active a::after,
+      .provisional.gc-subway ul li.active a::after {
+        color: #fff;
+        font-family: "Font Awesome 5 Free";
+        font-size: 16px;
+        font-weight: 600;
+        content: "\f054";
+        position: absolute;
+        left: -26px;
+        top: 0px;
+      }
 
-	<style>
-	.provisional.gc-subway dl li.active a::after,
-		.provisional.gc-subway ul li.active a::after {
-			color: #fff;
-			font-family: "Font Awesome 5 Free";
-			font-size: 16px;
-			font-weight: 600;
-			content: "\f054";
-			position:absolute;
-			left:-26px;
-			top:0px;		
-		}
+      /* */
+      .gc-subway a.disabled {
+        text-decoration: none;
+        cursor: not-allowed;
+      }
 
+      .gc-subway a.disabled:visited {
+        color: #333;
+      }
 
-		/* */
-		.gc-subway a.disabled {
-			text-decoration: none;
-			cursor: not-allowed;
-		}
+      s .provisional.gc-subway dl li a,
+      .provisional.gc-subway ul li a {
+        position: relative;
+      }
 
-		.gc-subway a.disabled:visited {
-			color: #333;
-		}
+      .provisional.gc-subway dl li a::before,
+      .provisional.gc-subway ul li a::before {
+        position: absolute;
+        left: -34px;
+      }
 
-		s .provisional.gc-subway dl li a,
-		.provisional.gc-subway ul li a {
-			position: relative;
-		}
+      .provisional.gc-subway dl li a:focus::before,
+      .provisional.gc-subway dl li a:hover::before,
+      .provisional.gc-subway ul li a:focus::before,
+      .provisional.gc-subway ul li a:hover::before {
+        height: 1.2em;
+        position: absolute;
+        top: 4px !important;
+        left: -34px !important;
+        margin-top: 0 !important;
+        width: 1.2em !important;
+        height: 1.2em !important;
+      }
 
-		.provisional.gc-subway dl li a::before,
-		.provisional.gc-subway ul li a::before {
-			position: absolute;
-			left: -34px;
+      .provisional.gc-subway dl li.complete,
+      .provisional.gc-subway ul li.complete {
+        border-left: 4px solid #1b6c1c;
+        padding: 0 20px 30px 1em;
+      }
 
-		}
+      .provisional.gc-subway dl li.complete a::before,
+      .provisional.gc-subway ul li.complete a::before {
+        background-color: #1b6c1c;
+        border-color: #1b6c1c;
+      }
 
+      .provisional.gc-subway dl li.complete a::after,
+      .provisional.gc-subway ul li.complete a::after {
+        color: #fff;
+        font-family: "Font Awesome 5 Free";
+        font-size: 13px;
+        font-weight: 600;
+        content: "\f00c";
+        position: absolute;
+        left: -28px;
+        top: 0px;
+      }
 
-		.provisional.gc-subway dl li a:focus::before,
-		.provisional.gc-subway dl li a:hover::before,
-		.provisional.gc-subway ul li a:focus::before,
-		.provisional.gc-subway ul li a:hover::before {
-			height: 1.2em;
-			position: absolute;
-			top: 4px !important;
-			left: -34px !important;
-			margin-top: 0 !important;
-			width: 1.2em !important;
-			height: 1.2em !important;
-		}
+      .accnt-menu [role="menuitem"] {
+        width: auto;
+      }
 
-		.provisional.gc-subway dl li.complete,
-		.provisional.gc-subway ul li.complete {
-			border-left: 4px solid #1b6c1c;
-			padding: 0 20px 30px 1em;
-		}
+      .accnt-menu [role="menu"] {
+        position: absolute;
+        right: 1em;
+      }
 
+      .gcweb-menu button[aria-haspopup="true"] {
+        text-transform: none;
+      }
 
-		.provisional.gc-subway dl li.complete a::before,
-		.provisional.gc-subway ul li.complete a::before {
-			background-color: #1b6c1c;
-			border-color: #1b6c1c;
+      #mbl-mnu details.acc-group.brdr-0.on,
+      #app-navigation details.acc-group.brdr-0.on {
+        padding-bottom: 0;
+      }
 
+      @media screen and (max-width: 991px) {
+        ul#app-mnu {
+          padding: 0;
+        }
+      }
 
-		}
+      input[type="file"] {
+        display: none;
+      }
+    </style>
+  </head>
 
-		.provisional.gc-subway dl li.complete a::after,
-		.provisional.gc-subway ul li.complete a::after {
-			color: #fff;
-			font-family: "Font Awesome 5 Free";
-			font-size: 13px;
-			font-weight: 600;
-			content: "\f00c";
-			position: absolute;
-			left: -28px;
-			top: 0px;
+  <body vocab="http://schema.org/" typeof="WebPage" class="cnt-wdth-lmtd">
+    <div class="bg-warning" style="padding: 16px">
+      <div class="container">
+        <p>
+          This is a conceptual prototype. It may not represent the final design
+          or functionality.
+        </p>
+      </div>
+    </div>
+    <nav aria-label="Skip Links">
+      <ul id="wb-tphp">
+        <li class="wb-slc">
+          <a class="wb-sl" href="#wb-cont">Skip to main content</a>
+        </li>
+        <li class="wb-slc visible-xs visible-sm visible-md visible-lg">
+          <a class="wb-sl" href="#wb-info">Skip to "About My VAC Account"</a>
+        </li>
+      </ul>
+    </nav>
 
-		}
-
-		.accnt-menu [role=menuitem] {
-			width: auto;
-		}
-
-		.accnt-menu [role=menu] {
-
-			position: absolute;
-			right: 1em;
-		}
-
-		.gcweb-menu button[aria-haspopup=true] {
-			text-transform: none;
-		}
-
-		#mbl-mnu details.acc-group.brdr-0.on,
-		#app-navigation details.acc-group.brdr-0.on {
-			padding-bottom: 0;
-		}
-
-		@media screen and (max-width: 991px) {
-			ul#app-mnu {
-				padding: 0;
-			}
-		}
-
-
-		input[type=file] {
-			display: none;
-		}
-	</style>
-
-</head>
-
-<body vocab="http://schema.org/" typeof="WebPage" class="cnt-wdth-lmtd">
-	<div class="bg-warning" style="padding:16px;">
-		<div class="container">
-			<p>This is a conceptual prototype. It may not represent the final design or functionality.</p>
-		</div>
-	</div>
-	<nav aria-label="Skip Links">
-		<ul id="wb-tphp">
-			<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
-			<li class="wb-slc visible-xs visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to
-					"About My VAC Account"</a></li>
-		</ul>
-	</nav>
-
-
-	<!-- authenticated -->
-	<header id="authenticated-header">
-		<div id="wb-bnr" class="container">
-			<div class="row">
-				<section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
-					<h2 class="wb-inv">Language selection</h2>
-					<ul class="list-inline mrgn-bttm-0">
-						<li>
-							<a lang="fr" hreflang="fr" href="fr.html">
-								<span class="hidden-xs">Français</span>
-								<abbr title="Français"
-									class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
-							</a>
-						</li>
-					</ul>
-				</section>
-				<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" resource="#wb-publisher"
-					typeof="GovernmentOrganization">
-					<a href="en.html" property="url">
-						<img src="../../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv"
-							property="name">
-							Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
-					</a>
-					<meta property="areaServed" typeof="Country" content="Canada">
-					<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
-				</div>
-				<!--
+    <!-- authenticated -->
+    <header id="authenticated-header">
+      <div id="wb-bnr" class="container">
+        <div class="row">
+          <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+            <h2 class="wb-inv">Language selection</h2>
+            <ul class="list-inline mrgn-bttm-0">
+              <li>
+                <a lang="fr" hreflang="fr" href="fr.html">
+                  <span class="hidden-xs">Français</span>
+                  <abbr
+                    title="Français"
+                    class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase"
+                    >fr</abbr
+                  >
+                </a>
+              </li>
+            </ul>
+          </section>
+          <div
+            class="brand col-xs-9 col-sm-5 col-md-4"
+            property="publisher"
+            resource="#wb-publisher"
+            typeof="GovernmentOrganization"
+          >
+            <a href="en.html" property="url">
+              <img
+                src="../../../GCWeb/assets/sig-blk-en.svg"
+                alt=""
+                property="logo"
+              /><span class="wb-inv" property="name">
+                Government of Canada /
+                <span lang="fr">Gouvernement du Canada</span></span
+              >
+            </a>
+            <meta property="areaServed" typeof="Country" content="Canada" />
+            <link property="logo" href="../../GCWeb/assets/wmms-blk.svg" />
+          </div>
+          <!--
 				<section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
 					<h2>Search</h2>
 					<form action="#" method="post" name="cse-search-box" role="search">
@@ -187,81 +200,145 @@
 						</div>
 					</form>
 				</section>-->
-			</div>
+        </div>
+      </div>
+      <div class="app-bar">
+        <div class="container">
+          <div class="row">
+            <section class="col-xs-8 col-sm-5 col-md-4">
+              <h2 class="wb-inv">Name of Web application</h2>
+              <a href="#" class="app-name" href="../../en.html"
+                >My&nbsp;VAC&nbsp;Account</a
+              >
+            </section>
 
-		</div>
-		<div class="app-bar">
-			<div class="container">
-				<div class="row">
-					<section class="col-xs-8 col-sm-5 col-md-4">
-						<h2 class="wb-inv">Name of Web application</h2>
-						<a href="#" class="app-name" href="../../en.html">My&nbsp;VAC&nbsp;Account</a>
-					</section>
+            <nav
+              class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu"
+            >
+              <section>
+                <h2 class="wb-inv">Account menu</h2>
+                <a href="#" class="btn btn-link text-white hidden-xs hidden-sm">
+                  <span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox
+                  <span class="badge">2</span>
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-link text-white mrgn-rght-md hidden-xs hidden-sm hidden-md"
+                >
+                  <span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile
+                  and settings</a
+                >
 
-					<nav
-						class="col-xs-12 col-sm-7 col-md-8 pull-right text-right mrgn-tp-sm mrgn-bttm-sm gweb-v2 gcweb-menu accnt-menu">
-						<section>
-							<h2 class="wb-inv">Account menu</h2>
-							<a href="#" class="btn btn-link text-white hidden-xs hidden-sm"> <span
-									class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
-									class="badge">2</span> </a>
-							<a href="#" class="btn btn-link text-white mrgn-rght-md hidden-xs hidden-sm hidden-md">
-								<span class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a>
+                <button
+                  class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs"
+                  style="background: #eee; color: #000; position: relative"
+                  type="button"
+                  aria-haspopup="true"
+                  aria-controls="accnt-mnu"
+                  aria-expanded="false"
+                >
+                  Noel&nbsp;Knockwood&nbsp;<span
+                    class="badge hidden-md hidden-lg"
+                    >2</span
+                  ><span class="fa fa-chevron-down mrgn-lft-sm"></span>
+                </button>
+                <ul
+                  id="accnt-mnu"
+                  role="menu"
+                  aria-orientation="vertical"
+                  class="pull-left full-width"
+                  style="
+                    position: static;
+                    width: 100%;
+                    float: left;
+                    text-align: left;
+                    width: auto;
+                  "
+                >
+                  <li role="none" class="hidden-md hidden-lg">
+                    <a role="menuitem" tabindex="-1" href="#"
+                      ><span class="fa fa-envelope mrgn-rght-sm opct-50"></span
+                      >Inbox <span class="badge">2</span></a
+                    >
+                  </li>
+                  <li role="none" class="hidden-lg">
+                    <a role="menuitem" tabindex="-1" href="#"
+                      ><span class="fa fa-cog mrgn-rght-sm opct-50"></span
+                      >Profile and settings</a
+                    >
+                  </li>
+                  <li role="none">
+                    <a role="menuitem" tabindex="-1" href="#">Sign out</a>
+                  </li>
+                </ul>
 
-							<button class="btn btn-default mrgn-lft-md mrgn-bttm-sm pull-left visible-xs"
-								style="background:#eee; color: #000; position: relative;" type="button"
-								aria-haspopup="true" aria-controls="accnt-mnu"
-								aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span
-									class="badge hidden-md hidden-lg">2</span><span
-									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
-							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width"
-								style="position:static; width: 100%; float: left; text-align: left; width: auto;">
-								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
-										href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
-											class="badge">2</span></a></li>
-								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span
-											class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
-								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
-							</ul>
+                <button
+                  class="btn btn-default mrgn-lft-md hidden-xs"
+                  style="background: #eee; color: #000; position: relative"
+                  type="button"
+                  aria-haspopup="true"
+                  aria-controls="accnt-mnu"
+                  aria-expanded="false"
+                >
+                  Noel&nbsp;Knockwood&nbsp;<span
+                    class="badge hidden-md hidden-lg"
+                    >2</span
+                  ><span class="fa fa-chevron-down mrgn-lft-sm"></span>
+                </button>
+                <ul
+                  id="accnt-mnu"
+                  role="menu"
+                  aria-orientation="vertical"
+                  style="text-align: left; width: auto"
+                >
+                  <li role="none" class="hidden-md hidden-lg">
+                    <a role="menuitem" tabindex="-1" href="#"
+                      ><span class="fa fa-envelope mrgn-rght-sm opct-50"></span
+                      >Inbox <span class="badge">2</span></a
+                    >
+                  </li>
+                  <li role="none" class="hidden-lg">
+                    <a role="menuitem" tabindex="-1" href="#"
+                      ><span class="fa fa-cog mrgn-rght-sm opct-50"></span
+                      >Profile and settings</a
+                    >
+                  </li>
+                  <li role="none">
+                    <a role="menuitem" tabindex="-1" href="#">Sign out</a>
+                  </li>
+                </ul>
+              </section>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!--MOBILE MENU-->
+      <div class="container">
+        <nav>
+          <a
+            href="#mb-pnl"
+            id="menu-btn"
+            title="Menu"
+            aria-controls="mb-pnl"
+            class="overlay-lnk btn btn-primary"
+            role="button"
+            ><span class="fa fa-bars mrgn-rght-sm opct-80"></span>MENU</a
+          >
+        </nav>
+      </div>
 
-							<button class="btn btn-default mrgn-lft-md hidden-xs"
-								style="background:#eee; color: #000; position: relative;" type="button"
-								aria-haspopup="true" aria-controls="accnt-mnu"
-								aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span
-									class="badge hidden-md hidden-lg">2</span><span
-									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
-							<ul id="accnt-mnu" role="menu" aria-orientation="vertical"
-								style="text-align: left; width: auto;">
-								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
-										href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
-											class="badge">2</span></a></li>
-								<li role="none" class="hidden-lg"><a role="menuitem" tabindex="-1" href="#"><span
-											class="fa fa-cog mrgn-rght-sm opct-50"></span>Profile and settings</a></li>
-								<li role="none"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
-							</ul>
-
-						</section>
-					</nav>
-
-				</div>
-			</div>
-		</div>
-		<!--MOBILE MENU-->
-		<div class="container">
-			<nav>
-				<a href="#mb-pnl" id="menu-btn" title="Menu" aria-controls="mb-pnl" class="overlay-lnk btn btn-primary"
-					role="button"><span class="fa fa-bars mrgn-rght-sm opct-80"></span>MENU</a>
-			</nav>
-		</div>
-
-
-		<div id="mb-pnl" class="wb-overlay modal-content overlay-def wb-panel-l" aria-hidden="false" role="dialog"
-			tabindex="-1">
-			<header class="modal-header">
-				<div class="modal-title">MENU</div>
-			</header>
-			<div class="modal-body">
-				<!--<section class="srch-pnl hidden">
+      <div
+        id="mb-pnl"
+        class="wb-overlay modal-content overlay-def wb-panel-l"
+        aria-hidden="false"
+        role="dialog"
+        tabindex="-1"
+      >
+        <header class="modal-header">
+          <div class="modal-title">MENU</div>
+        </header>
+        <div class="modal-body">
+          <!--<section class="srch-pnl hidden">
 					<h3>Search</h3>
 			<form action="https://google.ca/search" method="get" role="search" class="form-inline">
 			<div class="form-group">
@@ -272,18 +349,19 @@
 			<button type="submit" id="wb-srch-sub-imprt" class="btn btn-default">Search</button>
 			</form>
 			</section><section class="lng-ofr hidden"><h3>Language selection</h3><ul class="list-inline"><li><a lang="fr" hreflang="fr" href="menu-fr.html">Français</a></li></ul></section>-->
-				<nav role="navigation" typeof="SiteNavigationElement" id="sm-pnl"
-					class="sm-pnl wb-menu wb-menu-inited wb-init wb-navcurr-inited">
-					<h3>Topics menu</h3>
+          <nav
+            role="navigation"
+            typeof="SiteNavigationElement"
+            id="sm-pnl"
+            class="sm-pnl wb-menu wb-menu-inited wb-init wb-navcurr-inited"
+          >
+            <h3>Topics menu</h3>
 
-
-
-
-					<div data-ajax-replace="/design/assets/ajax/site-menu-en.html">
-
-					</div>
-				</nav>
-				<!--
+            <div
+              data-ajax-replace="/design/assets/ajax/site-menu-en.html"
+            ></div>
+          </nav>
+          <!--
 					<nav role="navigation" typeof="SiteNavigationElement" id="info-pnl"
 						class="info-pnl wb-menu wb-menu-inited wb-init">
 						<h3>About this site</h3>
@@ -344,52 +422,62 @@
 							</li>
 						</ul>
 					</nav>-->
-			</div>
-			<div class="modal-footer"><button title="Close overlay"
-					class="btn btn-sm btn-default pull-left overlay-close" type="button">Close<span class="wb-inv">Close
-						overlay</span></button></div><button title="Close: Menus (escape key)"
-				class="mfp-close overlay-close" type="button">×<span class="wb-inv"> Close: menus (escape
-					key)</span></button>
-		</div>
-		<nav id="wb-bc" property="breadcrumb">
-			<h2>You are here:</h2>
-			<div class="container">
-				<ol class="breadcrumb hidden-xs" typeof="BreadcrumbList">
-					<li property="itemListElement" typeof="ListItem">
-						<a property="item" typeof="WebPage" href="index.html">
-							<span property="name">My VAC Account</span>
-						</a>
-						<meta property="position" content="1">
-					</li>
-					<li property="itemListElement" typeof="ListItem">
-						<a property="item" typeof="WebPage" href="vma-appointments.html">
-							<span property="name">Disability reassessments</span>
-						</a>
-						<meta property="position" content="2">
-					</li>
-					<li property="itemListElement" typeof="ListItem">
-						<a property="item" typeof="WebPage" href="vma-overview.html">
-							<span property="name">Virtual medical assessment overview</span>
-						</a>
-						<meta property="position" content="3">
-					</li>
-				</ol>
-				<div class="hidden-sm hidden-md hidden-lg">
-					<ol>
-						<li>
-
-							<a property="item" typeof="WebPage" href="vma-overview.html">
-								<span class="fa fa-arrow-left"></span>
-								<span property="name">Virtual medical assessment overview</span>
-							</a>
-						</li>
-					</ol>
-
-
-				</div>
-			</div>
-		</nav>
-		<!--
+        </div>
+        <div class="modal-footer">
+          <button
+            title="Close overlay"
+            class="btn btn-sm btn-default pull-left overlay-close"
+            type="button"
+          >
+            Close<span class="wb-inv">Close overlay</span>
+          </button>
+        </div>
+        <button
+          title="Close: Menus (escape key)"
+          class="mfp-close overlay-close"
+          type="button"
+        >
+          ×<span class="wb-inv"> Close: menus (escape key)</span>
+        </button>
+      </div>
+      <nav id="wb-bc" property="breadcrumb">
+        <h2>You are here:</h2>
+        <div class="container">
+          <ol class="breadcrumb hidden-xs" typeof="BreadcrumbList">
+            <li property="itemListElement" typeof="ListItem">
+              <a property="item" typeof="WebPage" href="index.html">
+                <span property="name">My VAC Account</span>
+              </a>
+              <meta property="position" content="1" />
+            </li>
+            <li property="itemListElement" typeof="ListItem">
+              <a property="item" typeof="WebPage" href="vma-appointments.html">
+                <span property="name">Disability reassessments</span>
+              </a>
+              <meta property="position" content="2" />
+            </li>
+            <li property="itemListElement" typeof="ListItem">
+              <a property="item" typeof="WebPage" href="vma-overview.html">
+                <span property="name">Virtual medical assessment overview</span>
+              </a>
+              <meta property="position" content="3" />
+            </li>
+          </ol>
+          <div class="hidden-sm hidden-md hidden-lg">
+            <ol>
+              <li>
+                <a property="item" typeof="WebPage" href="vma-overview.html">
+                  <span class="fa fa-arrow-left"></span>
+                  <span property="name"
+                    >Virtual medical assessment overview</span
+                  >
+                </a>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <!--
         <div class="app-bar-mb container visible-xs-block hidden-print">
             <nav>
                 <h2 class="wb-inv">Account menu</h2>
@@ -399,747 +487,619 @@
                 </ul>
             </nav>
         </div>-->
-	</header>
+    </header>
 
-	<main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
-		<section class="">
-			<div class="container">
-				<!--
+    <main
+      property="mainContentOfPage"
+      resource="#wb-main"
+      typeof="WebPageElement"
+    >
+      <section class="">
+        <div class="container">
+          <!--
 				<button id="menu-btn" class="h6 btn btn-link brdr-tp brdr-rght brdr-bttm brdr-lft hidden" 
 				style="letter-spacing: 0.5px;" >
 					MENU <span class="fa fa-bars"></span>
 			</button>-->
 
-				<div class="row">
-					<div class="col-xs-12">
-						<section>
-							<div>
-								<h1 id="wb-cont" property="name">
-									Quality of Life Questionnaire
-								</h1>
-								<p class="lead">This questionnaire is intended to evaluate how your daily life is
-									affected by your
-									condition.</p>
-								<h2>Review and submit</h2>
+          <div class="row">
+            <div class="col-xs-12">
+              <section>
+                <div>
+                  <h1 id="wb-cont" property="name">
+                    Quality of Life Questionnaire
+                  </h1>
+                  <p class="lead">
+                    This questionnaire is intended to evaluate how your daily
+                    life is affected by your condition.
+                  </p>
+                  <h2>Review and submit</h2>
+                </div>
+              </section>
+              <nav
+                class="provisional gc-subway pull-right mrgn-tp-0 col-md-4 col-sm-12 col-xs-12"
+                style="border-right: 0; border-top: 0; border-bottom: 0"
+              >
+                <p class="h3 mrgn-tp-lg hidden-sm">Steps</p>
+                <p class="h3 mrgn-tp-0 visible-sm">Steps</p>
+                <ul>
+                  <li class="complete">
+                    <a href="#" class="disabled">Consent and guidelines</a>
+                  </li>
+                  <li class="complete">
+                    <a href="#" class="active">Confirm your details</a>
+                  </li>
+                  <li class="active">
+                    <a href="#" class="active">Quality of life questionnaire</a>
+                    <ul class="">
+                      <li class="complete">
+                        <a href="#" class="hidden-xs hidden-sm active"
+                          >Obstructive Sleep Apnea</a
+                        >
+                      </li>
+                      <li class="complete">
+                        <a href="#" class="hidden-xs hidden-sm">Tinnitus</a>
+                      </li>
+                      <li class="complete">
+                        <a href="#" class="hidden-xs hidden-sm">Hearing Loss</a>
+                      </li>
+                      <li>
+                        <a href="#" class="hidden-xs hidden-sm active"
+                          >Review and submit</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="disabled">Gather your information</a>
+                  </li>
+                  <li>
+                    <a href="#" class="disabled"
+                      >Get ready for your assessment</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="disabled">Appointment guide</a>
+                  </li>
+                </ul>
+              </nav>
 
+              <div class="col-md-7">
+                <details open>
+                  <summary>
+                    <h3>Obstructive Sleep Apnea</h3>
+                  </summary>
+                  <div class="table-responsive">
+                    <table
+                      id="quality-of-life-questionnaire-review"
+                      class="mrgn-bttm-0 table"
+                    >
+                      <tbody>
+                        <tr class="brdr-none">
+                          <td scope="row" class="col-sm-7 brdr-0">
+                            I can do my usual household activities (prepare
+                            meals, do basic household maintenance, etc.).
+                          </td>
 
-							</div>
-						</section>
-						<nav class="provisional gc-subway pull-right mrgn-tp-0 col-md-4 col-sm-12 col-xs-12"
-							style="border-right:0; border-top:0; border-bottom: 0;">
-							<p class="h3 mrgn-tp-lg hidden-sm">Steps</p>
-							<p class="h3 mrgn-tp-0 visible-sm">Steps</p>
-							<ul>
-								<li class="complete">
-									<a href="#" class="disabled ">Consent and guidelines</a>
-								</li>
-								<li class="complete">
-									<a href="#" class="active">Confirm your details</a>
-								</li>
-								<li class="active">
-									<a href="#" class="active">Quality of life questionnaire</a>
-									<ul class="">
-										<li class="complete">
-											<a href="#" class="hidden-xs hidden-sm active">Obstructive Sleep Apnea</a>
-										</li>
-										<li class="complete">
-											<a href="#" class="hidden-xs hidden-sm ">Tinnitus</a>
-										</li>
-										<li class="complete">
-											<a href="#" class="hidden-xs hidden-sm ">Hearing Loss</a>
-										</li>
-										<li>
-											<a href="#" class="hidden-xs hidden-sm active">Review and submit</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="#" class="disabled">Gather your information</a>
-								</li>
-								<li>
-									<a href="#" class="disabled">Get ready for your assessment</a>
-								</li>
-								<li>
-									<a href="#" class="disabled">Appointment guide</a>
-								</li>
-							</ul>
-						</nav>
+                          <td id="#" class="brdr-0">
+                            Yes, with adaptations or assistance
+                          </td>
+                          <td class="col-sm-1 brdr-0 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
 
-						<div class="col-md-7">
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can shop and/or do errands.
+                          </td>
 
-							<details open>
-								<summary>
-									<h3>Obstructive Sleep Apnea</h3>
-								</summary>
-								<div class="table-responsive">
-									<table id="quality-of-life-questionnaire-review" class="mrgn-bttm-0 table">
-										<tbody>
-	
-	
-	
-											<tr class="brdr-none">
-	
-												<td scope="row" class="col-sm-7 brdr-0">
-													I can do my usual household activities (prepare meals, do basic household maintenance, etc.).
-												</td>
-	
-	
-	
-												<td id="#" class="brdr-0">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 brdr-0 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I can shop and/or do errands.
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-											
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I can drive a vehicle.
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I can use public transportation (if available).
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I am able to work in my regular occupation.
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I can effectively participate in my usual and accustomed recreational and community activities.
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-											
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I am able to maintain my usual day-to-day family responsibilities, including social outings.
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-											<tr>
-	
-												<td scope="row" class="col-sm-7">
-													I am able to maintain my personal/social relationships. (e.g., spouse, family, friends, colleagues, etc.)
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-	
-	
-										</tbody>
-									</table>
-								</div>
-							</details>
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
 
-							
-							
-							<details open>
-								<summary>
-									<h3>Tinnitus</h3>
-								</summary>
-								<div class="table-responsive">
-									<table id="quality-of-life-questionnaire-review" class="mrgn-bttm-0 table">
-										<tbody>
-	
-	
-	
-											<tr class="brdr-none">
-	
-												<td scope="row" class="col-sm-7 brdr-0">
-													I can do my usual household activities (prepare meals, do basic household maintenance, etc.).
-												</td>
-	
-	
-	
-												<td id="#" class="brdr-0">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 brdr-0 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I can shop and/or do errands.
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-											
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I can drive a vehicle.
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I can use public transportation (if available).
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I am able to work in my regular occupation.
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I can effectively participate in my usual and accustomed recreational and community activities.
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-											
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I am able to maintain my usual day-to-day family responsibilities, including social outings.
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-											<tr>
-	
-												<td scope="row" class="col-sm-7">
-													I am able to maintain my personal/social relationships. (e.g., spouse, family, friends, colleagues, etc.)
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-	
-	
-										</tbody>
-									</table>
-								</div>
-							</details>
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can drive a vehicle.
+                          </td>
 
-							<details open>
-								<summary>
-									<h3>Hearing Loss</h3>
-								</summary>
-								<div class="table-responsive">
-									<table id="quality-of-life-questionnaire-review" class="mrgn-bttm-0 table">
-										<tbody>
-	
-	
-	
-											<tr class="brdr-none">
-	
-												<td scope="row" class="col-sm-7 brdr-0">
-													I can do my usual household activities (prepare meals, do basic household maintenance, etc.).
-												</td>
-	
-	
-	
-												<td id="#" class="brdr-0">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 brdr-0 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I can shop and/or do errands.
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-											
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I can drive a vehicle.
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I can use public transportation (if available).
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I am able to work in my regular occupation.
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I can effectively participate in my usual and accustomed recreational and community activities.
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-											
-											<tr>
-	
-												<td scope="row" class=" col-sm-7">
-													I am able to maintain my usual day-to-day family responsibilities, including social outings.
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-											<tr>
-	
-												<td scope="row" class="col-sm-7">
-													I am able to maintain my personal/social relationships. (e.g., spouse, family, friends, colleagues, etc.)
-	
-												</td>
-	
-	
-	
-												<td id="#">
-													Yes, with adaptations or assistance
-												</td>
-												<td class="col-sm-1 text-right">
-	
-													<a id="#"
-														href="#"><span
-															class="fa fa-pencil mrgn-rght-sm"
-															aria-hidden="true"></span>Edit</a>
-	
-												</td>
-											</tr>
-	
-	
-	
-										</tbody>
-									</table>
-								</div>
-							</details>
-							<div class="mrgn-tp-lg mrgn-bttm-lg">
-								<!--<a class="btn btn-success btn-lg" href="#">Submit and continue</a>-->
-								
-								<a class="btn btn-primary btn-lg" href="vma-checklist.html">Next: Submit and continue <span class="fa fa-arrow-right mrgn-lft-sm"></span></a>
-								<!--
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can use public transportation (if available).
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to work in my regular occupation.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can effectively participate in my usual and
+                            accustomed recreational and community activities.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to maintain my usual day-to-day family
+                            responsibilities, including social outings.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to maintain my personal/social
+                            relationships. (e.g., spouse, family, friends,
+                            colleagues, etc.)
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+
+                <details open>
+                  <summary>
+                    <h3>Tinnitus</h3>
+                  </summary>
+                  <div class="table-responsive">
+                    <table
+                      id="quality-of-life-questionnaire-review"
+                      class="mrgn-bttm-0 table"
+                    >
+                      <tbody>
+                        <tr class="brdr-none">
+                          <td scope="row" class="col-sm-7 brdr-0">
+                            I can do my usual household activities (prepare
+                            meals, do basic household maintenance, etc.).
+                          </td>
+
+                          <td id="#" class="brdr-0">
+                            Yes, with adaptations or assistance
+                          </td>
+                          <td class="col-sm-1 brdr-0 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can shop and/or do errands.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can drive a vehicle.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can use public transportation (if available).
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to work in my regular occupation.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can effectively participate in my usual and
+                            accustomed recreational and community activities.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to maintain my usual day-to-day family
+                            responsibilities, including social outings.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to maintain my personal/social
+                            relationships. (e.g., spouse, family, friends,
+                            colleagues, etc.)
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+
+                <details open>
+                  <summary>
+                    <h3>Hearing Loss</h3>
+                  </summary>
+                  <div class="table-responsive">
+                    <table
+                      id="quality-of-life-questionnaire-review"
+                      class="mrgn-bttm-0 table"
+                    >
+                      <tbody>
+                        <tr class="brdr-none">
+                          <td scope="row" class="col-sm-7 brdr-0">
+                            I can do my usual household activities (prepare
+                            meals, do basic household maintenance, etc.).
+                          </td>
+
+                          <td id="#" class="brdr-0">
+                            Yes, with adaptations or assistance
+                          </td>
+                          <td class="col-sm-1 brdr-0 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can shop and/or do errands.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can drive a vehicle.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can use public transportation (if available).
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to work in my regular occupation.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can effectively participate in my usual and
+                            accustomed recreational and community activities.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to maintain my usual day-to-day family
+                            responsibilities, including social outings.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to maintain my personal/social
+                            relationships. (e.g., spouse, family, friends,
+                            colleagues, etc.)
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          <td class="col-sm-1 text-right">
+                            <a id="#" href="#"
+                              ><span
+                                class="fa fa-pencil mrgn-rght-sm"
+                                aria-hidden="true"
+                              ></span
+                              >Edit</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+                <div class="mrgn-tp-lg mrgn-bttm-lg">
+                  <!--<a class="btn btn-success btn-lg" href="#">Submit and continue</a>-->
+
+                  <a class="btn btn-primary btn-lg" href="vma-checklist.html"
+                    >Next: Gather your information
+                    <span class="fa fa-arrow-right mrgn-lft-sm"></span
+                  ></a>
+                  <!--
 								<a class="btn btn-text btn-lg">Cancel</a>-->
-							</div>
+                </div>
+              </div>
+            </div>
 
-
-
-					</div>
-				</div>
-
-
-				
-				<!--
+            <!--
 				<h2 class="mrgn-tp-lg">Related links</h2>
 				<p ><a href="#">Virtul medical reassessment consent and guidelines</a></p>-->
-
-			</div>
-			</div>
-		</section>
-		<section class="pagedetails container">
-			<h2 class="wb-inv">Page details</h2>
-			<div class="row">
-				<div class="col-sm-8 col-md-9 col-lg-9">
-					<div data-ajax-replace="../assets/ajax/report-problem-en.html">
-						<div class="row row-no-gutters">
-							<div class="col-sm-9 col-md-6 col-lg-5">
-								<a class="btn btn-default btn-block"
-									href="https://www.canada.ca/en/report-problem.html">Report a problem on this
-									page</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Share button
+          </div>
+        </div>
+      </section>
+      <section class="pagedetails container">
+        <h2 class="wb-inv">Page details</h2>
+        <div class="row">
+          <div class="col-sm-8 col-md-9 col-lg-9">
+            <div data-ajax-replace="../assets/ajax/report-problem-en.html">
+              <div class="row row-no-gutters">
+                <div class="col-sm-9 col-md-6 col-lg-5">
+                  <a
+                    class="btn btn-default btn-block"
+                    href="https://www.canada.ca/en/report-problem.html"
+                    >Report a problem on this page</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Share button
 				<div class="wb-share col-sm-4 col-md-3" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>-->
 
-				<div class="col-xs-12 mrgn-tp-sm text-muted">
-					<div class="row">
-						<div class="col-xs-12 col-sm-6 mrgn-bttm-0">
-							<div class="clearfix hidden-xs"></div>
-							<dl id="wb-dtmd">
-								<dt>Date modified:</dt>
-								<dd><time property="dateModified">2024-01-31</time></dd>
-							</dl>
-						</div>
-						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 hidden-xs text-right">
-							<p class="mrgn-tp-0 mrgn-bttm-0">UX.1.1.1</p>
-							<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
-						</div>
-						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 visible-xs">
-							<p class="mrgn-tp-0 mrgn-bttm-0">UX.1.1.1</p>
-							<p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	</main>
+          <div class="col-xs-12 mrgn-tp-sm text-muted">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 mrgn-bttm-0">
+                <div class="clearfix hidden-xs"></div>
+                <dl id="wb-dtmd">
+                  <dt>Date modified:</dt>
+                  <dd><time property="dateModified">2024-01-31</time></dd>
+                </dl>
+              </div>
+              <div class="col-xs-12 col-sm-6 mrgn-bttm-0 hidden-xs text-right">
+                <p class="mrgn-tp-0 mrgn-bttm-0">UX.1.1.1</p>
+                <p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
+              </div>
+              <div class="col-xs-12 col-sm-6 mrgn-bttm-0 visible-xs">
+                <p class="mrgn-tp-0 mrgn-bttm-0">UX.1.1.1</p>
+                <p class="mrgn-tp-0 mrgn-bttm-0">WEB.124235</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-
-
-	<!-- footer -->
-	<div id="default-footer" data-wb-urlmapping='{
+    <!-- footer -->
+    <div
+      id="default-footer"
+      data-wb-urlmapping='{
 		"transactional": { 
 			"action": "addClass", 
 			"source": "#default-footer", 
@@ -1156,16 +1116,23 @@
 			"action": "addClass", 
 			"source": "#default-footer", 
 			"class": "hidden" }
-		}'>
-		<footer id="wb-info">
-			<h2 class="wb-inv">About My VAC Account</h2>
-			<div class="gc-main-footer">
-				<nav class="container wb-navcurr">
+		}'
+    >
+      <footer id="wb-info">
+        <h2 class="wb-inv">About My VAC Account</h2>
+        <div class="gc-main-footer">
+          <nav class="container wb-navcurr">
+            <ul class="list-unstyled colcount-xs-2 colcount-md-3">
+              <li>
+                <a href="https://www.veterans.gc.ca/eng/contact"
+                  >Contact Veteran Affairs Canada</a
+                >
+              </li>
 
-					<ul class="list-unstyled colcount-xs-2 colcount-md-3">
-						<li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
-
-						<li id="authenticated-footer-link-2" class="hidden" data-wb-urlmapping='{
+              <li
+                id="authenticated-footer-link-2"
+                class="hidden"
+                data-wb-urlmapping='{
 							"authenticated": { 
 							"action": "removeClass", 
 							"source": "#authenticated-footer-link-2", 
@@ -1174,16 +1141,22 @@
 								"action": "removeClass", 
 								"source": "#authenticated-footer-link-2", 
 								"class": "hidden" }
-							}'>
-							<a href="#">Check in on your well-being</a>
-						</li>
+							}'
+              >
+                <a href="#">Check in on your well-being</a>
+              </li>
 
-						<li><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">Talk to a mental
-								health professional</a></li>
+              <li>
+                <a
+                  href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional"
+                  >Talk to a mental health professional</a
+                >
+              </li>
 
-
-
-						<li id="authenticated-footer-link-1" class="hidden" data-wb-urlmapping='{
+              <li
+                id="authenticated-footer-link-1"
+                class="hidden"
+                data-wb-urlmapping='{
 								"authenticated": { 
 								"action": "removeClass", 
 								"source": "#authenticated-footer-link-1", 
@@ -1192,9 +1165,15 @@
 									"action": "removeClass", 
 									"source": "#authenticated-footer-link-1", 
 									"class": "hidden" }
-								}'><a href="#">News and updates</a></li>
+								}'
+              >
+                <a href="#">News and updates</a>
+              </li>
 
-						<li id="authenticated-footer-link-3" class="hidden" data-wb-urlmapping='{
+              <li
+                id="authenticated-footer-link-3"
+                class="hidden"
+                data-wb-urlmapping='{
 								"authenticated": { 
 								"action": "removeClass", 
 								"source": "#authenticated-footer-link-3", 
@@ -1203,79 +1182,88 @@
 									"action": "removeClass", 
 									"source": "#authenticated-footer-link-3", 
 									"class": "hidden" }
-								}'><a href="#">Provide feedback</a></li>
+								}'
+              >
+                <a href="#">Provide feedback</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="gc-sub-footer">
+          <div class="container d-flex align-items-center">
+            <nav>
+              <h3 class="wb-inv">Veteran Affairs Canada Corporate</h3>
+              <ul>
+                <li>
+                  <a href="https://www.veterans.gc.ca/eng/e_services"
+                    >About My VAC Account</a
+                  >
+                </li>
+                <li>
+                  <a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3"
+                    >Terms and conditions</a
+                  >
+                </li>
+                <li>
+                  <a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3"
+                    >Privacy</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <div class="wtrmrk align-self-end">
+              <img
+                src="../../../GCWeb/assets/wmms-blk.svg"
+                alt="Symbol of the Government of Canada"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
 
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+      integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../../../wet-boew/js/wet-boew.min.js"></script>
+    <script src="../../../GCWeb/js/theme.min.js"></script>
 
+    <script>
+      $(document).ready(function () {
+        $("#conditions")
+          .find("input")
+          .on("change", function () {
+            if ($("#conditions2").prop("checked")) {
+              $("#incorrect-conditions").removeClass("hidden");
+            } else {
+              $("#incorrect-conditions").addClass("hidden");
+            }
+          });
 
+        $("#vma-chaperone")
+          .find("input")
+          .on("change", function () {
+            if ($("#inlineRadio1").prop("checked")) {
+              $("#chaperone-type").removeClass("hidden");
+            } else {
+              $("#chaperone-type").addClass("hidden");
+            }
+          });
 
-					</ul>
-				</nav>
-			</div>
-			<div class="gc-sub-footer">
-				<div class="container d-flex align-items-center">
-					<nav>
-						<h3 class="wb-inv">Veteran Affairs Canada Corporate</h3>
-						<ul>
-							<li><a href="https://www.veterans.gc.ca/eng/e_services">About My VAC Account</a></li>
-							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Terms and conditions</a></li>
-							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Privacy</a></li>
-						</ul>
-					</nav>
-					<div class="wtrmrk align-self-end">
-						<img src="../../../GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
-					</div>
-				</div>
-			</div>
-		</footer>
-	</div>
+        $("#chaperone-type")
+          .find("input")
+          .on("change", function () {
+            if ($("#chaperone-1").prop("checked")) {
+              $("#chaperone-details").removeClass("hidden");
+            } else {
+              $("#chaperone-details").addClass("hidden");
+            }
+          });
 
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
-		integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
-		crossorigin="anonymous"></script>
-	<script src="../../../wet-boew/js/wet-boew.min.js"></script>
-	<script src="../../../GCWeb/js/theme.min.js"></script>
-
-
-	<script>
-		$(document).ready(function () {
-
-			$('#conditions').find('input').on('change', function () {
-
-				if ($('#conditions2').prop('checked')) {
-					$('#incorrect-conditions').removeClass('hidden');
-				} else {
-					$('#incorrect-conditions').addClass('hidden');
-				}
-			});
-
-			$('#vma-chaperone').find('input').on('change', function () {
-
-				if ($('#inlineRadio1').prop('checked')) {
-					$('#chaperone-type').removeClass('hidden');
-				} else {
-					$('#chaperone-type').addClass('hidden');
-				}
-			});
-
-			$('#chaperone-type').find('input').on('change', function () {
-
-				if ($('#chaperone-1').prop('checked')) {
-					$('#chaperone-details').removeClass('hidden');
-				} else {
-					$('#chaperone-details').addClass('hidden');
-				}
-			}
-			);
-
-
-
-			//#inlineRadio1
-
-		});
-
-	</script>
-
-</body>
-
+        //#inlineRadio1
+      });
+    </script>
+  </body>
 </html>

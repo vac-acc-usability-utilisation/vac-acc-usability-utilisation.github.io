@@ -664,7 +664,7 @@ s
 														
 													</div>
 													<div class="col-sm-2">
-														<a href="#" class="btn btn-default btn-sm full-width" id="add-question">Add</a>
+														<button class="btn btn-default btn-sm full-width" id="add-question">Add</button>
 													</div>
 												</div>
 											</div>
@@ -1114,7 +1114,7 @@ s
 	<script src="../../../GCWeb/js/theme.min.js"></script>
 
 
-	<script>
+	<!-- <script>
 		$( document ).on( "wb-ready.wb", function( event ) {
 			$('#add-medication').on('click', function(e){
 				e.preventDefault();
@@ -1143,14 +1143,14 @@ s
 				
 			});
 
-			$('#add-question').on('click', function(e){
-				e.preventDefault();
+			// $('#add-question').on('click', function(e){
 				
-				if ($('#q-input').val().length > 0) { 
-					$('#q-list').append("<li>" + $('#q-input').val() + "</li>")
-					$('#q-input').val('');
-				}
-			});
+			// 	console.log("button clicked")
+			// 	if ($('#q-input').val().length > 0) { 
+			// 		$('#q-list').append("<li>" + $('#q-input').val() + "</li>")
+			// 		$('#q-input').val('');
+			// 	}
+			// });
 
 			$('#panel2-add-question').on('click', function(e){
 				e.preventDefault();
@@ -1170,6 +1170,21 @@ s
 				}
 			});
 		});
+	</script> -->
+
+	<script>
+		$(document).ready(function() {
+    $("#add-question").click(function(){
+        if ($('#q-input').val().length > 0) { 
+					$('#q-list').append('<li class="li">' + $('#q-input').val() + '<button href="#"  onclick="$(this).closest(\'.li\').remove();" class="link mrgn-lft-lg btn btn-link"><span class="fa fa-trash"></span></button></li>')
+					$('#q-input').val('');
+				}
+    });
+	
+
+});
+
+
 	</script>
 
 </body>
