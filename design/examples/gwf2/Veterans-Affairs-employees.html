@@ -944,21 +944,7 @@
 
 
   <!-- step error messages -->
-  <div id="message-box" class="alert alert-danger static-alert" role="alert">
-    <h3>Error</h3>
-    
-      <p>
-        An answer is required for: "Are you an employee of Veterans Affairs?"
-      </p>
-    
-    
-    
-    
-    
-    
-    
-    
-  </div>
+
 
 
 
@@ -1313,12 +1299,11 @@ $(function() {
     <div class="col-sm-5 col-sm-push-7 col-xs-12 text-right">
       
       
-        <button id="button-next"  data-mode="new" class="btn btn-lg btn-primary pull-right mrgn-lft-sm mrgn-bttm-sm btn-mobile " >
-          
+        <a href="menu-step2.html" id="button-next"  data-mode="new" class="btn btn-lg btn-primary pull-right mrgn-lft-sm mrgn-bttm-sm btn-mobile " >          
           
             Next
           
-        </button>
+        </a>
         <div class="visible-xs clearfix"></div>
         <button id="button-back" type="button" onclick="back();" class="btn btn-lg btn-default btn-mobile">
           Back
@@ -1806,23 +1791,25 @@ $(function() {
 
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+		integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
+		crossorigin="anonymous"></script>
+  <script src="../../../wet-boew/js/wet-boew.min.js"></script>
+  <script src="../../../GCWeb/js/theme.min.js"></script>
+ <script>
+  $(document).ready(function() {
+    console.log( "ready!" );
+    $('input[type=radio]').on('change', function() {
+      console.log($(this).val());
+      
+      $(this).closest('.form-group').find('.radio').removeClass('active')
+      $(this).closest(".radio").addClass("active");
+   
+      
+    });
+});
 
-
-
-
-
-
-
-
-
-
-
-<script src="/clf-ua/MVACLF-2.0/wet-boew/wet-boew/js/wet-boew.min.js?v=2023.8.0"></script><script src="/clf-ua/MVACLF-2.0/scripts/externalLinks.js?v=2023.8.0"></script><script src="/clf-ua/MVACLF-2.0/scripts/mva/app.js?v=2023.8.0"></script><script src="/clf-ua/MVACLF-2.0/scripts/accessibility-fixes.js?v=2023.8.0"></script><script src="/clf-ua/MVACLF-2.0/wet-boew/GCWeb/js/theme.min.js?v=2023.8.0"></script>
-
-<script>
-  $(function() {
-    
-  });
+  
 </script>
 
 <!--
@@ -1846,6 +1833,7 @@ localizedSubtitle: My VAC Account
        fullnameOn: true
        fullMenuOn: true
  -->  
+
 
   </body>
 </html>
