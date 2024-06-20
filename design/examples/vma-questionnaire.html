@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en" dir="ltr">
-
+<!-- TO DO
+Add in submit and continue button
+Add in previous button>
+Add in textfields for review -->
 <head>
 	<meta charset="utf-8">
 	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) <abbr>WET</abbr>-boew.github.io/wet-boew/License-en.html / <abbr>WET</abbr>-boew.github.io/wet-boew/Licence-fr.html -->
@@ -473,25 +476,25 @@ s
 
 						
 						<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0" id="questionnaire0">
-							<legend class="required">Would you like to complete the Quality&nbsp;of&nbsp;Life&nbsp;Questionnaire&nbsp;now?&nbsp;<strong class="required">(required)</strong></legend>
+							<legend class="required">Would you like to complete the Quality&nbsp;of&nbsp;Life <br> Questionnaire now? <strong class="required">(required)</strong></legend>
 							<ul class="list-unstyled lst-spcd-2">
 								<li class="radio ">
-									<input type="radio" id="questionnaire0-1" name="questionnaire0" checked>
+									<input type="radio" id="questionnaire0-1" name="questionnaire0" value="1">
 									<label for="questionnaire0-1">Yes</label>
 								</li>
 								<li class="radio ">
-									<input type="radio" id="questionnaire0-2" name="questionnaire0">
+									<input type="radio" id="questionnaire0-2" name="questionnaire0" value="2">
 									<label for="questionnaire0-2">No</label>
 								</li>
 								<li class="radio ">
-									<input type="radio" id="questionnaire0-3" name="questionnaire0">
+									<input type="radio" id="questionnaire0-3" name="questionnaire0"  value="3">
 									<label for="questionnaire0-3">No, I have already submitted the questionnaire </label>
 								</li>
 
 							</ul>
 						</fieldset>
 
-						<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0" id="questionnaire-conditions">
+						<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 hidden" id="questionnaire-conditions">
 							<legend class="required">Which conditions would you like to fill out the questionnaire for?<strong class="required">(required)</strong></legend>
 							<ul class="list-unstyled lst-spcd-2">
 								<li class="radio ">
@@ -672,33 +675,26 @@ s
 
 
 	<script>
-		$(document).ready(function () {
+		  $(document).ready(function() {
+    
+    $('input[type=radio]').on('change', function() {
+		console.log( "ready!" );
+    
+       if($(this).closest("fieldset").attr("id") == "questionnaire0"){
+  
+			if($(this).val() != "1"){
+			$("#questionnaire-conditions").addClass("hidden");
+			}
+			else{
+			$("#questionnaire-conditions").removeClass("hidden");
+			}
+	}
+	
 
-			$('#questionnaire0').find('input').on('change', function () {
-				//console.log('quesionnaire change');
-				if ($('#questionnaire0-1').prop('checked')) {
-					//console.log('yes');
-					$('#next-questionnaire').removeClass('hidden');
-					$('#next-gather').addClass('hidden');
-					$('#recommend-questionnaire').addClass('hidden');
-				} 
-				else if ($('#questionnaire0-2').prop('checked') || $('#questionnaire0-3').prop('checked')) {
-					//console.log('no or already done');
-					$('#next-questionnaire').addClass('hidden');
-					$('#next-gather').removeClass('hidden');
+      
+    });
+});
 
-					if ($('#questionnaire0-2').prop('checked')) {
-						$('#recommend-questionnaire').removeClass('hidden');
-					}
-					else {
-						$('#recommend-questionnaire').addClass('hidden');
-					}
-				}
-			});
-
-			//#inlineRadio1
-
-		});
 
 	</script>
 
