@@ -492,47 +492,63 @@ s
 							</ul>
 						</fieldset>-->
 
-							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline mrgn-rght-md pb-4" id="questionnaire1">
+							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline mrgn-rght-md pb-4 form-inline" id="questionnaire1">
 								<legend class="required">I can do my usual household activities (prepare meals, do basic household maintenance, etc.).&nbsp;<strong class="required">(required)</strong></legend>
 								<ul class="list-unstyled lst-spcd-2">
 									<li class="radio label-inline">
-										<input type="radio" id="questionnaire1-1" name="questionnaire1">
+										<input type="radio" id="questionnaire1-1" name="questionnaire1" value="1">
 										<label for="questionnaire1-1">Yes</label>
 									</li>
 									<li class="radio label-inline">
-										<input type="radio" id="questionnaire1-2" name="questionnaire1">
+										<input type="radio" id="questionnaire1-2" name="questionnaire1" value="2">
 										<label for="questionnaire1-2">Yes, with adaptations or assistance</label>
 									</li>
 									<li class="radio label-inline">
-										<input type="radio" id="questionnaire1-3" name="questionnaire1">
+										<input type="radio" id="questionnaire1-3" name="questionnaire1" value="3">
 										<label for="questionnaire1-3">No</label>
 									</li>
 
 								</ul>
 							</fieldset>
 
-                            <div class="form-group">
+                            <div id="task-details" class="form-group hidden">
 					
 
-    <fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 mrgn-rght-md  pb-4">
-						<legend class=><span class="field-name">Which conditions make it difficult or stop you from doing these tasks? </span></legend>
+    <fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 mrgn-rght-md  pb-4 form-inline">
+						<legend class="required"><span class="field-name">Which conditions make it difficult or stop you from doing these tasks? <strong class="required">(required)</strong></span></legend>
 						<ul class="list-unstyled">
-							<li class="checkbox gc-chckbxrdio">
-								<input type="checkbox" id="dt_audience1" value="">
-								<label for="dt_audience1">Obstructive Sleep Apnea</label>
+							<li class="checkbox gc-chckbxrdio mrgn-rght-lg">
+								<input type="checkbox" id="dt_condition1" value="">
+								<label for="dt_condition1">Obstructive Sleep Apnea</label>
+							</li>
+							<li class="checkbox gc-chckbxrdio mrgn-rght-lg">
+								<input type="checkbox" id="dt_condition2" value="">
+								<label for="dt_condition2">Tinnitus</label>
 							</li>
 							<li class="checkbox gc-chckbxrdio">
-								<input type="checkbox" id="dt_audience2" value="">
-								<label for="dt_audience2">Tinnitus</label>
+								<input type="checkbox" id="dt_condition3" value="">
+								<label for="dt_condition3">Hearing Loss</label>
 							</li>
-							<li class="checkbox gc-chckbxrdio">
-								<input type="checkbox" id="dt_audience2" value="">
-								<label for="dt_audience2">Hearing Loss</label>
-							</li>
+							
+                            
 						</ul>
 					</fieldset>
+
+                    <fieldset class="mrgn-tp-lg mrgn-bttm-0 mrgn-rght-lg brdr-bttm pb-4" id="questionnaire9">
+								<div class="form-group">
+									<label for="provide-details"><span class="field-name">Please provide us with some details so we can better understand your situation.</span></label>
+                                    <p class="small">For example, which specific tasks are difficult or not possible for you, and what causes these tasks to be difficult?</p>
+
+									<textarea id="provide-details" name="provide-details" cols="100" rows="5" required="required" class="form-control full-width" maxlength="1500"></textarea>
+								</div>
+							</fieldset>
+
+                    
 				</div>
 
+
+
+                
 							
 
 							<!-- <fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline mrgn-rght-md brdr-bttm pb-4" id="questionnaire2">
@@ -1009,13 +1025,13 @@ s
     $('input[type=radio]').on('change', function() {
 		console.log( "ready!" );
     
-       if($(this).closest("fieldset").attr("id") == "questionnaire10"){
+       if($(this).closest("fieldset").attr("id") == "questionnaire1"){
   
 			if($(this).val() == "1"){
-			$("#questionnaire11").addClass("hidden");
+			$("#task-details").addClass("hidden");
 			}
 			else{
-			$("#questionnaire11").removeClass("hidden");
+			$("#task-details").removeClass("hidden");
 			}
 	}
 	
