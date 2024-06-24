@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) <abbr>WET</abbr>-boew.github.io/wet-boew/License-en.html / <abbr>WET</abbr>-boew.github.io/wet-boew/Licence-fr.html -->
 
-	<title>Virtual assessment</title>
+	<title>Before your vitural medical reassessment</title>
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<link href="../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
@@ -19,7 +19,6 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
 	<style>
-
 		/* */
 		.gc-subway a.disabled {
 			text-decoration: none;
@@ -29,14 +28,48 @@
 		.gc-subway a.disabled:visited {
 			color: #333;
 		}
-
-
-		.provisional.gc-subway dl li a.disabled:focus::before, .provisional.gc-subway dl li a.disabled:hover::before, .provisional.gc-subway ul li a.disabled:focus::before, .provisional.gc-subway ul li a.disabled:hover::before {
-			height: 1.2em;
-			left:  .05em;
-			margin-top:  0;
-			width: 1.2em;
+s
+		.provisional.gc-subway dl li a,
+		.provisional.gc-subway ul li a {
+			position: relative;
 		}
+
+		.provisional.gc-subway dl li a::before,
+		.provisional.gc-subway ul li a::before {
+			position: absolute;
+			left: -34px;
+
+		}
+
+		
+		.provisional.gc-subway dl li a:focus::before,
+		.provisional.gc-subway dl li a:hover::before,
+		.provisional.gc-subway ul li a:focus::before,
+		.provisional.gc-subway ul li a:hover::before {
+			height: 1.2em;
+			position: absolute;
+			top: 4px !important;
+			left: -34px !important;
+			margin-top: 0 !important;
+			width: 1.2em !important;
+			height: 1.2em !important;
+		}
+
+		.provisional.gc-subway dl li.complete,
+		.provisional.gc-subway ul li.complete {
+			border-left: 4px solid #1b6c1c;
+			padding: 0 20px 30px 1em;
+		}
+
+
+		.provisional.gc-subway dl li.complete a::before,
+		.provisional.gc-subway ul li.complete a::before {
+			background-color: #1b6c1c;
+			border-color: #1b6c1c;
+			
+
+		}
+
 
 		.provisional.gc-subway dl li.active a::after,
 		.provisional.gc-subway ul li.active a::after {
@@ -45,18 +78,28 @@
 			font-size: 16px;
 			font-weight: 600;
 			content: "\f054";
+			position:absolute;
+			left:-26px;
+			top:0px;		
+		}
+
+        
+		.provisional.gc-subway dl li.complete a::after,
+		.provisional.gc-subway ul li.complete a::after {
+			color: #fff;
+			font-family: "Font Awesome 5 Free";
+			font-size: 13px;
+			font-weight: 600;
+			content: "\f00c";
 			position: absolute;
-			left: 10px;
-			top: 5px;
+			left: -28px;
+			top: 0px;
 			
 		}
-		
+
 		.accnt-menu [role=menuitem] {
-
 			width: auto;
-
 		}
-
 
 		.accnt-menu [role=menu] {
 
@@ -73,13 +116,18 @@
 			padding-bottom: 0;
 		}
 
-		ul#app-mnu {}
-
 		@media screen and (max-width: 991px) {
 			ul#app-mnu {
 				padding: 0;
 			}
 		}
+
+
+		input[type=file] {
+			display: none;
+		}
+
+		
 	</style>
 
 </head>
@@ -318,7 +366,7 @@
 					</li>
 					<li property="itemListElement" typeof="ListItem">
 						<a property="item" typeof="WebPage" href="vma-appointments.html">
-							<span property="name">Disability assessments</span>
+							<span property="name">Disability reassessments</span>
 						</a>
 						<meta property="position" content="2">
 					</li>
@@ -335,7 +383,7 @@
 
 							<a property="item" typeof="WebPage" href="vma-overview.html">
 								<span class="fa fa-arrow-left"></span>
-								<span property="name">My VAC Account</span>
+								<span property="name">Virtual medical assessment overview</span>
 							</a>
 						</li>
 					</ol>
@@ -364,242 +412,191 @@
 				style="letter-spacing: 0.5px;" >
 					MENU <span class="fa fa-bars"></span>
 			</button>-->
-			
+
 				<div class="row">
-					<div class="col-xs-12 col-md-7">
+					<div class="col-xs-12">
 						<section>
 							<div>
 								<h1 id="wb-cont" property="name">
-									Consent and guidelines
+									Quality of Life Questionnaire
 								</h1>
+								<p class="lead">This questionnaire is intended to evaluate how your daily life is affected by your
+									condition.</p>
 								
-							</div>
-						</section>						
-						
-						<p class="">Before you continue, please read through the consent and&nbsp;guidelines.</p>
-
-					</div>
-					
-					<nav class="provisional gc-subway pull-right col-md-4 col-sm-12 col-xs-12"
-						style="border-right:0; border-top:0; border-bottom: 0;">
-						<p class="h3 mrgn-tp-lg hidden-sm">Steps</p>
-						<p class="h3 mrgn-tp-0 visible-sm">Steps</p>
-						<ul>
-							<li class="active">
-								<a href="#" class="active">Consent and guidelines</a>
-							</li>
-							<li>
-								<a href="#" class="disabled">Confirm your details</a>
-							</li>
-							<li>
-								<a href="#" class="disabled">Chaperone details</a>
-							</li>
-							<li>
-								<a href="#" class="disabled">Quality of life questionnaire</a>
-							</li>
-							<li>
-								<a href="#" class="disabled">Gather your information</a>
-							</li>
-							<li>
-								<a href="#" class="disabled">Get ready for your assessment</a>
-							</li>
-							<li>
-								<a href="#" class="disabled">Appointment guide</a>
-							</li>
-						</ul>
-					</nav>
-					<div class="col-sm-12 col-md-7">
-						<h2></h2>
-						
-
-						<h3>Meeting platform</h3>
-						<p>The assessment will be conducted on Microsoft Teams, a videoconferencing platform.</p>
-
-						<h3>Potential impact on benefits</h3>
-
-						<p>If the assessment confirms that your condition has worsened, your disability benefit, will be adjusted accordingly — unless you are already receiving the maximum amount payable of 100% assessment.</p>
-
-						<h3>Right to have a chaperone</h3>
-
-						<p>You have the right to a chaperone during the virtual medical assessment.</p>
-						<p>You may:</p>
-						<ul>
-							<li>ask <abbr title="Veterans Affairs Canada">VAC</abbr> to provide a chaperone for the virtual medical assessment</li>
-							<li>stop the virtual medical assessment at any time to ask questions about what the Medical Officer is doing</li>
-							<li>stop the virtual medical assessment and ask for a chaperone, even if you refused one at first</li>
-						</ul>
-						<p>If you have questions or feel uncomfortable with a part of the assessment, please ask the Medical Officer to stop and tell them about your concerns.
-						</p>
-
-						<!--https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/medical-exams/requirements-permanent-residents.html-->
-
-					
-
-						<h3>Information disclosure</h3>
-
-						<p>You may need to disclose personal and medical information and attendance details during the virtual medical assessment. This information is crucial for an accurate evaluation of your condition.</p>
-
-						<!--
-							- Do you consent to use MS Teams Video for this VMA?
-							- Do you hereby give your informed consent for the use of VMAs in your disability assessment?
-							- Do you understand and consent to disclosing Personal, Medical Information and Attendance during the VMA?
-						-->
-
-						<h3>Consent acknowledgment</h3>
-
-						<p>By clicking <strong>Submit & Continue</strong>, you acknowledge that you have read and understand the virtual medical assessment consent information above. This acknowledgment signifies your agreement to participate in the reassessment process.</p>
-
-						<div class="mrgn-tp-lg">
-						<a class="btn btn-primary btn-lg" href="vma-details.html">Submit & Continue</a>
-
-						<a href="#centred-popup" aria-controls="centred-popup" class="wb-lbx btn btn-text btn-lg" role="button">Cancel your virtual medical assessment</a>
-
-						<section id="centred-popup" class="mfp-hide modal-dialog modal-content overlay-def">
-							<header class="modal-header">
-								<h2 class="modal-title">Cancel your virtual medical assessment</h2>
-							</header>
-							<div class="modal-body">
-								<p>You are about to cancel your virtual medical assessment. You are still entitled to your reassessment through one of our other options. Once you cancel, please contact VAC to reschedule your reassessment.</p>
-								<div class="wb-frmvld">
-									<form action="#" method="get" id="validation-example">
-										<div class="row">
-											<div class="form-group col-sm-11">
-												<label for="fname1" class="required"><span class="field-name">Type 'CANCEL' to confirm.</span> <strong class="required">(required)</strong></label><br>
-												<input class="form-control col-md-8" id="fname1" name="fname1" type="text" autocomplete="given-name" required="required" data-rule-minlength="2" />
-											</div>
-										</div>
-									</form>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button class="btn btn-warning pull-left">Cancel your virtual assessment</button>
-								<button class="btn btn-default overlay-close popup-modal-dismiss pull-left">Close</button>
+								
 							</div>
 						</section>
-
-						</div>
-						<!--
-						<nav class="provisional gc-subway pull-right col-md-4 col-sm-12 col-xs-12"
+						<nav class="provisional gc-subway pull-right mrgn-tp-0 col-md-4 col-sm-12 col-xs-12"
 							style="border-right:0; border-top:0; border-bottom: 0;">
-							<p class="h3 mrgn-tp-lg hidden-sm">Sections</p>
-							<p class="h3 mrgn-tp-0 visible-sm">Sections</p>
+							<p class="h3 mrgn-tp-0 hidden-sm">Steps</p>
+							<p class="h3 mrgn-tp-0 visible-sm">Steps</p>
 							<ul>
+								<li class="complete">
+									<a href="#" class="disabled ">Consent and guidelines</a>
+								</li>
+								<li class="complete">
+									<a href="#" class="active">Confirm your details</a>
+								</li>
+								<li class="active">
+									<a href="#" class="active">Quality of life questionnaire</a>
+									<ul class="">
+										<li class="complete">
+											<a href="#" class="hidden-xs hidden-sm complete">Household activities</a>
+										</li>
+										<li class="complete">
+											<a href="#" class="hidden-xs hidden-sm ">Errands</a>
+										</li>
+										<li class="complete">
+											<a href="#" class="hidden-xs hidden-sm">Driving</a>
+										</li>
+										<li class="complete">
+											<a href="#" class="hidden-xs hidden-sm ">Public transportation</a>
+										</li>
+										
+										<li>
+											<a href="#" class="hidden-xs hidden-sm active">Work</a>
+										</li>
+										
+										<li>
+											<a href="#" class="hidden-xs hidden-sm ">Recreational and community activities</a>
+										</li>
+										
+										<li>
+											<a href="#" class="hidden-xs hidden-sm ">Family responsibilities</a>
+										</li>
+										
+										<li>
+											<a href="#" class="hidden-xs hidden-sm ">Maintain relationships</a>
+										</li>
+										<li>
+											<a href="#" class="hidden-xs hidden-sm ">Review and submit</a>
+										</li>
+									</ul>
+								</li>
+
 								<li>
-									<a href="#what-to-bring">What to bring</a>
+									<a href="#" class="disabled">Gather your information</a>
 								</li>
 								<li>
-									<a href="#test-your-equipment">Prepare and test your&nbsp;equipment</a>
-								</li>
-								<li style="border-bottom: 0; border-left: 4px solid transparent;">
-									<a href="#prepare-your-space">Prepare your space</a>
-								</li>
-								
-								<li>
-									<a href="#" class="hidden-xs hidden-sm">[Page 4]</a>
-									<a href="#gc-document-nav" class="visible-xs visible-sm">[Page 4]</a>
+									<a href="#" class="disabled">Get ready for your assessment</a>
 								</li>
 								<li>
-									<a href="#" class="hidden-xs hidden-sm">[Page 5]</a>
-									<a href="#gc-document-nav" class="visible-xs visible-sm">[Page 5]</a>
-								</li>
-								<li>
-									<a href="#" class="hidden-xs hidden-sm">[Page 6]</a>
-									<a href="#gc-document-nav" class="visible-xs visible-sm">[Page 6]</a>
+									<a href="#" class="disabled">Appointment guide</a>
 								</li>
 							</ul>
-						</nav>-->
-						<!--
-						<div id="vma-checklist" class="col-md-8 col-sm-12 col-xs-12" style="padding-left: 0;">
-							<fieldset class="gc-chckbxrdio">
-								<legend>
-									<h2 id="what-to-bring">What to bring</h2>
-								</legend>
-								<ul class="list-unstyled lst-spcd-2">
-									<li class="checkbox">
-										<input type="checkbox" id="cond1">
-										<label for="cond1">Your CSDN ID</label>: <strong
-											style="font-size: 20px;">500012478602</strong>
-									</li>
-									<li class="checkbox">
-										<input type="checkbox" id="cond2">
-										<label for="cond2">Your file number</label>: <strong
-											style="font-size: 20px;">756439</strong>
-									</li>
-									<li class="checkbox">
-										<input type="checkbox" id="cond3">
-										<label for="cond3">Medical documents related to your illness or
-											injury</label>
-									</li>
-									<li class="checkbox">
-										<input type="checkbox" id="cond4">
-										<label for="cond4">A list of your current medications
-										</label>
-									</li>
-									<li class="checkbox">
-										<input type="checkbox" id="cond5">
-										<label for="cond5">Your completed <a
-												href="https://www.veterans.gc.ca/eng/forms/document/pen50"
-												target="_blank">Quality of Life Questionnaire (PEN 50e)</a>
+						</nav>
 
-										</label>
-									</li>
-									<li class="checkbox">
-										<input type="checkbox" id="cond6">
-										<label for="cond6">Something to take notes with (pen and paper, tablet, etc.)
-										</label>
-									</li>
-								</ul>
-							</fieldset>
-							<fieldset class="gc-chckbxrdio">
-								<legend>
-									<h2 id="test-your-equipment">Prepare and test your equipment</h2>
-								</legend>
-								<ul class="list-unstyled lst-spcd-2">
-									<li class="checkbox">
-										<input type="checkbox" id="cond12">
-										<label for="cond12">Download and install <a
-												href="https://www.microsoft.com/en-ca/microsoft-teams/download-app"
-												target="_blank">Microsoft Teams</a></label>
-									</li>
-									<li class="checkbox">
-										<input type="checkbox" id="cond13">
-										<label for="cond13">Make a <a href="https://support.microsoft.com/en-au/office/manage-your-call-settings-in-microsoft-teams-456cb611-3477-496f-b31a-6ab752a7595f#ID0EDPBBDDBD" target="_blank">test call</a></label>
-									</li>
-									<li class="checkbox">
-										<input type="checkbox" id="cond14">
-										<label for="cond14">Join from a non-Canadian Armed Forces network</label>
-									</li>
-
-								</ul>
-							</fieldset>
-							<fieldset class="gc-chckbxrdio">
-								<legend>
-									<h2 id="prepare-your-space">Prepare your space</h2>
-								</legend>
-								<ul class="list-unstyled lst-spcd-2">
-									<li class="checkbox">
-										<input type="checkbox" id="cond21">
-										<label for="cond21">Find a private, quiet, and well-lit place for your
-											visit</a></label>
-									</li>
-									<li class="checkbox">
-										<input type="checkbox" id="cond22">
-										<label for="cond22">Have a way to position the device so you're in the
-											frame</a></label>
-									</li>
-									<li class="checkbox">
-										<input type="checkbox" id="cond23">
-										<label for="cond23">Relocate pets to another room
-										</label>
-									</li>
-								</ul>
-							</fieldset>
+						<div class="col-md-8">
+							<!-- <h2>Obstructive Sleep Apnea</h2> -->
+							<!--
+						<div class="alert alert-success mrgn-tp-md">
+							<h2 class="h3">Your consent for virtual medical reassessment has been documented</h2>
+							<p>You can find a copy of the submitted consent in your <a href="#">submitted forms and documents</a></p>
 						</div>-->
-					</div>
-				</div>
 
-			</div>
-			</div>
+						<!--
+						<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0" id="questionnaire0">
+							<legend class="required">I can do my usual household activities (prepare meals, do basic household maintenance, etc.).&nbsp;<strong class="required">(required)</strong></legend>
+							<ul class="list-unstyled lst-spcd-2">
+								<li class="radio ">
+									<input type="radio" id="questionnaire0-1" name="questionnaire0">
+									<label for="questionnaire0-1">Yes</label>
+								</li>
+								<li class="radio ">
+									<input type="radio" id="questionnaire0-2" name="questionnaire0">
+									<label for="questionnaire0-2">Yes, with adaptations or assistance</label>
+								</li>
+								<li class="radio ">
+									<input type="radio" id="questionnaire0-3" name="questionnaire0">
+									<label for="questionnaire0-3">No</label>
+								</li>
+
+							</ul>
+						</fieldset>-->
+
+							<fieldset class="gc-chckbxrdio brdr-0 mrgn-tp-lg mrgn-bttm-0 form-inline mrgn-rght-md pb-4 form-inline" id="questionnaire1">
+								<legend class="required">I am able to work in my regular occupation. <strong class="required">(required)</strong></legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="radio label-inline">
+										<input type="radio" id="questionnaire1-1" name="questionnaire1" value="1">
+										<label for="questionnaire1-1">Yes</label>
+									</li>
+									<li class="radio label-inline">
+										<input type="radio" id="questionnaire1-2" name="questionnaire1" value="2">
+										<label for="questionnaire1-2">Yes, with adaptations or assistance</label>
+									</li>
+									<li class="radio label-inline">
+										<input type="radio" id="questionnaire1-3" name="questionnaire1" value="3">
+										<label for="questionnaire1-3">No</label>
+									</li>
+                                    
+									<li class="radio label-inline">
+										<input type="radio" id="questionnaire1-4" name="questionnaire1" value="4">
+										<label for="questionnaire1-3">Retired</label>
+									</li>
+
+								</ul>
+							</fieldset>
+
+                            <div id="task-details" class="form-group hidden">
+					
+
+    <fieldset class="gc-chckbxrdio brdr-0 mrgn-tp-lg mrgn-bttm-0 mrgn-rght-md  pb-4 form-inline">
+						<legend class="required"><span class="field-name">Which conditions make it difficult or stop you from doing these tasks? <strong class="required">(required)</strong></span></legend>
+						<ul class="list-unstyled">
+							<li class="checkbox gc-chckbxrdio mrgn-rght-lg">
+								<input type="checkbox" id="dt_condition1" value="1">
+								<label for="dt_condition1">Obstructive Sleep Apnea</label>
+							</li>
+							<li class="checkbox gc-chckbxrdio mrgn-rght-lg">
+								<input type="checkbox" id="dt_condition2" value="2">
+								<label for="dt_condition2">Tinnitus</label>
+							</li>
+							<li class="checkbox gc-chckbxrdio">
+								<input type="checkbox" id="dt_condition3" value="3">
+								<label for="dt_condition3">Hearing Loss</label>
+							</li>			
+						</ul>
+					</fieldset>
+
+                    <fieldset class="mrgn-bttm-0 mrgn-tp-lg brdr-0 mrgn-rght-lg pb-4 gc-chckbxrdio hidden" id="details-descirption">
+								<div class="form-group">
+									<legend><span class="field-name mrgn-bttm-0">Please provide us with some details about how your health conditions affect your ability to do these tasks.</span></legend>
+                                    <p class="small mrgn-bttm-0">For each condition you have, please describe</p>
+                                    <ul class="small mrgn-tp-0">
+                                        <li>Which specific tasks are difficult or not possible for you to do?</li>
+                                        <li>How does your Obstructive Sleep Apnea make these tasks difficult?</li>
+                                    </ul>
+                                    </div>
+                    </fieldset>
+                            <fieldset class="mrgn-bttm-0 mrgn-tp-0 brdr-0 mrgn-rght-lg hidde pb-4 gc-chckbxrdio hidden" id="details-1">
+                                    <label for="provide-details" class="">Obstructive Sleep Apnea</label>
+									<textarea id="provide-details" name="provide-details" cols="100" rows="5" required="required" class="form-control full-width" maxlength="1500"></textarea>
+							</fieldset>
+                             <fieldset class="mrgn-bttm-0 brdr-0 mrgn-rght-lg hidden pb-4" id="details-2">
+								<div class="form-group">
+									<label for="provide-details"><span class="field-name">Tinnitus</span></label>
+                         			<textarea id="provide-details" name="provide-details" cols="100" rows="5" required="required" class="form-control full-width" maxlength="1500"></textarea>
+								</div>
+							</fieldset>
+                             <fieldset class="mrgn-bttm-0 brdr-0 mrgn-rght-lg hidden pb-4" id="details-3">
+								<div class="form-group">
+									<label for="provide-details"><span class="field-name">Hearing Loss</span></label>
+                                                                    
+
+									<textarea id="provide-details" name="provide-details" cols="100" rows="5" required="required" class="form-control full-width" maxlength="1500"></textarea>
+								</div>
+							</fieldset>
+				</div>
+							
+
+							<div class="mrgn-tp-lg mrgn-bttm-lg">
+								<a class="btn btn-default btn-lg" href="vma-questionnaire-newIdea-4.html"><span class="fa fa-arrow-left mrgn-rght-sm"></span> Previous: Public Transportation</a>
+								<a class="btn btn-primary btn-lg" href="vma-questionnaire-newIdea-6.html">Next: Recreational and community activities<span class="fa fa-arrow-right mrgn-lft-sm"></span></a>
+								
+							</div>
+						</div>
+					</div>
 		</section>
 		<section class="pagedetails container">
 			<h2 class="wb-inv">Page details</h2>
@@ -624,7 +621,7 @@
 							<div class="clearfix hidden-xs"></div>
 							<dl id="wb-dtmd">
 								<dt>Date modified:</dt>
-								<dd><time property="dateModified">2024-01-23</time></dd>
+								<dd><time property="dateModified">2024-01-31</time></dd>
 							</dl>
 						</div>
 						<div class="col-xs-12 col-sm-6 mrgn-bttm-0 hidden-xs text-right">
@@ -743,32 +740,45 @@
 
 
 	<script>
-		$(document).ready(function () {
-			vmaChecklistInputs = $('#vma-checklist').find('input');
+$(document).ready(function() {
+    
+    $('input[type=radio]').on('change', function() {
+        console.log("ready!");
+    
+        if ($(this).closest("fieldset").attr("id") == "questionnaire1") {
+            if ($(this).val() == "1") {
+                $("#task-details").addClass("hidden");
+            } else {
+                $("#task-details").removeClass("hidden");
+            }
+        }
+    });
+    
+});
 
-			// load checkbox status
-			vmaChecklistInputs.each(function (i) {
-				var checkboxStatus = localStorage.getItem('vmaCheckbox' + i);
+$(document).ready(function() {
+   
 
-				if (checkboxStatus === 'checked') {
-					this.checked = true;
-				} else {
-					this.checked = false;
-				}
-			});
+    $('input[type=checkbox]').on('change', function() {
+		console.log("test");
+       if ($('input[type=checkbox]:checked').length > 0) {
+                    $('#details-descirption').removeClass("hidden"); // Show the div if any checkbox is checked
+                } else {
+                    $('#details-descirption').addClass("hidden"); // Hide the div if no checkboxes are checked
+                }
+ var checkbox = $(this).val();
+	console.log($(this).prop('checked'));
+    
+        if ($(this).prop('checked') == true) {
+            $("#details-"+checkbox).removeClass("hidden");
+        }
+		else{
+			 $("#details-"+checkbox).addClass("hidden");
+		}
+    });
+    
+});
 
-			// change event
-			$(vmaChecklistInputs).on('click', function (e) {
-
-				vmaChecklistInputs.each(function (i) {
-
-					//update localStorage
-					localStorage.setItem('vmaCheckbox' + i, this.checked ? 'checked' : 'not checked')
-
-				});
-
-			});
-		});
 
 	</script>
 

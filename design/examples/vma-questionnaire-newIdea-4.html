@@ -69,6 +69,19 @@ s
 			
 
 		}
+        
+		.provisional.gc-subway dl li.active a::after,
+		.provisional.gc-subway ul li.active a::after {
+			color: #fff;
+			font-family: "Font Awesome 5 Free";
+			font-size: 16px;
+			font-weight: 600;
+			content: "\f054";
+			position:absolute;
+			left:-26px;
+			top:0px;		
+		}
+
 
 		.provisional.gc-subway dl li.complete a::after,
 		.provisional.gc-subway ul li.complete a::after {
@@ -81,18 +94,6 @@ s
 			left: -28px;
 			top: 0px;
 			
-		}
-
-		.provisional.gc-subway dl li.active a::after,
-		.provisional.gc-subway ul li.active a::after {
-			color: #fff;
-			font-family: "Font Awesome 5 Free";
-			font-size: 16px;
-			font-weight: 600;
-			content: "\f054";
-			position:absolute;
-			left:-26px;
-			top:0px;		
 		}
 
 		.accnt-menu [role=menuitem] {
@@ -438,20 +439,40 @@ s
 								<li class="active">
 									<a href="#" class="active">Quality of life questionnaire</a>
 									<ul class="">
-										<li class="active">
-											<a href="#" class="hidden-xs hidden-sm active">Obstructive Sleep Apnea</a>
+										<li class="complete">
+											<a href="#" class="hidden-xs hidden-sm complete">Household activities</a>
 										</li>
-										<li class="">
-											<a href="#" class="hidden-xs hidden-sm ">Tinnitus</a>
+										<li class="complete">
+											<a href="#" class="hidden-xs hidden-sm ">Errands</a>
+										</li>
+										<li class="complete">
+											<a href="#" class="hidden-xs hidden-sm">Driving</a>
 										</li>
 										<li>
-											<a href="#" class="hidden-xs hidden-sm ">Hearing Loss</a>
+											<a href="#" class="hidden-xs hidden-sm active">Public transportation</a>
+										</li>
+										
+										<li>
+											<a href="#" class="hidden-xs hidden-sm ">Work</a>
+										</li>
+										
+										<li>
+											<a href="#" class="hidden-xs hidden-sm ">Recreational and community activities</a>
+										</li>
+										
+										<li>
+											<a href="#" class="hidden-xs hidden-sm ">Family responsibilities</a>
+										</li>
+										
+										<li>
+											<a href="#" class="hidden-xs hidden-sm ">Maintain relationships</a>
 										</li>
 										<li>
 											<a href="#" class="hidden-xs hidden-sm ">Review and submit</a>
 										</li>
 									</ul>
 								</li>
+
 								<li>
 									<a href="#" class="disabled">Gather your information</a>
 								</li>
@@ -492,8 +513,8 @@ s
 							</ul>
 						</fieldset>-->
 
-							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline mrgn-rght-md pb-4 form-inline" id="questionnaire1">
-								<legend class="required">I can do my usual household activities (prepare meals, do basic household maintenance, etc.).&nbsp;<strong class="required">(required)</strong></legend>
+							<fieldset class="gc-chckbxrdio brdr-0 mrgn-tp-lg mrgn-bttm-0 form-inline mrgn-rght-md pb-4 form-inline" id="questionnaire1">
+								<legend class="required">I can use public transportation (if available). <strong class="required">(required)</strong></legend>
 								<ul class="list-unstyled lst-spcd-2">
 									<li class="radio label-inline">
 										<input type="radio" id="questionnaire1-1" name="questionnaire1" value="1">
@@ -514,367 +535,60 @@ s
                             <div id="task-details" class="form-group hidden">
 					
 
-    <fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 mrgn-rght-md  pb-4 form-inline">
+    <fieldset class="gc-chckbxrdio brdr-0 mrgn-tp-lg mrgn-bttm-0 mrgn-rght-md  pb-4 form-inline">
 						<legend class="required"><span class="field-name">Which conditions make it difficult or stop you from doing these tasks? <strong class="required">(required)</strong></span></legend>
 						<ul class="list-unstyled">
 							<li class="checkbox gc-chckbxrdio mrgn-rght-lg">
-								<input type="checkbox" id="dt_condition1" value="">
+								<input type="checkbox" id="dt_condition1" value="1">
 								<label for="dt_condition1">Obstructive Sleep Apnea</label>
 							</li>
 							<li class="checkbox gc-chckbxrdio mrgn-rght-lg">
-								<input type="checkbox" id="dt_condition2" value="">
+								<input type="checkbox" id="dt_condition2" value="2">
 								<label for="dt_condition2">Tinnitus</label>
 							</li>
 							<li class="checkbox gc-chckbxrdio">
-								<input type="checkbox" id="dt_condition3" value="">
+								<input type="checkbox" id="dt_condition3" value="3">
 								<label for="dt_condition3">Hearing Loss</label>
-							</li>
-							
-                            
+							</li>			
 						</ul>
 					</fieldset>
 
-                    <fieldset class="mrgn-tp-lg mrgn-bttm-0 mrgn-rght-lg brdr-bttm pb-4" id="questionnaire9">
+                    <fieldset class="mrgn-bttm-0 mrgn-tp-lg brdr-0 mrgn-rght-lg pb-4 gc-chckbxrdio hidden" id="details-descirption">
 								<div class="form-group">
-									<label for="provide-details"><span class="field-name">Please provide us with some details so we can better understand your situation.</span></label>
-                                    <p class="small">For example, which specific tasks are difficult or not possible for you, and what causes these tasks to be difficult?</p>
+									<legend><span class="field-name mrgn-bttm-0">Please provide us with some details about how your health conditions affect your ability to do these tasks.</span></legend>
+                                    <p class="small mrgn-bttm-0">For each condition you have, please describe</p>
+                                    <ul class="small mrgn-tp-0">
+                                        <li>Which specific tasks are difficult or not possible for you to do?</li>
+                                        <li>How does your Obstructive Sleep Apnea make these tasks difficult?</li>
+                                    </ul>
+                                    </div>
+                    </fieldset>
+                            <fieldset class="mrgn-bttm-0 mrgn-tp-0 brdr-0 mrgn-rght-lg hidde pb-4 gc-chckbxrdio hidden" id="details-1">
+                                    <label for="provide-details" class="">Obstructive Sleep Apnea</label>
+									<textarea id="provide-details" name="provide-details" cols="100" rows="5" required="required" class="form-control full-width" maxlength="1500"></textarea>
+							</fieldset>
+                             <fieldset class="mrgn-bttm-0 brdr-0 mrgn-rght-lg hidden pb-4" id="details-2">
+								<div class="form-group">
+									<label for="provide-details"><span class="field-name">Tinnitus</span></label>
+                         			<textarea id="provide-details" name="provide-details" cols="100" rows="5" required="required" class="form-control full-width" maxlength="1500"></textarea>
+								</div>
+							</fieldset>
+                             <fieldset class="mrgn-bttm-0 brdr-0 mrgn-rght-lg hidden pb-4" id="details-3">
+								<div class="form-group">
+									<label for="provide-details"><span class="field-name">Hearing Loss</span></label>
+                                                                    
 
 									<textarea id="provide-details" name="provide-details" cols="100" rows="5" required="required" class="form-control full-width" maxlength="1500"></textarea>
 								</div>
 							</fieldset>
-
-                    
 				</div>
-
-
-
-                
 							
-
-							<!-- <fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline mrgn-rght-md brdr-bttm pb-4" id="questionnaire2">
-								<legend class="required">I can shop and/or do errands.&nbsp;<strong class="required">(required)</strong></legend>
-								<ul class="list-unstyled lst-spcd-2">
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire2-1" name="questionnaire2">
-										<label for="questionnaire2-1">Yes</label>
-									</li>
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire2-2" name="questionnaire2">
-										<label for="questionnaire2-2">Yes, with adaptations or assistance</label>
-									</li>
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire2-3" name="questionnaire2">
-										<label for="questionnaire2-3">No</label>
-									</li>
-
-								</ul>
-							</fieldset>
-
-							
-
-							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline mrgn-rght-md brdr-bttm pb-4" id="questionnaire3">
-								<legend class="required">I can drive a vehicle.&nbsp;<strong class="required">(required)</strong></legend>
-								<ul class="list-unstyled lst-spcd-2">
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire3-1" name="questionnaire3">
-										<label for="questionnaire3-1">Yes</label>
-									</li>
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire3-2" name="questionnaire3">
-										<label for="questionnaire3-2">Yes, with adaptations or assistance</label>
-									</li>
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire3-3" name="questionnaire3">
-										<label for="questionnaire3-3">No</label>
-									</li>
-
-								</ul>
-							</fieldset>
-
-							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline mrgn-rght-md brdr-bttm pb-4" id="questionnaire4">
-								<legend class="required">I can use public transportation (if available).&nbsp;<strong class="required">(required)</strong></legend>
-								<ul class="list-unstyled lst-spcd-2">
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire4-1" name="questionnaire4">
-										<label for="questionnaire4-1">Yes</label>
-									</li>
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire4-2" name="questionnaire4">
-										<label for="questionnaire4-2">Yes, with adaptations or assistance</label>
-									</li>
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire4-3" name="questionnaire4">
-										<label for="questionnaire4-3">No</label>
-									</li>
-
-								</ul>
-							</fieldset>
-
-							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline mrgn-rght-md brdr-bttm pb-4" id="questionnaire5">
-								<legend class="required">I am able to work in my
-									regular occupation.&nbsp;<strong class="required">(required)</strong></legend>
-								<ul class="list-unstyled lst-spcd-2">
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire5-1" name="questionnaire5">
-										<label for="questionnaire5-1">Yes</label>
-									</li>
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire5-2" name="questionnaire5">
-										<label for="questionnaire5-2">Yes, with adaptations or assistance</label>
-									</li>
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire5-3" name="questionnaire5">
-										<label for="questionnaire5-3">No</label>
-									</li>
-
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire5-4" name="questionnaire5">
-										<label for="questionnaire5-4">Retired</label>
-									</li>
-
-								</ul>
-							</fieldset>
-
-							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline mrgn-rght-md brdr-bttm pb-4" id="questionnaire6">
-								<legend class="required">I can effectively participate in
-									my usual and accustomed
-									recreational and community
-									activities.&nbsp;<strong class="required">(required)</strong></legend>
-								<ul class="list-unstyled lst-spcd-2">
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire6-1" name="questionnaire6">
-										<label for="questionnaire6-1">Yes</label>
-									</li>
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire6-2" name="questionnaire6">
-										<label for="questionnaire6-2">Yes, with adaptations or assistance</label>
-									</li>
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire6-3" name="questionnaire6">
-										<label for="questionnaire6-3">No</label>
-									</li>
-
-								</ul>
-							</fieldset>
-
-							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline mrgn-rght-lg brdr-bttm pb-4" id="questionnaire7">
-								<legend class="required">I am able to maintain my usual day-to-day family responsibilities, including social outings.&nbsp;<strong class="required">(required)</strong></legend>
-								<ul class="list-unstyled lst-spcd-2">
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire7-1" name="questionnaire7">
-										<label for="questionnaire7-1">Yes</label>
-									</li>
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire7-2" name="questionnaire7">
-										<label for="questionnaire7-2">Yes, with adaptations or assistance</label>
-									</li>
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire7-3" name="questionnaire7">
-										<label for="questionnaire7-3">No</label>
-									</li>
-
-								</ul>
-							</fieldset>
-
-							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline mrgn-rght-lg brdr-bttm pb-4" id="questionnaire8">
-								<legend class="required">I am able to maintain my usual day-to-day family responsibilities, including social outings.&nbsp;<strong class="required">(required)</strong></legend>
-								<ul class="list-unstyled lst-spcd-2">
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire8-1" name="questionnaire8">
-										<label for="questionnaire8-1">Yes</label>
-									</li>
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire8-2" name="questionnaire8">
-										<label for="questionnaire8-2">Yes, with adaptations or assistance</label>
-									</li>
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire8-3" name="questionnaire8">
-										<label for="questionnaire8-3">No</label>
-									</li>
-
-								</ul>
-							</fieldset>
-
-							<fieldset class="mrgn-tp-lg mrgn-bttm-0 mrgn-rght-lg brdr-bttm pb-4" id="questionnaire9">
-								<div class="form-group">
-									<label for="provide-details"><span class="field-name">If you have answered no to any of the previous statements, or if you have any additional comments,
-										please provide details:</span> </label>
-
-									<textarea id="provide-details" name="provide-details" cols="100" rows="5" required="required" class="form-control full-width" maxlength="1500"></textarea>
-								</div>
-							</fieldset>
-
-							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline mrgn-rght-lg brdr-0 " id="questionnaire10">
-								<legend class="required">Are the changes in your activities due entirely to Obstructive Sleep Apnea?<strong class="required">(required)</strong></legend>
-								<ul class="list-unstyled lst-spcd-2">
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire10-1" name="questionnaire10" value="1">
-										<label for="questionnaire10-1">Yes</label>
-									</li>
-									<li class="radio label-inline">
-										<input type="radio" id="questionnaire10-3" name="questionnaire10" value="0">
-										<label for="questionnaire10-3">No</label>
-									</li>
-
-								</ul>
-							</fieldset> -->
-							
-							<!-- if no to above question -->
-							<!-- <fieldset class="mrgn-tp-lg mrgn-bttm-0 mrgn-rght-lg  brdr-0 pb-4 hidden" id="questionnaire11">
-								<div class="form-group">
-									<label for="provide-details"><span class="field-name">Identify and explain how other conditions may be affecting your activities of daily living.</span> </label>
-
-									<textarea id="provide-details" name="provide-details" cols="100" rows="5" required="required" class="form-control full-width" maxlength="1500"></textarea>
-								</div>
-							</fieldset> -->
-
-
-							<!--
-						<p id="appt-select-label" style="font-size: 22px;"><strong>Select an appointment date and time <span style="color: #d3080c;">(required)</span></strong></p>
-						<div class="mrgn-bttm-lg row">
-
-							<div class="wb-calevt col-md-5" data-calevt-src="calendar1">
-								<fieldset class="gc-chckbxrdio">
-									<ul class="list-unstyled lst-spcd-2">
-										<li class="radio">
-											<input type="radio" name="appt" id="appt-1" name="appt">
-											<label for="appt-1">2024-03-11 at 2:00 PM</label>
-											<section class="hidden">
-												<h4><a href="https://www.canada.gc.ca"><time datetime="2024-03-11">March 11th 2024 at 2:00 PM</time></a></h4>
-											</section>
-										</li>
-										<li class="radio">
-											<input type="radio" name="appt" id="appt-2" name="appt">
-											<label for="appt-2">2024-03-14 at 11:30 AM</label>
-											<section class="hidden">
-												<h4><a href="#"><time datetime="2024-03-14">March 14th 2024 at 11:00 AM </time></a></h4>
-											</section>
-										</li>
-										<li class="radio">
-											<input type="radio" name="appt" id="appt-3" name="appt">
-											<label for="appt-3">2024-03-14 at 3:30 PM</label>
-											<section class="hidden">
-												<h4><a href="#"><time datetime="2024-03-14">March 14th 2024 at 3:30 PM </time></a></h4>
-											</section>
-										</li>
-										<li class="radio">
-											<input type="radio" name="appt" id="appt-4" name="appt">
-											<label for="appt-4">2024-03-15 at 10:30 AM</label>
-											<section class="hidden">
-												<h4><a href="#"><time datetime="2024-03-15">March 15th 2024 at 10:30 AM </time></a></h4>
-											</section>
-										</li>
-										<li class="radio">
-											<input type="radio" name="appt" id="appt-5" name="appt">
-											<label for="appt-5">2024-03-15 at 1:30 PM</label>
-											<section class="hidden">
-												<h4><a href="#"><time datetime="2024-03-15">March 15th 2024 at 1:30 PM</time></a></h4>
-											</section>
-										</li>
-									</ul>
-								</fieldset>
-							</div>
-							<div id="calendar1" class="col-md-6"></div>
-
-						</div>-->
-
-							<!--
-							<div id="vma-chaperone" class="col-xs-12" style="padding-left: 0;">
-								<fieldset class="gc-chckbxrdio">
-									<legend class="required">Would you like a chaperone to accompany you at your
-										virtual&nbsp;medical&nbsp;reassessment? <strong
-											class="required">(required)</strong></legend>
-									<ul class="list-unstyled lst-spcd-2">
-										<li class="radio">
-											<input type="radio" id="inlineRadio1" name="appt">
-											<label for="inlineRadio1">Yes</label>
-
-										</li>
-										<li class="radio">
-											<input type="radio" id="inlineRadio2" name="appt">
-											<label for="inlineRadio2">No</label>
-
-										</li>
-
-									</ul>
-
-									<div class="clearfix mrgn-tp-lg"></div>
-
-								</fieldset>
-
-
-								<fieldset class="gc-chckbxrdio hidden" id="chaperone-type">
-									<legend class="required">Do you have a chaperone, or would you prefer us to
-										provide&nbsp;one?&nbsp;<strong class="required">(required)</strong></legend>
-									<ul class="list-unstyled lst-spcd-2">
-										<li class="radio">
-											<input type="radio" name="chaperone" id="chaperone-1">
-											<label for="chaperone-1">You have your chaperone</label>
-										</li>
-										<li class="radio">
-											<input type="radio" name="chaperone" id="chaperone">
-											<label for="chaperone">You would prefer a chaperone is provided</label>
-										</li>
-
-									</ul>
-								</fieldset>
-
-								<div id="chaperone-details" class="hidden">
-									<div class="form-group">
-										<label for="fname1"><span class="field-name">Your chaperone's name</span>
-											(optional)</label>
-										<input class="form-control" id="fname1" name="fname1" type="text"
-											autocomplete="given-name" data-rule-minlength="2" />
-									</div>
-
-									<div class="form-group">
-										<label for="relationship1"><span class="field-name">Your relationship to your
-												chaperone</span> (optional)</label>
-										<input class="form-control" id="relationship1" name="relationship1" type="text"
-											data-rule-minlength="2" />
-									</div>
-								</div>
-
-
-							</div>
-
-							<div class="col-sm-12" style="padding-left: 0;">
-								<fieldset class="gc-chckbxrdio">
-									<legend class="required">What device will you be using for your virtual assessment?
-										<strong class="required">(required)</strong></legend>
-									<ul class="list-unstyled lst-spcd-2">
-										<li class="radio">
-											<input type="radio" name="device" id="device-1">
-											<label for="device-1">Mobile device</label>
-										</li>
-										<li class="radio">
-											<input type="radio" name="device" id="device">
-											<label for="device">Personal computer</label>
-										</li>
-
-									</ul>
-								</fieldset>
-
-							</div>
-						</div>
-
-					</div>
-					<div>
-
-					</div>
-				</div>-->
-
 
 							<div class="mrgn-tp-lg mrgn-bttm-lg">
-								<a class="btn btn-default btn-lg" href="vma-questionnaire.html"><span class="fa fa-arrow-left mrgn-rght-sm"></span> Previous: Quality of Life Questionnaire</a>
-								<a class="btn btn-primary btn-lg" href="vma-questionnaire-tinnitus.html">Next: Tinnitus<span class="fa fa-arrow-right mrgn-lft-sm"></span></a>
-								<!--
-					<a class="btn btn-text btn-lg">Cancel</a>-->
+								<a class="btn btn-default btn-lg" href="vma-questionnaire-newIdea-3.html"><span class="fa fa-arrow-left mrgn-rght-sm"></span> Previous: Driving</a>
+								<a class="btn btn-primary btn-lg" href="vma-questionnaire-newIdea-5.html">Next: Work<span class="fa fa-arrow-right mrgn-lft-sm"></span></a>
+								
 							</div>
-							<!--
-				<h2 class="mrgn-tp-lg">Related links</h2>
-				<p ><a href="#">Virtul medical reassessment consent and guidelines</a></p>-->
-
 						</div>
 					</div>
 		</section>
@@ -1020,26 +734,43 @@ s
 
 
 	<script>
-		  $(document).ready(function() {
+$(document).ready(function() {
     
     $('input[type=radio]').on('change', function() {
-		console.log( "ready!" );
+        console.log("ready!");
     
-       if($(this).closest("fieldset").attr("id") == "questionnaire1"){
-  
-			if($(this).val() == "1"){
-			$("#task-details").addClass("hidden");
-			}
-			else{
-			$("#task-details").removeClass("hidden");
-			}
-	}
-	
-
-      
+        if ($(this).closest("fieldset").attr("id") == "questionnaire1") {
+            if ($(this).val() == "1") {
+                $("#task-details").addClass("hidden");
+            } else {
+                $("#task-details").removeClass("hidden");
+            }
+        }
     });
+    
+});
 
+$(document).ready(function() {
+   
 
+    $('input[type=checkbox]').on('change', function() {
+		console.log("test");
+       if ($('input[type=checkbox]:checked').length > 0) {
+                    $('#details-descirption').removeClass("hidden"); // Show the div if any checkbox is checked
+                } else {
+                    $('#details-descirption').addClass("hidden"); // Hide the div if no checkboxes are checked
+                }
+ var checkbox = $(this).val();
+	console.log($(this).prop('checked'));
+    
+        if ($(this).prop('checked') == true) {
+            $("#details-"+checkbox).removeClass("hidden");
+        }
+		else{
+			 $("#details-"+checkbox).addClass("hidden");
+		}
+    });
+    
 });
 
 

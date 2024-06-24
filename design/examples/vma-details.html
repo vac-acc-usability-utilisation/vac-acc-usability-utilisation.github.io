@@ -267,67 +267,7 @@
 
 					</div>
 				</nav>
-				<!--
-					<nav role="navigation" typeof="SiteNavigationElement" id="info-pnl"
-						class="info-pnl wb-menu wb-menu-inited wb-init">
-						<h3>About this site</h3>
-						<ul class="list-unstyled mb-menu" role="menu">
-							<li>
-								<details>
-									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="1"
-										aria-haspopup="true" tabindex="0">Contact us</summary>
-									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
-										aria-hidden="true">
-										<li><a role="menuitem" aria-setsize="1" aria-posinset="1" tabindex="-1"
-												href="https://github.com/wet-boew/wet-boew/issues/new">Questions or
-												comments?</a></li>
-									</ul>
-								</details>
-							</li>
-							<li>
-								<details>
-									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="2"
-										aria-haspopup="true" tabindex="-1">About</summary>
-									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
-										aria-hidden="true">
-										<li><a role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1"
-												href="../../index-en.html#about">About the Web Experience Toolkit</a>
-										</li>
-										<li><a role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1"
-												rel="external"
-												href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web
-												Standards</a></li>
-									</ul>
-								</details>
-							</li>
-							<li>
-								<details>
-									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="3"
-										aria-haspopup="true" tabindex="-1">News</summary>
-									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
-										aria-hidden="true">
-										<li><a role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1"
-												href="https://github.com/wet-boew/wet-boew/pulse">Recent project
-												activity</a></li>
-										<li><a role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1"
-												href="https://github.com/wet-boew/wet-boew/graphs">Project
-												statistics</a></li>
-									</ul>
-								</details>
-							</li>
-							<li>
-								<details>
-									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="4"
-										aria-haspopup="true" tabindex="-1">Stay connected</summary>
-									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
-										aria-hidden="true">
-										<li><a role="menuitem" aria-setsize="1" aria-posinset="1" tabindex="-1"
-												rel="external" href="https://twitter.com/WebExpToolkit">Twitter</a></li>
-									</ul>
-								</details>
-							</li>
-						</ul>
-					</nav>-->
+				
 			</div>
 			<div class="modal-footer"><button title="Close overlay"
 					class="btn btn-sm btn-default pull-left overlay-close" type="button">Close<span class="wb-inv">Close
@@ -347,7 +287,7 @@
 					</li>
 					<li property="itemListElement" typeof="ListItem">
 						<a property="item" typeof="WebPage" href="index.html">
-							<span property="name">Disability reassessments</span>
+							<span property="name">Disability assessments</span>
 						</a>
 						<meta property="position" content="2">
 					</li>
@@ -399,9 +339,11 @@
 						<section>
 							<div>
 								<h1 id="wb-cont" property="name">
-									Confirm your virtual medical assessment details
+									Confirm your assessment details
 								</h1>
-								<p class="">Take a moment to review and confirm your assessment details.</p>
+								
+								<p class="lead">Please take a moment to review the redatils of your medical assessment and ensure they are correct.</p>
+								
 							</div>
 						</section>
 						<nav class="provisional gc-subway pull-right mrgn-tp-0 col-md-4 col-sm-12 col-xs-12"
@@ -414,6 +356,9 @@
 								</li>
 								<li class="active"> 
 									<a href="#" class="active">Confirm your details</a>
+								</li>
+								<li>
+									<a href="#" class="disabled">Chaperone details</a>
 								</li>
 								<li>
 									<a href="#" class="disabled">Quality of life questionnaire</a>
@@ -437,13 +382,24 @@
 							<p>You can find a copy of the submitted consent in your <a href="#">submitted forms and documents</a></p>
 						</div>-->
 							<!---->
-							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0" id="conditions">
-								<legend class="required" style="margin-bottom: 0.25em;">Are these the conditions you requested to have examined during your virtual medical reassessment?&nbsp;<strong class="required">(required)</strong></legend>
+						<section class="well">
+												<p class="mrgn-bttm-0">
+													<strong>Conditions to you've indicated you'd like to have assessed:</strong>
+												</p>
 								<ul class="mrgn-lft-0 mrgn-bttm-md" style="margin-left: -20px;">
 									<li>Obstructive Sleep Apnea</li>
 									<li>Tinnitus</li>
 									<li>Hearing Loss</li>
 								</ul>
+								<p class="mrgn-bttm-0">
+													<strong>Method of assessment:</strong>
+												</p>
+												<p>Microsoft Teams</p>
+											</section>
+							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0" id="conditions">
+								<legend class="required" style="margin-bottom: 0.25em;">Are all the details above correct?<strong class="required">(required)</strong></legend>
+								
+								
 								<ul class="list-unstyled lst-spcd-2">
 									<li class="radio">
 										<input type="radio" id="conditions1" name="conditions">
@@ -513,11 +469,12 @@
 						</div>-->
 
 
-							<div id="vma-chaperone" class="col-xs-12 mrgn-tp-lg" style="padding-left: 0;">
+							<!-- <div id="vma-chaperone" class="col-xs-12 mrgn-tp-lg" style="padding-left: 0;">
 								<fieldset class="gc-chckbxrdio">
 									<legend class="required">Would you like a chaperone to accompany you at your
 										virtual&nbsp;medical&nbsp;reassessment? <strong
 											class="required">(required)</strong></legend>
+											
 									<ul class="list-unstyled lst-spcd-2">
 										<li class="radio">
 											<input type="radio" id="inlineRadio1" name="appt">
@@ -570,7 +527,7 @@
 								</div>
 
 
-							</div>
+							</div> -->
 
 							<!--
 
@@ -602,7 +559,7 @@
 
 
 				<div class="mrgn-tp-lg mrgn-bttm-lg">
-					<a class="btn btn-primary btn-lg" href="vma-questionnaire.html">Next: Quality of life questionnaire <span class="fa fa-arrow-right mrgn-lft-sm"></span></a>
+					<a class="btn btn-primary btn-lg" href="vma-chaperone.html">Next: Chaperone <span class="fa fa-arrow-right mrgn-lft-sm"></span></a>
 					<!--
 					<a class="btn btn-text btn-lg">Cancel</a>-->
 				</div>
