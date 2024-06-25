@@ -412,19 +412,7 @@ s
 			</button>-->
 
 				<div class="row">
-					<div class="col-xs-12">
-						<section>
-							<div>
-								<h1 id="wb-cont" property="name">
-									Quality of Life Questionnaire
-								</h1>
-								<p class="lead">This questionnaire is intended to evaluate how your daily life is affected by your
-									condition.</p>
-								
-								
-							</div>
-						</section>
-						<nav class="provisional gc-subway pull-right mrgn-tp-0 col-md-4 col-sm-12 col-xs-12"
+					<nav class="provisional gc-subway pull-right mrgn-tp-0 col-md-4 col-sm-12 col-xs-12"
 							style="border-right:0; border-top:0; border-bottom: 0;">
 							<p class="h3 mrgn-tp-0 hidden-sm">Steps</p>
 							<p class="h3 mrgn-tp-0 visible-sm">Steps</p>
@@ -437,7 +425,7 @@ s
 								</li>
 								<li class="active">
 									<a href="#" class="active">Quality of life questionnaire</a>
-									<ul class="">
+									<!-- <ul class="">
 										<li class="complete">
 											<a href="#" class="hidden-xs hidden-sm complete">Household activities</a>
 										</li>
@@ -469,22 +457,34 @@ s
 										<li>
 											<a href="#" class="hidden-xs hidden-sm ">Review and submit</a>
 										</li>
-									</ul>
+									</ul> -->
 								</li>
 
 								<li>
 									<a href="#" class="disabled">Gather your information</a>
 								</li>
-								<li>
+								<!-- <li>
 									<a href="#" class="disabled">Get ready for your assessment</a>
-								</li>
+								</li> -->
 								<li>
 									<a href="#" class="disabled">Appointment guide</a>
 								</li>
 							</ul>
 						</nav>
+					<div class="col-xs-12 col-md-8">
+						<section>
+							<div>
+								<h1 id="wb-cont" property="name">
+									Quality of Life Questionnaire
+								</h1>
+								<p>This questionnaire is intended to evaluate how your daily life is affected by your condition. The questions you answer have been split up into seperate forms for each condition.</p>
+								
+								
+							</div>
+						</section>
+						
 
-						<div class="col-md-8">
+						<div class="">
 							<!-- <h2>Obstructive Sleep Apnea</h2> -->
 							<!--
 						<div class="alert alert-success mrgn-tp-md">
@@ -582,11 +582,15 @@ s
 							</fieldset>
 				</div>
 							
+				<div id="questions-progress">
+						<p class="text-center"><progress value="2" max="8"><span class="wb-inv">2/8</span></progress><br>
+						<span class="small">Question 2 of 8</span></p>
+				</div>
 
 							<div class="mrgn-tp-lg mrgn-bttm-lg">
-								<a class="btn btn-default btn-lg" href="vma-questionnaire.html"><span class="fa fa-arrow-left mrgn-rght-sm"></span> Previous: Household activities</a>
-								<a class="btn btn-primary btn-lg" href="vma-questionnaire-newIdea-3.html">Next: Driving<span class="fa fa-arrow-right mrgn-lft-sm"></span></a>
-								
+								<a class="btn btn-default btn-lg" href="vma-questionnaire.html"><span class="fa fa-arrow-left mrgn-rght-sm"></span> Previous</a>
+								<a class="btn btn-primary btn-lg" href="vma-questionnaire-newIdea-3.html">Next<span class="fa fa-arrow-right mrgn-lft-sm"></span></a>
+								<a class="btn btn-default pull-right">Save and Exit</a>
 							</div>
 						</div>
 					</div>

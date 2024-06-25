@@ -150,6 +150,10 @@ s
    .well{
 	background-color: #f5f5f5 !important;
    }
+
+   .gc-chckbxrdio input[type=checkbox]+label::before, .gc-chckbxrdio input[type=radio]+label::before{
+	border: 2px solid black;
+   }
    
 }
 		
@@ -352,16 +356,17 @@ s
 						<a href="#" class="btn btn-sm btn-default pull-right"> <span class="fa fa-file-pdf mrgn-rght-sm"></span> View as <abbr title="Portable document format">PDF</abbr></a>
 					</div> 
 					<h1 id="wb-cont" property="name">Appointment guide</h1>
-					<p class="lead">Use this appointment guide during your virtual&nbsp;medical&nbsp;reassessment.</p>
+					<p class="">This appointment guide is intended to provide you with information you'll need during your reassessment.</p>
+					<p>If you need to reschedule or cancel, please <a href="#">contact us</a>.</p>
 					<div class="well" >
 						<h3 class="mrgn-tp-0" >Appointment details</h3>
 						<div class="row">
-							<div class="col-sm-12 col-md-3">
+							<!-- <div class="col-sm-12 col-md-3">
 								<dl>
 									<dd class="mrgn-bttm-0">Appointment time</dd>
 									<dt class="mrgn-tp-0">June 26th at 2:00pm</dt>
 								</dl>
-							</div>
+							</div> -->
 							<div class="col-sm-12 col-md-3">
 								<dl>
 									<dd class="mrgn-bttm-0">Appointment with</dd>
@@ -377,7 +382,7 @@ s
 							<div class="col-xs-12 col-md-3">
 								<dl class="">
 									<dd class="mrgn-bttm-0">Your chaperone</dd>
-									<dt class="mrgn-tp-0">Linda Smith</dt>
+									<dt class="mrgn-tp-0">Linda Smith </dt>
 								</dl>
 							</div>
 							<div class="col-md-6 col-sm-6">
@@ -397,29 +402,72 @@ s
 				<div class="col-xs-12">
 					<fieldset class="gc-chckbxrdio">
 						<legend>
-							<h2 id="test-your-equipment">Before your appointmet</h2>
+							<h2 id="test-your-equipment">Before your appointment</h2>
 						</legend>
+						<section>
+							<fieldset class="gc-chckbxrdio">
+								<legend>
+									<h3 id="test-your-equipment">Prepare and test your equipment</h3>
+								</legend>
 								<ul class="list-unstyled lst-spcd-2">
-									
-									<li class="checkbox">
-										<input type="checkbox" id="cond11">
-										<label for="cond11">Gather a list of your current medications (you can ask your pharmacist for this)</label>
-									</li>
 									<li class="checkbox">
 										<input type="checkbox" id="cond12">
-										<label for="cond12">Download and install <a href="https://www.microsoft.com/en-ca/microsoft-teams/download-app" target="_blank">Microsoft Teams</a></label>
+										<label for="cond12">Download and install <a
+												href="https://www.microsoft.com/en-ca/microsoft-teams/download-app"
+												target="_blank">Microsoft Teams</a></label>
 									</li>
 									<li class="checkbox">
 										<input type="checkbox" id="cond13">
 										<label for="cond13">Make a <a href="https://support.microsoft.com/en-au/office/manage-your-call-settings-in-microsoft-teams-456cb611-3477-496f-b31a-6ab752a7595f#ID0EDPBBDDBD" target="_blank">test call</a></label>
 									</li>
-								
+									<!--
 									<li class="checkbox">
-										<input type="checkbox" id="cond11">
-										<label for="cond11">Inform your chaperone about the appointment</label>
+										<input type="checkbox" id="cond14">
+										<label for="cond14">Join from a non-Canadian Armed Forces network</label>
+									</li>-->
+
+								</ul>
+								<p><strong>Note:</strong> Still-serving <abbr title="Canadian Armed Forces">CAF</abbr> members must access the virtual assessment from outside the <abbr title="Canadian Armed Forces">CAF</abbr> firewall.</p>
+							</fieldset>
+
+							<fieldset class="gc-chckbxrdio">
+								<legend>
+									<h3 id="prepare-your-space">Prepare your space</h3>
+								</legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="cond21">
+										<label for="cond21">Find a private, quiet, and well-lit place for your
+											visit without&nbsp;distractions</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond22">
+										<label for="cond22">Have a way to position the device so you're in&nbsp;frame</a></label>
 									</li>
 								</ul>
 							</fieldset>
+
+							<fieldset class="gc-chckbxrdio">
+								<legend>
+									<h3 id="">Prepare for your appointment</h3>
+								</legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="medications">
+										<label for="medications">Make a list of your current medications (your pharmacy can often give you this list for free)</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="chaperone">
+										<label for="chaperone">Inform your chaperone about the appointment</label>
+										
+									</li>
+									
+								</ul>
+							</fieldset>
+						
+						
+							</fieldset>
+							</section>
 						</div>
 						
 						<p class="pagebreak"></p>
@@ -700,8 +748,7 @@ s
                   <div class="table-responsive">
                     <table
                       id="quality-of-life-questionnaire-review"
-                      class="mrgn-bttm-0 table"
-                    >
+                      class="mrgn-bttm-0 table">
                       <tbody>
                         <tr class="brdr-none">
                           <td scope="row" class="col-sm-7 brdr-0">
@@ -787,8 +834,10 @@ s
 									
 								</div>
 							</div>
-						</div>			
-		<section class="pagedetails container">
+						</div>	
+						</div>
+		
+		<section class="pagedetails container mrgn-tp-lg">
 			<h2 class="wb-inv">Page details</h2>
 			<div class="row">
 				<div class="col-sm-8 col-md-9 col-lg-9">
@@ -826,6 +875,77 @@ s
 				</div>
 			</div>
 		</section>
+		
 	</main>
+	<footer id="wb-info">
+			<h2 class="wb-inv">About My VAC Account</h2>
+			<div class="gc-main-footer">
+				<nav class="container wb-navcurr">
+
+					<ul class="list-unstyled colcount-xs-2 colcount-md-3">
+						<li><a href="https://www.veterans.gc.ca/eng/contact">Contact Veteran Affairs Canada</a></li>
+
+						<li id="authenticated-footer-link-2" class="hidden" data-wb-urlmapping='{
+							"authenticated": { 
+							"action": "removeClass", 
+							"source": "#authenticated-footer-link-2", 
+							"class": "hidden" },
+							"authenticated-poa": { 
+								"action": "removeClass", 
+								"source": "#authenticated-footer-link-2", 
+								"class": "hidden" }
+							}'>
+							<a href="#">Check in on your well-being</a>
+						</li>
+
+						<li><a href="https://www.veterans.gc.ca/eng/contact/talk-to-a-professional">Talk to a mental
+								health professional</a></li>
+
+
+
+						<li id="authenticated-footer-link-1" class="hidden" data-wb-urlmapping='{
+								"authenticated": { 
+								"action": "removeClass", 
+								"source": "#authenticated-footer-link-1", 
+								"class": "hidden" },
+								"authenticated-poa": { 
+									"action": "removeClass", 
+									"source": "#authenticated-footer-link-1", 
+									"class": "hidden" }
+								}'><a href="#">News and updates</a></li>
+
+						<li id="authenticated-footer-link-3" class="hidden" data-wb-urlmapping='{
+								"authenticated": { 
+								"action": "removeClass", 
+								"source": "#authenticated-footer-link-3", 
+								"class": "hidden" },
+								"authenticated-poa": { 
+									"action": "removeClass", 
+									"source": "#authenticated-footer-link-3", 
+									"class": "hidden" }
+								}'><a href="#">Provide feedback</a></li>
+
+
+
+
+					</ul>
+				</nav>
+			</div>
+			<div class="gc-sub-footer">
+				<div class="container d-flex align-items-center">
+					<nav>
+						<h3 class="wb-inv">Veteran Affairs Canada Corporate</h3>
+						<ul>
+							<li><a href="https://www.veterans.gc.ca/eng/e_services">About My VAC Account</a></li>
+							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Terms and conditions</a></li>
+							<li><a href="https://mva-mda.vac-acc.gc.ca/pub/mva_7_24_3">Privacy</a></li>
+						</ul>
+					</nav>
+					<div class="wtrmrk align-self-end">
+						<img src="../../../GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+					</div>
+				</div>
+			</div>
+		</footer>
 </body>
 </html>
