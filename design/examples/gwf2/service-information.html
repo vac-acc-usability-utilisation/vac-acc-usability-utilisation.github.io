@@ -1231,10 +1231,10 @@
       </div>
       <!-- Add Service Information -->
       <div class="col-xs-12" id="add-frm-wrapper">
-        <button id="add-button" type="button" class="wb-lbx btn btn-mobile btn-lg btn-success js-show-modal mrgn-bttm-md mrgn-tp-md" data-modal-selector="#add-modal">
+        <a id="add-button" type="button" class="wb-lbx btn btn-mobile btn-lg btn-success js-show-modal mrgn-bttm-md mrgn-tp-md" href="#add-modal">
           <span class="fa fa-plus-circle mrgn-rght-sm"></span>
           Add Service Period
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -1524,149 +1524,6 @@
 
 
 
-<script>
-var $buttonNext;
-var $buttonUpdate;
-
-$(function() {
-	$buttonNext = $('#button-next');
-	$buttonUpdate = $('#button-update');
-
-	mva_app.swapLanguageUrlOverride = '/prot/mv-ca/MVA_7_100_14/swap_language';
-	mva_app.$formForSwapLanguageOverride = $('#frm');
-    
-    document.title = 'Disability Benefits (Pain and Suffering Compensation/Disability Pension) - My VAC Account - Veterans Affairs Canada';
-  });
-  
-  function initializeStandardButtonListeners() {
-    $buttonNext.off("click");
-    $buttonUpdate.off("click");
-    $buttonNext.on("click", function(e) {
-      
-        next();
-      
-    });
-    $buttonUpdate.on("click", function(e) {
-      editUpdate('');
-    });
-  }
-  
-  function initializeReviewPageButtonListeners() {
-	$buttonNext.off("click");
-    $buttonUpdate.off("click");
-    $buttonNext.on("click", function(e) {
-      next();
-    });
-    $buttonUpdate.on("click", function(e) {
-      next();
-    });
-  }
-  
-  //Only allow numbers, commas, decimals, and spaces on client side
-  function ensureNumbericInputOnTextfield(event) {
-    return ensureNumbericInputOnTextfield(event, []);
-  }
-  
-  // Only allow numbers, commas, decimals, and spaces on client side
-  function ensureNumbericInputOnTextfield(event, additionalKeys) {
-    var notAllowed = [33,34,35,36,37,38,39,40,41,42,43,45,47].concat(additionalKeys);
-    return (event.which <= 57 &&  jQuery.inArray(event.which, notAllowed) == -1);
-  }
-  
-  //Makes sure dates fit within bounds
-  function validateDateInput(input, min, max) {
-    var value = moment(input.value);
-    var minValue = moment(min);
-	  var maxValue = moment(max);
-
-    if (value != null && value > maxValue) {
-      input.value = maxValue.format("YYYY-MM-DD");
-      return false;
-    } else if (value != null && (value < minValue)) {
-      input.value = minValue.format("YYYY-MM-DD");
-      return false;
-    } else if (value != null && !value.isValid()) {
-      input.value = '';
-      return false;
-    }
-    
-    input.value = moment(input.value).format("YYYY-MM-DD");
-    return true;
-  }
-  
-  // Ensure value is a valid integer and within a range if specified.
-  function validateIntegerInput(input, min, max) {
-    var number = parseInt(input.value);
-    if (isNaN(number)) {
-      input.value = '';
-      return false;
-    }
-    if (min != null && number < min) {
-      input.value = min;
-      return false;
-    }
-    if (max != null && number > max) {
-      input.value = max;
-      return false;
-    }
-  }
-  
-  // Eng : '3,456.70'  French : '3 456,70'
-  function validateCurrencyInput(input, min, max) {
-    var tmp = new String(input.value).replace(/[\.,\s]/g, '');  // remove dot, comma, space 
-    var inp =    parseInt(tmp);  
-    var number = parseFloat(inp);
-    var percentage = (number)/100;
-    
-    min = new String(min).replace(',', '.');
-    max = new String(max).replace(',', '.');
-    
-    var zeroes = input % 10;
-
-    if (isNaN(number)) {
-      input.value = '';
-      return false;
-    } else if (min != null && percentage < min) {
-      input.value = parseFloat(min).toFixed(2);
-      return false;
-    } else if (max != null && percentage > max) {
-      input.value = parseFloat(max).toFixed(2);
-      return false;
-    }
-
-    input.value = parseFloat(percentage).toFixed(2);
-    return true;
-  }
-  
-  function validatePhoneInput(input) {
-    input = input.value.replace(/\D/g,'');
-    input = input.substring(0,10);
-
-    var size = input.length;
-    
-    if (size == 0) {
-      input = input;
-    } else if (size <= 4) {
-      input = input;
-    } else if (size <= 7) {
-      input = input.substring(0,3) + '-' +input.substring(3,7);
-    } else {
-      input = input.substring(0,3) + '-' + input.substring(3,6) + '-' + input.substring(6,10);
-    }
-    
-    return input; 
-  }
-
-  // Callback for the POA Client Confirm modal
-  function confirmClientCallback(result) {
-    if (result.success) {
-      next();
-    }
-  }
-  
-</script>
-
-
 
 
 
@@ -1698,12 +1555,12 @@ $(function() {
     <div class="col-sm-5 col-sm-push-7 col-xs-12 text-right">
       
       
-        <button id="button-next"  data-mode="new" class="btn btn-lg btn-primary pull-right mrgn-lft-sm mrgn-bttm-sm btn-mobile " >
+        <a id="button-next"  href="Veterans-Affairs-employees.html" class="btn btn-lg btn-primary pull-right mrgn-lft-sm mrgn-bttm-sm btn-mobile " >
           
           
             Next
           
-        </button>
+        </a>
         <div class="visible-xs clearfix"></div>
         <button id="button-back" type="button" onclick="back();" class="btn btn-lg btn-default btn-mobile">
           Back
@@ -2334,35 +2191,46 @@ $(function() {
 
 
 
-<script src="/clf-ua/MVACLF-2.0/wet-boew/wet-boew/js/wet-boew.min.js?v=2023.8.0"></script><script src="/clf-ua/MVACLF-2.0/scripts/externalLinks.js?v=2023.8.0"></script><script src="/clf-ua/MVACLF-2.0/scripts/mva/app.js?v=2023.8.0"></script><script src="/clf-ua/MVACLF-2.0/scripts/accessibility-fixes.js?v=2023.8.0"></script><script src="/clf-ua/MVACLF-2.0/wet-boew/GCWeb/js/theme.min.js?v=2023.8.0"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+		integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
+		crossorigin="anonymous"></script>
+  <script src="../../../wet-boew/js/wet-boew.min.js"></script>
+  <script src="../../../GCWeb/js/theme.min.js"></script>
 
 <script>
-  $(function() {
-    
-  });
+  $(document).ready(function() {
+    console.log( "ready!" );
+    $('input[type=radio]').on('change', function() {
+      console.log($(this).val());
+      
+      $(this).closest('.form-group').find('.radio').removeClass('active')
+      $(this).closest(".radio").addClass("active");
+   
+        $("#rcmp-service-section").removeClass("hidden");
+        var id = $(this).attr("id");
+       
+        if(id.indexOf("rcmp")>= 0){
+          $("#service-information-section").removeClass("hidden");
+        }
+
+      
+    });
+});
+
+$(document).ready(function() {
+    $('input[type="checkbox"]').change(function() {
+      
+         console.log("test")
+       
+    });
+});
+
+  
 </script>
 
-<!--
-       RESTRICTED: false
-    PL RESTRICTED: 
-         LANGUAGE: en
-            title: mva_7_100.webGuidedForm
-   localizedTitle: Web guided form
-         subtitle: application.title
-localizedSubtitle: My VAC Account
-      windowTitle: window.title
-        pageTitle: My VAC Account - Veterans Affairs Canada
-       checkAdobe: false
-        pdfLayout: false
-  subnavigationOn: false
-     noMenuLayout: false
-       feedbackOn: true
-              tab: dashboard_tab
-     breadcrumbOn: true
-           signOn: true
-       fullnameOn: true
-       fullMenuOn: true
- -->  
+  </body>
+</html>
 
   </body>
 </html>

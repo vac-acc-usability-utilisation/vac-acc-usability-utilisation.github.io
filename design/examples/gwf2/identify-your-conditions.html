@@ -1479,8 +1479,8 @@
   
     <div id="checkbox-group-shoulder-conditions" class="checkbox form-group list-group-item mrgn-tp-0">
       
-        <details id="shoulder-conditions" class="subgroup-details row brdr-0 mrgn-0" style="padding: 0;">
-          <summary id="shoulder-conditions-summary" class="brdr-0 mrgn-0" style="padding: 0;">
+        <details id="shoulder-conditions" class="subgroup-details brdr-0 mrgn-0" style="padding: 0;">
+          <summary id="shoulder-conditions-summary" class="brdr-0 mrgn-0">
             Shoulder conditions 
             
               <span class="hidden-xs pull-right text-right small text-muted">
@@ -1714,8 +1714,8 @@
   
     <div id="checkbox-group-hip-conditions" class="checkbox form-group list-group-item mrgn-tp-0">
       
-        <details id="hip-conditions" class="subgroup-details row brdr-0 mrgn-0" style="padding: 0;">
-          <summary id="hip-conditions-summary" class="brdr-0 mrgn-0" style="padding: 0;">
+        <details id="hip-conditions" class="subgroup-details  brdr-0 mrgn-0" style="padding: 0;">
+          <summary id="hip-conditions-summary" class="brdr-0 mrgn-0">
             Hip conditions 
             
               <span class="hidden-xs pull-right text-right small text-muted">
@@ -1827,8 +1827,8 @@
   
     <div id="checkbox-group-knee-conditions" class="checkbox form-group list-group-item mrgn-tp-0">
       
-        <details id="knee-conditions" class="subgroup-details row brdr-0 mrgn-0" style="padding: 0;">
-          <summary id="knee-conditions-summary" class="brdr-0 mrgn-0" style="padding: 0;">
+        <details id="knee-conditions" class="subgroup-details brdr-0 mrgn-0" style="padding: 0;">
+          <summary id="knee-conditions-summary" class="brdr-0 mrgn-0" >
             Knee conditions 
             
               <span class="hidden-xs pull-right text-right small text-muted">
@@ -1944,8 +1944,8 @@
   
     <div id="checkbox-group-ankle-conditions" class="checkbox form-group list-group-item mrgn-tp-0">
       
-        <details id="ankle-conditions" class="subgroup-details row brdr-0 mrgn-0" style="padding: 0;">
-          <summary id="ankle-conditions-summary" class="brdr-0 mrgn-0" style="padding: 0;">
+        <details id="ankle-conditions" class="subgroup-details  brdr-0 mrgn-0" style="padding: 0;">
+          <summary id="ankle-conditions-summary" class="brdr-0 mrgn-0">
             Ankle conditions 
             
               <span class="hidden-xs pull-right text-right small text-muted">
@@ -2057,8 +2057,8 @@
   
     <div id="checkbox-group-feet-conditions" class="checkbox form-group list-group-item mrgn-tp-0">
       
-        <details id="feet-conditions" class="subgroup-details row brdr-0 mrgn-0" style="padding: 0;">
-          <summary id="feet-conditions-summary" class="brdr-0 mrgn-0" style="padding: 0;">
+        <details id="feet-conditions" class="subgroup-details  brdr-0 mrgn-0" style="padding: 0;">
+          <summary id="feet-conditions-summary" class="brdr-0 mrgn-0">
             Feet conditions 
             
               <span class="hidden-xs pull-right text-right small text-muted">
@@ -3316,13 +3316,39 @@ $(function() {
 
 
 
-
-<script src="/clf-ua/MVACLF-2.0/wet-boew/wet-boew/js/wet-boew.min.js?v=2023.8.0"></script><script src="/clf-ua/MVACLF-2.0/scripts/externalLinks.js?v=2023.8.0"></script><script src="/clf-ua/MVACLF-2.0/scripts/mva/app.js?v=2023.8.0"></script><script src="/clf-ua/MVACLF-2.0/scripts/accessibility-fixes.js?v=2023.8.0"></script><script src="/clf-ua/MVACLF-2.0/wet-boew/GCWeb/js/theme.min.js?v=2023.8.0"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+		integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
+		crossorigin="anonymous"></script>
+  <script src="../../../wet-boew/js/wet-boew.min.js"></script>
+  <script src="../../../GCWeb/js/theme.min.js"></script>
 
 <script>
-  $(function() {
-    
-  });
+  $(document).ready(function() {
+    console.log( "ready!" );
+    $('input[type=radio]').on('change', function() {
+     
+      
+      $(this).closest('.form-group').find('.radio').removeClass('active')
+      $(this).closest(".radio").addClass("active");
+      console.log($(this).val());
+
+   
+
+       
+        if($(this).val() == "1"){
+          $("#select-conditions-section").removeClass("hidden");    
+          $("#benefits-navigator-warning-section").addClass("hidden");
+        }
+        else{
+          $("#benefits-navigator-warning-section").removeClass("hidden");
+          $("#select-conditions-section").addClass("hidden");
+        }
+
+      
+    });
+});
+
+  
 </script>
 
 <!--

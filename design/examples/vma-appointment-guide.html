@@ -19,6 +19,9 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 
 	<style>
+		.pagebreak{
+			page-break-after: always !important;
+		}
 		/* */
 		.gc-subway a.disabled {
 			text-decoration: none;
@@ -140,13 +143,26 @@ s
 			display: none;
 		}
 
+@media print {
+   .col-sm-3{
+	max-width: 200px;
+   }
+   .well{
+	background-color: #f5f5f5 !important;
+   }
+
+   .gc-chckbxrdio input[type=checkbox]+label::before, .gc-chckbxrdio input[type=radio]+label::before{
+	border: 2px solid black;
+   }
+   
+}
 		
 	</style>
 
 </head>
 
 <body vocab="http://schema.org/" typeof="WebPage" class="cnt-wdth-lmtd">
-	<div class="bg-warning" style="padding:16px;">
+	<div class="bg-warning hidden-print" style="padding:16px;">
 		<div class="container">
 			<p>This is a conceptual prototype. It may not represent the final design or functionality.</p>
 		</div>
@@ -211,7 +227,7 @@ s
 				<div class="row">
 					<section class="col-xs-8 col-sm-5 col-md-4">
 						<h2 class="wb-inv">Name of Web application</h2>
-						<a href="#" class="app-name" href="../../en.html">My&nbsp;VAC&nbsp;Account</a>
+						<a class="app-name hidden-print" href="../../en.html">My&nbsp;VAC&nbsp;Account</a>
 					</section>
 
 					<nav
@@ -230,7 +246,7 @@ s
 								aria-expanded="false">Noel&nbsp;Knockwood&nbsp;<span
 									class="badge hidden-md hidden-lg">2</span><span
 									class="fa fa-chevron-down mrgn-lft-sm"></span></button>
-							<ul id="accnt-mnu" role="menu" aria-orientation="vertical" class="pull-left full-width"
+							<ul id="accnt-mn" role="menu" aria-orientation="vertical" class="pull-left full-width"
 								style="position:static; width: 100%; float: left; text-align: left; width: auto;">
 								<li role="none" class="hidden-md hidden-lg"><a role="menuitem" tabindex="-1"
 										href="#"><span class="fa fa-envelope mrgn-rght-sm opct-50"></span>Inbox <span
@@ -265,109 +281,26 @@ s
 		<!--MOBILE MENU-->
 		<div class="container">
 			<nav>
-				<a href="#mb-pnl" id="menu-btn" title="Menu" aria-controls="mb-pnl" class="overlay-lnk btn btn-primary"
+				<a href="#mb-pnl" id="menu-btn" title="Menu" aria-controls="mb-pnl" class="overlay-lnk btn btn-primary hidden-print"
 					role="button"><span class="fa fa-bars mrgn-rght-sm opct-80"></span>MENU</a>
 			</nav>
 		</div>
 
 
-		<div id="mb-pnl" class="wb-overlay modal-content overlay-def wb-panel-l" aria-hidden="false" role="dialog"
+		<div id="mb-pnl" class=" hidden-print wb-overlay modal-content overlay-def wb-panel-l" aria-hidden="false" role="dialog"
 			tabindex="-1">
 			<header class="modal-header">
 				<div class="modal-title">MENU</div>
 			</header>
 			<div class="modal-body">
-				<!--<section class="srch-pnl hidden">
-					<h3>Search</h3>
-			<form action="https://google.ca/search" method="get" role="search" class="form-inline">
-			<div class="form-group">
-			<label for="wb-srch-q-imprt">Search website</label>
-			<input id="wb-srch-q-imprt" class="form-control" name="q" type="search" value="" size="27" maxlength="150">
-			<input type="hidden" name="q" value="site:wet-boew.github.io OR site:github.com/wet-boew/">
-			</div>
-			<button type="submit" id="wb-srch-sub-imprt" class="btn btn-default">Search</button>
-			</form>
-			</section><section class="lng-ofr hidden"><h3>Language selection</h3><ul class="list-inline"><li><a lang="fr" hreflang="fr" href="menu-fr.html">Français</a></li></ul></section>-->
-				<nav role="navigation" typeof="SiteNavigationElement" id="sm-pnl"
-					class="sm-pnl wb-menu wb-menu-inited wb-init wb-navcurr-inited">
-					<h3>Topics menu</h3>
-
-
-
-
-					<div data-ajax-replace="/design/assets/ajax/site-menu-en.html">
-
-					</div>
-				</nav>
-				<!--
-					<nav role="navigation" typeof="SiteNavigationElement" id="info-pnl"
-						class="info-pnl wb-menu wb-menu-inited wb-init">
-						<h3>About this site</h3>
-						<ul class="list-unstyled mb-menu" role="menu">
-							<li>
-								<details>
-									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="1"
-										aria-haspopup="true" tabindex="0">Contact us</summary>
-									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
-										aria-hidden="true">
-										<li><a role="menuitem" aria-setsize="1" aria-posinset="1" tabindex="-1"
-												href="https://github.com/wet-boew/wet-boew/issues/new">Questions or
-												comments?</a></li>
-									</ul>
-								</details>
-							</li>
-							<li>
-								<details>
-									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="2"
-										aria-haspopup="true" tabindex="-1">About</summary>
-									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
-										aria-hidden="true">
-										<li><a role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1"
-												href="../../index-en.html#about">About the Web Experience Toolkit</a>
-										</li>
-										<li><a role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1"
-												rel="external"
-												href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web
-												Standards</a></li>
-									</ul>
-								</details>
-							</li>
-							<li>
-								<details>
-									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="3"
-										aria-haspopup="true" tabindex="-1">News</summary>
-									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
-										aria-hidden="true">
-										<li><a role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1"
-												href="https://github.com/wet-boew/wet-boew/pulse">Recent project
-												activity</a></li>
-										<li><a role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1"
-												href="https://github.com/wet-boew/wet-boew/graphs">Project
-												statistics</a></li>
-									</ul>
-								</details>
-							</li>
-							<li>
-								<details>
-									<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="4"
-										aria-haspopup="true" tabindex="-1">Stay connected</summary>
-									<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false"
-										aria-hidden="true">
-										<li><a role="menuitem" aria-setsize="1" aria-posinset="1" tabindex="-1"
-												rel="external" href="https://twitter.com/WebExpToolkit">Twitter</a></li>
-									</ul>
-								</details>
-							</li>
-						</ul>
-					</nav>-->
-			</div>
+			
 			<div class="modal-footer"><button title="Close overlay"
 					class="btn btn-sm btn-default pull-left overlay-close" type="button">Close<span class="wb-inv">Close
 						overlay</span></button></div><button title="Close: Menus (escape key)"
 				class="mfp-close overlay-close" type="button">×<span class="wb-inv"> Close: menus (escape
 					key)</span></button>
 		</div>
-		<nav id="wb-bc" property="breadcrumb">
+		<nav id="wb-bc" property="breadcrumb" class="hidden-print">
 			<h2>You are here:</h2>
 			<div class="container">
 				<ol class="breadcrumb hidden-xs" typeof="BreadcrumbList">
@@ -400,11 +333,8 @@ s
 							</a>
 						</li>
 					</ol>
-
-
 				</div>
 			</div>
-	
 		</nav>
 		<!--
         <div class="app-bar-mb container visible-xs-block hidden-print">
@@ -419,348 +349,495 @@ s
 	</header>
 
 	<main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
-		<section class="">
-			<div class="container">
-				<!--
-				<button id="menu-btn" class="h6 btn btn-link brdr-tp brdr-rght brdr-bttm brdr-lft hidden" 
-				style="letter-spacing: 0.5px;" >
-					MENU <span class="fa fa-bars"></span>
-			</button>-->
-
-				<div class="row">
-					<div class="col-xs-12">
-						<section>
-							<div>
-								<h1 id="wb-cont" property="name">
-									Appointment guide
-								</h1>
-								<p class="lead">Use this appointment guide during your virtual&nbsp;medical&nbsp;reassessment.</p>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="col-sm-4 pull-right hidden-print">
+						<a href="#" class="btn btn-sm btn-default pull-right"> <span class="fa fa-file-pdf mrgn-rght-sm"></span> View as <abbr title="Portable document format">PDF</abbr></a>
+					</div> 
+					<h1 id="wb-cont" property="name">Appointment guide</h1>
+					<p class="">This appointment guide is intended to provide you with information you'll need during your reassessment.</p>
+					<p>If you need to reschedule or cancel, please <a href="#">contact us</a>.</p>
+					<div class="well" >
+						<h3 class="mrgn-tp-0" >Appointment details</h3>
+						<div class="row">
+							<!-- <div class="col-sm-12 col-md-3">
+								<dl>
+									<dd class="mrgn-bttm-0">Appointment time</dd>
+									<dt class="mrgn-tp-0">June 26th at 2:00pm</dt>
+								</dl>
+							</div> -->
+							<div class="col-sm-12 col-md-3">
+								<dl>
+									<dd class="mrgn-bttm-0">Appointment with</dd>
+									<dt class="mrgn-tp-0">Dr. John Doe</dt>
+								</dl>
 							</div>
-						</section>
-
-						<nav class="provisional gc-subway pull-right mrgn-tp-0 col-md-4 col-sm-12 col-xs-12"
-							style="border-right:0; border-top:0; border-bottom: 0;">
-							<p class="h3 mrgn-tp-0 hidden-sm">Steps</p>
-							<p class="h3 mrgn-tp-0 visible-sm">Steps</p>
-							<ul>
-								<li class="complete">
-									<a href="#" class="disabled ">Consent and guidelines</a>
-								</li>
-								<li class="complete">
-									<a href="vma-details.html" class="">Confirm your details</a>
-								</li>
-								<li class="complete">
-									<a href="vma-questionnaire.html" class="">Quality of life questionaire</a>
-								</li>
-								<li class="complete">
-									<a href="#" class="">Gather your information</a>
-								</li>
-								<li class="complete">
-									<a href="#" class="">Get ready for your&nbsp;assessment</a>
-								</li>
-								<li class="active">
-									<a href="#" class="active">Appointment guide</a>
-								</li>
-							</ul>
-						</nav>
-						
-
-						<div class="col-md-7 col-sm-12 col-xs-12" style="padding-left: 0;"> 
-							
-							
-
-							
-							<div style="background: none;" class="">
-								
-								<div class="row">
-									<div class="col-sm-8">
-										<!--<h2 class="mrgn-tp-0 mrgn-bttm-lg">Appointment guide</h2>--></div>
-									
-								</div>
-								<div class="row mrgn-tp-md">
-									<div class="col-md-3 col-sm-4">
-										<dl class="">
-											<dd class="mrgn-bttm-0">CSDN ID</dd>
-											<dt class="mrgn-tp-0">500012478602</dt>
-										</dl>
-									</div>
-									<div class="col-md-4 col-sm-4">
-										<dl class="">
-											<dd class="mrgn-bttm-0">File number</dd>
-											<dt class="mrgn-tp-0">756439</dt>
-										</dl>
-									</div>
-									<div class="col-sm-4 pull-right">
-										<!--<a href="#" class="btn btn-link pull-right"> <span class="fa fa-print mrgn-rght-sm"></span> Print</a>-->
-										<a href="#" class="btn btn-sm btn-default pull-right"> <span class="fa fa-file-pdf mrgn-rght-sm"></span> View as <abbr title="Portable document format">PDF</abbr></a>
-									</div>
-									<!--
-									<div class="col-md-6 col-sm-6">
-										<dl class="">
-											<dd class="mrgn-bttm-0">Postal code</dd>
-											<dt class="mrgn-tp-0">C1A E3B</dt>
-										</dl>
-									</div>-->
-								</div>
-								<!--
-								<div class="row mrgn-tp-0 mrgn-bttm-lg">
-									<div class="col-sm-12">
-										<dl class="">
-											<dd class="mrgn-bttm-0">Chaperone</dd>
-											<dt class="mrgn-tp-0">Keith Knockwood</dt>
-										</dl>
-									</div>
-								</div>-->
-								<div class="row">
-									<div class="col-md-6 col-sm-6">
-										<p class="mrgn-bttm-0">Conditions</p>
-									<ul>
-										<li>Obstructive Sleep Apnea</li>
-										<li>Tinnitus</li>
-										<li>Hearing Loss</li>
-									</ul>
-									</div>
-									<!--
-									<div class="col-md-3 col-sm-4">
-										<p class="mrgn-bttm-0">Medications</p>
-									<ul>
-										<li>Modafilin</li>
-										<li>Alprazolam</li>
-										<li>Rifapentine</li>
-										<li>Moxifloxacin</li>
-									</ul>
-									</div>-->
-								</div>
-								<div class="row">
-									<div class="col-sm-12">
-										<p class="mrgn-bttm-0">Questions</p>
-									<ul>
-										<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vitae dolore&nbsp;rerum?</li>
-										<li>Veritatis dignissimos nulla eveniet, molestiae dolor fugit optio fugiat&nbsp;atque?</li>
-									</ul>
-									</div>
-								</div>
+							<div class="col-xs-12 col-md-3">
+								<dl class="">
+									<dd class="mrgn-bttm-0">Appointment method</dd>
+									<dt class="mrgn-tp-0">Teams call</dt>
+								</dl>
 							</div>
-							<div class="mrgn-tp-lg mrgn-bttm-lg"><!--
-								<a class="btn btn-success btn-lg" href="vma-checklist.html">Continue</a>
-								
-								<a class="btn btn-text btn-lg">Cancel</a>-->
+							<div class="col-xs-12 col-md-3">
+								<dl class="">
+									<dd class="mrgn-bttm-0">Your chaperone</dd>
+									<dt class="mrgn-tp-0">Linda Smith </dt>
+								</dl>
 							</div>
-						
-								
-
-
-								<!-- uploading documents -->
-
-								<!-- pull medication lists out of per condition -->	
-
-
-
-
-
-
-								<!--
-								<div class="wb-tabs">
-									<div class="tabpanels">
-										<details id="details-panel1" style="padding:32px;">
-											<summary>Obstructive Sleep Apnea</summary>
-											<li class="checkbox mrgn-bttm-lg">
-												<input type="checkbox" id="cond4">
-												<label for="cond4">Your current medications
-												</label>
-												<ul id="medication-list" class="mrgn-tp-sm mrgn-bttm-sm mrgn-lft-xl lst-spcd" style="font-size: 18px;">
-												</ul>
-												<div class="row mrgn-tp-md">
-													<div class="col-sm-offset-1 col-md-11">
-														<label for="med1" class="wb-inv">Medication 1</label>
-														<div class="row">
-															<div class="col-sm-10 col-md-8">
-																<input id="med-input" name="med1" type="text" class="form-control mrgn-lft-md full-width">
-																
-															</div>
-															<div class="col-sm-2">
-																<a href="#" class="btn btn-default btn-sm full-width" id="add-medication">Add</a>
-															</div>
-														</div>
-													</div>
-												</div>
-												
-											</li>
-											<li class="checkbox mrgn-bttm-lg">
-												<input type="checkbox" id="q1">
-												<label for="q1">Questions you'd like to ask the Medical Officer
-												</label>
-												<ul id="q-list" class="mrgn-tp-sm mrgn-bttm-sm mrgn-lft-xl lst-spcd" style="font-size: 18px;">
-												</ul>
-												<div class="row mrgn-tp-md">
-													<div class="col-sm-offset-1 col-md-11">
-														<label for="q1" class="wb-inv">Questions 1</label>
-														<div class="row">
-															<div class="col-sm-10 col-md-8">
-																<input id="q-input" name="q1" type="text" class="form-control mrgn-lft-md full-width">
-																
-															</div>
-															<div class="col-sm-2">
-																<a href="#" class="btn btn-default btn-sm full-width" id="add-question">Add</a>
-															</div>
-														</div>
-													</div>
-												</div>
-												
-											</li>
-											<li class="checkbox">
-												<input type="checkbox" id="cond3">
-												<label for="cond3">Medical documents related to your illness or injury</label>
-											</li>
-										</details>
-										<details id="details-panel2" style="padding:32px;">
-											<summary>Tinnitus</summary>
-											<li class="checkbox mrgn-bttm-lg">
-												<input type="checkbox" id="panel2-cond4">
-												<label for="panel2-cond4">Your current medications
-												</label>
-												<ul id="panel2-medication-list" class="mrgn-tp-sm mrgn-bttm-sm mrgn-lft-xl lst-spcd" style="font-size: 18px;">
-												</ul>
-												<div class="row mrgn-tp-md">
-													<div class="col-sm-offset-1 col-md-11">
-														<label for="panel2-med1" class="wb-inv">Medication 1</label>
-														<div class="row">
-															<div class="col-sm-10 col-md-8">
-																<input id="panel2-med-input" name="panel2-med1" type="text" class="form-control mrgn-lft-md full-width">
-																
-															</div>
-															<div class="col-sm-2">
-																<a href="#" class="btn btn-default btn-sm full-width" id="panel2-add-medication">Add</a>
-															</div>
-														</div>
-													</div>
-												</div>
-												
-											</li>
-											<li class="checkbox mrgn-bttm-lg">
-												<input type="checkbox" id="panel2-q1">
-												<label for="panel2-q1">Questions you'd like to ask the Medical Officer
-												</label>
-												<ul id="panel2-q-list" class="mrgn-tp-sm mrgn-bttm-sm mrgn-lft-xl lst-spcd" style="font-size: 18px;">
-												</ul>
-												<div class="row mrgn-tp-md">
-													<div class="col-sm-offset-1 col-md-11">
-														<label for="panel2-q1" class="wb-inv">Questions 1</label>
-														<div class="row">
-															<div class="col-sm-10 col-md-8">
-																<input id="panel2-q-input" name="panel2-q1" type="text" class="form-control mrgn-lft-md full-width">
-																
-															</div>
-															<div class="col-sm-2">
-																<a href="#" class="btn btn-default btn-sm full-width" id="panel2-add-question">Add</a>
-															</div>
-														</div>
-													</div>
-												</div>
-												
-											</li>
-											<li class="checkbox">
-												<input type="checkbox" id="panel2-cond3">
-												<label for="panel2-cond3">Medical documents related to your illness or injury</label>
-											</li>
-										</details>
-										<details id="details-panel3" style="padding:32px;">
-											<summary>Hearing Loss</summary>
-											<li class="checkbox mrgn-bttm-lg">
-												<input type="checkbox" id="panel3-cond4">
-												<label for="panel3-cond4">Your current medications
-												</label>
-												<ul id="panel3-medication-list" class="mrgn-tp-sm mrgn-bttm-sm mrgn-lft-xl lst-spcd" style="font-size: 18px;">
-												</ul>
-												<div class="row mrgn-tp-md">
-													<div class="col-sm-offset-1 col-md-11">
-														<label for="panel3-med1" class="wb-inv">Medication 1</label>
-														<div class="row">
-															<div class="col-sm-10 col-md-8">
-																<input id="panel3-med-input" name="panel3-med1" type="text" class="form-control mrgn-lft-md full-width">
-																
-															</div>
-															<div class="col-sm-2">
-																<a href="#" class="btn btn-default btn-sm full-width" id="panel3-add-medication">Add</a>
-															</div>
-														</div>
-													</div>
-												</div>
-												
-											</li>
-											<li class="checkbox mrgn-bttm-lg">
-												<input type="checkbox" id="panel3-q1">
-												<label for="panel3-q1">Questions you'd like to ask the Medical Officer
-												</label>
-												<ul id="panel3-q-list" class="mrgn-tp-sm mrgn-bttm-sm mrgn-lft-xl lst-spcd" style="font-size: 18px;">
-												</ul>
-												<div class="row mrgn-tp-md">
-													<div class="col-sm-offset-1 col-md-11">
-														<label for="panel3-q1" class="wb-inv">Questions 1</label>
-														<div class="row">
-															<div class="col-sm-10 col-md-8">
-																<input id="panel3-q-input" name="panel3-q1" type="text" class="form-control mrgn-lft-md full-width">
-																
-															</div>
-															<div class="col-sm-2">
-																<a href="#" class="btn btn-default btn-sm full-width" id="panel3-add-question">Add</a>
-															</div>
-														</div>
-													</div>
-												</div>
-												
-											</li>
-											<li class="checkbox">
-												<input type="checkbox" id="panel3-cond3">
-												<label for="panel3-cond3">Medical documents related to your illness or injury</label>
-											</li>
-										</details>
-									</div>
-								
-								</div>
-
-								
-							</fieldset>
-						</div>-->
-<!--
-						<div id="vma-checklist" class="col-md-8 col-sm-12 col-xs-12" style="padding-left: 0;">
-							<fieldset class="gc-chckbxrdio">
-								<legend>
-									<h2 id="checklist">Checklist</h2>
-								</legend>
-								<h3>You have...</h3>
-								<ul class="list-unstyled lst-spcd-2">
-									<li class="checkbox">
-										<input type="checkbox" id="check1">
-										<label for="check1">Filled out and returned any forms, such as, Quality&nbsp;of&nbsp;Life&nbsp;Questionnaire(s) (PEN&nbsp;50e)</label>
-									</li>
-									
+							<div class="col-md-6 col-sm-6">
+								<p class="mrgn-tp-lg">Discussing the reassessment of:</p>
+								<ul>
+									<li>Obstructive Sleep Apnea</li>
+									<li>Tinnitus</li>
+									<li>Hearing Loss</li>
 								</ul>
-							</fieldset>
-							<fieldset class="gc-chckbxrdio">
-								<legend>
-									<h2 id="what-to-bring">What to bring</h2>
-								</legend>
-								
-								<ul class="list-unstyled lst-spcd-2">
-									<li class="checkbox">
-										<input type="checkbox" id="cond6">
-										<label for="cond6">Something to take notes with (pen and paper, tablet,&nbsp;etc.)
-										</label>
-									</li>
-								</ul>
-							</fieldset>
-							
+							</div>
 						</div>
 					</div>
+					
+					
 				</div>
-				<h2 class="mrgn-tp-lg">Related links</h2>
-				<p ><a href="#">Virtul medical reassessment consent and guidelines</a></p>
+						<p class="pagebreak"></p>
+				<div class="col-xs-12">
+					<fieldset class="gc-chckbxrdio">
+						<legend>
+							<h2 id="test-your-equipment">Before your appointment</h2>
+						</legend>
+						<section>
+							<fieldset class="gc-chckbxrdio">
+								<legend>
+									<h3 id="test-your-equipment">Prepare and test your equipment</h3>
+								</legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="cond12">
+										<label for="cond12">Download and install <a
+												href="https://www.microsoft.com/en-ca/microsoft-teams/download-app"
+												target="_blank">Microsoft Teams</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond13">
+										<label for="cond13">Make a <a href="https://support.microsoft.com/en-au/office/manage-your-call-settings-in-microsoft-teams-456cb611-3477-496f-b31a-6ab752a7595f#ID0EDPBBDDBD" target="_blank">test call</a></label>
+									</li>
+									<!--
+									<li class="checkbox">
+										<input type="checkbox" id="cond14">
+										<label for="cond14">Join from a non-Canadian Armed Forces network</label>
+									</li>-->
 
-			</div>
-			</div>
-		</section>-->
-		<section class="pagedetails container">
+								</ul>
+								<p><strong>Note:</strong> Still-serving <abbr title="Canadian Armed Forces">CAF</abbr> members must access the virtual assessment from outside the <abbr title="Canadian Armed Forces">CAF</abbr> firewall.</p>
+							</fieldset>
+
+							<fieldset class="gc-chckbxrdio">
+								<legend>
+									<h3 id="prepare-your-space">Prepare your space</h3>
+								</legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="cond21">
+										<label for="cond21">Find a private, quiet, and well-lit place for your
+											visit without&nbsp;distractions</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="cond22">
+										<label for="cond22">Have a way to position the device so you're in&nbsp;frame</a></label>
+									</li>
+								</ul>
+							</fieldset>
+
+							<fieldset class="gc-chckbxrdio">
+								<legend>
+									<h3 id="">Prepare for your appointment</h3>
+								</legend>
+								<ul class="list-unstyled lst-spcd-2">
+									<li class="checkbox">
+										<input type="checkbox" id="medications">
+										<label for="medications">Make a list of your current medications (your pharmacy can often give you this list for free)</a></label>
+									</li>
+									<li class="checkbox">
+										<input type="checkbox" id="chaperone">
+										<label for="chaperone">Inform your chaperone about the appointment</label>
+										
+									</li>
+									
+								</ul>
+							</fieldset>
+						
+						
+							</fieldset>
+							</section>
+						</div>
+						
+						<p class="pagebreak"></p>
+						<div class="row">
+							<div class="col-xs-12">
+							<h2 id="duringapp">During your appointment</h2>
+							<div class="well">
+								<h3 class="mrgn-tp-0">Your information</h3>
+								<div class="row">
+									
+								<div class="col-sm-12 col-md-3">
+									<dl class="">
+										<dd class="mrgn-bttm-0">Name</dd>
+										<dt class="mrgn-tp-0">Sgt. John Smith</dt>
+									</dl>
+								</div>
+								<div class="col-sm-12 col-md-3">
+									<dl class="">
+										<dd class="mrgn-bttm-0">CSDN Number</dd>
+										<dt class="mrgn-tp-0">123456789</dt>
+									</dl>
+								</div>
+								
+								<div class="col-sm-12 col-md-3">
+									<dl class="">
+										<dd class="mrgn-bttm-0">File Number</dd>
+										<dt class="mrgn-tp-0">123456789</dt>
+									</dl>
+								</div>
+								<!-- <div class="col-md-6 col-sm-6">
+										<h3 class="mrgn-bttm-0 page-header">Conditions</h3>
+										<ul>
+											<li>Obstructive Sleep Apnea</li>
+											<li>Tinnitus</li>
+											<li>Hearing Loss</li>
+										</ul>
+									</div> -->
+							</div>
+							</div>
+						</div>
+						</div>
+								<div class="row">
+									
+									
+								</div>
+								<div class="row">
+									<div class="col-xs-12 col-sm-6">
+										<h3 class="mrgn-bttm-0 page-header">Questions</h3>
+										
+										<a href="vma-checklist.html" class="btn btn-xs pull-right hidden-print"><span class="fa fa-pen"></span> Edit questions</a>
+										<div  class="clearfix"></div>
+									<ul>
+										<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vitae dolore&nbsp;rerum? <div class="visible-print">____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________</div></li>
+										
+										<li>Veritatis dignissimos nulla eveniet, molestiae dolor fugit optio fugiat&nbsp;atque?<div class="visible-print">____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________</div></li>
+									</ul>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12 col-sm-6">
+										<h3 class="mrgn-bttm-0 page-header">Uploaded Documents</h3>
+										
+										<a href="vma-checklist.html" class="btn btn-xs pull-right hidden-print"><span class="fa fa-pen"></span> Edit uploaded documents</a>
+										<div  class="clearfix"></div>
+									<ul>
+										<li><a href="#">Doctor's letter</a></li>
+										<li><a href="#">Sleep Test Results</a></li>
+										<li><a href="#">Hearing Test Results</a></li>
+									</ul>
+									</div>
+									<div class="col-sm-6">
+									</div>
+								</div>
+								<div class="row visible-print">
+									<div class="">
+            <p class="pagebreak"></p>
+			<div class="col-xs-12">
+										<h3 class="mrgn-bttm-0">Notes</h3>
+										<p class="mrgn-lft-lg">____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________<br>____________________________________________________________________________</p>
+					
+									</div>
+									     
+										<div class="col-xs-12">
+           <p class="pagebreak"></p>
+              <h2>Quality of Life Questionnaire</h2>
+
+              <div class="col-md-7">
+                <details open>
+                  <summary>
+                    <h3>Obstructive Sleep Apnea</h3>
+                  </summary>
+                  <div class="table-responsive">
+                    <table
+                      id="quality-of-life-questionnaire-review"
+                      class="mrgn-bttm-0 table"
+                    >
+                      <tbody>
+                        <tr class="brdr-none">
+                          <td scope="row" class="col-sm-7 brdr-0">
+                            I can do my usual household activities (prepare
+                            meals, do basic household maintenance, etc.).
+                          </td>
+
+                          <td id="#" class="brdr-0">
+                            Yes, with adaptations or assistance
+                          </td>
+                          
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can shop and/or do errands.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can drive a vehicle.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can use public transportation (if available).
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to work in my regular occupation.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can effectively participate in my usual and
+                            accustomed recreational and community activities.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to maintain my usual day-to-day family
+                            responsibilities, including social outings.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                        
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to maintain my personal/social
+                            relationships. (e.g., spouse, family, friends,
+                            colleagues, etc.)
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                         
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+
+                <details open>
+                  <summary>
+                    <h3>Tinnitus</h3>
+                  </summary>
+                  <div class="table-responsive">
+                    <table
+                      id="quality-of-life-questionnaire-review"
+                      class="mrgn-bttm-0 table"
+                    >
+                      <tbody>
+                        <tr class="brdr-none">
+                          <td scope="row" class="col-sm-7 brdr-0">
+                            I can do my usual household activities (prepare
+                            meals, do basic household maintenance, etc.).
+                          </td>
+
+                          <td id="#" class="brdr-0">
+                            Yes, with adaptations or assistance
+                          </td>
+                          
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can shop and/or do errands.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can drive a vehicle.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can use public transportation (if available).
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                         
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to work in my regular occupation.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can effectively participate in my usual and
+                            accustomed recreational and community activities.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to maintain my usual day-to-day family
+                            responsibilities, including social outings.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to maintain my personal/social
+                            relationships. (e.g., spouse, family, friends,
+                            colleagues, etc.)
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+
+                <details open>
+                  <summary>
+                    <h3>Hearing Loss</h3>
+                  </summary>
+                  <div class="table-responsive">
+                    <table
+                      id="quality-of-life-questionnaire-review"
+                      class="mrgn-bttm-0 table">
+                      <tbody>
+                        <tr class="brdr-none">
+                          <td scope="row" class="col-sm-7 brdr-0">
+                            I can do my usual household activities (prepare
+                            meals, do basic household maintenance, etc.).
+                          </td>
+
+                          <td id="#" class="brdr-0">
+                            Yes, with adaptations or assistance
+                          </td>
+                          
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can shop and/or do errands.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                          
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can drive a vehicle.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                       
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can use public transportation (if available).
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                         
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to work in my regular occupation.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                        
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I can effectively participate in my usual and
+                            accustomed recreational and community activities.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                         
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to maintain my usual day-to-day family
+                            responsibilities, including social outings.
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                        
+                        </tr>
+
+                        <tr>
+                          <td scope="row" class="col-sm-7">
+                            I am able to maintain my personal/social
+                            relationships. (e.g., spouse, family, friends,
+                            colleagues, etc.)
+                          </td>
+
+                          <td id="#">Yes, with adaptations or assistance</td>
+                      
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+									
+								</div>
+							</div>
+						</div>	
+						</div>
+		
+		<section class="pagedetails container mrgn-tp-lg">
 			<h2 class="wb-inv">Page details</h2>
 			<div class="row">
 				<div class="col-sm-8 col-md-9 col-lg-9">
@@ -798,30 +875,9 @@ s
 				</div>
 			</div>
 		</section>
+		
 	</main>
-
-
-
-	<!-- footer -->
-	<div id="default-footer" data-wb-urlmapping='{
-		"transactional": { 
-			"action": "addClass", 
-			"source": "#default-footer", 
-			"class": "hidden" },
-			"transactional-poa": { 
-				"action": "addClass", 
-				"source": "#default-footer", 
-				"class": "hidden" },
-		"iprov": { 
-		"action": "addClass", 
-		"source": "#default-footer", 
-		"class": "hidden" },
-		"iprov-poa": { 
-			"action": "addClass", 
-			"source": "#default-footer", 
-			"class": "hidden" }
-		}'>
-		<footer id="wb-info">
+	<footer id="wb-info">
 			<h2 class="wb-inv">About My VAC Account</h2>
 			<div class="gc-main-footer">
 				<nav class="container wb-navcurr">
@@ -891,74 +947,5 @@ s
 				</div>
 			</div>
 		</footer>
-	</div>
-
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
-		integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
-		crossorigin="anonymous"></script>
-	<script src="../../../wet-boew/js/wet-boew.min.js"></script>
-	<script src="../../../GCWeb/js/theme.min.js"></script>
-
-
-	<script>
-		$( document ).on( "wb-ready.wb", function( event ) {
-			$('#add-medication').on('click', function(e){
-				e.preventDefault();
-				if ($('#med-input').val().length > 0) {
-					$('#medication-list').append("<li>" + $('#med-input').val() + "</li>")
-					$('#med-input').val('');
-				}
-				
-			});
-
-			$('#panel2-add-medication').on('click', function(e){
-				e.preventDefault();
-				if ($('#panel2-med-input').val().length > 0) {
-					$('#panel2-medication-list').append("<li>" + $('#panel2-med-input').val() + "</li>")
-					$('#panel2-med-input').val('');
-				}
-				
-			});
-
-			$('#panel3-add-medication').on('click', function(e){
-				e.preventDefault();
-				if ($('#panel3-med-input').val().length > 0) {
-					$('#panel3-medication-list').append("<li>" + $('#panel3-med-input').val() + "</li>")
-					$('#panel3-med-input').val('');
-				}
-				
-			});
-
-			$('#add-question').on('click', function(e){
-				e.preventDefault();
-				
-				if ($('#q-input').val().length > 0) { 
-					$('#q-list').append("<li>" + $('#q-input').val() + "</li>")
-					$('#q-input').val('');
-				}
-			});
-
-			$('#panel2-add-question').on('click', function(e){
-				e.preventDefault();
-				
-				if ($('#panel2-q-input').val().length > 0) { 
-					$('#panel2-q-list').append("<li>" + $('#panel2-q-input').val() + "</li>")
-					$('#panel2-q-input').val('');
-				}
-			});
-
-			$('#panel3-add-question').on('click', function(e){
-				e.preventDefault();
-				
-				if ($('#panel3-q-input').val().length > 0) { 
-					$('#panel3-q-list').append("<li>" + $('#panel3-q-input').val() + "</li>")
-					$('#panel3-q-input').val('');
-				}
-			});
-		});
-	</script>
-
 </body>
-
 </html>

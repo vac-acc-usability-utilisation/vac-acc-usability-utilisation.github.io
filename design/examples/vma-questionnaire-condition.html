@@ -83,6 +83,18 @@ s
 			
 		}
 
+		.provisional.gc-subway dl li.active a::after,
+		.provisional.gc-subway ul li.active a::after {
+			color: #fff;
+			font-family: "Font Awesome 5 Free";
+			font-size: 16px;
+			font-weight: 600;
+			content: "\f054";
+			position:absolute;
+			left:-26px;
+			top:0px;		
+		}
+
 		.accnt-menu [role=menuitem] {
 			width: auto;
 		}
@@ -423,10 +435,10 @@ s
 								<li class="complete">
 									<a href="#" class="active">Confirm your details</a>
 								</li>
-								<li>
+								<li class="active">
 									<a href="#" class="active">Quality of life questionnaire</a>
 									<ul class="">
-										<li class="">
+										<li class="active">
 											<a href="#" class="hidden-xs hidden-sm active">Obstructive Sleep Apnea</a>
 										</li>
 										<li class="">
@@ -655,15 +667,14 @@ s
 							</fieldset>
 
 							<fieldset class="gc-chckbxrdio mrgn-tp-lg mrgn-bttm-0 form-inline mrgn-rght-lg brdr-0 " id="questionnaire10">
-								<legend class="required">Are the changes in your activities due entirely to your claimed or entitled
-									condition?&nbsp;<strong class="required">(required)</strong></legend>
+								<legend class="required">Are the changes in your activities due entirely to Obstructive Sleep Apnea?<strong class="required">(required)</strong></legend>
 								<ul class="list-unstyled lst-spcd-2">
 									<li class="radio label-inline">
-										<input type="radio" id="questionnaire10-1" name="questionnaire10">
+										<input type="radio" id="questionnaire10-1" name="questionnaire10" value="1">
 										<label for="questionnaire10-1">Yes</label>
 									</li>
 									<li class="radio label-inline">
-										<input type="radio" id="questionnaire10-3" name="questionnaire10">
+										<input type="radio" id="questionnaire10-3" name="questionnaire10" value="0">
 										<label for="questionnaire10-3">No</label>
 									</li>
 
@@ -671,7 +682,7 @@ s
 							</fieldset>
 							
 							<!-- if no to above question -->
-							<fieldset class="mrgn-tp-lg mrgn-bttm-0 mrgn-rght-lg  brdr-0 pb-4" id="questionnaire11">
+							<fieldset class="mrgn-tp-lg mrgn-bttm-0 mrgn-rght-lg  brdr-0 pb-4 hidden" id="questionnaire11">
 								<div class="form-group">
 									<label for="provide-details"><span class="field-name">Identify and explain how other conditions may be affecting your activities of daily living.</span> </label>
 
@@ -817,8 +828,8 @@ s
 
 
 							<div class="mrgn-tp-lg mrgn-bttm-lg">
-								<a class="btn btn-default btn-lg" href="vma-questionnaire.html"><span class="fa fa-arrow-left mrgn-rght-sm"></span> Previous: Hearing Loss</a>
-								<a class="btn btn-primary btn-lg" href="vma-review-questionnaire.html">Next: Tinnitus<span class="fa fa-arrow-right mrgn-lft-sm"></span></a>
+								<a class="btn btn-default btn-lg" href="vma-questionnaire.html"><span class="fa fa-arrow-left mrgn-rght-sm"></span> Previous: Quality of Life Questionnaire</a>
+								<a class="btn btn-primary btn-lg" href="vma-questionnaire-tinnitus.html">Next: qol 2/<span class="fa fa-arrow-right mrgn-lft-sm"></span></a>
 								<!--
 					<a class="btn btn-text btn-lg">Cancel</a>-->
 							</div>
@@ -971,41 +982,28 @@ s
 
 
 	<script>
-		$(document).ready(function () {
-
-			$('#conditions').find('input').on('change', function () {
-
-				if ($('#conditions2').prop('checked')) {
-					$('#incorrect-conditions').removeClass('hidden');
-				} else {
-					$('#incorrect-conditions').addClass('hidden');
-				}
-			});
-
-			$('#vma-chaperone').find('input').on('change', function () {
-
-				if ($('#inlineRadio1').prop('checked')) {
-					$('#chaperone-type').removeClass('hidden');
-				} else {
-					$('#chaperone-type').addClass('hidden');
-				}
-			});
-
-			$('#chaperone-type').find('input').on('change', function () {
-
-				if ($('#chaperone-1').prop('checked')) {
-					$('#chaperone-details').removeClass('hidden');
-				} else {
-					$('#chaperone-details').addClass('hidden');
-				}
+		  $(document).ready(function() {
+    
+    $('input[type=radio]').on('change', function() {
+		console.log( "ready!" );
+    
+       if($(this).closest("fieldset").attr("id") == "questionnaire10"){
+  
+			if($(this).val() == "1"){
+			$("#questionnaire11").addClass("hidden");
 			}
-			);
+			else{
+			$("#questionnaire11").removeClass("hidden");
+			}
+	}
+	
+
+      
+    });
 
 
+});
 
-			//#inlineRadio1
-
-		});
 
 	</script>
 
