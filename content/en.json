@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+	  "authors": [
+		"Steven Timmins"
+	  ],
+	  "last-updated": "2024-09-26",
+	  "locale": "en",
+	  "message-documentation": "qqq"
+	},
+	"skip-main": "Skip to main content",
+	"switch-language": "Switch language to French",
+	"language-acronym": "FR",
+	"language_snackbar_message": "Language switched to English",
+	"settings": "Settings",
+	"help-and-feedback": "Help and feedback",
+	"help": "Help",
+	"feedback": "Feedback",
+	"menu": "Menu",
+	"main-menu": "Main menu",
+	"home": "Home",
+	"app-name": "Client Services Application",
+	"search-app": "Search Application",
+	"contact-us": "Contact us"
+}

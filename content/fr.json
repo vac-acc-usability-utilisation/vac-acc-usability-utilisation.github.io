@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+	  "authors": [
+		"Steven Timmins"
+	  ],
+	  "last-updated": "2024-09-26",
+	  "locale": "fr",
+	  "message-documentation": "qqq"
+	},
+	"skip-main": "Passer au contenu principal",
+	"switch-language": "Changer la langue en anglais",
+	"language-acronym": "EN",
+	"language_snackbar_message": "Langue passée au français",
+	"settings": "Paramètres",
+	"help-and-feedback": "Aide et commentaires",
+	"help": "Aide",
+	"feedback": "Commentaires",
+	"menu": "Menu",
+	"main-menu": "Menu principal",
+	"home": "Accueil",
+	"app-name": "Nom de l'application",
+	"search-app": "Recherche l’application",
+	"contact-us": "Contactez-nous"
+  }
