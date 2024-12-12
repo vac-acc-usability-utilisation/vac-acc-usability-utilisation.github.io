@@ -636,11 +636,13 @@ button#mobile-search-top-app-bar {
     }
 } 
 
+
 .nav-drawer li:last-of-type {
     margin-bottom: 32px !important;
 }
 
-.nav-drawer a {
+
+.nav-drawer a, .menu-header, .nav-drawer-menu-item {
     display: block;
     text-decoration: none;
     height: 56px;
@@ -659,9 +661,57 @@ button#mobile-search-top-app-bar {
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.6px;
+    max-width: 211px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
 }
 
-#navigation-rail > ul > li > ul > li {
+#navigation-drawer-mobile > nav > ul > li> ul > li.menu-item.expandable-button > div.menu-header {
+    max-width: none;
+}
+
+
+#navigation-rail .nav-drawer .nav-drawer-menu-item, #navigation-drawer-mobile .nav-drawer-menu-item {
+    align-items: start;
+}
+
+.expandable-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expandable-button .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex: auto;
+    padding-right: 16px;
+}
+
+
+span.menu-header-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.menu-header .material-symbols-outlined {
+    justify-items: end;
+}
+
+.submenu {
+    padding-left: 20px;
+    display: none;
+}
+
+.submenu.hide {
+    display: none;
+}
+
+
+#navigation-rail > ul > li > ul > li, ul.nav-drawer > ul > li, #navigation-drawer-mobile .nav-drawer-menu-item  {
     flex: 1;
     justify-content: start;
     display: flex; /* Use flexbox for consistent layout */
@@ -669,15 +719,23 @@ button#mobile-search-top-app-bar {
 }
 
 /* Submenu links */
-#navigation-rail > ul > li > ul.nav-drawer > li > a {
+#navigation-rail > ul > li > ul.nav-drawer > li > a, ul.nav-drawer > ul > li > a.nav-drawer-menu-item {
     text-align: left;
-    display: inline-block; /* Allow block layout for the link */
+    display: inline-block !important; /* Allow block layout for the link */
     overflow: hidden; /* Hide overflow */
     white-space: nowrap; /* Prevent wrapping */
     text-overflow: ellipsis; /* Apply ellipsis to overflowing text */
     width: 100%; /* Match the width of the parent */
     padding: 16px 24px; /* Optional: Adjust padding as needed */
     box-sizing: border-box; /* Include padding and borders in width */
+}
+
+ul.nav-drawer > ul > li > a.nav-drawer-menu-item, #navigation-drawer-mobile ul > li > a.nav-drawer-menu-item {
+    padding-left: 32px;
+}
+
+#navigation-drawer-mobile ul > li > a.nav-drawer-menu-item  {
+    max-width: none;
 }
 
 /* Adjust label spans if applicable */
@@ -688,7 +746,7 @@ button#mobile-search-top-app-bar {
     width: 100%; /* Inherit width from parent */
 }
 
-#navigation-rail > ul > li > ul > li > ul > li:last-of-type {
+#navigation-rail > ul > li > ul > li > ul > li:last-of-type, ul.nav-drawer > ul > li:last-of-type {
     margin-bottom: 0px !important;
 }
 
@@ -806,7 +864,7 @@ a.drawer-has-submenu {
 
 }
 
-#navigation-drawer-mobile ul li a:hover, #navigation-drawer-mobile ul li a.active:hover {
+#navigation-drawer-mobile ul li a:hover, #navigation-drawer-mobile ul li a.active:hover, .menu-header:hover, .nav-drawer-menu-item:hover {
     background: rgba(var(--md-sys-color-shadow), 0.08);
 }
 
@@ -841,7 +899,7 @@ a.drawer-has-submenu {
 }
 
 #navigation-drawer-mobile > nav > ul > li > ul > li > a {
-    padding-left: 54px;
+    padding-left: 24px;
 }
 
 #navigation-drawer-mobile > nav > ul > li > ul > li > a.navigation-drawer-main-menu {

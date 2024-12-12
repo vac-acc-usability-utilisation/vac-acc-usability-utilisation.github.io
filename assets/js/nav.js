@@ -29,13 +29,15 @@ function hideNavDrawer() {
 export function handleNavDrawerMobile() {
     const navDrawer = document.getElementById('navigation-drawer-mobile');
     const navDrawerButtons = document.getElementsByClassName('navigation-drawer-mobile-button');
-    const fabButtonExtended = document.getElementById('navigation-drawer-fab-extended'); 
-    const fabButtonSmall = document.getElementById('navigation-drawer-fab-small'); 
+    const fabButtonExtended = document.getElementById('navigation-drawer-fab-extended');
+    const fabButtonSmall = document.getElementById('navigation-drawer-fab-small');
 
 
     // Function to hide all top-level <li> elements except the clicked one
     function hideAllTopLevelItems(excludeItem) {
         const topLevelItems = navDrawer.querySelectorAll('nav > ul > li');
+        const mainMenuItems = document.querySelectorAll('.main-menu-item');
+
         topLevelItems.forEach(item => {
             if (item !== excludeItem) {
                 item.classList.add('hide');
@@ -54,15 +56,34 @@ export function handleNavDrawerMobile() {
             }
         });
 
-         // Hide the extended FAB button
-         if (fabButtonExtended) {
+        // Hide the extended FAB button
+        if (fabButtonExtended) {
             fabButtonExtended.classList.add('hide');
         }
 
-         // Hide the small FAB button
-         if (fabButtonSmall) {
+        // Hide the small FAB button
+        if (fabButtonSmall) {
             fabButtonSmall.classList.add('hide');
         }
+
+        // Hide or show 'Help and Support' and its items
+        mainMenuItems.forEach(item => {
+            if (item !== excludeItem) {
+                item.classList.add('hide');
+                const submenu = item.querySelector('.navigation-drawer-mobile-submenu');
+                if (submenu) {
+                    submenu.classList.remove('show');
+                    submenu.style.display = 'none';
+                }
+            } else {
+                item.classList.remove('hide');
+                const submenu = item.querySelector('.navigation-drawer-mobile-submenu');
+                if (submenu) {
+                    submenu.classList.add('show');
+                    submenu.style.display = 'block';
+                }
+            }
+        });
     }
 
     // Handle submenu interactions
@@ -120,6 +141,8 @@ export function handleNavDrawerMobile() {
     // Function to restore all top-level navigation items
     function restoreAllTopLevelItems() {
         const topLevelItems = navDrawer.querySelectorAll('nav > ul > li');
+        const mainMenuItems = document.querySelectorAll('.main-menu-item');
+
         topLevelItems.forEach(item => {
             item.classList.remove('hide');
             const link = item.querySelector('a');
@@ -132,16 +155,29 @@ export function handleNavDrawerMobile() {
                 submenu.style.display = 'none';
             }
         });
-        
+
         // Show the extended FAB button again
         if (fabButtonExtended) {
             fabButtonExtended.classList.remove('hide');
         }
 
-         // Show the small FAB button again
-         if (fabButtonSmall) {
+        // Show the small FAB button again
+        if (fabButtonSmall) {
             fabButtonSmall.classList.remove('hide');
         }
+
+        mainMenuItems.forEach(item => {
+            item.classList.remove('hide');
+            const link = item.querySelector('a');
+            if (link) {
+                link.classList.remove('hide');
+            }
+            const submenu = item.querySelector('.navigation-drawer-mobile-submenu');
+            if (submenu) {
+                submenu.classList.remove('show');
+                submenu.style.display = 'none';
+            }
+        });
     }
 
     // Handle clicks outside the navigation drawer to close it
@@ -160,6 +196,42 @@ export function handleNavDrawerMobile() {
         });
     });
 }
+
+export function toggleExpandableSection(button, sectionId) {
+    // Get the section to expand/collapse
+    const section = document.getElementById(sectionId);
+
+    if (!section) {
+        console.error(`Section with ID '${sectionId}' not found.`);
+        return;
+    }
+
+    // Toggle the visibility of the section
+    const isExpanded = !section.classList.contains('hide');
+    if (isExpanded) {
+        section.classList.add('hide'); // Collapse the section
+        button.querySelector('.material-symbols-outlined').textContent = 'arrow_drop_down'; // Update icon
+    } else {
+        section.classList.remove('hide'); // Expand the section
+        button.querySelector('.material-symbols-outlined').textContent = 'arrow_drop_up'; // Update icon
+    }
+}
+
+// Add this function to handle specific expandable sections
+export function initializeExpandableSections() {
+    const expandableButtons = document.querySelectorAll('.expandable-button');
+
+    expandableButtons.forEach(button => {
+        const sectionId = button.getAttribute('data-section-id');
+        if (sectionId) {
+            button.addEventListener('click', () => {
+                toggleExpandableSection(button, sectionId);
+            });
+        }
+    });
+}
+
+
 
 
 // Function to highlight the active navigation item

@@ -176,5 +176,5 @@ export function initializeMenus() {
         });
     });
 
-    initializeBackButtons()
+    initializeBackButtons();
 }

@@ -3,8 +3,6 @@ import { applyTranslations } from './language.js';
 import { highlightActiveNavItem } from './nav.js';
 import { initializeNumberInputRestrictions } from './form-validation.js';
 
-
-
 //Intial routing setup - gather links and add click listener, load 'home'
 export function setupRouting() {
     const links = document.querySelectorAll('a[data-route]');
@@ -52,7 +50,7 @@ export function loadContent(route) {
                 highlightActiveNavItem();
                 applyTranslations();
                 // Call the layout adjustment function for the home page
-                if (cleanRoute === 'home' || cleanRoute === 'search-for-client') {
+                if (cleanRoute === 'home' || cleanRoute === 'search-for-client' || cleanRoute === 'work-items' || cleanRoute === 'your-work') {
                     adjustHomePageLayout();
                 } else {
                     resetLayout(); // Reset layout for other pages if needed

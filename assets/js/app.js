@@ -1,6 +1,6 @@
 import { getUserLanguage, loadLogo, languageSettings, applyTranslations } from './language.js';
 import { setupRouting } from './routing.js';
-import { handleNavRailHover, handleNavDrawerMobile, highlightActiveNavItem } from './nav.js';
+import { handleNavRailHover, handleNavDrawerMobile, highlightActiveNavItem, initializeExpandableSections } from './nav.js';
 import { initializeMenus } from './menus.js';
 import { enableSkipToMain, hideProgressBar, checkBannerDisplay } from './utils.js';
 import { initializeUISettings } from './theme.js';
@@ -32,11 +32,14 @@ document.addEventListener("DOMContentLoaded", function () {
     handleNavRailHover();
     handleNavDrawerMobile();
 
+    // Initialize expandable sections
+    initializeExpandableSections();
+
     // Check if any global banners/alerts need to be displayed
     checkBannerDisplay();
 
     // Initialize Menu functionality
     initializeMenus();
-
+    
  
 });
