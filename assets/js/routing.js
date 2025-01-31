@@ -2,6 +2,11 @@ import { showProgressBar, hideProgressBar, autoResize } from './utils.js';
 import { applyTranslations } from './language.js';
 import { highlightActiveNavItem } from './nav.js';
 import { initializeNumberInputRestrictions } from './form-validation.js';
+import { closeAllMenus } from './menus.js';
+import { languageSetting, getUserLanguage } from './language.js';  // Import the language setting
+
+// Initialize languageSetting by calling getUserLanguage
+getUserLanguage();  // This will initialize languageSetting based on browser or localStorage
 
 
 //Intial routing setup - gather links and add click listener, load 'home'
@@ -72,11 +77,13 @@ export function loadContent(route) {
 // Function to enable buttons and inputs after content is loaded
 function onContentLoaded() {
 
+    console.log(languageSetting); // Should show 'fr' or 'en'
+
     // Check if Netlify Identity is available and handle login/logout
     if (window.netlifyIdentity) {
         console.log("Netlify Identity is available.");
 
-        // Initialize the page by checking if a user is already logged in
+         // Initialize the page by checking if a user is already logged in
         netlifyIdentity.on("init", (user) => {
             console.log("Netlify Identity Initialized");
             updateHomePage(user); // Update UI based on user state
@@ -97,10 +104,18 @@ function onContentLoaded() {
         const loginBtnHeader = document.getElementById("login-btn-header");
         const logoutBtn = document.getElementById("sign-out");
 
+        // Handle login with updated language setting
         const handleLogin = () => {
-            const action = (window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost") ? 'open()' : 'open()'; // Always use open locally and in production
-            console.log(`Running locally: ${action === 'open()' ? "Using netlifyIdentity.open()" : "Redirecting to login"}`);
-            netlifyIdentity.open(); // Open the modal
+            // Ensure the languageSetting is the most up-to-date value
+            let currentLanguageSetting = localStorage.getItem('languageSetting') || 'en';
+            console.log("Handle login, language setting = " + currentLanguageSetting); // Debugging
+
+            // Set the locale for Netlify Identity based on the current languageSetting
+            netlifyIdentity.setLocale(currentLanguageSetting);
+            console.log("Netlify Identity locale set to: " + currentLanguageSetting); // Debugging
+
+            // Open the Netlify Identity modal
+            netlifyIdentity.open();
         };
 
         loginBtn?.addEventListener("click", handleLogin);
@@ -181,10 +196,6 @@ function onContentLoaded() {
         // Attach the event listener
         textarea.addEventListener('input', () => autoResize(textarea));
     });
-
-
-
-
 }
 
 // Function to adjust the layout for the home page

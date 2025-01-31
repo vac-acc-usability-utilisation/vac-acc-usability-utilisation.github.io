@@ -1,23 +1,23 @@
-import { showToast, hideToast } from './utils.js';
+import { showToast } from './utils.js';
 
 // Declare languageSetting in the global scope
-let languageSetting;
+let languageSetting = getUserLanguage(); 
 
-// Function to get user's language
+// Function to get the user's language
 export function getUserLanguage() {
-    // Get the user's language preference from localStorage, or use the browser language if not set
-    const userBrowserLanguage = navigator.language ? navigator.language.slice(0, 2) : 'en';
-    console.log("User's browser language: " + userBrowserLanguage);
-
-    // Check if the user has switched their language 
     const storedLanguageSetting = localStorage.getItem('languageSetting');
+    const userBrowserLanguage = navigator.language ? navigator.language.slice(0, 2) : 'en';
 
-    // Check if the user has switched their language 
-    let languageSetting = storedLanguageSetting ? storedLanguageSetting : userBrowserLanguage;
-    console.log("Application language: " + languageSetting);
-
-    return languageSetting;
+    // Use the stored language if available, else fallback to the browser's language
+    return storedLanguageSetting ? storedLanguageSetting : userBrowserLanguage;
 }
+
+// Apply the language settings right after the page loads (DOMContentLoaded)
+document.addEventListener('DOMContentLoaded', () => {
+    languageSetting = getUserLanguage(); // Reinitialize after page load
+    netlifyIdentity.setLocale(languageSetting);  // Ensure correct locale is set on load
+    languageSettings();  // Initialize other language settings
+});
 
 // Function to load the logo based on the language
 export function loadLogo(language) {
@@ -44,24 +44,27 @@ export function languageSettings() {
 }
 
 function toggleLanguage() {
-    // Always retrieve the current language from localStorage
+    // Retrieve the current language from localStorage
     let languageSetting = localStorage.getItem('languageSetting') || 'en';
 
     // Toggle between 'en' and 'fr'
     languageSetting = (languageSetting === 'en') ? 'fr' : 'en';
 
-    // Store the updated language setting
+    // Store the updated language setting in localStorage
     localStorage.setItem('languageSetting', languageSetting);
 
-    // Log the current language for debugging purposes
+    // Log the current language for debugging
     console.log('Application language: ' + languageSetting);
 
-    // Update the UI with the new language setting
+    // Apply the new language settings
     updateLanguageUI(languageSetting);
 
-    // Display a toast message from the i18n content
-    const toastMessage = $.i18n('language_snackbar_message'); // Fetching the translated message
-    showToast(toastMessage, 2000);  // Automatically hide after 2000ms  
+    // Change the Netlify Identity locale
+    changeNetlifyLocale(languageSetting);
+
+    // Display toast message (language-dependent)
+    const toastMessage = $.i18n('language_snackbar_message');
+    showToast(toastMessage, 2000);
 }
 
 // Update the UI based on the language setting
@@ -75,11 +78,25 @@ function updateLanguageUI(language) {
     }).done(() => {
         // Apply the translations to the body
         $('body').i18n();
-
-
     });
 
 }
+
+// Function to handle locale change for Netlify
+function changeNetlifyLocale(language) {
+    // Reset Netlify Identity locale every time, to avoid stale locale state
+    netlifyIdentity.setLocale(language);
+    console.log("Updated Netlify locale to: " + language);
+
+    // Optionally, force a close and reopen the modal
+    if (netlifyIdentity.currentUser()) {
+        netlifyIdentity.close();
+        setTimeout(() => {
+            netlifyIdentity.open();
+        }, 100);  // short delay to let the locale change take effect
+    }
+}
+
 
 // Function to apply translations to the loaded content
 export function applyTranslations(languageSetting) {
@@ -88,3 +105,6 @@ export function applyTranslations(languageSetting) {
         'fr': '../../content/fr.json'
     }).done(() => $('body').i18n());
 }
+
+// Export the languageSetting for use in other files
+export { languageSetting };
