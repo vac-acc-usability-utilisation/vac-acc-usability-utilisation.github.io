@@ -39,35 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
     checkBannerDisplay();
 
     // Initialize Menu functionality
-    initializeMenus();    
- 
+    initializeMenus();
+
+    
+
 });
 
-export function updateHomePage(user) {
-    const loginBtn = document.getElementById("login-btn");
-    const loginBtnHeader = document.getElementById("login-btn-header");
-    const searchBar = document.getElementById("home-page-search-bar");
-    const navigationRail = document.getElementById("navigation-rail");
-    const signOut = document.getElementById("sign-out");
-    const root = document.documentElement; // Get the root element for CSS variables
 
-    if (user) {
-        // User is logged in, show search bar and hide login button
-        if (loginBtn) loginBtn.style.display = "none";
-        if (loginBtnHeader) loginBtnHeader.style.display = "none";
-        if (searchBar) searchBar.style.display = "flex";
-        if (navigationRail) navigationRail.style.display = "block";
-        if (signOut) signOut.style.display = "block";     
-         // Change CSS variable
-         root.style.setProperty("--navigation-rail-width", "88px"); // Adjust width for logged-in users     
-    } else {
-        // User is logged out, show login button and hide search bar
-        if (loginBtn) loginBtn.style.display = "flex";
-        if (loginBtnHeader) loginBtnHeader.style.display = "flex";
-        if (searchBar) searchBar.style.display = "none";
-        if (navigationRail) navigationRail.style.display = "none";
-        if (signOut) signOut.style.display = "none";  
-         // Change CSS variable
-         root.style.setProperty("--navigation-rail-width", "32px"); // Adjust width for logged-out users
-    }
-}

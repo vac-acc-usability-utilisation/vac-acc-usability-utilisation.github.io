@@ -948,7 +948,7 @@ ul.mobile-drawer-expansion li a {
 /* # Media Queries */
 
 :root {
-    --navigation-rail-width: 88px;
+    --navigation-rail-width: 32px;
 }
 
 /* ## Extra small windows (320px - 599px) */
