@@ -19,6 +19,7 @@
 	"main-menu": "Main menu",
 	"home": "Home",
 	"app-name": "Client Services Application",
-	"search-app": "Search Application",
-	"contact-us": "Contact us"
+	"search-app": "Search Client Services Application",
+	"contact-us": "Contact us",
+	"sign-in": "Sign in"
 }

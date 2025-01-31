@@ -254,7 +254,7 @@ div#top-app-bar {
 }
 
 .menu-button-wrapper {
-    width: var(--navigation-rail-width);
+    width: 88px;
     display: flex;
     justify-content: center;
 }

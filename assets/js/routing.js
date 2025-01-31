@@ -1,8 +1,9 @@
-import { showProgressBar, hideProgressBar } from './utils.js';
+import { showProgressBar, hideProgressBar, autoResize } from './utils.js';
 import { applyTranslations } from './language.js';
 import { highlightActiveNavItem } from './nav.js';
 import { initializeNumberInputRestrictions } from './form-validation.js';
-import { autoResize } from './utils.js';
+import { updateHomePage } from './app.js';
+import { closeAllMenus } from './menus.js';
 
 
 //Intial routing setup - gather links and add click listener, load 'home'
@@ -92,6 +93,72 @@ function onContentLoaded() {
         // Attach the event listener
         textarea.addEventListener('input', () => autoResize(textarea));
     });
+
+    // **Ensure Netlify Identity is available before calling updateNav & updateHomePage**
+if (typeof netlifyIdentity !== "undefined") {
+    console.warn("Netlify Identity available.");
+
+    // Get current user
+    const user = netlifyIdentity.currentUser();
+
+    // Update navigation and homepage content
+    //updateNav(user);
+    updateHomePage(user);
+
+    // Attach login buttons
+    const loginBtn = document.getElementById("login-btn");
+    const loginBtnHeader = document.getElementById("login-btn-header");
+
+    // Attach event listeners only if the buttons exist
+    if (loginBtn) {
+        loginBtn.addEventListener("click", () => {
+            console.log("Login button clicked");
+            netlifyIdentity.open(); // Open Netlify Identity modal
+        });
+    }
+    
+    if (loginBtnHeader) {
+        loginBtnHeader.addEventListener("click", () => {
+            console.log("Header login button clicked");
+            netlifyIdentity.open(); // Open Netlify Identity modal
+        });
+    }
+
+    // Attach logout button event listener
+    const logoutBtn = document.getElementById("sign-out");
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", (e) => {
+            console.log("Logout button clicked");
+            e.preventDefault();
+            netlifyIdentity.logout(); // Log out user
+            closeAllMenus();
+        });
+    }
+
+    // Ensure redirection happens **after** logout completes
+    netlifyIdentity.on("logout", () => {
+        console.log("User logged out, redirecting to home.");
+        window.location.hash = "#home";
+    });
+
+    // Listen for Netlify Identity login/logout events
+    netlifyIdentity.on("login", (user) => {
+        console.log("User logged in:", user);
+        //updateNav(user);
+        updateHomePage(user);
+    });
+
+    netlifyIdentity.on("logout", () => {
+        console.log("User logged out.");
+        //updateNav(null);
+        updateHomePage(null);
+    });
+
+    } else {
+        console.warn("Netlify Identity not available yet.");
+    }
+
+    
 }
 
 // Function to adjust the layout for the home page

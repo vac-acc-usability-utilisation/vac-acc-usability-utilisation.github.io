@@ -21,7 +21,6 @@
 
 	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
 
-
 	<!--
 	<noscript>
 		<link rel="stylesheet" href="/assets/css/noscript.css" />
@@ -87,6 +86,7 @@
 					<div class="logo-container logo"></div>
 
 				</div>
+				<!--
 				<div style="display: flex; flex-direction: row;">
 					<button class="icon-button disabled" aria-disabled="true" disabled>
 						<div class="icon-button-container">
@@ -102,7 +102,7 @@
 							</span>
 						</div>
 					</button>
-				</div>
+				</div>-->
 			</div>
 			<div id="header-middle">
 				<div class="search-bar" id="header-search-bar">
@@ -145,7 +145,7 @@
 					</button>
 
 					<!-- help / feedback -->
-					<button id="help-button" class="icon-button menu-button" aria-controls="help-menu">
+					<button id="help-button" class="icon-button menu-button" aria-controls="help-menu" style="display: none;">
 						<div class="icon-button-container">
 							<span class="material-symbols-outlined">help</span>
 						</div>
@@ -173,19 +173,16 @@
 						</ul>
 					</div>
 
-					<!-- Login button -->
-					<button id="login-button-header" class="button">
-						Log in
-					</button>
+				
 
 					<!-- Account / settings button -->
-					 <!--
+					 
 					<button id="account-button" class="icon-button menu-button" aria-controls="account-menu">
 						<div class="icon-button-container">
 							<span class="material-symbols-outlined">settings</span>
 						</div>
 					</button>
-						-->
+						
 
 					<!-- Menu Container -->
 					<div class="menu-container hide" id="account-menu">
@@ -225,14 +222,14 @@
 							</li>
 							<hr>
 
-							<li role="menuitem">
+							<li role="menuitem" style="display: none;">
 								<a href="#" class="menu-item">
 									<span class="material-symbols-outlined leading-icon">switch_access_shortcut</span>
 									<span id="current-motion">Change user access</span>
 								</a>
 
 							</li>
-							<li role="menuitem">
+							<li role="menuitem" id="sign-out" style="display: none;">
 								<a href="#" class="menu-item">
 									<span class="material-symbols-outlined leading-icon">logout</span>
 									<span id="current-motion">Sign out</span>
@@ -332,137 +329,10 @@
 						</ul>
 					</div>
 
-
-					<!--
-					<button id="account-button" class="icon-button menu-button" aria-controls="account-menu">
-						<div class="icon-button-container">
-							<span class="material-symbols-outlined">settings</span>
-						</div>
+					<!-- Sign in button -->
+					<button id="login-btn-header" class="button" data-i18n="sign-in">
+						Sign in
 					</button>
-					
-					<ul id="account-menu" class="menu" role="menu" tabindex="-1" aria-labelledby="account-button">
-						<li role="menuitem">
-							<a href="#" class="menu-item submenu-button" data-submenu="language-submenu">
-								<span class="material-symbols-outlined leading-icon">language</span>
-								<span class="content">
-									<span>Language</span>:&nbsp;<span id="current-language" data-i18n="">English</span>
-								</span>
-								<span class="material-symbols-outlined trailing-icon">chevron_right</span>
-							</a>
-						</li>
-						<li role="menuitem">
-							<a href="#" class="menu-item submenu-button" data-submenu="appearance-submenu">
-								<span class="material-symbols-outlined leading-icon">dark_mode</span>
-								<span>Appearance</span>:&nbsp;<span id="current-appearance">System</span>
-								<span class="material-symbols-outlined trailing-icon">chevron_right</span>
-							</a>
-						</li>
-
-						<li role="menuitem">
-							<a href="#" class="menu-item submenu-button" data-submenu="density-submenu">
-								<span class="material-symbols-outlined leading-icon">density_medium</span>
-								<span>Density</span>:&nbsp;<span id="current-density">Normal</span>
-								<span class="material-symbols-outlined trailing-icon">chevron_right</span>
-							</a>
-
-						</li>
-						<li role="menuitem">
-							<a href="#" class="menu-item submenu-button" data-submenu="motion-submenu">
-								<span class="material-symbols-outlined leading-icon">animation</span>
-								<span>Motion</span>:&nbsp;<span id="current-motion">Enabled</span>
-								<span class="material-symbols-outlined trailing-icon">chevron_right</span>
-							</a>
-
-						</li>
-					</ul>
-					<ul class="submenu hide" id="language-submenu" role="menu">
-						<li>
-							<div class="icon-button-container">
-								<a href="#" class="icon-button back-button">
-									<span class="material-symbols-outlined">arrow_back</span>
-								</a>
-							</div>
-							Language
-						</li>
-						<hr>
-						<li role="menuitem">
-							<a href="#" class="submenu-item">English</a>
-						</li>
-						<li role="menuitem">
-							<a href="#" class="submenu-item">French</a>
-						</li>
-					</ul>
-					<ul class="submenu hide" id="appearance-submenu" role="menu">
-						<li>
-							<div class="icon-button-container">
-								<a href="#" class="icon-button back-button">
-									<span class="material-symbols-outlined">
-										arrow_back
-									</span>
-								</a>
-							</div>
-							Appearance
-						</li>
-						<hr>
-						<li role="menuitem">
-							<a href="#" class="submenu-item">Light Mode</a>
-						</li>
-						<li role="menuitem">
-							<a href="#" class="submenu-item">Dark Mode</a>
-						</li>
-						<li role="menuitem">
-							<a href="#" class="submenu-item">System Default</a>
-						</li>
-					</ul>
-					<ul class="submenu hide" id="density-submenu" role="menu">
-						<li>
-							<div class="icon-button-container">
-								<a href="#" class="icon-button back-button">
-									<span class="material-symbols-outlined">
-										arrow_back
-									</span>
-								</a>
-							</div>
-							Density
-						</li>
-						<hr>
-						<li role="menuitem">
-							<a href="#" class="submenu-item">Normal</a>
-						</li>
-						<li role="menuitem">
-							<a href="#" class="submenu-item">Dense</a>
-						</li>
-						<li role="menuitem">
-							<a href="#" class="submenu-item">Denser</a>
-						</li>
-					</ul>
-					<ul class="submenu hide" id="motion-submenu" role="menu">
-						<li>
-							<div class="icon-button-container">
-								<a href="#" class="icon-button back-button">
-									<span class="material-symbols-outlined">
-										arrow_back
-									</span>
-								</a>
-							</div>
-							Motion
-						</li>
-						<hr>
-						<li role="menuitem">
-							<a href="#" class="submenu-item">Enabled</a>
-						</li>
-						<li role="menuitem">
-							<a href="#" class="submenu-item">Disabled</a>
-						</li>
-					</ul>-->
-					<!--
-            <button class="button-outlined">
-                <span class="material-symbols-outlined"
-                    style="margin-right: 4px; color: var(--md-sys-color-primary); border-radius: 16px;">
-                    account_circle
-                </span>
-                Sign in
-            </button>-->
 				</div>
 			</div>
 		</div>
@@ -538,7 +408,7 @@
 								</li>
 								<div style="text-align: left; padding: 0px 18px 4px;"> <!-- client info -->
 									<p class="font-title-sm" style="margin-bottom: 0;">400322564100 • 7582984</p>
-									<p class="font-title-sm" style="margin-top: 0;">Sergeant Patricia R. Rosso</p>
+									<p class="font-title-sm" style="margin-top: 0;">Sgt. Patricia R. Rosso (she/her)</p>
 								</div>
 							</div>
 							<li>
@@ -764,7 +634,7 @@
 	<div id="app-container">
 
 		<div id="navigation-rail-wrapper">
-			<nav id="navigation-rail" aria-label="CSA Design System">
+			<nav id="navigation-rail" aria-label="CSA Design System" style="display: none;">
 				<ul role="menubar" aria-orientation="vertical">
 					<li role="none">
 						<a class="button fab-button" href="#/search-for-client" data-route="/search-for-client"
@@ -793,7 +663,7 @@
 						<ul class="nav-drawer">
 							<div style="text-align: left; padding: 4px 18px; position: sticky; top: 0px; background-color: var(--md-sys-color-surface-container); z-index: 12;"> <!-- client info -->
 								<p class="font-title-sm" style="margin-bottom: 0;">400322564100 • 7582984</p>
-								<p class="font-title-sm" style="margin-top: 0;">Sergeant Patricia R. Rosso</p>
+								<p class="font-title-sm" style="margin-top: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%;" title="Sergeant Patricia Romera Rosso (she/her)">Sgt. Patricia R. Rosso (she/her)</p>
 							</div>
 							<li role="none">
 								<a role="menuitem" href="#/client" data-route="/client">

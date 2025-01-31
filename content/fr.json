@@ -18,7 +18,8 @@
 	"menu": "Menu",
 	"main-menu": "Menu principal",
 	"home": "Accueil",
-	"app-name": "Nom de l'application",
-	"search-app": "Recherche l’application",
-	"contact-us": "Contactez-nous"
+	"app-name": "l'Application des Services aux Clients",
+	"search-app": "Recherche l'Application des Services aux Clients",
+	"contact-us": "Contactez-nous",
+	"sign-in": "Se connecter"
   }
