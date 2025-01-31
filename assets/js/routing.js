@@ -2,6 +2,8 @@ import { showProgressBar, hideProgressBar } from './utils.js';
 import { applyTranslations } from './language.js';
 import { highlightActiveNavItem } from './nav.js';
 import { initializeNumberInputRestrictions } from './form-validation.js';
+import { autoResize } from './utils.js';
+
 
 //Intial routing setup - gather links and add click listener, load 'home'
 export function setupRouting() {
@@ -50,7 +52,7 @@ export function loadContent(route) {
                 highlightActiveNavItem();
                 applyTranslations();
                 // Call the layout adjustment function for the home page
-                if (cleanRoute === 'home' || cleanRoute === 'search-for-client' || cleanRoute === 'work-items' || cleanRoute === 'your-work') {
+                if (cleanRoute === 'home' || cleanRoute === 'search-for-client' || cleanRoute === 'work-items' || cleanRoute === 'your-work' || cleanRoute === 'create-client') {
                     adjustHomePageLayout();
                 } else {
                     resetLayout(); // Reset layout for other pages if needed
@@ -83,6 +85,13 @@ function onContentLoaded() {
 
     // Optionally, initialize number input restrictions
     initializeNumberInputRestrictions();
+
+    const textareas = document.querySelectorAll('textarea');
+    console.log('Textareas found:', textareas); // Debugging
+    textareas.forEach(textarea => {
+        // Attach the event listener
+        textarea.addEventListener('input', () => autoResize(textarea));
+    });
 }
 
 // Function to adjust the layout for the home page

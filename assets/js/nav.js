@@ -1,11 +1,14 @@
 import { loadContent } from './routing.js';
 
-// Function to handle hover on the navigation rail
+// Function to handle displaying the navigation rail submenu
 export function handleNavRailHover() {
     const navRailItems = document.querySelectorAll("#navigation-rail li.has-submenu");
     navRailItems.forEach(item => {
         item.addEventListener('mouseenter', showNavDrawer);
+        item.addEventListener('focusin', showNavDrawer);
+
         item.addEventListener('mouseleave', hideNavDrawer);
+        item.addEventListener('focusout', hideNavDrawer);
     });
 }
 
@@ -230,9 +233,6 @@ export function initializeExpandableSections() {
         }
     });
 }
-
-
-
 
 // Function to highlight the active navigation item
 export function highlightActiveNavItem() {

@@ -1,5 +1,3 @@
-
-
 // Function to close all active menus
 export function closeAllMenus() {
     const menus = document.querySelectorAll('.menu-container.active');
@@ -13,7 +11,6 @@ export function closeAllMenus() {
 // Function to toggle the menu visibility and position it relative to the button
 export function toggleMenu(button, menu) {
     closeAllMenus()
-    
 
     const isMenuOpen = menu.classList.toggle('active');
     console.log(`Menu ${isMenuOpen ? 'opened' : 'closed'}`);

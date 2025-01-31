@@ -115,23 +115,27 @@ export function checkBannerDisplay() {
 
     if (dismissGlobalBannerButton) {
         dismissGlobalBannerButton.addEventListener('click', function (event) {
-            event.preventDefault(); 
+            event.preventDefault();
             dismissGlobalBanner();
         });
     }
-    
+
 
 
 }
 
 export function dismissGlobalBanner() {
-        document.body.classList.remove('banner-visible');
-        document.getElementById('global-banner').classList.add('hide');
+    document.body.classList.remove('banner-visible');
+    document.getElementById('global-banner').classList.add('hide');
 
-        sessionStorage.setItem('globalBannerDismissed', 'true');
-    }
+    sessionStorage.setItem('globalBannerDismissed', 'true');
+}
 
-
+export function autoResize(textarea) {
+    console.log('Resizing textarea:', textarea);
+    textarea.style.height = 'auto'; // Reset height
+    textarea.style.height = textarea.scrollHeight + 'px'; // Set new height
+}
 
 // Adjust the main content width based on screen size and layout
 /*

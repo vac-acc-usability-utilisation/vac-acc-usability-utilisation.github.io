@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
     checkBannerDisplay();
 
     // Initialize Menu functionality
-    initializeMenus();
-    
+    initializeMenus();    
  
 });
