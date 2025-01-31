@@ -113,7 +113,8 @@ function onContentLoaded() {
                 netlifyIdentity.open(); // Open the Netlify Identity modal locally
             } else {
                 console.log("Redirecting to Netlify Identity login for security");
-                window.location.href = "/.netlify/identity/login"; // Secure redirect on Netlify
+                //window.location.href = "/.netlify/identity/login"; // Secure redirect on Netlify
+                netlifyIdentity.open(); // Open the Netlify Identity modal locally
             }
         }
 
