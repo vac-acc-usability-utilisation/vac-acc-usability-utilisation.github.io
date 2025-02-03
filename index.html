@@ -321,20 +321,27 @@
 						Sign in
 					</button>
 
-					
+
 				</div>
 
-				<button id="account-button" class="icon-button menu-button" style="display: none;" aria-controls="account-menu">
+				<button id="account-button" class="icon-button menu-button" style="display: none;"
+					aria-controls="account-menu">
 					<div class="icon-button-container"
-							style=" background-color: var(--md-sys-color-primary); width: 32px !important; height: 32px;">
-							<span style="font-size: 16px; color: var(--md-sys-color-on-primary);">S</span>
-						</div>
+						style=" background-color: var(--md-sys-color-primary); width: 32px !important; height: 32px;">
+						<span style="font-size: 16px; color: var(--md-sys-color-on-primary);">S</span>
+					</div>
 				</button>
 
 
 				<!-- Menu Container -->
-				<div class="menu-container hide" id="account-menu">
+				<div class="menu-container hide" id="account-menu"
+					style="background: var(--md-sys-color-surface-container);">
 					<ul class="menu" role="menu" tabindex="-1" aria-labelledby="account-button">
+						<li class="d-flex" style="flex-direction: column; justify-content: center; width: 100%; height: 56px !important;">
+							<span class="font-label-md" style="margin-bottom: 0;">Signed in as</span>
+							<span style="margin-top: 0;">SXTIMMIN</span>
+						</li>
+						<hr>
 						<li role="menuitem">
 							<a href="#" class="menu-item ">
 								<span class="material-symbols-outlined leading-icon">switch_access_shortcut</span>
