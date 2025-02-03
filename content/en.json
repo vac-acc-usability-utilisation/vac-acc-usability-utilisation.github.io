@@ -21,5 +21,8 @@
 	"app-name": "Client Services Application",
 	"search-app": "Search Client Services Application",
 	"contact-us": "Contact us",
-	"sign-in": "Sign in"
+	"sign-in": "Sign in",
+	"signed_in_snackbar_message": "Signed in as {name}",
+	"signed_out_snackbar_message": "Signed out successfully",
+	"news-and-releases": "News and releases"
 }

@@ -1,76 +1,229 @@
 <section>
-    <div class="cnt-wdth-lmtd-2x" style="padding: 0 var(--md-sys-space-xl);">
+    <div class="cnt-wdth-lmtd-2x">
 
         <!-- Client summary heading -->
-        <div class="d-flex"
-            style="align-items: center; flex-direction: column; padding: 16px 0; margin-bottom: var(--md-sys-space-margin); position: sticky; top: 0px; z-index: 12; background-color: var(--md-sys-color-surface);">
-            <div class="d-flex" style="width: 100%;">
-                <div class="d-flex" style="flex: auto; flex-direction: column;">
-                    <div class="d-flex">
-                        <div class="d-flex font-title-lg" style="
-                            font-size: 18px;
-                            border-radius: 50%; 
-                            height: 42px; 
-                            width: 42px; 
-                            margin-right: 8px; 
-                            background-color: var(--md-sys-color-primary-container); 
-                            color: var(--md-sys-color-on-primary-container); 
-                            justify-content: center; 
-                            align-items: center;">
-                        <span class="" title="Sergeant Patricia Romera Rosso (she/her)">
-                            PR
+        <div class="d-flex flex-column"
+            style="padding: 16px 0; margin-bottom: var(--md-sys-space-margin); position: sticky; top: 0px; z-index: 12; background-color: var(--md-sys-color-surface); width: 100%;">
+
+            <!-- First Row: PR Circle, Name Button, Verified Icon, Right-aligned Icons -->
+            <div class="d-flex align-items-center justify-content-between" style="width: 100%; padding: 0 16px;">
+
+                <!-- Left Section: PR Circle, Name Button, Verified Icon -->
+                <div class="d-flex align-items-center">
+
+
+
+                    <!-- Name & Number Button -->
+                    <button class="button btn-xl d-flex align-items-center"
+                        style="padding: 8px; height: 52px; gap: 8px; width: fit-content; border-radius: var(--md-sys-shape-corner-xxl); border: none; color: var(--md-sys-color-on-surface); background: var(--md-sys-color-surface-container-low); cursor: pointer;">
+                        <!-- PR Circle -->
+                        <span class="d-flex font-title-lg" style="
+        font-size: 18px;
+        border-radius: 50%; 
+        height: 42px; 
+        width: 42px; 
+        margin-right: 0px; 
+        background-color: var(--md-sys-color-primary-container); 
+        color: var(--md-sys-color-on-primary-container); 
+        justify-content: center; 
+        align-items: center;">
+                            <span title="Sergeant Patricia Romera Rosso (she/her)">PR</span>
                         </span>
-                        </div>
-                        <div class="d-flex" style="flex-direction: column;">
+                        <span class="d-flex flex-column align-items-start">
                             <span class="font-title-sm">400322564100 • 7582984</span>
-                            <span class="font-title-md" id="cont" style="line-height: 14px; font-weight: 500;" title="Sergeant Patricia Romera Rosso (she/her)">Sgt Patricia R. Rosso (she/her)</span>
-                        </div>
-                    </div>
-                    
+                            <span class="font-title-md d-flex align-items-center" id="cont" style="font-weight: 500;"
+                                title="Sergeant Pat Romera Rosso (she/her)">
+                                Sgt. Pat R. Rosso (she/her)
+                            </span>
+                        </span>
+                        <span class="material-symbols-outlined" title="Dropdown"
+                            style="color: var(--md-sys-color-on-surface);">
+                            arrow_drop_down
+                        </span>
+                    </button>
+
+                    <!-- Verified Icon -->
+                    <span class="material-symbols-outlined" title="Verified user"
+                        style="margin-left: 8px; color: var(--md-sys-color-primary);">
+                        verified_user
+                    </span>
+
                 </div>
-    
-                <div class="d-flex" style="justify-content: end; flex-direction: row; gap: 4px;">
-                    <div class="icon-button-container">
-                        <button class="icon-button" title="Add a client note">
-                            <span class="material-symbols-outlined">
-                                note_add
-                            </span>
-                        </button>
-                    </div>
-                    <div class="icon-button-container">
-                        <button class="icon-button" title="Flag an intial call">
-                            <span class="material-symbols-outlined">
-                                flag
-                            </span>
-                        </button>
-                    </div>
-                    <div class="icon-button-container">
-                        <button class="icon-button" title="Create a work item">
-                            <span class="material-symbols-outlined">
-                                assignment_add
-                            </span>
-                        </button>
-                    </div>
-                    <!--
-                    <div class="icon-button-container">
-                        <button class="icon-button">
-                            <span class="material-symbols-outlined">
-                                more_vert
-                            </span>
-                        </button>
-                    </div>-->
+
+                <!-- Right Section: Icon Buttons -->
+                <div class="d-flex" style="gap: 8px; justify-self: flex-end;">
+                    <button class="icon-button" title="Add a client note">
+                        <span class="material-symbols-outlined">note_add</span>
+                    </button>
+                    <button class="icon-button" title="Flag an initial call">
+                        <span class="material-symbols-outlined">flag</span>
+                    </button>
+                    <button class="icon-button" title="Create a work item">
+                        <span class="material-symbols-outlined">assignment_add</span>
+                    </button>
                 </div>
+
             </div>
+
+            <!-- Second Row: Chips -->
+            <div class="d-flex" style="gap: 8px; padding: 8px 16px;">
+                <span class="chip"
+                    style="background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">
+                    CAF • Retired
+                </span>
+                <span class="chip"
+                    style="background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);">
+                    Disability
+                </span>
+                <span class="chip"
+                    style="background-color: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container);">
+                    Homeless
+                </span>
+            </div>
+
+        </div>
+        <!--
             <div class="d-flex" style="justify-content: start; width: 100%;">
                 <h1 class="font-title-lg d-flex" style="align-items: center; margin-top: 16px;">
                     Client Summary <span class="material-symbols-outlined">arrow_drop_down</span>
                 </h1>
+            </div>-->
+    </div>
+
+    <section style="height: 2000px;">
+        <div class="grid"> <!-- Personal Information -->
+            
+            <!-- Identifiers -->
+            <div class="col-2"
+                style="padding: 4px 32px 16px; border-radius: var(--md-sys-shape-corner-md); background-color: var(--md-sys-color-surface-container-low);">
+                <h2 class="font-title-lg">Identifiers</h2>
+                <dl class="d-flex" style="flex-direction: column;">
+                    <dt style="font-size: 14px;">CSDN ID</dt>
+                    <dd style="font-size: 16px; align-items: center;" class="d-flex">400322564100</dd>
+                </dl>
+                <dl class="d-flex" style="flex-direction: column;">
+                    <dt style="font-size: 14px;">File Number</dt>
+                    <dd style="font-size: 16px; align-items: center;" class="d-flex">7582984</dd>
+                </dl>
+            </div>
+            <div class="col-6"
+                style="padding: 4px 32px 16px; border-radius: var(--md-sys-shape-corner-md); background-color: var(--md-sys-color-surface-container-low);">
+                <div class="d-flex" style="align-items: center;">
+                    <h2 class="font-title-lg" style="white-space: nowrap;">Personal Information</h2>
+                    <div class="icon-button-container">
+                        <button class="icon-button"><span class="material-symbols-outlined">edit</span></button>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="col-6">
+                        <dl class="d-flex" style="flex-direction: column;">
+                            <dt style="font-size: 14px;">Rank or Title</dt>
+                            <dd style="font-size: 16px; align-items: center;">Rank • Sergeant</dd>
+                        </dl>
+                        <dl class="d-flex" style="flex-direction: column;">
+                            <dt style="font-size: 14px;">Chosen Name</dt>
+                            <dd style="font-size: 16px; align-items: center;">Pat</dd>
+                        </dl>
+                        <dl class="d-flex" style="flex-direction: column;">
+                            <dt style="font-size: 14px;">First Name</dt>
+                            <dd style="font-size: 16px; align-items: center;">Patricia</dd>
+                        </dl>
+                        <dl class="d-flex" style="flex-direction: column;">
+                            <dt style="font-size: 14px;">Middle Name</dt>
+                            <dd style="font-size: 16px; align-items: center;">Rebecca</dd>
+                        </dl>
+                        <dl class="d-flex" style="flex-direction: column;">
+                            <dt style="font-size: 14px;">Last Name</dt>
+                            <dd style="font-size: 16px; align-items: center;">Rosso</dd>
+                        </dl>
+                        <dl class="d-flex" style="flex-direction: column;">
+                            <dt style="font-size: 14px;">Pronouns</dt>
+                            <dd style="font-size: 16px; align-items: center;">She/Her</dd>
+                        </dl>
+                    </div>
+                    <div class="col-6">
+                        <dl class="d-flex" style="flex-direction: column;">
+                            <dt style="font-size: 14px;">Date of birth</dt>
+                            <dd style="font-size: 16px; align-items: center;">
+                                1987-02-01
+                            </dd>
+                        </dl>
+                        <!--
+                            <dl class="d-flex " style="flex-direction: column;">
+                                <dt style="font-size: 14px;">Date of death</dt>
+                                <dd style="font-size: 16px; align-items: center;">
+                                    1987-02-01
+                                </dd>
+                            </dl>-->
+                        <dl class="d-flex" style="flex-direction: column;">
+                            <dt style="font-size: 14px;">Sex</dt>
+                            <dd style="font-size: 16px; align-items: center;">Female</dd>
+                        </dl>
+                        <dl class="d-flex" style="flex-direction: column;">
+                            <dt style="font-size: 14px;">Maritial Status</dt>
+                            <dd style="font-size: 16px; align-items: center;">Married</dd>
+                        </dl>
+                        <dl class="d-flex" style="flex-direction: column;">
+                            <dt style="font-size: 14px;">Area Office</dt>
+                            <dd style="font-size: 16px; align-items: center;">Charlottetown, PE
+                            </dd>
+                        </dl>
+                        <dl class="d-flex" style="flex-direction: column;">
+                            <dt style="font-size: 14px;">Language</dt>
+                            <dd style="font-size: 16px; align-items: center;">
+                                French • <span class="font-label-lg">Spoken</span>
+                                <br>
+                                English • <span class="font-label-lg">Written</span>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Address -->
+            <div class="col-4"
+                style="padding: 4px 32px 16px; border-radius: var(--md-sys-shape-corner-md); background-color: var(--md-sys-color-surface-container-low);">
+                <div class="d-flex" style="align-items: center;">
+                    <h2 class="font-title-lg">Address</h2>
+                    <div class="icon-button-container">
+                        <button class="icon-button"><span class="material-symbols-outlined">edit</span></button>
+                    </div>
+                </div>
+                <dl class="d-flex" style="flex-direction: column;">
+                    <dt style="font-size: 14px;">Residential</dt>
+                    <dd style="font-size: 16px; align-items: center; white-space: nowrap;" class="d-flex">
+                        47 Westcomb Crescent <br> Charlottetown, PE <br> Canada <br> C1A 456
+                    </dd>
+                </dl>
+                <dl class="d-flex" style="flex-direction: column;">
+                    <dt style="font-size: 14px;">Mailing</dt>
+                    <dd style="font-size: 16px; align-items: center; white-space: nowrap;" class="d-flex">
+                        47 Westcomb Crescent <br> Charlottetown, PE <br> Canada <br> C1A 456
+                    </dd>
+                </dl>
+            </div>
+
+            <!-- Telecommunications -->
+            <div class="col-4"
+                style="padding: 4px 32px 16px; border-radius: var(--md-sys-shape-corner-md); background-color: var(--md-sys-color-surface-container-low);">
+                <div class="d-flex" style="align-items: center;">
+                    <h2 class="font-title-lg">Telecommunications</h2>
+                    <div class="icon-button-container">
+                        <button class="icon-button"><span class="material-symbols-outlined">edit</span></button>
+                    </div>
+                </div>
+                <dl class="d-flex" style="flex-direction: column;">
+                    <dt style="font-size: 14px;">Mobile</dt>
+                    <dd style="font-size: 16px; align-items: center;" class="d-flex">1-902-450-1233</dd>
+                </dl>
+                <dl class="d-flex" style="flex-direction: column;">
+                    <dt style="font-size: 14px;">Home</dt>
+                    <dd style="font-size: 16px; align-items: center;" class="d-flex">1-902-567-3425</dd>
+                </dl>
             </div>
         </div>
-        
-        <section style="height: 2000px;">
-
-
-        </section>
+    </section>
     </div>
 </section>

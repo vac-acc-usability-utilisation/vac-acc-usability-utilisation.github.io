@@ -3,7 +3,7 @@
 	  "authors": [
 		"Steven Timmins"
 	  ],
-	  "last-updated": "2024-09-26",
+	  "last-updated": "2025-01-31",
 	  "locale": "fr",
 	  "message-documentation": "qqq"
 	},
@@ -21,5 +21,8 @@
 	"app-name": "l'Application des Services aux Clients",
 	"search-app": "Recherche l'Application des Services aux Clients",
 	"contact-us": "Contactez-nous",
-	"sign-in": "Se connecter"
+	"sign-in": "Se connecter",
+	"signed_in_snackbar_message": "Signed in as {name}",
+	"signed_out_snackbar_message": "Déconnexion réussie",
+	"news-and-releases": "Actualités et communiqués"
   }
