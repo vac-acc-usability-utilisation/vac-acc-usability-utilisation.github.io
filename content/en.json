@@ -18,11 +18,13 @@
 	"menu": "Menu",
 	"main-menu": "Main menu",
 	"home": "Home",
+	"your-work": "Your Work",
 	"app-name": "Client Services Application",
 	"search-app": "Search Client Services Application",
 	"contact-us": "Contact us",
 	"sign-in": "Sign in",
 	"signed_in_snackbar_message": "Signed in as {name}",
 	"signed_out_snackbar_message": "Signed out successfully",
-	"news-and-releases": "News and releases"
+	"news-and-releases": "News and releases",
+	"about-csa-ux": "About CSA UX prototype"
 }

@@ -72,7 +72,6 @@
     --md-sys-color-surface-inverse: rgb(15 21 17);
     --md-sys-color-on-surface-inverse: rgb(223 228 222);
     --md-sys-color-primary-inverse: rgb(144 213 174);
-
 }
 
 /* ### Dark theme */
@@ -131,7 +130,6 @@ body.dark {
     --md-sys-color-surface-inverse: rgb(246 251 244);
     --md-sys-color-on-surface-inverse: rgb(23 29 25);
     --md-sys-color-primary-inverse: rgb(37 106 74);
-
 }
 
 /* ## Elevation (box shadow) */
@@ -198,18 +196,14 @@ body.banner-visible {
 
 /* ## Motion */
 :root {
-    --md-sys-duration-short-1: 50ms;
-    --md-sys-duration-short-2: 100ms;
-    --md-sys-duration-short-3: 150ms;
-    --md-sys-duration-short-4: 200ms;
+    --md-sys-duration-200: 200ms;
+    --md-sys-duration-300: 300ms;
 }
 
 body.reduced-motion {
     /* ### No motion */
-    --md-sys-duration-short-1: 0ms;
-    --md-sys-duration-short-2: 0ms;
-    --md-sys-duration-short-3: 0ms;
-    --md-sys-duration-short-4: 0ms;
+    --md-sys-duration-200: 0ms;
+    --md-sys-duration-300: 0ms;
 }
 
 /* ## Shapes */

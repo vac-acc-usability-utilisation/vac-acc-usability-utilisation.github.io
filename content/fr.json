@@ -18,11 +18,13 @@
 	"menu": "Menu",
 	"main-menu": "Menu principal",
 	"home": "Accueil",
+	"your-work": "Votre travail",
 	"app-name": "l'Application des Services aux Clients",
 	"search-app": "Recherche l'Application des Services aux Clients",
 	"contact-us": "Contactez-nous",
 	"sign-in": "Se connecter",
 	"signed_in_snackbar_message": "Signed in as {name}",
 	"signed_out_snackbar_message": "Déconnexion réussie",
-	"news-and-releases": "Actualités et communiqués"
+	"news-and-releases": "Actualités et communiqués",
+	"about-csa-ux": "À propos du prototype UX de CSA"
   }
