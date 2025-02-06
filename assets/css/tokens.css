@@ -31,8 +31,6 @@
     --md-sys-color-on-tertiary: rgb(255 255 255);
     --md-sys-color-tertiary-container: rgb(192 233 249);
     --md-sys-color-on-tertiary-container: rgb(0 31 40);
-    --md-sys-color-warning-container: rgb(229 232 145);
-    --md-sys-color-on-warning-container: rgb(28 29 0);
     --md-sys-color-error: rgb(186 26 26);
     --md-sys-color-on-error: rgb(255 255 255);
     --md-sys-color-error-container: rgb(255 218 214);
@@ -89,8 +87,6 @@ body.dark {
     --md-sys-color-on-tertiary: rgb(5 53 66);
     --md-sys-color-tertiary-container: rgb(35 76 89);
     --md-sys-color-on-tertiary-container: rgb(192 233 249);
-    --md-sys-color-warning-container: rgb(71 74 1);
-    --md-sys-color-on-warning-container: rgb(229 232 145);
     --md-sys-color-error: rgb(255 180 171);
     --md-sys-color-on-error: rgb(105 0 5);
     --md-sys-color-error-container: rgb(147 0 10);

@@ -88,6 +88,13 @@ function changeNetlifyLocale(language) {
     netlifyIdentity.setLocale(language);
     console.log("Updated Netlify locale to: " + language);
 
+    // Optionally, force a close and reopen the modal
+    if (netlifyIdentity.currentUser()) {
+        netlifyIdentity.close();
+        setTimeout(() => {
+            netlifyIdentity.open();
+        }, 100);  // short delay to let the locale change take effect
+    }
 }
 
 

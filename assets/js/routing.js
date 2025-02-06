@@ -4,8 +4,6 @@ import { highlightActiveNavItem } from './nav.js';
 import { initializeNumberInputRestrictions } from './form-validation.js';
 import { closeAllMenus } from './menus.js';
 import { languageSetting, getUserLanguage } from './language.js';  // Import the language setting
-import { showToast } from './utils.js';
-
 
 // Initialize languageSetting by calling getUserLanguage
 getUserLanguage();  // This will initialize languageSetting based on browser or localStorage
@@ -85,7 +83,7 @@ function onContentLoaded() {
     if (window.netlifyIdentity) {
         console.log("Netlify Identity is available.");
 
-        // Initialize the page by checking if a user is already logged in
+         // Initialize the page by checking if a user is already logged in
         netlifyIdentity.on("init", (user) => {
             console.log("Netlify Identity Initialized");
             updateHomePage(user); // Update UI based on user state
@@ -134,25 +132,12 @@ function onContentLoaded() {
         netlifyIdentity.on("login", (user) => {
             console.log("User logged in:", user);
             updateHomePage(user);
-
-            // Grab the user's name
-            const userName = user.user_metadata.full_name || "User";  // Use "User" as a fallback if no name is set
-
-            // Explicitly close the modal (optional, since it closes automatically)
-            netlifyIdentity.close();
-            window.location.hash = "#/home"; // Redirect to home
-
-            // Display toast message (language-dependent)
-            const toastMessage = $.i18n('signed_in_snackbar_message').replace("{name}", userName);
-            showToast(toastMessage, 2000);
         });
 
         netlifyIdentity.on("logout", () => {
             console.log("User logged out.");
             updateHomePage(null);
-            window.location.hash = "#/home"; // Redirect to home
-            const toastMessage = $.i18n('signed_out_snackbar_message');
-            showToast(toastMessage, 2000);
+            window.location.hash = "#home"; // Redirect to home
         });
     } else {
         console.warn("Netlify Identity not available yet.");
@@ -166,9 +151,6 @@ function onContentLoaded() {
         const searchBar = document.getElementById("home-page-search-bar");
         const navigationRail = document.getElementById("navigation-rail");
         const signOut = document.getElementById("sign-out");
-        const accountBtn = document.getElementById("account-button");
-        const helpAndSupportMenu = document.getElementById("help-and-support-menu-items");
-        const authenticatedMenuItems = document.getElementsByClassName("authenticatedMenuItem");
         const root = document.documentElement; // Get the root element for CSS variables
 
         if (user) {
@@ -179,12 +161,6 @@ function onContentLoaded() {
             if (searchBar) searchBar.style.display = "flex";
             if (navigationRail) navigationRail.style.display = "block";
             if (signOut) signOut.style.display = "block";
-            if (accountBtn) accountBtn.style.display = "flex";
-            if (helpAndSupportMenu) helpAndSupportMenu.style.display = "block";
-            // Loop through each item in authenticatedMenuItems and set display to block
-            for (let i = 0; i < authenticatedMenuItems.length; i++) {
-                authenticatedMenuItems[i].style.display = "block";
-            }
             // Change CSS variable
             root.style.setProperty("--navigation-rail-width", "88px"); // Adjust width for logged-in users     
         } else {
@@ -195,12 +171,6 @@ function onContentLoaded() {
             if (searchBar) searchBar.style.display = "none";
             if (navigationRail) navigationRail.style.display = "none";
             if (signOut) signOut.style.display = "none";
-            if (accountBtn) accountBtn.style.display = "none";
-            if (helpAndSupportMenu) helpAndSupportMenu.style.display = "none";
-            // Loop through each item in authenticatedMenuItems and set display to none
-            for (let i = 0; i < authenticatedMenuItems.length; i++) {
-                authenticatedMenuItems[i].style.display = "none";
-            }
             // Change CSS variable
             root.style.setProperty("--navigation-rail-width", "32px"); // Adjust width for logged-out users
         }
