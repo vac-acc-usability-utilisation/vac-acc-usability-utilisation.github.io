@@ -68,8 +68,8 @@ export function loadContent(route) {
                 document.getElementById('content').innerHTML = "<h1>404 - Page Not Found</h1>";
                 console.error(error);
             })
-            .finally(hideProgressBar);
-        resolve();
+            .finally(() => hideProgressBar());
+
     }
     );
 }
@@ -79,102 +79,9 @@ function onContentLoaded() {
 
     console.log(languageSetting); // Should show 'fr' or 'en'
 
-    // Check if Netlify Identity is available and handle login/logout
-    if (window.netlifyIdentity) {
-        console.log("Netlify Identity is available.");
+    
 
-         // Initialize the page by checking if a user is already logged in
-        netlifyIdentity.on("init", (user) => {
-            console.log("Netlify Identity Initialized");
-            updateHomePage(user); // Update UI based on user state
-        });
-
-        // Explicitly check the current user if the page is refreshed
-        const currentUser = netlifyIdentity.currentUser();
-        if (currentUser) {
-            console.log("User is already logged in on refresh.");
-            updateHomePage(currentUser); // Ensure UI is updated with current user
-        } else {
-            console.log("No user currently logged in.");
-            updateHomePage(null); // Update UI for logged-out state
-        }
-
-        // Attach event listeners for login/logout
-        const loginBtn = document.getElementById("login-btn");
-        const loginBtnHeader = document.getElementById("login-btn-header");
-        const logoutBtn = document.getElementById("sign-out");
-
-        // Handle login with updated language setting
-        const handleLogin = () => {
-            // Ensure the languageSetting is the most up-to-date value
-            let currentLanguageSetting = localStorage.getItem('languageSetting') || 'en';
-            console.log("Handle login, language setting = " + currentLanguageSetting); // Debugging
-
-            // Set the locale for Netlify Identity based on the current languageSetting
-            netlifyIdentity.setLocale(currentLanguageSetting);
-            console.log("Netlify Identity locale set to: " + currentLanguageSetting); // Debugging
-
-            // Open the Netlify Identity modal
-            netlifyIdentity.open();
-        };
-
-        loginBtn?.addEventListener("click", handleLogin);
-        loginBtnHeader?.addEventListener("click", handleLogin);
-
-        logoutBtn?.addEventListener("click", (e) => {
-            console.log("Logout button clicked");
-            e.preventDefault();
-            netlifyIdentity.logout(); // Log out user
-            closeAllMenus(); // Close menus after logout
-        });
-
-        // Listen for login/logout events
-        netlifyIdentity.on("login", (user) => {
-            console.log("User logged in:", user);
-            updateHomePage(user);
-        });
-
-        netlifyIdentity.on("logout", () => {
-            console.log("User logged out.");
-            updateHomePage(null);
-            window.location.hash = "#home"; // Redirect to home
-        });
-    } else {
-        console.warn("Netlify Identity not available yet.");
-    }
-
-    function updateHomePage(user) {
-        console.log("Updating home page. User:", user);
-
-        const loginBtn = document.getElementById("login-btn");
-        const loginBtnHeader = document.getElementById("login-btn-header");
-        const searchBar = document.getElementById("home-page-search-bar");
-        const navigationRail = document.getElementById("navigation-rail");
-        const signOut = document.getElementById("sign-out");
-        const root = document.documentElement; // Get the root element for CSS variables
-
-        if (user) {
-            console.log("User is logged in.");  // Debugging log
-            // User is logged in, show search bar and hide login button
-            if (loginBtn) loginBtn.style.display = "none";
-            if (loginBtnHeader) loginBtnHeader.style.display = "none";
-            if (searchBar) searchBar.style.display = "flex";
-            if (navigationRail) navigationRail.style.display = "block";
-            if (signOut) signOut.style.display = "block";
-            // Change CSS variable
-            root.style.setProperty("--navigation-rail-width", "88px"); // Adjust width for logged-in users     
-        } else {
-            console.log("User is logged out.");  // Debugging log
-            // User is logged out, show login button and hide search bar
-            if (loginBtn) loginBtn.style.display = "flex";
-            if (loginBtnHeader) loginBtnHeader.style.display = "flex";
-            if (searchBar) searchBar.style.display = "none";
-            if (navigationRail) navigationRail.style.display = "none";
-            if (signOut) signOut.style.display = "none";
-            // Change CSS variable
-            root.style.setProperty("--navigation-rail-width", "32px"); // Adjust width for logged-out users
-        }
-    }
+   
 
     // Select all buttons and inputs that should be disabled until everything is loaded
     const buttons = document.querySelectorAll('button:not(.disabled)');

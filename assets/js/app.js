@@ -1,13 +1,15 @@
 import { getUserLanguage, loadLogo, languageSettings, applyTranslations } from './language.js';
 import { setupRouting } from './routing.js';
 import { handleNavRailHover, handleNavDrawerMobile, highlightActiveNavItem, initializeExpandableSections } from './nav.js';
-import { initializeMenus } from './menus.js';
+import { initializeMenus, closeAllMenus } from './menus.js';
 import { enableSkipToMain, hideProgressBar, checkBannerDisplay } from './utils.js';
 import { initializeUISettings } from './theme.js';
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log('VAC   .\\^/.   ACC\nACC  \\=%¥%=/  VAC\nVAC   ^`|`^   ACC');
     console.log('Application started.');
+
+  
 
     // Select all buttons and inputs that should be disabled until everything is loaded
     const buttons = document.querySelectorAll('button:not(.disabled)');
@@ -40,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initialize Menu functionality
     initializeMenus();
-
+    
     
 
 });

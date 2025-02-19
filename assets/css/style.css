@@ -1077,6 +1077,7 @@ ul {
 }
 
 dt {
+    font-size: 14px;
     font-weight: 700;
 }
 
@@ -1935,6 +1936,38 @@ button:focus-visible {
     opacity: 0.08;
 }
 
+.chip {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    block-size: 2rem;
+    min-inline-size: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background-color: transparent;
+    border: 0.0625rem solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    padding: 0 1rem;
+    margin: 0 0.5rem;
+    text-transform: none;
+    border-radius: 0.5rem;
+    /*transition: transform var(--speed3), border-radius var(--speed3), padding var(--speed3);*/
+    user-select: none;
+    gap: 1rem;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.chip.fill {
+    background-color: var(--md-sys-color-secondary-container) !important;
+    border: none;
+}
+
+.chip.fill:hover {
+    box-shadow: var(--elevate1);
+}
+
 
 /*
 :is(button,.button,.chip.medium)>.responsive {
@@ -2596,20 +2629,22 @@ table {
     border: 1px solid var(--md-sys-color-outline);
     border-collapse: separate !important;
     border-radius: var(--md-sys-shape-corner-md);
+    table-layout: fixed;
 }
 
 th {
     background-color: var(--md-sys-color-surface-container-low) !important;
     color: var(--md-sys-color-on-surface-variant) !important;
     font-weight: 600;
+    padding: 1rem;
 }
 
-thead > tr > th:first-of-type {
-    border-top-left-radius: var(--md-sys-shape-corner-md) ;
+thead>tr>th:first-of-type {
+    border-top-left-radius: var(--md-sys-shape-corner-md);
 }
 
-thead > tr > th:last-of-type {
-    border-top-right-radius: var(--md-sys-shape-corner-md) ;
+thead>tr>th:last-of-type {
+    border-top-right-radius: var(--md-sys-shape-corner-md);
 }
 
 
@@ -2622,8 +2657,13 @@ table :is(thead, tbody, tfoot, tr, th, td) {
 :is(th, td) {
     inline-size: auto;
     text-align: inherit;
-    padding: 1rem;
+    padding: 0rem 1rem;
     height: 56px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    vertical-align: middle;
 }
 
 :is(th, td)>* {
@@ -2639,21 +2679,8 @@ tfoot>tr>th {
     border-block-start: 0.0625rem solid var(--md-sys-color-outline);
 }
 
-/*
 table.stripes>tbody>tr:nth-child(odd) {
-    background-color: var(--md-sys-color-active);
-}*/
-
-table.no-space :is(th, td) {
-    padding: 0;
-}
-
-table.medium-space :is(th, td) {
-    padding: 0.75rem;
-}
-
-table.large-space :is(th, td) {
-    padding: 1rem;
+    background-color: var(--md-sys-color-surface-container-low);
 }
 
 table>.fixed,
@@ -2672,6 +2699,48 @@ tfoot th.fixed {
     inline-size: 0.1%;
     white-space: nowrap;
 }
+
+.chip {
+    font-size: 14px;
+    margin-left: 0;
+    border-radius: var(--md-sys-shape-corner-lg);
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative; /* Keeps tooltip relative to chip */
+    padding: 5px 10px;
+    z-index: 10; /* Ensures chip is above other elements */
+}
+
+.tooltip {
+    position: absolute;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.75rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    z-index: 9999; /* Ensures tooltip is on top */
+    white-space: nowrap;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    line-height: normal;
+    background: white;
+    border: 1px solid #ccc;
+    display: none;
+}
+
+
+
+.chip:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
 
 
 /* # Media Queries */

@@ -423,11 +423,12 @@
                     </form>
                 </div>
             </div>
-            <h2 class="font-title-lg d-flex">History</h2>
+            <!--
+            <h2 class="font-title-lg d-flex">History (Current)</h2>
             <table class="border">
                 <thead>
                     <tr>
-                        <th>Telecommuniction type</th>
+                        <th>Telecommunication type</th>
                         <th>Equipment type</th>
                         <th>Phone number</th>
                         <th>Active</th>
@@ -450,6 +451,66 @@
                         <td>-</td>
                     </tr>
                 </tbody>
+                
+            </table>-->
+
+            <h2 class="font-title-lg d-flex">History</h2>
+            <table class="border">
+                <thead>
+                    <tr>
+                        <th>Date modified <span class="material-symbols-outlined">arrow_downward</span> </th>
+                        <th>Telecommunication type</th>
+                        <th>Equipment type</th>
+                        <th>Country code</th>
+                        <th>Area code</th>
+                        <th>Phone number</th>
+                        <th>Extension</th>
+                        <th>Comments</th>
+                        <th style="width: 64px;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-02-12</td>
+                        <td>Home</td>
+                        <td>Regular</td>
+                        <td>1</td>
+                        <td>613</td>
+                        <td>267-7655</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td style="width: 64px; ">
+                            <div class="icon-button-container">
+                                <button class="icon-button" title="More information">
+                                    <span class="material-symbols-outlined">
+                                        info
+                                    </span>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2025-01-09</td>
+                        <td>Home</td>
+                        <td>Regular</td>
+                        <td>1</td>
+                        <td>613</td>
+                        <td>267-7655</td>
+                        <td>-</td>
+                        <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione illum, esse libero
+                            sapiente magnam accusamus rerum iure hic minima? Excepturi natus culpa fugiat nostrum nobis.
+                            Quia harum quisquam ducimus odit!</td>
+                        <td style="width: 64px; ">
+                            <div class="icon-button-container">
+                                <button class="icon-button" title="More information">
+                                    <span class="material-symbols-outlined">
+                                        info
+                                    </span>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
                 <!--
                 <tfoot>
                   <tr>
@@ -459,7 +520,80 @@
                   </tr>
                 </tfoot>-->
             </table>
+
         </section>
+    </div>
+    <!---->
+    <div class="hide" 
+    style="
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 999 !important; 
+        display: block; 
+        position: fixed; 
+        top:0; right: 0; 
+        width: 400px; 
+        height: 100vh; 
+        padding: 0 24px 24px 24px; 
+        background-color: var(--md-sys-color-surface-container-low);">
+        <div class="d-flex" style=" padding: 0 0 0 0; width: 100%; align-items: center;  position: sticky; top: 0; background-color: var(--md-sys-color-surface-container-low);">
+            <h2 class="font-title-lg" style="flex: auto; ">Telecommunication Info</h2>
+            <div class="icon-button-container">
+                <button class="icon-button" title="More information">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </button>
+            </div>
+        </div>
+        <section>
+            <dl>
+                
+                <dt>Telecommunication type</dt>
+                <dd>Home</dd>
+
+                <dt>Equipment type</dt>
+                <dd>Regular</dd>
+
+                <dt>Country code</dt>
+                <dd>1</dd>
+
+                <dt>Area code</dt>
+                <dd>587</dd>
+
+                <dt>Phone number</dt>
+                <dd>930-9582</dd>
+
+                <dt>Non-telephone data</dt>
+                <dd>-</dd>
+
+                <dt>Comments</dt>
+                <dd>-</dd>
+
+                <dt>Date modified</dt>
+                <dd>2025-02-12</dd>
+
+                <dt>Update by</dt>
+                <dd>SXTIMMIN</dd>
+
+                <dt>Created on</dt>
+                <dd>2025-02-12</dd>
+
+                <dt>Created by</dt>
+                <dd>SXTIMMIN</dd>
+            </dl>
+        </section>
+    </div>
+    <div class="hide" style="
+    z-index: 998;
+    background-color: rgba(0, 0, 0, 0.32 );    
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;">
+
     </div>
 </section>
 
