@@ -31,6 +31,12 @@
     --md-sys-color-on-tertiary: rgb(255 255 255);
     --md-sys-color-tertiary-container: rgb(192 233 249);
     --md-sys-color-on-tertiary-container: rgb(0 31 40);
+
+    --md-sys-color-warning: rgb(95, 98, 69);
+    --md-sys-color-on-warning: rgb(255, 255, 255);
+    --md-sys-color-warning-container: rgb(248, 226, 135);
+    --md-sys-color-on-warning-container: rgb(34, 27, 0);
+
     --md-sys-color-error: rgb(186 26 26);
     --md-sys-color-on-error: rgb(255 255 255);
     --md-sys-color-error-container: rgb(255 218 214);

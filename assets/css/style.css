@@ -2605,7 +2605,7 @@ span.error-contextual {
     font-size: .6875rem;
     text-transform: none;
     z-index: 2;
-    padding: 0 .25rem;
+    padding: 0 .5rem;
     min-block-size: 1rem;
     min-inline-size: 1rem;
     background-color: var(--md-sys-color-error);
