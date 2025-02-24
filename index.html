@@ -133,7 +133,7 @@
 				</div>
 			</div>
 			<div id="header-end">
-				<div style="display: flex; align-items: center;">
+				<div style="display: flex; align-items: center; gap: 4px;">
 					<button id="mobile-search-top-app-bar" class="icon-button" data-i18n="[title]search-app">
 						<div class="icon-button-container">
 							<span class="material-symbols-outlined">search</span>
@@ -149,6 +149,14 @@
 					<button id="help-button" class="icon-button menu-button" aria-controls="help-menu">
 						<div class="icon-button-container">
 							<span class="material-symbols-outlined">help</span>
+						</div>
+					</button>
+
+
+					<button id="account-button" class="icon-button menu-button" aria-controls="account-menu">
+						<div class="icon-button-container"
+							style=" background-color: var(--md-sys-color-primary); width: 40px !important; height: 40px;">
+							<span style="font-size: 16px; color: var(--md-sys-color-on-primary);">S</span>
 						</div>
 					</button>
 
@@ -174,18 +182,6 @@
 						</ul>
 					</div>
 
-				
-
-					<!-- Account / settings button -->
-					 
-					<button id="account-button" class="icon-button menu-button" aria-controls="account-menu">
-						<div class="icon-button-container">
-							<span class="material-symbols-outlined">settings</span>
-						</div>
-					</button>
-						
-
-					<!-- Menu Container -->
 					<div class="menu-container hide" id="account-menu">
 						<ul class="menu" role="menu" tabindex="-1" aria-labelledby="account-button">
 							<li role="menuitem">
@@ -223,14 +219,14 @@
 							</li>
 							<hr>
 
-							<li role="menuitem" style="display: none;">
+							<li role="menuitem">
 								<a href="#" class="menu-item">
 									<span class="material-symbols-outlined leading-icon">switch_access_shortcut</span>
 									<span id="current-motion">Change user access</span>
 								</a>
 
 							</li>
-							<li role="menuitem" id="sign-out" style="display: none;">
+							<li role="menuitem" id="sign-out">
 								<a href="#" class="menu-item">
 									<span class="material-symbols-outlined leading-icon">logout</span>
 									<span id="current-motion">Sign out</span>
@@ -330,49 +326,9 @@
 						</ul>
 					</div>
 
-					<!-- Sign in button 
-					<button id="login-btn-header" class="button" data-i18n="sign-in" style="display: none;">
-						Sign in
-					</button>-->
-
-
 				</div>
 
-				<button id="account-button" class="icon-button menu-button" aria-controls="account-menu">
-					<div class="icon-button-container"
-						style=" background-color: var(--md-sys-color-primary); width: 40px !important; height: 40px;">
-						<span style="font-size: 16px; color: var(--md-sys-color-on-primary);">S</span>
-					</div>
-				</button>
 
-
-				<!-- Menu Container -->
-				<div class="menu-container hide" id="account-menu"
-					style="background: var(--md-sys-color-surface-container);">
-					<ul class="menu" role="menu" tabindex="-1" aria-labelledby="account-button">
-						<li class="d-flex" style="flex-direction: column; justify-content: center; width: 100%; height: 56px !important;">
-							<span class="font-label-md" style="margin-bottom: 0;">Signed in as</span>
-							<span style="margin-top: 0;">SXTIMMIN</span>
-						</li>
-						<hr>
-						<li role="menuitem">
-							<a href="#" class="menu-item ">
-								<span class="material-symbols-outlined leading-icon">switch_access_shortcut</span>
-								<span class="content">
-									<span>Switch access</span>
-								</span>
-							</a>
-						</li>
-						<li role="menuitem">
-							<a href="#" id="sign-out" class="menu-item">
-								<span class="material-symbols-outlined leading-icon">logout</span>
-								<span class="content">
-									<span>Sign out</span>
-								</span>
-							</a>
-						</li>
-					</ul>
-				</div>
 
 			</div>
 		</div>
@@ -411,11 +367,12 @@
 
 						</li>
 						<li>
-							<a id="navigation-drawer-fab-small" href="#/create-client" data-route="/create-client" class="button fab-button" title="Create a client"
+							<a id="navigation-drawer-fab-small" href="#/create-client" data-route="/create-client"
+								class="button fab-button" title="Create a client"
 								style="width: 56px; margin: 0 0 16px 0; background: var(--md-sys-color-secondary); justify-content: center;">
 								<span class="material-symbols-outlined"
 									style="color: var(--md-sys-color-on-secondary);">person_add</span>
-						</a>
+							</a>
 						</li>
 					</div>
 					<li role="none">
@@ -449,7 +406,8 @@
 									</a>
 								</li>
 								<div style="text-align: left; padding: 0px 18px 4px;"> <!-- client info -->
-									<p class="font-title-sm" style="margin-bottom: 0;">Sgt. Patricia R. Rosso (she/her)</p>
+									<p class="font-title-sm" style="margin-bottom: 0;">Sgt. Patricia R. Rosso (she/her)
+									</p>
 									<p class="font-title-sm" style="margin-top: 0;">400322564100 • 7582984</p>
 
 								</div>
@@ -465,7 +423,8 @@
 								</a>
 							</li>
 							<li>
-								<a role="menuitem" href="#/client/work-items" data-route="/client/work-items" class="nav-item">
+								<a role="menuitem" href="#/client/work-items" data-route="/client/work-items"
+									class="nav-item">
 									<span class="nav-label">Work Items</span>
 								</a>
 							</li>
@@ -475,7 +434,8 @@
 									<span class="nav-label">Status Tracking</span>
 								</a>
 							</li>
-							<li class="menu-item expandable-button" data-section-id="mobile-drawer-applications-expansion">
+							<li class="menu-item expandable-button"
+								data-section-id="mobile-drawer-applications-expansion">
 								<div class="menu-header">
 									Applications
 									<span class="material-symbols-outlined">arrow_drop_down</span>
@@ -483,16 +443,23 @@
 							</li>
 							<ul id="mobile-drawer-applications-expansion" class="mobile-drawer-expansion hide">
 								<li role="none">
-									<a role="menuitem" href="#/client-applications" data-route="/client-applications" class="nav-drawer-menu-item nav-item">Applications</a>
+									<a role="menuitem" href="#/client-applications" data-route="/client-applications"
+										class="nav-drawer-menu-item nav-item">Applications</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#/client/adjudication-episodes" data-route="/client/adjudication-episodes" class="nav-drawer-menu-item nav-item">Adjudication episodes</a>
+									<a role="menuitem" href="#/client/adjudication-episodes"
+										data-route="/client/adjudication-episodes"
+										class="nav-drawer-menu-item nav-item">Adjudication episodes</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#/client/decision-dockets" data-route="/client/decision-dockets" class="nav-drawer-menu-item nav-item">Decision dockets</a>
+									<a role="menuitem" href="#/client/decision-dockets"
+										data-route="/client/decision-dockets"
+										class="nav-drawer-menu-item nav-item">Decision dockets</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#/client/flag-initial-call" data-route="/client/flag-initial-call" class="nav-drawer-menu-item nav-item">Flag initial call</a>
+									<a role="menuitem" href="#/client/flag-initial-call"
+										data-route="/client/flag-initial-call"
+										class="nav-drawer-menu-item nav-item">Flag initial call</a>
 								</li>
 							</ul>
 							<li class="menu-item expandable-button" data-section-id="mobile-drawer-benefits-expansion">
@@ -503,24 +470,33 @@
 							</li>
 							<ul id="mobile-drawer-benefits-expansion" class="mobile-drawer-expansion hide">
 								<li role="none">
-									<a role="menuitem" href="#/client/benefits-overview" data-route="/client/benefits-overview" class="nav-drawer-menu-item nav-item">Benefits</a>
+									<a role="menuitem" href="#/client/benefits-overview"
+										data-route="/client/benefits-overview"
+										class="nav-drawer-menu-item nav-item">Benefits</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#/client/summary-of-assessment" data-route="/client/summary-of-assessment" class="nav-drawer-menu-item nav-item">Summary of Assessment</a>
+									<a role="menuitem" href="#/client/summary-of-assessment"
+										data-route="/client/summary-of-assessment"
+										class="nav-drawer-menu-item nav-item">Summary of Assessment</a>
 								</li>
 							</ul>
-							<li class="menu-item expandable-button" data-section-id="mobile-drawer-documents-correspondence-expansion">
+							<li class="menu-item expandable-button"
+								data-section-id="mobile-drawer-documents-correspondence-expansion">
 								<div class="menu-header">
 									<span class="menu-header-title">Documents/Correspondence</span>
 									<span class="material-symbols-outlined">arrow_drop_down</span>
 								</div>
 							</li>
-							<ul id="mobile-drawer-documents-correspondence-expansion" class="mobile-drawer-expansion hide">
+							<ul id="mobile-drawer-documents-correspondence-expansion"
+								class="mobile-drawer-expansion hide">
 								<li role="none">
-									<a role="menuitem" href="#/client/documents" data-route="/client/documents" class="nav-drawer-menu-item nav-item">Documents</a>
+									<a role="menuitem" href="#/client/documents" data-route="/client/documents"
+										class="nav-drawer-menu-item nav-item">Documents</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#/client/correspondence" data-route="/client/correspondence" class="nav-drawer-menu-item nav-item">Correspondence</a>
+									<a role="menuitem" href="#/client/correspondence"
+										data-route="/client/correspondence"
+										class="nav-drawer-menu-item nav-item">Correspondence</a>
 								</li>
 							</ul>
 							<li>
@@ -536,16 +512,20 @@
 							</li>
 							<ul id="mobile-drawer-financial-expansion" class="mobile-drawer-expansion hide">
 								<li role="none">
-									<a role="menuitem" href="#/client/payments" data-route="/client/payments" class="nav-drawer-menu-item nav-item">Payments</a>
+									<a role="menuitem" href="#/client/payments" data-route="/client/payments"
+										class="nav-drawer-menu-item nav-item">Payments</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#/client/disbursement-instructions" data-route="/client/disbursement-instructions" class="nav-drawer-menu-item nav-item">Disbursement instructions</a>
+									<a role="menuitem" href="#/client/disbursement-instructions"
+										data-route="/client/disbursement-instructions"
+										class="nav-drawer-menu-item nav-item">Disbursement instructions</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#/client/withholds" data-route="/client/withholds" class="nav-drawer-menu-item nav-item">Withholds</a>
+									<a role="menuitem" href="#/client/withholds" data-route="/client/withholds"
+										class="nav-drawer-menu-item nav-item">Withholds</a>
 								</li>
 							</ul>
-							
+
 							<li class="menu-item expandable-button" data-section-id="mobile-drawer-personal-expansion">
 								<div class="menu-header">
 									Personal information
@@ -554,26 +534,35 @@
 							</li>
 							<ul id="mobile-drawer-personal-expansion" class="mobile-drawer-expansion hide">
 								<li role="none">
-									<a role="menuitem" href="#personal-details" data-route="/personal-details" class="nav-drawer-menu-item nav-item">Personal details</a>
+									<a role="menuitem" href="#personal-details" data-route="/personal-details"
+										class="nav-drawer-menu-item nav-item">Personal details</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#client/addresses" data-route="/client/addresses" class="nav-drawer-menu-item nav-item">Addresses</a>
+									<a role="menuitem" href="#client/addresses" data-route="/client/addresses"
+										class="nav-drawer-menu-item nav-item">Addresses</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#client/contacts" data-route="/client/contacts" class="nav-drawer-menu-item nav-item">Contacts</a>
+									<a role="menuitem" href="#client/contacts" data-route="/client/contacts"
+										class="nav-drawer-menu-item nav-item">Contacts</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#client/telecommunications" data-route="/telecommunications" class="nav-drawer-menu-item nav-item">Telecommunications</a>
+									<a role="menuitem" href="#client/telecommunications"
+										data-route="/telecommunications"
+										class="nav-drawer-menu-item nav-item">Telecommunications</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#client/interrelationships" data-route="/client/interrelationships" class="nav-drawer-menu-item nav-item">Interrelationships</a>
+									<a role="menuitem" href="#client/interrelationships"
+										data-route="/client/interrelationships"
+										class="nav-drawer-menu-item nav-item">Interrelationships</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#client/death-info" data-route="/client/death-info" class="nav-drawer-menu-item nav-item">Death Info</a>
+									<a role="menuitem" href="#client/death-info" data-route="/client/death-info"
+										class="nav-drawer-menu-item nav-item">Death Info</a>
 								</li>
 							</ul>
 							<li>
-								<a role="menuitem" href="#client/security" data-route="client/security" class="nav-item">
+								<a role="menuitem" href="#client/security" data-route="client/security"
+									class="nav-item">
 									<span class="nav-label">Security</span>
 								</a>
 							</li>
@@ -591,27 +580,34 @@
 							</li>
 							<ul id="mobile-drawer-external-expansion" class="mobile-drawer-expansion hide">
 								<li role="none">
-									<a role="menuitem" href="#addresses" class="nav-drawer-menu-item nav-item">Digital Images</a>
+									<a role="menuitem" href="#addresses" class="nav-drawer-menu-item nav-item">Digital
+										Images</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#contacts" class="nav-drawer-menu-item nav-item">MBC Portal</a>
+									<a role="menuitem" href="#contacts" class="nav-drawer-menu-item nav-item">MBC
+										Portal</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#telecommunications" class="nav-drawer-menu-item nav-item">CTS/ETB GCCase</a>
+									<a role="menuitem" href="#telecommunications"
+										class="nav-drawer-menu-item nav-item">CTS/ETB GCCase</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#interrelationships" class="nav-drawer-menu-item nav-item">PFL GCCase</a>
+									<a role="menuitem" href="#interrelationships"
+										class="nav-drawer-menu-item nav-item">PFL GCCase</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#" class="nav-drawer-menu-item nav-item">Standard Payment System</a>
+									<a role="menuitem" href="#" class="nav-drawer-menu-item nav-item">Standard Payment
+										System</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#" class="nav-drawer-menu-item nav-item">My VAC Account Administration</a>
+									<a role="menuitem" href="#" class="nav-drawer-menu-item nav-item">My VAC Account
+										Administration</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#" class="nav-drawer-menu-item nav-item">Veterans Independence Program</a>
+									<a role="menuitem" href="#" class="nav-drawer-menu-item nav-item">Veterans
+										Independence Program</a>
 								</li>
-							</ul>	
+							</ul>
 						</ul>
 					</li>
 					<li role="none" class="has-submenu">
@@ -629,7 +625,8 @@
 					</li>
 				</ul>
 				<hr style="display: block;" class="main-menu-item">
-				<span class="font-title-sm main-menu-item" style="padding: 16px 18px; display: block;">Help and Support</span>
+				<span class="font-title-sm main-menu-item" style="padding: 16px 18px; display: block;">Help and
+					Support</span>
 				<ul role="menubar" aria-orientation="vertical" class="main-menu-item">
 					<div class="d-flex main-menu-item" style="gap: 4px; flex-direction: column;">
 						<li role="none">
@@ -699,8 +696,13 @@
 							<div class="badge min"></div>
 						</a>
 						<ul class="nav-drawer hide">
-							<div style="text-align: left; padding: 4px 18px; position: sticky; top: 0px; background-color: var(--md-sys-color-surface-container); z-index: 12;"> <!-- client info -->
-								<p class="font-title-sm" style="margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%;" title="Sergeant Patricia Romera Rosso (she/her)">Sgt. Patricia R. Rosso (she/her)</p>
+							<div
+								style="text-align: left; padding: 4px 18px; position: sticky; top: 0px; background-color: var(--md-sys-color-surface-container); z-index: 12;">
+								<!-- client info -->
+								<p class="font-title-sm"
+									style="margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%;"
+									title="Sergeant Patricia Romera Rosso (she/her)">Sgt. Patricia R. Rosso (she/her)
+								</p>
 								<p class="font-title-sm" style="margin-top: 0;">400322564100 • 7582984</p>
 
 							</div>
@@ -732,16 +734,21 @@
 							</li>
 							<ul id="applications-expansion" class="hide">
 								<li role="none">
-									<a role="menuitem" href="#client-applications" data-route="/client-applications" class="nav-drawer-menu-item nav-item">Applications</a>
+									<a role="menuitem" href="#client-applications" data-route="/client-applications"
+										class="nav-drawer-menu-item nav-item">Applications</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#adjudication-episodes" data-route="/client/adjudication-episodes" class="nav-drawer-menu-item nav-item">Adjudication episodes</a>
+									<a role="menuitem" href="#adjudication-episodes"
+										data-route="/client/adjudication-episodes"
+										class="nav-drawer-menu-item nav-item">Adjudication episodes</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#decision-dockets" data-route="/client/decision-dockets" class="nav-drawer-menu-item nav-item">Decision dockets</a>
+									<a role="menuitem" href="#decision-dockets" data-route="/client/decision-dockets"
+										class="nav-drawer-menu-item nav-item">Decision dockets</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#flag-initial-call" data-route="/client/flag-initial-call" class="nav-drawer-menu-item nav-item">Flag initial call</a>
+									<a role="menuitem" href="#flag-initial-call" data-route="/client/flag-initial-call"
+										class="nav-drawer-menu-item nav-item">Flag initial call</a>
 								</li>
 							</ul>
 							<li class="menu-item expandable-button" data-section-id="benefits-expansion">
@@ -752,13 +759,16 @@
 							</li>
 							<ul id="benefits-expansion" class="hide">
 								<li role="none">
-									<a role="menuitem" href="#benefits-overview" data-route="/benefits-overview" class="nav-drawer-menu-item nav-item">Benefits</a>
+									<a role="menuitem" href="#benefits-overview" data-route="/benefits-overview"
+										class="nav-drawer-menu-item nav-item">Benefits</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#summary-of-assessment" data-route="/summary-of-assessment" class="nav-drawer-menu-item nav-item">Summary of Assessment</a>
+									<a role="menuitem" href="#summary-of-assessment" data-route="/summary-of-assessment"
+										class="nav-drawer-menu-item nav-item">Summary of Assessment</a>
 								</li>
 							</ul>
-							<li class="menu-item expandable-button" data-section-id="documents-correspondence-expansion">
+							<li class="menu-item expandable-button"
+								data-section-id="documents-correspondence-expansion">
 								<div class="menu-header">
 									<span class="menu-header-title">Documents/Correspondence</span>
 									<span class="material-symbols-outlined">arrow_drop_down</span>
@@ -766,10 +776,12 @@
 							</li>
 							<ul id="documents-correspondence-expansion" class="hide">
 								<li role="none">
-									<a role="menuitem" href="#documents" data-route="/documents" class="nav-drawer-menu-item nav-item">Documents</a>
+									<a role="menuitem" href="#documents" data-route="/documents"
+										class="nav-drawer-menu-item nav-item">Documents</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#correspondence" data-route="/correspondence" class="nav-drawer-menu-item nav-item">Correspondence</a>
+									<a role="menuitem" href="#correspondence" data-route="/correspondence"
+										class="nav-drawer-menu-item nav-item">Correspondence</a>
 								</li>
 							</ul>
 							<li role="none">
@@ -785,13 +797,17 @@
 							</li>
 							<ul id="financial-expansion" class="hide">
 								<li role="none">
-									<a role="menuitem" href="#payments" data-route="/payments" class="nav-drawer-menu-item">Payments</a>
+									<a role="menuitem" href="#payments" data-route="/payments"
+										class="nav-drawer-menu-item">Payments</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#disbursement-instructions" data-route="/disbursement-instructions" class="nav-drawer-menu-item">Disbursement instructions</a>
+									<a role="menuitem" href="#disbursement-instructions"
+										data-route="/disbursement-instructions"
+										class="nav-drawer-menu-item">Disbursement instructions</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#withholds" data-route="/withholds" class="nav-drawer-menu-item">Withholds</a>
+									<a role="menuitem" href="#withholds" data-route="/withholds"
+										class="nav-drawer-menu-item">Withholds</a>
 								</li>
 							</ul>
 							<li class="menu-item expandable-button" data-section-id="personal-expansion">
@@ -802,22 +818,28 @@
 							</li>
 							<ul id="personal-expansion" class="hide">
 								<li role="none">
-									<a role="menuitem" href="#personal-details" data-route="/personal-details" class="nav-drawer-menu-item">Personal details</a>
+									<a role="menuitem" href="#personal-details" data-route="/personal-details"
+										class="nav-drawer-menu-item">Personal details</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#addresses" data-route="/addresses" class="nav-drawer-menu-item">Addresses</a>
+									<a role="menuitem" href="#addresses" data-route="/addresses"
+										class="nav-drawer-menu-item">Addresses</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#contacts" data-route="/contacts" class="nav-drawer-menu-item">Contacts</a>
+									<a role="menuitem" href="#contacts" data-route="/contacts"
+										class="nav-drawer-menu-item">Contacts</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#telecommunications" data-route="/telecommunications" class="nav-drawer-menu-item">Telecommunications</a>
+									<a role="menuitem" href="#telecommunications" data-route="/telecommunications"
+										class="nav-drawer-menu-item">Telecommunications</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#interrelationships" data-route="/interrelationships" class="nav-drawer-menu-item">Interrelationships</a>
+									<a role="menuitem" href="#interrelationships" data-route="/interrelationships"
+										class="nav-drawer-menu-item">Interrelationships</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#death-info" data-route="/death-info" class="nav-drawer-menu-item">Death Info</a>
+									<a role="menuitem" href="#death-info" data-route="/death-info"
+										class="nav-drawer-menu-item">Death Info</a>
 								</li>
 							</ul>
 							<li role="none">
@@ -844,7 +866,8 @@
 									<a role="menuitem" href="#contacts" class="nav-drawer-menu-item">MBC Portal</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#telecommunications" class="nav-drawer-menu-item">CTS/ETB GCCase</a>
+									<a role="menuitem" href="#telecommunications" class="nav-drawer-menu-item">CTS/ETB
+										GCCase</a>
 								</li>
 								<li role="none">
 									<a role="menuitem" href="#" class="nav-drawer-menu-item">PFL GCCase</a>
@@ -853,12 +876,14 @@
 									<a role="menuitem" href="#" class="nav-drawer-menu-item">Standard Payment System</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#" class="nav-drawer-menu-item">My VAC Account Administration</a>
+									<a role="menuitem" href="#" class="nav-drawer-menu-item">My VAC Account
+										Administration</a>
 								</li>
 								<li role="none">
-									<a role="menuitem" href="#" class="nav-drawer-menu-item">Veterans Independence Program</a>
+									<a role="menuitem" href="#" class="nav-drawer-menu-item">Veterans Independence
+										Program</a>
 								</li>
-							</ul>							
+							</ul>
 						</ul>
 
 					</li>
@@ -910,9 +935,9 @@
 					<footer id="info">
 						<div class="main-footer container d-flex" style="width: 100%; align-items: baseline;">
 							<div class="d-flex" style="flex: auto;">
-								
+
 								<ul style="list-style: none;">
-									<li><a 	class="font-body-sm"
+									<li><a class="font-body-sm"
 											href="https://teams.microsoft.com/l/chat/0/0?users=steven.timmins@veterans.gc.ca&tenantId=dfb1c2a2-3b9c-4621-8c57-576c528bfe74"
 											style="text-decoration: none;" target="_blank"
 											data-i18n="about-csa-ux">About CSA UX Prototype</a></li>
@@ -968,7 +993,7 @@
 		<script src="/assets/js/jquery.i18n/src/jquery.i18n.emitter.js"></script>
 		<script src="/assets/js/jquery.i18n/src/jquery.i18n.emitter.bidi.js"></script>
 
-			<!--
+		<!--
 		<script src="https://unpkg.com/lunr/lunr.js"></script>-->
 
 		<script type="module" src="/assets/js/app.js"></script>

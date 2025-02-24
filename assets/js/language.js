@@ -15,7 +15,7 @@ export function getUserLanguage() {
 // Apply the language settings right after the page loads (DOMContentLoaded)
 document.addEventListener('DOMContentLoaded', () => {
     languageSetting = getUserLanguage(); // Reinitialize after page load
-    netlifyIdentity.setLocale(languageSetting);  // Ensure correct locale is set on load
+    //netlifyIdentity.setLocale(languageSetting);  // Ensure correct locale is set on load
     languageSettings();  // Initialize other language settings
 });
 
@@ -60,7 +60,7 @@ function toggleLanguage() {
     updateLanguageUI(languageSetting);
 
     // Change the Netlify Identity locale
-    changeNetlifyLocale(languageSetting);
+    //changeNetlifyLocale(languageSetting);
 
     // Display toast message (language-dependent)
     const toastMessage = $.i18n('language_snackbar_message');
@@ -83,9 +83,9 @@ function updateLanguageUI(language) {
 }
 
 // Function to handle locale change for Netlify
+/*
 function changeNetlifyLocale(language) {
     // Reset Netlify Identity locale every time, to avoid stale locale state
-    netlifyIdentity.setLocale(language);
     console.log("Updated Netlify locale to: " + language);
 
     // Optionally, force a close and reopen the modal
@@ -95,7 +95,7 @@ function changeNetlifyLocale(language) {
             netlifyIdentity.open();
         }, 100);  // short delay to let the locale change take effect
     }
-}
+}*/
 
 
 // Function to apply translations to the loaded content

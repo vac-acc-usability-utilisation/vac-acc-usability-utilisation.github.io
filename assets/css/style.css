@@ -532,6 +532,15 @@ button#mobile-search-top-app-bar {
     border: 1px solid #000;
 }
 
+#navigation-rail ul li a:hover>div.nav-icon-container>span.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+
 #navigation-rail ul li a.active div.nav-icon-container {
     background-color: var(--md-sys-color-secondary-container);
 }
@@ -2097,6 +2106,10 @@ div.icon-button-container:hover::before {
     transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
+div.icon-button-container:hover span.material-symbols-outlined {
+    font-variation-settings: 'FILL' 1 !important;
+}
+
 .icon-button-outlined.selected:hover div.icon-button-container::before {
     background-color: var(--md-sys-color-surface-variant);
 }
@@ -2707,9 +2720,11 @@ tfoot th.fixed {
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
-    position: relative; /* Keeps tooltip relative to chip */
+    position: relative;
+    /* Keeps tooltip relative to chip */
     padding: 5px 10px;
-    z-index: 10; /* Ensures chip is above other elements */
+    z-index: 10;
+    /* Ensures chip is above other elements */
 }
 
 .tooltip {
@@ -2720,7 +2735,8 @@ tfoot th.fixed {
     text-align: center;
     border-radius: 0.25rem;
     padding: 0.5rem;
-    z-index: 9999; /* Ensures tooltip is on top */
+    z-index: 9999;
+    /* Ensures tooltip is on top */
     white-space: nowrap;
     font-weight: 500;
     opacity: 0;
