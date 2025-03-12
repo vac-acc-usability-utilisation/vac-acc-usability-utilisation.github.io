@@ -359,9 +359,9 @@
 							<a id="navigation-drawer-fab-extended" href="#/search-for-client"
 								data-route="/search-for-client" class="button fab-button extended"
 								title="Search for a client"
-								style="display: flex; flex: auto; margin: 0; padding: 0; justify-content: center; gap: 8px;">
-								<span class="material-symbols-outlined" style="margin-right: 0;">person_search</span>
-								<span style="display: block; width: auto; color: var(--md-sys-color-on-primary);">Search
+								style="display: flex; flex: auto; margin: 0; padding: 0; justify-content: center; gap: 8px; background-color: var(--md-sys-color-primary-container);">
+								<span class="material-symbols-outlined" style="margin-right: 0; color: var(--md-sys-color-on-primary-container);">person_search</span>
+								<span style="display: block; width: auto; color: var(--md-sys-color-on-primary-container);">Search
 									for a client</span>
 							</a>
 
@@ -369,9 +369,9 @@
 						<li>
 							<a id="navigation-drawer-fab-small" href="#/create-client" data-route="/create-client"
 								class="button fab-button" title="Create a client"
-								style="width: 56px; margin: 0 0 16px 0; background: var(--md-sys-color-secondary); justify-content: center;">
+								style="width: 56px; margin: 0 0 16px 0; background: var(--md-sys-color-secondary-container); justify-content: center;">
 								<span class="material-symbols-outlined"
-									style="color: var(--md-sys-color-on-secondary);">person_add</span>
+									style="color: var(--md-sys-color-on-secondary-container);">person_add</span>
 							</a>
 						</li>
 					</div>
@@ -425,7 +425,7 @@
 							<li>
 								<a role="menuitem" href="#/client/work-items" data-route="/client/work-items"
 									class="nav-item">
-									<span class="nav-label">Work Items</span>
+									<span class="nav-label">Work items</span>
 								</a>
 							</li>
 							<li>
@@ -434,14 +434,33 @@
 									<span class="nav-label">Status Tracking</span>
 								</a>
 							</li>
-							<li class="menu-item expandable-button"
-								data-section-id="mobile-drawer-applications-expansion">
+							
+							<li class="menu-item expandable-button" data-section-id="mobile-drawer-benefits-expansion">
 								<div class="menu-header">
-									Applications
+									Benefits
 									<span class="material-symbols-outlined">arrow_drop_down</span>
 								</div>
 							</li>
-							<ul id="mobile-drawer-applications-expansion" class="mobile-drawer-expansion hide">
+							<ul id="mobile-drawer-benefits-expansion" class="mobile-drawer-expansion hide">
+								<li role="none">
+									<a role="menuitem" href="#/client/benefits-overview"
+										data-route="/client/benefits-overview"
+										class="nav-drawer-menu-item nav-item">Benefits</a>
+								</li>
+								<li role="none">
+									<a role="menuitem" href="#/client/summary-of-assessment"
+										data-route="/client/summary-of-assessment"
+										class="nav-drawer-menu-item nav-item">Summary of Assessment</a>
+								</li>
+							</ul>
+							<li class="menu-item expandable-button"
+								data-section-id="mobile-drawer-decisions-expansion">
+								<div class="menu-header">
+									Decision making
+									<span class="material-symbols-outlined">arrow_drop_down</span>
+								</div>
+							</li>
+							<ul id="mobile-drawer-decisions-expansion" class="mobile-drawer-expansion hide">
 								<li role="none">
 									<a role="menuitem" href="#/client-applications" data-route="/client-applications"
 										class="nav-drawer-menu-item nav-item">Applications</a>
@@ -460,24 +479,6 @@
 									<a role="menuitem" href="#/client/flag-initial-call"
 										data-route="/client/flag-initial-call"
 										class="nav-drawer-menu-item nav-item">Flag initial call</a>
-								</li>
-							</ul>
-							<li class="menu-item expandable-button" data-section-id="mobile-drawer-benefits-expansion">
-								<div class="menu-header">
-									Benefits
-									<span class="material-symbols-outlined">arrow_drop_down</span>
-								</div>
-							</li>
-							<ul id="mobile-drawer-benefits-expansion" class="mobile-drawer-expansion hide">
-								<li role="none">
-									<a role="menuitem" href="#/client/benefits-overview"
-										data-route="/client/benefits-overview"
-										class="nav-drawer-menu-item nav-item">Benefits</a>
-								</li>
-								<li role="none">
-									<a role="menuitem" href="#/client/summary-of-assessment"
-										data-route="/client/summary-of-assessment"
-										class="nav-drawer-menu-item nav-item">Summary of Assessment</a>
 								</li>
 							</ul>
 							<li class="menu-item expandable-button"
@@ -613,7 +614,7 @@
 					<li role="none" class="has-submenu">
 						<a role="menuitem" href="#/work-items" class="nav-item" data-route="/work-items">
 							<span class="material-symbols-outlined">assignment</span>
-							<span class="nav-label">Work Items</span>
+							<span class="nav-label">Work items</span>
 						</a>
 
 					</li>
@@ -672,9 +673,9 @@
 			<nav id="navigation-rail" aria-label="CSA Design System">
 				<ul role="menubar" aria-orientation="vertical">
 					<li role="none">
-						<a class="button fab-button" href="#/search-for-client" data-route="/search-for-client"
+						<a class="button fab-button" style="background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);" href="#/search-for-client" data-route="/search-for-client"
 							title="Search for a client">
-							<span class="material-symbols-outlined">person_search</span>
+							<span class="material-symbols-outlined" style="color: var(--md-sys-color-on-primary-container);">person_search</span>
 						</a>
 					</li>
 					<li role="none">
@@ -726,13 +727,30 @@
 									Status tracking
 								</a>
 							</li>
-							<li class="menu-item expandable-button" data-section-id="applications-expansion">
+							
+							<li class="menu-item expandable-button" data-section-id="benefits-expansion">
 								<div class="menu-header">
-									Applications
+									Benefits
 									<span class="material-symbols-outlined">arrow_drop_down</span>
 								</div>
 							</li>
-							<ul id="applications-expansion" class="hide">
+							<ul id="benefits-expansion" class="hide">
+								<li role="none">
+									<a role="menuitem" href="#benefits-overview" data-route="/benefits-overview"
+										class="nav-drawer-menu-item nav-item">Benefits</a>
+								</li>
+								<li role="none">
+									<a role="menuitem" href="#summary-of-assessment" data-route="/summary-of-assessment"
+										class="nav-drawer-menu-item nav-item">Summary of Assessment</a>
+								</li>
+							</ul>
+							<li class="menu-item expandable-button" data-section-id="decisions-expansion">
+								<div class="menu-header">
+									Decision making
+									<span class="material-symbols-outlined">arrow_drop_down</span>
+								</div>
+							</li>
+							<ul id="decisions-expansion" class="hide">
 								<li role="none">
 									<a role="menuitem" href="#client-applications" data-route="/client-applications"
 										class="nav-drawer-menu-item nav-item">Applications</a>
@@ -749,22 +767,6 @@
 								<li role="none">
 									<a role="menuitem" href="#flag-initial-call" data-route="/client/flag-initial-call"
 										class="nav-drawer-menu-item nav-item">Flag initial call</a>
-								</li>
-							</ul>
-							<li class="menu-item expandable-button" data-section-id="benefits-expansion">
-								<div class="menu-header">
-									Benefits
-									<span class="material-symbols-outlined">arrow_drop_down</span>
-								</div>
-							</li>
-							<ul id="benefits-expansion" class="hide">
-								<li role="none">
-									<a role="menuitem" href="#benefits-overview" data-route="/benefits-overview"
-										class="nav-drawer-menu-item nav-item">Benefits</a>
-								</li>
-								<li role="none">
-									<a role="menuitem" href="#summary-of-assessment" data-route="/summary-of-assessment"
-										class="nav-drawer-menu-item nav-item">Summary of Assessment</a>
 								</li>
 							</ul>
 							<li class="menu-item expandable-button"
@@ -893,7 +895,7 @@
 							<div class="nav-icon-container">
 								<span class="material-symbols-outlined">assignment</span>
 							</div>
-							<span class="navigationRailLabel">Work Items</span>
+							<span class="navigationRailLabel">Work items</span>
 						</a>
 						<!--
 						<ul class="nav-drawer">

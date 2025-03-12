@@ -3,7 +3,7 @@
 
         <!-- Client summary heading -->
         <div class="d-flex"
-            style="align-items: center; flex-direction: column; padding: 16px 0; margin-bottom: var(--md-sys-space-margin); position: sticky; top: 0px; z-index: 12; background-color: var(--md-sys-color-surface);">
+            style="align-items: center; flex-direction: column; padding: 16px 0; margin-bottom: 0; position: sticky; top: 0px; z-index: 12; background-color: var(--md-sys-color-surface);">
             <div class="d-flex cnt-wdth-lmtd-2x" style="width: 100%;">
                 <div class="d-flex" style="flex: auto; flex-direction: column;">
                     <div class="d-flex">
@@ -21,7 +21,7 @@
                                 PR
                             </span>
                         </div>
-                        <div class="d-flex" style="flex-direction: column;">
+                        <div class="d-flex" style="flex-direction: column; justify-content: center; gap: 2px;">
                             <span class="font-title-md" id="cont" style="line-height: 14px; font-weight: 500;">
                                 Sgt Patricia R. Rosso (she/her)
 
@@ -38,13 +38,6 @@
                         <button class="icon-button" title="Add a client note">
                             <span class="material-symbols-outlined">
                                 note_add
-                            </span>
-                        </button>
-                    </div>
-                    <div class="icon-button-container">
-                        <button class="icon-button" title="Flag an intial call">
-                            <span class="material-symbols-outlined">
-                                flag
                             </span>
                         </button>
                     </div>
@@ -73,10 +66,14 @@
                     </h1>
                     <span class="font-title-sm">13013090</span>
                 </div>
-                <div>
+                <div style="display: flex;">
                     <button
-                        style="background-color: var(--md-sys-color-warning-container); color: var(--md-sys-color-on-warning-container);">Withdraw
+                        style="color: var(--md-sys-color-warning); background: none; border: 1px solid var(--md-sys-color-warning);">Withdraw
                         application</button>
+
+                    <button style="gap: 8px;"> <span class="material-symbols-outlined"
+                            style="color: var(--md-sys-color-on-primary); margin-right: 0px;">add_circle</span> Add
+                        component</button>
                 </div>
             </div>
 
@@ -106,21 +103,15 @@
                 </div>
             </div>
 
-            
+
         </div>
-        <div class="d-flex cnt-wdth-lmtd-2x"
+        <div class="d-flex cnt-wdth-lmtd-2x">
+            <div style=" flex: auto;">
+                <div class="d-flex cnt-wdth-lmtd-2x"
                 style="justify-content: start; width: 100%; flex-direction: row; margin-top: 16px">
                 <dl class="d-flex" style="gap: 3rem;">
-
-
-                    <div style="flex: auto; width: 9rem;">
-                        <dt>
-                            Application type
-                        </dt>
-                        <dd>
-                            First
-                        </dd>
-                    </div>
+    
+    
                     <div style="flex: auto; width: 9rem;">
                         <dt>
                             ID
@@ -129,6 +120,22 @@
                             13013090
                         </dd>
                     </div>
+                    <div style="flex: auto; width: 9rem;">
+                        <dt>
+                            Application type
+                        </dt>
+                        <dd>
+                            First
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="d-flex cnt-wdth-lmtd-2x"
+                style="justify-content: start; width: 100%; flex-direction: row; margin-top: 16px">
+                <dl class="d-flex" style="gap: 3rem;">
+    
+    
+    
                     <div style="flex: auto; width: 9rem;">
                         <dt>
                             Status
@@ -150,7 +157,7 @@
                             Submitted correspondence
                         </dt>
                         <dd>
-                            <a href="#" class="chip fill d-flex" style="width: fit-content;">
+                            <a href="#" class="chip fill d-flex" style="width: fit-content; gap: 0.25rem;">
                                 <span class="material-symbols-outlined">mail</span>
                                 162022849
                             </a>
@@ -158,25 +165,24 @@
                     </div>
                 </dl>
             </div>
-
             <div class="d-flex cnt-wdth-lmtd-2x"
                 style="justify-content: start; width: 100%; flex-direction: row; margin-top: 16px">
                 <div class="field border d-flex"
                     style="width: 18rem; min-width: 180px; margin-right: var(--md-sys-space-margin);  flex-direction: column;">
                     <label for="client-id" class="font-label-lg" style="font-weight: 700;">Date of application</label>
-
+    
                     <input name="date-of-application" id="date-of-application" type="date" style="width: fit-content;"
                         value="2025-01-12">
-
+    
                 </div>
             </div>
-
+    
             <div class="d-flex cnt-wdth-lmtd-2x"
                 style="justify-content: start; width: 100%; flex-direction: row; margin-top: 16px">
                 <div class="field border d-flex"
-                    style="width: 18rem; min-width: 180px; margin-right: var(--md-sys-space-margin);  flex-direction: column;">
+                    style="width: 10rem; min-width: 180px; margin-right: var(--md-sys-space-margin);  flex-direction: column;">
                     <label for="claim-source" class="font-label-lg" style="font-weight: 700;">Claim source</label>
-
+    
                     <select name="claim-source" id="claim-source">
                         <option value="">Blended</option>
                         <option value="">Digital</option>
@@ -188,14 +194,39 @@
                     </select>
                 </div>
             </div>
-            
+    
             <div class="d-flex cnt-wdth-lmtd-2x"
                 style="justify-content: start; width: 100%; flex-direction: row; margin-top: 16px">
                 <div class="d-flex" style="flex-direction: column; ">
                     <label for="" class="font-label-lg" style="font-weight: 700;">Description</label>
-                    <textarea class="field border d-flex" wrap="soft" rows="1" style="width: 800px;"></textarea>
+                    <div class="d-flex" style="justify-content: center;">
+                        <textarea class="field border d-flex" wrap="soft" rows="1" style="width: 30rem;"></textarea>
+                        <div class="icon-button-container" style="margin-top: 12px; margin-left: 4px;"><button class="icon-button"><span
+                                    class="material-symbols-outlined">edit</span></button>
+                        </div>
+                    </div>
                 </div>
+    
             </div>
+            </div>
+            <div style=" flex: auto; gap: 24px;">
+                <section style="height: auto;">
+                    <div class="d-flex"
+                        style="justify-content: start; align-items: center; width: 100%; flex-direction: row; ">
+                        <div class="d-flex" style=" flex-direction: column; flex: auto; ">
+                            <h2 class="font-title-lg d-flex" style="align-items: center;">
+                                Components<span class="material-symbols-outlined">arrow_drop_down</span>
+                            </h2>
+                        </div>
+                        <div>
+                            <button
+                                style="background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">Add
+                                component</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
         <section style="height: auto;" class="cnt-wdth-lmtd-2x">
             <h2 class="font-title-lg d-flex" style="align-items: center; ;">
                 Work Items summary
@@ -206,7 +237,7 @@
             <table class="border ">
                 <thead>
                     <tr>
-                        <th style="width: 200px;">ID
+                        <th style="width: 4rem;">ID
                             <span class="material-symbols-outlined">arrow_downward</span>
                         </th>
                         <th style="width: 175px;">Destination</th>
@@ -216,35 +247,11 @@
                     </tr>
                 </thead>
                 <tbody>
-
                     <tr>
-                        <td>ID</td>
-                        <td>{{destination}}</td>
+                        <td>2548244288</td>
+                        <td>Nursing Services NF & LAB, NB, PEI; NF & LAB, NB, PEI; Field Operations</td>
 
-                        <td><span class="chip fill" style="margin: 0;">Status</span></td>
-                        <td style="text-overflow: ellipsis; position: relative;">
-                            <a class="chip">
-                                SXTIMMIN
-                            </a>
-                        </td>
-
-
-                        <td style="width: 64px; ">
-                            <div class="icon-button-container">
-                                <button class="icon-button" title="More information">
-                                    <span class="material-symbols-outlined"
-                                        style="color: var(--md-sys-color-on-surface-variant);">
-                                        info
-                                    </span>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ID</td>
-                        <td>{{destination}}</td>
-
-                        <td><span class="chip fill" style="margin: 0;">Status</span></td>
+                        <td><span class="chip fill" style="margin: 0;">In progress</span></td>
                         <td style="text-overflow: ellipsis; position: relative;">
                             <a class="chip">
                                 SXTIMMIN
@@ -269,20 +276,6 @@
 
 
         </section>
-        <section style="height: auto;" class="cnt-wdth-lmtd-2x">
-            <div class="d-flex cnt-wdth-lmtd-2x"
-                style="justify-content: start; align-items: center; width: 100%; flex-direction: row; ">
-                <div class="d-flex" style=" flex-direction: column; flex: auto; ">
-                    <h2 class="font-title-lg d-flex" style="align-items: center;">
-                        Components<span class="material-symbols-outlined">arrow_drop_down</span>
-                    </h2>
-                </div>
-                <div>
-                    <button
-                        style="background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">Add
-                        component</button>
-                </div>
-            </div>
-        </section>
+        
     </div>
 </section>
