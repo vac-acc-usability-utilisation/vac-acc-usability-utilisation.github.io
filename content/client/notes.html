@@ -1,5 +1,5 @@
 <section>
-    <div class="cnt-wdth-lmtd-2x" style="padding: 0 var(--md-sys-space-xl);">
+    <div class="cnt-wdth-lmtd-2x" style="padding: 0 var(--md-sys-space-xl); height: calc(100vh - 219px); overflow: hidden;">
         <!-- Client summary heading -->
         <div class="d-flex"
             style="align-items: center; flex-direction: column; padding: 16px 0 0 0; position: sticky; top: 0px; z-index: 12; background-color: var(--md-sys-color-surface);">
@@ -25,6 +25,7 @@
                                 title="Sergeant Patricia Romera Rosso (she/her)">Sgt Patricia R. Rosso (she/her)</span>
 
                             <span class="font-title-sm">400322564100 • 7582984</span>
+                            <!--
                             <div class="d-flex cnt-wdth-lmtd-2x"
                                 style="justify-content: start; width: 100%; flex-direction: row; margin-top: 8px">
                                 <div class="d-flex" style=" flex-direction: row; flex: auto; gap: 4px;">
@@ -49,7 +50,7 @@
                                         In progress
                                     </span>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
 
@@ -89,44 +90,46 @@
                 </div>
             </div>
             <div class="d-flex" style="justify-content: start; width: 100%; flex-direction: column;">
-                <h1 class="font-title-lg d-flex" style="align-items: center; margin-top: 16px;">
+                <h1 class="font-title-lg d-flex" style="align-items: center; margin: 16px 0 8px;">
                     Notes <!--<span class="material-symbols-outlined">arrow_drop_down</span>-->
                 </h1>
-                <div class="d-flex" style="padding: 0.5rem 0; align-items: center;">
-                    <button class="icon-button" title="Keyword search">
-                        <div class="icon-button-container">
-                            <span class="material-symbols-outlined">search</span>
-                        </div>
-                    </button>
-                    <!--
-                    <form action="" class="search">
-                        <label for="search-bar-input" class="search-bar-label invisible" style="display: none;">Search
-                            notes by keyword</label>
-                        <input class="" id="" type="text" autocomplete="off" placeholder="Search notes"
-                            data-rule-minlength="2" style="">
-                    </form>-->
-                    <button class="chip" style="margin-left: 0px;">
-                        Created by
-                        <span class="material-symbols-outlined" style="margin: 0; padding: 0;">arrow_drop_down</span>
-                    </button>
-                    <button class="chip" style="margin-left: 0px;">
-                        Position
-                        <span class="material-symbols-outlined" style="margin: 0; padding: 0;">arrow_drop_down</span>
-                    </button>
-                    <button class="chip" style="margin-left: 0px;">
-                        Created date
-                        <span class="material-symbols-outlined" style="margin: 0; padding: 0;">arrow_drop_down</span>
-                    </button>
-                    <button class="chip" style="margin-left: 0px;">
-                        Flagged calls
-                        <span class="material-symbols-outlined" style="margin: 0; padding: 0;">arrow_drop_down</span>
-                    </button>
-                </div>
+                
             </div>
         </div>
-
+       
         <div class="d-flex" style="gap: 24px;"><!-- List-details view -->
-            <div style=" height: 100%; flex: 1;">
+            <div style="height: calc(100vh - 329px); overflow-y: scroll; flex: 1; ">
+            
+                    <div class="d-flex" style="padding: 0.5rem 0; align-items: center; position: sticky; top: 0px; background-color: var(--md-sys-color-surface); z-index: 5;">
+                        <button class="icon-button" title="Keyword search">
+                            <div class="icon-button-container">
+                                <span class="material-symbols-outlined" style="color: var(--md-sys-color-on-surface-variant);">search</span>
+                            </div>
+                        </button>
+                        <!--
+                        <form action="" class="search">
+                            <label for="search-bar-input" class="search-bar-label invisible" style="display: none;">Search
+                                notes by keyword</label>
+                            <input class="" id="" type="text" autocomplete="off" placeholder="Search notes"
+                                data-rule-minlength="2" style="">
+                        </form>-->
+                        <button class="chip" style="margin-left: 0px;">
+                            Created by
+                            <span class="material-symbols-outlined" style="margin: 0; padding: 0;">arrow_drop_down</span>
+                        </button>
+                        <button class="chip" style="margin-left: 0px;">
+                            Position
+                            <span class="material-symbols-outlined" style="margin: 0; padding: 0;">arrow_drop_down</span>
+                        </button>
+                        <button class="chip" style="margin-left: 0px;">
+                            Created date
+                            <span class="material-symbols-outlined" style="margin: 0; padding: 0;">arrow_drop_down</span>
+                        </button>
+                        <button class="chip" style="margin-left: 0px;">
+                            Flagged calls
+                            <span class="material-symbols-outlined" style="margin: 0; padding: 0;">arrow_drop_down</span>
+                        </button>
+                    </div>
                 <ul style="list-style-type: none;">
                     <li class="list-details-list-item active d-flex"
                         style="flex-direction: row; justify-content: center; padding: 12px 24px 12px 16px;">
@@ -268,7 +271,24 @@
                 </ul>
             </div>
             <div
-                style="height:fit-content; flex: 1; position: sticky; top:190px; border-radius: 1rem; padding: 1rem; background: var(--md-sys-color-surface-container);">
+                style="height: calc(100vh - 329px); flex: 1; overflow-y: scroll;  border-radius: 1rem; padding: 1rem; background: var(--md-sys-color-surface-container);">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste consectetur doloremque consequatur
+                    laudantium error minus aperiam libero, quaerat veritatis atque! Suscipit, tempora? Labore eum a
+                    maxime qui et veniam
+                    facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero voluptatibus blanditiis,
+                    omnis fugiat saepe dicta enim ducimus deleniti fugit laudantium modi reiciendis inventore aut fuga,
+                    quia minima reprehenderit, amet magnam!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde voluptates architecto esse optio
+                    assumenda maxime temporibus soluta quod blanditiis. Vel necessitatibus harum illo repudiandae ex
+                    dolor, tenetur quas laborum nulla!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis adipisci necessitatibus
+                    temporibus animi, nulla accusantium voluptas fugit reprehenderit excepturi earum, soluta
+                    perspiciatis laboriosam porro laudantium! Quo quasi impedit commodi dolore. Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit. Pariatur eum hic ratione veniam voluptate nemo officiis vero enim
+                    porro repellendus, iure rerum inventore temporibus provident repudiandae tempora alias sunt nulla.
+                </p>
+
+                <hr>
 
                 <div class="d-flex"
                     style="justify-content: start; width: 100%; flex-direction: column; margin-top: 16px;">
@@ -294,11 +314,7 @@
                         </dl>
                     </div>
                 </div>
-                <hr>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste consectetur doloremque consequatur
-                    laudantium error minus aperiam libero, quaerat veritatis atque! Suscipit, tempora? Labore eum a
-                    maxime qui et veniam
-                    facilis?</p>
+
             </div>
         </div>
     </div>

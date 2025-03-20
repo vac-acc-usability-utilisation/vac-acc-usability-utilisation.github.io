@@ -1966,6 +1966,7 @@ button:focus-visible {
     gap: 0.25rem;
     line-height: normal;
     letter-spacing: normal;
+    white-space: nowrap;
 }
 
 .chip.fill {
