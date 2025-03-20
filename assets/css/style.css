@@ -2755,11 +2755,12 @@ li.list-details-list-item.active {
 
 li.list-details-list-item p {
     display: -webkit-box;
-    -webkit-line-clamp: 2;
-    /* Limits to 2 lines */
+    -webkit-line-clamp: 1;
+    /* Limits to 1 lines */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-bottom: 4px;
 }
 
 li.list-details-list-item:hover {
