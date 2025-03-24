@@ -56,7 +56,7 @@ export function loadContent(route) {
                 highlightActiveNavItem();
                 applyTranslations();
                 // Call the layout adjustment function for the home page
-                if (cleanRoute === 'home' || cleanRoute === 'search-for-client' || cleanRoute === 'work-items' || cleanRoute === 'your-work' || cleanRoute === 'create-client') {
+                if (cleanRoute === 'home' || cleanRoute === 'search-for-client' || cleanRoute === 'work-items' || cleanRoute === 'your-work' || cleanRoute === 'create-client' || cleanRoute === 'work-item') {
                     adjustHomePageLayout();
                 } else {
                     resetLayout(); // Reset layout for other pages if needed
@@ -78,10 +78,6 @@ export function loadContent(route) {
 function onContentLoaded() {
 
     console.log(languageSetting); // Should show 'fr' or 'en'
-
-    
-
-   
 
     // Select all buttons and inputs that should be disabled until everything is loaded
     const buttons = document.querySelectorAll('button:not(.disabled)');
