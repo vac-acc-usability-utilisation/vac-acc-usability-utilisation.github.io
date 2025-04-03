@@ -2015,6 +2015,33 @@ button:focus-visible {
     transition: none;
 }*/
 
+nav.segmented-button { 
+    display: flex;
+}
+
+nav.segmented-button > button {
+    outline: 1px solid var(--md-sys-color-outline);
+    color: var(--md-sys-color-on-surface);
+}
+
+
+nav.segmented-button > button:first-of-type {
+    background-color: var(--md-sys-color-surface) !important;
+    margin: 0 0 0 0.5rem;
+    border-radius: 1.25rem 0 0 1.25rem;
+}
+
+nav.segmented-button > button:last-of-type {
+    background-color: var(--md-sys-color-surface) !important;
+    margin: 0;
+    border-radius: 0 1.25rem 1.25rem 0;
+}
+
+nav.segmented-button > button.active {
+    background-color: var(--md-sys-color-secondary-container) !important;
+    color: var(--md-sys-color-on-secondary-container);
+}
+
 
 .icon-button,
 a.icon-button {

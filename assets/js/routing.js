@@ -56,7 +56,7 @@ export function loadContent(route) {
                 highlightActiveNavItem();
                 applyTranslations();
                 // Call the layout adjustment function for the home page
-                if (cleanRoute === 'home' || cleanRoute === 'search-for-client' || cleanRoute === 'work-items' || cleanRoute === 'your-work' || cleanRoute === 'create-client' || cleanRoute === 'work-item') {
+                if (cleanRoute === 'home' || cleanRoute === 'search-for-client' || cleanRoute === 'work-items' || cleanRoute === 'your-work' || cleanRoute === 'create-client' || cleanRoute === 'work-item' || cleanRoute === 'client-search-results') {
                     adjustHomePageLayout();
                 } else {
                     resetLayout(); // Reset layout for other pages if needed
