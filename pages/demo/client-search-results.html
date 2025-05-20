@@ -1,0 +1,339 @@
+<!-- CLIENT SEARCH PAGE -->
+<div id="client-search" style="display: flex;">
+    <section class="surface-container-low"
+        style="width: 262px; padding: 0; height: calc(100vh - 11rem); border-radius: 2rem 0 0 2rem; display: flex; flex-direction: column;">
+        <div style="overflow-y: scroll; padding: 12px 1rem;">
+            <div class="row">
+                <div class="max">
+
+                </div>
+                <button class="transparent" style="margin-right: -16px;">
+                    <i class="small">refresh</i>
+                    Reset all
+                </button>
+                <button id="close_client_search_filters" class="transparent circle on-surface-variant"
+                    title="Close client search filters">
+                    <i>close</i>
+                </button>
+            </div>
+            <div>
+                <details open>
+                    <summary class="font-label">ID numbers</summary>
+                    <div style="padding: 8px;">
+                        <div class="field border d-flex"
+                            style="width: 100%; min-width: 180px;  flex-direction: column;">
+                            <label for="client-id" class="font-label">Client ID (CSDN ID)</label>
+
+                            <input name="client-id" id="client-id" type="number" maxlength="12">
+
+                        </div>
+
+                        <div class="field border d-flex"
+                            style="width: 100%; min-width: 180px;   flex-direction: column;">
+                            <label for="" class="font-label">File number or other ID</label>
+                            <input name="file-number" id="file-number" type="number" maxlength="7">
+                        </div>
+                    </div>
+                </details>
+
+                <details open>
+                    <summary class="font-label">Personal information</summary>
+                    <div style="padding: 8px;">
+                        <div class="field border d-flex"
+                            style="width: 100%; min-width: 180px;  flex-direction: column;">
+                            <label for="" class="font-label">Surname</label>
+                            <input name="" id="" type="text" value="Rosso">
+                        </div>
+
+                        <div class="field border d-flex"
+                            style="width: 100%; min-width: 180px;  flex-direction: column;">
+                            <label for="" class="font-label">First name</label>
+                            <input name="" id="" type="text" value="Josh">
+                        </div>
+
+                        <div class="field border d-flex"
+                            style="width: 100%; min-width: 180px;  flex-direction: column;">
+                            <label for="" class="font-label">Date of birth</label>
+                            <input name="" id="" type="text" value="1991-04-12">
+                        </div>
+                        <!--
+                        <div class="field border d-flex" style="width: 100%; min-width: 180px;  flex-direction: column;">
+                            <label for="" class="font-label">Postal code</label>
+                            <input name="" id="" type="text">
+                        </div>-->
+
+                        <button class="transparent on-surface-variant right font-label"
+                            style="float: right; margin-right: -8px; padding: 0 12px;">
+                            Show 2 more
+                        </button>
+
+                        <div style="clear: both;"></div>
+                    </div>
+
+                </details>
+            </div>
+            <div class="field middle-align">
+                <nav class="tiny-padding">
+                    <div class="max">
+                        <div>
+                            <span class="font-label">
+                                Active only
+                            </span>
+                        </div>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked="checked">
+                        <span></span>
+                    </label>
+                </nav>
+            </div>
+            <div style="display: flex;">
+                <button class="max primary-container no-margin" style="flex: 1;">
+                    Search
+                </button>
+            </div>
+            <div class="large-space"></div>
+        </div>
+    </section>
+    <section class="limit-content-width padding surface" style="min-width: 1239px;">
+        <button class="secondary-container">
+            <i class="small">close</i>
+            Filters
+        </button>
+
+        <div class="row">
+            <h1 class="font-title">Client search results</h1>
+            <div class="max"></div>
+            <nav class="no-space">
+                <button class="border left-round segmented-button fill">
+                    <i style="margin:0;">table_rows</i>
+                </button>
+                <button class="border right-round segmented-button ">
+                    <i style="margin:0;">grid_view</i>
+                </button>
+            </nav>
+        </div>
+
+
+        <table class="surface-container">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>CSDN ID</th>
+                    <th>File number</th>
+                    <th>Date of birth</th>
+                    <th>Location</th>
+                    <th>Telephone</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="font-title" style="
+                    display: flex;
+                    font-size: 18px;
+                    border-radius: 50%; 
+                    height: 42px; 
+                    width: 42px; 
+                    margin-right: 8px; 
+                    background-color: var(--primary-container); 
+                    color: var(--on-primary-container); 
+                    justify-content: center; 
+                    align-items: center;">
+                            <span class="">
+                                PR
+                            </span>
+                        </div>
+                    </td>
+                    <td>Sgt. Pat Rosso</td>
+                    <td>400322564100</td>
+                    <td>7582984</td>
+                    <td>1991-04-12</td>
+                    <td>Sainte-Agathe-des-Monts-Val-David, QC</td>
+                    <td>(902) 195-0191</td>
+                    <td class="right-align">
+                        <button class="transparent circle on-surface-variant small">
+                            <i>shield</i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="font-title" style="
+                        display: flex;
+                        font-size: 18px;
+                        border-radius: 50%; 
+                        height: 42px; 
+                        width: 42px; 
+                        margin-right: 8px; 
+                        background-color: var(--warning-container); 
+                        color: var(--on-warning-container); 
+                        justify-content: center; 
+                        align-items: center;">
+                            <i>warning</i>
+                        </div>
+                    </td>
+                    <td>Mr. James Rossolinni</td>
+                    <td>400322564100</td>
+                    <td>7582984</td>
+                    <td>1991-04-12</td>
+                    <td>Orangeville, ON </td>
+                    <td>(902) 195-0191</td>
+                    <td class="right-align">
+                        <button class="transparent circle on-surface-variant small">
+                            <i>shield</i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="font-title" style="
+                        display: flex;
+                        font-size: 18px;
+                        border-radius: 50%; 
+                        height: 42px; 
+                        width: 42px; 
+                        margin-right: 8px; 
+                        background-color: var(--tertiary-container); 
+                        color: var(--on-tertiary-container); 
+                        justify-content: center; 
+                        align-items: center;">
+                            <i>deceased</i>
+                        </div>
+                    </td>
+                    <td>Mr. Josh Rosso</td>
+                    <td>400322564100</td>
+                    <td>7582984</td>
+                    <td>1991-04-12</td>
+                    <td>Sainte-Agathe-des-Monts-Val-David, QC</td>
+                    <td>(902) 195-0191</td>
+                    <td class="right-align">
+                        <button class="transparent circle on-surface-variant small">
+                            <i>shield</i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="large-space"></div>
+        <hr>
+        <div class="large-space"></div>
+        <div class="row">
+            <h1 class="font-title">Client search results</h1>
+            <div class="max"></div>
+            <nav class="no-space">
+                <button class="border left-round segmented-button">
+                    <i style="margin:0;">table_rows</i>
+                </button>
+                <button class="border right-round segmented-button fill">
+                    <i style="margin:0;">grid_view</i>
+                </button>
+            </nav>
+        </div>
+
+        <div class="grid">
+            <a href="#" class="card s12 m6 l4">
+                <article class="round wave">
+                    <div class="grid" style="row-gap: 4px;">
+                        <div class="l12" >
+                            <div style="
+                    display: flex;
+                    font-size: 18px;
+                    border-radius: 50%; 
+                    height: 42px; 
+                    width: 42px; 
+                    background-color: var(--primary-container); 
+                    color: var(--on-primary-container); 
+                    justify-content: center; 
+                    align-items: center;">
+                                <span class="">
+                                    PR
+                                </span>
+                            </div>
+                        </div>
+                        <div class="l10">
+                            <p>
+                                <span class="">Sgt. Pat Rosso</span> <br>
+                                <span class="font-label">400322564100 • 7582984 • 1991-04-12</span> <br>
+                                <span class="font-label">Sainte-Agathe-des-Monts-Val-David, QC</span>
+                            </p>
+                        </div>
+                        <div class="l2">
+                            <button class="border circle surface-container" style="z-index: 2;">
+                                <i>shield</i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a href="#" class="card s12 m6 l4">
+                <article class="round wave">
+                    <div class="grid" style="row-gap: 4px;">
+                        <div class="l12" >
+                            <div style="
+                    display: flex;
+                    font-size: 18px;
+                    border-radius: 50%; 
+                    height: 42px; 
+                    width: 42px; 
+                    background-color: var(--warning-container); 
+                    color: var(--on-warning-container); 
+                    justify-content: center; 
+                    align-items: center;">
+                                <i>warning</i>
+                            </div>
+                        </div>
+                        <div class="l10">
+                            <p>
+                                <span class="">Mr. James Rossolinni	</span> <br>
+                                <span class="font-label">400322564100 • 7582984 • 1991-04-12</span> <br>
+                                <span class="font-label">Sainte-Agathe-des-Monts-Val-David, QC</span>
+                            </p>
+                        </div>
+                        <div class="l2">
+                            <button class="border circle surface-container" style="z-index: 2;">
+                                <i>shield</i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a href="#" class="card s12 m6 l4">
+                <article class="round wave">
+                    <div class="grid" style="row-gap: 4px;">
+                        <div class="l12" >
+                            <div style="
+                    display: flex;
+                    font-size: 18px;
+                    border-radius: 50%; 
+                    height: 42px; 
+                    width: 42px; 
+                    background-color: var(--tertiary-container); 
+                    color: var(--on-tertiary-container); 
+                    justify-content: center; 
+                    align-items: center;">
+                                <i>deceased</i>
+                            </div>
+                        </div>
+                        <div class="l10">
+                            <p>
+                                <span class="">Mr. Josh Rosso</span> <br>
+                                <span class="font-label">400322564100 • 7582984 • 1991-04-12</span> <br>
+                                <span class="font-label">Sainte-Agathe-des-Monts-Val-David, QC</span>
+                            </p>
+                        </div>
+                        <div class="l2">
+                            <button class="border circle surface-container" style="z-index: 2;">
+                                <i>shield</i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </a>
+        </div>
+        <div class="large-space"></div>
+    </section>
+</div>

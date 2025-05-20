@@ -1,0 +1,114 @@
+<!-- CLIENT SEARCH PAGE -->
+<div id="client-search" style="display: flex;">
+    <section class="surface-container-low"
+        style="width: 262px; padding: 0; height: calc(100vh - 11rem); border-radius: 2rem 0 0 2rem; display: flex; flex-direction: column;">
+        <div style="overflow-y: scroll; padding: 12px 1rem;">
+            <div class="row">
+                <div class="max">
+
+                </div>
+                <button class="transparent" style="margin-right: -16px;" disabled>
+                    <i class="small">refresh</i>
+                    Reset all
+                </button>
+                <button id="close_client_search_filters" class="transparent circle on-surface-variant" title="Close client search filters">
+                    <i>close</i>
+                  </button>
+            </div>
+            <div>
+                <details open>
+                    <summary class="font-label">ID numbers</summary>
+                    <div style="padding: 8px;">
+                        <div class="field border d-flex" style="width: 100%; min-width: 180px;  flex-direction: column;">
+                            <label for="client-id" class="font-label">Client ID (CSDN ID)</label>
+        
+                            <input name="client-id" id="client-id" type="number" maxlength="12">
+        
+                        </div>
+        
+                        <div class="field border d-flex" style="width: 100%; min-width: 180px;   flex-direction: column;">
+                            <label for="" class="font-label">File number or other ID</label>
+                            <input name="file-number" id="file-number" type="number" maxlength="7">
+                        </div>
+                    </div>
+                </details>
+               
+                <details>
+                    <summary class="font-label">Personal information</summary>
+                    <div style="padding: 8px;">
+                        <div class="field border d-flex" style="width: 100%; min-width: 180px;  flex-direction: column;">
+                            <label for="" class="font-label">Surname</label>
+                            <input name="" id="" type="text">
+                        </div>
+        
+                        <div class="field border d-flex" style="width: 100%; min-width: 180px;  flex-direction: column;">
+                            <label for="" class="font-label">First name</label>
+                            <input name="" id="" type="text">
+                        </div>
+        
+                        <div class="field border d-flex" style="width: 100%; min-width: 180px;  flex-direction: column;">
+                            <label for="" class="font-label">Date of birth</label>
+                            <input name="" id="" type="text">
+                        </div>
+                        <!--
+                        <div class="field border d-flex" style="width: 100%; min-width: 180px;  flex-direction: column;">
+                            <label for="" class="font-label">Postal code</label>
+                            <input name="" id="" type="text">
+                        </div>-->
+    
+                        <button class="transparent on-surface-variant right font-label" style="float: right; margin-right: -8px; padding: 0 12px;">
+                            Show 2 more
+                        </button>
+                        
+                        <div style="clear: both;"></div>
+                    </div>
+
+                </details>
+            </div>
+            <div class="field middle-align">
+                <nav class="tiny-padding">
+                    <div class="max">
+                        <div>
+                            <span class="font-label">
+                            Active only
+                            </span>
+                        </div>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked="checked">
+                        <span></span>
+                    </label>
+                </nav>
+            </div>
+            <div style="display: flex;">
+                <button class="max primary-container no-margin" style="flex: 1;">
+                    Search
+                </button>
+            </div>
+            <div class="large-space"></div>
+        </div>
+    </section>
+    <section class="limit-content-width padding surface" style="min-width: 1239px;">
+        <button class="secondary-container">
+            <i class="small">close</i>
+            Filters
+        </button>
+        <!--
+        <h1 class="font-headline">Client search results</h1>-->
+        <article class="medium middle-align center-align surface">
+            <div>
+              <i class="extra">person_search</i>
+              <h1 class="font-title">Search for a client</h1>
+              <p>Start by searching for a client</p>
+              <div class="space"></div>
+              <!--
+              <nav class="no-space">
+                <div class="max field border left-round">
+                  <input>
+                </div>
+                <button class="large right-round">Search</button>
+              </nav>-->
+            </div>
+          </article>
+    </section>
+</div>

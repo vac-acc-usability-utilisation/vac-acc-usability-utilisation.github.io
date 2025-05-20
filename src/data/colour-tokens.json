@@ -1,0 +1,335 @@
+{
+  "--primary": {
+    "description": "Used for primary interactive elements across themes.",
+    "values": {
+      "light": "#256A4A",
+      "dark": "#90D5AE",
+      "high-contrast-light": "#005A2C",
+      "high-contrast-dark": "#00FF88"
+    }
+  },
+  "--on-primary": {
+    "description": "Text or icon color displayed on top of the primary color.",
+    "values": {
+      "light": "#FFFFFF",
+      "dark": "#003822",
+      "high-contrast-light": "#FFFFFF",
+      "high-contrast-dark": "#000000"
+    }
+  },
+  "--primary-container": {
+    "description": "Used for containers or surfaces that indicate primary action areas.",
+    "values": {
+      "light": "#ABF2C9",
+      "dark": "#015234",
+      "high-contrast-light": "#C8FFE0",
+      "high-contrast-dark": "#001F10"
+    }
+  },
+  "--on-primary-container": {
+    "description": "description",
+    "values": {
+      "light": "#002112",
+      "dark": "#ABF2C9",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--secondary": {
+    "description": "description",
+    "values": {
+      "light": "#4E6356",
+      "dark": "#B4CCBC",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--on-secondary": {
+    "description": "description",
+    "values": {
+      "light": "#FFFFFF",
+      "dark": "#203529",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--secondary-container": {
+    "description": "description",
+    "values": {
+      "light": "#CFE7D6",
+      "dark": "#364B3F",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--on-secondary-container": {
+    "description": "description",
+    "values": {
+      "light": "#0B1F15",
+      "dark": "#D0E8D7",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--tertiary": {
+    "description": "description",
+    "values": {
+      "light": "#3C6472",
+      "dark": "#A4CDDD",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--on-tertiary": {
+    "description": "description",
+    "values": {
+      "light": "#FFFFFF",
+      "dark": "#333F43",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--tertiary-container": {
+    "description": "description",
+    "values": {
+      "light": "#C0E9F9",
+      "dark": "#234C59",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--on-tertiary-container": {
+    "description": "description",
+    "values": {
+      "light": "#001F28",
+      "dark": "#C0E9F9",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--warning": {
+    "description": "description",
+    "values": {
+      "light": "#5F6245",
+      "dark": "#xxxxxx",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--on-warning": {
+    "description": "description",
+    "values": {
+      "light": "#FFFFFF",
+      "dark": "#xxxxxx",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--warning-container": {
+    "description": "description",
+    "values": {
+      "light": "#F8E287",
+      "dark": "#xxxxxx",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--on-warning-container": {
+    "description": "description",
+    "values": {
+      "light": "#221B00",
+      "dark": "#xxxxxx",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--error": {
+    "description": "description",
+    "values": {
+      "light": "#BA1A1A",
+      "dark": "#FFB4AB",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--on-error": {
+    "description": "description",
+    "values": {
+      "light": "#FFFFFF",
+      "dark": "#690005",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--error-container": {
+    "description": "description",
+    "values": {
+      "light": "#FFDAD6",
+      "dark": "#93000A",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--on-error-container": {
+    "description": "description",
+    "values": {
+      "light": "#410002",
+      "dark": "#FFDAD6",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--background": {
+    "description": "description",
+    "values": {
+      "light": "#F6FBF4",
+      "dark": "#0F1511",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--on-background": {
+    "description": "description",
+    "values": {
+      "light": "#171D19",
+      "dark": "#DFE4DE",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--surface": {
+    "description": "description",
+    "values": {
+      "light": "#F6FBF4",
+      "dark": "#0F1511",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--on-surface": {
+    "description": "description",
+    "values": {
+      "light": "#171D19",
+      "dark": "#DFE4DE",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--surface-variant": {
+    "description": "description",
+    "values": {
+      "light": "#DCE5DC",
+      "dark": "#404943",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--on-surface-variant": {
+    "description": "description",
+    "values": {
+      "light": "#404943",
+      "dark": "#C0C9C1",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--outline": {
+    "description": "description",
+    "values": {
+      "light": "#707972",
+      "dark": "#8A938C",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--outline-variant": {
+    "description": "description",
+    "values": {
+      "light": "#C0C9C1",
+      "dark": "#404943",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--shadow": {
+    "description": "description",
+    "values": {
+      "light": "#000000",
+      "dark": "#000000",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--scrim": {
+    "description": "description",
+    "values": {
+      "light": "#000000",
+      "dark": "#000000",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--inverse-surface": {
+    "description": "description",
+    "values": {
+      "light": "#2C322E",
+      "dark": "#DFE4DE",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--inverse-on-surface": {
+    "description": "description",
+    "values": {
+      "light": "#EDF2EC",
+      "dark": "#2C322E",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--surface-container-lowest": {
+    "description": "description",
+    "values": {
+      "light": "#FFFFFF",
+      "dark": "#0A0F0C",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--surface-container-low": {
+    "description": "description",
+    "values": {
+      "light": "#F0F5EE",
+      "dark": "#171D19",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--surface-container": {
+    "description": "description",
+    "values": {
+      "light": "#EAEFE9",
+      "dark": "#1B211D",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--surface-container-high": {
+    "description": "description",
+    "values": {
+      "light": "#E4EAE3",
+      "dark": "#262B27",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  },
+  "--surface-container-highest": {
+    "description": "description",
+    "values": {
+      "light": "#DFE4DE",
+      "dark": "#303632",
+      "high-contrast-light": "#xxxxxx",
+      "high-contrast-dark": "#xxxxxx"
+    }
+  }
+}

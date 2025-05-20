@@ -1,0 +1,43 @@
+[class*=padding]:not(.left-padding, .right-padding, .top-padding, .bottom-padding, .horizontal-padding, .vertical-padding) {
+  padding: var(---padding) !important;
+}
+
+[class*=padding] {
+  ---padding: 1rem;
+}
+
+.no-padding {
+  ---padding: 0;
+}
+
+.tiny-padding {
+  ---padding: 0.25rem;
+}
+
+.small-padding {
+  ---padding: 0.5rem;
+}
+
+.large-padding {
+  ---padding: 1.5rem;
+}
+
+.left-padding,
+.horizontal-padding {
+  padding-inline-start: var(---padding) !important;
+}
+
+.right-padding,
+.horizontal-padding {
+  padding-inline-end: var(---padding) !important;
+}
+
+.top-padding,
+.vertical-padding {
+  padding-block-start: var(---padding) !important;
+}
+
+.bottom-padding,
+.vertical-padding {
+  padding-block-end: var(---padding) !important;
+}

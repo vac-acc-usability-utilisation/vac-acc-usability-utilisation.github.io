@@ -1,0 +1,15 @@
+{
+    "id": "typography",
+    "title": "Typography",
+    "lead": "Use typography to make writing legible and beautiful.",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "We use Noto Sans, ."
+      },
+      {
+        "heading": "Fonts",
+        "body": "Text sizes scale using a modular type scale."
+      }
+    ]
+  }

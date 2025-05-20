@@ -1,0 +1,126 @@
+<div id="styles/colour-tokens" class="large-padding" data-submenu="styles-submenu">
+    <section class="limit-content-width">
+      <h2 class="font-headline">Colour tokens</h2>
+      <p>Colour tokens define colour for components and global styles.</p>
+      <div class="row">
+        <nav class="no-space">
+          <button id="colour-token-view-light-mode"
+            class="segmented-button segmented-icon-label border left-round  fill">
+            <i class="small">light_mode</i>
+            <span>Light mode</span>
+          </button>
+          <button id="colour-token-view-dark-mode"
+            class="segmented-button segmented-icon-label border right-round  ">
+            <i class="small">dark_mode</i>
+            <span>Dark mode</span>
+          </button>
+        </nav>
+        <nav class="no-space">
+          <button id="colour-token-view-standard-contrast" class="segmented-button border left-round  fill"
+            style="gap: 0.5rem;">
+            <!--<i class="small">check</i>-->
+            <span>Standard contrast</span>
+          </button>
+          <button id="colour-token-view-high-contrast" class="segmented-button border right-round "
+            style="gap: 0.5rem;">
+            <!--<i class="small">check</i>-->
+            <span>High contrast</span>
+          </button>
+        </nav>
+      </div>
+      <table id="colour-tokens" class="responsive">
+        <!--
+      <caption class="left-align">Light mode, standard contrast</caption>-->
+        <thead>
+          <tr>
+            <th style="width: 17rem;">Token</th>
+            <th>Value</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- filled in by script -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      let colourTokenTableTheme = 'light';
+      let colourTokenTableContrast = 'normal';
+      let colourTokenData = {};
+      const tableBody = document.querySelector('#colour-tokens tbody');
+
+      function renderTable() {
+        tableBody.innerHTML = '';
+
+        Object.entries(colourTokenData).forEach(([tokenName, tokenData]) => {
+          const { description, values } = tokenData;
+
+          const row = document.createElement('tr');
+
+          const tokenCell = document.createElement('td');
+          tokenCell.className = 'font-mono';
+          tokenCell.textContent = tokenName;
+
+          const colourCell = document.createElement('td');
+          colourCell.className = 'font-mono';
+
+          let colourValue = values.light;
+          if (colourTokenTableTheme === 'dark') {
+            colourValue = values.dark;
+          }
+
+          colourCell.textContent = colourValue;
+
+          const colourSwatch = document.createElement('span');
+          colourSwatch.className = 'colour-swatch';
+          colourSwatch.style.backgroundColor = colourValue;
+          colourCell.prepend(colourSwatch);
+
+          const descCell = document.createElement('td');
+          descCell.textContent = description;
+
+          row.append(tokenCell, colourCell, descCell);
+          tableBody.appendChild(row);
+        });
+      }
+
+      fetch('/src/data/colour-tokens.json')
+        .then(response => response.json())
+        .then(data => {
+          colourTokenData = data;
+          renderTable();
+        })
+        .catch(error => {
+          console.error("Failed to load colour tokens:", error);
+        });
+
+      // Utility to handle fill class toggle in a group
+      function setActiveButton(buttons, activeId) {
+        buttons.each(function () {
+          const isActive = this.id === activeId;
+          $(this).toggleClass('fill', isActive);
+        });
+      }
+
+      // Theme buttons
+      const themeButtons = $('#colour-token-view-light-mode, #colour-token-view-dark-mode');
+      themeButtons.click(function () {
+        const isLight = this.id === 'colour-token-view-light-mode';
+        colourTokenTableTheme = isLight ? 'light' : 'dark';
+        setActiveButton(themeButtons, this.id);
+        renderTable();
+      });
+
+      // Contrast buttons
+      const contrastButtons = $('#colour-token-view-standard-contrast, #colour-token-view-high-contrast');
+      contrastButtons.click(function () {
+        const isStandard = this.id === 'colour-token-view-standard-contrast';
+        colourTokenTableContrast = isStandard ? 'normal' : 'high';
+        setActiveButton(contrastButtons, this.id);
+        renderTable();
+      });
+    });
+  </script>

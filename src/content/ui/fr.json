@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+	  "authors": [
+		"Steven Timmins"
+	  ],
+	  "last-updated": "2025-04-17",
+	  "locale": "fr"
+	},
+	"skip-main": "Passer au contenu principal",
+	"app-name": "l'Application des Services aux Clients",
+	"lang-toggle": "EN",
+	"home": "Accueil",
+	"get-started": "Commencer",
+    "home-heading": "Concevoir pour ASC",
+	"home-lead": "Créez des expériences conviviales pour l’application de services clients d’ACC",
+	"home-design-system-updates": "Mises à jour du système de conception"
+}

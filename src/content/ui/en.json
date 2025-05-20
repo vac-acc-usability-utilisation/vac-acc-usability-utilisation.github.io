@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+	  "authors": [
+		"Steven Timmins"
+	  ],
+	  "last-updated": "2025-04-17",
+	  "locale": "en"
+	},
+	"skip-main": "Skip to main content",
+	"app-name": "Client Services Application",
+	"lang-toggle": "FR",
+	"home": "Home",
+	"get-started": "Get\u00A0started",
+    "home-heading": "Designing for CSA",
+	"home-lead": "Create user-friendly experiences for VAC's Client Services Application",
+	"home-design-system-updates": "Design system updates"
+}

@@ -1,0 +1,17 @@
+#skip a {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#skip a:focus, #skip a:focus-visible {
+    position: fixed;
+    left: 50%;
+    top: 0.5rem;
+    width: auto;
+    height: auto;
+    z-index: 999;
+}

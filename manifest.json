@@ -1,0 +1,21 @@
+{
+    "name": "CSA Design System",
+    "short_name": "CSA Design System",
+    "description": "",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#256A4A",
+    "theme_color": "#256A4A",
+    "icons": [
+      {
+        "src": "/src/img/icons/Icon-192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/src/img/icons/Icon-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }

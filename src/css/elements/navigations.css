@@ -1,0 +1,520 @@
+nav> :is(ol, ul),
+nav li {
+  all: unset;
+  line-height: 0;  
+}
+
+nav,
+.row,
+a.row,
+nav.drawer :is(a, label) {
+  display: flex;
+  align-items: center;
+  align-self: normal;
+  text-align: start;
+  justify-content: flex-start;
+  white-space: nowrap;
+  gap: 1rem;
+}
+
+a.row,
+nav.row {
+  min-block-size: 3rem;
+  margin: 0;
+}
+
+:is(nav, .row, .max)> :only-child,
+nav> :is(ol, ul)>li> :only-child {
+  margin: 0;
+}
+
+:is(nav, .row)>* {
+  margin: 0;
+  white-space: normal;
+  flex: none;
+}
+
+:is(nav, .row).no-space {
+  gap: 0;
+}
+
+:is(nav, .row).no-space:not(.vertical)>.border+.border {
+  border-inline-start: 0;
+}
+
+:is(nav, .row).no-space.vertical>.border+.border {
+  border-top: 0;
+}
+
+:is(nav, .row).medium-space {
+  gap: 1.5rem;
+}
+
+:is(nav, .row).large-space {
+  gap: 2rem;
+}
+
+:is(nav, .row)>.max,
+:is(nav, .row)> :is(ol, ul)>.max,
+nav.drawer> :is(a, label)>.max,
+nav.drawer> :is(ol, ul)>li> :is(a, label)>.max {
+  flex: 1;
+}
+
+:is(nav, .row).wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+:is(header, footer)> :is(nav, .row) {
+  min-block-size: inherit;
+}
+
+:is(nav, .row)>.border.no-margin+.border.no-margin {
+  border-inline-start: 0;
+}
+
+nav:is(.left, .right, .top, .bottom) {
+  border: 0;
+  position: fixed;
+  color: var(--on-surface);
+  transform: none;
+  z-index: 100;
+  block-size: auto;
+  inline-size: auto;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  inset: var(--top) var(--right) var(--bottom) var(--left);
+  margin: 0;
+}
+
+nav:is(.top, .bottom) {
+  padding-left: 1.5rem;
+}
+
+nav:is(.left, .right) {
+  padding-top: 0;
+  inline-size: var(--nav-rail-width);
+  inset-block-start: 4rem;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: var(--surface);
+}
+
+nav:is(.top, .bottom) {
+  block-size: 4rem;
+  justify-content: center;
+  flex-direction: row;
+  background-color: var(--surface-container);
+}
+
+nav.top {
+  inset-block-end: auto;
+}
+
+nav.left {
+  inset-inline-end: auto;
+}
+
+nav.right {
+  inset-inline-start: auto;
+}
+
+nav.bottom {
+  inset-block-start: auto;
+}
+
+nav.drawer {
+  flex-direction: column;
+  align-items: normal;
+  inline-size: 20rem;
+  gap: 0;
+  padding: 0.5rem 1rem;
+}
+
+nav.drawer:is(.min, .max) {
+  inline-size: auto;
+}
+
+nav.drawer.max {
+  inline-size: 100%;
+}
+
+nav.rail-submenu {
+  background-color: var(--surface-container);
+  position: fixed;
+  height: calc(100vh - 4rem);
+  padding-bottom: 2rem;
+  width: 14rem;
+  top: 64px;
+  left: 88px;
+  z-index: 9;
+  border-left: 1px solid var(--outline-variant);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.rail-submenu.hide {
+  display: none;
+  pointer-events: none;
+}
+
+.rail-submenu.show {
+  display: block;
+  pointer-events: auto;
+  z-index: 99;
+  /* or higher if needed */
+}
+
+nav.rail-submenu ul {
+  padding: 0px 8px 2rem 8px !important;
+}
+
+nav.drawer ul ul,
+nav.drawer ol ol {
+  display: none;
+}
+
+
+nav.drawer li.expanded>ul,
+nav.drawer li.expanded>ol {
+  display: block;
+}
+
+
+:is(nav, .row)>header {
+  background-color: inherit;
+}
+
+nav:is(.left, .right)>header {
+  transform: translateY(-0.5rem);
+}
+
+nav.drawer>header {
+  transform: translateY(-0.75rem);
+  min-block-size: 4.5rem;
+  align-self: stretch;
+}
+
+nav.drawer :is(a, label),
+nav.drawer> :is(ol, ul)>li> :is(a, label, button),
+:is(a.row, nav.row):is(.wave, .slow-ripple, .ripple, .fast-ripple) {
+  padding: 0.75rem;
+}
+
+nav.drawer a,
+nav.drawer> :is(ol, ul)>li> :is(a, button) {
+  border-radius: 2rem;
+  text-align: left;
+  display: block !important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%; /* Ensure the container has a fixed width */
+  min-width: 0; /* Critical for ellipsis in flex layouts */
+  padding: 16px 24px;
+  box-sizing: border-box;
+  /* #### Label - Medium */
+  font-family: var(--font-display);
+  font-size: var(--label-lg-font-size);
+  line-height: var(--label-lg-line-height);
+  font-weight: var(--label-lg-font-weight);
+  letter-spacing: var(--label-lg-letter-spacing);
+  height: 56px;
+}
+
+/* RESET nav-specific buttons completely */
+.nav-button {
+  all: unset;
+  font-family: var(--font-display);
+  font-size: var(--label-lg-font-size);
+  line-height: var(--label-lg-line-height);
+  font-weight: var(--label-lg-font-weight);
+  letter-spacing: var(--label-lg-letter-spacing);
+  position: relative;
+  display: flex;
+  /* Use flex here instead of inline-block */
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  text-align: left;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  height: 56px;
+  overflow: visible;
+  white-space: normal;
+  text-overflow: ellipsis;
+}
+
+/* Reset pseudo elements (like ripple or shadows) */
+.nav-button::after {
+  content: none !important;
+}
+
+/* Make sure nav-button doesn't inherit other button classes */
+.nav-button:not(.button):not(.border):not(.chip):not(.segmented-button) {
+  color: inherit !important;
+  background-color: transparent;
+  box-shadow: none !important;
+}
+
+/* Reset hover and shadow behavior from global buttons */
+.nav-button:hover,
+.nav-button[aria-expanded="true"] {
+  /*background-color: var(--secondary-container) !important;*/
+  box-shadow: none !important;
+}
+
+.nav-button-label {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1 1 auto;
+  /* allows it to grow and shrink within the flex container */
+  min-width: 0;
+  /* critical for ellipsis in flex layout */
+}
+
+li.has-expansion ul {
+  margin-block-start: 0rem;
+  padding: 0px 0px 0px 8px !important;
+}
+
+li.has-expansion>button>i {
+  position: absolute;
+  right: 1.25rem;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+nav.drawer a.active {
+  background-color: var(--secondary-container);
+  font-weight: 700;
+}
+
+nav.drawer a:is(.active),
+nav.drawer> :is(ol, ul)>li> :is(a, button):is(.active) {
+  background-color: var(--secondary-container);
+  font-weight: 700;
+}
+
+nav.drawer a:is(:hover)::before,
+nav.drawer> :is(ol, ul)>li> :is(a, button):is(:hover)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-color: var(--scrim);
+  opacity: 0.08;
+}
+
+nav.drawer>a:is(:hover, :focus, .active)>i,
+nav.drawer> :is(ol, ul)>li>a:is(:hover, :focus, .active)>i {
+  font-variation-settings: "FILL" 1;
+}
+
+nav> :is(ol, ul) {
+  all: inherit;
+  flex: auto;
+}
+
+nav:not(.left, .right, .bottom, .top)> :is(ol, ul) {
+  padding: 0;
+}
+
+
+nav:not(.left, .right, .bottom, .top)>.rail-submenu> :is(ol, ul) {
+  padding: 0;
+  width: 100%;
+}
+
+nav:is(.left, .right, .top, .bottom):not(.drawer)>a:not(.button, .chip),
+nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button, .chip) {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  line-height: normal;
+}
+
+nav:is(.left, .right, .top, .bottom):not(.drawer)>a:not(.button, .chip)>span,
+nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button, .chip)>span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: .1px;
+}
+
+nav:is(.left, .right, .top, .bottom):not(.drawer)>a:not(.button, .chip).active>span,
+nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button, .chip).active>span {
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+/*
+#navigation-rail>ul>li>a.active>span.navigationRailLabel {
+  color: var(--md-sys-color-secondary);
+  font-weight: 700;
+}*/
+
+nav:is(.top, .bottom):not(.drawer)>a:not(.button, .chip),
+nav:is(.top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button, .chip) {
+  inline-size: 3.5rem;
+}
+
+nav:is(.left, .right, .top, .bottom):not(.drawer)>a:not(.button, .chip)>i,
+nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button, .chip)>i {
+  padding: 0.25rem 1rem;
+  border-radius: 2rem;
+  transition: padding var(--speed1) linear;
+  margin: 0 auto;
+}
+
+nav:is(.left, .right, .top, .bottom):not(.drawer)>a:not(.button, .chip):is(:focus, .active)>i,
+nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button, .chip):is(:focus, .active)>i {
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+  padding: 0.25rem 1rem;
+  font-variation-settings: "FILL" 1;
+}
+
+nav:is(.left, .right, .top, .bottom):not(.drawer)>a:not(.button, .chip):is(:hover)>i::before,
+nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button, .chip):is(:hover)>i::before {
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 0;
+  /* shorthand for top: 0; right: 0; bottom: 0; left: 0 */
+  background-color: var(--scrim);
+  opacity: 0.08;
+}
+
+:is(nav, .row):is(.left-align, .top-align, .vertical) {
+  justify-content: flex-start;
+}
+
+:is(nav, .row):is(.right-align, .bottom-align) {
+  justify-content: flex-end;
+}
+
+:is(nav, .row):is(.center-align, .middle-align) {
+  justify-content: center;
+}
+
+:is(nav, .row):is(.left-align, .top-align, .vertical).vertical {
+  align-items: flex-start;
+}
+
+:is(nav, .row):is(.right-align, .bottom-align).vertical {
+  align-items: flex-end;
+}
+
+:is(nav, .row):is(.center-align, .middle-align).vertical {
+  align-items: center;
+}
+
+:is(.drawer, .vertical)> :is(li, [class*=divider], hr):not(.vertical),
+:is(.drawer, .vertical)> :is(ol, ul)>li:not(.vertical) {
+  align-self: stretch;
+}
+
+nav:not(.left, .right)>.space {
+  inline-size: 0.5rem;
+}
+
+nav:not(.left, .right)>.medium-space {
+  inline-size: 1rem;
+}
+
+nav:not(.left, .right)>.large-space {
+  inline-size: 1.5rem;
+}
+
+nav.tabbed {
+  background-color: var(--surface-container);
+  border-radius: 4rem !important;
+  gap: 0rem;
+  block-size: 4rem;
+}
+
+nav.tabbed.small {
+  block-size: 3rem;
+}
+
+nav.tabbed.large {
+  block-size: 5rem;
+}
+
+nav.tabbed>a {
+  border-radius: inherit;
+  block-size: inherit;
+  display: inline-flex;
+  align-items: center;
+  padding-inline: 1rem;
+  gap: 0.5rem;
+  font-size: 1rem;
+  flex: 1;
+  text-decoration: none;
+}
+
+nav.tabbed>a.active {
+  color: var(--on-secondary-container);
+  background-color: var(--secondary-container);
+}
+
+nav.tabbed>a.active >i {
+  font-variation-settings: "FILL" 1;
+}
+
+:not(nav)> :is(ul, ol) {
+  all: revert;
+}
+
+:is(.scroll, .no-scroll, .no-space, .tabs, .tabbed)> :focus-visible {
+  outline: 0.125rem solid var(--primary);
+  outline-offset: -0.125rem;
+}
+
+
+#client-menu-container {
+  position: fixed;
+  left: 0.5rem;
+  top: 64px;
+  z-index: 100;
+  background: var(--surface-container);
+  height: calc(100vh - 64px);
+  width: 14rem;
+} 
+
+
+@media only screen and (max-width: 600px) {
+
+  nav.top,
+  nav.bottom {
+    justify-content: space-around;
+  }
+
+  #client-menu-container {
+    display: none;
+  }
+
+  #client-menu-container.open {
+    display: flex;
+  }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 839px) { 
+  #client-menu-container {
+    display: none;
+  }
+
+  #client-menu-container.open {
+    display: flex;
+  }
+}

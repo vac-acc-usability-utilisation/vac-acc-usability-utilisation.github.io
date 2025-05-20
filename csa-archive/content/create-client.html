@@ -1,0 +1,234 @@
+<section class="cnt-wdth-lmtd-2x" style="width: 800px; display:flex; flex-direction: column; ">
+    <!--
+    <div class="icon-button-container" style="position: relative; left: 8px; margin-bottom: 8px;">
+        <a class="icon-button" href="#/home">
+            <span class="material-symbols-outlined">
+                arrow_back
+            </span>
+        </a>
+    </div>-->
+    <h1 class="font-title-lg" style="padding: 0 24px;">Create a client notebook</h1>
+
+    <!-- Errors -->
+    <div class="error-banner hide">
+        <div class="d-flex"
+            style="width: 100%; height: auto; margin-top: 16px; padding: 16px 24px; background-color: var(--md-sys-color-error-container); z-index: 9;">
+            <div class="d-flex" style=" flex: auto; flex-direction: column;">
+                <div class="d-flex">
+                    <span class="material-symbols-outlined"
+                        style="color: var(--md-sys-color-on-error-container); margin-right: 4px;">report</span>
+
+                    <h2 class="font-title-lg"
+                        style="margin: 0; color: var(--md-sys-color-on-error-container); font-weight: 600; max-width: none;">
+                        The form could not be submitted because 1 error was found.
+                    </h2>
+                </div>
+                <ul style="margin: 4px 0 0 28px;">
+                    <li class="font-label-lg" style="max-width: none;">
+                        <a href="" style="color: var(--md-sys-color-on-error-container); text-decoration: underline;">
+                            Error 1: First name - Provide this or at least one personal information field.
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="d-flex" style="margin-top: 24px; gap: var(--md-sys-space-margin);">
+       
+        <div style="width: 50%; padding: 24px 36px 24px 36px;  flex-direction: column; background-color: var(--md-sys-color-surface-container-lowest); border-radius: 28px; border: 1px solid var(--md-sys-color-outline-variant);"
+            class="d-flex">
+            <div style="display: flex; justify-content: start;">
+                <h2 class="font-title-md" data-i18n="" style="margin-top: 0; margin-bottom: 16px">Search by Personal
+                    Information</h2>
+            </div>
+
+            <form action="" style="display: flex; flex-direction: column;">
+
+                <div class="d-flex " style="width: 338px; flex-direction: row;">
+                    <div class="field border d-flex"
+                        style="width: auto; margin-right: var(--md-sys-space-sm);  flex-direction: column;">
+                        <label for="" class="font-label-lg">First name</label>
+                        <!--
+                        <span class="error-contextual">Error 1: Provide this or at least one personal&nbsp;information field.</span>-->
+                        <input type="text" placeholder="" style="width: 148px;">
+                    </div>
+
+
+                    <div class=" field border d-flex" style="flex-direction: column;">
+                        <label for="" class="font-label-lg">Surname</label>
+                        <!--
+                        <span class="error-contextual">Error 2: Provide this or at least one personal&nbsp;information field.</span>-->
+                        <input type="text" placeholder="" style="width: 180px; ">
+                    </div>
+                </div>
+
+
+                <div class="d-flex" style="align-items: bottom; flex-direction: row; height: fit-content;">
+                    <div class="field border d-flex"
+                        style="width: auto; margin-right: var(--md-sys-space-sm); flex-direction: column; justify-content: end;">
+                        <label for="" class="font-label-lg">Date of birth</label>
+                        <!--
+                        <span class="error-contextual">Error 3: Provide this or at least one personal&nbsp;information field.</span>-->
+                        <div class="d-flex">
+                            <div class="field border d-flex"
+                                style="flex-direction: column; margin-right: var(--md-sys-space-sm);">
+                                <span class="font-label-md ">Month</span>
+
+                                <select name="" id="" style="width: 166px;">
+                                    <option value="">- Select -</option>
+                                    <option value="1">01 - January</option>
+                                    <option value="2">02 - February</option>
+                                    <option value="3">03 - March</option>
+                                    <option value="4">04 - April</option>
+                                    <option value="5">05 - May</option>
+                                    <option value="6">06 - June</option>
+                                    <option value="7">07 - July</option>
+                                    <option value="8">08 - August</option>
+                                    <option value="9">09 - September</option>
+                                    <option value="10">10 - October</option>
+                                    <option value="11">11 - November</option>
+                                    <option value="12">12 - December</option>
+                                </select>
+                            </div>
+                            <div class="field border d-flex"
+                                style="width: auto; margin-right: var(--md-sys-space-sm); flex-direction: column; justify-content: end;">
+                                <!--<label for="" class="font-label-lg">Date of birth</label>-->
+                                <span class="font-label-md">Day</span>
+                                <!--
+                                <span class="error-contextual">Error 4: This field is&nbsp;required.</span>-->
+
+                                <input type="text" placeholder="" style="width: 55px;" maxlength="2">
+
+                            </div>
+                            <div class="field border d-flex"
+                                style="width: auto; flex-direction: column; justify-content: end;">
+                                <!--<label for="" class="font-label-lg">Date of birth</label>-->
+                                <span class="font-label-md">Year</span>
+                                <!--
+                                <span class="error-contextual">Error 5: This field is&nbsp;required.</span>-->
+
+                                <input type="text" placeholder="" style="width: 70px;" maxlength="4">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <input class="button" type="submit" value="Search by Personal Information"
+                    style="justify-self: end; background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">
+
+            </form>
+
+            <button class="d-flex"
+                style="justify-self: end; background: none; color: var(--md-sys-color-primary); margin-top:8px;">More
+                personal information options</button>
+
+        </div>
+    </div>
+
+    <br><br>
+    <!--
+    <div class="search-bar"
+        style="margin: 24px auto; display: flex; justify-content: center; align-items: center; position: relative;">
+        <div class="icon-button-container" style="position: relative;left: 50px;">
+            <span class="material-symbols-outlined search-bar-leading-icon icon-button" style="position: static;">
+                search
+            </span>
+        </div>
+
+        <form action="" class="search" style="width: 660px;">
+            <label for="search-bar-input" class="search-bar-label invisible" style="display: none;"></label>
+            <input class="search-bar-input" id="search-bar-input" type="text" autocomplete="off"
+                data-i18n="[placeholder]search-app" data-rule-minlength="2" style="width:100%;">
+        </form>
+        <div class="icon-button-container" style="position: relative; right: 50px;">
+            <span class="material-symbols-outlined search-bar-leading-icon icon-button" style="position: static;">
+                tune
+            </span>
+        </div>
+    </div>-->
+</section>
+
+<section class="cnt-wdth-lmtd">
+    <!--
+    <h2 class="font-title-lg">Styles</h2>
+    <ul>
+        <li>Color</li>
+        <li>Elevation</li>
+        <li>Icons</li>
+        <li>Motion</li>
+        <li>Typography</li>
+    </ul>
+
+    <h2 class="font-title-lg">Components</h2>
+    <ul>
+        <li class="disabled">Bottom app bar</li>
+        <li>Top app bar</li>
+        <li>Badges</li>
+        <li>Buttons</li>
+        <li>Cards</li>
+        <li class="disabled">Carousel</li>
+        <li>Checkbox</li>
+        <li>Chips</li>
+        <li>Date pickers</li>
+        <li>Dialogs</li>
+        <li>Divider</li>
+        <li>Lists</li>
+        <li>Menu</li>
+        <li class="disabled">Navigation bar</li>
+        <li>Navigation drawer</li>
+        <li>Navigation rail</li>
+        <li>Progress indicators</li>
+        <li>Radio button</li>
+        <li>Search</li>
+        <li>Bottom sheets</li>
+        <li>Side sheets</li>
+        <li class="disabled">Sliders</li>
+        <li>Snackbar</li>
+        <li>Switch</li>
+        <li>Tabs</li>
+        <li>Text fields</li>
+        <li>Time pickers</li>
+        <li>Tooltips</li>
+    </ul>-->
+</section>
+<!--
+<div class="content-container" style="margin-bottom: 0px; padding-bottom: 0px;">
+    <h2 class="font-title-lg">News and releases</h2>
+</div>
+<section class="content-container cards-container d-flex"
+    style="padding-top: 0px; flex-direction: row; justify-content: start;">
+
+    <a href="/www/search-results.html" class="card"
+        style="margin-right: var(--md-sys-space-margin);">
+        <div>
+            <div class="card-text">
+                <h3 class="font-title-lg card-title">Pattern: Help users search</h3>
+                <p>Empower users to find what they need quickly and&nbsp;efficiently.</p>
+            </div>
+        </div>
+    </a>
+    <a href="/www/design-system/components/icon-buttons.html" class="card"
+        style="margin-right: var(--md-sys-space-margin);">
+        <div>
+            <div class="card-text">
+                <h3 class="font-title-lg card-title">Component: Icon buttons</h3>
+                <p>Icon buttons help people take minor actions with one&nbsp;tap.</p>
+            </div>
+        </div>
+    </a>
+    <a href="/www/design-system/foundations/glossary.html" class="card"
+        style="margin-right: var(--md-sys-space-margin);">
+        <div>
+            <div class="card-text">
+                <h3 class="font-title-lg card-title">Glossary</h3>
+                <p>Get to know key terms, concepts, and&nbsp;acronyms.</p>
+            </div>
+        </div>
+    </a>-->

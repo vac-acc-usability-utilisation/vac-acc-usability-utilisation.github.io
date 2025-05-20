@@ -1,0 +1,16 @@
+{
+    "id": "typography",
+    "title": "Typographie",
+    "lead": "Conseils pour des styles de texte cohérents.",
+    "sections": [
+      {
+        "heading": "Choix de polices",
+        "body": "Nous utilisons Inter pour les interfaces et Source Sans Pro pour l'impression."
+      },
+      {
+        "heading": "Tailles réactives",
+        "body": "Les tailles de texte évoluent selon une échelle modulaire."
+      }
+    ]
+  }
+  

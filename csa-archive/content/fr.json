@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+	  "authors": [
+		"Steven Timmins"
+	  ],
+	  "last-updated": "2024-09-26",
+	  "locale": "fr",
+	  "message-documentation": "qqq"
+	},
+	"skip-main": "Passer au contenu principal",
+	"switch-language": "Changer la langue en anglais",
+	"language-acronym": "EN",
+	"language_snackbar_message": "Langue passée au français",
+	"settings": "Paramètres",
+	"help-and-feedback": "Aide et commentaires",
+	"help": "Aide",
+	"feedback": "Commentaires",
+	"menu": "Menu",
+	"main-menu": "Menu principal",
+	"home": "Accueil",
+	"your-work": "Votre travail",
+	"app-name": "l'Application des Services aux Clients",
+	"search-app": "Recherche l'Application des Services aux Clients",
+	"contact-us": "Contactez-nous",
+	"sign-in": "Se connecter",
+	"signed_in_snackbar_message": "Signed in as {name}",
+	"signed_out_snackbar_message": "Déconnexion réussie",
+	"news-and-releases": "Actualités et communiqués",
+	"about-csa-ux": "À propos du prototype UX de CSA"
+  }
