@@ -55,6 +55,22 @@ export function setupStageNavigation() {
         }
     });
 
+    document.addEventListener('DOMContentLoaded', () => {
+        const button = document.getElementById('next-to-payment');
+        const menu = button.querySelector('menu');
+
+        // Toggle 'active' class on button click
+        button.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent click from propagating to document
+            menu.classList.toggle('active');
+        });
+
+        // Remove 'active' class when clicking elsewhere
+        document.addEventListener('click', () => {
+            menu.classList.remove('active');
+        });
+    });
+
     // Initialize visibility
     updateStageVisibility();
 }

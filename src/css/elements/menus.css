@@ -1,4 +1,4 @@
-
+/*
 menu[hidden] {
   display: none;
 }
@@ -16,11 +16,15 @@ menu ul {
 menu li {
   margin-bottom: 0.5rem;
 }
+*/
 
 
-/*
 menu > li {
   all: unset;
+}
+
+menu > li:hover {
+  background-color: var(--surface-container-highest);
 }
 
 menu {
@@ -229,4 +233,4 @@ menu > :nth-last-of-type(10) {
 
 menu > :nth-last-of-type(11) {
   ---type: 10;
-}*/
+}
