@@ -18,6 +18,16 @@
   font-family: var(--font);
 }
 
+.badge-expanded {
+  width: fit-content;
+  padding: 0 .5rem;
+  min-block-size: 1rem;
+  min-inline-size: 1rem;
+  font-size: .6875rem;
+  border-radius: 1rem;
+  margin-right: 0.25rem;
+}
+
 .badge.top {
   transform: translate(-50%, -100%);
 }

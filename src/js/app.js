@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     registerServiceWorker();
 
     //loadIndex().then(() => {  // Load the search index
-    // Now it's safe to search
+    // Now it's safe     to search
     //console.log(search("modular")); // <-- Test search here
     //}); 
 

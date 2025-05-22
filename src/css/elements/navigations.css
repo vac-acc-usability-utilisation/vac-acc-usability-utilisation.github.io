@@ -462,9 +462,14 @@ nav.tabbed>a {
   text-decoration: none;
 }
 
+nav.tabbed.tabs > a.active::before {
+  block-size: 0;
+}
+
 nav.tabbed>a.active {
   color: var(--on-secondary-container);
   background-color: var(--secondary-container);
+  border-bottom: none;
 }
 
 nav.tabbed>a.active >i {

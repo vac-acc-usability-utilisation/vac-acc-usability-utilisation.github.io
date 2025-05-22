@@ -4,8 +4,8 @@ import { applyTranslations, getCurrentLanguage } from './language.js';
 import { setupTabs } from './tabs.js';
 import { setupStageNavigation } from './stageNavigation.js';
 
-export function navigateTo(pageId, tabId) {
-  console.log('Navigating to Page:', pageId + "/" + tabId); // Debug: Log the page being navigated to
+export function navigateTo(pageId) {
+  console.log('Navigating to Page:', pageId); // Debug: Log the page being navigated to
 
   const main = document.querySelector('main');
   const appContainer = document.querySelector('#app'); // App container
@@ -17,7 +17,6 @@ export function navigateTo(pageId, tabId) {
 
   // Construct the file path
   const filePath = `${basePath}${pageId}.html`;
-
 
   fetch(filePath)
     .then(response => {
@@ -49,22 +48,16 @@ export function navigateTo(pageId, tabId) {
 
 export function loadPageFromHash() {
   const hash = window.location.hash.replace(/^#/, '');
-  const [areaId, pageId, tabId] = hash.split('/'); // Split the hash into levels
+  const [areaId, pageId] = hash.split('/'); // Split the hash into levels
 
   const resolvedPageId = pageId ? `${areaId}/${pageId}` : areaId || 'home'; // Combine areaId and pageId
-  const resolvedTabId = tabId || null; // Use tabId if present, otherwise null
 
   console.log('Hash:', hash); // Debug: Log the full hash
   console.log('Area ID:', areaId); // Debug: Log the area ID
   console.log('Page ID:', resolvedPageId); // Debug: Log the resolved page ID
-  console.log('Tab ID:', resolvedTabId); // Debug: Log the tab ID
 
-
-
-
-  navigateTo(resolvedPageId, resolvedTabId); // Navigate to the resolved page ID
+  navigateTo(resolvedPageId); // Navigate to the resolved page ID
 }
-
 
 // Load 404 content into the main section, but keep the hash in the URL
 function load404Page(incorrectHash) {

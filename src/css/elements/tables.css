@@ -5,6 +5,14 @@ table {
   text-align: start;
 }
 
+tr {
+  display: table-row;
+}
+
+td, th {
+  display: table-cell;
+}
+
 .scroll > table,
 table :is(thead, tbody, tfoot, tr, th, td) {
   background-color: inherit;
@@ -12,6 +20,9 @@ table :is(thead, tbody, tfoot, tr, th, td) {
 }
 
 :is(th, td) {
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden;    /* Hide overflowing content */
+  text-overflow: ellipsis; /* Add ellipsis (...) for overflowing text */
   inline-size: auto;
   text-align: inherit;
   padding: 0.5rem;
@@ -21,11 +32,64 @@ table :is(thead, tbody, tfoot, tr, th, td) {
   vertical-align: middle;
 }
 
-table.border > tbody > tr:not(:last-child) > td,
 thead > tr > th {
   border-block-end: 0.0625rem solid var(--outline);
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowing content */
+  text-overflow: ellipsis; /* Add ellipsis (...) for overflowing text */
+  max-width: 200px;
+  width: auto;
+} 
+
+thead > tr > th > button {
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowing content */
+  text-overflow: ellipsis; /* Add ellipsis (...) for overflowing text */
+  max-width: 200px;
+  width: auto;
+  /*justify-content: left;*/
+} 
+
+table.border > tbody > tr:not(:last-child) > td {
+  border-block-end: 0.0625rem solid var(--outline-variant);
 }
 
 tfoot > tr > th {
   border-block-start: 0.0625rem solid var(--outline);
+}
+
+table.selectable-rows {
+  width: 100%;
+}
+
+table.selectable-rows > tbody > tr {
+  position: relative;
+  height: 2.5rem;
+  width: 100%;
+  display: table-row;
+}
+
+
+
+table.selectable-rows > tbody > tr:hover {
+  cursor: pointer;
+}
+
+table.selectable-rows > tbody > tr::after {
+  display: none; /* Hide the pseudo-element by default */
+}
+
+
+table.selectable-rows > tbody > tr:hover::after {
+  content: '';
+  display: block; /* Keep it as a block-level element */
+  position: absolute; /* Ensure it does not affect the layout */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure it spans the full width of the row */
+  height: 100%; /* Match the row's height */
+  background-color: var(--scrim);
+  opacity: 0.08;
+  pointer-events: none; /* Prevent interactions */
+  box-sizing: border-box; /* Ensure padding/borders don't affect dimensions */
 }
