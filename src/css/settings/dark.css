@@ -12,7 +12,10 @@ body.dark {
   --on-tertiary: #333F43;
   --tertiary-container: #234C59;
   --on-tertiary-container: #C0E9F9;
-  
+  --warning: #dbc66f;
+  --on-warning: #393000;
+  --warning-container: #534600;
+  --on-warning-container: #f8e287;
   --error: #FFB4AB;
   --on-error: #690005;
   --error-container: #93000A;
