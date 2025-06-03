@@ -3,6 +3,7 @@ import { updateLayoutForPage } from './dynamic-layout.js';
 import { applyTranslations, getCurrentLanguage } from './language.js';
 import { setupTabs } from './tabs.js';
 import { setupStageNavigation } from './stageNavigation.js';
+import { setupTableInteractions } from './tableInteractions.js';
 
 export function navigateTo(pageId) {
   console.log('Navigating to Page:', pageId); // Debug: Log the page being navigated to
@@ -32,6 +33,7 @@ export function navigateTo(pageId) {
 
       setupTabs(); // Re-setup tabs for the new page
       setupStageNavigation();
+      setupTableInteractions();
 
       setTimeout(() => {
         window.scrollTo(0, 0);

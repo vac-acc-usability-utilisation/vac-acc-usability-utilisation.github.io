@@ -37,15 +37,13 @@ thead > tr > th {
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide overflowing content */
   text-overflow: ellipsis; /* Add ellipsis (...) for overflowing text */
-  max-width: 200px;
-  width: auto;
 } 
 
 thead > tr > th > button {
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide overflowing content */
   text-overflow: ellipsis; /* Add ellipsis (...) for overflowing text */
-  max-width: 200px;
+  max-width: 225px;
   width: auto;
   /*justify-content: left;*/
 } 
@@ -60,6 +58,7 @@ tfoot > tr > th {
 
 table.selectable-rows {
   width: 100%;
+  user-select: none;
 }
 
 table.selectable-rows > tbody > tr {
@@ -69,7 +68,10 @@ table.selectable-rows > tbody > tr {
   display: table-row;
 }
 
-
+table.selectable-rows > tbody > tr.active {
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+}
 
 table.selectable-rows > tbody > tr:hover {
   cursor: pointer;

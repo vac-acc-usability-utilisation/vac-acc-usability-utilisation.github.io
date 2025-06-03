@@ -13,9 +13,23 @@ div.grid article {
   width: 100%;
 }
 
+div.grid.selectable-grid {
+  user-select: none;
+}
+
+div.grid.selectable-grid article:hover {
+  cursor: pointer;
+}
+
 a.card  {
   text-decoration: none !important;
   border-radius: 0.75rem !important;
+}
+
+
+article.active {
+  background: var(--secondary-container);
+  color: var(--on-secondary-container);
 }
 
 article.small {
@@ -39,7 +53,6 @@ article.overview-card h2 {
 article.overview-card  .overview-card-edit-btn {
   display:  none;
 }
-
 
 article.overview-card:hover  .overview-card-edit-btn {
   display:  block;
