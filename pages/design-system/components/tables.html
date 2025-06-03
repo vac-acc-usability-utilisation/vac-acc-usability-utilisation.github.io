@@ -41,366 +41,371 @@
                     <li>Non-interactive elements (such as badges)</li>
                     <li>Tools to query and manipulate data</li>
                 </ul>
-                <hr>
-                <div class="space"></div>
-
-                <div class="row">
-                    <h3 class="font-title">Example table</h3>
-                    <div class="max"></div>
-                    <nav class="no-space">
-                        <button class="border left-round segmented-button fill">
-                            <i style="margin:0;">table_rows</i>
-                        </button>
-                        <button id="table-example-grid-view" class="border right-round segmented-button ">
-                            <i style="margin:0;">grid_view</i>
-                        </button>
-                    </nav>
-                </div>
-
                 
-                <div class="row table-filters">
-                    <button class="circle transparent ">
-                        <i class="on-surface-variant">search</i>
-                        <menu class="no-wrap right min">
-                            <div class="field large prefix">
-                                <i class="front">arrow_back</i>
-                                <input>
-                            </div>
-                        </menu>
-                    </button>
-                    <button class="chip ">Status <i class="tiny">arrow_drop_down</i></button>
-                    <button class="chip ">Tags <i class="tiny">arrow_drop_down</i></button>
-                    <button class="chip ">Created at <i class="tiny">arrow_drop_down</i></button>
-                    <button class="transparent small-padding">Clear filters</button>
-                </div>
-                <div class="row table-controls hide">
-                    <div class="row secondary-container round small-padding" style="padding-left: 0.5rem; width: 100%">
-                        <button class="circle transparent">
-                            <i>close</i>
+
+                <section class="lg xl xxl">
+                    <div class="row">
+                        <h3 class="font-title">Example table</h3>
+                        <div class="max"></div>
+                        <nav class="no-space">
+                            <button class="border left-round segmented-button fill">
+                                <i style="margin:0;">table_rows</i>
+                            </button>
+                            <button id="table-example-grid-view" class="border right-round segmented-button ">
+                                <i style="margin:0;">grid_view</i>
+                            </button>
+                        </nav>
+                    </div>
+
+
+                    <div class="row table-filters">
+                        <button class="circle transparent ">
+                            <i class="on-surface-variant">search</i>
+                            <menu class="no-wrap right min">
+                                <div class="field large prefix">
+                                    <i class="front">arrow_back</i>
+                                    <input>
+                                </div>
+                            </menu>
                         </button>
-                        <p class="font-label"><span class="numberRowsSelected"></span> selected</p>
-                        <div class="row" style="gap: 0.25rem;">
-                            <button class="small transparent">
-                                <i>edit</i>
-                                Edit
-                            </button>
-                            <button class="small transparent">
-                                <i>info</i>
-                                View details
-                            </button>
+                        <button class="chip ">Status <i class="tiny">arrow_drop_down</i></button>
+                        <button class="chip ">Tags <i class="tiny">arrow_drop_down</i></button>
+                        <button class="chip ">Created at <i class="tiny">arrow_drop_down</i></button>
+                        <button class="transparent small-padding">Clear filters</button>
+                    </div>
+                    <div class="row table-controls hide">
+                        <div class="row secondary-container round small-padding"
+                            style="padding-left: 0.5rem; width: 100%">
                             <button class="circle transparent">
-                                <i>more_vert</i>
+                                <i>close</i>
                             </button>
+                            <p class="font-label"><span class="numberRowsSelected"></span> selected</p>
+                            <div class="row" style="gap: 0.25rem;">
+                                <button class="small transparent">
+                                    <i>edit</i>
+                                    Edit
+                                </button>
+                                <button class="small transparent">
+                                    <i>info</i>
+                                    View details
+                                </button>
+                                <button class="circle transparent">
+                                    <i>more_vert</i>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <table class="border selectable-rows no-margin selectable-rows">
-                    <thead>
-                        <tr>
-                            <th>
-                                <button class="transparent no-padding bold no-margin"
-                                    style="margin-left: -8px !important;">ID</button>
-                                <button class="circle transparent margin-left no-margin"
-                                    style="margin-left: -8px !important;">
-                                    <i class="tiny">arrow_downward</i>
-                                </button>
-                            </th>
-                            <th>
-                                <button class="transparent small-padding bold" style="margin-left: -8px;">Name</button>
-                            </th>
-                            <th>
-                                <button class="transparent small-padding bold" style="margin-left: -8px;">Email</button>
-                            </th>
-                            <th>
-                                <button class="transparent small-padding bold"
-                                    style="margin-left: -8px;">Status</button>
-                            </th>
-                            <th>
-                                <button class="transparent small-padding bold no-margin" style="justify-content: left; "
-                                    title="Tags" style="margin-left: -16px;">
-                                    Tags
-                                </button>
-                            </th>
-                            <th>
-                                <button class="transparent small-padding bold" style="margin-left: -8px;">Created
-                                    at</button>
-                            </th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>001</td>
-                            <td>Saul Bass</td>
-                            <td><a>saul@company.com</a></td>
-                            <td><span style="color: var(--primary);">Active</span></td>
-                            <td>
-                                <span class="surface-container-highest badge-expanded">Engineering</span>
-                                <span class="surface-container-highest badge-expanded">Design</span>
-                                <span class="surface-container-highest badge-expanded">Support</span>
-                                <span class="surface-container-highest badge-expanded">Marketing</span>
-                            </td>
+                    <table class="border selectable-rows no-margin selectable-rows">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <button class="transparent no-padding bold no-margin"
+                                        style="margin-left: -8px !important;">ID</button>
+                                    <button class="circle transparent margin-left no-margin"
+                                        style="margin-left: -8px !important;">
+                                        <i class="tiny">arrow_downward</i>
+                                    </button>
+                                </th>
+                                <th>
+                                    <button class="transparent small-padding bold"
+                                        style="margin-left: -8px;">Name</button>
+                                </th>
+                                <th>
+                                    <button class="transparent small-padding bold"
+                                        style="margin-left: -8px;">Email</button>
+                                </th>
+                                <th>
+                                    <button class="transparent small-padding bold"
+                                        style="margin-left: -8px;">Status</button>
+                                </th>
+                                <th>
+                                    <button class="transparent small-padding bold no-margin"
+                                        style="justify-content: left; " title="Tags" style="margin-left: -16px;">
+                                        Tags
+                                    </button>
+                                </th>
+                                <th>
+                                    <button class="transparent small-padding bold" style="margin-left: -8px;">Created
+                                        at</button>
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>Saul Bass</td>
+                                <td><a>saul@company.com</a></td>
+                                <td><span style="color: var(--primary);">Active</span></td>
+                                <td>
+                                    <span class="surface-container-highest badge-expanded">Engineering</span>
+                                    <span class="surface-container-highest badge-expanded">Design</span>
+                                    <span class="surface-container-highest badge-expanded">Support</span>
+                                    <span class="surface-container-highest badge-expanded">Marketing</span>
+                                </td>
 
-                            <td>2024-01-15 10:42 AM</td>
-                            <td class="right-align">
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">edit</i>
-                                </button>
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">info</i>
-                                </button><button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">more_vert</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>Paula Scher</td>
-                            <td><a>paula@company.com</a></td>
-                            <td><span style="color: var(--secondary);">Pending</span></td>
-                            <td>
-                                <span class="surface-container-highest badge-expanded">Engineering</span>
-                                <span class="surface-container-highest badge-expanded">Design</span>
-                                <span class="surface-container-highest badge-expanded">Support</span>
-                                <span class="surface-container-highest badge-expanded">Marketing</span>
-                            </td>
-                            <td>2024-03-02 03:15 PM</td>
-                            <td class="right-align">
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">edit</i>
-                                </button>
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">info</i>
-                                </button><button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">more_vert</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>003</td>
-                            <td>Robert Bringhurst</td>
-                            <td><a>robert@company.com</a></td>
-                            <td><span style="color: var(--warning);">Suspended</span></td>
-                            <td>
-                                <span class="surface-container-highest badge-expanded">
-                                    Engineering
-                                </span>
-                                <span class="surface-container-highest badge-expanded">
-                                    Design
-                                </span>
-                            </td>
-                            <td>2023-11-21 08:05 AM</td>
-                            <td class="right-align">
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">edit</i>
-                                </button>
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">info</i>
-                                </button><button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">more_vert</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>004</td>
-                            <td>Saul Bass</td>
-                            <td><a>saul@company.com</a></td>
-                            <td><span style="color: var(--primary);">Active</span></td>
-                            <td>
-                                <span class="surface-container-highest badge-expanded">Engineering</span>
-                                <span class="surface-container-highest badge-expanded">Design</span>
-                                <span class="surface-container-highest badge-expanded">Support</span>
-                                <span class="surface-container-highest badge-expanded">Marketing</span>
-                            </td>
+                                <td>2024-01-15 10:42 AM</td>
+                                <td class="right-align">
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">edit</i>
+                                    </button>
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">info</i>
+                                    </button><button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">more_vert</i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>Paula Scher</td>
+                                <td><a>paula@company.com</a></td>
+                                <td><span style="color: var(--secondary);">Pending</span></td>
+                                <td>
+                                    <span class="surface-container-highest badge-expanded">Engineering</span>
+                                    <span class="surface-container-highest badge-expanded">Design</span>
+                                    <span class="surface-container-highest badge-expanded">Support</span>
+                                    <span class="surface-container-highest badge-expanded">Marketing</span>
+                                </td>
+                                <td>2024-03-02 03:15 PM</td>
+                                <td class="right-align">
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">edit</i>
+                                    </button>
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">info</i>
+                                    </button><button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">more_vert</i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>003</td>
+                                <td>Robert Bringhurst</td>
+                                <td><a>robert@company.com</a></td>
+                                <td><span style="color: var(--warning);">Suspended</span></td>
+                                <td>
+                                    <span class="surface-container-highest badge-expanded">
+                                        Engineering
+                                    </span>
+                                    <span class="surface-container-highest badge-expanded">
+                                        Design
+                                    </span>
+                                </td>
+                                <td>2023-11-21 08:05 AM</td>
+                                <td class="right-align">
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">edit</i>
+                                    </button>
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">info</i>
+                                    </button><button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">more_vert</i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>004</td>
+                                <td>Saul Bass</td>
+                                <td><a>saul@company.com</a></td>
+                                <td><span style="color: var(--primary);">Active</span></td>
+                                <td>
+                                    <span class="surface-container-highest badge-expanded">Engineering</span>
+                                    <span class="surface-container-highest badge-expanded">Design</span>
+                                    <span class="surface-container-highest badge-expanded">Support</span>
+                                    <span class="surface-container-highest badge-expanded">Marketing</span>
+                                </td>
 
-                            <td>2024-01-15 10:42 AM</td>
-                            <td class="right-align">
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">edit</i>
-                                </button>
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">info</i>
-                                </button><button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">more_vert</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>005</td>
-                            <td>Paula Scher</td>
-                            <td><a>paula@company.com</a></td>
-                            <td><span style="color: var(--secondary);">Pending</span></td>
-                            <td>
-                                <span class="surface-container-highest badge-expanded">Engineering</span>
-                                <span class="surface-container-highest badge-expanded">Design</span>
-                                <span class="surface-container-highest badge-expanded">Support</span>
-                                <span class="surface-container-highest badge-expanded">Marketing</span>
-                            </td>
-                            <td>2024-03-02 03:15 PM</td>
-                            <td class="right-align">
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">edit</i>
-                                </button>
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">info</i>
-                                </button><button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">more_vert</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>006</td>
-                            <td>Robert Bringhurst</td>
-                            <td><a>robert@company.com</a></td>
-                            <td><span style="color: var(--warning);">Suspended</span></td>
-                            <td>
-                                <span class="surface-container-highest badge-expanded">
-                                    Engineering
-                                </span>
-                                <span class="surface-container-highest badge-expanded">
-                                    Design
-                                </span>
-                            </td>
-                            <td>2023-11-21 08:05 AM</td>
-                            <td class="right-align">
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">edit</i>
-                                </button>
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">info</i>
-                                </button><button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">more_vert</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>007</td>
-                            <td>Saul Bass</td>
-                            <td><a>saul@company.com</a></td>
-                            <td><span style="color: var(--primary);">Active</span></td>
-                            <td>
-                                <span class="surface-container-highest badge-expanded">Engineering</span>
-                                <span class="surface-container-highest badge-expanded">Design</span>
-                                <span class="surface-container-highest badge-expanded">Support</span>
-                                <span class="surface-container-highest badge-expanded">Marketing</span>
-                            </td>
+                                <td>2024-01-15 10:42 AM</td>
+                                <td class="right-align">
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">edit</i>
+                                    </button>
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">info</i>
+                                    </button><button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">more_vert</i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>005</td>
+                                <td>Paula Scher</td>
+                                <td><a>paula@company.com</a></td>
+                                <td><span style="color: var(--secondary);">Pending</span></td>
+                                <td>
+                                    <span class="surface-container-highest badge-expanded">Engineering</span>
+                                    <span class="surface-container-highest badge-expanded">Design</span>
+                                    <span class="surface-container-highest badge-expanded">Support</span>
+                                    <span class="surface-container-highest badge-expanded">Marketing</span>
+                                </td>
+                                <td>2024-03-02 03:15 PM</td>
+                                <td class="right-align">
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">edit</i>
+                                    </button>
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">info</i>
+                                    </button><button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">more_vert</i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>006</td>
+                                <td>Robert Bringhurst</td>
+                                <td><a>robert@company.com</a></td>
+                                <td><span style="color: var(--warning);">Suspended</span></td>
+                                <td>
+                                    <span class="surface-container-highest badge-expanded">
+                                        Engineering
+                                    </span>
+                                    <span class="surface-container-highest badge-expanded">
+                                        Design
+                                    </span>
+                                </td>
+                                <td>2023-11-21 08:05 AM</td>
+                                <td class="right-align">
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">edit</i>
+                                    </button>
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">info</i>
+                                    </button><button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">more_vert</i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>007</td>
+                                <td>Saul Bass</td>
+                                <td><a>saul@company.com</a></td>
+                                <td><span style="color: var(--primary);">Active</span></td>
+                                <td>
+                                    <span class="surface-container-highest badge-expanded">Engineering</span>
+                                    <span class="surface-container-highest badge-expanded">Design</span>
+                                    <span class="surface-container-highest badge-expanded">Support</span>
+                                    <span class="surface-container-highest badge-expanded">Marketing</span>
+                                </td>
 
-                            <td>2024-01-15 10:42 AM</td>
-                            <td class="right-align">
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">edit</i>
-                                </button>
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">info</i>
-                                </button><button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">more_vert</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>008</td>
-                            <td>Paula Scher</td>
-                            <td><a>paula@company.com</a></td>
-                            <td><span style="color: var(--secondary);">Pending</span></td>
-                            <td>
-                                <span class="surface-container-highest badge-expanded">Engineering</span>
-                                <span class="surface-container-highest badge-expanded">Design</span>
-                                <span class="surface-container-highest badge-expanded">Support</span>
-                                <span class="surface-container-highest badge-expanded">Marketing</span>
-                            </td>
-                            <td>2024-03-02 03:15 PM</td>
-                            <td class="right-align">
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">edit</i>
-                                </button>
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">info</i>
-                                </button><button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">more_vert</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>009</td>
-                            <td>Robert Bringhurst</td>
-                            <td><a>robert@company.com</a></td>
-                            <td><span style="color: var(--warning);">Suspended</span></td>
-                            <td>
-                                <span class="surface-container-highest badge-expanded">
-                                    Engineering
-                                </span>
-                                <span class="surface-container-highest badge-expanded">
-                                    Design
-                                </span>
-                            </td>
-                            <td>2023-11-21 08:05 AM</td>
-                            <td class="right-align">
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">edit</i>
-                                </button>
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">info</i>
-                                </button><button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">more_vert</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>010</td>
-                            <td>Robert Bringhurst</td>
-                            <td><a>robert@company.com</a></td>
-                            <td><span style="color: var(--warning);">Suspended</span></td>
-                            <td>
-                                <span class="surface-container-highest badge-expanded">
-                                    Engineering
-                                </span>
-                                <span class="surface-container-highest badge-expanded">
-                                    Design
-                                </span>
-                            </td>
-                            <td>2023-11-21 08:05 AM</td>
-                            <td class="right-align">
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">edit</i>
-                                </button>
-                                <button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">info</i>
-                                </button><button class="circle transparent no-margin">
-                                    <i class="on-surface-variant">more_vert</i>
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="row right-align" style="gap: 2rem;">
-                    <span class="row" style="gap: 0.5rem;">
-                        <p class="font-label">Show</p>
-                        <div class="field border transparent">
+                                <td>2024-01-15 10:42 AM</td>
+                                <td class="right-align">
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">edit</i>
+                                    </button>
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">info</i>
+                                    </button><button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">more_vert</i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>008</td>
+                                <td>Paula Scher</td>
+                                <td><a>paula@company.com</a></td>
+                                <td><span style="color: var(--secondary);">Pending</span></td>
+                                <td>
+                                    <span class="surface-container-highest badge-expanded">Engineering</span>
+                                    <span class="surface-container-highest badge-expanded">Design</span>
+                                    <span class="surface-container-highest badge-expanded">Support</span>
+                                    <span class="surface-container-highest badge-expanded">Marketing</span>
+                                </td>
+                                <td>2024-03-02 03:15 PM</td>
+                                <td class="right-align">
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">edit</i>
+                                    </button>
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">info</i>
+                                    </button><button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">more_vert</i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>009</td>
+                                <td>Robert Bringhurst</td>
+                                <td><a>robert@company.com</a></td>
+                                <td><span style="color: var(--warning);">Suspended</span></td>
+                                <td>
+                                    <span class="surface-container-highest badge-expanded">
+                                        Engineering
+                                    </span>
+                                    <span class="surface-container-highest badge-expanded">
+                                        Design
+                                    </span>
+                                </td>
+                                <td>2023-11-21 08:05 AM</td>
+                                <td class="right-align">
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">edit</i>
+                                    </button>
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">info</i>
+                                    </button><button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">more_vert</i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>010</td>
+                                <td>Robert Bringhurst</td>
+                                <td><a>robert@company.com</a></td>
+                                <td><span style="color: var(--warning);">Suspended</span></td>
+                                <td>
+                                    <span class="surface-container-highest badge-expanded">
+                                        Engineering
+                                    </span>
+                                    <span class="surface-container-highest badge-expanded">
+                                        Design
+                                    </span>
+                                </td>
+                                <td>2023-11-21 08:05 AM</td>
+                                <td class="right-align">
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">edit</i>
+                                    </button>
+                                    <button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">info</i>
+                                    </button><button class="circle transparent no-margin">
+                                        <i class="on-surface-variant">more_vert</i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row right-align" style="gap: 2rem;">
+                        <span class="row" style="gap: 0.5rem;">
+                            <p class="font-label">Show</p>
+                            <div class="field border transparent">
 
-                            <label for="view-number" class="hide">Number of entries</label>
-                            <select name="view-number" id="view-number" class="no-margin">
-                                <option value="10">10</option>
-                                <option value="25">25</option>
-                                <option value="50">50</option>
-                                <option value="100">100</option>
-                            </select>
-                            <i class="small">arrow_drop_down</i>
+                                <label for="view-number" class="hide">Number of entries</label>
+                                <select name="view-number" id="view-number" class="no-margin">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                                <i class="small">arrow_drop_down</i>
+                            </div>
+                            <p class="font-label">entries</p>
+                        </span>
+                        <p class="font-label">1-10 of 99</p>
+                        <div class="row" style="gap: 0px;">
+                            <button class="circle transparent disabled " disabled><i
+                                    class="small">first_page</i></button>
+                            <button class="circle transparent disabled " disabled><i
+                                    class="small">chevron_left</i></button>
+                            <button class="circle transparent "><i class="small">chevron_right</i></button>
+                            <button class="circle transparent "><i class="small">last_page</i></button>
                         </div>
-                        <p class="font-label">entries</p>
-                    </span>
-                    <p class="font-label">1-10 of 99</p>
-                    <div class="row" style="gap: 0px;">
-                        <button class="circle transparent disabled " disabled><i class="small">first_page</i></button>
-                        <button class="circle transparent disabled " disabled><i class="small">chevron_left</i></button>
-                        <button class="circle transparent "><i class="small">chevron_right</i></button>
-                        <button class="circle transparent "><i class="small">last_page</i></button>
                     </div>
-                </div>
-                <div class="large-space"> </div>
-                <hr>
+                </section>
+                
 
-                <div class="space"></div>
-
+                <section class="xs sm md">
+                    
                 <div class="row">
                     <h3 class="font-title">Example table</h3>
                     <div class="max"></div>
@@ -414,13 +419,6 @@
                     </nav>
                 </div>
 
-                <!--
-                <div class="row">
-                    <div class="field large prefix round fill">
-                        <i class="front">search</i>
-                        <input placeholder="Search text">
-                    </div>
-                </div>-->
                 <div class="row table-filters">
                     <button class="circle transparent ">
                         <i class="on-surface-variant">search</i>
@@ -438,7 +436,7 @@
                     <div class="max"></div>
                     <button class="transparent small-padding">Sort by <i>arrow_drop_down</i></button>
                 </div>
-                 <div class="row table-controls hide">
+                <div class="row table-controls hide">
                     <div class="row secondary-container round small-padding" style="padding-left: 0.5rem; width: 100%">
                         <button class="circle transparent">
                             <i>close</i>
@@ -787,8 +785,9 @@
                         <button class="circle transparent "><i class="small">last_page</i></button>
                     </div>
                 </div>
+                </section>
                 <div class="large-space"> </div>
-                <hr>
+                
                 <div class="large-space"></div>
                 <div class="grid">
                     <a href="#" class="card sm12 md6 lg6 xl6">

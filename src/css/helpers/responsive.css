@@ -34,7 +34,7 @@
   .xl:not(.md),
   .xxl:not(.md) {
     display: none;
-  }
+  }       
 }
 
 /* Large (1240px - 1439px) */
