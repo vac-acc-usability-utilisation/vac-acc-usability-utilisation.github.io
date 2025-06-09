@@ -144,7 +144,7 @@ h6.large {
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 .overline {
@@ -243,7 +243,7 @@ dd {
 }
 
 @media only screen and (max-width: 600px) {
-  body, p {
+  body, p, .font-body {
     font-family: var(--body-sm-font-family);
     font-size: var(--body-sm-font-size);
     font-weight: var(--body-sm-font-weight);
@@ -277,7 +277,7 @@ dd {
 }
 
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  body, p {
+  body, p, .font-body {
     font-family: var(--body-md-font-family);
     font-size: var(--body-md-font-size);
     font-weight: var(--body-md-font-weight);
@@ -312,7 +312,7 @@ dd {
 }
 
 @media only screen and (min-width: 993px) {
-  body, p {
+  body, p, .font-body {
     font-family: var(--body-lg-font-family);
     font-size: var(--body-lg-font-size);
     font-weight: var(--body-lg-font-weight);

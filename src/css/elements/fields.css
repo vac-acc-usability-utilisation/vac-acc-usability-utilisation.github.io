@@ -578,3 +578,15 @@ input:disabled {
 .field > select:focus + i {
   z-index: 1;
 }
+
+
+/*Search field in menu*/ 
+:not(menu, [data-ui]):focus-within > menu {
+  border-radius: 0.25rem;
+}
+
+:not(menu, [data-ui]):focus-within > menu > .field {
+  
+  margin: 0;
+  padding: 4px;
+}

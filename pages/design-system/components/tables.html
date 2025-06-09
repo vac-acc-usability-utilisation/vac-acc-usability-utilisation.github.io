@@ -41,8 +41,9 @@
                     <li>Non-interactive elements (such as badges)</li>
                     <li>Tools to query and manipulate data</li>
                 </ul>
-                
-
+                <div class="space"></div>
+                <hr>
+                <div class="space"></div>
                 <section class="lg xl xxl">
                     <div class="row">
                         <h3 class="font-title">Example table</h3>
@@ -57,49 +58,58 @@
                         </nav>
                     </div>
 
-
-                    <div class="row table-filters">
-                        <button class="circle transparent ">
-                            <i class="on-surface-variant">search</i>
-                            <menu class="no-wrap right min">
-                                <div class="field large prefix">
-                                    <i class="front">arrow_back</i>
-                                    <input>
-                                </div>
-                            </menu>
-                        </button>
-                        <button class="chip ">Status <i class="tiny">arrow_drop_down</i></button>
-                        <button class="chip ">Tags <i class="tiny">arrow_drop_down</i></button>
-                        <button class="chip ">Created at <i class="tiny">arrow_drop_down</i></button>
-                        <button class="transparent small-padding">Clear filters</button>
-                    </div>
-                    <div class="row table-controls hide">
-                        <div class="row secondary-container round small-padding"
-                            style="padding-left: 0.5rem; width: 100%">
-                            <button class="circle transparent">
-                                <i>close</i>
-                            </button>
-                            <p class="font-label"><span class="numberRowsSelected"></span> selected</p>
-                            <div class="row" style="gap: 0.25rem;">
-                                <button class="small transparent">
-                                    <i>edit</i>
-                                    Edit
+                    <div
+                        style="position: sticky; top: 64px; background-color: var(--surface); z-index: 2; border-radius: 0;">
+                        <div class="row table-filters">
+                            <div>
+                                <button class="circle transparent ">
+                                    <i class="on-surface-variant">search</i>
+                                    <menu class="no-wrap right min">
+                                        <div class="field large prefix border">
+                                            <i class="front">arrow_back</i>
+                                            <input>
+                                        </div>
+                                    </menu>
                                 </button>
-                                <button class="small transparent">
-                                    <i>info</i>
-                                    View details
-                                </button>
+                                <button class="chip ">Status <i class="tiny">arrow_drop_down</i></button>
+                                <button class="chip ">Tags <i class="tiny">arrow_drop_down</i></button>
+                                <button class="chip ">Created at <i class="tiny">arrow_drop_down</i></button>
+                                <button class="transparent small-padding">Clear filters</button>
+                            </div>
+                            <div class="max"></div>
+                            <p class="font-label">
+                                99 entries
+                            </p>
+                        </div>
+                        <div class="row table-controls hide">
+                            <div class="row secondary-container round small-padding"
+                                style="padding-left: 0.5rem; width: 100%">
                                 <button class="circle transparent">
-                                    <i>more_vert</i>
+                                    <i>close</i>
                                 </button>
+                                <p class="font-label"><span class="numberRowsSelected"></span> selected</p>
+                                <div class="row" style="gap: 0.25rem;">
+                                    <button class="small transparent">
+                                        <i>edit</i>
+                                        Edit
+                                    </button>
+                                    <button class="small transparent">
+                                        <i>info</i>
+                                        View details
+                                    </button>
+                                    <button class="circle transparent">
+                                        <i>more_vert</i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
+                        <div class="space"></div>
                     </div>
                     <table class="border selectable-rows no-margin selectable-rows">
-                        <thead>
+                        <thead style="position: sticky; top: 128px; z-index: 2;">
                             <tr>
                                 <th>
-                                    <button class="transparent no-padding bold no-margin"
+                                    <button class="transparent no-padding no-margin"
                                         style="margin-left: -8px !important;">ID</button>
                                     <button class="circle transparent margin-left no-margin"
                                         style="margin-left: -8px !important;">
@@ -107,25 +117,22 @@
                                     </button>
                                 </th>
                                 <th>
-                                    <button class="transparent small-padding bold"
-                                        style="margin-left: -8px;">Name</button>
+                                    <button class="transparent small-padding" style="margin-left: -8px;">Name</button>
                                 </th>
                                 <th>
-                                    <button class="transparent small-padding bold"
-                                        style="margin-left: -8px;">Email</button>
+                                    <button class="transparent small-padding" style="margin-left: -8px;">Email</button>
                                 </th>
                                 <th>
-                                    <button class="transparent small-padding bold"
-                                        style="margin-left: -8px;">Status</button>
+                                    <button class="transparent small-padding" style="margin-left: -8px;">Status</button>
                                 </th>
                                 <th>
-                                    <button class="transparent small-padding bold no-margin"
-                                        style="justify-content: left; " title="Tags" style="margin-left: -16px;">
+                                    <button class="transparent small-padding no-margin" style="justify-content: left; "
+                                        title="Tags" style="margin-left: -16px;">
                                         Tags
                                     </button>
                                 </th>
-                                <th>
-                                    <button class="transparent small-padding bold" style="margin-left: -8px;">Created
+                                <th class="right-align">
+                                    <button class="transparent small-padding no-margin">Created
                                         at</button>
                                 </th>
                                 <th></th>
@@ -144,7 +151,7 @@
                                     <span class="surface-container-highest badge-expanded">Marketing</span>
                                 </td>
 
-                                <td>2024-01-15 10:42 AM</td>
+                                <td class="right-align">2024-01-15 10:42 AM</td>
                                 <td class="right-align">
                                     <button class="circle transparent no-margin">
                                         <i class="on-surface-variant">edit</i>
@@ -167,7 +174,7 @@
                                     <span class="surface-container-highest badge-expanded">Support</span>
                                     <span class="surface-container-highest badge-expanded">Marketing</span>
                                 </td>
-                                <td>2024-03-02 03:15 PM</td>
+                                <td class="right-align">2024-03-02 03:15 PM</td>
                                 <td class="right-align">
                                     <button class="circle transparent no-margin">
                                         <i class="on-surface-variant">edit</i>
@@ -192,7 +199,7 @@
                                         Design
                                     </span>
                                 </td>
-                                <td>2023-11-21 08:05 AM</td>
+                                <td class="right-align">2023-11-21 08:05 AM</td>
                                 <td class="right-align">
                                     <button class="circle transparent no-margin">
                                         <i class="on-surface-variant">edit</i>
@@ -216,7 +223,7 @@
                                     <span class="surface-container-highest badge-expanded">Marketing</span>
                                 </td>
 
-                                <td>2024-01-15 10:42 AM</td>
+                                <td class="right-align">2024-01-15 10:42 AM</td>
                                 <td class="right-align">
                                     <button class="circle transparent no-margin">
                                         <i class="on-surface-variant">edit</i>
@@ -239,7 +246,7 @@
                                     <span class="surface-container-highest badge-expanded">Support</span>
                                     <span class="surface-container-highest badge-expanded">Marketing</span>
                                 </td>
-                                <td>2024-03-02 03:15 PM</td>
+                                <td class="right-align">2024-03-02 03:15 PM</td>
                                 <td class="right-align">
                                     <button class="circle transparent no-margin">
                                         <i class="on-surface-variant">edit</i>
@@ -264,7 +271,7 @@
                                         Design
                                     </span>
                                 </td>
-                                <td>2023-11-21 08:05 AM</td>
+                                <td class="right-align">2023-11-21 08:05 AM</td>
                                 <td class="right-align">
                                     <button class="circle transparent no-margin">
                                         <i class="on-surface-variant">edit</i>
@@ -288,7 +295,7 @@
                                     <span class="surface-container-highest badge-expanded">Marketing</span>
                                 </td>
 
-                                <td>2024-01-15 10:42 AM</td>
+                                <td class="right-align">2024-01-15 10:42 AM</td>
                                 <td class="right-align">
                                     <button class="circle transparent no-margin">
                                         <i class="on-surface-variant">edit</i>
@@ -311,7 +318,7 @@
                                     <span class="surface-container-highest badge-expanded">Support</span>
                                     <span class="surface-container-highest badge-expanded">Marketing</span>
                                 </td>
-                                <td>2024-03-02 03:15 PM</td>
+                                <td class="right-align">2024-03-02 03:15 PM</td>
                                 <td class="right-align">
                                     <button class="circle transparent no-margin">
                                         <i class="on-surface-variant">edit</i>
@@ -336,7 +343,7 @@
                                         Design
                                     </span>
                                 </td>
-                                <td>2023-11-21 08:05 AM</td>
+                                <td class="right-align">2023-11-21 08:05 AM</td>
                                 <td class="right-align">
                                     <button class="circle transparent no-margin">
                                         <i class="on-surface-variant">edit</i>
@@ -361,7 +368,7 @@
                                         Design
                                     </span>
                                 </td>
-                                <td>2023-11-21 08:05 AM</td>
+                                <td class="right-align">2023-11-21 08:05 AM</td>
                                 <td class="right-align">
                                     <button class="circle transparent no-margin">
                                         <i class="on-surface-variant">edit</i>
@@ -402,393 +409,408 @@
                         </div>
                     </div>
                 </section>
-                
+
 
                 <section class="xs sm md">
-                    
-                <div class="row">
-                    <h3 class="font-title">Example table</h3>
-                    <div class="max"></div>
-                    <nav class="no-space">
-                        <button id="table-example-table-view" class="border left-round segmented-button ">
-                            <i style="margin:0;">table_rows</i>
-                        </button>
-                        <button class="border right-round segmented-button fill">
-                            <i style="margin:0;">grid_view</i>
-                        </button>
-                    </nav>
-                </div>
 
-                <div class="row table-filters">
-                    <button class="circle transparent ">
-                        <i class="on-surface-variant">search</i>
-                        <menu class="no-wrap right min">
-                            <div class="field large prefix">
-                                <i class="front">arrow_back</i>
-                                <input>
-                            </div>
-                        </menu>
-                    </button>
-                    <button class="chip">Status <i class="tiny">arrow_drop_down</i></button>
-                    <button class="chip">Tags <i class="tiny">arrow_drop_down</i></button>
-                    <button class="chip">Created at <i class="tiny">arrow_drop_down</i></button>
-                    <button class="transparent small-padding">Clear filters</button>
-                    <div class="max"></div>
-                    <button class="transparent small-padding">Sort by <i>arrow_drop_down</i></button>
-                </div>
-                <div class="row table-controls hide">
-                    <div class="row secondary-container round small-padding" style="padding-left: 0.5rem; width: 100%">
-                        <button class="circle transparent">
-                            <i>close</i>
+                    <div class="row">
+                        <h3 class="font-title">Example table</h3>
+                        <div class="max"></div>
+                        <nav class="no-space">
+                            <button id="table-example-table-view" class="border left-round segmented-button ">
+                                <i style="margin:0;">table_rows</i>
+                            </button>
+                            <button class="border right-round segmented-button fill">
+                                <i style="margin:0;">grid_view</i>
+                            </button>
+                        </nav>
+                    </div>
+
+                    <div class="row table-filters">
+                        <button class="circle transparent ">
+                            <i class="on-surface-variant">search</i>
+                            <menu class="no-wrap right min">
+                                <div class="field large prefix">
+                                    <i class="front">arrow_back</i>
+                                    <input>
+                                </div>
+                            </menu>
                         </button>
-                        <p class="font-label"><span class="numberRowsSelected"></span> selected</p>
-                        <div class="row" style="gap: 0.25rem;">
-                            <button class="small transparent">
-                                <i>edit</i>
-                                Edit
-                            </button>
-                            <button class="small transparent">
-                                <i>info</i>
-                                View details
-                            </button>
+                        <button class="chip">Status <i class="tiny">arrow_drop_down</i></button>
+                        <button class="chip">Tags <i class="tiny">arrow_drop_down</i></button>
+                        <button class="chip">Created at <i class="tiny">arrow_drop_down</i></button>
+                        <button class="transparent small-padding">Clear filters</button>
+                        <div class="max"></div>
+                        <button class="transparent small-padding">Sort by <i>arrow_drop_down</i></button>
+                    </div>
+                    <div class="row table-controls hide">
+                        <div class="row secondary-container round small-padding"
+                            style="padding-left: 0.5rem; width: 100%">
                             <button class="circle transparent">
-                                <i>more_vert</i>
+                                <i>close</i>
                             </button>
+                            <p class="font-label"><span class="numberRowsSelected"></span> selected</p>
+                            <div class="row" style="gap: 0.25rem;">
+                                <button class="small transparent">
+                                    <i>edit</i>
+                                    Edit
+                                </button>
+                                <button class="small transparent">
+                                    <i>info</i>
+                                    View details
+                                </button>
+                                <button class="circle transparent">
+                                    <i>more_vert</i>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="grid selectable-grid">
-                    <article class="round wave xs12 sm12 md12 lg6 xl6">
-                        <div class="row">
-                            <div>
-                                <p class="font-label" style="line-height: 0.25rem;">001</p>
-                                <p style="line-height: 0.25rem; font-size: 18px;">Saul Bass</p>
+                    <div class="grid selectable-grid">
+                        <article class="round wave xs12 sm12 md12 lg6 xl6">
+                            <div class="row">
+                                <div>
+                                    <p class="font-label" style="line-height: 0.25rem;">001</p>
+                                    <p style="line-height: 0.25rem; font-size: 18px;">Saul Bass</p>
+                                </div>
+                                <div class="max"></div>
+                                <button class="circle transparent no-margin" style="z-index: 2;">
+                                    <i class="on-surface-variant">more_vert</i>
+                                </button>
                             </div>
-                            <div class="max"></div>
-                            <button class="circle transparent no-margin" style="z-index: 2;">
-                                <i class="on-surface-variant">more_vert</i>
-                            </button>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Status</span>
-                            <div class="max"></div>
-                            <span style="color: var(--primary);">Active</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Created at</span>
-                            <div class="max"></div>
-                            <span>2024-01-15 10:42 AM</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin">
-                            <span class="surface-container-lowest badge-expanded">Engineering</span>
-                            <span class="surface-container-lowest badge-expanded">Design</span>
-                            <span class="surface-container-lowest badge-expanded">Support</span>
-                            <span class="surface-container-lowest badge-expanded">Marketing</span>
-                        </div>
-                    </article>
-                    <article class="round wave xs12 sm12 md12 lg6 xl6">
-                        <div class="row">
-                            <div>
-                                <p class="font-label" style="line-height: 0.25rem;">002</p>
-                                <p style="line-height: 0.25rem; font-size: 18px;">Paula Scher</p>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Status</span>
+                                <div class="max"></div>
+                                <span style="color: var(--primary);">Active</span>
                             </div>
-                            <div class="max"></div>
-                            <button class="circle transparent no-margin" style="z-index: 2;">
-                                <i class="on-surface-variant">more_vert</i>
-                            </button>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Status</span>
-                            <div class="max"></div>
-                            <span style="color: var(--secondary);">Pending</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Created at</span>
-                            <div class="max"></div>
-                            <span>2024-03-02 03:15 PM</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin">
-                            <span class="surface-container-lowest badge-expanded">Engineering</span>
-                            <span class="surface-container-lowest badge-expanded">Design</span>
-                            <span class="surface-container-lowest badge-expanded">Support</span>
-                            <span class="surface-container-lowest badge-expanded">Marketing</span>
-                        </div>
-                    </article>
-                    <article class="round wave xs12 sm12 md12 lg6 xl6">
-                        <div class="row">
-                            <div>
-                                <p class="font-label" style="line-height: 0.25rem;">003</p>
-                                <p style="line-height: 0.25rem; font-size: 18px;">Robert Bringhurst</p>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Created at</span>
+                                <div class="max"></div>
+                                <span>2024-01-15 10:42 AM</span>
                             </div>
-                            <div class="max"></div>
-                            <button class="circle transparent no-margin" style="z-index: 2;">
-                                <i class="on-surface-variant">more_vert</i>
-                            </button>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Status</span>
-                            <div class="max"></div>
-                            <span style="color: var(--warning);">Suspended</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Created at</span>
-                            <div class="max"></div>
-                            <span>2023-11-21 08:05 AM</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin">
-                            <span class="surface-container-lowest badge-expanded">Engineering</span>
-                            <span class="surface-container-lowest badge-expanded">Design</span>
-                        </div>
-                    </article>
-                    <article class="round wave xs12 sm12 md12 lg6 xl6">
-                        <div class="row">
-                            <div>
-                                <p class="font-label" style="line-height: 0.25rem;">004</p>
-                                <p style="line-height: 0.25rem; font-size: 18px;">Saul Bass</p>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin">
+                                <span class="surface-container-lowest badge-expanded">Engineering</span>
+                                <span class="surface-container-lowest badge-expanded">Design</span>
+                                <span class="surface-container-lowest badge-expanded">Support</span>
+                                <span class="surface-container-lowest badge-expanded">Marketing</span>
                             </div>
-                            <div class="max"></div>
-                            <button class="circle transparent no-margin" style="z-index: 2;">
-                                <i class="on-surface-variant">more_vert</i>
-                            </button>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Status</span>
-                            <div class="max"></div>
-                            <span style="color: var(--primary);">Active</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Created at</span>
-                            <div class="max"></div>
-                            <span>2024-01-15 10:42 AM</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin">
-                            <span class="surface-container-lowest badge-expanded">Engineering</span>
-                            <span class="surface-container-lowest badge-expanded">Design</span>
-                            <span class="surface-container-lowest badge-expanded">Support</span>
-                            <span class="surface-container-lowest badge-expanded">Marketing</span>
-                        </div>
-                    </article>
-                    <article class="round wave xs12 sm12 md12 lg6 xl6">
-                        <div class="row">
-                            <div>
-                                <p class="font-label" style="line-height: 0.25rem;">005</p>
-                                <p style="line-height: 0.25rem; font-size: 18px;">Paula Scher</p>
+                        </article>
+                        <article class="round wave xs12 sm12 md12 lg6 xl6">
+                            <div class="row">
+                                <div>
+                                    <p class="font-label" style="line-height: 0.25rem;">002</p>
+                                    <p style="line-height: 0.25rem; font-size: 18px;">Paula Scher</p>
+                                </div>
+                                <div class="max"></div>
+                                <button class="circle transparent no-margin" style="z-index: 2;">
+                                    <i class="on-surface-variant">more_vert</i>
+                                </button>
                             </div>
-                            <div class="max"></div>
-                            <button class="circle transparent no-margin" style="z-index: 2;">
-                                <i class="on-surface-variant">more_vert</i>
-                            </button>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Status</span>
-                            <div class="max"></div>
-                            <span style="color: var(--secondary);">Pending</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Created at</span>
-                            <div class="max"></div>
-                            <span>2024-03-02 03:15 PM</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin">
-                            <span class="surface-container-lowest badge-expanded">Engineering</span>
-                            <span class="surface-container-lowest badge-expanded">Design</span>
-                            <span class="surface-container-lowest badge-expanded">Support</span>
-                            <span class="surface-container-lowest badge-expanded">Marketing</span>
-                        </div>
-                    </article>
-                    <article class="round wave xs12 sm12 md12 lg6 xl6">
-                        <div class="row">
-                            <div>
-                                <p class="font-label" style="line-height: 0.25rem;">006</p>
-                                <p style="line-height: 0.25rem; font-size: 18px;">Robert Bringhurst</p>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Status</span>
+                                <div class="max"></div>
+                                <span style="color: var(--secondary);">Pending</span>
                             </div>
-                            <div class="max"></div>
-                            <button class="circle transparent no-margin" style="z-index: 2;">
-                                <i class="on-surface-variant">more_vert</i>
-                            </button>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Status</span>
-                            <div class="max"></div>
-                            <span style="color: var(--warning);">Suspended</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Created at</span>
-                            <div class="max"></div>
-                            <span>2023-11-21 08:05 AM</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin">
-                            <span class="surface-container-lowest badge-expanded">Engineering</span>
-                            <span class="surface-container-lowest badge-expanded">Design</span>
-                        </div>
-                    </article>
-                    <article class="round wave xs12 sm12 md12 lg6 xl6">
-                        <div class="row">
-                            <div>
-                                <p class="font-label" style="line-height: 0.25rem;">007</p>
-                                <p style="line-height: 0.25rem; font-size: 18px;">Saul Bass</p>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Created at</span>
+                                <div class="max"></div>
+                                <span>2024-03-02 03:15 PM</span>
                             </div>
-                            <div class="max"></div>
-                            <button class="circle transparent no-margin" style="z-index: 2;">
-                                <i class="on-surface-variant">more_vert</i>
-                            </button>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Status</span>
-                            <div class="max"></div>
-                            <span style="color: var(--primary);">Active</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Created at</span>
-                            <div class="max"></div>
-                            <span>2024-01-15 10:42 AM</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin">
-                            <span class="surface-container-lowest badge-expanded">Engineering</span>
-                            <span class="surface-container-lowest badge-expanded">Design</span>
-                            <span class="surface-container-lowest badge-expanded">Support</span>
-                            <span class="surface-container-lowest badge-expanded">Marketing</span>
-                        </div>
-                    </article>
-                    <article class="round wave xs12 sm12 md12 lg6 xl6">
-                        <div class="row">
-                            <div>
-                                <p class="font-label" style="line-height: 0.25rem;">008</p>
-                                <p style="line-height: 0.25rem; font-size: 18px;">Paula Scher</p>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin">
+                                <span class="surface-container-lowest badge-expanded">Engineering</span>
+                                <span class="surface-container-lowest badge-expanded">Design</span>
+                                <span class="surface-container-lowest badge-expanded">Support</span>
+                                <span class="surface-container-lowest badge-expanded">Marketing</span>
                             </div>
-                            <div class="max"></div>
-                            <button class="circle transparent no-margin" style="z-index: 2;">
-                                <i class="on-surface-variant">more_vert</i>
-                            </button>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Status</span>
-                            <div class="max"></div>
-                            <span style="color: var(--secondary);">Pending</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Created at</span>
-                            <div class="max"></div>
-                            <span>2024-03-02 03:15 PM</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin">
-                            <span class="surface-container-lowest badge-expanded">Engineering</span>
-                            <span class="surface-container-lowest badge-expanded">Design</span>
-                            <span class="surface-container-lowest badge-expanded">Support</span>
-                            <span class="surface-container-lowest badge-expanded">Marketing</span>
-                        </div>
-                    </article>
-                    <article class="round wave xs12 sm12 md12 lg6 xl6">
-                        <div class="row">
-                            <div>
-                                <p class="font-label" style="line-height: 0.25rem;">009</p>
-                                <p style="line-height: 0.25rem; font-size: 18px;">Robert Bringhurst</p>
+                        </article>
+                        <article class="round wave xs12 sm12 md12 lg6 xl6">
+                            <div class="row">
+                                <div>
+                                    <p class="font-label" style="line-height: 0.25rem;">003</p>
+                                    <p style="line-height: 0.25rem; font-size: 18px;">Robert Bringhurst</p>
+                                </div>
+                                <div class="max"></div>
+                                <button class="circle transparent no-margin" style="z-index: 2;">
+                                    <i class="on-surface-variant">more_vert</i>
+                                </button>
                             </div>
-                            <div class="max"></div>
-                            <button class="circle transparent no-margin" style="z-index: 2;">
-                                <i class="on-surface-variant">more_vert</i>
-                            </button>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Status</span>
-                            <div class="max"></div>
-                            <span style="color: var(--warning);">Suspended</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Created at</span>
-                            <div class="max"></div>
-                            <span>2023-11-21 08:05 AM</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin">
-                            <span class="surface-container-lowest badge-expanded">Engineering</span>
-                            <span class="surface-container-lowest badge-expanded">Design</span>
-                        </div>
-                    </article>
-                    <article class="round wave xs12 sm12 md12 lg6 xl6">
-                        <div class="row">
-                            <div>
-                                <p class="font-label" style="line-height: 0.25rem;">010</p>
-                                <p style="line-height: 0.25rem; font-size: 18px;">Robert Bringhurst</p>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Status</span>
+                                <div class="max"></div>
+                                <span style="color: var(--warning);">Suspended</span>
                             </div>
-                            <div class="max"></div>
-                            <button class="circle transparent no-margin" style="z-index: 2;">
-                                <i class="on-surface-variant">more_vert</i>
-                            </button>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Status</span>
-                            <div class="max"></div>
-                            <span style="color: var(--warning);">Suspended</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin tiny-margin">
-                            <span class="font-label" style="font-weight: 700;">Created at</span>
-                            <div class="max"></div>
-                            <span>2023-11-21 08:05 AM</span>
-                        </div>
-                        <hr class="top-margin bottom-margin small-margin">
-                        <div class="row top-margin">
-                            <span class="surface-container-lowest badge-expanded">Engineering</span>
-                            <span class="surface-container-lowest badge-expanded">Design</span>
-                        </div>
-                    </article>
-                </div>
-                <div class="row right-align" style="gap: 2rem;">
-                    <span class="row" style="gap: 0.5rem;">
-                        <p class="font-label">Show</p>
-                        <div class="field border transparent">
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Created at</span>
+                                <div class="max"></div>
+                                <span>2023-11-21 08:05 AM</span>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin">
+                                <span class="surface-container-lowest badge-expanded">Engineering</span>
+                                <span class="surface-container-lowest badge-expanded">Design</span>
+                            </div>
+                        </article>
+                        <article class="round wave xs12 sm12 md12 lg6 xl6">
+                            <div class="row">
+                                <div>
+                                    <p class="font-label" style="line-height: 0.25rem;">004</p>
+                                    <p style="line-height: 0.25rem; font-size: 18px;">Saul Bass</p>
+                                </div>
+                                <div class="max"></div>
+                                <button class="circle transparent no-margin" style="z-index: 2;">
+                                    <i class="on-surface-variant">more_vert</i>
+                                </button>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Status</span>
+                                <div class="max"></div>
+                                <span style="color: var(--primary);">Active</span>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Created at</span>
+                                <div class="max"></div>
+                                <span>2024-01-15 10:42 AM</span>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin">
+                                <span class="surface-container-lowest badge-expanded">Engineering</span>
+                                <span class="surface-container-lowest badge-expanded">Design</span>
+                                <span class="surface-container-lowest badge-expanded">Support</span>
+                                <span class="surface-container-lowest badge-expanded">Marketing</span>
+                            </div>
+                        </article>
+                        <article class="round wave xs12 sm12 md12 lg6 xl6">
+                            <div class="row">
+                                <div>
+                                    <p class="font-label" style="line-height: 0.25rem;">005</p>
+                                    <p style="line-height: 0.25rem; font-size: 18px;">Paula Scher</p>
+                                </div>
+                                <div class="max"></div>
+                                <button class="circle transparent no-margin" style="z-index: 2;">
+                                    <i class="on-surface-variant">more_vert</i>
+                                </button>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Status</span>
+                                <div class="max"></div>
+                                <span style="color: var(--secondary);">Pending</span>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Created at</span>
+                                <div class="max"></div>
+                                <span>2024-03-02 03:15 PM</span>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin">
+                                <span class="surface-container-lowest badge-expanded">Engineering</span>
+                                <span class="surface-container-lowest badge-expanded">Design</span>
+                                <span class="surface-container-lowest badge-expanded">Support</span>
+                                <span class="surface-container-lowest badge-expanded">Marketing</span>
+                            </div>
+                        </article>
+                        <article class="round wave xs12 sm12 md12 lg6 xl6">
+                            <div class="row">
+                                <div>
+                                    <p class="font-label" style="line-height: 0.25rem;">006</p>
+                                    <p style="line-height: 0.25rem; font-size: 18px;">Robert Bringhurst</p>
+                                </div>
+                                <div class="max"></div>
+                                <button class="circle transparent no-margin" style="z-index: 2;">
+                                    <i class="on-surface-variant">more_vert</i>
+                                </button>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Status</span>
+                                <div class="max"></div>
+                                <span style="color: var(--warning);">Suspended</span>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Created at</span>
+                                <div class="max"></div>
+                                <span>2023-11-21 08:05 AM</span>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin">
+                                <span class="surface-container-lowest badge-expanded">Engineering</span>
+                                <span class="surface-container-lowest badge-expanded">Design</span>
+                            </div>
+                        </article>
+                        <article class="round wave xs12 sm12 md12 lg6 xl6">
+                            <div class="row">
+                                <div>
+                                    <p class="font-label" style="line-height: 0.25rem;">007</p>
+                                    <p style="line-height: 0.25rem; font-size: 18px;">Saul Bass</p>
+                                </div>
+                                <div class="max"></div>
+                                <button class="circle transparent no-margin" style="z-index: 2;">
+                                    <i class="on-surface-variant">more_vert</i>
+                                </button>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Status</span>
+                                <div class="max"></div>
+                                <span style="color: var(--primary);">Active</span>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Created at</span>
+                                <div class="max"></div>
+                                <span>2024-01-15 10:42 AM</span>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin">
+                                <span class="surface-container-lowest badge-expanded">Engineering</span>
+                                <span class="surface-container-lowest badge-expanded">Design</span>
+                                <span class="surface-container-lowest badge-expanded">Support</span>
+                                <span class="surface-container-lowest badge-expanded">Marketing</span>
+                            </div>
+                        </article>
+                        <article class="round wave xs12 sm12 md12 lg6 xl6">
+                            <div class="row">
+                                <div>
+                                    <p class="font-label" style="line-height: 0.25rem;">008</p>
+                                    <p style="line-height: 0.25rem; font-size: 18px;">Paula Scher</p>
+                                </div>
+                                <div class="max"></div>
+                                <button class="circle transparent no-margin" style="z-index: 2;">
+                                    <i class="on-surface-variant">more_vert</i>
+                                </button>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Status</span>
+                                <div class="max"></div>
+                                <span style="color: var(--secondary);">Pending</span>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Created at</span>
+                                <div class="max"></div>
+                                <span>2024-03-02 03:15 PM</span>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin">
+                                <span class="surface-container-lowest badge-expanded">Engineering</span>
+                                <span class="surface-container-lowest badge-expanded">Design</span>
+                                <span class="surface-container-lowest badge-expanded">Support</span>
+                                <span class="surface-container-lowest badge-expanded">Marketing</span>
+                            </div>
+                        </article>
+                        <article class="round wave xs12 sm12 md12 lg6 xl6">
+                            <div class="row">
+                                <div>
+                                    <p class="font-label" style="line-height: 0.25rem;">009</p>
+                                    <p style="line-height: 0.25rem; font-size: 18px;">Robert Bringhurst</p>
+                                </div>
+                                <div class="max"></div>
+                                <button class="circle transparent no-margin" style="z-index: 2;">
+                                    <i class="on-surface-variant">more_vert</i>
+                                </button>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Status</span>
+                                <div class="max"></div>
+                                <span style="color: var(--warning);">Suspended</span>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Created at</span>
+                                <div class="max"></div>
+                                <span>2023-11-21 08:05 AM</span>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin">
+                                <span class="surface-container-lowest badge-expanded">Engineering</span>
+                                <span class="surface-container-lowest badge-expanded">Design</span>
+                            </div>
+                        </article>
+                        <article class="round wave xs12 sm12 md12 lg6 xl6">
+                            <div class="row">
+                                <div>
+                                    <p class="font-label" style="line-height: 0.25rem;">010</p>
+                                    <p style="line-height: 0.25rem; font-size: 18px;">Robert Bringhurst</p>
+                                </div>
+                                <div class="max"></div>
+                                <button class="circle transparent no-margin" style="z-index: 2;">
+                                    <i class="on-surface-variant">more_vert</i>
+                                </button>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Status</span>
+                                <div class="max"></div>
+                                <span style="color: var(--warning);">Suspended</span>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin tiny-margin">
+                                <span class="font-label" style="font-weight: 700;">Created at</span>
+                                <div class="max"></div>
+                                <span>2023-11-21 08:05 AM</span>
+                            </div>
+                            <hr class="top-margin bottom-margin small-margin">
+                            <div class="row top-margin">
+                                <span class="surface-container-lowest badge-expanded">Engineering</span>
+                                <span class="surface-container-lowest badge-expanded">Design</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row right-align" style="gap: 2rem;">
+                        <span class="row" style="gap: 0.5rem;">
+                            <p class="font-label">Show</p>
+                            <div class="field border transparent">
 
-                            <label for="view-number" class="hide">Number of entries</label>
-                            <select name="view-number" id="view-number" class="no-margin">
-                                <option value="10">10</option>
-                                <option value="25">25</option>
-                                <option value="50">50</option>
-                                <option value="100">100</option>
-                            </select>
-                            <i class="small">arrow_drop_down</i>
+                                <label for="view-number" class="hide">Number of entries</label>
+                                <select name="view-number" id="view-number" class="no-margin">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                                <i class="small">arrow_drop_down</i>
+                            </div>
+                            <p class="font-label">entries</p>
+                        </span>
+                        <p class="font-label">1-10 of 99</p>
+                        <div class="row" style="gap: 0px;">
+                            <button class="circle transparent disabled " disabled><i
+                                    class="small">first_page</i></button>
+                            <button class="circle transparent disabled " disabled><i
+                                    class="small">chevron_left</i></button>
+                            <button class="circle transparent "><i class="small">chevron_right</i></button>
+                            <button class="circle transparent "><i class="small">last_page</i></button>
                         </div>
-                        <p class="font-label">entries</p>
-                    </span>
-                    <p class="font-label">1-10 of 99</p>
-                    <div class="row" style="gap: 0px;">
-                        <button class="circle transparent disabled " disabled><i class="small">first_page</i></button>
-                        <button class="circle transparent disabled " disabled><i class="small">chevron_left</i></button>
-                        <button class="circle transparent "><i class="small">chevron_right</i></button>
-                        <button class="circle transparent "><i class="small">last_page</i></button>
                     </div>
-                </div>
                 </section>
+
+
+                <h2 class="font-title">
+                    Resources
+                </h2>
+                <ul>
+                    <li><a href="https://m2.material.io/components/data-tables">Material Design 2 Data Tables</a></li>
+                    <li><a href="https://material.angular.dev/components/table/overview">Angular Material Tables</a>
+                    </li>
+                    <li><a href="https://wet-boew.github.io/GCWeb/components/gc-table/gc-table-en.html">GC Web
+                            (Canada.ca design pattern) Tables</a></li>
+                </ul>
+
                 <div class="large-space"> </div>
-                
-                <div class="large-space"></div>
+                <!---
                 <div class="grid">
                     <a href="#" class="card sm12 md6 lg6 xl6">
                         <article class="round wave">
@@ -810,16 +832,103 @@
 
                         </article>
                     </a>
-                </div>
+                </div>-->
             </div>
             <div class="large-padding page" data-page="specs" id="specs">
-                <h5>Specs</h5>
+                <h2 class="font-title">Specs</h2>
+                <table>
+
+                </table>
             </div>
             <div class="large-padding page" data-page="guidelines" id="guidelines">
-                <h5>Guidelines</h5>
+                <h2 class="font-title">Usage</h2>
+                <p>Data tables display information in a grid-like format of rows and columns. They organize information
+                    in a way that’s easy to scan so that users can look for patterns and develop insights from data.</p>
+                <p>Data tables can contain:</p>
+                <ul>
+                    <li>Interactive components (such as chips, buttons, or menus)</li>
+                    <li>Non-interactive elements (such as badges)</li>
+                    <li>Tools to query and manipulate data</li>
+                </ul>
+                <div class="space"></div>
+                <h3 class="font-title">Principles</h3>
+                <ul>
+                    <li><span class="bold">Organized:</span> Information should be organized in a meaningful way, such
+                        as hierarchy or alphabetization.</li>
+                    <li><span class="bold">Interactive:</span> Data tables should allow user interaction so that a data
+                        display is customizable and interactive.</li>
+                    <li><span class="bold">Intuitive: </span> Data tables should be easy to use, with a logical
+                        structure that makes content easy to understand.</li>
+                </ul>
+                <div class="space"></div>
+                <h2 class="font-title">Anatomy</h2>
+                <ol>
+                    <li>Header row</li>
+                    <li>Rows</li>
+                    <li>Pagination</li>
+                    <li>Sort button</li>
+                    <li>Entry count</li>
+                    <li>Container</li>
+                </ol>
+                <div class="space"></div>
+                <h2 class="font-title">Table elements</h2>
+                <h3 class="font-body bold">Baseline elements</h3>
+                <p>Column header names describe the type of content displayed in each column. Each row contains data
+                    related to a single entity. </p>
+                <div class="space"></div>
+                <h3 class="font-body bold">Interactive elements</h3>
+                <p>Data tables can include interactive elements, such as:</p>
+                <ul>
+                    <li>Sorting (on columns)</li>
+                    <li>Icons that communicate alerts</li>
+                    <li>Pagination</li>
+                    <li>Filter chips: Controls that manipulate how table data is displayed should be placed directly
+                        above or below a table.</li>
+                </ul>
+                <div class="space"></div>
+                <hr>
+                <div class="space"></div>
+                <h2 class="font-title">Columns</h2>
+                <h3 class="font-body bold">Height and padding</h3>
+                <p>The baseline row height is 52dp, and the column header row height is 56dp.</p>
+                <div class="small-space"></div>
+                <h3 class="font-body bold">Padding</h3>
+                <p>There is 32dp or more of padding between columns. There is 16dp padding on the left and right side of
+                    each header name.</p>
+                <div class="space"></div>
+                <hr>
+                <div class="space"></div>
+                <h3 class="font-body bold">Text</h3>
+                <p>Column header text uses a medium weight (600) font to differentiate from row text.</p>
+                <p>Text that is longer than the column width is truncated with an ellipsis. On hover, a tooltip shows
+                    the full name.</p>
+                <div class="space"></div>
+                <hr>
+                <div class="space"></div>
+                <h3 class="font-body bold">Sorting</h2>
+                    <p>To help users sort information, column can be displayed sorting by default.</p>
+                    <p>To indicate which column is sorted by default, place a downward or upward arrow icon next to the
+                        column header’s name.</p>
+                    <div class="space"></div>
+                    <h3 class="font-body bold">Reversing sort order</h3>
+                    <p>To reverse the sort order of a column, a user taps the header name or arrow icon. Upon sorting,
+                        the arrow icon reverses direction.</p>
+                    <div class="space"></div>
+                    <hr>
+                    <div class="space"></div>
+                    <h3 class="font-body bold">Sorting and filtering with a progress indicator</h3>
+                    <p>A linear progress indicator is used in data tables when sorting or filtering is initiated. The
+                        progress indicator communicates to users that sorting is in process.</p>
+                    <div class="space"></div>
+                    <hr>
+                    <div class="space"></div>
+                    <h3 class="font-body bold">Selecting rows</h3>
+                    <p>When a row single-clicked, the row becomes selected, the row should display a background color.</p>
+                    <p>The tables filters are replaced by a toolbar. The toolbar displays a button to dismiss the selection, the number of entries selected, and actions a user can take on all the select entries.</p>
+                    <p>Ctrl+click allows users to select and deselect individual rows. Shift+click allows users to select and deselect a range of rows.</p>
             </div>
             <div class="large-padding page" data-page="accessibility" id="accessibility">
-                <h5>Accessibility</h5>
+                <h2 class="font-title">Accessibility</h2>
             </div>
         </div>
     </section>
