@@ -137,7 +137,6 @@ table.selectable-rows>tbody>tr::after {
   /* Hide the pseudo-element by default */
 }
 
-
 table.selectable-rows>tbody>tr:hover::after {
   content: '';
   display: block;
@@ -161,4 +160,11 @@ table.selectable-rows>tbody>tr:hover::after {
 table.selectable-rows>tbody>tr:last-of-type:hover::after {
  
   border-radius: 0 0 1rem 1rem;
+}
+
+
+.overflow-scroll {
+  max-width: 319px;
+  overflow-x: scroll;
+  text-overflow: unset;
 }

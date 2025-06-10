@@ -48,7 +48,7 @@
                     <div class="row">
                         <h3 class="font-title">Example table</h3>
                         <div class="max"></div>
-                        <nav class="no-space">
+                        <nav class="no-space lg xl xxl">
                             <button class="border left-round segmented-button fill">
                                 <i style="margin:0;">table_rows</i>
                             </button>
@@ -58,9 +58,9 @@
                         </nav>
                     </div>
 
-                    <div
-                        style="position: sticky; top: 64px; background-color: var(--surface); z-index: 2; border-radius: 0;">
-                        <div class="row table-filters">
+                    <div class="small-padding top-padding bottom-padding"
+                        style="position: sticky; top: 64px; background-color: var(--surface); z-index: 11; border-radius: 0; ">
+                        <div class="row table-filters no-margin">
                             <div>
                                 <button class="circle transparent ">
                                     <i class="on-surface-variant">search</i>
@@ -71,9 +71,26 @@
                                         </div>
                                     </menu>
                                 </button>
-                                <button class="chip ">Status <i class="tiny">arrow_drop_down</i></button>
-                                <button class="chip ">Tags <i class="tiny">arrow_drop_down</i></button>
-                                <button class="chip ">Created at <i class="tiny">arrow_drop_down</i></button>
+                                <button class="chip ">
+                                    Status <i class="tiny">arrow_drop_down</i>
+                                    <menu>
+                                        <li>Active</li>
+                                        <li>Pending</li>
+                                        <li>Suspended</li>
+                                    </menu>
+                                </button>
+                                <button class="chip ">
+                                    Roles<i class="tiny">arrow_drop_down</i>
+                                    <menu>
+                                        <li>Engineering</li>
+                                        <li>Design</li>
+                                        <li>Support</li>
+                                        <li>Marketing</li>
+                                    </menu>
+                                </button>
+                                <button class="chip ">Created at <i class="tiny">arrow_drop_down</i>
+
+                                </button>
                                 <button class="transparent small-padding">Clear filters</button>
                             </div>
                             <div class="max"></div>
@@ -81,9 +98,8 @@
                                 99 entries
                             </p>
                         </div>
-                        <div class="row table-controls hide">
-                            <div class="row secondary-container round small-padding"
-                                style="padding-left: 0.5rem; width: 100%">
+                        <div class="row table-controls hide no-margin">
+                            <div class="row secondary-container round small-padding max" style="padding-left: 0.5rem;">
                                 <button class="circle transparent">
                                     <i>close</i>
                                 </button>
@@ -103,10 +119,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="space"></div>
                     </div>
-                    <table class="border selectable-rows no-margin selectable-rows">
-                        <thead style="position: sticky; top: 128px; z-index: 2;">
+                    <table class="border selectable-rows no-margin">
+                        <thead style="position: sticky; top: 136px; z-index: 10;">
                             <tr>
                                 <th>
                                     <button class="transparent no-padding no-margin"
@@ -119,32 +134,32 @@
                                 <th>
                                     <button class="transparent small-padding" style="margin-left: -8px;">Name</button>
                                 </th>
-                                <th>
+                                <th class="xl xxl">
                                     <button class="transparent small-padding" style="margin-left: -8px;">Email</button>
                                 </th>
                                 <th>
                                     <button class="transparent small-padding" style="margin-left: -8px;">Status</button>
                                 </th>
-                                <th>
+                                <th style="max-width: 120px; overflow: scroll; text-overflow: unset;">
                                     <button class="transparent small-padding no-margin" style="justify-content: left; "
                                         title="Tags" style="margin-left: -16px;">
-                                        Tags
+                                        Roles
                                     </button>
                                 </th>
                                 <th class="right-align">
                                     <button class="transparent small-padding no-margin">Created
                                         at</button>
                                 </th>
-                                <th></th>
+                                <th><span class="hide">Actions</span> </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>001</td>
                                 <td>Saul Bass</td>
-                                <td><a>saul@company.com</a></td>
+                                <td class="xl xxl"><a>saul@company.com</a></td>
                                 <td><span style="color: var(--primary);">Active</span></td>
-                                <td>
+                                <td class="overflow-scroll">
                                     <span class="surface-container-highest badge-expanded">Engineering</span>
                                     <span class="surface-container-highest badge-expanded">Design</span>
                                     <span class="surface-container-highest badge-expanded">Support</span>
@@ -166,12 +181,13 @@
                             <tr>
                                 <td>002</td>
                                 <td>Paula Scher</td>
-                                <td><a>paula@company.com</a></td>
+                                <td class="xl xxl"><a>paula@company.com</a></td>
                                 <td><span style="color: var(--secondary);">Pending</span></td>
-                                <td>
+                                <td class="overflow-scroll">
                                     <span class="surface-container-highest badge-expanded">Engineering</span>
                                     <span class="surface-container-highest badge-expanded">Design</span>
                                     <span class="surface-container-highest badge-expanded">Support</span>
+                                    <span class="surface-container-highest badge-expanded">Marketing</span>
                                     <span class="surface-container-highest badge-expanded">Marketing</span>
                                 </td>
                                 <td class="right-align">2024-03-02 03:15 PM</td>
@@ -189,7 +205,7 @@
                             <tr>
                                 <td>003</td>
                                 <td>Robert Bringhurst</td>
-                                <td><a>robert@company.com</a></td>
+                                <td class="xl xxl"><a>robert@company.com</a></td>
                                 <td><span style="color: var(--warning);">Suspended</span></td>
                                 <td>
                                     <span class="surface-container-highest badge-expanded">
@@ -214,9 +230,9 @@
                             <tr>
                                 <td>004</td>
                                 <td>Saul Bass</td>
-                                <td><a>saul@company.com</a></td>
+                                <td class="xl xxl"><a>saul@company.com</a></td>
                                 <td><span style="color: var(--primary);">Active</span></td>
-                                <td>
+                                <td class="overflow-scroll">
                                     <span class="surface-container-highest badge-expanded">Engineering</span>
                                     <span class="surface-container-highest badge-expanded">Design</span>
                                     <span class="surface-container-highest badge-expanded">Support</span>
@@ -238,9 +254,9 @@
                             <tr>
                                 <td>005</td>
                                 <td>Paula Scher</td>
-                                <td><a>paula@company.com</a></td>
+                                <td class="xl xxl"><a>paula@company.com</a></td>
                                 <td><span style="color: var(--secondary);">Pending</span></td>
-                                <td>
+                                <td class="overflow-scroll">
                                     <span class="surface-container-highest badge-expanded">Engineering</span>
                                     <span class="surface-container-highest badge-expanded">Design</span>
                                     <span class="surface-container-highest badge-expanded">Support</span>
@@ -261,7 +277,7 @@
                             <tr>
                                 <td>006</td>
                                 <td>Robert Bringhurst</td>
-                                <td><a>robert@company.com</a></td>
+                                <td class="xl xxl"><a>robert@company.com</a></td>
                                 <td><span style="color: var(--warning);">Suspended</span></td>
                                 <td>
                                     <span class="surface-container-highest badge-expanded">
@@ -286,7 +302,7 @@
                             <tr>
                                 <td>007</td>
                                 <td>Saul Bass</td>
-                                <td><a>saul@company.com</a></td>
+                                <td class="xl xxl"><a>saul@company.com</a></td>
                                 <td><span style="color: var(--primary);">Active</span></td>
                                 <td>
                                     <span class="surface-container-highest badge-expanded">Engineering</span>
@@ -310,7 +326,7 @@
                             <tr>
                                 <td>008</td>
                                 <td>Paula Scher</td>
-                                <td><a>paula@company.com</a></td>
+                                <td class="xl xxl"><a>paula@company.com</a></td>
                                 <td><span style="color: var(--secondary);">Pending</span></td>
                                 <td>
                                     <span class="surface-container-highest badge-expanded">Engineering</span>
@@ -332,8 +348,8 @@
                             </tr>
                             <tr>
                                 <td>009</td>
-                                <td>Robert Bringhurst</td>
-                                <td><a>robert@company.com</a></td>
+                                <td >Robert Bringhurst</td>
+                                <td class="xl xxl"><a>robert@company.com</a></td>
                                 <td><span style="color: var(--warning);">Suspended</span></td>
                                 <td>
                                     <span class="surface-container-highest badge-expanded">
@@ -358,7 +374,7 @@
                             <tr>
                                 <td>010</td>
                                 <td>Robert Bringhurst</td>
-                                <td><a>robert@company.com</a></td>
+                                <td class="xl xxl"><a>robert@company.com</a></td>
                                 <td><span style="color: var(--warning);">Suspended</span></td>
                                 <td>
                                     <span class="surface-container-highest badge-expanded">
@@ -416,7 +432,7 @@
                     <div class="row">
                         <h3 class="font-title">Example table</h3>
                         <div class="max"></div>
-                        <nav class="no-space">
+                        <nav class="no-space lg xl xxl">
                             <button id="table-example-table-view" class="border left-round segmented-button ">
                                 <i style="margin:0;">table_rows</i>
                             </button>
@@ -437,7 +453,7 @@
                             </menu>
                         </button>
                         <button class="chip">Status <i class="tiny">arrow_drop_down</i></button>
-                        <button class="chip">Tags <i class="tiny">arrow_drop_down</i></button>
+                        <button class="chip">Roles <i class="tiny">arrow_drop_down</i></button>
                         <button class="chip">Created at <i class="tiny">arrow_drop_down</i></button>
                         <button class="transparent small-padding">Clear filters</button>
                         <div class="max"></div>
@@ -923,12 +939,93 @@
                     <hr>
                     <div class="space"></div>
                     <h3 class="font-body bold">Selecting rows</h3>
-                    <p>When a row single-clicked, the row becomes selected, the row should display a background color.</p>
-                    <p>The tables filters are replaced by a toolbar. The toolbar displays a button to dismiss the selection, the number of entries selected, and actions a user can take on all the select entries.</p>
-                    <p>Ctrl+click allows users to select and deselect individual rows. Shift+click allows users to select and deselect a range of rows.</p>
+                    <p>When a row single-clicked, the row becomes selected, the row should display a background color.
+                    </p>
+                    <p>The tables filters are replaced by a toolbar. The toolbar displays a button to dismiss the
+                        selection, the number of entries selected, and actions a user can take on all the select
+                        entries.</p>
+                    <p>Ctrl+click allows users to select and deselect individual rows. Shift+click allows users to
+                        select and deselect a range of rows.</p>
+                    <div class="space"></div>
+                    <hr>
+                    <div class="space"></div>
+                    <h3 class="font-body bold">Sticky filters and table header</h3>
+                    <p>Table filters, toolbar, and table heading should be sticky and fixed to the top of the page when
+                        the page is scrolled.</p>
+                    <div class="space"></div>
+                    <hr>
+                    <div class="space"></div>
+                    <h3 class="font-body bold">Responsive card views</h3>
+                    <div class="space"></div>
+                    <p>At smaller screen sizes, tables should convert to cards. Cards should contain no more than 5
+                        pieces of information. As well, a card view should only contain two columns of cards.</p>
+                    <p>At larger screen sizes, a segmented button allows users to toggle between a table and a card
+                        view.</p>
             </div>
             <div class="large-padding page" data-page="accessibility" id="accessibility">
-                <h2 class="font-title">Accessibility</h2>
+                <h2 class="font-title">Tables Accessility Checklist</h2>
+                <ul class="checklist">
+                    <li><span class="bold">Header Tag:</span> Table headers MUST be designated with
+                        <code>&lt;th&gt;</code>.
+                    </li>
+                    <li><span class="bold">Meaningful Header:</span> Data table header text MUST accurately describe the
+                        category of the
+                        corresponding data cells.</li>
+                    <li><span class="bold">Header and Data Cell Associations</span>: Table data cells MUST be associated
+                        with their corresponding
+                        header cells.
+                        <br>
+                        <div class="tiny-space"></div>
+                        <span class="bold">Note:</span> Use of scope (&lt;th&gt; scope="col"&gt; and &lt;th&gt;
+                        scope="row"&gt;) is highly
+                        recommended, though not always necessary (i.e. if all cells in the first row are marked
+                        as <th> without scope, most modern screen readers will infer that the scope is the
+                            column below each header cell).
+                    </li>
+                    <li><span class="bold">Group Header Associations:</span> Table data group headers (if any) MUST be
+                        associated with their corresponding data cell groups (e.g. via scope="rowgroup" or
+                        scope="colgroup").</li>
+                    <li><span class="bold">Complex Header Associations:</span> Header/data associations that cannot be
+                        designated with <code>&lt;th&gt;</code> and scope MUST be designated with the header and id
+                        attributes.</li>
+                    <li><span class="bold">Nested or Split Tables:</span> Data table headers and data associations MUST
+                        NOT be referenced across nested, merged, or separate tables.</li>
+                    <li><span class="bold">Tables:</span> Tabular data SHOULD be represented in a
+                        <code>&lt;table&gt;</code>.
+                        <br>
+                        <div class="tiny-space"></div>
+                        <span class="bold">Note:</span> Even if the data are not represented in a table, WCAG 1.3.1
+                        requires the data to be associated with their labels.
+                    </li>
+                    <li><span class="bold">Caption:</span> Data tables SHOULD have a programmatically associated
+                        <caption> or name (e.g. via aria-label or aria-labelledby).
+                            <br>
+                            <div class="tiny-space"></div>
+                            <span class="bold">Note:</span> In most circumstances, <code>&lt;caption&gt;</code> is
+                            preferred, because it is
+                            the native method of giving a name to a table, and the <code>&lt;caption&gt;</code> is
+                            visible and
+                            available to all users by default.
+                    </li>
+                    <li><span class="bold">Meaningful Caption:</span> The name or <code>&lt;caption&gt;</code> of a data
+                        table SHOULD describe the identity or purpose of the table accurately, meaningfully, and
+                        succinctly.</li>
+                    <li><span class="bold">Unique Caption:</span> The name or <code>&lt;caption&gt;</code> of each data
+                        table SHOULD be unique within the context of other tables on the same page.</li>
+
+                    <li><span class="bold">Avoid Layout Tables:</span> Tables SHOULD NOT be used for the purpose of
+                        purely visual (non-data) layout.</li>
+                    <li><span class="bold">Avoid Headers in Layout Tables:</span> Layout tables MUST NOT contain
+                        headers.</li>
+                </ul>
+                <div class="space"></div>
+                <h2 class="font-title">Resources</h2>
+                <ul>
+                    <li><a href="https://material.angular.dev/components/table/overview#accessibility">Angular Material
+                            Tables Accessiblity</a></li>
+                    <li><a href="https://dequeuniversity.com/checklists/web/tables">Accessibility Techniques for Tables
+                            (Deque University)</a></li>
+                </ul>
             </div>
         </div>
     </section>
