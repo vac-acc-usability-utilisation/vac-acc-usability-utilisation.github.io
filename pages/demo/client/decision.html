@@ -263,7 +263,7 @@
                         <div class="space"></div>
                         <ul class="list border" style="border: none;">
                             <li>Intake
-                                
+
                                 <span class="font-title-sm" style="background-color: var(--primary-container); 
                                 width: fit-content;
                                 padding: 0 .5rem;
@@ -704,7 +704,8 @@
                     </div>
 
                     <div class="field border d-flex" style="width: 100%; min-width: 180px;  flex-direction: column;">
-                        <label for="source" class="font-label">Source <span style="color: var(--error); font-size: 12px;">*</span></label>
+                        <label for="source" class="font-label">Source <span
+                                style="color: var(--error); font-size: 12px;">*</span></label>
 
 
                         <select name="source" id="source" class="max">
@@ -743,7 +744,8 @@
                     <div class="space"></div>
                     <div class="field border d-flex"
                         style="width: 100%; min-width: 180px; max-width: 40px;  flex-direction: column;">
-                        <label for="app-received-date" class="font-label">SSSD <span style="color: var(--error); font-size: 12px;">*</span> </label>
+                        <label for="app-received-date" class="font-label">SSSD <span
+                                style="color: var(--error); font-size: 12px;">*</span> </label>
 
 
                         <input name="app-received-date" id="app-received-date" type="date" class="max">
@@ -774,69 +776,130 @@
                     <h2 class="font-title">Adjudication</h2>
                     <div class="space"></div>
 
+
+
                     <div style="height: calc(100vh - 18rem);  overflow-y: scroll; border-radius: 0;">
+                        <div class="tiny-space"></div>
+                        <div class="row">
+                            <p>Instructions</p>
+                            <div class="max"></div>
+                            <i>keyboard_arrow_down</i>
+                        </div>
+
+                        <div class="field border d-flex textarea bottom-margin no-margin"
+                            style="width: 100%; min-width: 180px;  flex-direction: column;">
+                            <label for="next-stage-route" class="font-label">Instructions</label>
+
+                            <textarea
+                                placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sint sed maiores. Omnis aliquid ipsum, impedit sint sed maiores..."
+                                rows="8" autocomplete="off" 
+                                style=" height: 7.5rem;"></textarea>
+
+                        </div>
+                        <div class="row top-margin tiny-margin right-align">
+                            <button class="transparent circle"><i class="on-surface-variant">expand_content</i></button>
+                            <div class="max"></div>
+                            <button class="transparent border"><i>edit</i> Edit</button>
+                        </div>
+
+                        <div class="space"></div>
+
+                        <hr>
+
+                        <div class="space"></div>
+
                         <a><i style="margin-right: 4px;">add</i>Add tracking work item</a>
-                    
-                    <div class="tiny-space"></div>
-                    <p>Complete decision on application component(s). (required) </p>
-                    <button class="primary-container">Allowance - Exceptional Incapacity</button>
-                    <div class="space"></div>
-                    <div class="field border d-flex" style="width: 100%; min-width: 180px;  flex-direction: column;">
-                        <label for="decision-code" class="font-label">Decision code <span style="color: var(--error); font-size: 12px;">*</span></label>
+
+                        <div class="tiny-space"></div>
+                        <p>Complete decision on application component(s). (required) </p>
+                        <button class="primary-container">Allowance - Exceptional Incapacity</button>
+                        <div class="space"></div>
+                        <div class="field border d-flex"
+                            style="width: 100%; min-width: 180px;  flex-direction: column;">
+                            <label for="decision-code" class="font-label">Decision code <span
+                                    style="color: var(--error); font-size: 12px;">*</span></label>
 
 
-                        <select name="decision-code" id="decision-code" class="max">
-                            <option value="1">Decision Pending</option>
-                            <option value="2">Favourable</option>
-                            <option value="3">No Decision</option>
-                            <option value="4">Unfavourable</option>
-                            <option value="5">VRAB Override</option>
-                        </select>
+                            <select name="decision-code" id="decision-code" class="max">
+                                <option value="1">Decision Pending</option>
+                                <option value="2">Favourable</option>
+                                <option value="3">No Decision</option>
+                                <option value="4">Unfavourable</option>
+                                <option value="5">VRAB Override</option>
+                            </select>
 
+
+                        </div>
+                        <div class="field border d-flex"
+                            style="width: 100%; min-width: 180px;  flex-direction: column;">
+                            <label for="decision-reason" class="font-label">Decision Reason</label>
+
+
+                            <select name="decision-reason" id="decision-reason" class="max">
+                                <option value="1"></option>
+                                <option value="2">Client Request</option>
+                                <option value="3">Death of pensioner</option>
+                                <option value="4">Error correction</option>
+                                <option value="5">For accounting purposes</option>
+                                <option value="6">Ruling not required</option>
+                                <option value="7">VRAB reconsideration denied</option>
+                            </select>
+
+
+                        </div>
+
+                        <div class="field border d-flex"
+                            style="width: 100%; min-width: 180px; max-width: 40px;  flex-direction: column;">
+                            <label for="decision-date" class="font-label">Decision date <span
+                                    style="color: var(--error); font-size: 12px;">*</span></label>
+
+
+                            <input name="decision-date" id="decision-date" type="date" class="max">
+
+
+
+                        </div>
+
+                        <hr>
+                        <div class="tiny-space"></div>
+
+                        <p>Create your decision letter</p>
+                        <div class="tiny-space"></div>
+                        <a><i style="margin-right: 4px;">open_in_new</i> Program rates</a>
+                        <div class="tiny-space"></div>
+                        <button class="primary-container">Create document</button>
+                        <div class="small-space"></div>
+                        <hr>
+                        <div class="tiny-space"></div>
+                        <p class="font-label">Options for next stage</p>
+                        <div class="field border d-flex"
+                            style="width: 100%; min-width: 180px;  flex-direction: column;">
+                            <label for="next-stage-route" class="font-label">Route </label>
+
+
+                            <select name="next-stage-route" id="next-stage-route" class="max">
+                                <option value="1"> </option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+
+
+                        </div>
+                        <div class="field border d-flex"
+                            style="width: 100%; min-width: 180px;  flex-direction: column;">
+                            <label for="next-stage-route" class="font-label">Instructions</label>
+
+                            <div class="field border label textarea no-margin"><textarea placeholder="" cols="4"
+                                    autocomplete="off"></textarea></div>
+
+
+                        </div>
 
                     </div>
-                    <div class="field border d-flex" style="width: 100%; min-width: 180px;  flex-direction: column;">
-                        <label for="decision-reason" class="font-label">Decision Reason</label>
 
 
-                        <select name="decision-reason" id="decision-reason" class="max">
-                            <option value="1"></option>
-                            <option value="2">Client Request</option>
-                            <option value="3">Death of pensioner</option>
-                            <option value="4">Error correction</option>
-                            <option value="5">For accounting purposes</option>
-                            <option value="6">Ruling not required</option>
-                            <option value="7">VRAB reconsideration denied</option>
-                        </select>
-
-
-                    </div>
-
-                    <div class="field border d-flex"
-                        style="width: 100%; min-width: 180px; max-width: 40px;  flex-direction: column;">
-                        <label for="decision-date" class="font-label">Decision date <span style="color: var(--error); font-size: 12px;">*</span></label>
-
-
-                        <input name="decision-date" id="decision-date" type="date" class="max">
-
-
-
-                    </div>
-
-                    <hr> <div class="tiny-space"></div>
-
-                    <p>Create your decision letter</p>
-                    <div class="tiny-space"></div>
-                    <a><i style="margin-right: 4px;">open_in_new</i> Program rates</a>
-                    <div class="tiny-space"></div>
-                    <button class="primary-container">Create document</button>
-                    <div class="large-space"></div>
-                    <hr>
-                    <div class="space"></div>
-                    <p>Options for next stage</p>
-                    </div>
-                    
-                    
 
 
                 </div>
@@ -849,10 +912,14 @@
                     <div class="space"></div>
                     <button class="primary-container" id="next-to-payment">
                         <span>Continue <i class="tiny right-align">arrow_drop_down</i></span>
-                        <menu class="top" style="transform: scale(1) translateY(-100%); width: 300px; height: 76px;">
-                            <li style="display: flex; flex: auto; height: 20px; align-items: center; padding: 8px 16px;">Move to Payment/Distribution</li>
-                            <li style="display: flex; flex: auto; height: 20px; align-items: center; padding: 8px 16px;">Complete</li>
-                          </menu>
+                        <menu class="top" style="transform: scale(1) translateY(-100%); width: 300px; height: 84px;">
+                            <li
+                                style="display: flex; flex: auto; height: 20px; align-items: center; padding: 8px 16px;">
+                                Move to Payment/Distribution</li>
+                            <li
+                                style="display: flex; flex: auto; height: 20px; align-items: center; padding: 8px 16px;">
+                                Complete</li>
+                        </menu>
                     </button>
                 </div>
 
