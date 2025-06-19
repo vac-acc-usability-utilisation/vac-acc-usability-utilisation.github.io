@@ -348,7 +348,7 @@
                             </tr>
                             <tr>
                                 <td>009</td>
-                                <td >Robert Bringhurst</td>
+                                <td>Robert Bringhurst</td>
                                 <td class="xl xxl"><a>robert@company.com</a></td>
                                 <td><span style="color: var(--warning);">Suspended</span></td>
                                 <td>
@@ -852,8 +852,99 @@
             </div>
             <div class="large-padding page" data-page="specs" id="specs">
                 <h2 class="font-title">Specs</h2>
-                <table>
+                <div class="space"></div>
+                <table class="border no-margin">
+                    <thead>
+                        <tr>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Description
+                            </th>
+                            <th>
+                                Value
+                            </th>
 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Table / Background color</td>
+                            <td>–</td>
+                            <td><code>surface</code></td>
+                        </tr>
+                        <tr>
+                            <td>Table / Border radius</td>
+                            <td>–</td>
+                            <td><code>1rem</code> / <code>16px</code></td>
+                        </tr>
+                        <tr>
+                            <td>Table / Max width</td>
+                            <td>–</td>
+                            <td><code>77.4375rem</code> / <code>1239px</code></td>
+                        </tr>
+                        <tr>
+                            <td>Table / Header / Background color</td>
+                            <td>–</td>
+                            <td><code>surface-container-low</code></td>
+                        </tr>
+                        <tr>
+                            <td>Table / Header / Height</td>
+                            <td>–</td>
+                            <td><code>4rem</code> / <code>64px</code></td>
+                        </tr>
+                        <tr>
+                            <td>Table / Header / Hover</td>
+                            <td>–</td>
+                            <td><code>scrim</code> at <code>0.08</code> opacity</td>
+                        </tr>
+                        <tr>
+                            <td>Table / Header / Pressed</td>
+                            <td>Ripple</td>
+                            <td><code>scrim</code> at <code>0.1</code> opacity</td>
+                        </tr>
+                         <tr>
+                            <td>Table / Header / Background color</td>
+                            <td>–</td>
+                            <td><code>surface-container-low</code></td>
+                        </tr>
+                        <tr>
+                            <td>Table / Header / Font size</td>
+                            <td>–</td>
+                            <td><code>label</code> / <code>0.875rem</code> / <code>14px</code></td>
+                        </tr>
+                         <tr>
+                            <td>Table / Header / Font weight</td>
+                            <td>–</td>
+                            <td><code>500</code></td>
+                        </tr>
+                        <tr>
+                            <td>Table / Selectable row / Hover</td>
+                            <td>Text becomes <code>on-secondary-container</code></td>
+                            <td><code>scrim</code> at <code>0.08</code> opacity</td>
+                        </tr>
+                        <tr>
+                            <td>Table / Selectable row / Selected (active)</td>
+                            <td>Text becomes <code>on-secondary-container</code></td>
+                            <td><code>secondary-container</code></td>
+                        </tr>
+                        <tr>
+                            <td>Table / Selectable row / Pressed </td>
+                            <td>Ripple effect</code></td>
+                            <td><code>scrim</code> at <code>0.1</code> opacity</td>
+                        </tr>
+                        <tr>
+                            <td>Table / Selectable row / Selected (active) / Hover</td>
+                            <td>Scrim overlays the selected colour</td>
+                            <td><code>scrim</code> at <code>0.08</code> opacity</td>
+                        </tr>
+                        <tr>
+                            <td>Table / Selectable row / Disabled</td>
+                            <td>–</td>
+                            <td><code>0.38</code> opacity</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             <div class="large-padding page" data-page="guidelines" id="guidelines">
@@ -866,6 +957,7 @@
                     <li>Non-interactive elements (such as badges)</li>
                     <li>Tools to query and manipulate data</li>
                 </ul>
+                <p>When loading table content, a horizontal loading indicator should appear below the table header.</p>
                 <div class="space"></div>
                 <h3 class="font-title">Principles</h3>
                 <ul>

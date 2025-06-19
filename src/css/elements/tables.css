@@ -7,6 +7,7 @@ table {
 
 tr {
   display: table-row;
+  height: 3.25rem;
 }
 
 td,
@@ -151,6 +152,26 @@ table.selectable-rows>tbody>tr:hover::after {
   /* Match the row's height */
   background-color: var(--scrim);
   opacity: 0.08;
+  pointer-events: none;
+  /* Prevent interactions */
+  box-sizing: border-box;
+  /* Ensure padding/borders don't affect dimensions */
+}
+
+table.selectable-rows>tbody>tr:active::after {
+  content: '';
+  display: block;
+  /* Keep it as a block-level element */
+  position: absolute;
+  /* Ensure it does not affect the layout */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Ensure it spans the full width of the row */
+  height: 100%;
+  /* Match the row's height */
+  background-color: var(--scrim);
+  opacity: 0.1;
   pointer-events: none;
   /* Prevent interactions */
   box-sizing: border-box;
