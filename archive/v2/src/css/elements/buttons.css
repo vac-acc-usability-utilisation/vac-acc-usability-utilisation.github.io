@@ -1,0 +1,132 @@
+.button,
+button {
+  box-sizing: content-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 2.5rem;
+  min-inline-size: 2.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--on-primary);
+  padding: 0 1.5rem;
+  background-color: var(--primary);
+  margin: 0 0.5rem;
+  border-radius: 1.25rem;
+  transition: transform var(--speed3), border-radius var(--speed3), padding var(--speed3);
+  user-select: none;
+  gap: 1rem;
+  line-height: normal;
+}
+
+button i {
+  overflow: visible;
+}
+
+button#lang-toggle {
+  font-family: var(--label-md-font-family);
+  font-size: var(--label-md-font-size);
+  font-weight: 600;
+  letter-spacing: var(--label-md-letter-spacing);
+  line-height: var(--label-md-line-height);
+}
+
+:is(button, .button).small {
+  block-size: 2rem;
+  min-inline-size: 2rem;
+  border-radius: 1rem;
+}
+
+:is(button, .button).large {
+  block-size: 3rem;
+  min-inline-size: 3rem;
+  border-radius: 1.5rem;
+}
+
+:is(.button, button):is(.extra, .extend) {
+  block-size: 3.5rem;
+  min-inline-size: 3.5rem;
+  font-size: 1rem;
+  border-radius: 1.75rem;
+}
+
+:is(button, .button).border {
+  border-color: var(--outline);
+  color: var(--primary);
+}
+
+
+:is(button, .segmented-button):not(.fill) {
+  color: var(--on-surface);
+}
+
+.segmented-button {
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.segmented-button > i {
+  margin-right: 0.125rem !important;
+  font-size: 18px;
+}
+
+/* Selected icon */
+.segmented-button.fill::before {
+  content: "check";
+  font-family: var(--font-icon); 
+  font-size: 1.125rem;
+  display: inline-block;
+  margin-right: 0;
+  vertical-align: middle;
+}
+
+/* Only hide icons on label+icon buttons when active */
+.segmented-button.segmented-icon-label.fill i {
+  display: none;
+}
+
+:is(button, .button):not(.border, .chip):hover {
+  box-shadow: var(--elevate1);
+}
+
+.extend > span {
+  display: none;
+}
+
+.extend:is(:hover, .active) {
+  inline-size: auto;
+  padding: 0 1.5rem;
+}
+
+.extend:is(:hover, .active) > i + span {
+  display: inherit;
+  margin-inline-start: 1.5rem;
+}
+
+.extend:is(:hover, .active) > :is(img, svg) + span {
+  display: inherit;
+  margin-inline-start: 2.5rem;
+}
+
+:is(.button, button)[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button[disabled] {
+  pointer-events: none;
+}
+
+:is(.button, button)[disabled]::before,
+:is(.button, button)[disabled]::after {
+  display: none;
+}
+
+:is(.button, button).fill {
+  background-color: var(--secondary-container) !important;
+  color: var(--on-secondary-container) !important;
+}
+
+:is(.button, button).vertical {
+  border-radius: 2rem;
+}

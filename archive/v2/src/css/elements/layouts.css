@@ -1,0 +1,102 @@
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+:is(.absolute, .fixed).left.right {
+  inline-size: auto;
+}
+
+:is(.absolute, .fixed).left.right.small {
+  block-size: 20rem;
+}
+
+:is(.absolute, .fixed).left.right.medium {
+  block-size: 28rem;
+}
+
+:is(.absolute, .fixed).left.right.large {
+  block-size: 44rem;
+}
+
+:is(.absolute, .fixed).top.bottom.small {
+  inline-size: 20rem;
+}
+
+:is(.absolute, .fixed).top.bottom.medium {
+  inline-size: 28rem;
+}
+
+:is(.absolute, .fixed).top.bottom.large {
+  inline-size: 44rem;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-block-size: 4rem;
+  padding: 0 1rem;
+  background-color: var(--surface-container);
+}
+
+footer {
+  padding-top:2.25rem;
+  padding-bottom:2.25rem; 
+  padding-right:1.5rem; 
+  min-height: 6.75rem;
+}
+
+#app.full-screen > footer {
+  inset-inline-start: 10rem;
+}
+
+#app.has-supporting-pane footer {
+  width: calc(100% - 11.5rem - 360px);
+}
+
+main ~ footer {
+  min-block-size: 5rem;
+}
+
+:is(header, footer).fixed.responsive {
+  z-index: 12;
+}
+
+:is(header, footer, menu > *).fixed {
+  position: sticky;
+  inset: 0;
+  z-index: 11;
+  background-color: inherit;
+}
+
+:is(dialog, menu, nav, article) > :is(header, footer) {
+  background-color: inherit;
+  padding: 0;
+}
+
+:is(dialog, article, [class*=padding]) > :is(header, footer).fixed {
+  ---translateY: 1rem;
+
+  transform: translateY(var(---translateY));
+}
+
+:is(dialog, article, [class*=padding]) > header.fixed {
+  transform: translateY(calc(-1 * var(---translateY)));
+}
+
+.no-padding > :is(header, footer).fixed {
+  transform: none;
+}
+
+.small-padding > :is(header, footer).fixed {
+  ---translateY: 0.5rem;
+}
+
+:is(.large-padding, dialog:not(.left, .right, .top, .bottom)) > :is(header, footer).fixed {
+  ---translateY: 1.5rem;
+}

@@ -25,11 +25,11 @@ table :is(thead, tbody, tfoot, tr, th, td) {
 table>thead>tr {
   background-color: var(--surface-container-low);
   height: 3.5rem;
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 table>thead>tr>button {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 table>thead>tr>th:first-of-type {
@@ -186,6 +186,6 @@ table.selectable-rows>tbody>tr:last-of-type:hover::after {
 
 .overflow-scroll {
   max-width: 319px;
-  overflow-x: scroll;
+  overflow-x: auto;
   text-overflow: unset;
 }

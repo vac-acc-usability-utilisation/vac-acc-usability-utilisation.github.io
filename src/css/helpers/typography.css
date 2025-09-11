@@ -11,8 +11,9 @@ main a {
   text-decoration: underline;
 }
 
-p, li {
-  max-width: 66ch;
+p,
+li {
+  max-width: 70ch;
 }
 
 h1,
@@ -28,13 +29,6 @@ h6 {
   line-height: normal;
 }
 
-h1 {
-  font-size: 3.5625rem;
-}
-
-h2 {
-  font-size: 2.8125rem;
-}
 
 h3 {
   font-size: 2.25rem;
@@ -242,8 +236,24 @@ dd {
   margin-bottom: 1rem;
 }
 
+abbr {
+  vertical-align: baseline;
+}
+
+.font-label-md {
+    font-family: var(--label-md-font-family);
+    font-size: var(--label-md-font-size);
+    font-weight: var(--label-md-font-weight);
+    letter-spacing: var(--label-md-letter-spacing);
+    line-height: var(--label-md-line-height);
+  }
+
+
 @media only screen and (max-width: 600px) {
-  body, p, .font-body {
+
+  body,
+  p,
+  .font-body {
     font-family: var(--body-sm-font-family);
     font-size: var(--body-sm-font-size);
     font-weight: var(--body-sm-font-weight);
@@ -251,7 +261,16 @@ dd {
     line-height: var(--body-sm-line-height);
   }
 
-  .font-headline {
+
+  h1, .font-display {
+    font-family: var(--display-sm-font-family);
+    font-size: var(--display-sm-font-size);
+    font-weight: var(--display-sm-font-weight);
+    letter-spacing: var(--display-sm-letter-spacing);
+    line-height: var(--display-sm-line-height);
+  }
+
+  h2, .font-headline {
     font-family: var(--headline-sm-font-family);
     font-size: var(--headline-sm-font-size);
     font-weight: var(--headline-sm-font-weight);
@@ -277,7 +296,10 @@ dd {
 }
 
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  body, p, .font-body {
+
+  body,
+  p,
+  .font-body {
     font-family: var(--body-md-font-family);
     font-size: var(--body-md-font-size);
     font-weight: var(--body-md-font-weight);
@@ -285,7 +307,16 @@ dd {
     line-height: var(--body-md-line-height);
   }
 
-  .font-headline {
+  h1, .font-display {
+    font-family: var(--display-md-font-family);
+    font-size: var(--display-md-font-size);
+    font-weight: var(--display-md-font-weight);
+    letter-spacing: var(--display-md-letter-spacing);
+    line-height: var(--display-md-line-height);
+  }
+
+
+  h2, .font-headline {
     font-family: var(--headline-md-font-family);
     font-size: var(--headline-md-font-size);
     font-weight: var(--headline-md-font-weight);
@@ -312,7 +343,10 @@ dd {
 }
 
 @media only screen and (min-width: 993px) {
-  body, p, .font-body {
+
+  body,
+  p,
+  .font-body {
     font-family: var(--body-lg-font-family);
     font-size: var(--body-lg-font-size);
     font-weight: var(--body-lg-font-weight);
@@ -320,7 +354,15 @@ dd {
     line-height: var(--body-lg-line-height);
   }
 
-  .font-headline {
+   h1, .font-display {
+    font-family: var(--display-lg-font-family);
+    font-size: var(--display-lg-font-size);
+    font-weight: var(--display-lg-font-weight);
+    letter-spacing: var(--display-lg-letter-spacing);
+    line-height: var(--display-lg-line-height);
+  }
+
+  h2, .font-headline {
     font-family: var(--headline-lg-font-family);
     font-size: var(--headline-lg-font-size);
     font-weight: var(--headline-lg-font-weight);

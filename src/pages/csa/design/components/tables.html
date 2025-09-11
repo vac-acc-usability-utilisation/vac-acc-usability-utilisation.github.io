@@ -1,0 +1,1128 @@
+<h1>Tables</h1>
+<p>Tables present information in rows and columns of cells containing data or interactive&nbsp;components
+</p>
+
+<nav class="tabbed tabs">
+    <a class="active" data-tab="overview">
+        <i>info</i>
+        <span>Overview</span>
+    </a>
+    <a data-tab="specs">
+        <i>style</i>
+        <span>Specs</span>
+    </a>
+    <a data-tab="guidelines">
+        <i>design_services</i>
+        <span>Guidelines</span>
+    </a>
+    <a data-tab="accessibility">
+        <i>accessibility_new</i>
+        <span>Accessibility</span>
+    </a>
+</nav>
+
+<div class="page padding-top active" data-page="overview">
+
+    <p>Tables display information in a grid-like format of rows and columns.</p>
+    <p>They organize information in a way that’s easy to scan so that users can look for patterns and
+        develop insights from&nbsp;data.</p>
+    <p>Tables can contain:</p>
+    <ul>
+        <li>Interactive components (such as chips, buttons, or menus)</li>
+        <li>Non-interactive elements (such as badges)</li>
+        <li>Tools to query and manipulate data</li>
+    </ul>
+    <div class="space"></div>
+    <hr>
+    <div class="space"></div>
+    <section class="lg xl xxl">
+        <div class="row">
+            <h3 class="font-title">Example table</h3>
+            <div class="max"></div>
+            <nav class="no-space lg xl xxl">
+                <button class="border left-round segmented-button fill">
+                    <i style="margin:0;">table_rows</i>
+                </button>
+                <button id="table-example-grid-view" class="border right-round segmented-button ">
+                    <i style="margin:0;">grid_view</i>
+                </button>
+            </nav>
+        </div>
+
+        <div class="small-padding top-padding bottom-padding"
+            style="position: sticky; top: 0px; background-color: var(--surface); z-index: 11; border-radius: 0; ">
+            <div class="row table-filters no-margin">
+                <div>
+                    <button class="circle transparent ">
+                        <i class="on-surface-variant">search</i>
+                        <menu class="no-wrap right min">
+                            <div class="field large prefix border">
+                                <i class="front">arrow_back</i>
+                                <input>
+                            </div>
+                        </menu>
+                    </button>
+                    <button class="chip ">
+                        Status <i class="tiny">arrow_drop_down</i>
+                        <menu>
+                            <li>Active</li>
+                            <li>Pending</li>
+                            <li>Suspended</li>
+                        </menu>
+                    </button>
+                    <button class="chip ">
+                        Roles<i class="tiny">arrow_drop_down</i>
+                        <menu>
+                            <li>Engineering</li>
+                            <li>Design</li>
+                            <li>Support</li>
+                            <li>Marketing</li>
+                        </menu>
+                    </button>
+                    <button class="chip ">Created at <i class="tiny">arrow_drop_down</i>
+
+                    </button>
+                    <button class="transparent small-padding">Clear filters</button>
+                </div>
+                <div class="max"></div>
+                <p class="font-label">
+                    99 entries
+                </p>
+            </div>
+            <div class="row table-controls hide no-margin">
+                <div class="row secondary-container round small-padding max" style="padding-left: 0.5rem;">
+                    <button class="circle transparent">
+                        <i>close</i>
+                    </button>
+                    <p class="font-label"><span class="numberRowsSelected"></span> selected</p>
+                    <div class="row" style="gap: 0.25rem;">
+                        <button class="small transparent">
+                            <i>edit</i>
+                            Edit
+                        </button>
+                        <button class="small transparent">
+                            <i>info</i>
+                            View details
+                        </button>
+                        <button class="circle transparent">
+                            <i>more_vert</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="border selectable-rows no-margin">
+            <thead style="position: sticky; top: 72px; z-index: 10;">
+                <tr>
+                    <th>
+                        <button class="transparent no-padding no-margin"
+                            style="margin-left: -8px !important;">ID</button>
+                        <button class="circle transparent margin-left no-margin" style="margin-left: -8px !important;">
+                            <i class="tiny">arrow_downward</i>
+                        </button>
+                    </th>
+                    <th>
+                        <button class="transparent small-padding" style="margin-left: -8px;">Name</button>
+                    </th>
+                    <th class="xl xxl">
+                        <button class="transparent small-padding" style="margin-left: -8px;">Email</button>
+                    </th>
+                    <th>
+                        <button class="transparent small-padding" style="margin-left: -8px;">Status</button>
+                    </th>
+                    <th style="max-width: 120px; overflow: scroll; text-overflow: unset;">
+                        <button class="transparent small-padding no-margin" style="justify-content: left; " title="Tags"
+                            style="margin-left: -16px;">
+                            Roles
+                        </button>
+                    </th>
+                    <th class="right-align">
+                        <button class="transparent small-padding no-margin">Created
+                            at</button>
+                    </th>
+                    <th><span class="hide">Actions</span> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Saul Bass</td>
+                    <td class="xl xxl"><a>saul@company.com</a></td>
+                    <td><span style="color: var(--primary);">Active</span></td>
+                    <td class="overflow-scroll">
+                        <span class="surface-container-highest badge-expanded">Engineering</span>
+                        <span class="surface-container-highest badge-expanded">Design</span>
+                        <span class="surface-container-highest badge-expanded">Support</span>
+                        <span class="surface-container-highest badge-expanded">Marketing</span>
+                    </td>
+
+                    <td class="right-align">2024-01-15 10:42 AM</td>
+                    <td class="right-align">
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">edit</i>
+                        </button>
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">info</i>
+                        </button><button class="circle transparent no-margin">
+                            <i class="on-surface-variant">more_vert</i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Paula Scher</td>
+                    <td class="xl xxl"><a>paula@company.com</a></td>
+                    <td><span style="color: var(--secondary);">Pending</span></td>
+                    <td class="overflow-scroll">
+                        <span class="surface-container-highest badge-expanded">Engineering</span>
+                        <span class="surface-container-highest badge-expanded">Design</span>
+                        <span class="surface-container-highest badge-expanded">Support</span>
+                        <span class="surface-container-highest badge-expanded">Marketing</span>
+                        <span class="surface-container-highest badge-expanded">Marketing</span>
+                    </td>
+                    <td class="right-align">2024-03-02 03:15 PM</td>
+                    <td class="right-align">
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">edit</i>
+                        </button>
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">info</i>
+                        </button><button class="circle transparent no-margin">
+                            <i class="on-surface-variant">more_vert</i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Robert Bringhurst</td>
+                    <td class="xl xxl"><a>robert@company.com</a></td>
+                    <td><span style="color: var(--warning);">Suspended</span></td>
+                    <td>
+                        <span class="surface-container-highest badge-expanded">
+                            Engineering
+                        </span>
+                        <span class="surface-container-highest badge-expanded">
+                            Design
+                        </span>
+                    </td>
+                    <td class="right-align">2023-11-21 08:05 AM</td>
+                    <td class="right-align">
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">edit</i>
+                        </button>
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">info</i>
+                        </button><button class="circle transparent no-margin">
+                            <i class="on-surface-variant">more_vert</i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>Saul Bass</td>
+                    <td class="xl xxl"><a>saul@company.com</a></td>
+                    <td><span style="color: var(--primary);">Active</span></td>
+                    <td class="overflow-scroll">
+                        <span class="surface-container-highest badge-expanded">Engineering</span>
+                        <span class="surface-container-highest badge-expanded">Design</span>
+                        <span class="surface-container-highest badge-expanded">Support</span>
+                        <span class="surface-container-highest badge-expanded">Marketing</span>
+                    </td>
+
+                    <td class="right-align">2024-01-15 10:42 AM</td>
+                    <td class="right-align">
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">edit</i>
+                        </button>
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">info</i>
+                        </button><button class="circle transparent no-margin">
+                            <i class="on-surface-variant">more_vert</i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Paula Scher</td>
+                    <td class="xl xxl"><a>paula@company.com</a></td>
+                    <td><span style="color: var(--secondary);">Pending</span></td>
+                    <td class="overflow-scroll">
+                        <span class="surface-container-highest badge-expanded">Engineering</span>
+                        <span class="surface-container-highest badge-expanded">Design</span>
+                        <span class="surface-container-highest badge-expanded">Support</span>
+                        <span class="surface-container-highest badge-expanded">Marketing</span>
+                    </td>
+                    <td class="right-align">2024-03-02 03:15 PM</td>
+                    <td class="right-align">
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">edit</i>
+                        </button>
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">info</i>
+                        </button><button class="circle transparent no-margin">
+                            <i class="on-surface-variant">more_vert</i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>006</td>
+                    <td>Robert Bringhurst</td>
+                    <td class="xl xxl"><a>robert@company.com</a></td>
+                    <td><span style="color: var(--warning);">Suspended</span></td>
+                    <td>
+                        <span class="surface-container-highest badge-expanded">
+                            Engineering
+                        </span>
+                        <span class="surface-container-highest badge-expanded">
+                            Design
+                        </span>
+                    </td>
+                    <td class="right-align">2023-11-21 08:05 AM</td>
+                    <td class="right-align">
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">edit</i>
+                        </button>
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">info</i>
+                        </button><button class="circle transparent no-margin">
+                            <i class="on-surface-variant">more_vert</i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>007</td>
+                    <td>Saul Bass</td>
+                    <td class="xl xxl"><a>saul@company.com</a></td>
+                    <td><span style="color: var(--primary);">Active</span></td>
+                    <td>
+                        <span class="surface-container-highest badge-expanded">Engineering</span>
+                        <span class="surface-container-highest badge-expanded">Design</span>
+                        <span class="surface-container-highest badge-expanded">Support</span>
+                        <span class="surface-container-highest badge-expanded">Marketing</span>
+                    </td>
+
+                    <td class="right-align">2024-01-15 10:42 AM</td>
+                    <td class="right-align">
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">edit</i>
+                        </button>
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">info</i>
+                        </button><button class="circle transparent no-margin">
+                            <i class="on-surface-variant">more_vert</i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>008</td>
+                    <td>Paula Scher</td>
+                    <td class="xl xxl"><a>paula@company.com</a></td>
+                    <td><span style="color: var(--secondary);">Pending</span></td>
+                    <td>
+                        <span class="surface-container-highest badge-expanded">Engineering</span>
+                        <span class="surface-container-highest badge-expanded">Design</span>
+                        <span class="surface-container-highest badge-expanded">Support</span>
+                        <span class="surface-container-highest badge-expanded">Marketing</span>
+                    </td>
+                    <td class="right-align">2024-03-02 03:15 PM</td>
+                    <td class="right-align">
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">edit</i>
+                        </button>
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">info</i>
+                        </button><button class="circle transparent no-margin">
+                            <i class="on-surface-variant">more_vert</i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>009</td>
+                    <td>Robert Bringhurst</td>
+                    <td class="xl xxl"><a>robert@company.com</a></td>
+                    <td><span style="color: var(--warning);">Suspended</span></td>
+                    <td>
+                        <span class="surface-container-highest badge-expanded">
+                            Engineering
+                        </span>
+                        <span class="surface-container-highest badge-expanded">
+                            Design
+                        </span>
+                    </td>
+                    <td class="right-align">2023-11-21 08:05 AM</td>
+                    <td class="right-align">
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">edit</i>
+                        </button>
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">info</i>
+                        </button><button class="circle transparent no-margin">
+                            <i class="on-surface-variant">more_vert</i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>010</td>
+                    <td>Robert Bringhurst</td>
+                    <td class="xl xxl"><a>robert@company.com</a></td>
+                    <td><span style="color: var(--warning);">Suspended</span></td>
+                    <td>
+                        <span class="surface-container-highest badge-expanded">
+                            Engineering
+                        </span>
+                        <span class="surface-container-highest badge-expanded">
+                            Design
+                        </span>
+                    </td>
+                    <td class="right-align">2023-11-21 08:05 AM</td>
+                    <td class="right-align">
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">edit</i>
+                        </button>
+                        <button class="circle transparent no-margin">
+                            <i class="on-surface-variant">info</i>
+                        </button><button class="circle transparent no-margin">
+                            <i class="on-surface-variant">more_vert</i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row right-align" style="gap: 2rem; ">
+            <div class="row" style="gap: 0.5rem; align-items: center;">
+                <p class="font-label top-margin">Show</p>
+                <div class="field border transparent">
+
+                    <label for="view-number" class="hide">Number of entries</label>
+                    <select name="view-number" id="view-number" class="no-margin">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                    <i class="small">arrow_drop_down</i>
+                </div>
+                <p class="font-label">entries</p>
+            </div>
+            <p class="font-label">1-10 of 99</p>
+            <div class="row" style="gap: 0px;">
+                <button class="circle transparent disabled " disabled><i class="small">first_page</i></button>
+                <button class="circle transparent disabled " disabled><i class="small">chevron_left</i></button>
+                <button class="circle transparent "><i class="small">chevron_right</i></button>
+                <button class="circle transparent "><i class="small">last_page</i></button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="xs sm md">
+
+        <div class="row">
+            <h3 class="font-title">Example table</h3>
+            <div class="max"></div>
+            <nav class="no-space lg xl xxl">
+                <button id="table-example-table-view" class="border left-round segmented-button ">
+                    <i style="margin:0;">table_rows</i>
+                </button>
+                <button class="border right-round segmented-button fill">
+                    <i style="margin:0;">grid_view</i>
+                </button>
+            </nav>
+        </div>
+
+        <div class="row table-filters">
+            <button class="circle transparent ">
+                <i class="on-surface-variant">search</i>
+                <menu class="no-wrap right min">
+                    <div class="field large prefix">
+                        <i class="front">arrow_back</i>
+                        <input>
+                    </div>
+                </menu>
+            </button>
+            <button class="chip">Status <i class="tiny">arrow_drop_down</i></button>
+            <button class="chip">Roles <i class="tiny">arrow_drop_down</i></button>
+            <button class="chip">Created at <i class="tiny">arrow_drop_down</i></button>
+            <button class="transparent small-padding">Clear filters</button>
+            <div class="max"></div>
+            <button class="transparent small-padding">Sort by <i>arrow_drop_down</i></button>
+        </div>
+        <div class="row table-controls hide">
+            <div class="row secondary-container round small-padding" style="padding-left: 0.5rem; width: 100%">
+                <button class="circle transparent">
+                    <i>close</i>
+                </button>
+                <p class="font-label"><span class="numberRowsSelected"></span> selected</p>
+                <div class="row" style="gap: 0.25rem;">
+                    <button class="small transparent">
+                        <i>edit</i>
+                        Edit
+                    </button>
+                    <button class="small transparent">
+                        <i>info</i>
+                        View details
+                    </button>
+                    <button class="circle transparent">
+                        <i>more_vert</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="grid selectable-grid">
+            <article class="round wave xs12 sm12 md12 lg6 xl6">
+                <div class="row">
+                    <div>
+                        <p class="font-label" style="line-height: 0.25rem;">001</p>
+                        <p style="line-height: 0.25rem; font-size: 18px;">Saul Bass</p>
+                    </div>
+                    <div class="max"></div>
+                    <button class="circle transparent no-margin" style="z-index: 2;">
+                        <i class="on-surface-variant">more_vert</i>
+                    </button>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Status</span>
+                    <div class="max"></div>
+                    <span style="color: var(--primary);">Active</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Created at</span>
+                    <div class="max"></div>
+                    <span>2024-01-15 10:42 AM</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin">
+                    <span class="surface-container-lowest badge-expanded">Engineering</span>
+                    <span class="surface-container-lowest badge-expanded">Design</span>
+                    <span class="surface-container-lowest badge-expanded">Support</span>
+                    <span class="surface-container-lowest badge-expanded">Marketing</span>
+                </div>
+            </article>
+            <article class="round wave xs12 sm12 md12 lg6 xl6">
+                <div class="row">
+                    <div>
+                        <p class="font-label" style="line-height: 0.25rem;">002</p>
+                        <p style="line-height: 0.25rem; font-size: 18px;">Paula Scher</p>
+                    </div>
+                    <div class="max"></div>
+                    <button class="circle transparent no-margin" style="z-index: 2;">
+                        <i class="on-surface-variant">more_vert</i>
+                    </button>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Status</span>
+                    <div class="max"></div>
+                    <span style="color: var(--secondary);">Pending</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Created at</span>
+                    <div class="max"></div>
+                    <span>2024-03-02 03:15 PM</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin">
+                    <span class="surface-container-lowest badge-expanded">Engineering</span>
+                    <span class="surface-container-lowest badge-expanded">Design</span>
+                    <span class="surface-container-lowest badge-expanded">Support</span>
+                    <span class="surface-container-lowest badge-expanded">Marketing</span>
+                </div>
+            </article>
+            <article class="round wave xs12 sm12 md12 lg6 xl6">
+                <div class="row">
+                    <div>
+                        <p class="font-label" style="line-height: 0.25rem;">003</p>
+                        <p style="line-height: 0.25rem; font-size: 18px;">Robert Bringhurst</p>
+                    </div>
+                    <div class="max"></div>
+                    <button class="circle transparent no-margin" style="z-index: 2;">
+                        <i class="on-surface-variant">more_vert</i>
+                    </button>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Status</span>
+                    <div class="max"></div>
+                    <span style="color: var(--warning);">Suspended</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Created at</span>
+                    <div class="max"></div>
+                    <span>2023-11-21 08:05 AM</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin">
+                    <span class="surface-container-lowest badge-expanded">Engineering</span>
+                    <span class="surface-container-lowest badge-expanded">Design</span>
+                </div>
+            </article>
+            <article class="round wave xs12 sm12 md12 lg6 xl6">
+                <div class="row">
+                    <div>
+                        <p class="font-label" style="line-height: 0.25rem;">004</p>
+                        <p style="line-height: 0.25rem; font-size: 18px;">Saul Bass</p>
+                    </div>
+                    <div class="max"></div>
+                    <button class="circle transparent no-margin" style="z-index: 2;">
+                        <i class="on-surface-variant">more_vert</i>
+                    </button>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Status</span>
+                    <div class="max"></div>
+                    <span style="color: var(--primary);">Active</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Created at</span>
+                    <div class="max"></div>
+                    <span>2024-01-15 10:42 AM</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin">
+                    <span class="surface-container-lowest badge-expanded">Engineering</span>
+                    <span class="surface-container-lowest badge-expanded">Design</span>
+                    <span class="surface-container-lowest badge-expanded">Support</span>
+                    <span class="surface-container-lowest badge-expanded">Marketing</span>
+                </div>
+            </article>
+            <article class="round wave xs12 sm12 md12 lg6 xl6">
+                <div class="row">
+                    <div>
+                        <p class="font-label" style="line-height: 0.25rem;">005</p>
+                        <p style="line-height: 0.25rem; font-size: 18px;">Paula Scher</p>
+                    </div>
+                    <div class="max"></div>
+                    <button class="circle transparent no-margin" style="z-index: 2;">
+                        <i class="on-surface-variant">more_vert</i>
+                    </button>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Status</span>
+                    <div class="max"></div>
+                    <span style="color: var(--secondary);">Pending</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Created at</span>
+                    <div class="max"></div>
+                    <span>2024-03-02 03:15 PM</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin">
+                    <span class="surface-container-lowest badge-expanded">Engineering</span>
+                    <span class="surface-container-lowest badge-expanded">Design</span>
+                    <span class="surface-container-lowest badge-expanded">Support</span>
+                    <span class="surface-container-lowest badge-expanded">Marketing</span>
+                </div>
+            </article>
+            <article class="round wave xs12 sm12 md12 lg6 xl6">
+                <div class="row">
+                    <div>
+                        <p class="font-label" style="line-height: 0.25rem;">006</p>
+                        <p style="line-height: 0.25rem; font-size: 18px;">Robert Bringhurst</p>
+                    </div>
+                    <div class="max"></div>
+                    <button class="circle transparent no-margin" style="z-index: 2;">
+                        <i class="on-surface-variant">more_vert</i>
+                    </button>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Status</span>
+                    <div class="max"></div>
+                    <span style="color: var(--warning);">Suspended</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Created at</span>
+                    <div class="max"></div>
+                    <span>2023-11-21 08:05 AM</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin">
+                    <span class="surface-container-lowest badge-expanded">Engineering</span>
+                    <span class="surface-container-lowest badge-expanded">Design</span>
+                </div>
+            </article>
+            <article class="round wave xs12 sm12 md12 lg6 xl6">
+                <div class="row">
+                    <div>
+                        <p class="font-label" style="line-height: 0.25rem;">007</p>
+                        <p style="line-height: 0.25rem; font-size: 18px;">Saul Bass</p>
+                    </div>
+                    <div class="max"></div>
+                    <button class="circle transparent no-margin" style="z-index: 2;">
+                        <i class="on-surface-variant">more_vert</i>
+                    </button>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Status</span>
+                    <div class="max"></div>
+                    <span style="color: var(--primary);">Active</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Created at</span>
+                    <div class="max"></div>
+                    <span>2024-01-15 10:42 AM</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin">
+                    <span class="surface-container-lowest badge-expanded">Engineering</span>
+                    <span class="surface-container-lowest badge-expanded">Design</span>
+                    <span class="surface-container-lowest badge-expanded">Support</span>
+                    <span class="surface-container-lowest badge-expanded">Marketing</span>
+                </div>
+            </article>
+            <article class="round wave xs12 sm12 md12 lg6 xl6">
+                <div class="row">
+                    <div>
+                        <p class="font-label" style="line-height: 0.25rem;">008</p>
+                        <p style="line-height: 0.25rem; font-size: 18px;">Paula Scher</p>
+                    </div>
+                    <div class="max"></div>
+                    <button class="circle transparent no-margin" style="z-index: 2;">
+                        <i class="on-surface-variant">more_vert</i>
+                    </button>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Status</span>
+                    <div class="max"></div>
+                    <span style="color: var(--secondary);">Pending</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Created at</span>
+                    <div class="max"></div>
+                    <span>2024-03-02 03:15 PM</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin">
+                    <span class="surface-container-lowest badge-expanded">Engineering</span>
+                    <span class="surface-container-lowest badge-expanded">Design</span>
+                    <span class="surface-container-lowest badge-expanded">Support</span>
+                    <span class="surface-container-lowest badge-expanded">Marketing</span>
+                </div>
+            </article>
+            <article class="round wave xs12 sm12 md12 lg6 xl6">
+                <div class="row">
+                    <div>
+                        <p class="font-label" style="line-height: 0.25rem;">009</p>
+                        <p style="line-height: 0.25rem; font-size: 18px;">Robert Bringhurst</p>
+                    </div>
+                    <div class="max"></div>
+                    <button class="circle transparent no-margin" style="z-index: 2;">
+                        <i class="on-surface-variant">more_vert</i>
+                    </button>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Status</span>
+                    <div class="max"></div>
+                    <span style="color: var(--warning);">Suspended</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Created at</span>
+                    <div class="max"></div>
+                    <span>2023-11-21 08:05 AM</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin">
+                    <span class="surface-container-lowest badge-expanded">Engineering</span>
+                    <span class="surface-container-lowest badge-expanded">Design</span>
+                </div>
+            </article>
+            <article class="round wave xs12 sm12 md12 lg6 xl6">
+                <div class="row">
+                    <div>
+                        <p class="font-label" style="line-height: 0.25rem;">010</p>
+                        <p style="line-height: 0.25rem; font-size: 18px;">Robert Bringhurst</p>
+                    </div>
+                    <div class="max"></div>
+                    <button class="circle transparent no-margin" style="z-index: 2;">
+                        <i class="on-surface-variant">more_vert</i>
+                    </button>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Status</span>
+                    <div class="max"></div>
+                    <span style="color: var(--warning);">Suspended</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin tiny-margin">
+                    <span class="font-label" style="font-weight: 700;">Created at</span>
+                    <div class="max"></div>
+                    <span>2023-11-21 08:05 AM</span>
+                </div>
+                <hr class="top-margin bottom-margin small-margin">
+                <div class="row top-margin">
+                    <span class="surface-container-lowest badge-expanded">Engineering</span>
+                    <span class="surface-container-lowest badge-expanded">Design</span>
+                </div>
+            </article>
+        </div>
+        <div class="row right-align" style="gap: 2rem;">
+            <span class="row" style="gap: 0.5rem;">
+                <p class="font-label">Show</p>
+                <div class="field border transparent">
+
+                    <label for="view-number" class="hide">Number of entries</label>
+                    <select name="view-number" id="view-number" class="no-margin">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                    <i class="small">arrow_drop_down</i>
+                </div>
+                <p class="font-label">entries</p>
+            </span>
+            <p class="font-label">1-10 of 99</p>
+            <div class="row" style="gap: 0px;">
+                <button class="circle transparent disabled " disabled><i class="small">first_page</i></button>
+                <button class="circle transparent disabled " disabled><i class="small">chevron_left</i></button>
+                <button class="circle transparent "><i class="small">chevron_right</i></button>
+                <button class="circle transparent "><i class="small">last_page</i></button>
+            </div>
+        </div>
+    </section>
+
+
+    <h2 class="font-title">
+        Resources
+    </h2>
+    <ul>
+        <li><a href="https://m2.material.io/components/data-tables">Material Design 2 Data Tables</a></li>
+        <li><a href="https://material.angular.dev/components/table/overview">Angular Material Tables</a>
+        </li>
+        <li><a href="https://wet-boew.github.io/GCWeb/components/gc-table/gc-table-en.html">GC Web
+                (Canada.ca design pattern) Tables</a></li>
+    </ul>
+
+    <div class="large-space"> </div>
+    <!---
+                <div class="grid">
+                    <a href="#" class="card sm12 md6 lg6 xl6">
+                        <article class="round wave">
+                            <div class="row">
+                                <i>arrow_back</i>
+                                <p class="large-text">Previous</p>
+                            </div>
+                            <h2 class="font-title">Tabs: Accessibility</h2>
+
+                        </article>
+                    </a>
+                    <a data-ui="#components/tables" class="card sm12 md6 lg6 xl6">
+                        <article class="round wave">
+                            <div class="row">
+                                <i>arrow_forward</i>
+                                <p class="large-text">Next</p>
+                            </div>
+                            <h2 class="font-title">Tables: Specs</h2>
+
+                        </article>
+                    </a>
+                </div>-->
+</div>
+
+<div class="page padding-top" data-page="specs">
+    <div class="space"></div>
+    <table class="border no-margin">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Value
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Table / Background color</td>
+                <td>–</td>
+                <td><code>surface</code></td>
+            </tr>
+            <tr>
+                <td>Table / Border</td>
+                <td>–</td>
+                <td><code>outline-variant</code></td>
+            </tr>
+            <tr>
+                <td>Table / Border radius</td>
+                <td>–</td>
+                <td><code>1rem</code> / <code>16px</code></td>
+            </tr>
+            <tr>
+                <td>Table / Max width</td>
+                <td>–</td>
+                <td><code>77.4375rem</code> / <code>1239px</code></td>
+            </tr>
+            <tr>
+                <td>Table / Header / Background color</td>
+                <td>–</td>
+                <td><code>surface-container-low</code></td>
+            </tr>
+            <tr>
+                <td>Table / Header / Height</td>
+                <td>–</td>
+                <td><code>4rem</code> / <code>64px</code></td>
+            </tr>
+            <tr>
+                <td>Table / Header / Border bottom</td>
+                <td>–</td>
+                <td><code>outline</code></td>
+            </tr>
+            <tr>
+                <td>Table / Header / Hover</td>
+                <td>–</td>
+                <td><code>scrim</code> at <code>0.08</code> opacity</td>
+            </tr>
+            <tr>
+                <td>Table / Header / Pressed</td>
+                <td>Ripple</td>
+                <td><code>scrim</code> at <code>0.1</code> opacity</td>
+            </tr>
+            <tr>
+                <td>Table / Header / Background color</td>
+                <td>–</td>
+                <td><code>surface-container-low</code></td>
+            </tr>
+            <tr>
+                <td>Table / Header / Font size</td>
+                <td>–</td>
+                <td><code>label</code> / <code>0.875rem</code> / <code>14px</code></td>
+            </tr>
+            <tr>
+                <td>Table / Header / Font weight</td>
+                <td>–</td>
+                <td><code>500</code></td>
+            </tr>
+            <tr>
+                <td>Table / Row / Height</td>
+                <td>–</td>
+                <td><code>3.25rem</code> / <code>52px</code></td>
+            </tr>
+            <tr>
+                <td>Table / Row / Border</td>
+                <td>–</td>
+                <td><code>outline-variant</code></td>
+            </tr>
+            <tr>
+                <td>Table / Selectable row / Hover</td>
+                <td>Text becomes <code>on-secondary-container</code></td>
+                <td><code>scrim</code> at <code>0.08</code> opacity</td>
+            </tr>
+            <tr>
+                <td>Table / Selectable row / Selected (active)</td>
+                <td>Text becomes <code>on-secondary-container</code></td>
+                <td><code>secondary-container</code></td>
+            </tr>
+            <tr>
+                <td>Table / Selectable row / Pressed </td>
+                <td>Ripple effect</code></td>
+                <td><code>scrim</code> at <code>0.1</code> opacity</td>
+            </tr>
+            <tr>
+                <td>Table / Selectable row / Selected (active) / Hover</td>
+                <td>Scrim overlays the selected colour</td>
+                <td><code>scrim</code> at <code>0.08</code> opacity</td>
+            </tr>
+            <tr>
+                <td>Table / Selectable row / Disabled</td>
+                <td>–</td>
+                <td><code>0.38</code> opacity</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="page padding-top" data-page="guidelines">
+    <p>Data tables display information in a grid-like format of rows and columns. They organize information
+        in a way that’s easy to scan so that users can look for patterns and develop insights from data.</p>
+    <p>Data tables can contain:</p>
+    <ul>
+        <li>Interactive components (such as chips, buttons, or menus)</li>
+        <li>Non-interactive elements (such as badges)</li>
+        <li>Tools to query and manipulate data</li>
+    </ul>
+    <p>When loading table content, a horizontal loading indicator should appear below the table header.</p>
+    <div class="space"></div>
+    <h3 class="font-title">Principles</h3>
+    <ul>
+        <li><span class="bold">Organized:</span> Information should be organized in a meaningful way, such
+            as hierarchy or alphabetization.</li>
+        <li><span class="bold">Interactive:</span> Data tables should allow user interaction so that a data
+            display is customizable and interactive.</li>
+        <li><span class="bold">Intuitive: </span> Data tables should be easy to use, with a logical
+            structure that makes content easy to understand.</li>
+    </ul>
+    <div class="space"></div>
+    <h2 class="font-title">Anatomy</h2>
+    <div class="space"></div>
+    <img src="../../../src/img/components/tables/table-specs-1.png" alt="">
+    <ol>
+        <li>Header row</li>
+        <li>Rows</li>
+        <li>Pagination</li>
+        <li>Sort button</li>
+        <li>Container</li>
+    </ol>
+    <div class="space"></div>
+    <h2 class="font-title">Table elements</h2>
+    <h3 class="font-body bold">Baseline elements</h3>
+    <p>Column header names describe the type of content displayed in each column. Each row contains data
+        related to a single entity. </p>
+    <div class="space"></div>
+    <h3 class="font-body bold">Interactive elements</h3>
+    <p>Data tables can include interactive elements, such as:</p>
+    <ul>
+        <li>Sorting (on columns)</li>
+        <li>Icons that communicate alerts</li>
+        <li>Pagination</li>
+        <li>Filter chips: Controls that manipulate how table data is displayed should be placed directly
+            above or below a table.</li>
+    </ul>
+    <div class="space"></div>
+    <hr>
+    <div class="space"></div>
+    <h2 class="font-title">Columns</h2>
+    <h3 class="font-body bold">Height and padding</h3>
+    <p>The baseline row height is 52px, and the column header row height is 56px.</p>
+    <div class="small-space"></div>
+    <h3 class="font-body bold">Padding</h3>
+    <p>There is 32px or more of padding between columns. There is 16px padding on the left and right side of
+        each header&nbsp;name.</p>
+    <div class="space"></div>
+    <hr>
+    <div class="space"></div>
+    <h3 class="font-body bold">Text</h3>
+    <p>Column header text uses a medium weight (500) font to differentiate from row&nbsp;text.</p>
+    <p>Text that is longer than the column width is truncated with an ellipsis. On hover, a tooltip shows
+        the full&nbsp;name.</p>
+    <div class="space"></div>
+    <hr>
+    <div class="space"></div>
+    <h3 class="font-body bold">Sorting</h2>
+        <p>To help users sort information, column can be displayed sorting by default.</p>
+        <p>To indicate which column is sorted by default, place a downward or upward arrow icon next to the
+            column header’s&nbsp;name.</p>
+        <div class="space"></div>
+        <h3 class="font-body bold">Reversing sort order</h3>
+        <p>To reverse the sort order of a column, a user taps the header name or arrow icon. Upon sorting,
+            the arrow icon reverses&nbsp;direction.</p>
+        <div class="space"></div>
+        <hr>
+        <div class="space"></div>
+        <h3 class="font-body bold">Sorting and filtering with a progress indicator</h3>
+        <p>A linear progress indicator is used in data tables when sorting or filtering is initiated. The
+            progress indicator communicates to users that sorting is in&nbsp;process.</p>
+        <div class="space"></div>
+        <hr>
+        <div class="space"></div>
+        <h3 class="font-body bold">Selecting rows</h3>
+        <p>When a row single-clicked, the row becomes selected, the row should display a background&nbsp;color.
+        </p>
+        <p>The tables filters are replaced by a toolbar. The toolbar displays a button to dismiss the
+            selection, the number of entries selected, and actions a user can take on all the select&nbsp;entries.</p>
+        <p>Ctrl+click allows users to select and deselect individual rows. Shift+click allows users to
+            select and deselect a range of&nbsp;rows.</p>
+        <div class="space"></div>
+        <hr>
+        <div class="space"></div>
+        <h3 class="font-body bold">Sticky filters and table header</h3>
+        <p>Table filters, toolbar, and table heading should be sticky and fixed to the top of the page when
+            the page is scrolled.</p>
+        <div class="space"></div>
+        <hr>
+        <div class="space"></div>
+        <h3 class="font-body bold">Responsive card views</h3>
+        <div class="space"></div>
+        <p>At smaller screen sizes, tables should convert to cards. Cards should contain no more than 5
+            pieces of information. As well, a card view should only contain two columns of cards.</p>
+        <p>At larger screen sizes, a segmented button allows users to toggle between a table and a card
+            view.</p>
+</div>
+
+<div class="page padding-top" data-page="accessibility">
+    <ul class="checklist">
+        <li><span class="bold">Header Tag:</span> Table headers MUST be designated with
+            <code>&lt;th&gt;</code>.
+        </li>
+        <li><span class="bold">Meaningful Header:</span> Data table header text MUST accurately describe the
+            category of the
+            corresponding data cells.</li>
+        <li><span class="bold">Header and Data Cell Associations</span>: Table data cells MUST be associated
+            with their corresponding
+            header cells.
+            <br>
+            <div class="tiny-space"></div>
+            <span class="bold">Note:</span> Use of scope (&lt;th&gt; scope="col"&gt; and &lt;th&gt;
+            scope="row"&gt;) is highly
+            recommended, though not always necessary (i.e. if all cells in the first row are marked
+            as <th> without scope, most modern screen readers will infer that the scope is the
+                column below each header cell).
+        </li>
+        <li><span class="bold">Group Header Associations:</span> Table data group headers (if any) MUST be
+            associated with their corresponding data cell groups (e.g. via scope="rowgroup" or
+            scope="colgroup").</li>
+        <li><span class="bold">Complex Header Associations:</span> Header/data associations that cannot be
+            designated with <code>&lt;th&gt;</code> and scope MUST be designated with the header and id
+            attributes.</li>
+        <li><span class="bold">Nested or Split Tables:</span> Data table headers and data associations MUST
+            NOT be referenced across nested, merged, or separate tables.</li>
+        <li><span class="bold">Tables:</span> Tabular data SHOULD be represented in a
+            <code>&lt;table&gt;</code>.
+            <br>
+            <div class="tiny-space"></div>
+            <span class="bold">Note:</span> Even if the data are not represented in a table, WCAG 1.3.1
+            requires the data to be associated with their labels.
+        </li>
+        <li><span class="bold">Caption:</span> Data tables SHOULD have a programmatically associated
+            <caption> or name (e.g. via aria-label or aria-labelledby).
+                <br>
+                <div class="tiny-space"></div>
+                <span class="bold">Note:</span> In most circumstances, <code>&lt;caption&gt;</code> is
+                preferred, because it is
+                the native method of giving a name to a table, and the <code>&lt;caption&gt;</code> is
+                visible and
+                available to all users by default.
+        </li>
+        <li><span class="bold">Meaningful Caption:</span> The name or <code>&lt;caption&gt;</code> of a data
+            table SHOULD describe the identity or purpose of the table accurately, meaningfully, and
+            succinctly.</li>
+        <li><span class="bold">Unique Caption:</span> The name or <code>&lt;caption&gt;</code> of each data
+            table SHOULD be unique within the context of other tables on the same page.</li>
+
+        <li><span class="bold">Avoid Layout Tables:</span> Tables SHOULD NOT be used for the purpose of
+            purely visual (non-data) layout.</li>
+        <li><span class="bold">Avoid Headers in Layout Tables:</span> Layout tables MUST NOT contain
+            headers.</li>
+    </ul>
+    <div class="space"></div>
+    <h2 class="font-title">Resources</h2>
+    <ul>
+        <li><a href="https://material.angular.dev/components/table/overview#accessibility">Angular Material
+                Tables Accessiblity</a></li>
+        <li><a href="https://dequeuniversity.com/checklists/web/tables">Accessibility Techniques for Tables
+                (Deque University)</a></li>
+    </ul>
+</div>
+
+<p class="font-label page-footer">Date modified: 2025-07-11</p>

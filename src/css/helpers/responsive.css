@@ -11,7 +11,7 @@
   .lg:not(.xs),
   .xl:not(.xs),
   .xxl:not(.xs) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -22,7 +22,7 @@
   .lg:not(.sm),
   .xl:not(.sm),
   .xxl:not(.sm) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -33,7 +33,7 @@
   .lg:not(.md),
   .xl:not(.md),
   .xxl:not(.md) {
-    display: none;
+    display: none !important;
   }       
 }
 
@@ -44,7 +44,7 @@
   .md:not(.lg),
   .xl:not(.lg),
   .xxl:not(.lg) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -55,6 +55,6 @@
   .md:not(.xl),
   .lg:not(.xl),
   .xl:not(.xl) {
-    display: none;
+    display: none !important;
   }
 }

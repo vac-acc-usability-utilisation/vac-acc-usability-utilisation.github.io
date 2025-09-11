@@ -1,83 +1,54 @@
-import { updateActiveLink, setupPageNavigation } from './navigation.js';
-import { updateLayoutForPage } from './dynamic-layout.js';
-import { applyTranslations, getCurrentLanguage } from './language.js';
-import { setupTabs } from './tabs.js';
-import { setupStageNavigation } from './stageNavigation.js';
-import { setupTableInteractions } from './tableInteractions.js';
+import { loadPage } from './loadPage.js';
 
-export function navigateTo(pageId) {
-  console.log('Navigating to Page:', pageId); // Debug: Log the page being navigated to
+export function handleRouting() {
+    const hash = getCurrentHash(); 
+    const hashSegments = parseHash(hash);
 
-  const main = document.querySelector('main');
-  const appContainer = document.querySelector('#app'); // App container
-  const navContainer = document.querySelector('#main-nav'); // Navigation container
+    const route = {
+        product: hashSegments[0] || "csa",
+        mode: hashSegments[1] || "design",
+        appArea: hashSegments[2] || "home",
+        areaPage: hashSegments[3] || null,
+        pageTab: hashSegments[4] || null,
+        hasTabs: !!hashSegments[4] // Check if there are any tabs
+    };
 
-  // Determine the base path based on the current URL
-  const isDemo = window.location.pathname.includes('demo.html');
-  const basePath = isDemo ? 'pages/demo/' : 'pages/design-system/';
+    const fullPathSegments = [route.product, route.mode, route.appArea];
+    if (route.areaPage) fullPathSegments.push(route.areaPage);
+    if (route.pageTab) fullPathSegments.push(route.pageTab);
 
-  // Construct the file path
-  const filePath = `${basePath}${pageId}.html`;
-
-  fetch(filePath)
-    .then(response => {
-      if (!response.ok) throw new Error('Page not found');
-      return response.text();
-    })
-    .then(html => {
-      main.innerHTML = html;
-
-      const currentLang = getCurrentLanguage(); 
-      applyTranslations(currentLang);
-      setupPageNavigation(); // Re-setup navigation for the new page
-
-      setupTabs(); // Re-setup tabs for the new page
-      setupStageNavigation();
-      setupTableInteractions();
-
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-      }, 0);
-
-      window.location.hash = `#${pageId}`;
-      updateActiveLink(pageId);
-      updateLayoutForPage(pageId);
-    })
-    .catch(() => {
-      load404Page(pageId);
-    });
+    const pageSegments = getSegmentsFromRoute(route);
+    loadPage(pageSegments);
 }
 
-export function loadPageFromHash() {
-  const hash = window.location.hash.replace(/^#/, '');
-  const [areaId, pageId] = hash.split('/'); // Split the hash into levels
-
-  const resolvedPageId = pageId ? `${areaId}/${pageId}` : areaId || 'home'; // Combine areaId and pageId
-
-  console.log('Hash:', hash); // Debug: Log the full hash
-  console.log('Area ID:', areaId); // Debug: Log the area ID
-  console.log('Page ID:', resolvedPageId); // Debug: Log the resolved page ID
-
-  navigateTo(resolvedPageId); // Navigate to the resolved page ID
+// Helper to get the current product from the hash
+export function getCurrentProduct() {
+    const hash = getCurrentHash();
+    const hashSegments = parseHash(hash);
+    return hashSegments[0] || 'csa';
 }
 
-// Load 404 content into the main section, but keep the hash in the URL
-function load404Page(incorrectHash) {
-  const mainContent = document.querySelector('main'); // Get the main content element
+// Helper to get the current mode from the hash
+export function getCurrentMode() {
+    const hash = getCurrentHash();
+    const hashSegments = parseHash(hash);
+    return hashSegments[1] || 'design';
+}
 
-  if (!mainContent) return; // If there's no main element, return early
+// Remove '#' and split into segments
+function getCurrentHash() {
+    return window.location.hash.slice(1);
+}
 
-  // Clear the current content of the main section
-  mainContent.innerHTML = '';
+function parseHash(hash) {
+    return hash.split("/").filter(Boolean);
+}
 
-  // Display 404 message
-  mainContent.innerHTML = `
-    <section class="limit-content-width">
-      <h1 class="font-title-lg">404 - Page Not Found</h1>
-      <p>The page you are looking for, <strong>#${incorrectHash}</strong>, doesn't exist.</p>
-      <p>Please check the URL or return to the <a href="#home" onclick="navigateTo('home')">home page</a>.</p>
-    </section>
-  `;
+function getSegmentsFromRoute(route) {
+    const segments = [route.product, route.mode, route.appArea];
 
-  updateActiveLink(null); // Update the active link to '404'
+    if (route.areaPage) segments.push(route.areaPage);
+    if (route.pageTab) segments.push(route.pageTab);
+
+    return segments;
 }

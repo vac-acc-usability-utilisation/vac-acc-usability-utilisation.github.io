@@ -1,0 +1,149 @@
+body,
+html {
+    overflow: hidden;
+}
+
+#siteWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: var(--header-height);
+}
+
+#mainLayout {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+#navigationRail {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 0 0 var(--nav-rail-width);
+    inset-block-start: 0.25rem;
+}
+
+#navigationRail>ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#navigationRailDrawer {
+    display: flex;
+    flex: 0 0 280px;
+    border-left: 1px solid var(--outline-variant);
+}
+
+#filtersPanel {
+    flex: 0 0 var(--filter-pane-width);
+    background-color: var(--surface-container-low);
+    
+}
+
+#contentArea {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    margin: 0 1rem;
+}
+
+#contentArea.submenu-open {
+    margin-left: 14rem;
+}
+
+#scrim {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.32);
+  z-index: 999; 
+}
+
+#scrim.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#scrim:not(.hidden) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Medium < */
+@media screen and (min-width: 839px) {
+    #contentArea {
+        flex: 1;
+        display: flex;
+        overflow: hidden;
+        margin: 0 1rem 0 0;
+    }
+}
+
+#mainContentWrapper {
+    display: block;
+    flex: 1;
+    overflow-y: auto;
+    height: auto;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+#mainContentWrapper+#siteBanner {
+    display: block;
+    flex: 1;
+    overflow-y: auto;
+    height: auto;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+main {
+
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    height: auto;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+footer {
+    flex-shrink: 0;
+    height: var(--footer-height);
+    padding: 0 2rem 2rem 1rem;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+footer>div.watermark>svg {
+    height: 36px;
+}
+
+#page {
+    width: 100%;
+    max-width: 77.4375rem;
+    /* 1239px */
+    margin: 2rem;
+}
+
+#page-header.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 1rem 0;
+}
+
+#page .page-footer {
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+#toolsPanel {
+    flex: 0 0 var(--tools-pane-width);
+}

@@ -1,5 +1,8 @@
 progress {
-  position: relative;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
   inline-size: 100%;
   block-size: 0.5rem;
   color: var(--primary);
@@ -17,7 +20,7 @@ progress#page-loading-indicator {
   position: fixed;
   top: 1;
   left: 0;
-  
+
   border-radius: 0;
   z-index: 99;
 }
@@ -94,7 +97,7 @@ progress.circle.large {
   border-width: 0.4rem;
 }
 
-:is(nav, .row, .field) > progress:not(.circle, .small, .medium, .large) {
+:is(nav, .row, .field)>progress:not(.circle, .small, .medium, .large) {
   flex: auto;
 }
 
@@ -124,11 +127,11 @@ progress.max.vertical {
   transform: rotate(-180deg);
 }
 
-progress.max + * {
+progress.max+* {
   margin-block-start: 0;
 }
 
-:is(.button, button, .chip) > progress.circle {
+:is(.button, button, .chip)>progress.circle {
   color: inherit;
 }
 

@@ -1,0 +1,176 @@
+<h1 class="font-headline">
+  Client search
+</h1>
+<div class="space"></div>
+<button class="secondary-container large " style="z-index: 1;">
+  <i class="">close</i> Search panel
+</button>
+
+<div class="medium middle-align center-align surface hidden"
+  style="display: flex; flex-direction: column; height: 100%; ">
+  <i class="extra" style="overflow: visible;">person_search</i>
+  <h1 class="font-title">Search for a client</h1>
+  <p>Search for a client using the left-hand panel</p>
+  <div class="large-space"></div>
+  <div class="large-space"></div>
+</div>
+
+
+<!-- Results table -->
+
+<section class="lg xl xxl">
+  <div class="row">
+    <h2 class="font-title">Results for ""</h2>
+    <div class="max"></div>
+    <nav class="no-space lg xl xxl">
+      <button class="border left-round segmented-button fill">
+        <i style="margin:0;">table_rows</i>
+      </button>
+      <button id="table-example-grid-view" class="border right-round segmented-button ">
+        <i style="margin:0;">grid_view</i>
+      </button>
+    </nav>
+  </div>
+
+  <div class="small-padding top-padding bottom-padding"
+    style="position: sticky; top: 0px; background-color: var(--surface); z-index: 11; border-radius: 0; ">
+    <div class="row table-filters no-margin">
+      <div>
+
+        <button class="chip ">
+          Status <i class="tiny">arrow_drop_down</i>
+          <menu>
+            <li>Active</li>
+            <li>Pending</li>
+            <li>Suspended</li>
+          </menu>
+        </button>
+        <button class="chip ">
+          Roles<i class="tiny">arrow_drop_down</i>
+          <menu>
+            <li>Engineering</li>
+            <li>Design</li>
+            <li>Support</li>
+            <li>Marketing</li>
+          </menu>
+        </button>
+        <button class="chip ">Created at <i class="tiny">arrow_drop_down</i>
+
+        </button>
+        <button class="transparent small-padding">Clear filters</button>
+      </div>
+      <div class="max"></div>
+      <p class="font-label">
+        99 entries
+      </p>
+    </div>
+    <div class="row table-controls hide no-margin">
+      <div class="row secondary-container round small-padding max" style="padding-left: 0.5rem;">
+        <button class="circle transparent">
+          <i>close</i>
+        </button>
+        <p class="font-label"><span class="numberRowsSelected"></span> selected</p>
+        <div class="row" style="gap: 0.25rem;">
+          <button class="small transparent">
+            <i>edit</i>
+            Edit
+          </button>
+          <button class="small transparent">
+            <i>info</i>
+            View details
+          </button>
+          <button class="circle transparent">
+            <i>more_vert</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table class="border selectable-rows no-margin">
+    <thead style="position: sticky; top: 72px; z-index: 10;">
+      <tr>
+        <th>
+          <button class="transparent small-padding no-margin" style="margin-left: -8px !important;">CSDN ID</button>
+          <button class="circle transparent margin-left no-margin" style="margin-left: -8px !important;">
+            <i class="tiny">arrow_downward</i>
+          </button>
+        </th>
+        <th><button class="transparent small-padding" style="margin-left: -8px;">File number</button></th>
+        <th>
+          <button class="transparent small-padding" style="margin-left: -8px;">Name</button>
+        </th>
+        <th>
+          <button class="transparent small-padding" style="margin-left: -8px;">Date of birth</button>
+        </th>
+
+        <th>
+          <button class="transparent small-padding" style="margin-left: -8px;">Region</button>
+        </th>
+
+        <th><button class="transparent small-padding hidden" style="margin-left: -8px;">Status</button></th>
+        <th><span class="hide">Actions</span> </th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr class="summary-row">
+        <td>400322564100</td>
+        <td>7582984</td>
+        <td>Patricia Rosso</td>
+        <td>1991-03-24</td>
+        <td>Atlantic</td>
+        <td class="overflow-scroll padding-bottom no-padding">
+          <div class="row no-padding no-margin" style="gap: 0.25rem;">
+            <span class="middle-align round tertiary right-padding badge-expanded" style="width: fit-content;">
+              <i class="fill tiny" style="margin: 0 0.25rem 0 0rem;">deceased</i>Deceased</span>
+            <span class="middle-align round warning right-padding badge-expanded" style="width: fit-content;">
+              <i class="fill tiny" style="margin: 0 0.25rem 0 0rem;">warning</i>Special consideration</span>
+
+          </div>
+        </td>
+        <td class="right-align">
+          <button class="circle transparent no-margin">
+            <i class="on-surface-variant">arrow_drop_down</i>
+          </button>
+        </td>
+      </tr>
+
+      <tr class="expandable-content">
+        <td colspan="7" class="details padding">
+          <div><strong>Address:</strong> 123 Maple Ave., Ottawa, ON</div>
+          <div><strong>Language:</strong> French</div>
+          <div><strong>Area Office:</strong> Ottawa</div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+  <div class="row right-align" style="gap: 2rem; ">
+    <div class="row" style="gap: 0.5rem; align-items: center;">
+      <p class="font-label top-margin">Show</p>
+      <div class="field border transparent">
+
+        <label for="view-number" class="hide">Number of entries</label>
+        <select name="view-number" id="view-number" class="no-margin">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+        <i class="small">arrow_drop_down</i>
+      </div>
+      <p class="font-label">entries</p>
+    </div>
+    <p class="font-label">1-10 of 99</p>
+    <div class="row" style="gap: 0px;">
+      <button class="circle transparent disabled " disabled><i class="small">first_page</i></button>
+      <button class="circle transparent disabled " disabled><i class="small">chevron_left</i></button>
+      <button class="circle transparent "><i class="small">chevron_right</i></button>
+      <button class="circle transparent "><i class="small">last_page</i></button>
+    </div>
+  </div>
+</section>
+
+
+
+<p class="font-label page-footer">Date modified: 2025-07-28</p>

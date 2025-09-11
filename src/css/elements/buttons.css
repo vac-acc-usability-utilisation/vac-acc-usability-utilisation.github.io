@@ -1,6 +1,7 @@
 .button,
 button {
   box-sizing: content-box;
+  width: fit-content;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +20,7 @@ button {
   line-height: normal;
 }
 
-button i {
+button i, .button i {
   overflow: visible;
 }
 

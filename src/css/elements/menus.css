@@ -37,6 +37,13 @@ menu>li {
   cursor: pointer;
 }
 
+menu > li > a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 menu>li:hover {
   background-color: var(--surface-container-highest);
 }
@@ -63,9 +70,12 @@ menu {
   border-radius: 0.25rem;
   transform: scale(0.8) translateY(120%);
   transition: all var(--speed2), 0s background-color;
-  
+  display: flex;
+  flex-direction: column;
   min-width: 112px;
   max-width: 280px;
+  width: max-content;
+  overflow: visible;
 }
 
 [dir=rtl] menu {

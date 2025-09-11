@@ -1,10 +1,10 @@
-main {
+ /* main {
   inset-inline-start: 0.5rem;
-  inset-inline-end: 1rem;
-  width: calc(100% - 1.5rem);
+  inset-inline-end: 0.5rem;
+  width: calc(100% - 1rem);
   min-height: calc(100vh - 11rem);
-  padding: 0 1rem;
-}
+  padding: 0 1rem; 
+}*/
 
 #app.full-screen > main {
   inset-inline-start: 10rem;
@@ -64,23 +64,23 @@ main.responsive {
   padding-block-start: calc(var(--top) + 4rem);
 }
 
-
+/*
 *:has(> nav.left:not(.s, .m, .l)) {
   padding-inline-start: calc(var(--left) + 5rem);
 }
 
 #app.full-screen > nav.left {
   padding-inline-start: calc(var(--left));
-}
+}*/
 
 
 *:has(> nav.right:not(.s, .m, .l)) {
   padding-inline-end: calc(var(--right) + 5rem);
 }
-
+/*
 *:has(> nav.drawer.left:not(.s, .m, .l)) {
   padding-inline-start: calc(var(--left) + 20rem);
-}
+}*/
 
 *:has(> nav.drawer.right:not(.s, .m, .l)) {
   padding-inline-end: calc(var(--right) + 20rem);
@@ -106,9 +106,10 @@ aside:not(.fixed, .absolute).right {
   float: right;
 }
 
+/*
 aside:not(.fixed, .absolute).left {
   float: left;
-}
+}*/
 
 @media only screen and (max-width: 600px) {
   *:has(> nav.s.bottom) {
@@ -210,10 +211,11 @@ aside:not(.fixed, .absolute).left {
   *:has(> nav.l.top) {
     padding-block-start: calc(var(--top) + 5rem);
   }
+  /*
 
   *:has(> nav.l.left) {
     padding-inline-start: calc(var(--left) + 5rem);
-  }
+  }*/
 
   #app.full-screen:has(> nav.l.left) {
     padding-inline-start: calc(var(--left) + 14.5rem );
@@ -223,10 +225,10 @@ aside:not(.fixed, .absolute).left {
   *:has(> nav.l.right) {
     padding-inline-end: calc(var(--right) + 5rem);
   }
-
+/*
   *:has(> nav.l.drawer.left) {
     padding-inline-start: calc(var(--left) + 20rem);
-  }
+  }*/
 
   *:has(> nav.l.drawer.right) {
     padding-inline-end: calc(var(--right) + 20rem);

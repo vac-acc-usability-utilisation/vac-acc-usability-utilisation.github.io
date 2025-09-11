@@ -1,0 +1,47 @@
+[class*=margin]:not(.left-margin, .right-margin, .top-margin, .bottom-margin, .horizontal-margin, .vertical-margin) {
+  margin: var(---margin) !important;
+}
+
+[class*=margin] {
+  ---margin: 1rem;
+}
+
+.no-margin {
+  ---margin: 0;
+}
+
+.auto-margin {
+  ---margin: auto;
+}
+
+.tiny-margin {
+  ---margin: 0.25rem;
+}
+
+.small-margin {
+  ---margin: 0.5rem;
+}
+
+.large-margin {
+  ---margin: 1.5rem;
+}
+
+.left-margin,
+.horizontal-margin {
+  margin-inline-start: var(---margin) !important;
+}
+
+.right-margin,
+.horizontal-margin {
+  margin-inline-end: var(---margin) !important;
+}
+
+.top-margin,
+.vertical-margin {
+  margin-block-start: var(---margin) !important;
+}
+
+.bottom-margin,
+.vertical-margin {
+  margin-block-end: var(---margin) !important;
+}

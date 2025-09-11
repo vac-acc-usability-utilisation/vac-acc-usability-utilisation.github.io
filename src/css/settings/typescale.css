@@ -1,5 +1,28 @@
 :root {
 
+    /* ### Display */
+
+    /* #### Display - Large */
+    --display-lg-font-family: var(--display);
+    --display-lg-font-size: 3.5625rem; /* 57px */
+    --display-lg-line-height: 4rem; /* 64px */
+    --display-lg-font-weight: 400;
+    --display-lg-letter-spacing:  -0.015625rem; /* -0.25px */
+
+    /* #### Display - Medium */
+    --display-md-font-family: var(--display);
+    --display-md-font-size: 2.8125rem; /* 45px */
+    --display-md-line-height: 3.25rem; /* 52px */
+    --display-md-font-weight: 400;
+    --display-md-letter-spacing: 0;
+
+    /* #### Display - Small */
+    --display-sm-font-family: var(--display);
+    --display-sm-font-size: 2.25rem; /* 36px */
+    --display-sm-line-height: 2.75rem; /* 44px */
+    --display-sm-font-weight: 400;
+    --display-sm-letter-spacing: 0;
+
     /* ### Headline */
 
     /* #### Headline - Large */
@@ -111,26 +134,5 @@
     --hero-md-font-weight: 700;
     --hero-md-letter-spacing:  -0.015625rem; /* -0.25px */
 
-    /* ### Display */
-
-    /* #### Display - Large */
-    --display-lg-font-family: var(--display);
-    --display-lg-font-size: 3.5625rem; /* 57px */
-    --display-lg-line-height: 4rem; /* 64px */
-    --display-lg-font-weight: 700;
-    --display-lg-letter-spacing:  -0.015625rem; /* -0.25px */
-
-    /* #### Display - Medium */
-    --display-md-font-family: var(--display);
-    --display-md-font-size: 2.8125rem; /* 45px */
-    --display-md-line-height: 3.25rem; /* 52px */
-    --display-md-font-weight: 700;
-    --display-md-letter-spacing: 0;
-
-    /* #### Display - Small */
-    --display-sm-font-family: var(--display);
-    --display-sm-font-size: 2.25rem; /* 36px */
-    --display-sm-line-height: 2.75rem; /* 44px */
-    --display-sm-font-weight: 400;
-    --display-sm-letter-spacing: 0;
+ 
 }

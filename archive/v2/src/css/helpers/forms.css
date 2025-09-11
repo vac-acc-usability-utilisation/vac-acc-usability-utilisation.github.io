@@ -1,0 +1,109 @@
+.round {
+  border-radius: var(---round);
+}
+
+.small-round,
+.medium-round,
+.large-round {
+  border-radius: var(---round) !important;
+}
+
+.top-round,
+.bottom-round,
+.left-round,
+.right-round,
+.medium-round,
+.round {
+  ---round: 2rem;
+}
+
+.small-round {
+  ---round: 0.5rem;
+}
+
+.large-round {
+  ---round: 3.5rem;
+}
+
+.no-round,
+.square,
+.top-round,
+.bottom-round,
+.left-round,
+.right-round {
+  border-radius: 0 !important;
+}
+
+.top-round {
+  border-start-start-radius: var(---round) !important;
+  border-start-end-radius: var(---round) !important;
+}
+
+.bottom-round {
+  border-end-end-radius: var(---round) !important;
+  border-end-start-radius: var(---round) !important;
+}
+
+.left-round {
+  border-start-start-radius: var(---round) !important;
+  border-end-start-radius: var(---round) !important;
+}
+
+.right-round {
+  border-start-end-radius: var(---round) !important;
+  border-end-end-radius: var(---round) !important;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+:is(button, .button, .chip).circle {
+  border-radius: 2.5rem;
+}
+
+:is(.circle, .square):not(i, img, video, svg),
+:is(.circle, .square).chip.medium {
+  block-size: 2.5rem;
+  inline-size: 2.5rem;
+  padding: 0;
+}
+
+:is(.circle, .square) > span {
+  display: none;
+}
+
+:is(.circle, .square).small:not(i, img, video, svg),
+:is(.circle, .square).chip {
+  block-size: 2rem;
+  inline-size: 2rem;
+}
+
+:is(.circle, .square).large:not(i, img, video, svg) {
+  block-size: 3rem;
+  inline-size: 3rem;
+}
+
+:is(.circle, .square).extra:not(i, img, video, svg) {
+  block-size: 3.5rem;
+  inline-size: 3.5rem;
+}
+
+:is(.circle, .square).round {
+  border-radius: 1rem !important;
+}
+
+.border:not(table, .field) {
+  box-sizing: border-box;
+  border: 0.0625rem solid var(--outline);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.no-border {
+  border-color: transparent !important;
+}
+
+:is(nav, .row, dialog.max, header.fixed, footer.fixed, menu > a, menu.max, table, .tabs):not(.round) {
+  border-radius: 0;
+}

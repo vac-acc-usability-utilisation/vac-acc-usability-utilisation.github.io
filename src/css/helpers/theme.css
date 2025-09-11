@@ -67,6 +67,11 @@
   color: var(--on-tertiary-container) !important;
 }
 
+.warning {
+  background-color: var(--warning) !important;
+  color: var(--on-warning) !important;
+}
+
 .error {
   background-color: var(--error) !important;
   color: var(--on-error) !important;

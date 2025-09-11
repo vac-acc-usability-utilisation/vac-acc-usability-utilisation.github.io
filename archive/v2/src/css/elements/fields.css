@@ -1,0 +1,592 @@
+.field {
+  ---size: 3rem;
+  ---start: 1.2rem;
+
+  block-size: var(---size);
+  margin-block-end: 2rem;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.grid>*>.field {
+  margin-block-end: 1rem;
+}
+
+.grid>*>.field+.field {
+  margin-block-start: 2rem;
+}
+
+.grid.no-space>*>.field+.field {
+  margin-block-start: 1rem;
+}
+
+.grid.medium-space>*>.field+.field {
+  margin-block-start: 2.5rem;
+}
+
+.grid.large-space>*>.field+.field {
+  margin-block-start: 3rem;
+}
+
+.field.small {
+  ---size: 2.5rem;
+  ---start: 1rem;
+}
+
+.field.large {
+  ---size: 3.5rem;
+  ---start: 1.4rem;
+}
+
+.field.extra {
+  ---size: 4rem;
+  ---start: 1.6rem;
+}
+
+.field.border {
+  border-radius: 0.25rem;
+}
+
+.field.round.small {
+  border-radius: 1.25rem;
+}
+
+.field.round {
+  border-radius: 1.5rem;
+}
+
+.field.round.large {
+  border-radius: 1.75rem;
+}
+
+.field.round.extra {
+  border-radius: 2rem;
+}
+
+/* icon */
+.field> :is(i, img, svg, progress, a:not(.helper, .error)) {
+  position: absolute;
+  inset: 50% auto auto auto;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 0;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+}
+
+.field> :is(i, img, svg, progress, a:not(.helper, .error)),
+[dir=rtl] .field> :is(i, img, svg, progress, a:not(.helper, .error)):first-child {
+  inset: 50% 0.5rem auto auto;
+}
+
+.field> :is(i, img, svg, progress, a:not(.helper, .error)):first-child,
+[dir=rtl] .field> :is(i, img, svg, progress, a:not(.helper, .error)) {
+  inset: 50% auto auto 1rem;
+}
+
+.field.invalid>i {
+  color: var(--error);
+}
+
+.field>progress.circle {
+  inset-block-start: calc(50% - 0.75rem) !important;
+  border-width: 0.1875rem;
+}
+
+.field>a:not(.helper, .error) {
+  z-index: 10;
+}
+
+.field>a> :is(i, img, svg, progress, a:not(.helper, .error)) {
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+}
+
+/* input, textarea and select */
+.field> :is(input, textarea, select) {
+  all: unset;
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: inherit;
+  border: 0.0625rem solid transparent;
+  padding: 0 0.9375rem;
+  font-family: inherit;
+  font-size: 1rem;
+  inline-size: 100%;
+  block-size: 100%;
+  outline: none;
+  z-index: 1;
+  background: none;
+  resize: none;
+  text-align: start;
+  cursor: text;
+}
+
+/* input, textarea and select */
+.field > :is(select) {
+  cursor: pointer !important;
+}
+
+
+.field> :is(input, textarea, select)::placeholder {
+  color: var(--on-surface-variant);
+}
+
+input::-webkit-date-and-time-value {
+  text-align: start;
+}
+
+:is(input, select, textarea):-webkit-autofill {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--on-surface);
+}
+
+.field> :is(input, textarea, select):focus {
+  border: 0.125rem solid transparent;
+  /*padding: 0 0.875rem;*/
+}
+
+.field.min>textarea {
+  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  max-block-size: 12rem;
+}
+
+input[type=file],
+input[type=color],
+:not(.field)>input[type^=date],
+:not(.field)>input[type^=time],
+input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  z-index: 2 !important;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration,
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  display: none;
+}
+
+input[type=number] {
+  appearance: textfield;
+}
+
+.field.border> :is(input, textarea, select) {
+  border-color: var(--outline);
+}
+
+.field.border> :is(input, textarea, select):focus {
+  border-color: var(--primary);
+}
+
+.field.round> :is(input, textarea, select) {
+  padding-inline: 1.4376rem;
+}
+
+.field.round> :is(input, textarea, select):focus {
+  padding-inline: 1.375rem;
+}
+
+.field.prefix> :is(input, textarea, select) {
+  padding-inline-start: 2.9375rem;
+}
+
+.field.prefix>.slider {
+  margin-inline-start: 3.5rem;
+}
+
+.field.prefix> :is(input, textarea, select):focus {
+  padding-inline-start: 2.875rem;
+}
+
+.field.suffix> :is(input, textarea, select) {
+  padding-inline-end: 2.9375rem;
+}
+
+.field.suffix>.slider {
+  margin-inline-end: 3.5rem;
+}
+
+.field.suffix> :is(input, textarea, select):focus {
+  padding-inline-end: 2.875rem;
+}
+
+.field:not(.border, .round)> :is(input, textarea, select) {
+  border-block-end-color: var(--outline);
+}
+
+.field:not(.border, .round)> :is(input, textarea, select):focus {
+  border-block-end-color: var(--primary);
+}
+
+.field.round:not(.border, .fill)> :is(input, textarea, select),
+.field.round:not(.border)> :is(input, textarea, select):focus {
+  box-shadow: var(--elevate1);
+}
+
+.field.round:not(.border, .fill)> :is(input, textarea, select):focus {
+  box-shadow: var(--elevate2);
+}
+
+.field.invalid:not(.border, .round)> :is(input, textarea, select),
+.field.invalid:not(.border, .round)> :is(input, textarea, select):focus {
+  border-block-end-color: var(--error);
+}
+
+.field.invalid.border> :is(input, textarea, select),
+.field.invalid.border> :is(input, textarea, select):focus {
+  border-color: var(--error);
+}
+
+.field:has(> :disabled) {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.field> :disabled {
+  cursor: not-allowed;
+}
+
+.field.textarea.small:not(.min) {
+  ---size: 4.5rem;
+}
+
+.field.textarea:not(.min) {
+  ---size: 5.5rem;
+}
+
+.field.textarea.large:not(.min) {
+  ---size: 6.5rem;
+}
+
+.field.textarea.extra:not(.min) {
+  ---size: 7.5rem;
+}
+
+.field {
+  position: relative;
+}
+
+
+.field.label> :is(input, select) {
+  padding-block-start: 1rem;
+}
+
+.field.label.border:not(.fill)> :is(input, select) {
+  padding-block-start: 0;
+}
+
+.field>textarea {
+  padding-block-start: var(---start);
+  white-space: pre-wrap;
+}
+
+.field>textarea:focus {
+  padding-block-start: calc(var(---start) - 0.06rem);
+}
+
+.field:not(.label)>textarea,
+.field.border.label:not(.fill)>textarea {
+  padding-block-start: calc(var(---start) - 0.5rem);
+}
+
+.field:not(.label)>textarea:focus,
+.field.border.label:not(.fill)>textarea:focus {
+  padding-block-start: calc(var(---start) - 0.56rem);
+}
+
+/* label */
+.field.label>label {
+  position: absolute;
+  inset: -0.5rem auto auto 1rem;
+  display: flex;
+  inline-size: calc(100% - 5rem);
+  block-size: 4rem;
+  line-height: 4rem;
+  font-size: 1rem;
+  transition: all 0.2s;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+[dir=rtl] .field.label>label {
+  inset: -0.5rem 1rem auto auto;
+}
+
+.field.label.small>label {
+  block-size: 3.5rem;
+  line-height: 3.5rem;
+}
+
+.field.label.large>label {
+  block-size: 4.5rem;
+  line-height: 4.5rem;
+}
+
+.field.label.extra>label {
+  block-size: 5rem;
+  line-height: 5rem;
+}
+
+.field.label.border.prefix:not(.fill)> :is(label.active, :focus + label, [placeholder]:not(:placeholder-shown) + label, select + label) {
+  inset-inline-start: 1rem;
+}
+
+.field.label.round>label,
+.field.label.border.prefix.round:not(.fill)> :is(label.active, :focus + label, [placeholder]:not(:placeholder-shown) + label, select + label) {
+  inset-inline-start: 1.5rem;
+}
+
+.field.label.prefix>label {
+  inset-inline-start: 3rem;
+}
+
+.field.label> :is(label.active, :focus + label, [placeholder]:not(:placeholder-shown) + label, select + label) {
+  block-size: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 0.75rem;
+}
+
+.field.label.border:not(.fill)> :is(label.active, :focus + label, [placeholder]:not(:placeholder-shown) + label, select + label) {
+  block-size: 1rem;
+  line-height: 1rem;
+}
+
+.field.label.border:not(.fill)>label::after {
+  content: "";
+  display: block;
+  margin-block-start: 0.5rem;
+  border-block-start: 0.0625rem solid var(--outline);
+  block-size: 1rem;
+  transition: none;
+  flex: auto;
+}
+
+.field.label.border:not(.fill)> :focus+label::after {
+  border-block-start: 0.125rem solid var(--primary);
+}
+
+.field.label.border:not(.fill)> :is(input, textarea):is(:focus, [placeholder]:not(:placeholder-shown), .active),
+.field.label.border:not(.fill)>select {
+  clip-path: polygon(-2% -2%, 0.75rem -2%, 0.75rem 0.5rem, calc(100% - 5rem) 0.5rem, calc(100% - 5rem) -2%, 102% -2%, 102% 102%, -2% 102%);
+}
+
+[dir=rtl] .field.label.border:not(.fill)> :is(input, textarea):is(:focus, [placeholder]:not(:placeholder-shown), .active),
+[dir=rtl] .field.label.border:not(.fill)>select {
+  clip-path: polygon(-2% -2%, 5rem -2%, 5rem 0.5rem, calc(100% - 0.75rem) 0.5rem, calc(100% - 0.75rem) -2%, 102% -2%, 102% 102%, -2% 102%);
+}
+
+.field.label.border.round:not(.fill)> :is(input, textarea):is(:focus, [placeholder]:not(:placeholder-shown), .active),
+.field.label.border.round:not(.fill)>select {
+  clip-path: polygon(-2% -2%, 1.25rem -2%, 1.25rem 0.5rem, calc(100% - 5rem) 0.5rem, calc(100% - 5rem) -2%, 102% -2%, 102% 102%, -2% 102%);
+}
+
+[dir=rtl] .field.label.border.round:not(.fill)> :is(input, textarea):is(:focus, [placeholder]:not(:placeholder-shown), .active),
+[dir=rtl] .field.label.border.round:not(.fill)>select {
+  clip-path: polygon(-2% -2%, 5rem -2%, 5rem 0.5rem, calc(100% - 1.25rem) 0.5rem, calc(100% - 1.25rem) -2%, 102% -2%, 102% 102%, -2% 102%);
+}
+
+.field.label> :focus+label {
+  color: var(--primary);
+}
+
+.field.label.invalid>label,
+.field.label.invalid>label::after {
+  color: var(--error) !important;
+  border-color: var(--error) !important;
+}
+
+.field.label>label>a {
+  block-size: inherit;
+  line-height: inherit;
+  inline-size: 1rem;
+}
+
+.field.label>label>a> :is(i, img, svg) {
+  block-size: 1rem;
+  line-height: 1rem;
+  inline-size: 1rem;
+  font-size: 1rem;
+}
+
+/* helper */
+.field> :is(.helper, .error) {
+  position: absolute;
+  inset: auto auto 0 1rem;
+  transform: translateY(100%);
+  font-size: 0.75rem;
+  background: none !important;
+  padding-block-start: 0.125rem;
+}
+
+[dir=rtl] .field> :is(.helper, .error) {
+  inset: auto 1rem 0 auto;
+}
+
+a.helper {
+  color: var(--primary);
+}
+
+.field>.error {
+  color: var(--error) !important;
+}
+
+.field.round> :is(.helper, .error) {
+  inset-inline-start: 1.5rem;
+}
+
+.field.invalid>.helper {
+  display: none;
+}
+
+table td>.field {
+  margin: 0;
+}
+
+fieldset {
+  border-radius: 0.25rem;
+  padding: 1rem;
+  border: 0.0625rem solid var(--outline-variant);
+}
+
+fieldset>legend {
+  margin: 0 -0.25rem;
+  padding: 0 0.25rem;
+}
+
+fieldset>legend+* {
+  margin-block-start: 0 !important;
+}
+
+
+/* Custom overrides */
+
+.field.border {
+  border-radius: .25rem;
+}
+
+.field {
+  margin-bottom: 24px;
+  border-radius: .25rem .25rem 0 0;
+  height: auto;
+}
+
+.field.border :is(input, textarea, select),
+textarea.field.border {
+  border-color: var(--outline);
+}
+
+.field :is(input, textarea, select),
+textarea {
+  all: unset;
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: inherit;
+  border: .0625rem solid transparent;
+  padding: 0 .9375rem;
+  font-family: inherit;
+  font-size: 1rem;
+  inline-size: 100%;
+  block-size: 100%;
+  outline: none;
+  z-index: 1;
+  background: var(--surface-container);
+  resize: none;
+  text-align: start;
+  cursor: text;
+  height: 48px;
+}
+
+textarea.field>:is(input, textarea, select)::placeholder,
+textarea.field::placeholder {
+  color: var(--on-surface-variant);
+}
+
+.field>:is(input, textarea, select):focus {
+  /*padding: 0.9375rem;*/
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  /*max-width: 425px;*/
+  overflow: hidden;
+  resize: none;
+}
+
+
+/* Styles for the input, textarea, or select when active or focused */
+.field> :is(input, textarea, select):active,
+.field> :is(input, textarea, select):focus,
+textarea.field:active,
+textarea.field:focus {
+  background-color: var(--surface-container-lowest);
+  border: solid 2px var(--primary);
+}
+
+
+label {
+  display: flex;
+  letter-spacing: 0.5px;
+}
+
+/* Style the label when the input inside .field is focused */
+.field:focus-within>label,
+.field:focus-within>span {
+  color: var(--md-sys-color-primary);
+  /* Change color for focus */
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input:disabled {
+  opacity: 0.38;
+}
+
+.field > select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  padding-right: 2rem; /* Add space for the icon */
+  position: relative;
+}
+
+.field > select:focus + i {
+  z-index: 1;
+}
+
+
+/*Search field in menu*/ 
+:not(menu, [data-ui]):focus-within > menu {
+  border-radius: 0.25rem;
+}
+
+:not(menu, [data-ui]):focus-within > menu > .field {
+  
+  margin: 0;
+  padding: 4px;
+}

@@ -1,63 +1,81 @@
-// Declare languageSetting in the global scope
-let currentLanguage = getUserLanguage();
-//const translationsCache = {};
-
-
-// Function to get the user's language
-export function getUserLanguage() {
-    const storedLanguageSetting = localStorage.getItem('languageSetting');
-    const userBrowserLanguage = navigator.language ? navigator.language.slice(0, 2) : 'en';
-
-    // Use the stored language if available, else fallback to the browser's language
-    return storedLanguageSetting ? storedLanguageSetting : userBrowserLanguage;
+export function getSavedLanguage() {
+    return localStorage.getItem('appLang');
 }
 
-export function setLanguage(lang) {
-    currentLanguage = lang;
-    localStorage.setItem('lang', lang);
+export function detectBrowserLanguage() {
+    const lang = navigator.languages ? navigator.languages[0] : navigator.language;
+    return lang ? lang.slice(0, 2) : 'en'; // e.g., 'en-US' -> 'en'
 }
 
-export function getCurrentLanguage() {
-    return currentLanguage;
-}
+export function initI18n() {
+    // Use saved language, or browser language, or fallback to 'en'
+    const savedLang = getSavedLanguage();
+    const browserLang = detectBrowserLanguage();
+    const initialLang = savedLang || browserLang || 'en';
 
-export function toggleLanguage() {
-    const newLang = currentLanguage === 'en' ? 'fr' : 'en';
-    setLanguage(newLang);
-    return newLang;
-}
-
-export function handleLanguageToggle() {
     const langBtn = document.getElementById('lang-toggle');
 
-    langBtn.addEventListener('click', async () => {
-        const newLang = toggleLanguage();
-        //langBtn.textContent = newLang.toUpperCase();
-        loadLogo(newLang);
-        await applyTranslations(newLang);
+    //langBtn.textContent = getCurrentLanguage() === 'en' ? 'FR' : 'EN';
+
+    // Initialize i18next with the default language
+    i18next
+        .use(i18nextHttpBackend)
+        .init({
+            lng: initialLang,
+            fallbackLng: 'en',
+            debug: true,
+            backend: {
+                // Load path must match your public folder
+                loadPath: 'src/locales/{{lng}}/{{ns}}.json'
+            }
+        }, function (err, t) {
+            if (err) return console.error('i18next init error:', err);
+            
+            // Set initial button label
+            if (langBtn) {
+                langBtn.textContent = getCurrentLanguage() === 'en' ? 'FR' : 'EN';
+            }
+            updateContent(); // Set initial translations
+        });
+    
+    // Apply translations to elements with [data-i18n]
+    function updateContent() {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            el.textContent = i18next.t(key);
+        });
+    }
+}
+
+export function updateTranslations() {
+    // For all elements with a data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        el.textContent = i18next.t(key);
     });
 }
 
-// Function to load the logo based on the language
-export function loadLogo(language) {
-    const logoContainers = document.getElementsByClassName('brand');
-    let logoSrc = (language === 'fr') ? 'src/img/VAC-FIP-FR.svg' : 'src/img/VAC-FIP-EN.svg';
-
-    fetch(logoSrc)
-        .then(response => response.ok ? response.text() : Promise.reject('Failed to load logo'))
-        .then(svg => {
-            Array.from(logoContainers).forEach(container => {
-                container.innerHTML = svg;
-                const path = container.querySelector('path');
-                if (path) path.setAttribute('fill', 'var(--md-sys-color-on-surface-variant)');
-            });
-        })
-        .catch(error => console.error('Error loading logo:', error));
+export function getCurrentLanguage() {
+    return i18next.language || 'en';
 }
 
-export function applyTranslations(languageSetting) {
-    $.i18n({ locale: languageSetting }).load({
-        'en': './src/content/ui/en.json',
-        'fr': './src/content/ui/fr.json'
-    }).done(() => $('body').i18n());
+export function initLanguageToggle() {
+    const langBtn = document.getElementById('lang-toggle');
+    if (!langBtn) return;
+
+    langBtn.addEventListener('click', () => {
+        toggleLanguage((newLang) => {
+            langBtn.textContent = newLang === 'en' ? 'FR' : 'EN';
+            updateTranslations();
+        });
+    });
+}
+
+export function toggleLanguage(callback) {
+    const newLang = getCurrentLanguage() === 'en' ? 'fr' : 'en';
+    i18next.changeLanguage(newLang, () => {
+        localStorage.setItem('appLang', newLang); // Save language choice
+        if (typeof callback === 'function') callback(newLang);
+    });
+    return newLang;
 }

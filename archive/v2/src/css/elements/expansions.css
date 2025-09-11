@@ -1,0 +1,57 @@
+summary.none {
+  list-style-type: none;
+}
+
+summary.none::-webkit-details-marker {
+  display: none;
+}
+
+
+summary::before {
+  content: 'expand_more'; /* default closed icon */
+  font-family: var(--font-icon);
+  color: var(--on-surface-variant);
+  position: absolute;
+  right: 8px;
+  font-size: 24px;
+}
+
+/* when open, change to collapse icon or rotate */
+details[open] summary::before {
+  content: 'expand_less'; /* optional alternative */
+  /* OR rotate the icon: */
+  /* transform: rotate(180deg); */
+}
+
+summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 4px;
+}
+
+details[open] summary {
+  height: 64px;
+}
+
+
+summary:hover::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 48px;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+}
+
+details[open] summary::after {
+  height: 64px;
+}
+
+
+summary:focus {
+  outline: none;
+}

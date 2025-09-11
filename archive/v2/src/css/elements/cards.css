@@ -1,0 +1,59 @@
+article {
+  /*box-shadow: var(--elevate1);*/
+  background-color: var(--surface-container);
+  color: var(--on-surface);
+  padding: 1.5rem 1.5rem 2.25rem 1.5rem;
+  border-radius: 0.75rem !important;
+  display: block;
+  transition: transform var(--speed3), border-radius var(--speed3), padding var(--speed3);
+}
+
+div.grid article {
+  height: 100%;
+  width: 100%;
+}
+
+div.grid.selectable-grid {
+  user-select: none;
+}
+
+div.grid.selectable-grid article:hover {
+  cursor: pointer;
+}
+
+a.card  {
+  text-decoration: none !important;
+  border-radius: 0.75rem !important;
+}
+
+
+article.active {
+  background: var(--secondary-container);
+  color: var(--on-secondary-container);
+}
+
+article.small {
+  block-size: 12rem;
+}
+
+article.medium {
+  block-size: 20rem;
+}
+
+article.large {
+  block-size: 32rem;
+}
+
+article.overview-card h2 {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+article.overview-card  .overview-card-edit-btn {
+  display:  none;
+}
+
+article.overview-card:hover  .overview-card-edit-btn {
+  display:  block;
+}

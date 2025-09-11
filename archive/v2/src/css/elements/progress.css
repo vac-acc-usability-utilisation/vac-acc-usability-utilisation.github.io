@@ -1,0 +1,200 @@
+progress {
+  position: relative;
+  inline-size: 100%;
+  block-size: 0.5rem;
+  color: var(--primary);
+  background: var(--primary-container);
+  border-radius: 1rem;
+  flex: none;
+  border: none;
+  overflow: hidden;
+  writing-mode: horizontal-tb;
+  direction: ltr;
+  -webkit-appearance: none;
+}
+
+progress#page-loading-indicator {
+  position: fixed;
+  top: 1;
+  left: 0;
+  
+  border-radius: 0;
+  z-index: 99;
+}
+
+progress.small {
+  inline-size: 4rem;
+}
+
+progress.medium {
+  inline-size: 8rem;
+}
+
+progress.large {
+  inline-size: 12rem;
+}
+
+progress:not(.circle, [value])::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  clip-path: none;
+  background: currentcolor;
+  animation: 1.6s to-linear ease infinite;
+}
+
+progress:not(.circle, [value])::-moz-progress-bar {
+  animation: 1.6s to-linear ease infinite;
+}
+
+progress:not(.circle, [value])::-webkit-progress-value {
+  animation: 1.6s to-linear ease infinite;
+}
+
+progress::-webkit-progress-bar {
+  background: none;
+}
+
+progress::-webkit-progress-value {
+  background: currentcolor;
+}
+
+progress::-moz-progress-bar {
+  background: currentcolor;
+}
+
+progress.circle {
+  display: inline-block;
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  border-radius: 50%;
+  border-width: 0.3rem;
+  border-style: solid;
+  border-color: currentcolor;
+  animation: 1.6s to-circular linear infinite;
+  background: none;
+  flex: none;
+}
+
+progress.circle::-moz-progress-bar {
+  background: none;
+}
+
+progress.circle.small {
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  border-width: 0.2rem;
+}
+
+progress.circle.large {
+  inline-size: 3.5rem;
+  block-size: 3.5rem;
+  border-width: 0.4rem;
+}
+
+:is(nav, .row, .field) > progress:not(.circle, .small, .medium, .large) {
+  flex: auto;
+}
+
+progress.max {
+  display: unset;
+  position: absolute;
+  inline-size: 100% !important;
+  block-size: 100% !important;
+  color: var(--active);
+  background: none;
+  inset: 0;
+  border-radius: inherit;
+  animation: none;
+  writing-mode: horizontal-tb;
+}
+
+progress:is(.horizontal, .vertical, .max) {
+  display: unset;
+  inline-size: 100% !important;
+}
+
+progress.vertical {
+  writing-mode: vertical-lr;
+}
+
+progress.max.vertical {
+  transform: rotate(-180deg);
+}
+
+progress.max + * {
+  margin-block-start: 0;
+}
+
+:is(.button, button, .chip) > progress.circle {
+  color: inherit;
+}
+
+@supports (-moz-appearance:none) {
+  progress.max.vertical {
+    transform: none;
+  }
+}
+
+@keyframes to-linear {
+  0% {
+    margin-inline-start: 0%;
+    inline-size: 0%;
+  }
+
+  50% {
+    margin-inline-start: 0%;
+    inline-size: 100%;
+  }
+
+  100% {
+    margin-inline-start: 100%;
+    inline-size: 0%;
+  }
+}
+
+@keyframes to-circular {
+  0% {
+    transform: rotate(0deg);
+    clip-path: polygon(50% 50%, 0% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+  }
+
+  20% {
+    clip-path: polygon(50% 50%, 0% 0%, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+  }
+
+  30% {
+    clip-path: polygon(50% 50%, 0% 0%, 50% 0%, 100% 0%, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 50%);
+  }
+
+  40% {
+    clip-path: polygon(50% 50%, 0% 0%, 50% 0%, 100% 0%, 100% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%);
+  }
+
+  50% {
+    clip-path: polygon(50% 50%, 50% 0%, 50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 50% 100%, 50% 100%);
+  }
+
+  60% {
+    clip-path: polygon(50% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 100%);
+  }
+
+  70% {
+    clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%, 0% 50%);
+  }
+
+  80% {
+    clip-path: polygon(50% 50%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 50%);
+  }
+
+  90% {
+    transform: rotate(360deg);
+    clip-path: polygon(50% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%);
+  }
+
+  100% {
+    clip-path: polygon(50% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%);
+  }
+}

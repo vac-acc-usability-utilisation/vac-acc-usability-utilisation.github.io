@@ -1,7 +1,7 @@
 nav> :is(ol, ul),
 nav li {
   all: unset;
-  line-height: 0;  
+  line-height: 0;
 }
 
 nav,
@@ -74,6 +74,7 @@ nav.drawer> :is(ol, ul)>li> :is(a, label)>.max {
   border-inline-start: 0;
 }
 
+/*
 nav:is(.left, .right, .top, .bottom) {
   border: 0;
   position: fixed;
@@ -86,12 +87,13 @@ nav:is(.left, .right, .top, .bottom) {
   padding: 0.5rem 1rem;
   inset: var(--top) var(--right) var(--bottom) var(--left);
   margin: 0;
-}
+}*/
 
 nav:is(.top, .bottom) {
   padding-left: 1.5rem;
 }
 
+/*
 nav:is(.left, .right) {
   padding-top: 0;
   inline-size: var(--nav-rail-width);
@@ -99,7 +101,7 @@ nav:is(.left, .right) {
   justify-content: flex-start;
   flex-direction: column;
   background-color: var(--surface);
-}
+}*/
 
 nav:is(.top, .bottom) {
   block-size: 4rem;
@@ -112,9 +114,10 @@ nav.top {
   inset-block-end: auto;
 }
 
+/*
 nav.left {
   inset-inline-end: auto;
-}
+}*/
 
 nav.right {
   inset-inline-start: auto;
@@ -124,12 +127,32 @@ nav.bottom {
   inset-block-start: auto;
 }
 
+
+#navigation-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  margin-top: 0;
+  background-color: var(--surface-container);
+  height: calc(100vh);
+  width: 21rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+#navigation-menu ul {
+  margin-block-start: 0rem;
+  padding: 0 0.25rem;
+}
+
 nav.drawer {
   flex-direction: column;
   align-items: normal;
   inline-size: 20rem;
   gap: 0;
-  padding: 0.5rem 1rem;
+  padding: 0rem 0.5rem 0.5rem 0.5rem;
 }
 
 nav.drawer:is(.min, .max) {
@@ -147,7 +170,7 @@ nav.rail-submenu {
   padding-bottom: 2rem;
   width: 14rem;
   top: 64px;
-  left: 88px;
+  left: var(--nav-rail-width);
   z-index: 9;
   border-left: 1px solid var(--outline-variant);
   overflow-y: scroll;
@@ -167,7 +190,7 @@ nav.rail-submenu {
 }
 
 nav.rail-submenu ul {
-  padding: 0px 8px 2rem 8px !important;
+  /* padding: 0px 8px 2rem 8px !important; */
 }
 
 nav.drawer ul ul,
@@ -186,14 +209,15 @@ nav.drawer li.expanded>ol {
   background-color: inherit;
 }
 
-nav:is(.left, .right)>header {
-  transform: translateY(-0.5rem);
-}
-
+/*
 nav.drawer>header {
   transform: translateY(-0.75rem);
   min-block-size: 4.5rem;
   align-self: stretch;
+}*/
+
+nav.drawer>header {
+  height: var(--header-height);
 }
 
 nav.drawer :is(a, label),
@@ -210,8 +234,10 @@ nav.drawer> :is(ol, ul)>li> :is(a, button) {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 100%; /* Ensure the container has a fixed width */
-  min-width: 0; /* Critical for ellipsis in flex layouts */
+  width: 100%;
+  /* Ensure the container has a fixed width */
+  min-width: 0;
+  /* Critical for ellipsis in flex layouts */
   padding: 16px 24px;
   box-sizing: border-box;
   /* #### Label - Medium */
@@ -292,6 +318,11 @@ li.has-expansion>button>i {
   flex-shrink: 0;
 }
 
+nav.drawer a > i {
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
 nav.drawer a.active {
   background-color: var(--secondary-container);
   font-weight: 700;
@@ -319,7 +350,7 @@ nav.drawer> :is(ol, ul)>li>a:is(:hover, :focus, .active)>i {
 }
 
 nav> :is(ol, ul) {
-  all: inherit;
+  /*all: inherit;*/
   flex: auto;
 }
 
@@ -356,6 +387,10 @@ nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button,
   font-weight: 700;
 }
 
+#navigationRail>ul {
+  gap: 1rem;
+}
+
 /*
 #navigation-rail>ul>li>a.active>span.navigationRailLabel {
   color: var(--md-sys-color-secondary);
@@ -389,7 +424,6 @@ nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button,
   display: block;
   position: absolute;
   inset: 0;
-  /* shorthand for top: 0; right: 0; bottom: 0; left: 0 */
   background-color: var(--scrim);
   opacity: 0.08;
 }
@@ -440,6 +474,8 @@ nav.tabbed {
   border-radius: 4rem !important;
   gap: 0rem;
   block-size: 4rem;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 nav.tabbed.small {
@@ -462,7 +498,7 @@ nav.tabbed>a {
   text-decoration: none;
 }
 
-nav.tabbed.tabs > a.active::before {
+nav.tabbed.tabs>a.active::before {
   block-size: 0;
 }
 
@@ -472,8 +508,69 @@ nav.tabbed>a.active {
   border-bottom: none;
 }
 
-nav.tabbed>a.active >i {
+nav.tabbed>a.active>i {
   font-variation-settings: "FILL" 1;
+}
+
+nav.toolbar {
+  display: inline-flex;
+  justify-content: space-around;
+  border-radius: 2rem;
+  background-color: var(--surface-container);
+  color: var(--on-surface);
+  padding: 0 1rem;
+  gap: 0.5rem;
+  min-block-size: 4rem;
+  min-inline-size: 4rem;
+}
+
+nav.toolbar>a {
+  display: inline-flex;
+  gap: 0.5rem;
+  min-inline-size: 2.5rem;
+  min-block-size: 2.5rem;
+  border-radius: 1.75rem;
+}
+
+nav.toolbar>a:has(> :not(i)) {
+  padding: 0 1rem;
+}
+
+nav.toolbar>a.active {
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+}
+
+nav.toolbar.fill {
+  background-color: var(--primary-container) !important;
+  color: var(--on-primary-container) !important;
+}
+
+nav.toolbar.fill>a.active {
+  background-color: var(--surface-container) !important;
+  color: var(--on-surface) !important;
+}
+
+nav.toolbar.vertical {
+  flex-direction: column !important;
+  min-inline-size: 4rem;
+  padding: 1rem 0;
+  align-self: center;
+  align-items: center !important;
+}
+
+nav.toolbar.vertical>a {
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+}
+
+nav.toolbar.vertical>a> :is(div, span):not(.badge, .tooltip) {
+  display: none;
+}
+
+nav.toolbar.max {
+  border-radius: 0;
+  display: flex;
 }
 
 :not(nav)> :is(ul, ol) {
@@ -485,7 +582,7 @@ nav.tabbed>a.active >i {
   outline-offset: -0.125rem;
 }
 
-
+/*
 #client-menu-container {
   position: fixed;
   left: 0.5rem;
@@ -494,8 +591,17 @@ nav.tabbed>a.active >i {
   background: var(--surface-container);
   height: calc(100vh - 64px);
   width: 14rem;
-} 
+} */
 
+#client-menu {
+  width: 14rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#client-menu ul {
+  width: auto;
+}
 
 @media only screen and (max-width: 600px) {
 
@@ -504,7 +610,7 @@ nav.tabbed>a.active >i {
     justify-content: space-around;
   }
 
-  #client-menu-container {
+  #client-menu {
     display: none;
   }
 
@@ -514,8 +620,8 @@ nav.tabbed>a.active >i {
 
 }
 
-@media screen and (min-width: 600px) and (max-width: 839px) { 
-  #client-menu-container {
+@media screen and (min-width: 600px) and (max-width: 839px) {
+  #client-menu {
     display: none;
   }
 

@@ -1,0 +1,191 @@
+table {
+  inline-size: 100%;
+  border-spacing: 0;
+  font-size: 0.875rem;
+  text-align: start;
+}
+
+tr {
+  display: table-row;
+  height: 3.25rem;
+}
+
+td,
+th {
+  display: table-cell;
+}
+
+
+.scroll>table,
+table :is(thead, tbody, tfoot, tr, th, td) {
+  background-color: inherit;
+  color: inherit;
+}
+
+table>thead>tr {
+  background-color: var(--surface-container-low);
+  height: 3.5rem;
+  font-weight: 600;
+}
+
+table>thead>tr>button {
+  font-weight: 600;
+}
+
+table>thead>tr>th:first-of-type {
+  border-inline-start: 0.0625rem solid var(--outline-variant);
+  border-radius: 1rem 0 0 0;
+  z-index: 2;
+}
+
+table>thead>tr>th:last-of-type {
+  border-inline-end: 0.0625rem solid var(--outline-variant);
+  border-radius: 0 1rem 0 0;
+  z-index: 2;
+}
+
+:is(th, td) {
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+  overflow: hidden;
+  /* Hide overflowing content */
+  text-overflow: ellipsis;
+  /* Add ellipsis (...) for overflowing text */
+  inline-size: auto;
+  text-align: inherit;
+  padding: 0 1rem;
+}
+
+:is(th, td)>* {
+  vertical-align: middle;
+}
+
+thead>tr>th {
+  border-block-start: 0.0625rem solid var(--outline-variant);
+  border-block-end: 0.0625rem solid var(--outline);
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+  overflow: hidden;
+  /* Hide overflowing content */
+  text-overflow: ellipsis;
+  /* Add ellipsis (...) for overflowing text */
+}
+
+thead>tr>th>button {
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+  overflow: hidden;
+  /* Hide overflowing content */
+  text-overflow: ellipsis;
+  /* Add ellipsis (...) for overflowing text */
+ 
+  width: auto;
+  /*justify-content: left;*/
+}
+
+table.border>tbody>tr:not(:last-child)>td {
+  border-block-end: 0.0625rem solid var(--outline-variant);
+}
+
+table.border>tbody>tr>td:first-of-type {
+  border-inline-start: 0.0625rem solid var(--outline-variant);
+}
+
+table.border>tbody>tr>td:last-of-type {
+  border-inline-end: 0.0625rem solid var(--outline-variant);
+  
+}
+
+table.border>tbody>tr:last-child>td {
+  border-block-end: 0.0625rem solid var(--outline-variant);
+}
+
+table.border>tbody>tr:last-child>td:first-of-type {
+  border-radius: 0 0 0 1rem;
+}
+
+table.border>tbody>tr:last-child>td:last-of-type {
+  border-radius: 0 0 1rem 0;
+}
+
+tfoot>tr>th {
+  border-block-start: 0.0625rem solid var(--outline);
+}
+
+table.selectable-rows {
+  width: 100%;
+  user-select: none;
+}
+
+table.selectable-rows>tbody>tr {
+  position: relative;
+  height: 3.25rem;
+  width: 100%;
+  display: table-row;
+}
+
+table.selectable-rows>tbody>tr.active {
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+}
+
+table.selectable-rows>tbody>tr:hover {
+  cursor: pointer;
+}
+
+table.selectable-rows>tbody>tr::after {
+  display: none;
+  /* Hide the pseudo-element by default */
+}
+
+table.selectable-rows>tbody>tr:hover::after {
+  content: '';
+  display: block;
+  /* Keep it as a block-level element */
+  position: absolute;
+  /* Ensure it does not affect the layout */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Ensure it spans the full width of the row */
+  height: 100%;
+  /* Match the row's height */
+  background-color: var(--scrim);
+  opacity: 0.08;
+  pointer-events: none;
+  /* Prevent interactions */
+  box-sizing: border-box;
+  /* Ensure padding/borders don't affect dimensions */
+}
+
+table.selectable-rows>tbody>tr:active::after {
+  content: '';
+  display: block;
+  /* Keep it as a block-level element */
+  position: absolute;
+  /* Ensure it does not affect the layout */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Ensure it spans the full width of the row */
+  height: 100%;
+  /* Match the row's height */
+  background-color: var(--scrim);
+  opacity: 0.1;
+  pointer-events: none;
+  /* Prevent interactions */
+  box-sizing: border-box;
+  /* Ensure padding/borders don't affect dimensions */
+}
+
+table.selectable-rows>tbody>tr:last-of-type:hover::after {
+ 
+  border-radius: 0 0 1rem 1rem;
+}
+
+
+.overflow-scroll {
+  max-width: 319px;
+  overflow-x: scroll;
+  text-overflow: unset;
+}

@@ -2,7 +2,6 @@
   display: flex;
   white-space: nowrap;
   border-block-end: 0.0625rem solid var(--surface-variant);
-  flex: 1;
 }
 
 .tabs:not(.left-align, .right-align, .center-align) {
@@ -57,3 +56,5 @@
   flex-direction: column;
   justify-content: center;
 }
+
+

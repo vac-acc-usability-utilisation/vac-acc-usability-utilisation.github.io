@@ -1,41 +1,46 @@
-let idx;
-let pages = [];
+export async function initSearch() {
+    // Load the index data
+    const response = await fetch('src/lunr/en.json');
+    const documents = await response.json();
 
-export function loadIndex() {
-    return fetch('/src/content/pages/en/typography.json')
-        .then(response => response.json())
-        .then(data => {
-            pages = data.sections.map((section, i) => ({
-                id: `${data.id}-${i}`,
-                title: section.heading,
-                body: `${data.lead} ${section.body}`, 
-                pageId: data.id
-            }));
+    // Build the Lunr index
+    const idx = lunr(function () {
+        this.ref('id');
+        this.field('title');
+        this.field('body');
+        this.field('keywords');
+        documents.forEach(function (doc) {
+            this.add(doc);
+        }, this);
+    });
 
-            idx = lunr(function () {
-                this.ref('id');
-                this.field('title');
-                this.field('body');
-                pages.forEach(doc => this.add(doc));
-            });
+    // Wire up the search input
+    const searchInput = document.getElementById('search');
+    const resultsDiv = document.querySelector('.search-results');
 
-            console.log("Lunr index built!");
-        })
-        .catch(err => console.error("Error building search index:", err));
-}
-export function search(query) {
-    if (!idx) {
-        console.warn("Search index not loaded yet");
-        return [];
-    }
-
-    const results = idx.search(query);
-    return results.map(result => {
-        const match = pages.find(p => p.id === result.ref);
-        return {
-            title: match.title,
-            body: match.body,
-            pageId: match.pageId
-        };
+    searchInput.addEventListener('input', function (e) {
+        const query = e.target.value.trim();
+        if (!query) {
+            resultsDiv.innerHTML = '<h2 class="font-body">Recent searches</h2>';
+            return;
+        }
+        const results = idx.search(query);
+        if (results.length === 0) {
+            resultsDiv.innerHTML = `<p>No results found for “${query}”.</p>`;
+            return;
+        }
+        resultsDiv.innerHTML = `<div class="search-summary bottom-margin">Showing ${results.length} result${results.length !== 1 ? 's' : ''} for “${query}”</div>` +
+            results.map(r => {
+                const doc = documents.find(d => d.id === r.ref);
+                return `<div class="search-result grid">
+                    <a href="${doc.url}" class="card sm12 md12 lg4 xl4 xxl4">
+                    <article class="round wave">
+                    <h3 class="font-title">${doc.title}</h3>
+                    <p>${doc.body}</p>
+                    </article>
+                    </a>
+                    
+                </div>`;
+            }).join('');
     });
 }
