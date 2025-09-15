@@ -77,8 +77,8 @@ export function loadDynamicLayout() {
   const isDemo = window.location.pathname.includes('demo.html');
 
   // Determine the correct template files
-  const headerFile = isDemo ? '/src/templates/demo-header.html' : '/src/templates/design-system-header.html';
-  const navFile = isDemo ? '/src/templates/demo-nav.html' : '/src/templates/design-system-nav.html';
+  const headerFile = isDemo ? 'src/templates/demo-header.html' : 'src/templates/design-system-header.html';
+  const navFile = isDemo ? 'src/templates/demo-nav.html' : 'src/templates/design-system-nav.html';
 
   // Return a Promise that resolves when both header and navigation are loaded
   return Promise.all([
