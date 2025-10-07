@@ -1,26 +1,29 @@
 <h1 class="font-headline">
-  Client search
-</h1>
+  Search results
+</h1><!--
 <div class="space"></div>
+
 <button class="secondary-container large " style="z-index: 1;">
   <i class="">close</i> Search panel
-</button>
+</button>-->
 
+<!--
 <div class="medium middle-align center-align surface hidden"
   style="display: flex; flex-direction: column; height: 100%; ">
   <i class="extra" style="overflow: visible;">person_search</i>
-  <h1 class="font-title">Search for a client</h1>
-  <p>Search for a client using the left-hand panel</p>
+  <h1 class="font-title">Search for a notebook</h1>
+  <p>Search for a notebook using the left-hand panel</p>
   <div class="large-space"></div>
   <div class="large-space"></div>
-</div>
+</div>-->
 
 
 <!-- Results table -->
 
 <section class="lg xl xxl">
   <div class="row">
-    <h2 class="font-title">Results for ""</h2>
+    <!--
+    <h2 class="font-title">Results for ""</h2>-->
     <div class="max"></div>
     <nav class="no-space lg xl xxl">
       <button class="border left-round segmented-button fill">
@@ -34,6 +37,7 @@
 
   <div class="small-padding top-padding bottom-padding"
     style="position: sticky; top: 0px; background-color: var(--surface); z-index: 11; border-radius: 0; ">
+    <!--
     <div class="row table-filters no-margin">
       <div>
 
@@ -63,7 +67,7 @@
       <p class="font-label">
         99 entries
       </p>
-    </div>
+    </div>-->
     <div class="row table-controls hide no-margin">
       <div class="row secondary-container round small-padding max" style="padding-left: 0.5rem;">
         <button class="circle transparent">
@@ -89,45 +93,43 @@
   <table class="border selectable-rows no-margin">
     <thead style="position: sticky; top: 72px; z-index: 10;">
       <tr>
+        <th>Type</th>
         <th>
-          <button class="transparent small-padding no-margin" style="margin-left: -8px !important;">CSDN ID</button>
+          <button class="transparent small-padding no-margin" style="margin-left: -8px !important;">Notebook ID</button>
           <button class="circle transparent margin-left no-margin" style="margin-left: -8px !important;">
-            <i class="tiny">arrow_downward</i>
           </button>
         </th>
-        <th><button class="transparent small-padding" style="margin-left: -8px;">File number</button></th>
         <th>
           <button class="transparent small-padding" style="margin-left: -8px;">Name</button>
         </th>
-        <th>
+        <!--
+        <th>  
           <button class="transparent small-padding" style="margin-left: -8px;">Date of birth</button>
-        </th>
+        </th>-->
 
         <th>
-          <button class="transparent small-padding" style="margin-left: -8px;">Region</button>
+          <button class="transparent small-padding" style="margin-left: -8px;">Area office</button>
         </th>
-
-        <th><button class="transparent small-padding hidden" style="margin-left: -8px;">Status</button></th>
+        <!--
+        <th><button class="transparent small-padding hidden" style="margin-left: -8px;">Status</button></th>-->
         <th><span class="hide">Actions</span> </th>
       </tr>
     </thead>
     <tbody>
 
       <tr class="summary-row">
-        <td>400322564100</td>
-        <td>7582984</td>
-        <td>Patricia Rosso</td>
-        <td>1991-03-24</td>
-        <td>Atlantic</td>
-        <td class="overflow-scroll padding-bottom no-padding">
-          <div class="row no-padding no-margin" style="gap: 0.25rem;">
-            <span class="middle-align round tertiary right-padding badge-expanded" style="width: fit-content;">
-              <i class="fill tiny" style="margin: 0 0.25rem 0 0rem;">deceased</i>Deceased</span>
-            <span class="middle-align round warning right-padding badge-expanded" style="width: fit-content;">
-              <i class="fill tiny" style="margin: 0 0.25rem 0 0rem;">warning</i>Special consideration</span>
-
+        <td>
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            <span class="primary"
+              style="border-radius: 2.5rem; height: 2.5rem; width: 2.5rem; display: inline-flex; align-items: center; justify-content: center;">
+              <i>person</i>
+            </span>
+            <span style="display: flex;">Individual</span>
           </div>
         </td>
+        <td>400322564100</td>
+        <td>Patricia "Pat" Rosso</td>
+        <td>Atlantic</td>
         <td class="right-align">
           <button class="circle transparent no-margin">
             <i class="on-surface-variant">arrow_drop_down</i>
@@ -135,11 +137,43 @@
         </td>
       </tr>
 
-      <tr class="expandable-content">
-        <td colspan="7" class="details padding">
-          <div><strong>Address:</strong> 123 Maple Ave., Ottawa, ON</div>
-          <div><strong>Language:</strong> French</div>
-          <div><strong>Area Office:</strong> Ottawa</div>
+      <tr class="summary-row">
+        <td>
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            <span class="secondary"
+              style="border-radius: 2.5rem; height: 2.5rem; width: 2.5rem; display: inline-flex; align-items: center; justify-content: center;">
+              <i>group</i>
+            </span>
+            <span style="display: flex;">Third-party</span>
+          </div>
+        </td>
+        <td>400322564101</td>
+        <td>Patricia "Pat" Rosso</td>
+        <td>Atlantic</td>
+        <td class="right-align">
+          <button class="circle transparent no-margin">
+            <i class="on-surface-variant">arrow_drop_down</i>
+          </button>
+        </td>
+      </tr>
+
+      <tr class="summary-row">
+        <td>
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            <span class="tertiary"
+              style="border-radius: 2.5rem; height: 2.5rem; width: 2.5rem; display: inline-flex; align-items: center; justify-content: center;">
+              <i>domain</i>
+            </span>
+            <span style="display: flex;">Organization</span>
+          </div>
+        </td>
+        <td>400322564102</td>
+        <td>Patricia "Pat" Rosso</td>
+        <td>Atlantic</td>
+        <td class="right-align">
+          <button class="circle transparent no-margin">
+            <i class="on-surface-variant">arrow_drop_down</i>
+          </button>
         </td>
       </tr>
 

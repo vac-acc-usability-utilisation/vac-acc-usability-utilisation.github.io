@@ -1,3 +1,15 @@
 .hidden, .hide {
     display: none !important;
   }
+
+/* Default: hide action buttons inside rows with this class */
+.with-hidden-actions button {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* On hover: show the buttons */
+.with-hidden-actions:hover button {
+  opacity: 1;
+  pointer-events: auto;
+}

@@ -28,6 +28,11 @@
   margin-right: 0.25rem;
 }
 
+.badge-expanded i {
+  font-size: 0.75rem;
+  margin: 0rem;
+}
+
 .badge.top {
   transform: translate(-50%, -100%);
 }

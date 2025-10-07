@@ -1,0 +1,79 @@
+<!-- LEFT -->
+<div class="row right-align padding" style="gap: 0;">
+    <h2 class="font-title">Edit identifier</h2>
+    <div class="max"></div>
+    <!--
+            <button class="transparent disabled" disabled="">
+              <i>refresh</i> Reset all
+            </button>-->
+    <button class="circle transparent ">
+        <i>close</i>
+    </button>
+</div>
+
+<div
+    style="height: calc(100vh - var(--header-height) - var(--footer-height) - 121px); padding-bottom: 2rem; overflow-y: auto;">
+
+
+
+    <div class="large-padding padding-bottom no-padding " data-page="id-numbers"
+        style="padding-bottom: 0.25rem !important;">
+
+        <div class="field border d-flex bottom-margin no-margin" style="flex-direction: column; width: fit-content;">
+            <label for="id-type" class="font-label bold">Identifier type</label>
+
+            <select name="id-type" id="id-type">
+                <option value="0"></option>
+                <option value="1">Pension Number</option>
+            </select>
+            <!--
+                <input name="client-id" id="client-id" type="number" maxlength="12" style="width: 13.5rem;">-->
+
+        </div>
+        <div class="space"></div>
+
+        <div class="row ">
+            <div class="field border d-flex bottom-margin no-margin"
+                style="flex-direction: column; width: fit-content;">
+                <label for="client-id" class="font-label bold">Identifier value</label>
+
+                <input name="client-id" id="client-id" type="number" maxlength="12" style="width: 13.5rem;">
+
+            </div>
+            <div>
+                <button class="transparent link" style="margin-top: 1.25rem;">Generate</button>
+            </div>
+
+        </div>
+        <div class="space"></div>
+        <div class="row">
+            <div class="field border d-flex bottom-margin no-margin"
+                style="flex-direction: column; width: fit-content;">
+                <label for="id-comment" class="font-label bold">Identifier comment</label>
+
+                <textarea name="id-comment" id="id-comment" style="width: 20.5rem;"></textarea>
+
+            </div>
+        </div>
+        <div class="large-space"></div>
+
+    </div>
+
+
+</div>
+
+<div style="position: absolute; bottom: 0; width: 100%; ">
+    <hr>
+    <div class="space"></div>
+    <div class="column" style="gap: 0;">
+        
+        <div class="right-align padding" style="display: flex;">
+            <button class="primary-container large max " style="flex: auto;">
+                Save identifier
+            </button>
+
+        </div>
+        
+    </div>
+    <div class="space"></div>
+</div>

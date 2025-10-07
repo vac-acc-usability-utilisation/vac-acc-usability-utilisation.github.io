@@ -205,14 +205,16 @@
           <input id="search" placeholder="Search" class="surface-variant">
         </div>-->
 
-        <div style="display: flex; gap: 0; margin-right: 1rem;">
-          <button id="lang-toggle" class="transparent circle on-surface-variant">
+        <div style="display: flex; margin-right: 1rem;">
+          <button id="lang-toggle" class="transparent circle on-surface-variant tiny-margin">
             FR
           </button>
-          <!--
-          <button class="transparent circle on-surface-variant" title="Settings">
-            <i>settings</i>
-          </button>-->
+
+          <!-- ADDITIONAL BUTTONS -->
+          <div id="account-menu" class="group hidden">
+
+          </div>
+
         </div>
       </div>
 
@@ -238,129 +240,284 @@
 
         <aside id="filtersPanel" class="right-round hidden">
           <!-- LEFT -->
-          <div class="row right-align padding" style="gap: 0;">
-            <button class="transparent disabled" disabled>
-              <i>refresh</i> Reset all
-            </button>
-            <button class="circle transparent hidden">
-              <i>close</i>
-            </button>
+          <div class="row padding" style="gap: 0; justify-content: space-between;">
+            <h3 class="font-title no-margin ">Notebook search</h3>
+            <div class="right-align ">
+              <button class="transparent no-padding disabled" disabled>
+                <i>refresh</i> Reset all
+              </button>
+              <button class="circle transparent hidden">
+                <i>close</i>
+              </button>
+            </div>
           </div>
-
-          <div class="tabs no-margin">
-            <a class="active" data-tab="id-numbers">ID numbers</a>
-            <a data-tab="personal-info">Personal information</a>
-          </div>
-
           <div
-            style="height: calc(100vh - var(--header-height) - var(--footer-height) - 121px); padding-bottom: 2rem; overflow-y: auto;">
+            style="height: calc(100vh - var(--header-height) - var(--footer-height) - 45px); padding-bottom: 3rem; overflow: hidden; overflow-y: auto;">
+            <div>
+              <div class="field border d-flex padding-left no-margin"
+                style="flex-direction: column; width: fit-content; padding-top:0;">
+                <label for="id-type" class="font-label bold">Notebook type</label>
+
+                <select name="id-type" id="id-type" style="width: 13.5rem;">
+                  <option value="0">Individual</option>
+                  <option value="1">Third-party</option>
+                  <option value="2">Organization</option>
+                  <option value="3">All</option>
 
 
-
-            <div class="large-padding padding-bottom no-padding page active" data-page="id-numbers"
-              style="padding-bottom: 0.25rem !important;">
-              <div class="field border d-flex" style="flex-direction: column; width: fit-content;">
-                <label for="client-id" class="font-label">Client ID (CSDN ID)</label>
-
-                <input name="client-id" id="client-id" type="number" maxlength="12" style="width: 13.5rem;">
+                </select>
+                <!--
+                <input name="client-id" id="client-id" type="number" maxlength="12" style="width: 13.5rem;">-->
 
               </div>
               <!--
-            <span class="font-label-md on-surface-variant"
-              style="border: 1px solid var(--on-surface-variant); border-radius: 50%; padding: 0.5rem; margin:1rem 0.5rem;">OR</span>-->
-              <div class="field border d-flex top-margin no-margin" style="flex-direction: column; width: fit-content;">
-                <label for="file-number" class="font-label">File number or other ID </label>
-
-                <input name="file-number" id="file-number" type="number" maxlength="12" style="width: 13.5rem;">
-
-              </div>
+              <fieldset class="no-border padding">
+                <legend>What type of notebook are you looking for?</legend>
+                <nav class="vertical">
+                  <label class="radio">
+                    <input type="radio" name="notebook-category" value="All" checked>
+                    <span>All</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="notebook-category" value="Individual">
+                    <span>Individual</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="notebook-category" value="Third party">
+                    <span>Third party</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="notebook-category" value="Organization">
+                    <span>Organization</span>
+                  </label>
+                </nav>
+              </fieldset>-->
 
             </div>
+            <div class="tabs no-margin">
+              <a class="active" data-tab="details">Details</a>
+              <a data-tab="id-numbers">ID numbers</a>
+            </div>
 
-            <div class="large-padding page" data-page="personal-info" style="padding-bottom: 0.25rem !important;">
-              <div class="field border d-flex " style="flex-direction: column; width: fit-content;">
-                <label for="first-name" class="font-label"><span>First name</span> <span class=""
-                    style="margin-left: 0.25rem;"> (required)</span></label>
+            <div>
 
-                <input name="first-name" id="first-name" type="text" maxlength="50" style="width: 13.5rem;">
+              <div class="large-padding page active" data-page="details" style="padding-bottom: 0.25rem !important;">
+                <div class="field border d-flex " style="flex-direction: column; width: fit-content;">
+                  <label for="legal-name" class="font-label"><span>Legal name</span> <span class=""
+                      style="margin-left: 0.25rem;">(required)</span></label>
 
-              </div>
-              <!--
+                  <input name="legal-name" id="legal-name" type="text" maxlength="50" style="width: 13.5rem;">
+
+                </div>
+
+                <div class="field border d-flex " style="flex-direction: column; width: fit-content;">
+                  <label for="legal-surname" class="font-label"><span>Legal surname</span> <span class=""
+                      style="margin-left: 0.25rem;">(required)</span></label>
+
+                  <input name="legal-surname" id="legal-surname" type="text" maxlength="50" style="width: 13.5rem;">
+
+                </div>
+
+
+
+                <fieldset class="no-border no-padding "
+                  style="display: flex; gap: 0rem; flex-direction: column; margin-bottom: 1.5rem;">
+                  <legend class="font-label">Date of birth <span class=" ">(required)</span></legend>
+                  <!--
+                  <div class="row bottom-margin no-margin"><span class="font-label on-surface-variant">For example, 1999 12 31</span></div>-->
+                  <div class="row top-margin tiny-margin">
+                    <div class="field border top-margin no-margin" style="flex-direction: column; width: fit-content;">
+                      <label for="dob-year" class="font-label">Year</label>
+
+                      <input name="dob-year" id="dob-year" type="text" maxlength="4" style="width: 4.5rem">
+
+                    </div>
+                    <div class="field border top-margin no-margin" style="flex-direction: column; width: fit-content;">
+                      <label for="dob-month" class="font-label">Month</label>
+
+                      <input name="dob-month" id="dob-month" type="text" maxlength="2" style="width: 3.5rem">
+
+                    </div>
+                    <div class="field border top-margin no-margin" style="flex-direction: column; width: fit-content;">
+                      <label for="dob-day" class="font-label">Day</label>
+
+                      <input name="dob-day" id="dob-day" type="text" maxlength="2" style="width: 3.5rem;">
+
+                    </div>
+                  </div>
+                </fieldset>
+
+                <div class="field border d-flex " style="flex-direction: column; width: fit-content;">
+                  <label for="telephone-number" class="font-label"><span>Telephone number</span> <span class=""
+                      style="margin-left: 0.25rem;"> </span></label>
+
+                  <input name="telephone-number" id="telephone-number" type="text" maxlength="50"
+                    style="width: 13.5rem;">
+
+                </div>
+
+                <div class="field border d-flex " style="flex-direction: column; width: fit-content;">
+
+
+                </div>
+
+
+
+                <!--
             <span class="font-label-md on-surface-variant"
               style="border: 1px solid var(--on-surface-variant); border-radius: 50%; padding: 0.5rem; margin:1rem 0.5rem;">AND</span>-->
+                <!--
+                <div class="field border d-flex " style="flex-direction: column; width: fit-content;">
+                  <label for="last-name" class="font-label">Last name <span class=""
+                      style="margin-left: 0.25rem;">(required)</span></label>
 
-              <div class="field border d-flex " style="flex-direction: column; width: fit-content;">
-                <label for="last-name" class="font-label">Last name <span class=""
-                    style="margin-left: 0.25rem;">(required)</span></label>
+                  <input name="last-name" id="last-name" type="text" maxlength="50" style="width: 13.5rem;">
 
-                <input name="last-name" id="last-name" type="text" maxlength="50" style="width: 13.5rem;">
+                </div>-->
 
-              </div>
-
-
-
-              <fieldset class="no-border no-padding "
-                style="display: flex; gap: 0rem; flex-direction: column; margin-bottom: 1.5rem;">
-                <legend class="font-label">Date of birth <span class=" ">(required)</span></legend>
-                <div class="row bottom-margin no-margin"><span class="font-label on-surface-variant">For example, 1999
-                    12
-                    31</span></div>
-                <div class="row top-margin tiny-margin">
-                  <div class="field border top-margin no-margin" style="flex-direction: column; width: fit-content;">
-                    <label for="last-name" class="font-label">Year</label>
-
-                    <input name="last-name" id="last-name" type="text" maxlength="4" style="width: 4.5rem">
-
-                  </div>
-                  <div class="field border top-margin no-margin" style="flex-direction: column; width: fit-content;">
-                    <label for="last-name" class="font-label">Month</label>
-
-                    <input name="last-name" id="last-name" type="text" maxlength="2" style="width: 3.5rem">
-
-                  </div>
-                  <div class="field border top-margin no-margin" style="flex-direction: column; width: fit-content;">
-                    <label for="last-name" class="font-label">Day</label>
-
-                    <input name="last-name" id="last-name" type="text" maxlength="2" style="width: 3.5rem;">
-
-                  </div>
-                </div>
-              </fieldset>
-              <details>
-                <summary class="font-label">Additional personal information</summary>
                 <div class="field border " style="flex-direction: column; width: fit-content;">
                   <label for="postal-code" class="font-label">Postal code</label>
 
                   <input name="postal-code" id="postal-code" type="text" maxlength="7" style="width: 6.5rem">
 
                 </div>
-                <div class="field border " style="flex-direction: column; width: fit-content;">
-                  <label for="tel" class="font-label">Telephone number</label>
 
-                  <input name="tel" id="tel" type="tel" maxlength="11" style="width: 12.5rem;">
+                <div class="field border">
+                  <div class="searchable-dropdown">
+                    <button class="searchable-dropdown-button select transparent border" style="width: 13.5rem;">Area office <i>arrow_drop_down</i></button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <input type="text" placeholder="Search" id="myInput" onkeyup="filterFunction()">
+                      <a href="#about">About</a>
+                      <a href="#base">Base</a>
+                      <a href="#blog">Blog</a>
+                      <a href="#contact">Contact</a>
+                      <a href="#custom">Custom</a>
+                      <a href="#support">Support</a>
+                      <a href="#tools">Tools</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field border">
+                  <label for="area-office" class="font-label bold">Area office</label>
+                  <select name="area-office" id="area-office" style="width: 13.5rem;">
+                    <option value="0"></option>
+
+                    <optgroup label="Alberta">
+                      <option value="1">Calgary</option>
+                      <option value="2">Edmonton</option>
+                    </optgroup>
+                    <optgroup label="British Columbia">
+                      <option value="3">Kelowna</option>
+                      <option value="4">Penticton</option>
+                      <option value="5">Prince George</option>
+                      <option value="6">Surrey</option>
+                      <option value="7">Vancouver</option>
+                      <option value="8">Victoria</option>
+                    </optgroup>
+                    <optgroup label="Manitoba">
+                      <option value="9">Brandon</option>
+                      <option value="10">Winnipeg</option>
+                    </optgroup>
+                    <optgroup label="New Brunswick">
+                      <option value="11">Campbellton</option>
+                      <option value="12">Oromocto Service Location</option>
+                      <option value="13">Saint John</option>
+                    </optgroup>
+                    <optgroup label="Newfoundland and Labrador">
+                      <option value="14">Corner Brook</option>
+                      <option value="15">St. John's</option>
+                    </optgroup>
+                    <optgroup label="Nova Scotia">
+                      <option value="16">Halifax</option>
+                      <option value="17">Sydney</option>
+                    </optgroup>
+                    <optgroup label="Ontario">
+                      <option value="18">Hamilton</option>
+                      <option value="19">Kingston</option>
+                      <option value="20">London</option>
+                      <option value="21">Mississauga</option>
+                      <option value="22">North Bay</option>
+                      <option value="23">Ottawa</option>
+                      <option value="24">Owen Sound Satellite</option>
+                      <option value="25">Pembroke</option>
+                      <option value="26">Peterborough</option>
+                      <option value="27">Thunder Bay</option>
+                      <option value="28">Toronto-Scarborough</option>
+                      <option value="29">Toronto-Sunnybrook</option>
+                      <option value="30">Trenton</option>
+                      <option value="31">Windsor</option>
+                    </optgroup>
+                    <optgroup label="Prince Edward Island">
+                      <option value="32">Charlottetown</option>
+                    </optgroup>
+                    <optgroup label="Québec">
+                      <option value="33">Gatineau</option>
+                      <option value="34">Montreal</option>
+                      <option value="35">Québec</option>
+                      <option value="36">Saguenay Service Location</option>
+                    </optgroup>
+                    <optgroup label="Saskatchewan">
+                      <option value="37">Regina</option>
+                      <option value="38">Saskatoon</option>
+                    </optgroup>
+                    <optgroup label="Northern Communities">
+                      <option value="39">Northwest Territories</option>
+                      <option value="40">Nunavut</option>
+                      <option value="41">Yukon</option>
+                    </optgroup>
+                  </select>
+                </div>
+
+                <!--
+                <details>
+                  <summary class="font-label">Additional details</summary>
+                  
+                </details>-->
+
+
+
+
+              </div>
+
+              <div class="large-padding padding-bottom no-padding page " data-page="id-numbers"
+                style="padding-bottom: 0.25rem !important;">
+                <div class="field border d-flex" style="flex-direction: column; width: fit-content;">
+                  <label for="client-id" class="font-label">Notebook ID (CSDN ID)</label>
+
+                  <input name="client-id" id="client-id" type="number" maxlength="12" style="width: 13.5rem;">
 
                 </div>
-              </details>
+                <!--
+            <span class="font-label-md on-surface-variant"
+              style="border: 1px solid var(--on-surface-variant); border-radius: 50%; padding: 0.5rem; margin:1rem 0.5rem;">OR</span>-->
+                <div class="field border d-flex top-margin no-margin"
+                  style="flex-direction: column; width: fit-content;">
+                  <label for="file-number" class="font-label">File number or other ID </label>
+
+                  <input name="file-number" id="file-number" type="number" maxlength="12" style="width: 13.5rem;">
+
+                </div>
+
+              </div>
 
 
 
+              <div class="field middle-align" style="margin-left: 1.5rem;">
+                <label class="switch font-label">
+
+                  <input type="checkbox" checked="checked">
+                  <span style="padding-left: 0.5rem;">Show active notebooks only</span>
+                </label>
+              </div>
 
             </div>
-
-            <div class="field middle-align" style="margin-left: 1.5rem;">
-              <label class="switch font-label">
-
-                <input type="checkbox" checked="checked">
-                <span style="padding-left: 0.5rem;">Show active clients only</span>
-              </label>
-            </div>
-
           </div>
-
-          <div style="position: absolute; bottom: 0; width: 100%; ">
+          <div
+            style="position: absolute; bottom: 0; width: 100%; z-index: 3; background-color: var(--surface-container-low);">
             <hr>
             <div class="space"></div>
-            <div class="right-align padding" style="display: flex;">
+            <div class="right-align padding" style="display: flex; ">
               <button class="primary-container large max " style="flex: auto;">
                 Search
               </button>
@@ -394,7 +551,7 @@
           </footer>
         </div>
 
-        <aside id="toolsPanel" class="hidden">
+        <aside id="toolsPanel" class="left-round surface-container-low no-margin hidden">
           <!-- RIGHT -->
         </aside>
 

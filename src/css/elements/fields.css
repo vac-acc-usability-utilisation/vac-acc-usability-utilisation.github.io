@@ -124,7 +124,7 @@
 }
 
 /* input, textarea and select */
-.field > :is(select) {
+.field> :is(select) {
   cursor: pointer !important;
 }
 
@@ -542,6 +542,42 @@ label {
   letter-spacing: 0.5px;
 }
 
+.searchable-dropdown .searchable-dropdown-button {
+  border-radius: 0.25rem;
+  margin-left: 0;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: inherit;
+  border: .0625rem solid transparent;
+  padding: 0 .9375rem;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  z-index: 1;
+  background: var(--surface-container);
+  resize: none;
+  text-align: start;
+  height: 48px;
+  color: var(--on-surface-variant);
+}
+
+.searchable-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+}
+
+.searchable-dropdown .dropdown-content a {
+  color: var(--on-surface);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+
+
 /* Style the label when the input inside .field is focused */
 .field:focus-within>label,
 .field:focus-within>span {
@@ -566,27 +602,28 @@ input:disabled {
   opacity: 0.38;
 }
 
-.field > select {
+.field>select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   background: none;
-  padding-right: 2rem; /* Add space for the icon */
+  padding-right: 2rem;
+  /* Add space for the icon */
   position: relative;
 }
 
-.field > select:focus + i {
+.field>select:focus+i {
   z-index: 1;
 }
 
 
-/*Search field in menu*/ 
-:not(menu, [data-ui]):focus-within > menu {
+/*Search field in menu*/
+:not(menu, [data-ui]):focus-within>menu {
   border-radius: 0.25rem;
 }
 
-:not(menu, [data-ui]):focus-within > menu > .field {
-  
+:not(menu, [data-ui]):focus-within>menu>.field {
+
   margin: 0;
   padding: 4px;
 }

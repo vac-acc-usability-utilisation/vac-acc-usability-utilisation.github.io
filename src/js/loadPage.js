@@ -1,5 +1,6 @@
 import { initSearch } from "./search.js";
 import { updateActiveRailItem, handleNavigationMenu, handleClientMenu, updateSubmenus } from "./nav.js";
+import { setupToolsPanel } from './toolsPanel.js';
 //import { getCurrentMode } from "./router.js";
 
 export function loadPage(segments) {
@@ -41,6 +42,12 @@ export function loadPage(segments) {
             updateSubmenus(segments[2], segments[3]);
             toggleFiltersPanel(segments);
 
+            setupToolsPanel(
+                    '#add-identifier-btn',
+                    'src/templates/csa/demo/forms/add-identifier.html' // or an HTML string, or a function
+                );
+
+
             // Handle tab highlighting after HTML is loaded
             const pageTab = segments[4] || "overview"; // fallback to default tab
             updateActiveTab(pageTab);
@@ -80,7 +87,7 @@ function updateActiveTab(currentTab) {
 function toggleFiltersPanel(segments) {
     // Assuming segments[1] is mode and segments[3] is page
     const isDemoMode = segments[1] === "demo";
-    console.log('Is Demo Mode:', isDemoMode);
+    //console.log('Is Demo Mode:', isDemoMode);
     const isWorkItemsPage = segments[2] === "work-items";
     const isClientSearchPage = segments[2] === "search";
     const filtersPanel = document.getElementById("filtersPanel");

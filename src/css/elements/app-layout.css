@@ -112,6 +112,19 @@ main {
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
 
+.notebook-header { 
+    display: flex;
+    flex-direction: column;
+}
+
+.notebook-header .notebook-ids { 
+    margin-left: 1rem;
+}
+
+.notebook-header .notebook-button {
+   padding: 0 1rem;
+}
+
 footer {
     flex-shrink: 0;
     height: var(--footer-height);

@@ -78,7 +78,7 @@ async function loadNavigation(product, mode) {
         }
     }
 
-    // Load the navigation menu (common menu for all products/modes)
+    // Load the demo's navigation menu 
     const navigationMenu = document.getElementById('navigation-menu');
     if (!navigationMenu) return;
 
@@ -88,5 +88,22 @@ async function loadNavigation(product, mode) {
         navigationMenu.innerHTML = await response.text();
     } catch (err) {
         console.error('Error loading navigation menu:', err);
+    }
+
+    if (product === 'csa' && mode === 'demo') {
+        // Load the demo's account menu
+        const accountMenu = document.getElementById('account-menu');
+
+        if (!accountMenu) return;
+
+        try {
+            const response = await fetch('src/templates/csa/demo/account-menu.html');
+            if (!response.ok) throw new Error('Failed to load account menu template');
+            accountMenu.innerHTML = await response.text();
+            accountMenu.classList.remove('hidden');
+        } catch (err) {
+            console.error('Error loading account menu:', err);
+        }
+
     }
 }
