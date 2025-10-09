@@ -4,6 +4,7 @@
  * @param {string|Function} content - HTML string, template path, or async function returning HTML
  */
 export function setupToolsPanel(buttonSelector, content) {
+    
     // Wait for DOM update (in case content is loaded dynamically)
     setTimeout(() => {
         const btn = document.querySelector(buttonSelector);
