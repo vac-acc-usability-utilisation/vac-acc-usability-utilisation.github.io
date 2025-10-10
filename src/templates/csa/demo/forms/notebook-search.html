@@ -30,7 +30,7 @@
             <label for="client-id" class="font-label">Client identifiers <i class="tiny"
                     style="margin-left: 0.25rem;">help</i></label>
 
-            <div class="row no-margin no-padding">
+            <div class="row no-margin no-padding" style="gap: 0.25rem;">
                 <input name="client-id" id="client-id" type="number" maxlength="12" style="width: 13.5rem;">
                 <button id="expand-id-filters" class="circle transparent on-surface-variant">
                     <i>keyboard_arrow_down</i>
@@ -59,7 +59,7 @@
                 <div class="field border">
                     <label for="service-number-id" class="font-label"><span>Service number</span></label>
 
-                    <div class="row no-margin no-padding">
+                    <div class="row no-margin no-padding" style="gap: 0.25rem;">
                         <input name="service-number-id" id="service-number-id" type="text" maxlength="50"
                             style="width: 13.5rem;">
                         <button id="condense-id-filters" class="circle transparent on-surface-variant">
@@ -68,14 +68,16 @@
                     </div>
                 </div>
             </fieldset>
+            <hr>
+            <div class="tiny-space"></div>
         </div>
 
         <div class="field border" style="flex-direction: column; width: fit-content;">
             <label for="name" class="font-label"><span>Name</span> <span class="on-surface-variant"
                     style="margin-left: 0.25rem;">(required)</span></label>
 
-            <div class="row no-margin no-padding">
-                <input name="name" id="name" type="text" maxlength="50" style="width: 13.5rem;">
+            <div class="row no-margin no-padding" style="gap: 0.25rem;">
+                <input name="name" id="name" type="text" maxlength="50" style="width: 18rem; margin-right: 0;">
                 <button id="expand-name-filters" class="circle transparent on-surface-variant" style="">
                     <i>keyboard_arrow_down</i>
                 </button>
@@ -104,7 +106,7 @@
                     <label for="given-name" class="font-label"><span>Surname</span> <span class="on-surface-variant"
                             style="margin-left: 0.25rem;">(required)</span></label>
 
-                    <div class="row no-margin no-padding">
+                    <div class="row no-margin no-padding" style="gap: 0.25rem;">
                         <input name="given-name" id="given-name" type="text" maxlength="50" style="width: 13.5rem;">
                         <button id="condense-name-filters" class="circle transparent on-surface-variant">
                             <i>keyboard_arrow_up</i>
@@ -112,6 +114,8 @@
                     </div>
                 </div>
             </fieldset>
+            <hr>
+            <div class="tiny-space"></div>
         </div>
 
         <!--
@@ -184,7 +188,7 @@
             <div class="field border " style="flex-direction: column; width: fit-content;">
                 <label for="postal-code" class="font-label">Postal code</label>
 
-                <div class="row no-margin no-padding">
+                <div class="row no-margin no-padding" style="gap: 0.25rem;">
                     <input name="postal-code" id="postal-code" type="text" maxlength="7" style="width: 6.5rem">
 
                     <button class="circle transparent on-surface-variant">
