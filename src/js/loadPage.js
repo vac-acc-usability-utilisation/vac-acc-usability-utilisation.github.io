@@ -1,6 +1,7 @@
 import { initSearch } from "./search.js";
 import { updateActiveRailItem, handleNavigationMenu, handleClientMenu, updateSubmenus } from "./nav.js";
 import { setupToolsPanel } from './toolsPanel.js';
+import { initSelectSearchable } from './select-searchable.js';
 //import { getCurrentMode } from "./router.js";
 
 export function loadPage(segments) {
@@ -30,6 +31,7 @@ export function loadPage(segments) {
         .then(html => {
             pageContainer.innerHTML = html;
 
+            
             // Scroll to top
             setTimeout(() => window.scrollTo(0, 0), 0);
 
@@ -47,6 +49,19 @@ export function loadPage(segments) {
                 'src/templates/csa/demo/forms/add-identifier.html' // or an HTML string, or a function
             );
 
+            setupToolsPanel(
+                '.id-edit-btn',
+                'src/templates/csa/demo/forms/edit-identifier.html' // or an HTML string, or a function
+            );
+
+            setupToolsPanel(
+                '.id-info-btn',
+                'src/templates/csa/demo/forms/info-identifier.html' // or an HTML string, or a function
+            );
+
+            // Initialize minimal select-searchable behaviour for elements inside the newly loaded page
+            // This wires simple show/hide toggling for `.select-searchable` components
+            try { initSelectSearchable(pageContainer); } catch (e) { console.warn('initSelectSearchable failed', e); }
 
             // Handle tab highlighting after HTML is loaded
             const pageTab = segments[4] || "overview"; // fallback to default tab
@@ -112,7 +127,49 @@ function toggleFiltersPanel(segments) {
     const filtersPanel = document.getElementById("filtersPanel");
     if (!filtersPanel) return;
 
-    function setupExpandCollapse() {
+    function setupNotebookSearchFilters() {
+
+        const group = document.querySelector('nav.group.segmented-button');
+        if (!group) return;
+        const buttons = group.querySelectorAll('button.segmented-button');
+        if (buttons.length < 3) return;
+
+        const [btn1, btn2, btn3] = buttons;
+
+        btn1.addEventListener('click', function () {
+            const wasSelected = btn1.classList.contains('fill');
+            // Prevent deselecting the last selected
+            if (wasSelected && !btn2.classList.contains('fill') && !btn3.classList.contains('fill')) {
+                return;
+            }
+            btn1.classList.toggle('fill');
+        });
+
+        btn2.addEventListener('click', function () {
+            const wasSelected = btn2.classList.contains('fill');
+            if (wasSelected && !btn1.classList.contains('fill') && !btn3.classList.contains('fill')) {
+                return;
+            }
+            btn2.classList.toggle('fill');
+        });
+
+        btn3.addEventListener('click', function () {
+            const wasSelected = btn3.classList.contains('fill');
+            if (wasSelected && !btn1.classList.contains('fill') && !btn2.classList.contains('fill')) {
+                return;
+            }
+            btn3.classList.toggle('fill');
+        });
+
+        // Ensure at least one is selected on load
+        if (
+            !btn1.classList.contains('fill') &&
+            !btn2.classList.contains('fill') &&
+            !btn3.classList.contains('fill')
+        ) {
+            btn1.classList.add('fill');
+        }
+
         // Name expand/collapse
         const expandNameBtn = document.getElementById('expand-name-filters');
         if (expandNameBtn) {
@@ -154,11 +211,10 @@ function toggleFiltersPanel(segments) {
 
     if (isDemoMode && isWorkItemsPage) {
         filtersPanel.classList.remove("hidden");
-        loadFiltersPanelTemplate('src/templates/csa/demo/forms/work-item-search.html', setupExpandCollapse);
     }
     else if (isDemoMode && isClientSearchPage) {
         filtersPanel.classList.remove("hidden");
-        loadFiltersPanelTemplate('src/templates/csa/demo/forms/notebook-search.html', setupExpandCollapse);
+        loadFiltersPanelTemplate('src/templates/csa/demo/forms/notebook-search.html', setupNotebookSearchFilters);
     }
     else {
         filtersPanel.classList.add("hidden");

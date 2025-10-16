@@ -81,6 +81,22 @@ button#lang-toggle {
   vertical-align: middle;
 }
 
+#notebook-type-filter-individual.segmented-button.fill {
+    background-color: var(--primary-container) !important;
+    color: var(--on-primary-container) !important;
+
+}
+#notebook-type-filter-third-party.segmented-button.fill {
+    background-color: var(--secondary-container) !important;
+    color: var(--on-secondary-container) !important;
+
+}
+#notebook-type-filter-organization.segmented-button.fill {
+    background-color: var(--tertiary-container) !important;
+    color: var(--on-tertiary-container) !important;
+
+}
+
 /* Only hide icons on label+icon buttons when active */
 .segmented-button.segmented-icon-label.fill i {
   display: none;

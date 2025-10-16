@@ -542,9 +542,10 @@ label {
   letter-spacing: 0.5px;
 }
 
-.searchable-dropdown .searchable-dropdown-button {
+.select-searchable .select-searchable-btn {
   border-radius: 0.25rem;
   margin-left: 0;
+  /*margin-bottom: 1rem;*/
   text-align: left;
   display: flex;
   justify-content: space-between;
@@ -562,14 +563,15 @@ label {
   text-align: start;
   height: 48px;
   color: var(--on-surface-variant);
+  border-color: var(--outline);
 }
 
-.searchable-dropdown .dropdown-content {
+.select-searchable .select-content {
   display: none;
   position: absolute;
 }
 
-.searchable-dropdown .dropdown-content a {
+.select-searchable .select-content ul li {
   color: var(--on-surface);
   padding: 0.5rem 1rem;
   text-decoration: none;

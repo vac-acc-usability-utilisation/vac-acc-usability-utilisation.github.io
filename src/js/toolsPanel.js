@@ -3,6 +3,8 @@
  * @param {string} buttonSelector - CSS selector for the button to trigger the panel
  * @param {string|Function} content - HTML string, template path, or async function returning HTML
  */
+import { initSelectSearchable } from './select-searchable.js';
+
 export function setupToolsPanel(buttonSelector, content) {
     
     // Wait for DOM update (in case content is loaded dynamically)
@@ -17,6 +19,10 @@ export function setupToolsPanel(buttonSelector, content) {
             if (!panel) return;
             panel.classList.remove('hidden');
 
+            //btn.classList.remove('primary-container');
+            //btn.classList.add('transparent', 'border');
+            //btn.innerHTML = ' <i class="on-surface-variant">close</i> Close';
+
             // If content is a function, call it; if it's a path, fetch; else use as HTML
             if (typeof content === 'function') {
                 panel.innerHTML = await content();
@@ -26,6 +32,9 @@ export function setupToolsPanel(buttonSelector, content) {
             } else {
                 panel.innerHTML = content;
             }
+
+            // Initialize minimal select-searchable behaviour for any newly injected content
+            try { initSelectSearchable(panel); } catch (e) { console.warn('initSelectSearchable failed in toolsPanel', e); }
         });
     }, 0);
 }

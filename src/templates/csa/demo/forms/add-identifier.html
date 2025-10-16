@@ -19,18 +19,57 @@
     <div class="large-padding padding-bottom no-padding " data-page="id-numbers"
         style="padding-bottom: 0.25rem !important;">
 
-
-        <div class="space"></div>
-
         <div class="field border d-flex bottom-margin no-margin" style="flex-direction: column; width: fit-content;">
+            <!--
+            <label for="id-type-searchable" class="font-label bold">Identifier type</label>
+
+            <div class="select-searchable">
+                <button class="select-searchable-btn" style="width: 14.5rem;"></button>
+                <div id="id-type-dropdown" class="select-content">
+                    <input type="text" name="" id="id-type-search-input" placeholder="Search..." autocomplete="off">
+                    <ul>
+                        <li>A</li>
+                        <li>B</li>
+                        <li>C</li>
+                    </ul>
+                </div>
+            </div>-->
+
+            
             <label for="id-type" class="font-label bold">Identifier type</label>
 
-            <select name="id-type" id="id-type">
+            <select name="id-type" id="id-type" style="width: 13.5rem;">
                 <option value="0"></option>
-                <optgroup label="Health / Insurance IDs">
-                    <option value="1">System Generated Idenfitifiers</option>
-                    <option value="2">VAC Idenfitiers</option>
-                    <option value="2">Other Idenfitiers</option>
+                <optgroup label="VAC Identifiers">
+                    <option value="">Duplicate notebook</option>
+                    <option value="">Pension number</option>
+                    <option value="">Veterans Insurance Policy Number</option>
+                    <option value="">WVA Number</option>
+                </optgroup>
+                <optgroup label="Health/Insurance IDs">
+                    <option value="">Blue Cross number</option>
+                    <option value="">Provincial Health number</option>
+                    <option value="">PSHCP Certificate number</option>
+                    <option value="">WCB number</option>
+                </optgroup>
+                <optgroup label="Government/Legal IDs">
+                    <option value="">SIN</option>
+                    <option value="">Service number</option>
+                    <option value="">OAS number</option>
+                    <option value="">Indian Registry number</option>
+                </optgroup>
+                <optgroup label="Employement/Organizational IDs">
+                    <option value="">Employee ID</option>
+                    <option value="">RCMP Regimental number</option>
+                    <option value="">RCMP Pension number</option>
+                    <option value="">RCMP Survivor Income number</option>
+                </optgroup>
+                <optgroup label="Miscellaneous/Special Program IDs">
+                    <option value="">British National Insurance Number</option>
+                    <option value="">CNIB number</option>
+                    <option value="">Chemical Testing Ovserver number</option>
+                    <option value="">Other Allied Identification number</option>
+                    <option value="">United States Social Security number</option>
                 </optgroup>
             </select>
             <!--
@@ -47,6 +86,7 @@
                 <input name="client-id" id="client-id" type="number" maxlength="12" style="width: 13.5rem;">
 
             </div>
+            
             <div>
                 <button class="transparent link" style="margin-top: 1.25rem;">Generate</button>
             </div>
@@ -56,7 +96,7 @@
         <div class="row">
             <div class="field border d-flex bottom-margin no-margin"
                 style="flex-direction: column; width: fit-content;">
-                <label for="id-comment" class="font-label bold">Identifier comment</label>
+                <label for="id-comment" class="font-label bold">Identifier description</label>
 
                 <textarea name="id-comment" id="id-comment" style="width: 20.5rem;"></textarea>
 
@@ -65,6 +105,9 @@
         <div class="large-space"></div>
 
     </div>
+
+  
+
 
 
 </div>
@@ -76,7 +119,7 @@
         
         <div class="right-align padding" style="display: flex;">
             <button class="primary-container large max " style="flex: auto;">
-                Add identifier
+                Save identifier
             </button>
 
         </div>
