@@ -207,6 +207,25 @@ function toggleFiltersPanel(segments) {
                 });
             });
         }
+
+        // Identifier expand/collapse
+        const expandAddressBtn = document.getElementById('expand-address-filters');
+        if (expandAddressBtn) {
+            expandAddressBtn.addEventListener('click', function () {
+                document.getElementById('additional-address-filters')?.classList.remove('hidden');
+                expandAddressBtn.closest('fieldset').classList.add('hidden');
+            });
+        }
+        const condenseAddressBtn = document.getElementById('condense-address-filters');
+        if (condenseAddressBtn) {
+            condenseAddressBtn.addEventListener('click', function () {
+                document.getElementById('additional-address-filters')?.classList.add('hidden');
+                // Show the main field again
+                document.querySelectorAll('fieldset').forEach(field => {
+                    if (field.querySelector('#expand-address-filters')) field.classList.remove('hidden');
+                });
+            });
+        }
     }
 
     if (isDemoMode && isWorkItemsPage) {

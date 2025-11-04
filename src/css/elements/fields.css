@@ -465,6 +465,7 @@ fieldset {
 fieldset>legend {
   margin: 0 -0.25rem;
   padding: 0 0.25rem;
+  font-weight: 500;
 }
 
 fieldset>legend+* {
@@ -540,6 +541,7 @@ textarea.field:focus {
 label {
   display: flex;
   letter-spacing: 0.5px;
+  
 }
 
 .select-searchable .select-searchable-btn {

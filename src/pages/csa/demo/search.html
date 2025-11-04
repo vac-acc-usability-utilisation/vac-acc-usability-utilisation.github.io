@@ -2,11 +2,10 @@
 
 
 
-<div class="medium middle-align center-align surface "
-  style="display: flex; flex-direction: column; height: 80vh; ">
+<div class="medium middle-align center-align surface " style="display: flex; flex-direction: column; height: 80vh; ">
   <i class="extra" style="overflow: visible;">person_search</i>
   <h1 class="font-title">Search for a notebook</h1>
-<!--
+  <!--
   <div class=" grid " style="display: flex; width: 66%;">
     <article class="card xs4 sm4 md4 lg3 xl3 no-margin surface-container" >
       <i>person</i>
@@ -23,13 +22,13 @@
       <h3>Organization</h3>
     </article>
   </div>-->
- 
+
 </div>
- <div class="large-space"></div>
-  <div class="large-space"></div>
-  <div class="large-space"></div>
-  <div class="large-space"></div>
-  <div class="large-space"></div>
+<div class="large-space"></div>
+<div class="large-space"></div>
+<div class="large-space"></div>
+<div class="large-space"></div>
+<div class="large-space"></div>
 <div class="row no-margin no-padding">
   <h1 class="font-headline">
     Search results
@@ -115,6 +114,12 @@
             <button class="transparent small-padding no-margin" style="margin-left: -8px !important;">Notebook
               ID</button>
           </th>
+          <!--
+          <th>
+            <button class="transparent small-padding no-margin" style="margin-left: -8px !important;">
+              File number
+            </button>
+          </th>-->
           <th>
             <button class="transparent small-padding" style="margin-left: -8px;">Name</button>
           </th>
@@ -141,7 +146,8 @@
               <i class="fill middle small">person</i>
             </span></td>
           <td>400322564100</td>
-
+          <!--
+          <td>7582984</td>-->
           <td>Cathy (Catherine) James</td>
           <td>1985-07-14</td>
 
@@ -163,7 +169,8 @@
               <i class="fill middle small">person</i>
             </span></td>
           <td>400322564101</td>
-
+            <!--
+          <td>7582984</td>-->
           <td>Katy (Cathy) James</td>
           <td>1985-07-14</td>
           <td>604-555-0174</td>
@@ -186,14 +193,14 @@
 
 
         <tr>
-          <td><span class="primary"
-            style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center;
+          <td><span class="primary" style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center;
             justify-content: center;">
-            <i class="fill middle small">person</i>
+              <i class="fill middle small">person</i>
             </span>
           </td>
           <td>400322564102</td>
-
+          <!--
+          <td>7582984</td>-->
           <td>Cathy James</td>
           <td>1985-07-14</td>
           <td>403-555-0126</td>
@@ -222,7 +229,8 @@
             </span>
           </td>
           <td>400322564103</td>
-
+          <!--
+          <td>7582984</td>-->
           <td>James Cathy</td>
           <td>1985-07-14</td>
           <td>+44 20 7946 0123</td>
@@ -237,8 +245,58 @@
           </td>
         </tr>
 
+        <tr>
+          <td>
+            <span class="secondary"
+              style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center; justify-content: center;">
+              <i class="fill middle small">group</i>
+            </span>
+          </td>
+          <td>400322564103</td>
+          <!--
+          <td>7582984</td>-->
+          <td>James Cathy</td>
+          <td>1985-07-14</td>
+          <td>+44 20 7946 0123</td>
+          <td>123 HIGH ST, LONDON, E17 7LD, UNITED KINGDOM</td>
+          <td class="right-align"></td>
+
+          <td class="right-align">
+
+            <button class="circle transparent no-margin">
+              <i class="on-surface-variant">more_vert</i>
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="tertiary"
+              style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center; justify-content: center;">
+              <i class="fill middle small">domain</i>
+            </span>
+          </td>
+          <td>400322564103</td>
+          <!--
+          <td>7582984</td>-->
+          <td>James Cathy</td>
+          <td></td>
+          <td>+44 20 7946 0123</td>
+          <td>123 HIGH ST, LONDON, E17 7LD, UNITED KINGDOM</td>
+          <td class="right-align"></td>
+
+          <td class="right-align">
+
+            <button class="circle transparent no-margin">
+              <i class="on-surface-variant">more_vert</i>
+            </button>
+          </td>
+        </tr>
+
       </tbody>
     </table>
+
+
     <!-- RESULTS FORMAT FOR NO TYPE SELECTED - TABLE VIEW
     <div class="row table-controls hide no-margin">
       <div class="row secondary-container round small-padding max" style="padding-left: 0.5rem;">
@@ -371,7 +429,54 @@
       </div>
     </div>
 </section>
+<div class="grid selectable-grid">
+  <article class="round wave xs12 sm12 md12 lg6 xl6 no-margin">
+    <div class="row" style="gap: 0.75rem;">
+      <span class="primary"
+        style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center; justify-content: center;">
+        <i class="fill middle small">person</i>
+      </span>
+      <div>
+        <p class="font-label" style="line-height: 0.25rem;">400322564100 • 7582984</p>
+        <h6 class="font-title no-margin">Cathy (Catherine) James</h6>
+      </div>
+      <div class="max"></div>
+      <button class="circle transparent no-margin" style="z-index: 2;">
+        <i class="on-surface-variant">more_vert</i>
+      </button>
+    </div>
+    <hr class="top-margin bottom-margin small-margin">
+    <div class="row top-margin tiny-margin">
+      <span class="font-label" style="font-weight: 600;">Date of birth</span>
+      <div class="max"></div>
+      <span>1985-07-14</span>
+    </div>
+    <hr class="top-margin bottom-margin small-margin">
+    <div class="row top-margin tiny-margin">
+      <span class="font-label" style="font-weight: 600;">Telephone number</span>
+      <div class="max"></div>
+      <span>416-555-0198</span>
+    </div>
+    <hr class="top-margin bottom-margin small-margin">
+    <div class="row top-margin tiny-margin">
+      <span class="font-label" style="font-weight: 600;">Address</span>
+      <div class="max"></div>
+      <span class="right-align">221 BAY ST SUITE 502<br>TORONTO, ON <br> M5K 1E6</span>
+    </div>
+
+    <hr class="top-margin bottom-margin small-margin">
+    <div class="row top-margin">
+      <span class="warning"
+        style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center; justify-content: center;">
+        <i class="fill middle">warning</i>
+      </span>
+      <span class="tertiary"
+        style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center; justify-content: center;">
+        <i class="fill middle">deceased</i>
+      </span>
+    </div>
+  </article>
+</div>
 
 
-
-<p class="font-label page-footer">Date modified: 2025-10-07</p>
+<p class="font-label page-footer">Date modified: 2025-10-23</p>
