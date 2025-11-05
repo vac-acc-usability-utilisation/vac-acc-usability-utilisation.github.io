@@ -3,18 +3,18 @@
 Goal: Improve readability, modularity and performance with low-risk incremental changes. Work is broken into small phases so each deliverable is testable and reversible.
 
 ## Phase 0 — Prep & safety (0.5–1 day)
-- Add CONTRIBUTING.md / PR checklist.
-- Add basic linting (ESLint) and formatting (Prettier) configuration.
+- ~~Add CONTRIBUTING.md / PR checklist.~~
+- ~~Add basic linting (ESLint) and formatting (Prettier) configuration.~~
 - ~~Add a simple in-memory fetch cache util (utils/fetchWithCache.js).~~
 - ~~Add a tiny utilities module for debounce and constants.~~
-Acceptance: repo has lint/format configs, utilities file, and a short PR template.
+~~Acceptance: repo has lint/format configs, utilities file, and a short PR template.~~
 
 ## Phase 1 — Fetch & cache utilities (0.5–1 day)
-- Implement fetchWithCache(url) and debounce(fn, ms).
-- Replace direct fetches in app.js, loadPage.js, search.js, toolsPanel.js with fetchWithCache.
-- Add small error-handling wrapper for template loads.
-Risk: low — changes are localized.
-Acceptance: identical UX, fewer network requests in repeated navigation.
+- ~~Implement fetchWithCache(url) and debounce(fn, ms).~~
+- ~~Replace direct fetches in app.js, loadPage.js, search.js, toolsPanel.js with fetchWithCache.~~
+- ~~Add small error-handling wrapper for template loads.~~
+~~Risk: low — changes are localized.~~
+~~Acceptance: identical UX, fewer network requests in repeated navigation.~~
 
 ## Phase 2 — Router & routing surface (1 day)
 - Extract hash parsing into a single Router module that exports:

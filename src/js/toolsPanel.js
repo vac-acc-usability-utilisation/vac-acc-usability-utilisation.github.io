@@ -1,5 +1,5 @@
 import { initSelectSearchable } from './select-searchable.js';
-import { debounce } from './utils.js'; // Ensure debounce is imported
+import { debounce, fetchTemplate } from './utils.js'; // Ensure debounce and fetchTemplate are imported
 
 /**
  * Sets up a handler to open the tools panel and load content when a button is clicked.
@@ -30,8 +30,10 @@ export function setupToolsPanel(buttonSelector, content) {
         if (typeof content === 'function') {
           panel.innerHTML = await content();
         } else if (typeof content === 'string' && content.endsWith('.html')) {
-          const resp = await fetch(content);
-          panel.innerHTML = await resp.text();
+          const html = await fetchTemplate(content, {
+            fallbackHtml: '<p>Could not load tools panel content.</p>',
+          });
+          panel.innerHTML = html;
         } else {
           panel.innerHTML = content;
         }

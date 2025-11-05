@@ -1,5 +1,5 @@
 import { getCurrentMode } from './router.js';
-import { debounce } from './utils.js';
+import { debounce, fetchTemplate } from './utils.js';
 
 let navListenerInitialized = false;
 
@@ -151,26 +151,29 @@ export function handleNavigationMenu(segments) {
 }
 
 // Handle client menu visibility
-export function handleClientMenu(segments) {
+export async function handleClientMenu(segments) {
   const navigationRail = document.getElementById('navigationRail');
   const clientMenu = document.getElementById('client-menu');
   // Only show client menu if mode is "demo" and area is "client"
   if (segments[1] === 'demo' && segments[2] === 'client') {
     if (navigationRail) navigationRail.classList.add('hidden');
     if (!clientMenu) {
-      fetch('src/templates/client-menu.html')
-        .then((response) => response.text())
-        .then((html) => {
-          const newClientMenu = document.createElement('div');
-          newClientMenu.id = 'client-menu';
-          newClientMenu.innerHTML = html;
-          const mainContentWrapper = document.getElementById('mainContentWrapper');
-          if (mainContentWrapper && mainContentWrapper.parentNode) {
-            mainContentWrapper.parentNode.insertBefore(newClientMenu, mainContentWrapper);
-          }
-          // Call update after menu is inserted
-          updateClientMenuActive(segments);
+      try {
+        const html = await fetchTemplate('src/templates/client-menu.html', {
+          fallbackHtml: '<div class="client-menu-placeholder">Menu unavailable</div>',
         });
+        const newClientMenu = document.createElement('div');
+        newClientMenu.id = 'client-menu';
+        newClientMenu.innerHTML = html;
+        const mainContentWrapper = document.getElementById('mainContentWrapper');
+        if (mainContentWrapper && mainContentWrapper.parentNode) {
+          mainContentWrapper.parentNode.insertBefore(newClientMenu, mainContentWrapper);
+        }
+        // Call update after menu is inserted
+        updateClientMenuActive(segments);
+      } catch (err) {
+        console.error('Error loading client menu', err);
+      }
     } else {
       // If menu already exists, just update active state
       updateClientMenuActive(segments);

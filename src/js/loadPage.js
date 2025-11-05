@@ -7,11 +7,11 @@ import {
 } from './nav.js';
 import { setupToolsPanel } from './toolsPanel.js';
 import { initSelectSearchable } from './select-searchable.js';
-import { fetchWithCache } from './utils.js';
+import { fetchTemplate } from './utils.js';
 
 //import { getCurrentMode } from "./router.js";
 
-export function loadPage(segments) {
+export async function loadPage(segments) {
   if (!Array.isArray(segments)) {
     segments = [segments];
   }
@@ -30,64 +30,80 @@ export function loadPage(segments) {
 
   console.log('Fetching path:', path);
 
-  fetchWithCache(path)
-    .then((html) => {
-      // fetchWithCache resolves text so we get html here
-      pageContainer.innerHTML = html;
+  try {
+    // Use fetchTemplate and throw on error so we can show a 404
+    const html = await fetchTemplate(path, { throwOnError: true });
+    pageContainer.innerHTML = html;
 
-      // Scroll to top
-      setTimeout(() => window.scrollTo(0, 0), 0);
+    // Scroll to top
+    setTimeout(() => window.scrollTo(0, 0), 0);
 
-      // Handle rail item highlighting
+    // Handle rail item highlighting
+    try {
       updateActiveRailItem(segments[2]); // Assuming area is the 3rd segment
+    } catch (e) {
+      console.warn('updateActiveRailItem failed', e);
+    }
 
+    try {
       handleNavigationMenu(segments);
+    } catch (e) {
+      console.warn('handleNavigationMenu failed', e);
+    }
 
+    try {
       handleClientMenu(segments);
+    } catch (e) {
+      console.warn('handleClientMenu failed', e);
+    }
+
+    try {
       updateSubmenus(segments[2], segments[3]);
+    } catch (e) {
+      console.warn('updateSubmenus failed', e);
+    }
+
+    try {
       toggleFiltersPanel(segments);
+    } catch (e) {
+      console.warn('toggleFiltersPanel failed', e);
+    }
 
-      setupToolsPanel(
-        '#add-identifier-btn',
-        'src/templates/csa/demo/forms/add-identifier.html' // or an HTML string, or a function
-      );
+    setupToolsPanel('#add-identifier-btn', 'src/templates/csa/demo/forms/add-identifier.html');
+    setupToolsPanel('.id-edit-btn', 'src/templates/csa/demo/forms/edit-identifier.html');
+    setupToolsPanel('.id-info-btn', 'src/templates/csa/demo/forms/info-identifier.html');
 
-      setupToolsPanel(
-        '.id-edit-btn',
-        'src/templates/csa/demo/forms/edit-identifier.html' // or an HTML string, or a function
-      );
+    // Initialize minimal select-searchable behaviour for elements inside the newly loaded page
+    try {
+      initSelectSearchable(pageContainer);
+    } catch (e) {
+      console.warn('initSelectSearchable failed', e);
+    }
 
-      setupToolsPanel(
-        '.id-info-btn',
-        'src/templates/csa/demo/forms/info-identifier.html' // or an HTML string, or a function
-      );
+    // Handle tab highlighting after HTML is loaded
+    const pageTab = segments[4] || 'overview'; // fallback to default tab
+    updateActiveTab(pageTab);
 
-      // Initialize minimal select-searchable behaviour for elements inside the newly loaded page
-      // This wires simple show/hide toggling for `.select-searchable` components
+    if (segments.includes('search')) {
       try {
-        initSelectSearchable(pageContainer);
-      } catch (e) {
-        console.warn('initSelectSearchable failed', e);
-      }
-
-      // Handle tab highlighting after HTML is loaded
-      const pageTab = segments[4] || 'overview'; // fallback to default tab
-      updateActiveTab(pageTab);
-
-      if (segments.includes('search')) {
         initSearch();
+      } catch (e) {
+        console.warn('initSearch failed', e);
       }
+    }
 
-      document.getElementById('progress-indicator').hidden = true; // Hide after load
-      return;
-    })
-    .catch((err) => {
-      console.warn('loadPage error', err);
-      pageContainer.innerHTML =
-        '<h1>404</h1><p>The page "' + segments.slice(0, 4).join('/') + '" could not be found.</p>';
+    document.getElementById('progress-indicator').hidden = true; // Hide after load
+  } catch (err) {
+    console.warn('loadPage error', err);
+    pageContainer.innerHTML =
+      '<h1>404</h1><p>The page "' + segments.slice(0, 4).join('/') + '" could not be found.</p>';
+    try {
       updateActiveRailItem(404);
-      document.getElementById('progress-indicator').hidden = true; // Hide after load
-    });
+    } catch (e) {
+      /* ignore */
+    }
+    document.getElementById('progress-indicator').hidden = true; // Hide after load
+  }
 }
 
 // Update active tab based on `data-tab` attribute
@@ -113,11 +129,14 @@ async function loadFiltersPanelTemplate(templatePath, afterLoadCallback) {
   if (!filtersPanel) return;
 
   try {
-    const html = await fetchWithCache(templatePath);
+    const html = await fetchTemplate(templatePath, {
+      fallbackHtml: '<div class="filters-placeholder">Filters unavailable</div>',
+    });
     filtersPanel.innerHTML = html;
     if (typeof afterLoadCallback === 'function') afterLoadCallback();
   } catch (err) {
-    filtersPanel.innerHTML = '<p>Could not load filters.</p>';
+    console.warn('Unable to load filters panel template', err);
+    filtersPanel.innerHTML = '<div class="filters-placeholder">Filters unavailable</div>';
   }
 }
 

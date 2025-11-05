@@ -14,11 +14,35 @@ export async function fetchWithCache(url, options) {
 }
 
 /**
- * Simple debounce function.
- * @param {Function} fn - The function to debounce.
- * @param {number} wait - The number of milliseconds to wait before calling the function.
- * @returns {Function} - A debounced version of the function.
+ * Fetch a template with minimal error handling and optional fallback.
+ * Returns HTML string. On error, returns fallbackHtml (unless throwOnError=true).
  */
+export async function fetchTemplate(
+  url,
+  { fallbackHtml = '<p>Could not load content.</p>', throwOnError = false, options = undefined } = {}
+) {
+  try {
+    const html = await fetchWithCache(url, options);
+    return html;
+  } catch (err) {
+    console.error(`fetchTemplate: failed to load ${url}`, err);
+    if (throwOnError) throw err;
+    return fallbackHtml;
+  }
+}
+
+/**
+ * Convenience: fetch a template and inject into a container element.
+ * Returns the HTML that was injected.
+ */
+export async function loadTemplateInto(container, url, opts = {}) {
+  if (!container) throw new Error('loadTemplateInto: container required');
+  const html = await fetchTemplate(url, opts);
+  container.innerHTML = html;
+  return html;
+}
+
+// ...existing code...
 export function debounce(fn, wait = 250) {
   let t;
   return function (...args) {

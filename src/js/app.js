@@ -1,8 +1,10 @@
 //let currentLang = 'en';
 
+
 import { handleRouting, getCurrentMode, getCurrentProduct } from './router.js';
 import { initNavigation } from './nav.js';
 import { initI18n, initLanguageToggle } from './language.js';
+import { fetchWithCache, fetchTemplate } from './utils.js';
 
 // On DOM ready, initialize navigation and language features
 window.addEventListener('DOMContentLoaded', () => {
@@ -68,13 +70,14 @@ async function loadNavigation(product, mode) {
   const navTemplate = getNavTemplate(product, mode);
   if (navTemplate) {
     try {
-      const response = await fetch(navTemplate);
-      if (!response.ok) throw new Error('Failed to load navigation template');
-      nav.innerHTML = await response.text();
+      // Prefer explicit error handling for the rail (let caller log/show fallback)
+      const html = await fetchTemplate(navTemplate, { throwOnError: true });
+      nav.innerHTML = html;
       initNavigation(); // Set up navigation event handlers
       handleRouting(); // Load the correct page content
     } catch (err) {
       console.error('Error loading navigation:', err);
+      nav.innerHTML = '<div class="nav-error">Navigation could not be loaded.</div>';
     }
   }
 
@@ -83,9 +86,10 @@ async function loadNavigation(product, mode) {
   if (!navigationMenu) return;
 
   try {
-    const response = await fetch('src/templates/csa/demo/navigation-menu.html');
-    if (!response.ok) throw new Error('Failed to load navigationMenu menu template');
-    navigationMenu.innerHTML = await response.text();
+    const html = await fetchTemplate('src/templates/csa/demo/navigation-menu.html', {
+      fallbackHtml: '<div class="nav-menu-placeholder">Menu unavailable</div>',
+    });
+    navigationMenu.innerHTML = html;
   } catch (err) {
     console.error('Error loading navigation menu:', err);
   }
@@ -97,9 +101,10 @@ async function loadNavigation(product, mode) {
     if (!accountMenu) return;
 
     try {
-      const response = await fetch('src/templates/csa/demo/account-menu.html');
-      if (!response.ok) throw new Error('Failed to load account menu template');
-      accountMenu.innerHTML = await response.text();
+      const html = await fetchTemplate('src/templates/csa/demo/account-menu.html', {
+        fallbackHtml: '<div class="account-menu-placeholder">Account menu unavailable</div>',
+      });
+      accountMenu.innerHTML = html;
       accountMenu.classList.remove('hidden');
     } catch (err) {
       console.error('Error loading account menu:', err);
