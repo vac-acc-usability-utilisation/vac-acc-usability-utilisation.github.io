@@ -5,7 +5,7 @@ Goal: Improve readability, modularity and performance with low-risk incremental 
 ## Phase 0 — Prep & safety (0.5–1 day)
 - Add CONTRIBUTING.md / PR checklist.
 - Add basic linting (ESLint) and formatting (Prettier) configuration.
-- Add a simple in-memory fetch cache util (utils/fetchWithCache.js).
+- ~~Add a simple in-memory fetch cache util (utils/fetchWithCache.js).~~
 - Add a tiny utilities module for debounce and constants.
 Acceptance: repo has lint/format configs, utilities file, and a short PR template.
 

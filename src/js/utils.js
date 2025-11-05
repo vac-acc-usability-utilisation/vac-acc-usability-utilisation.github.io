@@ -13,7 +13,12 @@ export async function fetchWithCache(url, options) {
     return text;
 }
 
-/** Simple debounce */
+/**
+ * Simple debounce function.
+ * @param {Function} fn - The function to debounce.
+ * @param {number} wait - The number of milliseconds to wait before calling the function.
+ * @returns {Function} - A debounced version of the function.
+ */
 export function debounce(fn, wait = 250) {
     let t;
     return function (...args) {
@@ -21,3 +26,6 @@ export function debounce(fn, wait = 250) {
         t = setTimeout(() => fn.apply(this, args), wait);
     };
 }
+
+// Constants
+export const DEFAULT_LANGUAGE = 'en'; // Default language constant

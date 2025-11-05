@@ -1,9 +1,11 @@
+import { initSelectSearchable } from './select-searchable.js';
+import { debounce } from './utils.js'; // Ensure debounce is imported
+
 /**
  * Sets up a handler to open the tools panel and load content when a button is clicked.
  * @param {string} buttonSelector - CSS selector for the button to trigger the panel
  * @param {string|Function} content - HTML string, template path, or async function returning HTML
  */
-import { initSelectSearchable } from './select-searchable.js';
 
 export function setupToolsPanel(buttonSelector, content) {
     
@@ -12,7 +14,7 @@ export function setupToolsPanel(buttonSelector, content) {
         const btn = document.querySelector(buttonSelector);
         if (!btn) return;
 
-        btn.addEventListener('click', async () => {
+        btn.addEventListener('click', debounce(async () => {
             console.log('Tools Panel button clicked:', buttonSelector);
             
             const panel = document.getElementById('toolsPanel');
@@ -35,6 +37,6 @@ export function setupToolsPanel(buttonSelector, content) {
 
             // Initialize minimal select-searchable behaviour for any newly injected content
             try { initSelectSearchable(panel); } catch (e) { console.warn('initSelectSearchable failed in toolsPanel', e); }
-        });
+        }, 250));
     }, 0);
 }

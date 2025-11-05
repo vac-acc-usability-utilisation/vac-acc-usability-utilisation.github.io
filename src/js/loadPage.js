@@ -2,7 +2,7 @@ import { initSearch } from "./search.js";
 import { updateActiveRailItem, handleNavigationMenu, handleClientMenu, updateSubmenus } from "./nav.js";
 import { setupToolsPanel } from './toolsPanel.js';
 import { initSelectSearchable } from './select-searchable.js';
-import { fetchWithCache } from './utils/fetchWithCache.js';
+import { fetchWithCache } from './utils.js';
 
 //import { getCurrentMode } from "./router.js";
 

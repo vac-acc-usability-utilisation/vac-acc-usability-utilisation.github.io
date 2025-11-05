@@ -8,7 +8,7 @@ let navListenerInitialized = false;
 export function initNavigation() {
     if (navListenerInitialized) return;
     navListenerInitialized = true;
-    document.body.addEventListener('click', handleBodyClick);
+    document.body.addEventListener('click', debounce(handleBodyClick, 250));
 }
 
 /**

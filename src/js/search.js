@@ -1,4 +1,4 @@
-import { fetchWithCache, debounce } from './utils/fetchWithCache.js';
+import { fetchWithCache, debounce } from './utils.js';
 
 export async function initSearch() {
     // Load the index data (cached)
