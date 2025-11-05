@@ -19,7 +19,11 @@ export async function fetchWithCache(url, options) {
  */
 export async function fetchTemplate(
   url,
-  { fallbackHtml = '<p>Could not load content.</p>', throwOnError = false, options = undefined } = {}
+  {
+    fallbackHtml = '<p>Could not load content.</p>',
+    throwOnError = false,
+    options = undefined,
+  } = {}
 ) {
   try {
     const html = await fetchWithCache(url, options);

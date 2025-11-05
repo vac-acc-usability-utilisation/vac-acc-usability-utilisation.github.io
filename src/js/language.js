@@ -28,7 +28,7 @@ export function initI18n() {
         loadPath: 'src/locales/{{lng}}/{{ns}}.json',
       },
     },
-    function (err, t) {
+    function (err) {
       if (err) return console.error('i18next init error:', err);
 
       // Set initial button label

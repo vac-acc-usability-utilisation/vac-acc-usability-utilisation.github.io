@@ -100,7 +100,7 @@ function updateHashForTab(hashSegments, tabValue) {
 }
 
 // Helper: Update the active tab styling
-function updateActiveTab(tabTarget, tabValue) {
+function updateActiveTab(tabTarget) {
   const allTabs = tabTarget.parentElement.querySelectorAll('[data-tab]');
   allTabs.forEach((tab) => tab.classList.toggle('active', tab === tabTarget));
 }
@@ -130,7 +130,7 @@ export function updateActiveRailItem(area) {
   });
 }
 
-export function handleNavigationMenu(segments) {
+export function handleNavigationMenu() {
   const navigationMenu = document.getElementById('navigation-menu');
   const scrim = document.getElementById('scrim');
   const btn = document.getElementById('navigation-menu-btn');

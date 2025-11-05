@@ -1,9 +1,10 @@
 <div class="space"></div>
 
-
-
-<div class="medium middle-align center-align surface " style="display: flex; flex-direction: column; height: 80vh; ">
-  <i class="extra" style="overflow: visible;">person_search</i>
+<div
+  class="medium middle-align center-align surface"
+  style="display: flex; flex-direction: column; height: 80vh"
+>
+  <i class="extra" style="overflow: visible">person_search</i>
   <h1 class="font-title">Search for a notebook</h1>
   <!--
   <div class=" grid " style="display: flex; width: 66%;">
@@ -22,7 +23,6 @@
       <h3>Organization</h3>
     </article>
   </div>-->
-
 </div>
 <div class="large-space"></div>
 <div class="large-space"></div>
@@ -30,16 +30,10 @@
 <div class="large-space"></div>
 <div class="large-space"></div>
 <div class="row no-margin no-padding">
-  <h1 class="font-headline">
-    Search results
-  </h1>
+  <h1 class="font-headline">Search results</h1>
   <div class="max"></div>
   <button class="tertiary-container outline"><i>add</i> Create a notebook</button>
 </div>
-
-
-
-
 
 <!-- Results table -->
 
@@ -48,15 +42,23 @@
     <div class="max"></div>
     <nav class="no-space lg xl xxl">
       <button class="border left-round segmented-button fill">
-        <i style="margin:0;">table_rows</i>
+        <i style="margin: 0">table_rows</i>
       </button>
-      <button id="table-example-grid-view" class="border right-round segmented-button ">
-        <i style="margin:0;">grid_view</i>
+      <button id="table-example-grid-view" class="border right-round segmented-button">
+        <i style="margin: 0">grid_view</i>
       </button>
     </nav>
   </div>
-  <div class="small-padding top-padding bottom-padding"
-    style="position: sticky; top: 0px; background-color: var(--surface); z-index: 11; border-radius: 0; ">
+  <div
+    class="small-padding top-padding bottom-padding"
+    style="
+      position: sticky;
+      top: 0px;
+      background-color: var(--surface);
+      z-index: 11;
+      border-radius: 0;
+    "
+  >
     <div class="row table-filters no-margin">
       <div>
         <button class="chip fill">
@@ -65,7 +67,7 @@
             <li>Active</li>
           </menu>
         </button>
-        <button class="chip ">
+        <button class="chip">
           Area office<i class="tiny">arrow_drop_down</i>
           <menu>
             <li>Engineering</li>
@@ -77,17 +79,15 @@
         <button class="transparent small-padding" disabled>Clear filters</button>
       </div>
       <div class="max"></div>
-      <p class="font-label">
-        4 results
-      </p>
+      <p class="font-label">4 results</p>
     </div>
     <div class="row table-controls hide no-margin">
-      <div class="row secondary-container round small-padding max" style="padding-left: 0.5rem;">
+      <div class="row secondary-container round small-padding max" style="padding-left: 0.5rem">
         <button class="circle transparent">
           <i>close</i>
         </button>
         <p class="font-label"><span class="numberRowsSelected"></span> selected</p>
-        <div class="row" style="gap: 0.25rem;">
+        <div class="row" style="gap: 0.25rem">
           <button class="small transparent">
             <i>edit</i>
             Edit
@@ -104,15 +104,27 @@
     </div>
   </div>
 
-  <div class="small-padding top-padding bottom-padding"
-    style="position: sticky; top: 0px; background-color: var(--surface); z-index: 11; border-radius: 0; ">
+  <div
+    class="small-padding top-padding bottom-padding"
+    style="
+      position: sticky;
+      top: 0px;
+      background-color: var(--surface);
+      z-index: 11;
+      border-radius: 0;
+    "
+  >
     <table class="border selectable-rows no-margin">
-      <thead style="position: sticky; top: 72px; z-index: 10;">
+      <thead style="position: sticky; top: 72px; z-index: 10">
         <tr>
           <th></th>
           <th>
-            <button class="transparent small-padding no-margin" style="margin-left: -8px !important;">Notebook
-              ID</button>
+            <button
+              class="transparent small-padding no-margin"
+              style="margin-left: -8px !important"
+            >
+              Notebook ID
+            </button>
           </th>
           <!--
           <th>
@@ -121,30 +133,48 @@
             </button>
           </th>-->
           <th>
-            <button class="transparent small-padding" style="margin-left: -8px;">Name</button>
+            <button class="transparent small-padding" style="margin-left: -8px">Name</button>
           </th>
           <th>
-            <button class="transparent small-padding" style="margin-left: -8px;">Date of birth</button>
+            <button class="transparent small-padding" style="margin-left: -8px">
+              Date of birth
+            </button>
           </th>
           <th>
-            <button class="transparent small-padding" style="margin-left: -8px;">Telephone number</button>
+            <button class="transparent small-padding" style="margin-left: -8px">
+              Telephone number
+            </button>
           </th>
           <th>
-            <button class="transparent small-padding" style="margin-left: -8px;">Address</button>
+            <button class="transparent small-padding" style="margin-left: -8px">Address</button>
           </th>
 
-          <th><button class="transparent small-padding hidden" style="margin-left: -8px;">Status</button></th>
+          <th>
+            <button class="transparent small-padding hidden" style="margin-left: -8px">
+              Status
+            </button>
+          </th>
 
-          <th><span class="hide">Actions</span> </th>
+          <th><span class="hide">Actions</span></th>
         </tr>
       </thead>
       <tbody>
-
         <tr>
-          <td><span class="primary"
-              style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center; justify-content: center;">
+          <td>
+            <span
+              class="primary"
+              style="
+                display: inline-flex;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 2rem;
+                align-content: center;
+                justify-content: center;
+              "
+            >
               <i class="fill middle small">person</i>
-            </span></td>
+            </span>
+          </td>
           <td>400322564100</td>
           <!--
           <td>7582984</td>-->
@@ -156,7 +186,6 @@
           <td class="right-align"></td>
 
           <td class="right-align">
-
             <button class="circle transparent no-margin">
               <i class="on-surface-variant">more_vert</i>
             </button>
@@ -164,37 +193,64 @@
         </tr>
 
         <tr>
-          <td><span class="primary"
-              style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center; justify-content: center;">
+          <td>
+            <span
+              class="primary"
+              style="
+                display: inline-flex;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 2rem;
+                align-content: center;
+                justify-content: center;
+              "
+            >
               <i class="fill middle small">person</i>
-            </span></td>
+            </span>
+          </td>
           <td>400322564101</td>
-            <!--
+          <!--
           <td>7582984</td>-->
           <td>Katy (Cathy) James</td>
           <td>1985-07-14</td>
           <td>604-555-0174</td>
           <td>305-87 W CORDOVA ST, VANCOUVER, BC, V6B 1E1</td>
           <td class="right-align">
-            <span class="warning"
-              style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center; justify-content: center;">
+            <span
+              class="warning"
+              style="
+                display: inline-flex;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 2rem;
+                align-content: center;
+                justify-content: center;
+              "
+            >
               <i class="fill middle">warning</i>
             </span>
           </td>
 
           <td class="right-align">
-
             <button class="circle transparent no-margin">
               <i class="on-surface-variant">more_vert</i>
             </button>
           </td>
         </tr>
 
-
-
         <tr>
-          <td><span class="primary" style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center;
-            justify-content: center;">
+          <td>
+            <span
+              class="primary"
+              style="
+                display: inline-flex;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 2rem;
+                align-content: center;
+                justify-content: center;
+              "
+            >
               <i class="fill middle small">person</i>
             </span>
           </td>
@@ -206,25 +262,41 @@
           <td>403-555-0126</td>
           <td>1420 17 AVE SW, CALGARY, AB, T2T 0C3</td>
           <td class="right-align">
-            <span class="tertiary"
-              style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center; justify-content: center;">
+            <span
+              class="tertiary"
+              style="
+                display: inline-flex;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 2rem;
+                align-content: center;
+                justify-content: center;
+              "
+            >
               <i class="fill middle">deceased</i>
             </span>
           </td>
 
           <td class="right-align">
-
             <button class="circle transparent no-margin">
               <i class="on-surface-variant">more_vert</i>
             </button>
           </td>
         </tr>
 
-
         <tr>
           <td>
-            <span class="primary"
-              style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center; justify-content: center;">
+            <span
+              class="primary"
+              style="
+                display: inline-flex;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 2rem;
+                align-content: center;
+                justify-content: center;
+              "
+            >
               <i class="fill middle small">person</i>
             </span>
           </td>
@@ -238,7 +310,6 @@
           <td class="right-align"></td>
 
           <td class="right-align">
-
             <button class="circle transparent no-margin">
               <i class="on-surface-variant">more_vert</i>
             </button>
@@ -247,8 +318,17 @@
 
         <tr>
           <td>
-            <span class="secondary"
-              style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center; justify-content: center;">
+            <span
+              class="secondary"
+              style="
+                display: inline-flex;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 2rem;
+                align-content: center;
+                justify-content: center;
+              "
+            >
               <i class="fill middle small">group</i>
             </span>
           </td>
@@ -262,7 +342,6 @@
           <td class="right-align"></td>
 
           <td class="right-align">
-
             <button class="circle transparent no-margin">
               <i class="on-surface-variant">more_vert</i>
             </button>
@@ -271,8 +350,17 @@
 
         <tr>
           <td>
-            <span class="tertiary"
-              style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center; justify-content: center;">
+            <span
+              class="tertiary"
+              style="
+                display: inline-flex;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 2rem;
+                align-content: center;
+                justify-content: center;
+              "
+            >
               <i class="fill middle small">domain</i>
             </span>
           </td>
@@ -286,16 +374,13 @@
           <td class="right-align"></td>
 
           <td class="right-align">
-
             <button class="circle transparent no-margin">
               <i class="on-surface-variant">more_vert</i>
             </button>
           </td>
         </tr>
-
       </tbody>
     </table>
-
 
     <!-- RESULTS FORMAT FOR NO TYPE SELECTED - TABLE VIEW
     <div class="row table-controls hide no-margin">
@@ -404,11 +489,10 @@
 
     </tbody>
   </table>-->
-    <div class="row right-align" style="gap: 2rem; ">
-      <div class="row" style="gap: 0.5rem; align-items: center;">
+    <div class="row right-align" style="gap: 2rem">
+      <div class="row" style="gap: 0.5rem; align-items: center">
         <p class="font-label top-margin">Show</p>
         <div class="field border transparent">
-
           <label for="view-number" class="hide">Number of entries</label>
           <select name="view-number" id="view-number" class="no-margin">
             <option value="10">10</option>
@@ -421,62 +505,96 @@
         <p class="font-label">entries</p>
       </div>
       <p class="font-label">1-4 of 4</p>
-      <div class="row" style="gap: 0px;">
-        <button class="circle transparent disabled " disabled><i class="small">first_page</i></button>
-        <button class="circle transparent disabled " disabled><i class="small">chevron_left</i></button>
-        <button class="circle transparent "><i class="small">chevron_right</i></button>
-        <button class="circle transparent "><i class="small">last_page</i></button>
+      <div class="row" style="gap: 0px">
+        <button class="circle transparent disabled" disabled>
+          <i class="small">first_page</i>
+        </button>
+        <button class="circle transparent disabled" disabled>
+          <i class="small">chevron_left</i>
+        </button>
+        <button class="circle transparent"><i class="small">chevron_right</i></button>
+        <button class="circle transparent"><i class="small">last_page</i></button>
       </div>
     </div>
+    <div class="grid selectable-grid">
+      <article class="round wave xs12 sm12 md12 lg6 xl6 no-margin">
+        <div class="row" style="gap: 0.75rem">
+          <span
+            class="primary"
+            style="
+              display: inline-flex;
+              width: 2rem;
+              height: 2rem;
+              border-radius: 2rem;
+              align-content: center;
+              justify-content: center;
+            "
+          >
+            <i class="fill middle small">person</i>
+          </span>
+          <div>
+            <p class="font-label" style="line-height: 0.25rem">400322564100 • 7582984</p>
+            <h6 class="font-title no-margin">Cathy (Catherine) James</h6>
+          </div>
+          <div class="max"></div>
+          <button class="circle transparent no-margin" style="z-index: 2">
+            <i class="on-surface-variant">more_vert</i>
+          </button>
+        </div>
+        <hr class="top-margin bottom-margin small-margin" />
+        <div class="row top-margin tiny-margin">
+          <span class="font-label" style="font-weight: 600">Date of birth</span>
+          <div class="max"></div>
+          <span>1985-07-14</span>
+        </div>
+        <hr class="top-margin bottom-margin small-margin" />
+        <div class="row top-margin tiny-margin">
+          <span class="font-label" style="font-weight: 600">Telephone number</span>
+          <div class="max"></div>
+          <span>416-555-0198</span>
+        </div>
+        <hr class="top-margin bottom-margin small-margin" />
+        <div class="row top-margin tiny-margin">
+          <span class="font-label" style="font-weight: 600">Address</span>
+          <div class="max"></div>
+          <span class="right-align"
+            >221 BAY ST SUITE 502<br />TORONTO, ON <br />
+            M5K 1E6</span
+          >
+        </div>
+
+        <hr class="top-margin bottom-margin small-margin" />
+        <div class="row top-margin">
+          <span
+            class="warning"
+            style="
+              display: inline-flex;
+              width: 2rem;
+              height: 2rem;
+              border-radius: 2rem;
+              align-content: center;
+              justify-content: center;
+            "
+          >
+            <i class="fill middle">warning</i>
+          </span>
+          <span
+            class="tertiary"
+            style="
+              display: inline-flex;
+              width: 2rem;
+              height: 2rem;
+              border-radius: 2rem;
+              align-content: center;
+              justify-content: center;
+            "
+          >
+            <i class="fill middle">deceased</i>
+          </span>
+        </div>
+      </article>
+    </div>
+
+    <p class="font-label page-footer">Date modified: 2025-10-23</p>
+  </div>
 </section>
-<div class="grid selectable-grid">
-  <article class="round wave xs12 sm12 md12 lg6 xl6 no-margin">
-    <div class="row" style="gap: 0.75rem;">
-      <span class="primary"
-        style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center; justify-content: center;">
-        <i class="fill middle small">person</i>
-      </span>
-      <div>
-        <p class="font-label" style="line-height: 0.25rem;">400322564100 • 7582984</p>
-        <h6 class="font-title no-margin">Cathy (Catherine) James</h6>
-      </div>
-      <div class="max"></div>
-      <button class="circle transparent no-margin" style="z-index: 2;">
-        <i class="on-surface-variant">more_vert</i>
-      </button>
-    </div>
-    <hr class="top-margin bottom-margin small-margin">
-    <div class="row top-margin tiny-margin">
-      <span class="font-label" style="font-weight: 600;">Date of birth</span>
-      <div class="max"></div>
-      <span>1985-07-14</span>
-    </div>
-    <hr class="top-margin bottom-margin small-margin">
-    <div class="row top-margin tiny-margin">
-      <span class="font-label" style="font-weight: 600;">Telephone number</span>
-      <div class="max"></div>
-      <span>416-555-0198</span>
-    </div>
-    <hr class="top-margin bottom-margin small-margin">
-    <div class="row top-margin tiny-margin">
-      <span class="font-label" style="font-weight: 600;">Address</span>
-      <div class="max"></div>
-      <span class="right-align">221 BAY ST SUITE 502<br>TORONTO, ON <br> M5K 1E6</span>
-    </div>
-
-    <hr class="top-margin bottom-margin small-margin">
-    <div class="row top-margin">
-      <span class="warning"
-        style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center; justify-content: center;">
-        <i class="fill middle">warning</i>
-      </span>
-      <span class="tertiary"
-        style="display:inline-flex; width: 2rem; height: 2rem; border-radius:2rem; align-content: center; justify-content: center;">
-        <i class="fill middle">deceased</i>
-      </span>
-    </div>
-  </article>
-</div>
-
-
-<p class="font-label page-footer">Date modified: 2025-10-23</p>
