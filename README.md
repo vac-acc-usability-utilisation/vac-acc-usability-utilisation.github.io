@@ -51,12 +51,12 @@ Goal: Improve readability, modularity and performance with low-risk incremental 
 ~~Acceptance: avoid duplicate event listeners leaking across navigation.~~
 
 ## Phase 6 — Tests and CI (1–2 days)
-- Add unit tests for:
-  - hash parsing and route object generation
-  - resolvePath logic in loadPage
-  - fetchWithCache behaviour (mocked fetch)
-- Add GitHub Actions to run lint and tests.
-Acceptance: CI passes on PRs.
+- ~~Add unit tests for:~~
+  - ~~hash parsing and route object generation~~
+  - ~~resolvePath logic in loadPage~~
+  - ~~fetchWithCache behaviour (mocked fetch)~~
+- ~~Add GitHub Actions to run lint and tests.~~
+~~Acceptance: CI passes on PRs.~~
 
 ## Phase 7 — Performance & polish (optional, 1–2 days)
 - Cache templates in sessionStorage where appropriate.

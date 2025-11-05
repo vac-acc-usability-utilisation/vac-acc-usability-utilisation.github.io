@@ -4,11 +4,14 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^5.5.4",
+    "playwright": "^1.40.0",
     "prettier": "^3.6.2"
   },
   "scripts": {
     "lint": "eslint \"src/**/*.js\"",
     "lint:fix": "eslint \"src/**/*.js\" --fix",
-    "format": "prettier --write \"src/**/*.{js,html,css,json,md}\""
+    "format": "prettier --write \"src/**/*.{js,html,css,json,md}\"",
+    "test": "node src/js/tests/run-tests.js",
+    "test:install": "npx playwright install chromium"
   }
 }

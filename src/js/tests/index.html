@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Tests</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 { 
+      color: #333;
+      border-bottom: 3px solid #4CAF50;
+      padding-bottom: 10px;
+    }
+    .test-suite {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .test-suite h2 {
+      margin-top: 0;
+      color: #555;
+    }
+    .test-suite iframe {
+      display: none;
+    }
+    .instructions {
+      background: #e3f2fd;
+      border-left: 4px solid #2196F3;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    .suite-link {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin: 5px 5px 5px 0;
+      transition: background 0.3s;
+    }
+    .suite-link:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Test Suite Runner</h1>
+  
+  <div class="instructions">
+    <strong>📋 Instructions:</strong>
+    <ul>
+      <li>Open the browser console (F12) to see all test results</li>
+      <li>Tests run automatically when you load this page</li>
+      <li>Click individual test links below to run tests in isolation</li>
+    </ul>
+  </div>
+
+  <div class="test-suite">
+    <h2>Router Tests</h2>
+    <p>Tests for hash parsing and route object generation</p>
+    <a href="parser.html" class="suite-link" target="_blank">Run Parser Tests →</a>
+    <iframe src="parser.html" onload="console.log('✓ Parser tests loaded')"></iframe>
+  </div>
+
+  <div class="test-suite">
+    <h2>LoadPage Tests</h2>
+    <p>Tests for resolvePath function and path construction logic</p>
+    <a href="resolvePath.html" class="suite-link" target="_blank">Run ResolvePath Tests →</a>
+    <iframe src="resolvePath.html" onload="console.log('✓ ResolvePath tests loaded')"></iframe>
+  </div>
+
+  <div class="test-suite">
+    <h2>Utils Tests</h2>
+    <p>Tests for fetchWithCache behavior, cache hits/misses, and error handling</p>
+    <a href="fetchWithCache.html" class="suite-link" target="_blank">Run FetchWithCache Tests →</a>
+    <iframe src="fetchWithCache.html" onload="console.log('✓ FetchWithCache tests loaded')"></iframe>
+  </div>
+
+  <script>
+    console.log('═══════════════════════════════════════');
+    console.log('🧪 Running All Test Suites');
+    console.log('═══════════════════════════════════════');
+    console.log('');
+  </script>
+</body>
+</html>
