@@ -164,6 +164,7 @@ nav.drawer.max {
 
 nav.rail-submenu {
   background-color: var(--surface-container);
+  margin-top: 0 !important;
   position: fixed;
   height: calc(100vh - 4rem);
   padding-bottom: 2rem;
@@ -188,9 +189,13 @@ nav.rail-submenu {
   /* or higher if needed */
 }
 
-nav.rail-submenu ul {
-  /* padding: 0px 8px 2rem 8px !important; */
+/* Preview flyout should overlay content and be visually distinct */
+.rail-submenu.preview {
+  z-index: 998; /* above persistent drawers, below scrim (999) */
+  pointer-events: auto;
 }
+
+/* removed empty ruleset for nav.rail-submenu ul to satisfy linter */
 
 nav.drawer ul ul,
 nav.drawer ol ol {

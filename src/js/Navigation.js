@@ -19,10 +19,14 @@ export class NavigationManager {
     // Bind methods
     this.handleBodyClick = this.handleBodyClick.bind(this);
     this.handleRouteChange = this.handleRouteChange.bind(this);
+  this.handleHoverIn = this.handleHoverIn.bind(this);
+  this.handleHoverOut = this.handleHoverOut.bind(this);
     
     // State
     this.routeUnsubscribe = null;
     this.initialized = false;
+    this.currentPreviewArea = null;
+    this.previewTimers = new Map();
   }
 
   /**
@@ -37,6 +41,10 @@ export class NavigationManager {
 
     // Set up click delegation with debounce
     this.root.addEventListener('click', debounce(this.handleBodyClick, 250));
+
+  // Set up hover delegation for rail submenu previews
+  this.root.addEventListener('mouseover', this.handleHoverIn);
+  this.root.addEventListener('mouseout', this.handleHoverOut);
 
     // Subscribe to route changes
     this.routeUnsubscribe = onRouteChange(this.handleRouteChange);
@@ -53,6 +61,8 @@ export class NavigationManager {
     // Remove event listeners
     if (this.root) {
       this.root.removeEventListener('click', this.handleBodyClick);
+      this.root.removeEventListener('mouseover', this.handleHoverIn);
+      this.root.removeEventListener('mouseout', this.handleHoverOut);
     }
 
     // Unsubscribe from route changes
@@ -62,6 +72,137 @@ export class NavigationManager {
     }
 
     this.initialized = false;
+  }
+
+  /**
+   * Handle hover-in to preview submenus on design rail items
+   * @private
+   */
+  handleHoverIn(e) {
+    const rail = document.getElementById(this.options.navigationRailId);
+    if (!rail) return;
+    if (!rail.contains(e.target)) return; // only when hovering the rail
+
+    // If hovering inside a submenu, keep it open (cancel hide timer)
+    const submenuEl = e.target.closest('nav.rail-submenu');
+    if (submenuEl) {
+      const id = submenuEl.id;
+      const areaFromId = {
+        'foundations-submenu': 'foundations',
+        'styles-submenu': 'styles',
+        'components-submenu': 'components',
+        'patterns-submenu': 'patterns'
+      }[id];
+      if (areaFromId) {
+        const t = this.previewTimers.get(areaFromId);
+        if (t) {
+          clearTimeout(t);
+          this.previewTimers.delete(areaFromId);
+        }
+        // Ensure it stays visible as a preview
+        this.showSubmenuPreview(areaFromId);
+        return;
+      }
+    }
+
+    const link = e.target.closest('li > a[data-ui]');
+    if (!link) return;
+
+    const area = link.getAttribute('data-ui');
+    const submenuMap = { foundations: 'foundations-submenu', styles: 'styles-submenu', components: 'components-submenu', patterns: 'patterns-submenu' };
+    if (!submenuMap[area]) return; // no submenu for this item
+
+    const route = getCurrentRoute();
+    if (route.mode !== 'design') return; // only show previews in design mode
+
+    // Cancel any pending hide timer for this area
+    const t = this.previewTimers.get(area);
+    if (t) {
+      clearTimeout(t);
+      this.previewTimers.delete(area);
+    }
+
+    if (this.currentPreviewArea && this.currentPreviewArea !== area) {
+      this.hideSubmenuPreview(this.currentPreviewArea);
+    }
+    this.showSubmenuPreview(area);
+  }
+
+  /**
+   * Handle hover-out to hide submenu previews when leaving the rail item
+   * @private
+   */
+  handleHoverOut(e) {
+    const rail = document.getElementById(this.options.navigationRailId);
+    if (!rail) return;
+    const containerLi = e.target.closest('#' + this.options.navigationRailId + ' li');
+    if (!containerLi) return;
+
+    // If moving to an element still inside the same LI (including submenu), ignore
+    if (e.relatedTarget && containerLi.contains(e.relatedTarget)) return;
+
+    // Determine area for this li (first a[data-ui])
+    const link = containerLi.querySelector('a[data-ui]');
+    if (!link) return;
+    const area = link.getAttribute('data-ui');
+    const submenuMap = { foundations: 'foundations-submenu', styles: 'styles-submenu', components: 'components-submenu', patterns: 'patterns-submenu' };
+    if (!submenuMap[area]) return;
+
+    // Schedule a slight delay before hiding to avoid flicker when moving into submenu
+    const timer = setTimeout(() => {
+      this.hideSubmenuPreview(area);
+      this.previewTimers.delete(area);
+    }, 350);
+    this.previewTimers.set(area, timer);
+  }
+
+  /** Show submenu as a non-persistent preview */
+  showSubmenuPreview(area) {
+    const submenuMap = { foundations: 'foundations-submenu', styles: 'styles-submenu', components: 'components-submenu', patterns: 'patterns-submenu' };
+    const id = submenuMap[area];
+    const submenu = document.getElementById(id);
+    if (!submenu) return;
+    // Ensure only one submenu carries the preview class at a time
+    Object.values(submenuMap).forEach((sid) => {
+      const el = document.getElementById(sid);
+      if (!el) return;
+      el.classList.remove('preview');
+    });
+
+    submenu.classList.remove('hidden');
+    submenu.classList.add('preview');
+    try { document.body.classList.add('submenu-preview-open'); } catch (_e) {}
+    this.currentPreviewArea = area;
+  }
+
+  /** Hide submenu preview unless it's the persistent (route) submenu */
+  hideSubmenuPreview(area) {
+    const route = getCurrentRoute();
+    if (route.mode === 'design' && route.appArea === area) {
+      // persistent submenu for current route; don't hide
+      return;
+    }
+    const submenuMap = { foundations: 'foundations-submenu', styles: 'styles-submenu', components: 'components-submenu', patterns: 'patterns-submenu' };
+    const id = submenuMap[area];
+    const submenu = document.getElementById(id);
+    if (submenu) {
+      submenu.classList.remove('preview');
+      submenu.classList.add('hidden');
+    }
+
+    // If no route submenu is active, remove layout class
+    const persistentId = submenuMap[route.appArea];
+    const persistentSubmenu = persistentId ? document.getElementById(persistentId) : null;
+    const anyVisible = persistentSubmenu && !persistentSubmenu.classList.contains('hidden');
+    const contentArea = document.getElementById(this.options.contentAreaId);
+    // Do not alter layout for previews; only remove layout class if no persistent submenu is visible
+    if (contentArea && !anyVisible) contentArea.classList.remove('submenu-open');
+
+    if (this.currentPreviewArea === area) this.currentPreviewArea = null;
+    // If no preview remains, remove preview-open flag
+    if (!this.currentPreviewArea) {
+      try { document.body.classList.remove('submenu-preview-open'); } catch (_e) {}
+    }
   }
 
   /**
@@ -310,8 +451,15 @@ export class NavigationManager {
     // Hide all submenus
     Object.values(submenuMap).forEach((id) => {
       const submenu = document.getElementById(id);
-      if (submenu) submenu.classList.add('hidden');
+      if (submenu) {
+        submenu.classList.add('hidden');
+        submenu.classList.remove('preview'); // clear any lingering preview state
+      }
     });
+
+    // Clear global preview state
+    this.currentPreviewArea = null;
+    try { document.body.classList.remove('submenu-preview-open'); } catch (_e) {}
 
     // Show active submenu
     const activeSubmenuId = submenuMap[area];

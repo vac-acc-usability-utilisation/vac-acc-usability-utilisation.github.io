@@ -64,6 +64,10 @@ body :is(:hover, :focus)::-webkit-scrollbar-thumb {
   border-radius: 1rem;
 }
 
+h1:focus {
+  outline: none;
+}
+
 *
   + :is(
     address,
