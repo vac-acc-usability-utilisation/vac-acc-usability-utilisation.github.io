@@ -1,7 +1,15 @@
+import { fetchWithCache, debounce } from './utils/fetchWithCache.js';
+
 export async function initSearch() {
-    // Load the index data
-    const response = await fetch('src/lunr/en.json');
-    const documents = await response.json();
+    // Load the index data (cached)
+    let documentsText;
+    try {
+        documentsText = await fetchWithCache('src/lunr/en.json');
+    } catch (err) {
+        console.error('Could not load search index', err);
+        return;
+    }
+    const documents = JSON.parse(documentsText);
 
     // Build the Lunr index
     const idx = lunr(function () {
@@ -17,19 +25,22 @@ export async function initSearch() {
     // Wire up the search input
     const searchInput = document.getElementById('search');
     const resultsDiv = document.querySelector('.search-results');
+    if (!searchInput || !resultsDiv) return;
 
-    searchInput.addEventListener('input', function (e) {
-        const query = e.target.value.trim();
-        if (!query) {
+    const doSearch = (query) => {
+        const q = query.trim();
+        if (!q) {
             resultsDiv.innerHTML = '<h2 class="font-body">Recent searches</h2>';
             return;
         }
-        const results = idx.search(query);
+        let results = [];
+        try { results = idx.search(q); } catch (e) { results = []; }
+
         if (results.length === 0) {
-            resultsDiv.innerHTML = `<p>No results found for “${query}”.</p>`;
+            resultsDiv.innerHTML = `<p>No results found for “${q}”.</p>`;
             return;
         }
-        resultsDiv.innerHTML = `<div class="search-summary bottom-margin">Showing ${results.length} result${results.length !== 1 ? 's' : ''} for “${query}”</div>` +
+        resultsDiv.innerHTML = `<div class="search-summary bottom-margin">Showing ${results.length} result${results.length !== 1 ? 's' : ''} for “${q}”</div>` +
             results.map(r => {
                 const doc = documents.find(d => d.id === r.ref);
                 return `<div class="search-result grid">
@@ -39,8 +50,10 @@ export async function initSearch() {
                     <p>${doc.body}</p>
                     </article>
                     </a>
-                    
                 </div>`;
             }).join('');
-    });
+    };
+
+    // debounce input handler
+    searchInput.addEventListener('input', debounce((e) => doSearch(e.target.value), 240));
 }

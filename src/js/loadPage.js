@@ -2,6 +2,8 @@ import { initSearch } from "./search.js";
 import { updateActiveRailItem, handleNavigationMenu, handleClientMenu, updateSubmenus } from "./nav.js";
 import { setupToolsPanel } from './toolsPanel.js';
 import { initSelectSearchable } from './select-searchable.js';
+import { fetchWithCache } from './utils/fetchWithCache.js';
+
 //import { getCurrentMode } from "./router.js";
 
 export function loadPage(segments) {
@@ -23,15 +25,11 @@ export function loadPage(segments) {
 
     console.log('Fetching path:', path);
 
-    fetch(path)
-        .then(response => {
-            if (!response.ok) throw new Error('Page not found');
-            return response.text();
-        })
+    fetchWithCache(path)
         .then(html => {
+            // fetchWithCache resolves text so we get html here
             pageContainer.innerHTML = html;
 
-            
             // Scroll to top
             setTimeout(() => window.scrollTo(0, 0), 0);
 
@@ -75,10 +73,8 @@ export function loadPage(segments) {
             return;
         })
         .catch((err) => {
-            //console.error(err);
+            console.warn('loadPage error', err);
             pageContainer.innerHTML = '<h1>404</h1><p>The page "' + segments.slice(0, 4).join('/') + '" could not be found.</p>';
-            //const mode = getCurrentMode();
-            //window.location.hash = 'csa/' + mode + '/404';
             updateActiveRailItem(404);
             document.getElementById('progress-indicator').hidden = true; // Hide after load
         });
@@ -102,22 +98,17 @@ function updateActiveTab(currentTab) {
  * Loads an HTML template into the filtersPanel.
  * @param {string} templatePath - Path to the HTML template file.
  */
-function loadFiltersPanelTemplate(templatePath, afterLoadCallback) {
+async function loadFiltersPanelTemplate(templatePath, afterLoadCallback) {
     const filtersPanel = document.getElementById("filtersPanel");
     if (!filtersPanel) return;
 
-    fetch(templatePath)
-        .then(response => {
-            if (!response.ok) throw new Error('Template not found');
-            return response.text();
-        })
-        .then(html => {
-            filtersPanel.innerHTML = html;
-            if (typeof afterLoadCallback === "function") afterLoadCallback();
-        })
-        .catch(() => {
-            filtersPanel.innerHTML = '<p>Could not load filters.</p>';
-        });
+    try {
+        const html = await fetchWithCache(templatePath);
+        filtersPanel.innerHTML = html;
+        if (typeof afterLoadCallback === "function") afterLoadCallback();
+    } catch (err) {
+        filtersPanel.innerHTML = '<p>Could not load filters.</p>';
+    }
 }
 
 function toggleFiltersPanel(segments) {
