@@ -4,7 +4,7 @@ import { debounce, fetchTemplate } from './utils.js';
 /**
  * Manages navigation UI and interactions
  */
-export class Navigation {
+export class NavigationManager {
   constructor(options = {}) {
     this.options = {
       navigationRailId: 'navigationRail',

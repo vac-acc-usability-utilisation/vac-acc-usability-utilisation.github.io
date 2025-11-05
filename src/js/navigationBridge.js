@@ -1,4 +1,4 @@
-import { Navigation } from './Navigation.js';
+import { NavigationManager } from './Navigation.js';
 
 // Singleton instance
 let navigationInstance = null;
@@ -9,7 +9,7 @@ let navigationInstance = null;
  */
 export function initNavigation(root = document.body) {
   if (!navigationInstance) {
-    navigationInstance = new Navigation();
+    navigationInstance = new NavigationManager();
     navigationInstance.init(root);
   }
   return navigationInstance;

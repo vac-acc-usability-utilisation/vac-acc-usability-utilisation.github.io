@@ -33,22 +33,22 @@ Goal: Improve readability, modularity and performance with low-risk incremental 
 ~~Acceptance: easier to test path logic; no behavioral change.~~
 
 ## Phase 4 — Navigation module cleanup (1–2 days)
-- Convert nav.js into a small component with explicit lifecycle:
-  - initNavigation(root)
-  - destroyNavigation()
-  - updateActiveRailItem(area)
-- Replace imperative body-delegation with scoped delegation on nav root.
-- Improve guard clauses and reduce long monolithic functions into small helpers.
-Acceptance: nav can be initialized/unmounted; behaviors unchanged.
+- ~~Convert nav.js into a small component with explicit lifecycle:~~
+  - ~~initNavigation(root)~~
+  - ~~destroyNavigation()~~
+  - ~~updateActiveRailItem(area)~~
+- ~~Replace imperative body-delegation with scoped delegation on nav root.~~
+- ~~Improve guard clauses and reduce long monolithic functions into small helpers.~~
+~~Acceptance: nav can be initialized/unmounted; behaviors unchanged.~~
 
 ## Phase 5 — Componentize small features (1.5–2 days)
-- Create small modules (each with init(root) and destroy()):
-  - toolsPanel.js (already modular — ensure lifecycle)
-  - selectSearchable.js (export init(root) — already present)
-  - search.js (init only when search page loaded, with debounce)
-  - language.js (export init and updateTranslations)
-- Ensure these modules are only initialized for the injected page area.
-Acceptance: avoid duplicate event listeners leaking across navigation.
+- ~~Create small modules (each with init(root) and destroy()):~~
+  - ~~toolsPanel.js (already modular — ensure lifecycle)~~
+  - ~~selectSearchable.js (export init(root) — already present)~~
+  - ~~search.js (init only when search page loaded, with debounce)~~
+  - ~~language.js (export init and updateTranslations)~~
+- ~~Ensure these modules are only initialized for the injected page area.~~
+~~Acceptance: avoid duplicate event listeners leaking across navigation.~~
 
 ## Phase 6 — Tests and CI (1–2 days)
 - Add unit tests for:

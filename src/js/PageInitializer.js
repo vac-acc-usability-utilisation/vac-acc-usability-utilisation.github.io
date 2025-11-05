@@ -1,17 +1,21 @@
-import { initSearch } from './search.js';
+import { initSearch, destroySearch } from './search.js';
 import {
   updateActiveRailItem,
   handleNavigationMenu,
   handleClientMenu,
   updateSubmenus,
 } from './navigationBridge.js';
-import { setupToolsPanel } from './toolsPanel.js';
-import { initSelectSearchable } from './select-searchable.js';
+import { initToolsPanel, destroyToolsPanel } from './toolsPanel.js';
+import { initSelectSearchable, destroySelectSearchable } from './select-searchable.js';
 
 /**
  * Handles all page initialization tasks after template loading
  */
 export class PageInitializer {
+  constructor() {
+    this.toolsPanelInstance = null;
+    this.initialized = false;
+  }
   /**
    * Initialize navigation-related UI elements
    * @param {string[]} segments Route segments for navigation state
@@ -46,19 +50,27 @@ export class PageInitializer {
    * Initialize tools panels and related functionality
    */
   initTools() {
-    setupToolsPanel('#add-identifier-btn', 'src/templates/csa/demo/forms/add-identifier.html');
-    setupToolsPanel('.id-edit-btn', 'src/templates/csa/demo/forms/edit-identifier.html');
-    setupToolsPanel('.id-info-btn', 'src/templates/csa/demo/forms/info-identifier.html');
+    const pageContainer = document.getElementById('page');
+    if (!pageContainer) return;
+
+    // Initialize tools panel with scoped root
+    this.toolsPanelInstance = initToolsPanel(pageContainer);
+
+    // Set up specific buttons
+    this.toolsPanelInstance.setupButton('#add-identifier-btn', 'src/templates/csa/demo/forms/add-identifier.html');
+    this.toolsPanelInstance.setupButton('.id-edit-btn', 'src/templates/csa/demo/forms/edit-identifier.html');
+    this.toolsPanelInstance.setupButton('.id-info-btn', 'src/templates/csa/demo/forms/info-identifier.html');
   }
 
   /**
    * Initialize search functionality if needed
    * @param {string[]} segments Route segments to check search state
    */
-  initSearch(segments) {
+  async initSearch(segments) {
     if (segments.includes('search')) {
       try {
-        initSearch();
+        const pageContainer = document.getElementById('page');
+        await initSearch(pageContainer);
       } catch (e) {
         console.warn('initSearch failed', e);
       }
@@ -95,10 +107,34 @@ export class PageInitializer {
   }
 
   /**
+   * Clean up all initialized components
+   */
+  destroy() {
+    // Destroy tools panel
+    if (this.toolsPanelInstance) {
+      destroyToolsPanel();
+      this.toolsPanelInstance = null;
+    }
+
+    // Destroy select searchable
+    destroySelectSearchable();
+
+    // Destroy search (if initialized)
+    destroySearch();
+
+    this.initialized = false;
+  }
+
+  /**
    * Run all initialization tasks in the correct order
    * @param {string[]} segments Route segments for initialization context
    */
   async init(segments) {
+    // Clean up previous initialization
+    if (this.initialized) {
+      this.destroy();
+    }
+
     // Initialize navigation first (most visible)
     this.initNavigation(segments);
 
@@ -113,6 +149,8 @@ export class PageInitializer {
     this.initTabs(pageTab);
 
     // Initialize search last (potentially heavy operation)
-    this.initSearch(segments);
+    await this.initSearch(segments);
+
+    this.initialized = true;
   }
 }

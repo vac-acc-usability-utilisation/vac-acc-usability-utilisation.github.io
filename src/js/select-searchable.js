@@ -1,42 +1,131 @@
-// Minimal select-searchable behaviour
-// Exports initSelectSearchable(root) which wires simple show/hide toggle
-export function initSelectSearchable(root = document) {
-  if (!root) return;
+/**
+ * Manages select-searchable dropdown components
+ */
+class SelectSearchable {
+  constructor() {
+    this.root = null;
+    this.handlers = new WeakMap(); // Store handlers per element
+    this.documentClickHandler = null;
+    this.initialized = false;
+  }
 
-  // Helper to close all within root
-  function closeAll() {
-    root.querySelectorAll('.select-searchable.open').forEach(function (w) {
-      w.classList.remove('open');
-      var c = w.querySelector('.select-content');
-      if (c) c.style.display = 'none';
+  /**
+   * Initialize select-searchable components within a root element
+   * @param {HTMLElement} root - Root element to search for components
+   */
+  init(root = document.body) {
+    if (!root) return;
+    
+    this.root = root;
+
+    // Initialize each component
+    root.querySelectorAll('.select-searchable').forEach((wrapper) => {
+      this.initComponent(wrapper);
+    });
+
+    // Set up document-level click handler (only once)
+    if (!this.initialized) {
+      this.documentClickHandler = () => this.closeAll();
+      document.addEventListener('click', this.documentClickHandler);
+      this.initialized = true;
+    }
+  }
+
+  /**
+   * Initialize a single select-searchable component
+   * @private
+   */
+  initComponent(wrapper) {
+    const btn = wrapper.querySelector('.select-searchable-btn');
+    const content = wrapper.querySelector('.select-content');
+    if (!btn || !content) return;
+
+    // Skip if already initialized
+    if (this.handlers.has(btn)) return;
+
+    // Ensure initial visibility matches state
+    if (!wrapper.classList.contains('open')) {
+      content.style.display = 'none';
+    }
+
+    // Create handlers
+    const btnHandler = (e) => {
+      e.stopPropagation();
+      const isOpen = wrapper.classList.toggle('open');
+      content.style.display = isOpen ? '' : 'none';
+      btn.setAttribute('aria-expanded', String(isOpen));
+    };
+
+    const contentHandler = (e) => {
+      e.stopPropagation();
+    };
+
+    // Store handlers for cleanup
+    this.handlers.set(btn, { btnHandler, contentHandler, content });
+
+    // Attach listeners
+    btn.addEventListener('click', btnHandler);
+    content.addEventListener('click', contentHandler);
+  }
+
+  /**
+   * Close all open select-searchable components
+   * @private
+   */
+  closeAll() {
+    if (!this.root) return;
+    
+    this.root.querySelectorAll('.select-searchable.open').forEach((wrapper) => {
+      wrapper.classList.remove('open');
+      const content = wrapper.querySelector('.select-content');
+      if (content) content.style.display = 'none';
     });
   }
 
-  // Initialize each component within root
-  root.querySelectorAll('.select-searchable').forEach(function (wrapper) {
-    var btn = wrapper.querySelector('.select-searchable-btn');
-    var content = wrapper.querySelector('.select-content');
-    if (!btn || !content) return;
-
-    // Ensure initial visibility matches state
-    if (!wrapper.classList.contains('open')) content.style.display = 'none';
-
-    // clicking the button toggles show/hide
-    btn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      var isOpen = wrapper.classList.toggle('open');
-      content.style.display = isOpen ? '' : 'none';
-      btn.setAttribute('aria-expanded', String(Boolean(isOpen)));
+  /**
+   * Clean up all event listeners
+   */
+  destroy() {
+    // Remove element-specific listeners
+    this.handlers.forEach((handlers, btn) => {
+      btn.removeEventListener('click', handlers.btnHandler);
+      if (handlers.content) {
+        handlers.content.removeEventListener('click', handlers.contentHandler);
+      }
     });
+    this.handlers = new WeakMap();
 
-    // clicking inside dropdown shouldn't close it
-    content.addEventListener('click', function (e) {
-      e.stopPropagation();
-    });
-  });
+    // Remove document listener
+    if (this.documentClickHandler) {
+      document.removeEventListener('click', this.documentClickHandler);
+      this.documentClickHandler = null;
+    }
 
-  // clicking outside closes any open dropdowns inside root
-  document.addEventListener('click', function () {
-    closeAll();
-  });
+    this.root = null;
+    this.initialized = false;
+  }
+}
+
+// Singleton instance
+let selectSearchableInstance = null;
+
+/**
+ * Initialize select-searchable components (backward compatible API)
+ * @param {HTMLElement} root - Root element to search for components
+ */
+export function initSelectSearchable(root = document.body) {
+  if (!selectSearchableInstance) {
+    selectSearchableInstance = new SelectSearchable();
+  }
+  selectSearchableInstance.init(root);
+}
+
+/**
+ * Destroy select-searchable instance
+ */
+export function destroySelectSearchable() {
+  if (selectSearchableInstance) {
+    selectSearchableInstance.destroy();
+    selectSearchableInstance = null;
+  }
 }
