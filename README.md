@@ -73,9 +73,3 @@ Acceptance: measurable navigation responsiveness and improved AX.
 - Risk: event listener duplication → mitigate by lifecycle destroy() and scoping.
 - Risk: cache stale templates → implement cache invalidation (timestamp or dev mode bypass).
 - Risk: regressions → small PRs + unit tests + manual smoke test.
-
-## Recommended first tasks (quick wins)
-1. Add fetchWithCache + debounce.
-2. Replace repeated fetch calls with fetchWithCache.
-3. Add route parser unit tests.
-These three quickly improve performance, readability and testability.

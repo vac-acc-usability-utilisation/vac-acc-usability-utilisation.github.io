@@ -1,7 +1,7 @@
 //let currentLang = 'en';
 
 import { handleRouting, getCurrentMode, getCurrentProduct } from './router.js';
-import { initNavigation } from './nav.js';
+import { initNavigation } from './navigationBridge.js';
 import { initI18n, initLanguageToggle } from './language.js';
 import { fetchTemplate } from './utils.js';
 

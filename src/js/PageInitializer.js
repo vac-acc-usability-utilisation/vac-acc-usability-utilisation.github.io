@@ -4,7 +4,7 @@ import {
   handleNavigationMenu,
   handleClientMenu,
   updateSubmenus,
-} from './nav.js';
+} from './navigationBridge.js';
 import { setupToolsPanel } from './toolsPanel.js';
 import { initSelectSearchable } from './select-searchable.js';
 
