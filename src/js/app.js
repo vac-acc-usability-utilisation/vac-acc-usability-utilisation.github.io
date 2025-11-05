@@ -3,19 +3,15 @@
 import { handleRouting, getCurrentMode, getCurrentProduct } from './router.js';
 import { initNavigation } from './navigationBridge.js';
 import { initI18n, initLanguageToggle } from './language.js';
-import { fetchTemplate, enablePerformanceLogging, clearAllCaches } from './utils.js';
+import { fetchTemplate, enablePerformanceLogging, clearAllCaches, isPerformanceLoggingEnabled } from './utils.js';
 
 // On DOM ready, initialize navigation and language features
 window.addEventListener('DOMContentLoaded', () => {
   console.log('VAC   .\\^/.   ACC\nACC  \\=%¥%=/  VAC\nVAC   ^`|`^   ACC');
   console.log('App initialized');
 
-  // Dev-only perf logging toggle via ?perf=1
-  try {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('perf') === '1') enablePerformanceLogging();
-    if (params.get('clearCache') === '1') clearAllCaches();
-  } catch (_e) {}
+  // Handle URL query params (separate from hash routing)
+  handleQueryParams();
 
   updateNavigation();
 
@@ -23,6 +19,42 @@ window.addEventListener('DOMContentLoaded', () => {
   initI18n();
   initLanguageToggle();
 });
+
+/**
+ * Parse and handle URL query parameters (e.g., ?perf=1&clearCache=1)
+ * These work independently of the hash-based routing.
+ */
+function handleQueryParams() {
+  try {
+    const params = new URLSearchParams(window.location.search);
+
+    // Performance logging toggle
+    if (params.has('perf')) {
+      const perfValue = params.get('perf');
+      if (perfValue === '1') {
+        enablePerformanceLogging();
+        console.log('⏱️ Performance logging enabled via ?perf=1');
+      }
+    }
+
+    // Cache clearing
+    if (params.has('clearCache') && params.get('clearCache') === '1') {
+      clearAllCaches();
+      console.log('🗑️ All caches cleared via ?clearCache=1');
+    }
+
+    // Check localStorage for persistent perf flag (fallback)
+    if (!params.has('perf') && !isPerformanceLoggingEnabled()) {
+      const storedFlag = localStorage.getItem('perfLog');
+      if (storedFlag === '1') {
+        enablePerformanceLogging();
+        console.log('⏱️ Performance logging enabled via localStorage');
+      }
+    }
+  } catch (_e) {
+    // Silently fail if URLSearchParams or localStorage not available
+  }
+}
 
 // Reload navigation and routing when the URL hash changes
 window.addEventListener('hashchange', () => {

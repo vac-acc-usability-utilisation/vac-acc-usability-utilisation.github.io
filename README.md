@@ -13,9 +13,10 @@ This is a mostly-static documentation/demo site. Active source lives under `src/
 
 Lightweight timing is available and opt-in:
 
-- Enable via URL: add `?perf=1` to the page URL
+- Enable via URL: add `?perf=1` before the hash, e.g., `index.html?perf=1#csa/design/home`
 - Or in devtools console: `localStorage.setItem('perfLog','1')` and refresh
 - Disable: remove the flag `localStorage.removeItem('perfLog')`
+- Clear caches: add `?clearCache=1` to the URL
 
 When enabled, timing for template loading and page initialization phases will be logged to the console with ⏱️ markers.
 
