@@ -124,7 +124,12 @@ async function loadNavigation(product, mode) {
   if (!navigationMenu) return;
 
   try {
-    const html = await fetchTemplate('src/templates/csa/demo/navigation-menu.html', {
+    // Load mode-specific navigation menu (design vs demo)
+    const menuTemplate = mode === 'design'
+      ? 'src/templates/csa/design/navigation-menu.html'
+      : 'src/templates/csa/demo/navigation-menu.html';
+
+    const html = await fetchTemplate(menuTemplate, {
       fallbackHtml: '<div class="nav-menu-placeholder">Menu unavailable</div>',
     });
     navigationMenu.innerHTML = html;
