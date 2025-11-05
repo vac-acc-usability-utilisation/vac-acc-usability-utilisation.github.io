@@ -125,3 +125,35 @@ export function clearAllCaches() {
     // ignore
   }
 }
+
+// -----------------------------
+// Performance logging utilities
+// -----------------------------
+
+const PERF_FLAG_KEY = 'perfLog';
+
+export function enablePerformanceLogging() {
+  try { localStorage.setItem(PERF_FLAG_KEY, '1'); } catch (_e) {}
+}
+
+export function disablePerformanceLogging() {
+  try { localStorage.removeItem(PERF_FLAG_KEY); } catch (_e) {}
+}
+
+export function isPerformanceLoggingEnabled() {
+  try { return localStorage.getItem(PERF_FLAG_KEY) === '1'; } catch (_e) { return false; }
+}
+
+export function perfStart(label) {
+  return { label, t0: (typeof performance !== 'undefined' ? performance.now() : Date.now()) };
+}
+
+export function perfEnd(mark, extra = {}) {
+  const t1 = (typeof performance !== 'undefined' ? performance.now() : Date.now());
+  const ms = (t1 - mark.t0).toFixed(1);
+  if (isPerformanceLoggingEnabled()) {
+    // eslint-disable-next-line no-console
+    console.info(`⏱️ ${mark.label}: ${ms}ms`, extra);
+  }
+  return Number(ms);
+}

@@ -1,5 +1,5 @@
 import { initSelectSearchable } from './select-searchable.js';
-import { debounce, fetchTemplate } from './utils.js';
+import { debounce, fetchTemplate, perfStart, perfEnd } from './utils.js';
 
 /**
  * Manages tools panel interactions
@@ -65,6 +65,7 @@ class ToolsPanel {
    * @private
    */
   async loadContent(content) {
+    const totalMark = perfStart('ToolsPanel.loadContent');
     const panel = document.getElementById(this.panelId);
     if (!panel) return;
 
@@ -79,9 +80,11 @@ class ToolsPanel {
     if (typeof content === 'function') {
       panel.innerHTML = await content();
     } else if (typeof content === 'string' && content.endsWith('.html')) {
+      const fetchMark = perfStart(`ToolsPanel.fetch: ${content}`);
       const html = await fetchTemplate(content, {
         fallbackHtml: '<p>Could not load tools panel content.</p>'
       });
+      perfEnd(fetchMark);
       panel.innerHTML = html;
     } else {
       panel.innerHTML = content;
@@ -112,6 +115,8 @@ class ToolsPanel {
       };
       document.addEventListener('keydown', this.escapeHandler);
     }
+
+    perfEnd(totalMark);
   }
 
   /** Close the tools panel and restore focus */

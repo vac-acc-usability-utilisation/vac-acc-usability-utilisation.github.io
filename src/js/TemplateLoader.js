@@ -1,4 +1,4 @@
-import { fetchTemplate } from './utils.js';
+import { fetchTemplate, perfStart, perfEnd } from './utils.js';
 
 /**
  * Handles template loading, rendering, and associated state management
@@ -40,32 +40,38 @@ export class TemplateLoader {
     if (!this.container) return false;
     
     this._setLoading(true);
+    const totalMark = perfStart(`TemplateLoader.total: ${path}`);
+    const fetchMark = perfStart(`TemplateLoader.fetch: ${path}`);
     
     try {
       const html = await fetchTemplate(path, { throwOnError });
+      perfEnd(fetchMark);
       this.container.innerHTML = html;
 
       // Scroll to top after render
       setTimeout(() => window.scrollTo(0, 0), 0);
 
-      // Accessibility: move focus to main container or first heading
+      // Accessibility: move focus to role="main" if present, else first heading, else container
       try {
-        const previousTabIndex = this.container.getAttribute('tabindex');
-        this.container.setAttribute('tabindex', '-1');
-        this.container.focus({ preventScroll: true });
-        // Prefer focusing first h1/h2 if available for screen readers
-        const firstHeading = this.container.querySelector('h1, h2');
-        if (firstHeading) firstHeading.setAttribute('tabindex', '-1'), firstHeading.focus({ preventScroll: true });
-        // Clean up tabindex if it didn't exist before
+        const mainRegion = this.container.matches('[role="main"]')
+          ? this.container
+          : this.container.querySelector('[role="main"]');
+
+        const focusTarget = mainRegion || this.container.querySelector('h1, h2') || this.container;
+
+        const previousTabIndex = focusTarget.getAttribute('tabindex');
+        focusTarget.setAttribute('tabindex', '-1');
+        focusTarget.focus({ preventScroll: true });
         if (previousTabIndex === null) {
-          this.container.addEventListener('blur', () => {
-            this.container.removeAttribute('tabindex');
+          focusTarget.addEventListener('blur', () => {
+            focusTarget.removeAttribute('tabindex');
           }, { once: true });
         }
       } catch (_e) {
         // best-effort only
       }
 
+      perfEnd(totalMark);
       return true;
     } catch (err) {
       console.warn('Template loading error:', err);

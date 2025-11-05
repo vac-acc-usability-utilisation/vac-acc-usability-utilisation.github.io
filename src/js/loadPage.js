@@ -1,6 +1,7 @@
 import { TemplateLoader } from './TemplateLoader.js';
 import { PageInitializer } from './PageInitializer.js';
 import { FiltersPanel } from './FiltersPanel.js';
+import { perfStart, perfEnd } from './utils.js';
 
 /**
  * Resolves route segments into a template path.
@@ -37,9 +38,12 @@ export async function loadPage(segments) {
 
   let success;
   let error;
+  const totalMark = perfStart('loadPage.total');
   
   try {
+    const resolveMark = perfStart('loadPage.resolvePath');
     const path = resolvePath(segments);
+    perfEnd(resolveMark);
     console.log('Fetching path:', path);
 
     // 1. Load template first
@@ -50,28 +54,25 @@ export async function loadPage(segments) {
     }
 
     // 2. Update filters panel (important for layout)
+    const filtersMark = perfStart('loadPage.filters');
     const filtersPanel = new FiltersPanel();
     await filtersPanel.update(segments);
+    perfEnd(filtersMark);
 
     // 3. Initialize all page components
+    const initMark = perfStart('loadPage.init');
     const initializer = new PageInitializer();
     await initializer.init(segments);
+    perfEnd(initMark);
 
   } catch (e) {
     error = e;
     console.warn('loadPage error:', e);
 
-    try {
-      // Handle 404 gracefully
-      if (!success) {
-        // Only update rail item if template failed to load
-        await updateActiveRailItem(404);
-      }
-    } catch (navError) {
-      /* ignore navigation errors on 404 */
-    }
+    // Graceful 404 is handled by TemplateLoader; no-op here
   }
 
+  perfEnd(totalMark);
   return {
     success: Boolean(success),
     error: error?.message

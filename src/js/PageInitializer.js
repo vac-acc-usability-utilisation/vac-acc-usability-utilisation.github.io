@@ -1,4 +1,5 @@
 import { initSearch, destroySearch } from './search.js';
+import { perfStart, perfEnd } from './utils.js';
 import {
   updateActiveRailItem,
   handleNavigationMenu,
@@ -135,22 +136,35 @@ export class PageInitializer {
       this.destroy();
     }
 
+    const markTotal = perfStart('PageInitializer.total');
+
     // Initialize navigation first (most visible)
+    const markNav = perfStart('PageInitializer.navigation');
     this.initNavigation(segments);
+    perfEnd(markNav);
 
     // Initialize tools (may depend on navigation)
+    const markTools = perfStart('PageInitializer.tools');
     this.initTools();
+    perfEnd(markTools);
 
     // Initialize UI components
+    const markSelect = perfStart('PageInitializer.select');
     this.initSelectBehavior();
+    perfEnd(markSelect);
 
     // Initialize tabs (needs page content ready)
     const pageTab = segments[4] || 'overview'; // fallback to default tab
+    const markTabs = perfStart('PageInitializer.tabs');
     this.initTabs(pageTab);
+    perfEnd(markTabs);
 
     // Initialize search last (potentially heavy operation)
+    const markSearch = perfStart('PageInitializer.search');
     await this.initSearch(segments);
+    perfEnd(markSearch);
 
     this.initialized = true;
+    perfEnd(markTotal);
   }
 }

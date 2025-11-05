@@ -1,11 +1,8 @@
-import { chromium } from 'playwright';
-import { fileURLToPath } from 'url';
-import { dirname, resolve } from 'path';
-import { createServer } from 'http';
-import { readFileSync } from 'fs';
+const { chromium } = require('playwright');
+const { resolve } = require('path');
+const { createServer } = require('http');
+const { readFileSync } = require('fs');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 const rootDir = resolve(__dirname, '../../..');
 
 // Simple static file server
@@ -32,10 +29,10 @@ function createTestServer(port = 3000) {
     }
   });
   
-  return new Promise((resolve) => {
+  return new Promise((resolvePromise) => {
     server.listen(port, () => {
       console.log(`Test server running at http://localhost:${port}`);
-      resolve({ server, port });
+      resolvePromise({ server, port });
     });
   });
 }
@@ -77,7 +74,8 @@ async function runTests() {
   const testFiles = [
     'src/js/tests/parser.html',
     'src/js/tests/resolvePath.html',
-    'src/js/tests/fetchWithCache.html'
+    'src/js/tests/fetchWithCache.html',
+    'src/js/tests/perfFlag.html'
   ];
   
   for (const testFile of testFiles) {

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Performance Flag Tests</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    pre { background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <h1>Performance Logging Tests</h1>
+  <p>Testing enable/disable flags and basic perfStart/perfEnd behavior.</p>
+  <h2>Results:</h2>
+  <pre id="results">Running tests...</pre>
+
+  <script type="module" src="perfFlag.test.js"></script>
+  <script>
+    // Capture console output
+    const results = document.getElementById('results');
+    const originalConsole = { log: console.log, error: console.error };
+    console.log = (...args) => { results.textContent += args.join(' ') + '\n'; originalConsole.log(...args); };
+    console.error = (...args) => { results.textContent += '🔴 ' + args.join(' ') + '\n'; originalConsole.error(...args); };
+  </script>
+</body>
+</html>

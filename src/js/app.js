@@ -3,12 +3,19 @@
 import { handleRouting, getCurrentMode, getCurrentProduct } from './router.js';
 import { initNavigation } from './navigationBridge.js';
 import { initI18n, initLanguageToggle } from './language.js';
-import { fetchTemplate } from './utils.js';
+import { fetchTemplate, enablePerformanceLogging, clearAllCaches } from './utils.js';
 
 // On DOM ready, initialize navigation and language features
 window.addEventListener('DOMContentLoaded', () => {
   console.log('VAC   .\\^/.   ACC\nACC  \\=%¥%=/  VAC\nVAC   ^`|`^   ACC');
   console.log('App initialized');
+
+  // Dev-only perf logging toggle via ?perf=1
+  try {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('perf') === '1') enablePerformanceLogging();
+    if (params.get('clearCache') === '1') clearAllCaches();
+  } catch (_e) {}
 
   updateNavigation();
 
