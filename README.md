@@ -17,20 +17,20 @@ Goal: Improve readability, modularity and performance with low-risk incremental 
 ~~Acceptance: identical UX, fewer network requests in repeated navigation.~~
 
 ## Phase 2 — Router & routing surface (1 day)
-- Extract hash parsing into a single Router module that exports:
-  - getCurrentRoute(), onRouteChange(cb), navigateTo(segments).
-- Make handleRouting use the Router module.
-- Make loadNavigation/route consumers subscribe to route changes instead of reading window.hash directly.
-Benefits: decouples hash parsing and page-loading.
-Acceptance: URL changes still load correct page; unit tests for parser.
+- ~~Extract hash parsing into a single Router module that exports:~~
+  - ~~getCurrentRoute(), onRouteChange(cb), navigateTo(segments).~~
+- ~~Make handleRouting use the Router module.~~
+- ~~Make loadNavigation/route consumers subscribe to route changes instead of reading window.hash directly.~~
+~~Benefits: decouples hash parsing and page-loading.~~
+~~Acceptance: URL changes still load correct page; unit tests for parser.~~
 
 ## Phase 3 — LoadPage: split responsibilities (1–1.5 days)
-- Refactor loadPage to:
-  - resolvePath(segments) — deterministic path resolution (unit tested).
-  - fetchAndRender(path, container) — uses fetchWithCache.
-  - postInit(segments) — runs UI initializers (selects panels, tabs).
-- Return Promise from loadPage for better sequencing.
-Acceptance: easier to test path logic; no behavioral change.
+- ~~Refactor loadPage to:~~
+  - ~~resolvePath(segments) — deterministic path resolution (unit tested).~~
+  - ~~fetchAndRender(path, container) — uses fetchWithCache.~~
+  - ~~postInit(segments) — runs UI initializers (selects panels, tabs).~~
+- ~~Return Promise from loadPage for better sequencing.~~
+~~Acceptance: easier to test path logic; no behavioral change.~~
 
 ## Phase 4 — Navigation module cleanup (1–2 days)
 - Convert nav.js into a small component with explicit lifecycle:

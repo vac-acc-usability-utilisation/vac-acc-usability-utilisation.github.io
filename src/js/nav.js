@@ -1,15 +1,39 @@
-import { getCurrentMode } from './router.js';
+import { getCurrentMode, getCurrentRoute, navigateTo, onRouteChange } from './router.js';
 import { debounce, fetchTemplate } from './utils.js';
 
 let navListenerInitialized = false;
+let routeUnsubscribe = null;
 
 /**
- * Initializes navigation event listeners (only once).
+ * Initializes navigation event listeners and route subscription.
  */
 export function initNavigation() {
   if (navListenerInitialized) return;
   navListenerInitialized = true;
+
+  // Set up click delegation
   document.body.addEventListener('click', debounce(handleBodyClick, 250));
+
+  // Subscribe to route changes
+  routeUnsubscribe = onRouteChange((route) => {
+    // Update UI when route changes
+    updateActiveRailItem(route.appArea);
+    if (route.pageTab) {
+      updateActiveTab(document.querySelector(`[data-tab="${route.pageTab}"]`));
+      updateActiveTabPage(route.pageTab);
+    }
+  });
+}
+
+/**
+ * Clean up navigation listeners
+ */
+export function destroyNavigation() {
+  if (routeUnsubscribe) {
+    routeUnsubscribe();
+    routeUnsubscribe = null;
+  }
+  navListenerInitialized = false;
 }
 
 /**
@@ -31,7 +55,7 @@ function handleNavRailClick(e) {
   const ui = target.getAttribute('data-ui');
   if (!ui) return true;
   const mode = getCurrentMode();
-  window.location.hash = `csa/${mode}/${ui}`;
+  navigateTo(['csa', mode, ui]);
   return true;
 }
 
@@ -59,13 +83,16 @@ function handleTabClick(e) {
 
   e.preventDefault();
   const tabValue = tabTarget.getAttribute('data-tab');
-  const hashSegments = getHashSegments();
+  const route = getCurrentRoute();
 
-  if (shouldUpdateHashForTab(hashSegments)) {
-    updateHashForTab(hashSegments, tabValue);
+  if (shouldUpdateHashForTab(route)) {
+    const segments = [route.product, route.mode, route.appArea];
+    if (route.areaPage) segments.push(route.areaPage);
+    segments.push(tabValue);
+    navigateTo(segments);
   }
 
-  updateActiveTab(tabTarget, tabValue);
+  updateActiveTab(tabTarget);
   updateActiveTabPage(tabValue);
 
   return true;
@@ -78,29 +105,14 @@ function getTabTarget(e) {
   return tabTarget;
 }
 
-// Helper: Parse the current hash into segments
-function getHashSegments() {
-  const hash = window.location.hash.slice(1);
-  return hash.split('/').filter(Boolean);
-}
-
 // Helper: Should we update the hash for this tab click?
-function shouldUpdateHashForTab(hashSegments) {
-  const product = hashSegments[0] || 'csa';
-  const mode = hashSegments[1] || 'design';
-  return product === 'csa' && mode === 'design';
-}
-
-// Helper: Update the hash to reflect the selected tab
-function updateHashForTab(hashSegments, tabValue) {
-  while (hashSegments.length < 4) hashSegments.push('');
-  hashSegments[4] = tabValue;
-  const newHash = hashSegments.slice(0, 5).join('/');
-  window.location.hash = newHash;
+function shouldUpdateHashForTab(route) {
+  return route.product === 'csa' && route.mode === 'design';
 }
 
 // Helper: Update the active tab styling
 function updateActiveTab(tabTarget) {
+  if (!tabTarget) return;
   const allTabs = tabTarget.parentElement.querySelectorAll('[data-tab]');
   allTabs.forEach((tab) => tab.classList.toggle('active', tab === tabTarget));
 }
@@ -151,11 +163,13 @@ export function handleNavigationMenu() {
 }
 
 // Handle client menu visibility
-export async function handleClientMenu(segments) {
+export async function handleClientMenu() {
   const navigationRail = document.getElementById('navigationRail');
   const clientMenu = document.getElementById('client-menu');
+  const route = getCurrentRoute();
+
   // Only show client menu if mode is "demo" and area is "client"
-  if (segments[1] === 'demo' && segments[2] === 'client') {
+  if (route.mode === 'demo' && route.appArea === 'client') {
     if (navigationRail) navigationRail.classList.add('hidden');
     if (!clientMenu) {
       try {
@@ -170,13 +184,13 @@ export async function handleClientMenu(segments) {
           mainContentWrapper.parentNode.insertBefore(newClientMenu, mainContentWrapper);
         }
         // Call update after menu is inserted
-        updateClientMenuActive(segments);
+        updateClientMenuActive(route);
       } catch (err) {
         console.error('Error loading client menu', err);
       }
     } else {
       // If menu already exists, just update active state
-      updateClientMenuActive(segments);
+      updateClientMenuActive(route);
     }
   } else {
     if (navigationRail) navigationRail.classList.remove('hidden');
@@ -185,12 +199,11 @@ export async function handleClientMenu(segments) {
 }
 
 // Helper function to update active class in client menu
-function updateClientMenuActive(segments) {
+function updateClientMenuActive(route) {
   const clientMenu = document.getElementById('client-menu');
   if (!clientMenu) return;
   // Build the current path for data-ui, e.g. "client/benefits"
-  let path = segments.slice(2, 4).join('/');
-  if (!segments[3]) path = 'client'; // fallback for overview
+  let path = route.areaPage ? `${route.appArea}/${route.areaPage}` : route.appArea;
 
   // Remove active from all
   clientMenu.querySelectorAll('a[data-ui]').forEach((a) => a.classList.remove('active'));
@@ -229,7 +242,10 @@ function updateClientMenuActive(segments) {
 }
 
 // Combined submenu logic
-export function updateSubmenus(area, subpage) {
+export function updateSubmenus() {
+  const route = getCurrentRoute();
+  const { appArea: area, areaPage: subpage } = route;
+
   const submenuMap = {
     foundations: 'foundations-submenu',
     styles: 'styles-submenu',
