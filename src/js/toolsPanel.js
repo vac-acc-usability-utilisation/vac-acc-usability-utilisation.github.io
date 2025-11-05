@@ -9,6 +9,8 @@ class ToolsPanel {
     this.panelId = panelId;
     this.root = null;
     this.handlers = new Map(); // Store button handlers for cleanup
+    this.escapeHandler = null;
+    this.lastTrigger = null;
     this.initialized = false;
   }
 
@@ -47,6 +49,8 @@ class ToolsPanel {
       // Create debounced handler
       const handler = debounce(async () => {
         console.log('Tools Panel button clicked:', buttonSelector);
+        // Track last trigger for focus return
+        this.lastTrigger = btn;
         await this.loadContent(content);
       }, 250);
 
@@ -66,6 +70,11 @@ class ToolsPanel {
 
     panel.classList.remove('hidden');
 
+    // Accessibility roles
+    panel.setAttribute('role', 'dialog');
+    panel.setAttribute('aria-modal', 'true');
+    panel.setAttribute('tabindex', '-1');
+
     // Load content based on type
     if (typeof content === 'function') {
       panel.innerHTML = await content();
@@ -84,6 +93,40 @@ class ToolsPanel {
     } catch (e) {
       console.warn('initSelectSearchable failed in toolsPanel', e);
     }
+
+    // Move focus into the panel after content loads
+    try {
+      // Prefer first focusable element, else panel itself
+      const focusable = panel.querySelector(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      (focusable || panel).focus({ preventScroll: true });
+    } catch (_e) {}
+
+    // Add Escape key handler to close panel
+    if (!this.escapeHandler) {
+      this.escapeHandler = (ev) => {
+        if (ev.key === 'Escape' || ev.key === 'Esc') {
+          this.closePanel();
+        }
+      };
+      document.addEventListener('keydown', this.escapeHandler);
+    }
+  }
+
+  /** Close the tools panel and restore focus */
+  closePanel() {
+    const panel = document.getElementById(this.panelId);
+    if (!panel) return;
+    panel.classList.add('hidden');
+    try {
+      panel.removeAttribute('aria-modal');
+      panel.removeAttribute('role');
+      panel.removeAttribute('tabindex');
+    } catch (_e) {}
+    if (this.lastTrigger) {
+      try { this.lastTrigger.focus({ preventScroll: true }); } catch (_e) {}
+    }
   }
 
   /**
@@ -101,6 +144,12 @@ class ToolsPanel {
     });
 
     this.handlers.clear();
+    // Remove Escape handler
+    if (this.escapeHandler) {
+      document.removeEventListener('keydown', this.escapeHandler);
+      this.escapeHandler = null;
+    }
+    this.lastTrigger = null;
     this.root = null;
     this.initialized = false;
   }

@@ -1,15 +1,54 @@
 export const fetchCache = new Map();
 
+// Prefix for sessionStorage keys used by template/data caching
+const SESSION_CACHE_PREFIX = 'app-cache:';
+
+function getSessionKey(key) {
+  return `${SESSION_CACHE_PREFIX}${key}`;
+}
+
 /**
  * Fetch a URL and cache the text result in-memory.
  * Returns text for .html/.json etc.
  */
-export async function fetchWithCache(url, options) {
-  if (fetchCache.has(url)) return fetchCache.get(url);
-  const resp = await fetch(url, options);
+export async function fetchWithCache(url, options = {}) {
+  const { cachePolicy, ...fetchOpts } = options || {};
+
+  // Determine caching strategy
+  const strategy = cachePolicy?.strategy || 'memory'; // 'memory' | 'session' | 'both'
+  const forceRefresh = Boolean(cachePolicy?.forceRefresh);
+  const cacheKey = cachePolicy?.key || url;
+
+  // sessionStorage read path
+  if (!forceRefresh && (strategy === 'session' || strategy === 'both')) {
+    try {
+      const serialized = sessionStorage.getItem(getSessionKey(cacheKey));
+      if (serialized != null) return serialized;
+    } catch (_e) {
+      // sessionStorage might be unavailable (privacy mode); ignore and continue
+    }
+  }
+
+  // in-memory read path
+  if (!forceRefresh && (strategy === 'memory' || strategy === 'both')) {
+    if (fetchCache.has(cacheKey)) return fetchCache.get(cacheKey);
+  }
+
+  const resp = await fetch(url, fetchOpts);
   if (!resp.ok) throw new Error(`Failed to fetch ${url}: ${resp.status}`);
   const text = await resp.text();
-  fetchCache.set(url, text);
+
+  // write-through caching
+  if (strategy === 'memory' || strategy === 'both') {
+    fetchCache.set(cacheKey, text);
+  }
+  if (strategy === 'session' || strategy === 'both') {
+    try {
+      sessionStorage.setItem(getSessionKey(cacheKey), text);
+    } catch (_e) {
+      // Quota or availability issues; ignore silently
+    }
+  }
   return text;
 }
 
@@ -26,7 +65,15 @@ export async function fetchTemplate(
   } = {}
 ) {
   try {
-    const html = await fetchWithCache(url, options);
+    // Prefer session+memory cache for templates for faster back/forward nav
+    const html = await fetchWithCache(url, {
+      ...(options || {}),
+      cachePolicy: {
+        strategy: 'both',
+        key: url,
+        ...(options?.cachePolicy || {}),
+      },
+    });
     return html;
   } catch (err) {
     console.error(`fetchTemplate: failed to load ${url}`, err);
@@ -57,3 +104,24 @@ export function debounce(fn, wait = 250) {
 
 // Constants
 export const DEFAULT_LANGUAGE = 'en'; // Default language constant
+
+/**
+ * Clear in-memory cache and any sessionStorage entries created by fetchWithCache
+ */
+export function clearAllCaches() {
+  try {
+    // Clear memory cache
+    fetchCache.clear();
+    // Clear session entries with our prefix only
+    if (typeof sessionStorage !== 'undefined') {
+      const keys = [];
+      for (let i = 0; i < sessionStorage.length; i++) {
+        const k = sessionStorage.key(i);
+        if (k && k.startsWith(SESSION_CACHE_PREFIX)) keys.push(k);
+      }
+      keys.forEach((k) => sessionStorage.removeItem(k));
+    }
+  } catch (_e) {
+    // ignore
+  }
+}

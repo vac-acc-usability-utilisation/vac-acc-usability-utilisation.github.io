@@ -48,6 +48,24 @@ export class TemplateLoader {
       // Scroll to top after render
       setTimeout(() => window.scrollTo(0, 0), 0);
 
+      // Accessibility: move focus to main container or first heading
+      try {
+        const previousTabIndex = this.container.getAttribute('tabindex');
+        this.container.setAttribute('tabindex', '-1');
+        this.container.focus({ preventScroll: true });
+        // Prefer focusing first h1/h2 if available for screen readers
+        const firstHeading = this.container.querySelector('h1, h2');
+        if (firstHeading) firstHeading.setAttribute('tabindex', '-1'), firstHeading.focus({ preventScroll: true });
+        // Clean up tabindex if it didn't exist before
+        if (previousTabIndex === null) {
+          this.container.addEventListener('blur', () => {
+            this.container.removeAttribute('tabindex');
+          }, { once: true });
+        }
+      } catch (_e) {
+        // best-effort only
+      }
+
       return true;
     } catch (err) {
       console.warn('Template loading error:', err);

@@ -43,8 +43,3 @@ Useful quick examples to reference in-situ
 - To find template loading behavior: search for `loadPage` or open `src/js/loadPage.js`.
 - To find navigation rules: open `src/js/nav.js` and `src/js/router.js`.
 - To inspect search wiring: open `src/js/search.js` and `lunr/en.json`.
-
-If you modify project scripts
-- Keep `package.json` dev scripts minimal and verify syntax. The `format` entry currently has an extra brace and will not run as intended.
-
-If anything in this file is unclear or you'd like more depth on a specific area (routing, search, template flow, or localization), tell me which part and I'll expand the instructions or add targeted examples.
