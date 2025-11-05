@@ -50,13 +50,13 @@
   padding: 0;
 }
 
-:is(dialog, article, [class*=padding]) > :is(header, footer).fixed {
+:is(dialog, article, [class*='padding']) > :is(header, footer).fixed {
   ---translateY: 1rem;
 
   transform: translateY(var(---translateY));
 }
 
-:is(dialog, article, [class*=padding]) > header.fixed {
+:is(dialog, article, [class*='padding']) > header.fixed {
   transform: translateY(calc(-1 * var(---translateY)));
 }
 

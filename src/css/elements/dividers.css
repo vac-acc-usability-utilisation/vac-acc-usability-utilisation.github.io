@@ -1,5 +1,5 @@
 hr,
-[class*=divider] {
+[class*='divider'] {
   all: unset;
   min-inline-size: 1.5rem;
   min-block-size: auto;
@@ -9,7 +9,7 @@ hr,
 }
 
 hr + *,
-[class*=divider] + * {
+[class*='divider'] + * {
   margin: 0 !important;
 }
 

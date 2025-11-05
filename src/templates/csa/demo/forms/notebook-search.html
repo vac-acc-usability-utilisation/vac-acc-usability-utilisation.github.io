@@ -1,158 +1,245 @@
-<div class="row padding right-align" style="gap: 0; justify-content: space-between;">
-    <div class="right-align ">
-        <button class="transparent no-padding disabled" disabled>
-            <i>refresh</i> Reset all
-        </button>
-        <button class="circle transparent xs sm md lg">
-            <i>close</i>
-        </button>
-    </div>
+<div class="row padding right-align" style="gap: 0; justify-content: space-between">
+  <div class="right-align">
+    <button class="transparent no-padding disabled" disabled><i>refresh</i> Reset all</button>
+    <button class="circle transparent xs sm md lg">
+      <i>close</i>
+    </button>
+  </div>
 </div>
 <div
-    style="height: calc(100vh - var(--header-height) - var(--footer-height) - 54px); padding-bottom: 0rem; overflow: hidden; overflow-y: auto; width: 100%; ">
-    <div class="field">
-        <label for="" class="font-label" style="margin-left: 1rem;">Notebook type</label>
+  style="
+    height: calc(100vh - var(--header-height) - var(--footer-height) - 54px);
+    padding-bottom: 0rem;
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+  "
+>
+  <div class="field">
+    <label for="" class="font-label" style="margin-left: 1rem">Notebook type</label>
 
-        <nav class="group connected segmented-button"
-            style="gap: 0; width: 100%; margin-top: 0.25rem; margin-bottom: 0;">
-            <button id="notebook-type-filter-individual" class="left-round segmented-button transparent fill border max"
-                title="Individual"><i class="no-margin fill">person</i></button>
-            <button id="notebook-type-filter-third-party" class="no-round segmented-button transparent border max"
-                style="border-left: none; border-right: none;" title="Third-party"><i
-                    class="no-margin ">group</i></button>
-            <button id="notebook-type-filter-organization" class="right-round segmented-button transparent border max"
-                title="Organization"><i class="no-margin ">domain</i></button>
-        </nav>
-    </div>
-    <!---->
+    <nav
+      class="group connected segmented-button"
+      style="gap: 0; width: 100%; margin-top: 0.25rem; margin-bottom: 0"
+    >
+      <button
+        id="notebook-type-filter-individual"
+        class="left-round segmented-button transparent fill border max"
+        title="Individual"
+      >
+        <i class="no-margin fill">person</i>
+      </button>
+      <button
+        id="notebook-type-filter-third-party"
+        class="no-round segmented-button transparent border max"
+        style="border-left: none; border-right: none"
+        title="Third-party"
+      >
+        <i class="no-margin">group</i>
+      </button>
+      <button
+        id="notebook-type-filter-organization"
+        class="right-round segmented-button transparent border max"
+        title="Organization"
+      >
+        <i class="no-margin">domain</i>
+      </button>
+    </nav>
+  </div>
+  <!---->
 
-    <div class="padding-left no-margin" style="flex-direction: column; padding-top:0 !important;">
+  <div class="padding-left no-margin" style="flex-direction: column; padding-top: 0 !important">
+    <div
+      class="field border small-margin bottom-margin"
+      style="flex-direction: column; width: fit-content"
+    >
+      <label for="client-id" class="font-label"
+        >Identifier <i class="tiny" style="margin-left: 0.25rem">help</i></label
+      >
 
-
-        <div class="field border small-margin bottom-margin" style="flex-direction: column; width: fit-content;">
-            <label for="client-id" class="font-label">Identifier <i class="tiny"
-                    style="margin-left: 0.25rem;">help</i></label>
-
-            <div class="row no-margin no-padding" style="gap: 0.25rem;">
-                <input name="client-id" id="client-id" type="number" maxlength="12" style="width: 13.5rem;">
-                <!--
+      <div class="row no-margin no-padding" style="gap: 0.25rem">
+        <input
+          name="client-id"
+          id="client-id"
+          type="number"
+          maxlength="12"
+          style="width: 13.5rem"
+        />
+        <!--
                 <button id="expand-id-filters" class="circle transparent on-surface-variant">
                     <i>keyboard_arrow_down</i>
                 </button>-->
-            </div>
+      </div>
+    </div>
+
+    <div style="display: flex">
+      <button
+        id="expand-id-filters"
+        class="surface-container-high max small no-margin"
+        style="flex: auto; align-items: middle"
+      >
+        <span class="small-text">Show more identifiers </span>
+        <i class="small">keyboard_arrow_down </i>
+      </button>
+    </div>
+
+    <div class="expandable-content hidden" id="additional-identifier-filters">
+      <fieldset class="no-border no-padding">
+        <legend>Identifiers</legend>
+        <div class="field border">
+          <label for="notebook-id" class="font-label"><span>CSDN ID</span> </label>
+
+          <div class="row no-margin no-padding">
+            <input
+              name="notebook-id"
+              id="notebook-id"
+              type="text"
+              maxlength="50"
+              style="width: 13.5rem"
+            />
+          </div>
         </div>
+        <div class="field border">
+          <label for="file-number-id" class="font-label"><span>File number</span> </label>
 
-        <div style="display: flex; ">
-            <button id="expand-id-filters" class="surface-container-high max small no-margin"
-                style="flex: auto; align-items: middle;">
-                <span class="small-text">Show more identifiers </span>
-                <i class="small">keyboard_arrow_down </i>
-            </button>
+          <div class="row no-margin no-padding">
+            <input
+              name="file-number-id"
+              id="file-number-id"
+              type="text"
+              maxlength="50"
+              style="width: 13.5rem"
+            />
+          </div>
         </div>
+        <div class="field border">
+          <label for="service-number-id" class="font-label"><span>Service number</span></label>
 
-        <div class="expandable-content hidden" id="additional-identifier-filters">
-            <fieldset class="no-border no-padding">
-                <legend>Identifiers</legend>
-                <div class="field border">
-                    <label for="notebook-id" class="font-label"><span>CSDN ID</span> </label>
-
-                    <div class="row no-margin no-padding">
-                        <input name="notebook-id" id="notebook-id" type="text" maxlength="50" style="width: 13.5rem;">
-                    </div>
-                </div>
-                <div class="field border">
-                    <label for="file-number-id" class="font-label"><span>File number</span> </label>
-
-                    <div class="row no-margin no-padding">
-                        <input name="file-number-id" id="file-number-id" type="text" maxlength="50"
-                            style="width: 13.5rem;">
-                    </div>
-                </div>
-                <div class="field border">
-                    <label for="service-number-id" class="font-label"><span>Service number</span></label>
-
-                    <div class="row no-margin no-padding" style="gap: 0.25rem;">
-                        <input name="service-number-id" id="service-number-id" type="text" maxlength="50"
-                            style="width: 13.5rem;">
-                        <!--
+          <div class="row no-margin no-padding" style="gap: 0.25rem">
+            <input
+              name="service-number-id"
+              id="service-number-id"
+              type="text"
+              maxlength="50"
+              style="width: 13.5rem"
+            />
+            <!--
                         <button id="condense-id-filters" class="circle transparent on-surface-variant">
                             <i>keyboard_arrow_up</i>
                         </button>-->
-                    </div>
-                </div>
-                <div style="display: flex; ">
-                    <button id="condense-id-filters" class="surface-container-high max small no-margin"
-                        style="flex: auto; align-items: middle;">
-                        <span class="small-text">Show less identifiers </span>
-                        <i class="small">keyboard_arrow_up </i>
-                    </button>
-                </div>
-            </fieldset>
-
+          </div>
         </div>
+        <div style="display: flex">
+          <button
+            id="condense-id-filters"
+            class="surface-container-high max small no-margin"
+            style="flex: auto; align-items: middle"
+          >
+            <span class="small-text">Show less identifiers </span>
+            <i class="small">keyboard_arrow_up </i>
+          </button>
+        </div>
+      </fieldset>
+    </div>
 
-        <div class="field border small-margin bottom-margin" style="flex-direction: column; width: fit-content;">
-            <label for="combined-name" class="font-label"><span>Name</span> </label>
+    <div
+      class="field border small-margin bottom-margin"
+      style="flex-direction: column; width: fit-content"
+    >
+      <label for="combined-name" class="font-label"><span>Name</span> </label>
 
-            <div class="row no-margin no-padding" style="gap: 0.25rem;">
-                <input name="combined-name" id="name" type="text" maxlength="50" style="width: 18rem; margin-right: 0;">
-                <!--
+      <div class="row no-margin no-padding" style="gap: 0.25rem">
+        <input
+          name="combined-name"
+          id="name"
+          type="text"
+          maxlength="50"
+          style="width: 18rem; margin-right: 0"
+        />
+        <!--
                 <button id="expand-name-filters" class="circle transparent on-surface-variant" style="">
                     <i>keyboard_arrow_down</i>
                 </button>-->
-            </div>
+      </div>
+    </div>
+    <div style="display: flex">
+      <button
+        id="expand-name-filters"
+        class="surface-container-high max small no-margin"
+        style="flex: auto; align-items: middle"
+      >
+        <span class="small-text">Show full name fields</span>
+        <i class="small">keyboard_arrow_down </i>
+      </button>
+    </div>
+
+    <div class="expandable-content hidden" id="additional-name-filters">
+      <fieldset class="no-border no-padding">
+        <legend>Name</legend>
+        <div class="field border">
+          <label for="given-name" class="font-label"><span>Chosen name</span> </label>
+
+          <div class="row no-margin no-padding">
+            <input
+              name="given-name"
+              id="given-name"
+              type="text"
+              autocomplete="new-password"
+              maxlength="50"
+              style="width: 13.5rem"
+            />
+          </div>
         </div>
-        <div style="display: flex; ">
-            <button id="expand-name-filters" class="surface-container-high max small no-margin"
-                style="flex: auto; align-items: middle;">
-                <span class="small-text">Show full name fields</span>
-                <i class="small">keyboard_arrow_down </i>
+        <div class="field border">
+          <label for="given-name" class="font-label"><span>Given name</span> </label>
+
+          <div class="row no-margin no-padding">
+            <input
+              name="given-name"
+              id="given-name"
+              type="text"
+              autocomplete="new-password"
+              maxlength="50"
+              style="width: 13.5rem"
+            />
+          </div>
+        </div>
+        <div class="field border">
+          <label for="middle-name" class="font-label"><span>Middle name</span> </label>
+
+          <div class="row no-margin no-padding">
+            <input
+              name="middle-name"
+              id="middle-name"
+              type="text"
+              autocomplete="new-password"
+              maxlength="50"
+              style="width: 13.5rem"
+            />
+          </div>
+        </div>
+        <div class="field border">
+          <label for="given-name" class="font-label"><span>Surname</span> </label>
+
+          <div class="row no-margin no-padding" style="gap: 0.25rem">
+            <input
+              name="given-name"
+              id="given-name"
+              autocomplete="new-password"
+              type="text"
+              maxlength="50"
+              style="width: 13.5rem"
+            />
+            <button id="condense-name-filters" class="circle transparent on-surface-variant">
+              <i>keyboard_arrow_up</i>
             </button>
+          </div>
         </div>
+      </fieldset>
+      <hr />
+    </div>
 
-        <div class="expandable-content hidden" id="additional-name-filters">
-            <fieldset class="no-border no-padding ">
-                <legend>Name</legend>
-                <div class="field border">
-                    <label for="given-name" class="font-label"><span>Chosen name</span> </label>
-
-                    <div class="row no-margin no-padding">
-                        <input name="given-name" id="given-name" type="text" autocomplete="new-password" maxlength="50"
-                            style="width: 13.5rem;">
-                    </div>
-                </div>
-                <div class="field border">
-                    <label for="given-name" class="font-label"><span>Given name</span> </label>
-
-                    <div class="row no-margin no-padding">
-                        <input name="given-name" id="given-name" type="text" autocomplete="new-password" maxlength="50"
-                            style="width: 13.5rem;">
-                    </div>
-                </div>
-                <div class="field border">
-                    <label for="middle-name" class="font-label"><span>Middle name</span> </label>
-
-                    <div class="row no-margin no-padding">
-                        <input name="middle-name" id="middle-name" type="text" autocomplete="new-password"
-                            maxlength="50" style="width: 13.5rem;">
-                    </div>
-                </div>
-                <div class="field border">
-                    <label for="given-name" class="font-label"><span>Surname</span> </label>
-
-                    <div class="row no-margin no-padding" style="gap: 0.25rem;">
-                        <input name="given-name" id="given-name" autocomplete="new-password" type="text" maxlength="50"
-                            style="width: 13.5rem;">
-                        <button id="condense-name-filters" class="circle transparent on-surface-variant">
-                            <i>keyboard_arrow_up</i>
-                        </button>
-                    </div>
-                </div>
-            </fieldset>
-            <hr>
-        </div>
-
-        <!--
+    <!--
                 <div class="field border d-flex " style="flex-direction: column; width: fit-content;">
                   <label for="legal-surname" class="font-label"><span>Legal surname</span> <span class=""
                       style="margin-left: 0.25rem;">(required)</span></label>
@@ -161,161 +248,213 @@
 
                 </div>-->
 
-
-
-        <fieldset class="no-border no-padding "
-            style="display: flex; gap: 0rem; flex-direction: column; margin-bottom: 1.5rem;">
-            <legend class="font-label">Date of birth </legend>
-            <!--
+    <fieldset
+      class="no-border no-padding"
+      style="display: flex; gap: 0rem; flex-direction: column; margin-bottom: 1.5rem"
+    >
+      <legend class="font-label">Date of birth</legend>
+      <!--
                   <div class="row bottom-margin no-margin"><span class="font-label on-surface-variant">For example, 1999 12 31</span></div>-->
-            <div class="row top-margin tiny-margin">
-                <div class="field border top-margin no-margin" style="flex-direction: column; width: fit-content;">
-                    <label for="dob-month" class="font-label">Month</label>
+      <div class="row top-margin tiny-margin">
+        <div
+          class="field border top-margin no-margin"
+          style="flex-direction: column; width: fit-content"
+        >
+          <label for="dob-month" class="font-label">Month</label>
 
-                    <select name="dob-month" id="dob-month" style="width: 8rem;">
-                        <option value="0"></option>
-                        <option value="1">01 - Jan.</option>
-                        <option value="2">02 - Feb.</option>
-                        <option value="3">03 - Mar.</option>
-                        <option value="4">04 - Apr.</option>
-                        <option value="5">05 - May</option>
-                        <option value="6">06 - Jun.</option>
-                        <option value="7">07 - Jul.</option>
-                        <option value="8">08 - Aug.</option>
-                        <option value="9">09 - Sep.</option>
-                        <option value="10">10 - Oct.</option>
-                        <option value="11">11 - Nov.</option>
-                        <option value="12">12 - Dec.</option>
-                    </select>
-                </div>
-
-                <div class="field border top-margin no-margin" style="flex-direction: column; width: fit-content;">
-                    <label for="dob-day" class="font-label">Day</label>
-
-                    <input name="dob-day" id="dob-day" type="text" maxlength="2" style="width: 3.5rem;">
-
-                </div>
-
-                <div class="field border top-margin no-margin" style="flex-direction: column; width: fit-content;">
-                    <label for="dob-year" class="font-label">Year</label>
-
-                    <input name="dob-year" id="dob-year" type="text" maxlength="4" style="width: 4.5rem">
-
-                </div>
-            </div>
-        </fieldset>
-
-        <div class="field border d-flex " style="flex-direction: column; width: fit-content;">
-            <label for="telephone-number" class="font-label"><span>Telephone number</span> <span class=""
-                    style="margin-left: 0.25rem;"> </span></label>
-
-            <input name="telephone-number" id="telephone-number" type="text" maxlength="50" style="width: 13.5rem;">
-
+          <select name="dob-month" id="dob-month" style="width: 8rem">
+            <option value="0"></option>
+            <option value="1">01 - Jan.</option>
+            <option value="2">02 - Feb.</option>
+            <option value="3">03 - Mar.</option>
+            <option value="4">04 - Apr.</option>
+            <option value="5">05 - May</option>
+            <option value="6">06 - Jun.</option>
+            <option value="7">07 - Jul.</option>
+            <option value="8">08 - Aug.</option>
+            <option value="9">09 - Sep.</option>
+            <option value="10">10 - Oct.</option>
+            <option value="11">11 - Nov.</option>
+            <option value="12">12 - Dec.</option>
+          </select>
         </div>
 
+        <div
+          class="field border top-margin no-margin"
+          style="flex-direction: column; width: fit-content"
+        >
+          <label for="dob-day" class="font-label">Day</label>
 
+          <input name="dob-day" id="dob-day" type="text" maxlength="2" style="width: 3.5rem" />
+        </div>
 
+        <div
+          class="field border top-margin no-margin"
+          style="flex-direction: column; width: fit-content"
+        >
+          <label for="dob-year" class="font-label">Year</label>
 
-        <fieldset class="no-border no-padding "
-            style="display: flex; gap: 0rem; flex-direction: column; margin-bottom: 1.5rem;">
-            <legend class="font-label">Address </legend>
-            <div class="field border small-margin bottom-margin" style="flex-direction: column; width: fit-content;">
-                <label for="postal-code" class="font-label">Postal code</label>
+          <input name="dob-year" id="dob-year" type="text" maxlength="4" style="width: 4.5rem" />
+        </div>
+      </div>
+    </fieldset>
 
-                <div class="row no-margin no-padding" style="gap: 0.25rem;">
-                    <input name="postal-code" id="postal-code" type="text" maxlength="7" style="width: 6.5rem">
-                    <!--
+    <div class="field border d-flex" style="flex-direction: column; width: fit-content">
+      <label for="telephone-number" class="font-label"
+        ><span>Telephone number</span> <span class="" style="margin-left: 0.25rem"> </span
+      ></label>
+
+      <input
+        name="telephone-number"
+        id="telephone-number"
+        type="text"
+        maxlength="50"
+        style="width: 13.5rem"
+      />
+    </div>
+
+    <fieldset
+      class="no-border no-padding"
+      style="display: flex; gap: 0rem; flex-direction: column; margin-bottom: 1.5rem"
+    >
+      <legend class="font-label">Address</legend>
+      <div
+        class="field border small-margin bottom-margin"
+        style="flex-direction: column; width: fit-content"
+      >
+        <label for="postal-code" class="font-label">Postal code</label>
+
+        <div class="row no-margin no-padding" style="gap: 0.25rem">
+          <input
+            name="postal-code"
+            id="postal-code"
+            type="text"
+            maxlength="7"
+            style="width: 6.5rem"
+          />
+          <!--
                     <button id="expand-address-filters" class="circle transparent on-surface-variant">
                         <i>keyboard_arrow_down</i>
                     </button>-->
-                </div>
-            </div>
-            <div style="display: flex; ">
-                <button id="expand-address-filters" class="surface-container-high max small no-margin"
-                    style="flex: auto; align-items: middle;">
-                    <span class="small-text">Show full address </span>
-                    <i class="small">keyboard_arrow_down </i>
-                </button>
-            </div>
-        </fieldset>
+        </div>
+      </div>
+      <div style="display: flex">
+        <button
+          id="expand-address-filters"
+          class="surface-container-high max small no-margin"
+          style="flex: auto; align-items: middle"
+        >
+          <span class="small-text">Show full address </span>
+          <i class="small">keyboard_arrow_down </i>
+        </button>
+      </div>
+    </fieldset>
 
-        <div class="expandable-content hidden" id="additional-address-filters">
-            <fieldset class="no-border no-padding ">
-                <legend>Address</legend>
-                <div class="field border">
-                    <label for="given-name" class="font-label"><span>Civic address</span> <i class="tiny"
-                            style="margin-left: 0.25rem;">help</i></label>
+    <div class="expandable-content hidden" id="additional-address-filters">
+      <fieldset class="no-border no-padding">
+        <legend>Address</legend>
+        <div class="field border">
+          <label for="given-name" class="font-label"
+            ><span>Civic address</span> <i class="tiny" style="margin-left: 0.25rem">help</i></label
+          >
 
-                    <div class="row no-margin no-padding">
-                        <input name="given-name" id="given-name" type="text" maxlength="50" style="width: 18rem;">
-                    </div>
-                </div>
-                <div class="field border">
-                    <label for="middle-name" class="font-label"><span>City/Municipality</span> </label>
+          <div class="row no-margin no-padding">
+            <input
+              name="given-name"
+              id="given-name"
+              type="text"
+              maxlength="50"
+              style="width: 18rem"
+            />
+          </div>
+        </div>
+        <div class="field border">
+          <label for="middle-name" class="font-label"><span>City/Municipality</span> </label>
 
-                    <div class="row no-margin no-padding">
-                        <input name="middle-name" id="middle-name" type="text" maxlength="50" style="width: 13.5rem;">
-                    </div>
-                </div>
-
-                <div class="field border top-margin no-margin" style="flex-direction: column; width: fit-content;">
-                    <label for="dob-month" class="font-label">Province/Territory</label>
-
-                    <select name="dob-month" id="dob-month" style="width: 18rem;">
-                        <option value="0"></option>
-                        <option value="1">Alberta</option>
-                        <option value="2">British Columbia</option>
-                        <option value="3">Manitoba</option>
-                        <option value="4">New Brunswick</option>
-                        <option value="5">Newfoundland and Labrador</option>
-                        <option value="6">Northwest Territories</option>
-                        <option value="7">Nova Scotia</option>
-                        <option value="8">Nunavut</option>
-                        <option value="9">Ontario</option>
-                        <option value="10">Prince Edward Island</option>
-                        <option value="11">Quebec</option>
-                        <option value="12">Saskatchewan</option>
-                        <option value="13">Yukon</option>
-                    </select>
-                </div>
-
-                <div class="field border " style="flex-direction: column; width: fit-content;">
-                    <label for="postal-code" class="font-label">Postal code</label>
-
-                    <div class="row no-margin no-padding" style="gap: 0.25rem;">
-                        <input name="postal-code" id="postal-code" type="text" maxlength="7" style="width: 6.5rem">
-
-                    </div>
-                </div>
-
-                <div style="display: flex; ">
-                    <button class="surface-container-high max small no-margin" style="flex: auto;">
-                        <span class="small-text">Address not in Canada?</span>
-                    </button>
-                </div>
-
-                <div class="tiny-space"></div>
-
-                <div style="display: flex; ">
-                    <button id="condense-address-filters" class="surface-container-high max small no-margin"
-                        style="flex: auto; align-items: middle;">
-                        <span class="small-text">Hide full address</span>
-                        <i class="small">keyboard_arrow_up </i>
-                    </button>
-                </div>
-            </fieldset>
+          <div class="row no-margin no-padding">
+            <input
+              name="middle-name"
+              id="middle-name"
+              type="text"
+              maxlength="50"
+              style="width: 13.5rem"
+            />
+          </div>
         </div>
 
-    </div>
+        <div
+          class="field border top-margin no-margin"
+          style="flex-direction: column; width: fit-content"
+        >
+          <label for="dob-month" class="font-label">Province/Territory</label>
 
-</div>
-<div style="position: absolute; bottom: 0; width: 100%; z-index: 3; background-color: var(--surface-container-low);">
-    <hr>
-    <div class="space"></div>
-    <div class="right-align small-padding" style="display: flex; ">
-        <button class="primary-container max " style="flex: auto;">
-            Search
-        </button>
+          <select name="dob-month" id="dob-month" style="width: 18rem">
+            <option value="0"></option>
+            <option value="1">Alberta</option>
+            <option value="2">British Columbia</option>
+            <option value="3">Manitoba</option>
+            <option value="4">New Brunswick</option>
+            <option value="5">Newfoundland and Labrador</option>
+            <option value="6">Northwest Territories</option>
+            <option value="7">Nova Scotia</option>
+            <option value="8">Nunavut</option>
+            <option value="9">Ontario</option>
+            <option value="10">Prince Edward Island</option>
+            <option value="11">Quebec</option>
+            <option value="12">Saskatchewan</option>
+            <option value="13">Yukon</option>
+          </select>
+        </div>
+
+        <div class="field border" style="flex-direction: column; width: fit-content">
+          <label for="postal-code" class="font-label">Postal code</label>
+
+          <div class="row no-margin no-padding" style="gap: 0.25rem">
+            <input
+              name="postal-code"
+              id="postal-code"
+              type="text"
+              maxlength="7"
+              style="width: 6.5rem"
+            />
+          </div>
+        </div>
+
+        <div style="display: flex">
+          <button class="surface-container-high max small no-margin" style="flex: auto">
+            <span class="small-text">Address not in Canada?</span>
+          </button>
+        </div>
+
+        <div class="tiny-space"></div>
+
+        <div style="display: flex">
+          <button
+            id="condense-address-filters"
+            class="surface-container-high max small no-margin"
+            style="flex: auto; align-items: middle"
+          >
+            <span class="small-text">Hide full address</span>
+            <i class="small">keyboard_arrow_up </i>
+          </button>
+        </div>
+      </fieldset>
     </div>
-    <div class="space"></div>
+  </div>
+</div>
+<div
+  style="
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: var(--surface-container-low);
+  "
+>
+  <hr />
+  <div class="space"></div>
+  <div class="right-align small-padding" style="display: flex">
+    <button class="primary-container max" style="flex: auto">Search</button>
+  </div>
+  <div class="space"></div>
 </div>

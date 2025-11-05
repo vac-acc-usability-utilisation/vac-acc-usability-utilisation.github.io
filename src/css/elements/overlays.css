@@ -8,7 +8,9 @@ dialog::backdrop {
   color: var(--on-surface);
   background-color: var(--overlay);
   z-index: 100;
-  transition: all var(--speed3), 0s background-color;
+  transition:
+    all var(--speed3),
+    0s background-color;
 }
 
 .overlay.active,

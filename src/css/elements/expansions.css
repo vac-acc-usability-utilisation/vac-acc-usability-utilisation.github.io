@@ -6,7 +6,6 @@ summary.none::-webkit-details-marker {
   display: none;
 }
 
-
 summary::before {
   content: 'expand_more'; /* default closed icon */
   font-family: var(--font-icon);
@@ -35,7 +34,6 @@ details[open] summary {
   height: 64px;
 }
 
-
 summary:hover::after {
   content: '';
   display: block;
@@ -50,7 +48,6 @@ summary:hover::after {
 details[open] summary::after {
   height: 64px;
 }
-
 
 summary:focus {
   outline: none;

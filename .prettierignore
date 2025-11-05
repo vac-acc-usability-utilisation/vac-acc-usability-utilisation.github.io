@@ -1,0 +1,14 @@
+node_modules/
+dist/
+build/
+.vscode/
+*.min.js
+lunr/*.json
+archive/
+v2/
+node_modules/
+dist/
+build/
+.vscode/
+*.min.js
+lunr/*.json

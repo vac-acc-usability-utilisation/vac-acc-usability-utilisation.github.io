@@ -14,7 +14,7 @@ i,
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  font-feature-settings: "liga";
+  font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
   vertical-align: middle;
   text-align: center;
@@ -26,7 +26,6 @@ i,
   box-sizing: content-box;
   line-height: normal;
 }
-
 
 i.tiny {
   ---size: 1rem;
@@ -52,7 +51,7 @@ i.extra {
 i.fill,
 a.row:is(:hover, :focus) > i,
 .transparent:is(:hover, :focus) > i {
-  font-variation-settings: "FILL" 1;
+  font-variation-settings: 'FILL' 1;
 }
 
 i > :is(img, svg) {
@@ -65,7 +64,7 @@ i > :is(img, svg) {
   padding: inherit;
 }
 
-i[class*=fa-] {
+i[class*='fa-'] {
   font-size: calc(var(---size) * 0.85);
   line-height: normal;
   block-size: auto;

@@ -1,26 +1,33 @@
 <!-- LEFT -->
-<div class="row right-align padding" style="gap: 0;">
-    <h2 class="font-title">Add identifier</h2>
-    <div class="max"></div>
-    <!--
+<div class="row right-align padding" style="gap: 0">
+  <h2 class="font-title">Add identifier</h2>
+  <div class="max"></div>
+  <!--
             <button class="transparent disabled" disabled="">
               <i>refresh</i> Reset all
             </button>-->
-    <button class="circle transparent ">
-        <i>close</i>
-    </button>
+  <button class="circle transparent">
+    <i>close</i>
+  </button>
 </div>
 
 <div
-    style="height: calc(100vh - var(--header-height) - var(--footer-height) - 121px); padding-bottom: 2rem; overflow-y: auto;">
-
-
-
-    <div class="large-padding padding-bottom no-padding " data-page="id-numbers"
-        style="padding-bottom: 0.25rem !important;">
-
-        <div class="field border d-flex bottom-margin no-margin" style="flex-direction: column; width: fit-content;">
-            <!--
+  style="
+    height: calc(100vh - var(--header-height) - var(--footer-height) - 121px);
+    padding-bottom: 2rem;
+    overflow-y: auto;
+  "
+>
+  <div
+    class="large-padding padding-bottom no-padding"
+    data-page="id-numbers"
+    style="padding-bottom: 0.25rem !important"
+  >
+    <div
+      class="field border d-flex bottom-margin no-margin"
+      style="flex-direction: column; width: fit-content"
+    >
+      <!--
             <label for="id-type-searchable" class="font-label bold">Identifier type</label>
 
             <div class="select-searchable">
@@ -35,95 +42,89 @@
                 </div>
             </div>-->
 
-            
-            <label for="id-type" class="font-label bold">Identifier type</label>
+      <label for="id-type" class="font-label bold">Identifier type</label>
 
-            <select name="id-type" id="id-type" style="width: 13.5rem;">
-                <option value="0"></option>
-                <optgroup label="VAC Identifiers">
-                    <option value="">Duplicate notebook</option>
-                    <option value="">Pension number</option>
-                    <option value="">Veterans Insurance Policy Number</option>
-                    <option value="">WVA Number</option>
-                </optgroup>
-                <optgroup label="Health/Insurance IDs">
-                    <option value="">Blue Cross number</option>
-                    <option value="">Provincial Health number</option>
-                    <option value="">PSHCP Certificate number</option>
-                    <option value="">WCB number</option>
-                </optgroup>
-                <optgroup label="Government/Legal IDs">
-                    <option value="">SIN</option>
-                    <option value="">Service number</option>
-                    <option value="">OAS number</option>
-                    <option value="">Indian Registry number</option>
-                </optgroup>
-                <optgroup label="Employement/Organizational IDs">
-                    <option value="">Employee ID</option>
-                    <option value="">RCMP Regimental number</option>
-                    <option value="">RCMP Pension number</option>
-                    <option value="">RCMP Survivor Income number</option>
-                </optgroup>
-                <optgroup label="Miscellaneous/Special Program IDs">
-                    <option value="">British National Insurance Number</option>
-                    <option value="">CNIB number</option>
-                    <option value="">Chemical Testing Ovserver number</option>
-                    <option value="">Other Allied Identification number</option>
-                    <option value="">United States Social Security number</option>
-                </optgroup>
-            </select>
-            <!--
+      <select name="id-type" id="id-type" style="width: 13.5rem">
+        <option value="0"></option>
+        <optgroup label="VAC Identifiers">
+          <option value="">Duplicate notebook</option>
+          <option value="">Pension number</option>
+          <option value="">Veterans Insurance Policy Number</option>
+          <option value="">WVA Number</option>
+        </optgroup>
+        <optgroup label="Health/Insurance IDs">
+          <option value="">Blue Cross number</option>
+          <option value="">Provincial Health number</option>
+          <option value="">PSHCP Certificate number</option>
+          <option value="">WCB number</option>
+        </optgroup>
+        <optgroup label="Government/Legal IDs">
+          <option value="">SIN</option>
+          <option value="">Service number</option>
+          <option value="">OAS number</option>
+          <option value="">Indian Registry number</option>
+        </optgroup>
+        <optgroup label="Employement/Organizational IDs">
+          <option value="">Employee ID</option>
+          <option value="">RCMP Regimental number</option>
+          <option value="">RCMP Pension number</option>
+          <option value="">RCMP Survivor Income number</option>
+        </optgroup>
+        <optgroup label="Miscellaneous/Special Program IDs">
+          <option value="">British National Insurance Number</option>
+          <option value="">CNIB number</option>
+          <option value="">Chemical Testing Ovserver number</option>
+          <option value="">Other Allied Identification number</option>
+          <option value="">United States Social Security number</option>
+        </optgroup>
+      </select>
+      <!--
                 <input name="client-id" id="client-id" type="number" maxlength="12" style="width: 13.5rem;">-->
-
-        </div>
-        <div class="space"></div>
-
-        <div class="row ">
-            <div class="field border d-flex bottom-margin no-margin"
-                style="flex-direction: column; width: fit-content;">
-                <label for="client-id" class="font-label bold">Identifier value</label>
-
-                <input name="client-id" id="client-id" type="number" maxlength="12" style="width: 13.5rem;">
-
-            </div>
-            
-            <div>
-                <button class="transparent link" style="margin-top: 1.25rem;">Generate</button>
-            </div>
-
-        </div>
-        <div class="space"></div>
-        <div class="row">
-            <div class="field border d-flex bottom-margin no-margin"
-                style="flex-direction: column; width: fit-content;">
-                <label for="id-comment" class="font-label bold">Identifier description</label>
-
-                <textarea name="id-comment" id="id-comment" style="width: 20.5rem;"></textarea>
-
-            </div>
-        </div>
-        <div class="large-space"></div>
-
     </div>
+    <div class="space"></div>
 
-  
+    <div class="row">
+      <div
+        class="field border d-flex bottom-margin no-margin"
+        style="flex-direction: column; width: fit-content"
+      >
+        <label for="client-id" class="font-label bold">Identifier value</label>
 
+        <input
+          name="client-id"
+          id="client-id"
+          type="number"
+          maxlength="12"
+          style="width: 13.5rem"
+        />
+      </div>
 
+      <div>
+        <button class="transparent link" style="margin-top: 1.25rem">Generate</button>
+      </div>
+    </div>
+    <div class="space"></div>
+    <div class="row">
+      <div
+        class="field border d-flex bottom-margin no-margin"
+        style="flex-direction: column; width: fit-content"
+      >
+        <label for="id-comment" class="font-label bold">Identifier description</label>
 
+        <textarea name="id-comment" id="id-comment" style="width: 20.5rem"></textarea>
+      </div>
+    </div>
+    <div class="large-space"></div>
+  </div>
 </div>
 
-<div style="position: absolute; bottom: 0; width: 100%; ">
-    <hr>
-    <div class="space"></div>
-    <div class="column" style="gap: 0;">
-        
-        <div class="right-align padding" style="display: flex;">
-            <button class="primary-container large max " style="flex: auto;">
-                Save identifier
-            </button>
-
-        </div>
-        
+<div style="position: absolute; bottom: 0; width: 100%">
+  <hr />
+  <div class="space"></div>
+  <div class="column" style="gap: 0">
+    <div class="right-align padding" style="display: flex">
+      <button class="primary-container large max" style="flex: auto">Save identifier</button>
     </div>
-    <div class="space"></div>
+  </div>
+  <div class="space"></div>
 </div>

@@ -1,6 +1,7 @@
-.hidden, .hide {
-    display: none !important;
-  }
+.hidden,
+.hide {
+  display: none !important;
+}
 
 /* Default: hide action buttons inside rows with this class */
 .with-hidden-actions button {

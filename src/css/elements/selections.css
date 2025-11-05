@@ -64,7 +64,7 @@
   font-size: 1rem;
   user-select: none;
   min-inline-size: auto;
-  content: "";
+  content: '';
   color: var(--surface-variant);
   background-color: var(--outline);
 }
@@ -79,28 +79,28 @@
 }
 
 .checkbox > span::before {
-  content: "check_box_outline_blank";
+  content: 'check_box_outline_blank';
 }
 
 .checkbox > input:checked + span::before {
-  content: "check_box";
-  font-variation-settings: "FILL" 1;
+  content: 'check_box';
+  font-variation-settings: 'FILL' 1;
 }
 
 .checkbox > input:indeterminate + span::before {
-  content: "indeterminate_check_box";
+  content: 'indeterminate_check_box';
 }
 
 .radio > span::before {
-  content: "radio_button_unchecked";
+  content: 'radio_button_unchecked';
 }
 
 .radio > input:checked + span::before {
-  content: "radio_button_checked";
+  content: 'radio_button_checked';
 }
 
 :is(.radio, .checkbox, .switch).icon > span::before {
-  content: "" !important;
+  content: '' !important;
   font-variation-settings: unset !important;
 }
 
@@ -144,7 +144,7 @@
 
 .switch > input:checked + span::before,
 .switch.icon > input:checked + span > i {
-  content: "check";
+  content: 'check';
   color: var(--primary);
   background-color: var(--on-primary);
 }
@@ -160,7 +160,7 @@
 }
 
 .switch > span::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: 50% auto auto 0;
   background-color: var(--active);
@@ -185,21 +185,21 @@
   padding: 0 1.5rem;
 }
 
-[dir=rtl] .switch {
+[dir='rtl'] .switch {
   transform: scale(-1);
 }
 
-[dir=rtl] .switch > span::before,
-[dir=rtl] .switch.icon > span > i {
+[dir='rtl'] .switch > span::before,
+[dir='rtl'] .switch.icon > span > i {
   transform: translate(-3rem, -50%) scale(-0.6);
 }
 
-[dir=rtl] .switch.icon > span > i {
+[dir='rtl'] .switch.icon > span > i {
   transform: translate(-3rem, -50%) scale(-1);
 }
 
-[dir=rtl] .switch > input:checked + span::before,
-[dir=rtl] .switch.icon > input:checked + span > i {
+[dir='rtl'] .switch > input:checked + span::before,
+[dir='rtl'] .switch.icon > input:checked + span > i {
   transform: translate(-1.75rem, -50%) scale(-1);
 }
 

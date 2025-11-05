@@ -18,8 +18,7 @@ menu li {
 }
 */
 
-
-menu>li {
+menu > li {
   all: unset;
   box-sizing: border-box;
   position: relative;
@@ -30,7 +29,7 @@ menu>li {
   justify-content: inherit;
   white-space: nowrap;
   gap: 1rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   min-block-size: 3rem;
   flex: 1;
   margin: 0 !important;
@@ -44,7 +43,7 @@ menu > li > a {
   font-weight: inherit;
 }
 
-menu>li:hover {
+menu > li:hover {
   background-color: var(--surface-container-highest);
 }
 
@@ -69,7 +68,9 @@ menu {
   text-align: start;
   border-radius: 0.25rem;
   transform: scale(0.8) translateY(120%);
-  transition: all var(--speed2), 0s background-color;
+  transition:
+    all var(--speed2),
+    0s background-color;
   display: flex;
   flex-direction: column;
   min-width: 112px;
@@ -78,7 +79,7 @@ menu {
   overflow: visible;
 }
 
-[dir=rtl] menu {
+[dir='rtl'] menu {
   inset: auto 0 0 auto;
 }
 
@@ -89,9 +90,9 @@ menu.no-wrap {
 
 menu.active,
 menu:not([data-ui]):active,
-:not(menu, [data-ui]):focus-within>menu,
-menu> :is(a, li, nav):hover+menu,
-menu>menu:hover {
+:not(menu, [data-ui]):focus-within > menu,
+menu > :is(a, li, nav):hover + menu,
+menu > menu:hover {
   opacity: 1;
   visibility: visible;
   transform: scale(1) translateY(100%);
@@ -101,20 +102,20 @@ menu * {
   white-space: inherit !important;
 }
 
-menu> :is(a, nav, li > a, li > nav) {
+menu > :is(a, nav, li > a, li > nav) {
   padding: 0.5rem 1rem;
   min-block-size: 3rem;
   flex: 1;
   margin: 0 !important;
 }
 
-menu> :is(a, li > a):not(.row) {
+menu > :is(a, li > a):not(.row) {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-menu> :is(a, nav, li > a, li > nav):is(:hover, :focus, .active) {
+menu > :is(a, nav, li > a, li > nav):is(:hover, :focus, .active) {
   background-color: var(--active);
 }
 
@@ -124,12 +125,12 @@ menu.min {
   border-radius: inherit;
 }
 
-[dir=rtl] menu.min.right,
+[dir='rtl'] menu.min.right,
 menu.min.left {
   inset: 0 0 auto auto;
 }
 
-[dir=rtl] menu.min.left,
+[dir='rtl'] menu.min.left,
 menu.min.right {
   inset: 0 auto auto 0;
 }
@@ -148,18 +149,18 @@ menu.no-wrap:is(.min, .max) {
   min-inline-size: 16rem;
 }
 
-[dir=rtl] menu.right,
+[dir='rtl'] menu.right,
 menu.left {
   inset: auto 0 0 auto;
 }
 
-[dir=rtl] menu.left,
+[dir='rtl'] menu.left,
 menu.right {
   inset: auto auto 0 0;
 }
 
 menu:has(> menu),
-menu>menu {
+menu > menu {
   ---child: 1;
   ---type: 0;
 
@@ -170,94 +171,94 @@ menu>menu {
   max-block-size: none;
 }
 
-menu>menu,
-menu>menu.right,
-[dir=rtl] menu>menu.left {
+menu > menu,
+menu > menu.right,
+[dir='rtl'] menu > menu.left {
   inset: auto auto calc(3rem * (var(---child) - var(---type))) 100%;
 }
 
-[dir=rtl] menu>menu,
-[dir=rtl] menu>menu.right,
-menu>menu.left {
+[dir='rtl'] menu > menu,
+[dir='rtl'] menu > menu.right,
+menu > menu.left {
   inset: auto 100% calc(3rem * (var(---child) - var(---type))) auto;
 }
 
-menu> :nth-last-child(2) {
+menu > :nth-last-child(2) {
   ---child: 2;
 }
 
-menu> :nth-last-child(3) {
+menu > :nth-last-child(3) {
   ---child: 3;
 }
 
-menu> :nth-last-child(4) {
+menu > :nth-last-child(4) {
   ---child: 4;
 }
 
-menu> :nth-last-child(5) {
+menu > :nth-last-child(5) {
   ---child: 5;
 }
 
-menu> :nth-last-child(6) {
+menu > :nth-last-child(6) {
   ---child: 6;
 }
 
-menu> :nth-last-child(7) {
+menu > :nth-last-child(7) {
   ---child: 7;
 }
 
-menu> :nth-last-child(8) {
+menu > :nth-last-child(8) {
   ---child: 8;
 }
 
-menu> :nth-last-child(9) {
+menu > :nth-last-child(9) {
   ---child: 9;
 }
 
-menu> :nth-last-child(10) {
+menu > :nth-last-child(10) {
   ---child: 10;
 }
 
-menu> :nth-last-child(11) {
+menu > :nth-last-child(11) {
   ---child: 11;
 }
 
-menu> :nth-last-of-type(2) {
+menu > :nth-last-of-type(2) {
   ---type: 1;
 }
 
-menu> :nth-last-of-type(3) {
+menu > :nth-last-of-type(3) {
   ---type: 2;
 }
 
-menu> :nth-last-of-type(4) {
+menu > :nth-last-of-type(4) {
   ---type: 3;
 }
 
-menu> :nth-last-of-type(5) {
+menu > :nth-last-of-type(5) {
   ---type: 4;
 }
 
-menu> :nth-last-of-type(6) {
+menu > :nth-last-of-type(6) {
   ---type: 5;
 }
 
-menu> :nth-last-of-type(7) {
+menu > :nth-last-of-type(7) {
   ---type: 6;
 }
 
-menu> :nth-last-of-type(8) {
+menu > :nth-last-of-type(8) {
   ---type: 7;
 }
 
-menu> :nth-last-of-type(9) {
+menu > :nth-last-of-type(9) {
   ---type: 8;
 }
 
-menu> :nth-last-of-type(10) {
+menu > :nth-last-of-type(10) {
   ---type: 9;
 }
 
-menu> :nth-last-of-type(11) {
+menu > :nth-last-of-type(11) {
   ---type: 10;
 }

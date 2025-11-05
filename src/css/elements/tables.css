@@ -15,30 +15,29 @@ th {
   display: table-cell;
 }
 
-
-.scroll>table,
+.scroll > table,
 table :is(thead, tbody, tfoot, tr, th, td) {
   background-color: inherit;
   color: inherit;
 }
 
-table>thead>tr {
+table > thead > tr {
   background-color: var(--surface-container-low);
   height: 3.5rem;
   font-weight: 600 !important;
 }
 
-table>thead>tr>button {
+table > thead > tr > button {
   font-weight: 600 !important;
 }
 
-table>thead>tr>th:first-of-type {
+table > thead > tr > th:first-of-type {
   border-inline-start: 0.0625rem solid var(--outline-variant);
   border-radius: 1rem 0 0 0;
   z-index: 2;
 }
 
-table>thead>tr>th:last-of-type {
+table > thead > tr > th:last-of-type {
   border-inline-end: 0.0625rem solid var(--outline-variant);
   border-radius: 0 1rem 0 0;
   z-index: 2;
@@ -56,11 +55,11 @@ table>thead>tr>th:last-of-type {
   padding: 0 1rem;
 }
 
-:is(th, td)>* {
+:is(th, td) > * {
   vertical-align: middle;
 }
 
-thead>tr>th {
+thead > tr > th {
   border-block-start: 0.0625rem solid var(--outline-variant);
   border-block-end: 0.0625rem solid var(--outline);
   white-space: nowrap;
@@ -71,44 +70,43 @@ thead>tr>th {
   /* Add ellipsis (...) for overflowing text */
 }
 
-thead>tr>th>button {
+thead > tr > th > button {
   white-space: nowrap;
   /* Prevent text from wrapping */
   overflow: hidden;
   /* Hide overflowing content */
   text-overflow: ellipsis;
   /* Add ellipsis (...) for overflowing text */
- 
+
   width: auto;
   /*justify-content: left;*/
 }
 
-table.border>tbody>tr:not(:last-child)>td {
+table.border > tbody > tr:not(:last-child) > td {
   border-block-end: 0.0625rem solid var(--outline-variant);
 }
 
-table.border>tbody>tr>td:first-of-type {
+table.border > tbody > tr > td:first-of-type {
   border-inline-start: 0.0625rem solid var(--outline-variant);
 }
 
-table.border>tbody>tr>td:last-of-type {
+table.border > tbody > tr > td:last-of-type {
   border-inline-end: 0.0625rem solid var(--outline-variant);
-  
 }
 
-table.border>tbody>tr:last-child>td {
+table.border > tbody > tr:last-child > td {
   border-block-end: 0.0625rem solid var(--outline-variant);
 }
 
-table.border>tbody>tr:last-child>td:first-of-type {
+table.border > tbody > tr:last-child > td:first-of-type {
   border-radius: 0 0 0 1rem;
 }
 
-table.border>tbody>tr:last-child>td:last-of-type {
+table.border > tbody > tr:last-child > td:last-of-type {
   border-radius: 0 0 1rem 0;
 }
 
-tfoot>tr>th {
+tfoot > tr > th {
   border-block-start: 0.0625rem solid var(--outline);
 }
 
@@ -117,28 +115,28 @@ table.selectable-rows {
   user-select: none;
 }
 
-table.selectable-rows>tbody>tr {
+table.selectable-rows > tbody > tr {
   position: relative;
   height: 3.25rem;
   width: 100%;
   display: table-row;
 }
 
-table.selectable-rows>tbody>tr.active {
+table.selectable-rows > tbody > tr.active {
   background-color: var(--secondary-container);
   color: var(--on-secondary-container);
 }
 
-table.selectable-rows>tbody>tr:hover {
+table.selectable-rows > tbody > tr:hover {
   cursor: pointer;
 }
 
-table.selectable-rows>tbody>tr::after {
+table.selectable-rows > tbody > tr::after {
   display: none;
   /* Hide the pseudo-element by default */
 }
 
-table.selectable-rows>tbody>tr:hover::after {
+table.selectable-rows > tbody > tr:hover::after {
   content: '';
   display: block;
   /* Keep it as a block-level element */
@@ -158,7 +156,7 @@ table.selectable-rows>tbody>tr:hover::after {
   /* Ensure padding/borders don't affect dimensions */
 }
 
-table.selectable-rows>tbody>tr:active::after {
+table.selectable-rows > tbody > tr:active::after {
   content: '';
   display: block;
   /* Keep it as a block-level element */
@@ -178,11 +176,9 @@ table.selectable-rows>tbody>tr:active::after {
   /* Ensure padding/borders don't affect dimensions */
 }
 
-table.selectable-rows>tbody>tr:last-of-type:hover::after {
- 
+table.selectable-rows > tbody > tr:last-of-type:hover::after {
   border-radius: 0 0 1rem 1rem;
 }
-
 
 .overflow-scroll {
   max-width: 319px;

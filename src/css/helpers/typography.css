@@ -1,20 +1,20 @@
 html {
-    font-size: var(--size);
+  font-size: var(--size);
 }
 
 body {
-    font-family: var(--font);
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.0313rem;
+  font-family: var(--font);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.0313rem;
 }
 
 dt {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 dd {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 h1,
@@ -23,36 +23,36 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--display);
-    font-weight: 500;
-    display: block;
-    align-items: center;
-    line-height: normal;
-    letter-spacing: -0.1px;
+  font-family: var(--display);
+  font-weight: 500;
+  display: block;
+  align-items: center;
+  line-height: normal;
+  letter-spacing: -0.1px;
 }
 
 h1 {
-    font-size: 1.467rem;
+  font-size: 1.467rem;
 }
 
 h2 {
-    font-size: 1.383rem;
+  font-size: 1.383rem;
 }
 
 h3 {
-    font-size: 1.296rem;
+  font-size: 1.296rem;
 }
 
 h4 {
-    font-size: 1.215rem;
+  font-size: 1.215rem;
 }
 
 h5 {
-    font-size: 1.138rem;
+  font-size: 1.138rem;
 }
 
 h6 {
-    font-size: 1.067rem;
+  font-size: 1.067rem;
 }
 
 /*
@@ -105,178 +105,168 @@ h6.large {
 }*/
 
 .link {
-    color: var(--primary) !important;
+  color: var(--primary) !important;
 }
 
 .inverse-link {
-    color: var(--inverse-primary) !important;
+  color: var(--inverse-primary) !important;
 }
 
 .truncate {
-    overflow: hidden;
-    white-space: nowrap !important;
-    text-overflow: ellipsis;
-    flex: inherit;
+  overflow: hidden;
+  white-space: nowrap !important;
+  text-overflow: ellipsis;
+  flex: inherit;
 }
 
-.truncate>* {
-    white-space: nowrap !important;
+.truncate > * {
+  white-space: nowrap !important;
 }
 
 .small-text {
-    font-size: 0.75rem;
+  font-size: 0.75rem;
 }
 
 .medium-text {
-    font-size: 0.875rem;
+  font-size: 0.875rem;
 }
 
 .large-text {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .upper {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .lower {
-    text-transform: lowercase;
+  text-transform: lowercase;
 }
 
 .capitalize {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .overline {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .underline {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 p {
-    margin: 0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .no-line {
-    line-height: normal;
+  line-height: normal;
 }
 
 .tiny-line {
-    line-height: 1.25rem;
+  line-height: 1.25rem;
 }
 
 .small-line {
-    line-height: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .medium-line {
-    line-height: 1.75rem;
+  line-height: 1.75rem;
 }
 
 .large-line {
-    line-height: 2rem;
+  line-height: 2rem;
 }
 
 .extra-line {
-    line-height: 2.25rem;
+  line-height: 2.25rem;
 }
 
 pre {
-    border-radius: 0;
-    background-color: var(--surface-container);
-    white-space: pre-wrap;
-    padding: 1rem;
-    border-inline-start: 0.25rem solid var(--primary);
-    font-family: inherit;
+  border-radius: 0;
+  background-color: var(--surface-container);
+  white-space: pre-wrap;
+  padding: 1rem;
+  border-inline-start: 0.25rem solid var(--primary);
+  font-family: inherit;
 }
 
 blockquote {
-    border-radius: 0;
-    padding: 1rem;
-    border-inline-start: 0.25rem solid var(--primary);
-    font-family: inherit;
+  border-radius: 0;
+  padding: 1rem;
+  border-inline-start: 0.25rem solid var(--primary);
+  font-family: inherit;
 }
 
 code {
-    border-radius: 0;
-    background-color: var(--surface-container);
-    white-space: pre-wrap;
-    padding: 0.25rem;
+  border-radius: 0;
+  background-color: var(--surface-container);
+  white-space: pre-wrap;
+  padding: 0.25rem;
 }
 
-pre>code,
-blockquote>code {
-    padding: 0;
+pre > code,
+blockquote > code {
+  padding: 0;
 }
 
-.scroll>code {
-    white-space: pre;
+.scroll > code {
+  white-space: pre;
 }
 
 pre:has(> code) {
-    direction: ltr;
-    text-align: start;
+  direction: ltr;
+  text-align: start;
 }
 
 sub {
-    vertical-align: sub;
+  vertical-align: sub;
 }
 
 sup {
-    vertical-align: super;
+  vertical-align: super;
 }
-
 
 /* TEMPORARY */
 label.font-label {
-    font-weight: 500 !important;
+  font-weight: 500 !important;
 }
 
 @media only screen and (max-width: 600px) {
-
-
-
-    .font-label {
-        font-family: var(--label-sm-font-family);
-        font-size: var(--label-sm-font-size);
-        font-weight: var(--label-sm-font-weight);
-        letter-spacing: var(--label-sm-letter-spacing);
-        line-height: var(--label-sm-line-height);
-    }
+  .font-label {
+    font-family: var(--label-sm-font-family);
+    font-size: var(--label-sm-font-size);
+    font-weight: var(--label-sm-font-weight);
+    letter-spacing: var(--label-sm-letter-spacing);
+    line-height: var(--label-sm-line-height);
+  }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-
-    .font-label {
-        font-family: var(--label-md-font-family);
-        font-size: var(--label-md-font-size);
-        font-weight: var(--label-md-font-weight);
-        letter-spacing: var(--label-md-letter-spacing);
-        line-height: var(--label-md-line-height);
-    }
-
+  .font-label {
+    font-family: var(--label-md-font-family);
+    font-size: var(--label-md-font-size);
+    font-weight: var(--label-md-font-weight);
+    letter-spacing: var(--label-md-letter-spacing);
+    line-height: var(--label-md-line-height);
+  }
 }
 
 @media only screen and (min-width: 993px) {
-
-
-
-    .font-label {
-        font-family: var(--label-lg-font-family);
-        font-size: var(--label-lg-font-size);
-        font-weight: var(--label-lg-font-weight);
-        letter-spacing: var(--label-lg-letter-spacing);
-        line-height: var(--label-lg-line-height);
-    }
-
+  .font-label {
+    font-family: var(--label-lg-font-family);
+    font-size: var(--label-lg-font-size);
+    font-weight: var(--label-lg-font-weight);
+    letter-spacing: var(--label-lg-letter-spacing);
+    line-height: var(--label-lg-line-height);
+  }
 }

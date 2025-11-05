@@ -14,13 +14,17 @@ button {
   background-color: var(--primary);
   margin: 0 0.5rem;
   border-radius: 1.25rem;
-  transition: transform var(--speed3), border-radius var(--speed3), padding var(--speed3);
+  transition:
+    transform var(--speed3),
+    border-radius var(--speed3),
+    padding var(--speed3);
   user-select: none;
   gap: 1rem;
   line-height: normal;
 }
 
-button i, .button i {
+button i,
+.button i {
   overflow: visible;
 }
 
@@ -56,7 +60,6 @@ button#lang-toggle {
   color: var(--primary);
 }
 
-
 :is(button, .segmented-button):not(.fill) {
   color: var(--on-surface);
 }
@@ -73,8 +76,8 @@ button#lang-toggle {
 
 /* Selected icon */
 .segmented-button.fill::before {
-  content: "check";
-  font-family: var(--font-icon); 
+  content: 'check';
+  font-family: var(--font-icon);
   font-size: 1.125rem;
   display: inline-block;
   margin-right: 0;
@@ -82,19 +85,16 @@ button#lang-toggle {
 }
 
 #notebook-type-filter-individual.segmented-button.fill {
-    background-color: var(--primary-container) !important;
-    color: var(--on-primary-container) !important;
-
+  background-color: var(--primary-container) !important;
+  color: var(--on-primary-container) !important;
 }
 #notebook-type-filter-third-party.segmented-button.fill {
-    background-color: var(--secondary-container) !important;
-    color: var(--on-secondary-container) !important;
-
+  background-color: var(--secondary-container) !important;
+  color: var(--on-secondary-container) !important;
 }
 #notebook-type-filter-organization.segmented-button.fill {
-    background-color: var(--tertiary-container) !important;
-    color: var(--on-tertiary-container) !important;
-
+  background-color: var(--tertiary-container) !important;
+  color: var(--on-tertiary-container) !important;
 }
 
 /* Only hide icons on label+icon buttons when active */

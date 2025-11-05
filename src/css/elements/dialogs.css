@@ -15,7 +15,9 @@ dialog {
   max-block-size: 80%;
   overflow-x: hidden;
   overflow-y: auto;
-  transition: all var(--speed3), 0s background-color;
+  transition:
+    all var(--speed3),
+    0s background-color;
   border-radius: 1.75rem;
   transform: translate(-50%, -4rem);
   outline: none;
@@ -54,7 +56,7 @@ dialog.top {
   border-radius: 0 0 1rem 1rem;
 }
 
-[dir=rtl] dialog.right,
+[dir='rtl'] dialog.right,
 dialog.left {
   opacity: 1;
   padding: 1rem;
@@ -67,7 +69,7 @@ dialog.left {
   transform: translateX(-100%);
 }
 
-[dir=rtl] dialog.left,
+[dir='rtl'] dialog.left,
 dialog.right {
   opacity: 1;
   padding: 1rem;

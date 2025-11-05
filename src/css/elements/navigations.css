@@ -1,4 +1,4 @@
-nav> :is(ol, ul),
+nav > :is(ol, ul),
 nav li {
   all: unset;
   line-height: 0;
@@ -23,12 +23,12 @@ nav.row {
   margin: 0;
 }
 
-:is(nav, .row, .max)> :only-child,
-nav> :is(ol, ul)>li> :only-child {
+:is(nav, .row, .max) > :only-child,
+nav > :is(ol, ul) > li > :only-child {
   margin: 0;
 }
 
-:is(nav, .row)>* {
+:is(nav, .row) > * {
   margin: 0;
   white-space: normal;
   flex: none;
@@ -38,11 +38,11 @@ nav> :is(ol, ul)>li> :only-child {
   gap: 0;
 }
 
-:is(nav, .row).no-space:not(.vertical)>.border+.border {
+:is(nav, .row).no-space:not(.vertical) > .border + .border {
   border-inline-start: 0;
 }
 
-:is(nav, .row).no-space.vertical>.border+.border {
+:is(nav, .row).no-space.vertical > .border + .border {
   border-top: 0;
 }
 
@@ -54,10 +54,10 @@ nav> :is(ol, ul)>li> :only-child {
   gap: 2rem;
 }
 
-:is(nav, .row)>.max,
-:is(nav, .row)> :is(ol, ul)>.max,
-nav.drawer> :is(a, label)>.max,
-nav.drawer> :is(ol, ul)>li> :is(a, label)>.max {
+:is(nav, .row) > .max,
+:is(nav, .row) > :is(ol, ul) > .max,
+nav.drawer > :is(a, label) > .max,
+nav.drawer > :is(ol, ul) > li > :is(a, label) > .max {
   flex: 1;
 }
 
@@ -66,11 +66,11 @@ nav.drawer> :is(ol, ul)>li> :is(a, label)>.max {
   flex-wrap: wrap;
 }
 
-:is(header, footer)> :is(nav, .row) {
+:is(header, footer) > :is(nav, .row) {
   min-block-size: inherit;
 }
 
-:is(nav, .row)>.border.no-margin+.border.no-margin {
+:is(nav, .row) > .border.no-margin + .border.no-margin {
   border-inline-start: 0;
 }
 
@@ -126,7 +126,6 @@ nav.right {
 nav.bottom {
   inset-block-start: auto;
 }
-
 
 #navigation-menu {
   position: fixed;
@@ -198,14 +197,12 @@ nav.drawer ol ol {
   display: none;
 }
 
-
-nav.drawer li.expanded>ul,
-nav.drawer li.expanded>ol {
+nav.drawer li.expanded > ul,
+nav.drawer li.expanded > ol {
   display: block;
 }
 
-
-:is(nav, .row)>header {
+:is(nav, .row) > header {
   background-color: inherit;
 }
 
@@ -216,18 +213,18 @@ nav.drawer>header {
   align-self: stretch;
 }*/
 
-nav.drawer>header {
+nav.drawer > header {
   height: var(--header-height);
 }
 
 nav.drawer :is(a, label),
-nav.drawer> :is(ol, ul)>li> :is(a, label, button),
+nav.drawer > :is(ol, ul) > li > :is(a, label, button),
 :is(a.row, nav.row):is(.wave, .slow-ripple, .ripple, .fast-ripple) {
   padding: 0.75rem;
 }
 
 nav.drawer a,
-nav.drawer> :is(ol, ul)>li> :is(a, button) {
+nav.drawer > :is(ol, ul) > li > :is(a, button) {
   border-radius: 2rem;
   text-align: left;
   display: block !important;
@@ -290,7 +287,7 @@ nav.drawer> :is(ol, ul)>li> :is(a, button) {
 
 /* Reset hover and shadow behavior from global buttons */
 .nav-button:hover,
-.nav-button[aria-expanded="true"] {
+.nav-button[aria-expanded='true'] {
   /*background-color: var(--secondary-container) !important;*/
   box-shadow: none !important;
 }
@@ -311,7 +308,7 @@ li.has-expansion ul {
   padding: 0px 0px 0px 8px !important;
 }
 
-li.has-expansion>button>i {
+li.has-expansion > button > i {
   position: absolute;
   right: 1.25rem;
   margin-left: 8px;
@@ -329,13 +326,13 @@ nav.drawer a.active {
 }
 
 nav.drawer a:is(.active),
-nav.drawer> :is(ol, ul)>li> :is(a, button):is(.active) {
+nav.drawer > :is(ol, ul) > li > :is(a, button):is(.active) {
   background-color: var(--secondary-container);
   font-weight: 700;
 }
 
 nav.drawer a:is(:hover)::before,
-nav.drawer> :is(ol, ul)>li> :is(a, button):is(:hover)::before {
+nav.drawer > :is(ol, ul) > li > :is(a, button):is(:hover)::before {
   content: '';
   display: block;
   position: absolute;
@@ -344,28 +341,27 @@ nav.drawer> :is(ol, ul)>li> :is(a, button):is(:hover)::before {
   opacity: 0.08;
 }
 
-nav.drawer>a:is(:hover, :focus, .active)>i,
-nav.drawer> :is(ol, ul)>li>a:is(:hover, :focus, .active)>i {
-  font-variation-settings: "FILL" 1;
+nav.drawer > a:is(:hover, :focus, .active) > i,
+nav.drawer > :is(ol, ul) > li > a:is(:hover, :focus, .active) > i {
+  font-variation-settings: 'FILL' 1;
 }
 
-nav> :is(ol, ul) {
+nav > :is(ol, ul) {
   /*all: inherit;*/
   flex: auto;
 }
 
-nav:not(.left, .right, .bottom, .top)> :is(ol, ul) {
+nav:not(.left, .right, .bottom, .top) > :is(ol, ul) {
   padding: 0;
 }
 
-
-nav:not(.left, .right, .bottom, .top)>.rail-submenu> :is(ol, ul) {
+nav:not(.left, .right, .bottom, .top) > .rail-submenu > :is(ol, ul) {
   padding: 0;
   width: 100%;
 }
 
-nav:is(.left, .right, .top, .bottom):not(.drawer)>a:not(.button, .chip),
-nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button, .chip) {
+nav:is(.left, .right, .top, .bottom):not(.drawer) > a:not(.button, .chip),
+nav:is(.left, .right, .top, .bottom):not(.drawer) > :is(ol, ul) > li > a:not(.button, .chip) {
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -373,21 +369,29 @@ nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button,
   line-height: normal;
 }
 
-nav:is(.left, .right, .top, .bottom):not(.drawer)>a:not(.button, .chip)>span,
-nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button, .chip)>span {
+nav:is(.left, .right, .top, .bottom):not(.drawer) > a:not(.button, .chip) > span,
+nav:is(.left, .right, .top, .bottom):not(.drawer)
+  > :is(ol, ul)
+  > li
+  > a:not(.button, .chip)
+  > span {
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 16px;
-  letter-spacing: .1px;
+  letter-spacing: 0.1px;
 }
 
-nav:is(.left, .right, .top, .bottom):not(.drawer)>a:not(.button, .chip).active>span,
-nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button, .chip).active>span {
+nav:is(.left, .right, .top, .bottom):not(.drawer) > a:not(.button, .chip).active > span,
+nav:is(.left, .right, .top, .bottom):not(.drawer)
+  > :is(ol, ul)
+  > li
+  > a:not(.button, .chip).active
+  > span {
   color: var(--secondary);
   font-weight: 700;
 }
 
-#navigationRail>ul {
+#navigationRail > ul {
   gap: 1rem;
 }
 
@@ -397,29 +401,37 @@ nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button,
   font-weight: 700;
 }*/
 
-nav:is(.top, .bottom):not(.drawer)>a:not(.button, .chip),
-nav:is(.top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button, .chip) {
+nav:is(.top, .bottom):not(.drawer) > a:not(.button, .chip),
+nav:is(.top, .bottom):not(.drawer) > :is(ol, ul) > li > a:not(.button, .chip) {
   inline-size: 3.5rem;
 }
 
-nav:is(.left, .right, .top, .bottom):not(.drawer)>a:not(.button, .chip)>i,
-nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button, .chip)>i {
+nav:is(.left, .right, .top, .bottom):not(.drawer) > a:not(.button, .chip) > i,
+nav:is(.left, .right, .top, .bottom):not(.drawer) > :is(ol, ul) > li > a:not(.button, .chip) > i {
   padding: 0.25rem 1rem;
   border-radius: 2rem;
   transition: padding var(--speed1) linear;
   margin: 0 auto;
 }
 
-nav:is(.left, .right, .top, .bottom):not(.drawer)>a:not(.button, .chip):is(:focus, .active)>i,
-nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button, .chip):is(:focus, .active)>i {
+nav:is(.left, .right, .top, .bottom):not(.drawer) > a:not(.button, .chip):is(:focus, .active) > i,
+nav:is(.left, .right, .top, .bottom):not(.drawer)
+  > :is(ol, ul)
+  > li
+  > a:not(.button, .chip):is(:focus, .active)
+  > i {
   background-color: var(--secondary-container);
   color: var(--on-secondary-container);
   padding: 0.25rem 1rem;
-  font-variation-settings: "FILL" 1;
+  font-variation-settings: 'FILL' 1;
 }
 
-nav:is(.left, .right, .top, .bottom):not(.drawer)>a:not(.button, .chip):is(:hover)>i::before,
-nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button, .chip):is(:hover)>i::before {
+nav:is(.left, .right, .top, .bottom):not(.drawer) > a:not(.button, .chip):is(:hover) > i::before,
+nav:is(.left, .right, .top, .bottom):not(.drawer)
+  > :is(ol, ul)
+  > li
+  > a:not(.button, .chip):is(:hover)
+  > i::before {
   content: '';
   display: block;
   position: absolute;
@@ -452,20 +464,20 @@ nav:is(.left, .right, .top, .bottom):not(.drawer)> :is(ol, ul)>li>a:not(.button,
   align-items: center;
 }
 
-:is(.drawer, .vertical)> :is(li, [class*=divider], hr):not(.vertical),
-:is(.drawer, .vertical)> :is(ol, ul)>li:not(.vertical) {
+:is(.drawer, .vertical) > :is(li, [class*='divider'], hr):not(.vertical),
+:is(.drawer, .vertical) > :is(ol, ul) > li:not(.vertical) {
   align-self: stretch;
 }
 
-nav:not(.left, .right)>.space {
+nav:not(.left, .right) > .space {
   inline-size: 0.5rem;
 }
 
-nav:not(.left, .right)>.medium-space {
+nav:not(.left, .right) > .medium-space {
   inline-size: 1rem;
 }
 
-nav:not(.left, .right)>.large-space {
+nav:not(.left, .right) > .large-space {
   inline-size: 1.5rem;
 }
 
@@ -486,7 +498,7 @@ nav.tabbed.large {
   block-size: 5rem;
 }
 
-nav.tabbed>a {
+nav.tabbed > a {
   border-radius: inherit;
   block-size: inherit;
   display: inline-flex;
@@ -498,18 +510,18 @@ nav.tabbed>a {
   text-decoration: none;
 }
 
-nav.tabbed.tabs>a.active::before {
+nav.tabbed.tabs > a.active::before {
   block-size: 0;
 }
 
-nav.tabbed>a.active {
+nav.tabbed > a.active {
   color: var(--on-secondary-container);
   background-color: var(--secondary-container);
   border-bottom: none;
 }
 
-nav.tabbed>a.active>i {
-  font-variation-settings: "FILL" 1;
+nav.tabbed > a.active > i {
+  font-variation-settings: 'FILL' 1;
 }
 
 nav.toolbar {
@@ -524,7 +536,7 @@ nav.toolbar {
   min-inline-size: 4rem;
 }
 
-nav.toolbar>a {
+nav.toolbar > a {
   display: inline-flex;
   gap: 0.5rem;
   min-inline-size: 2.5rem;
@@ -532,11 +544,11 @@ nav.toolbar>a {
   border-radius: 1.75rem;
 }
 
-nav.toolbar>a:has(> :not(i)) {
+nav.toolbar > a:has(> :not(i)) {
   padding: 0 1rem;
 }
 
-nav.toolbar>a.active {
+nav.toolbar > a.active {
   background-color: var(--secondary-container);
   color: var(--on-secondary-container);
 }
@@ -546,7 +558,7 @@ nav.toolbar.fill {
   color: var(--on-primary-container) !important;
 }
 
-nav.toolbar.fill>a.active {
+nav.toolbar.fill > a.active {
   background-color: var(--surface-container) !important;
   color: var(--on-surface) !important;
 }
@@ -559,12 +571,12 @@ nav.toolbar.vertical {
   align-items: center !important;
 }
 
-nav.toolbar.vertical>a {
+nav.toolbar.vertical > a {
   inline-size: 2.5rem;
   block-size: 2.5rem;
 }
 
-nav.toolbar.vertical>a> :is(div, span):not(.badge, .tooltip) {
+nav.toolbar.vertical > a > :is(div, span):not(.badge, .tooltip) {
   display: none;
 }
 
@@ -573,11 +585,11 @@ nav.toolbar.max {
   display: flex;
 }
 
-:not(nav)> :is(ul, ol) {
+:not(nav) > :is(ul, ol) {
   all: revert;
 }
 
-:is(.scroll, .no-scroll, .no-space, .tabs, .tabbed)> :focus-visible {
+:is(.scroll, .no-scroll, .no-space, .tabs, .tabbed) > :focus-visible {
   outline: 0.125rem solid var(--primary);
   outline-offset: -0.125rem;
 }
@@ -604,7 +616,6 @@ nav.toolbar.max {
 }
 
 @media only screen and (max-width: 600px) {
-
   nav.top,
   nav.bottom {
     justify-content: space-around;
@@ -617,7 +628,6 @@ nav.toolbar.max {
   #client-menu-container.open {
     display: flex;
   }
-
 }
 
 @media screen and (min-width: 600px) and (max-width: 839px) {

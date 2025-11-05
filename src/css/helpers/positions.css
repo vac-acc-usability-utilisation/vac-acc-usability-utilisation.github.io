@@ -27,7 +27,7 @@
   transform: translateX(-50%);
 }
 
-[dir=rtl] .center {
+[dir='rtl'] .center {
   transform: translateX(50%);
 }
 
@@ -40,6 +40,6 @@
   transform: translate(-50%, -50%);
 }
 
-[dir=rtl] .middle.center {
+[dir='rtl'] .middle.center {
   transform: translate(50%, -50%);
 }

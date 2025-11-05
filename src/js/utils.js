@@ -5,12 +5,12 @@ export const fetchCache = new Map();
  * Returns text for .html/.json etc.
  */
 export async function fetchWithCache(url, options) {
-    if (fetchCache.has(url)) return fetchCache.get(url);
-    const resp = await fetch(url, options);
-    if (!resp.ok) throw new Error(`Failed to fetch ${url}: ${resp.status}`);
-    const text = await resp.text();
-    fetchCache.set(url, text);
-    return text;
+  if (fetchCache.has(url)) return fetchCache.get(url);
+  const resp = await fetch(url, options);
+  if (!resp.ok) throw new Error(`Failed to fetch ${url}: ${resp.status}`);
+  const text = await resp.text();
+  fetchCache.set(url, text);
+  return text;
 }
 
 /**
@@ -20,11 +20,11 @@ export async function fetchWithCache(url, options) {
  * @returns {Function} - A debounced version of the function.
  */
 export function debounce(fn, wait = 250) {
-    let t;
-    return function (...args) {
-        clearTimeout(t);
-        t = setTimeout(() => fn.apply(this, args), wait);
-    };
+  let t;
+  return function (...args) {
+    clearTimeout(t);
+    t = setTimeout(() => fn.apply(this, args), wait);
+  };
 }
 
 // Constants

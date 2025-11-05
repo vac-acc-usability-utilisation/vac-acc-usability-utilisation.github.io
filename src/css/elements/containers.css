@@ -1,4 +1,4 @@
- /* main {
+/* main {
   inset-inline-start: 0.5rem;
   inset-inline-end: 0.5rem;
   width: calc(100% - 1rem);
@@ -29,7 +29,6 @@ main.drawer-open {
   }
 }
 
-
 main.responsive {
   flex: 1;
   padding: 0.5rem;
@@ -52,7 +51,7 @@ main.responsive {
 }
 
 .limit-content-width {
-  max-width: 1239px; 
+  max-width: 1239px;
   margin: 0 auto;
 }
 
@@ -72,7 +71,6 @@ main.responsive {
 #app.full-screen > nav.left {
   padding-inline-start: calc(var(--left));
 }*/
-
 
 *:has(> nav.right:not(.s, .m, .l)) {
   padding-inline-end: calc(var(--right) + 5rem);
@@ -154,7 +152,6 @@ aside:not(.fixed, .absolute).left {
   #app.full-screen > main.has-supporting-pane {
     width: calc(100% - 11.5rem - 360px) !important;
   }
-
 }
 
 @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -200,7 +197,6 @@ aside:not(.fixed, .absolute).left {
   #app.full-screen > main.has-supporting-pane {
     width: calc(100% - 11.5rem - 360px) !important;
   }
-
 }
 
 @media only screen and (min-width: 993px) {
@@ -218,14 +214,13 @@ aside:not(.fixed, .absolute).left {
   }*/
 
   #app.full-screen:has(> nav.l.left) {
-    padding-inline-start: calc(var(--left) + 14.5rem );
+    padding-inline-start: calc(var(--left) + 14.5rem);
   }
-
 
   *:has(> nav.l.right) {
     padding-inline-end: calc(var(--right) + 5rem);
   }
-/*
+  /*
   *:has(> nav.l.drawer.left) {
     padding-inline-start: calc(var(--left) + 20rem);
   }*/
@@ -252,7 +247,6 @@ aside:not(.fixed, .absolute).left {
   #app.full-screen > main.has-supporting-pane {
     width: calc(100% - 11.5rem - 360px) !important;
   }
-  
 }
 
 @media only screen and (max-width: 600px) {
@@ -277,8 +271,7 @@ aside:not(.fixed, .absolute).left {
   }
 }
 
-
-@media screen and (min-width: 600px) and (max-width: 839px) {  
+@media screen and (min-width: 600px) and (max-width: 839px) {
   main.responsive {
     padding-inline: calc(var(--left) + 0.5rem) calc(var(--right) + 0.5rem);
   }

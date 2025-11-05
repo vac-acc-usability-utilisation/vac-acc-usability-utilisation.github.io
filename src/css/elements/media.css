@@ -5,7 +5,10 @@ svg {
 :is(img, svg, video):is(.small, .medium, .large, .tiny, .extra, .round, .circle, .responsive) {
   object-fit: cover;
   object-position: center;
-  transition: transform var(--speed3), border-radius var(--speed3), padding var(--speed3);
+  transition:
+    transform var(--speed3),
+    border-radius var(--speed3),
+    padding var(--speed3);
   block-size: 3rem;
   inline-size: 3rem;
 }
@@ -94,7 +97,8 @@ svg {
   inline-size: 24rem;
 }
 
-:is(button, .button, .chip, .field) > :is(img, svg):not(.responsive, .tiny, .small, .medium, .large, .extra),
+:is(button, .button, .chip, .field)
+  > :is(img, svg):not(.responsive, .tiny, .small, .medium, .large, .extra),
 .tabs :is(img, svg):not(.responsive, .tiny, .small, .medium, .large, .extra) {
   min-inline-size: 1.5rem;
   max-inline-size: 1.5rem;

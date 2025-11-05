@@ -1,10 +1,10 @@
 .brand {
-    width: 222px;
-    height: 16px;
-    padding: 0 16px 0 0;
-    line-height: 0;
+  width: 222px;
+  height: 16px;
+  padding: 0 16px 0 0;
+  line-height: 0;
 }
 
 nav:is(.top, .bottom) > div.row > .brand {
-    padding-left: 0.5rem;
-  }
+  padding-left: 0.5rem;
+}

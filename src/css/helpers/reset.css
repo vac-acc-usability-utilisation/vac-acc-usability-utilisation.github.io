@@ -59,12 +59,38 @@ body ::-webkit-scrollbar-button {
   block-size: 0.4rem;
 }
 
-body :is(:hover,:focus)::-webkit-scrollbar-thumb {
+body :is(:hover, :focus)::-webkit-scrollbar-thumb {
   background: var(--outline);
   border-radius: 1rem;
 }
 
-* + :is(address, article, blockquote, code, .field, fieldset, form, .grid, h1, h2, h3, h4, h5, h6, nav, ol, p, pre, .row, section, aside, table, .tabs, ul) {
+*
+  + :is(
+    address,
+    article,
+    blockquote,
+    code,
+    .field,
+    fieldset,
+    form,
+    .grid,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    nav,
+    ol,
+    p,
+    pre,
+    .row,
+    section,
+    aside,
+    table,
+    .tabs,
+    ul
+  ) {
   margin-block-start: 1rem;
 }
 

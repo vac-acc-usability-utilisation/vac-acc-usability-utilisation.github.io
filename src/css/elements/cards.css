@@ -5,7 +5,10 @@ article {
   padding: 1.5rem 1.5rem 2.25rem 1.5rem;
   border-radius: 0.75rem !important;
   display: block;
-  transition: transform var(--speed3), border-radius var(--speed3), padding var(--speed3);
+  transition:
+    transform var(--speed3),
+    border-radius var(--speed3),
+    padding var(--speed3);
 }
 
 div.grid article {
@@ -21,11 +24,10 @@ div.grid.selectable-grid article:hover {
   cursor: pointer;
 }
 
-a.card  {
+a.card {
   text-decoration: none !important;
   border-radius: 0.75rem !important;
 }
-
 
 article.active {
   background: var(--secondary-container);
@@ -50,10 +52,10 @@ article.overview-card h2 {
   align-items: center;
 }
 
-article.overview-card  .overview-card-edit-btn {
-  display:  none;
+article.overview-card .overview-card-edit-btn {
+  display: none;
 }
 
-article.overview-card:hover  .overview-card-edit-btn {
-  display:  block;
+article.overview-card:hover .overview-card-edit-btn {
+  display: block;
 }

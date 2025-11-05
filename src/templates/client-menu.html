@@ -1,148 +1,162 @@
-<nav class="drawer" style="width: 14rem;">
-    <ul role="menubar">
+<nav class="drawer" style="width: 14rem">
+  <ul role="menubar">
+    <li role="none">
+      <a data-ui="client" class="active"> Client overview </a>
+    </li>
+    <li role="none">
+      <a data-ui="client/notes"> Notes </a>
+    </li>
+    <li role="none">
+      <a data-ui="client/work-items"> Work items </a>
+    </li>
+    <li role="none">
+      <a data-ui="client/status-tracking"> Status tracking </a>
+    </li>
+    <li role="none" class="has-expansion">
+      <button
+        class="nav-button expandable"
+        aria-expanded="false"
+        aria-controls="benefits-expansion"
+      >
+        Benefits
+        <i class="icon">arrow_drop_down</i>
+      </button>
+      <ul id="benefits-expansion">
         <li role="none">
-            <a data-ui="client" class="active">
-                Client overview
-            </a>
-        </li>
-        <li role="none">
-            <a data-ui="client/notes">
-                Notes
-            </a>
-        </li>
-        <li role="none">
-            <a data-ui="client/work-items">
-                Work items
-            </a>
-        </li>
-        <li role="none">
-            <a data-ui="client/status-tracking">
-                Status tracking
-            </a>
-        </li>
-        <li role="none" class="has-expansion">
-            <button class="nav-button expandable" aria-expanded="false" aria-controls="benefits-expansion">
-                Benefits
-                <i class="icon">arrow_drop_down</i>
-            </button>
-            <ul id="benefits-expansion">
-                <li role="none">
-                    <a data-ui="client/benefits">Benefits overview</a>
-                </li>
-                <li role="none">
-                    <a data-ui="client/summary-of-assessment">Summary of Assessment</a>
-                </li>
-            </ul>
-        </li>
-        <li role="none" class="has-expansion">
-            <button class="nav-button expandable" aria-expanded="false" aria-controls="decision-making-expansion">
-                Decision making
-                <i class="icon">arrow_drop_down</i>
-            </button>
-            <ul id="decision-making-expansion">
-                <li role="none">
-                    <a data-ui="client/applications">Applications</a>
-                </li>
-                <li role="none">
-                    <a data-ui="client/adjudication-episodes">Adjudication episodes</a>
-                </li>
-                <li role="none">
-                    <a data-ui="client/decision-dockets">Decision dockets</a>
-                </li>
-                <li role="none">
-                    <a data-ui="client/flag-initial-calls">Flag initial calls</a>
-                </li>
-            </ul>
-        </li>
-        <li role="none" class="has-expansion">
-            <button class="nav-button expandable" aria-expanded="false"
-                aria-controls="document-correspondence-expansion">
-                Documents/Correspondence
-                <i class="icon">arrow_drop_down</i>
-            </button>
-            <ul id="document-correspondence-expansion">
-                <li role="none">
-                    <a data-ui="client/documents">Documents</a>
-                </li>
-            </ul>
+          <a data-ui="client/benefits">Benefits overview</a>
         </li>
         <li role="none">
-            <a data-ui="client/events">
-                Events
-            </a>
+          <a data-ui="client/summary-of-assessment">Summary of Assessment</a>
         </li>
-        <li role="none" class="has-expansion">
-            <button class="nav-button expandable" aria-expanded="false" aria-controls="financial-details-expansion">
-                Financial details
-                <i class="icon">arrow_drop_down</i>
-            </button>
-            <ul id="financial-details-expansion">
-                <li role="none">
-                    <a data-ui="client/disbursement-instructions">Disbursement instructions</a>
-                </li>
-                <li role="none">
-                    <a data-ui="client/withholds">Withholds</a>
-                </li>
-            </ul>
-        </li>
-        <li role="none" class="has-expansion">
-            <button class="nav-button expandable" aria-expanded="false" aria-controls="personal-information-expansion">
-                Personal information
-                <i class="icon">arrow_drop_down</i>
-            </button>
-            <ul id="personal-information-expansion">
-                <li role="none">
-                    <a data-ui="client/addresses">Addresses</a>
-                </li>
-                <li role="none">
-                    <a data-ui="client/contacts">Contacts</a>
-                </li>
-                <li role="none">
-                    <a data-ui="client/telecommunications">Telecommunications</a>
-                </li>
-                <li role="none">
-                    <a data-ui="client/interrelationships">Interrelationships</a>
-                </li>
-                <li role="none">
-                    <a data-ui="client/death-info">Death info</a>
-                </li>
-            </ul>
+      </ul>
+    </li>
+    <li role="none" class="has-expansion">
+      <button
+        class="nav-button expandable"
+        aria-expanded="false"
+        aria-controls="decision-making-expansion"
+      >
+        Decision making
+        <i class="icon">arrow_drop_down</i>
+      </button>
+      <ul id="decision-making-expansion">
+        <li role="none">
+          <a data-ui="client/applications">Applications</a>
         </li>
         <li role="none">
-            <a data-ui="client/security">Security</a>
+          <a data-ui="client/adjudication-episodes">Adjudication episodes</a>
         </li>
         <li role="none">
-            <a data-ui="client/service-periods">Service periods</a>
+          <a data-ui="client/decision-dockets">Decision dockets</a>
         </li>
-        <li role="none" class="has-expansion">
-            <button class="nav-button expandable" aria-expanded="false" aria-controls="external-links-expansion">
-                External links
-                <i class="icon">arrow_drop_down</i>
-            </button>
-            <ul id="external-links-expansion">
-                <li role="none">
-                    <a data-ui="client/digital-images">Digital Images</a>
-                </li>
-                <li role="none">
-                    <a data-ui="client/mbc-portal">MBC Portal</a>
-                </li>
-                <li role="none">
-                    <a data-ui="client/cts-etb-gccase">CTS/ETB GCCase</a>
-                </li>
-                <li role="none">
-                    <a data-ui="client/pfl-gccase">PFL GCCase</a>
-                </li>
-                <li role="none">
-                    <a data-ui="client/standard-payment-system">Standard Payment System</a>
-                </li>
-                <li role="none">
-                    <a data-ui="client/mva-administration">My VAC Account Administration</a>
-                </li>
-                <li role="none">
-                    <a data-ui="client/veterans-independence-program" title="Veterans Independence Program">Veterans
-                        Independence Program</a>
-                </li>
-            </ul>
+        <li role="none">
+          <a data-ui="client/flag-initial-calls">Flag initial calls</a>
         </li>
-    </ul>
+      </ul>
+    </li>
+    <li role="none" class="has-expansion">
+      <button
+        class="nav-button expandable"
+        aria-expanded="false"
+        aria-controls="document-correspondence-expansion"
+      >
+        Documents/Correspondence
+        <i class="icon">arrow_drop_down</i>
+      </button>
+      <ul id="document-correspondence-expansion">
+        <li role="none">
+          <a data-ui="client/documents">Documents</a>
+        </li>
+      </ul>
+    </li>
+    <li role="none">
+      <a data-ui="client/events"> Events </a>
+    </li>
+    <li role="none" class="has-expansion">
+      <button
+        class="nav-button expandable"
+        aria-expanded="false"
+        aria-controls="financial-details-expansion"
+      >
+        Financial details
+        <i class="icon">arrow_drop_down</i>
+      </button>
+      <ul id="financial-details-expansion">
+        <li role="none">
+          <a data-ui="client/disbursement-instructions">Disbursement instructions</a>
+        </li>
+        <li role="none">
+          <a data-ui="client/withholds">Withholds</a>
+        </li>
+      </ul>
+    </li>
+    <li role="none" class="has-expansion">
+      <button
+        class="nav-button expandable"
+        aria-expanded="false"
+        aria-controls="personal-information-expansion"
+      >
+        Personal information
+        <i class="icon">arrow_drop_down</i>
+      </button>
+      <ul id="personal-information-expansion">
+        <li role="none">
+          <a data-ui="client/addresses">Addresses</a>
+        </li>
+        <li role="none">
+          <a data-ui="client/contacts">Contacts</a>
+        </li>
+        <li role="none">
+          <a data-ui="client/telecommunications">Telecommunications</a>
+        </li>
+        <li role="none">
+          <a data-ui="client/interrelationships">Interrelationships</a>
+        </li>
+        <li role="none">
+          <a data-ui="client/death-info">Death info</a>
+        </li>
+      </ul>
+    </li>
+    <li role="none">
+      <a data-ui="client/security">Security</a>
+    </li>
+    <li role="none">
+      <a data-ui="client/service-periods">Service periods</a>
+    </li>
+    <li role="none" class="has-expansion">
+      <button
+        class="nav-button expandable"
+        aria-expanded="false"
+        aria-controls="external-links-expansion"
+      >
+        External links
+        <i class="icon">arrow_drop_down</i>
+      </button>
+      <ul id="external-links-expansion">
+        <li role="none">
+          <a data-ui="client/digital-images">Digital Images</a>
+        </li>
+        <li role="none">
+          <a data-ui="client/mbc-portal">MBC Portal</a>
+        </li>
+        <li role="none">
+          <a data-ui="client/cts-etb-gccase">CTS/ETB GCCase</a>
+        </li>
+        <li role="none">
+          <a data-ui="client/pfl-gccase">PFL GCCase</a>
+        </li>
+        <li role="none">
+          <a data-ui="client/standard-payment-system">Standard Payment System</a>
+        </li>
+        <li role="none">
+          <a data-ui="client/mva-administration">My VAC Account Administration</a>
+        </li>
+        <li role="none">
+          <a data-ui="client/veterans-independence-program" title="Veterans Independence Program"
+            >Veterans Independence Program</a
+          >
+        </li>
+      </ul>
+    </li>
+  </ul>
 </nav>

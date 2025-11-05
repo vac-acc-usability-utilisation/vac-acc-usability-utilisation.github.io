@@ -1,8 +1,15 @@
-[class*=padding]:not(.left-padding, .right-padding, .top-padding, .bottom-padding, .horizontal-padding, .vertical-padding) {
+[class*='padding']:not(
+  .left-padding,
+  .right-padding,
+  .top-padding,
+  .bottom-padding,
+  .horizontal-padding,
+  .vertical-padding
+) {
   padding: var(---padding) !important;
 }
 
-[class*=padding] {
+[class*='padding'] {
   ---padding: 1rem;
 }
 

@@ -6,19 +6,19 @@ import { initI18n, initLanguageToggle } from './language.js';
 
 // On DOM ready, initialize navigation and language features
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('VAC   .\\^/.   ACC\nACC  \\=%¥%=/  VAC\nVAC   ^`|`^   ACC');
-    console.log('App initialized');
+  console.log('VAC   .\\^/.   ACC\nACC  \\=%¥%=/  VAC\nVAC   ^`|`^   ACC');
+  console.log('App initialized');
 
-    updateNavigation();
+  updateNavigation();
 
-    // Initialize i18n for translations
-    initI18n();
-    initLanguageToggle();
+  // Initialize i18n for translations
+  initI18n();
+  initLanguageToggle();
 });
 
 // Reload navigation and routing when the URL hash changes
-window.addEventListener("hashchange", () => {
-    updateNavigation()
+window.addEventListener('hashchange', () => {
+  updateNavigation();
 });
 
 /**
@@ -26,18 +26,18 @@ window.addEventListener("hashchange", () => {
  * Called on initial load and whenever the hash changes.
  */
 function updateNavigation() {
-    const product = getCurrentProduct();
-    const mode = getCurrentMode();
-    loadNavigation(product, mode);
+  const product = getCurrentProduct();
+  const mode = getCurrentMode();
+  loadNavigation(product, mode);
 }
 
 // Map of navigation templates by product and mode
 const navTemplates = {
-    csa: {
-        design: 'src/templates/csa/design/rail.html',
-        demo: 'src/templates/csa/demo/rail.html',
-        default: 'src/templates/design-rail.html'
-    }
+  csa: {
+    design: 'src/templates/csa/design/rail.html',
+    demo: 'src/templates/csa/demo/rail.html',
+    default: 'src/templates/design-rail.html',
+  },
 };
 
 /**
@@ -47,9 +47,9 @@ const navTemplates = {
  * @returns {string} Path to the navigation template HTML file
  */
 function getNavTemplate(product, mode) {
-    const productTemplates = navTemplates[product];
-    if (!productTemplates) return '';
-    return productTemplates[mode] || productTemplates.default;
+  const productTemplates = navTemplates[product];
+  if (!productTemplates) return '';
+  return productTemplates[mode] || productTemplates.default;
 }
 
 /**
@@ -59,51 +59,50 @@ function getNavTemplate(product, mode) {
  * @param {string} mode - The mode key
  */
 async function loadNavigation(product, mode) {
-    const nav = document.getElementById('navigationRail');
-    if (!nav) {
-        console.error('navigationRail element not found');
-        return;
-    }
+  const nav = document.getElementById('navigationRail');
+  if (!nav) {
+    console.error('navigationRail element not found');
+    return;
+  }
 
-    const navTemplate = getNavTemplate(product, mode);
-    if (navTemplate) {
-        try {
-            const response = await fetch(navTemplate);
-            if (!response.ok) throw new Error('Failed to load navigation template');
-            nav.innerHTML = await response.text();
-            initNavigation(); // Set up navigation event handlers
-            handleRouting(); // Load the correct page content
-        } catch (err) {
-            console.error('Error loading navigation:', err);
-        }
+  const navTemplate = getNavTemplate(product, mode);
+  if (navTemplate) {
+    try {
+      const response = await fetch(navTemplate);
+      if (!response.ok) throw new Error('Failed to load navigation template');
+      nav.innerHTML = await response.text();
+      initNavigation(); // Set up navigation event handlers
+      handleRouting(); // Load the correct page content
+    } catch (err) {
+      console.error('Error loading navigation:', err);
     }
+  }
 
-    // Load the demo's navigation menu 
-    const navigationMenu = document.getElementById('navigation-menu');
-    if (!navigationMenu) return;
+  // Load the demo's navigation menu
+  const navigationMenu = document.getElementById('navigation-menu');
+  if (!navigationMenu) return;
+
+  try {
+    const response = await fetch('src/templates/csa/demo/navigation-menu.html');
+    if (!response.ok) throw new Error('Failed to load navigationMenu menu template');
+    navigationMenu.innerHTML = await response.text();
+  } catch (err) {
+    console.error('Error loading navigation menu:', err);
+  }
+
+  if (product === 'csa' && mode === 'demo') {
+    // Load the demo's account menu
+    const accountMenu = document.getElementById('account-menu');
+
+    if (!accountMenu) return;
 
     try {
-        const response = await fetch('src/templates/csa/demo/navigation-menu.html');
-        if (!response.ok) throw new Error('Failed to load navigationMenu menu template');
-        navigationMenu.innerHTML = await response.text();
+      const response = await fetch('src/templates/csa/demo/account-menu.html');
+      if (!response.ok) throw new Error('Failed to load account menu template');
+      accountMenu.innerHTML = await response.text();
+      accountMenu.classList.remove('hidden');
     } catch (err) {
-        console.error('Error loading navigation menu:', err);
+      console.error('Error loading account menu:', err);
     }
-
-    if (product === 'csa' && mode === 'demo') {
-        // Load the demo's account menu
-        const accountMenu = document.getElementById('account-menu');
-
-        if (!accountMenu) return;
-
-        try {
-            const response = await fetch('src/templates/csa/demo/account-menu.html');
-            if (!response.ok) throw new Error('Failed to load account menu template');
-            accountMenu.innerHTML = await response.text();
-            accountMenu.classList.remove('hidden');
-        } catch (err) {
-            console.error('Error loading account menu:', err);
-        }
-
-    }
+  }
 }

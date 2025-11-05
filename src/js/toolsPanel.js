@@ -8,35 +8,41 @@ import { debounce } from './utils.js'; // Ensure debounce is imported
  */
 
 export function setupToolsPanel(buttonSelector, content) {
-    
-    // Wait for DOM update (in case content is loaded dynamically)
-    setTimeout(() => {
-        const btn = document.querySelector(buttonSelector);
-        if (!btn) return;
+  // Wait for DOM update (in case content is loaded dynamically)
+  setTimeout(() => {
+    const btn = document.querySelector(buttonSelector);
+    if (!btn) return;
 
-        btn.addEventListener('click', debounce(async () => {
-            console.log('Tools Panel button clicked:', buttonSelector);
-            
-            const panel = document.getElementById('toolsPanel');
-            if (!panel) return;
-            panel.classList.remove('hidden');
+    btn.addEventListener(
+      'click',
+      debounce(async () => {
+        console.log('Tools Panel button clicked:', buttonSelector);
 
-            //btn.classList.remove('primary-container');
-            //btn.classList.add('transparent', 'border');
-            //btn.innerHTML = ' <i class="on-surface-variant">close</i> Close';
+        const panel = document.getElementById('toolsPanel');
+        if (!panel) return;
+        panel.classList.remove('hidden');
 
-            // If content is a function, call it; if it's a path, fetch; else use as HTML
-            if (typeof content === 'function') {
-                panel.innerHTML = await content();
-            } else if (typeof content === 'string' && content.endsWith('.html')) {
-                const resp = await fetch(content);
-                panel.innerHTML = await resp.text();
-            } else {
-                panel.innerHTML = content;
-            }
+        //btn.classList.remove('primary-container');
+        //btn.classList.add('transparent', 'border');
+        //btn.innerHTML = ' <i class="on-surface-variant">close</i> Close';
 
-            // Initialize minimal select-searchable behaviour for any newly injected content
-            try { initSelectSearchable(panel); } catch (e) { console.warn('initSelectSearchable failed in toolsPanel', e); }
-        }, 250));
-    }, 0);
+        // If content is a function, call it; if it's a path, fetch; else use as HTML
+        if (typeof content === 'function') {
+          panel.innerHTML = await content();
+        } else if (typeof content === 'string' && content.endsWith('.html')) {
+          const resp = await fetch(content);
+          panel.innerHTML = await resp.text();
+        } else {
+          panel.innerHTML = content;
+        }
+
+        // Initialize minimal select-searchable behaviour for any newly injected content
+        try {
+          initSelectSearchable(panel);
+        } catch (e) {
+          console.warn('initSelectSearchable failed in toolsPanel', e);
+        }
+      }, 250)
+    );
+  }, 0);
 }

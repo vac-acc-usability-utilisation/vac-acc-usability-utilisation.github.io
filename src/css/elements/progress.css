@@ -38,7 +38,7 @@ progress.large {
 }
 
 progress:not(.circle, [value])::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   inline-size: 100%;
@@ -97,7 +97,7 @@ progress.circle.large {
   border-width: 0.4rem;
 }
 
-:is(nav, .row, .field)>progress:not(.circle, .small, .medium, .large) {
+:is(nav, .row, .field) > progress:not(.circle, .small, .medium, .large) {
   flex: auto;
 }
 
@@ -127,15 +127,15 @@ progress.max.vertical {
   transform: rotate(-180deg);
 }
 
-progress.max+* {
+progress.max + * {
   margin-block-start: 0;
 }
 
-:is(.button, button, .chip)>progress.circle {
+:is(.button, button, .chip) > progress.circle {
   color: inherit;
 }
 
-@supports (-moz-appearance:none) {
+@supports (-moz-appearance: none) {
   progress.max.vertical {
     transform: none;
   }
@@ -165,31 +165,101 @@ progress.max+* {
   }
 
   20% {
-    clip-path: polygon(50% 50%, 0% 0%, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+    clip-path: polygon(
+      50% 50%,
+      0% 0%,
+      50% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%
+    );
   }
 
   30% {
-    clip-path: polygon(50% 50%, 0% 0%, 50% 0%, 100% 0%, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 50%);
+    clip-path: polygon(
+      50% 50%,
+      0% 0%,
+      50% 0%,
+      100% 0%,
+      100% 50%,
+      100% 50%,
+      100% 50%,
+      100% 50%,
+      100% 50%
+    );
   }
 
   40% {
-    clip-path: polygon(50% 50%, 0% 0%, 50% 0%, 100% 0%, 100% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%);
+    clip-path: polygon(
+      50% 50%,
+      0% 0%,
+      50% 0%,
+      100% 0%,
+      100% 50%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      100% 100%
+    );
   }
 
   50% {
-    clip-path: polygon(50% 50%, 50% 0%, 50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 50% 100%, 50% 100%);
+    clip-path: polygon(
+      50% 50%,
+      50% 0%,
+      50% 0%,
+      100% 0%,
+      100% 50%,
+      100% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%
+    );
   }
 
   60% {
-    clip-path: polygon(50% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 100%);
+    clip-path: polygon(
+      50% 50%,
+      100% 50%,
+      100% 50%,
+      100% 50%,
+      100% 50%,
+      100% 100%,
+      50% 100%,
+      0% 100%,
+      0% 100%
+    );
   }
 
   70% {
-    clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%, 0% 50%);
+    clip-path: polygon(
+      50% 50%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      0% 100%,
+      0% 50%
+    );
   }
 
   80% {
-    clip-path: polygon(50% 50%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 50%);
+    clip-path: polygon(
+      50% 50%,
+      0% 100%,
+      0% 100%,
+      0% 100%,
+      0% 100%,
+      0% 100%,
+      0% 100%,
+      0% 100%,
+      0% 50%
+    );
   }
 
   90% {

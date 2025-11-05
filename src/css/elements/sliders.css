@@ -1,8 +1,8 @@
 .slider {
   ---start: 0%;
   ---end: 0%;
-  ---value1: "";
-  ---value2: "";
+  ---value1: '';
+  ---value2: '';
 
   display: flex;
   align-items: center !important;
@@ -13,7 +13,7 @@
   direction: ltr;
 }
 
-[dir=rtl] .slider {
+[dir='rtl'] .slider {
   transform: scaleX(-1);
 }
 
@@ -110,17 +110,17 @@
 }
 
 .slider > input:disabled::-webkit-slider-thumb {
-  background: #9E9E9E;
+  background: #9e9e9e;
   cursor: not-allowed;
 }
 
 .slider > input:disabled::-moz-range-thumb {
-  background: #9E9E9E;
+  background: #9e9e9e;
   cursor: not-allowed;
 }
 
 .slider > input:disabled ~ span {
-  background: #9E9E9E;
+  background: #9e9e9e;
 }
 
 .slider > span {
@@ -133,9 +133,14 @@
   clip-path: polygon(0 0, calc(100% - 0.5rem) 0, calc(100% - 0.5rem) 100%, 0 100%);
 }
 
-.slider > input[type=range] + input[type=range] ~ span {
+.slider > input[type='range'] + input[type='range'] ~ span {
   border-radius: 0;
-  clip-path: polygon(0.5rem 0, max(0.5rem, calc(100% - 0.5rem)) 0, max(0.5rem, calc(100% - 0.5rem)) 100%, 0.5rem 100%);
+  clip-path: polygon(
+    0.5rem 0,
+    max(0.5rem, calc(100% - 0.5rem)) 0,
+    max(0.5rem, calc(100% - 0.5rem)) 100%,
+    0.5rem 100%
+  );
 }
 
 .field > .slider {
@@ -143,13 +148,24 @@
 }
 
 .slider::before {
-  content: "";
+  content: '';
   position: absolute;
   inline-size: 100%;
   block-size: 1rem;
   border-radius: 1rem;
   background: var(--primary-container);
-  clip-path: polygon(calc(var(---start) - 0.5rem) 0, 0 0, 0 100%, calc(var(---start) - 0.5rem) 100%, calc(var(---start) - 0.5rem) 0, calc(100% - var(---end) + 0.5rem) 0, 100% 0, 100% 100%, calc(100% - var(---end) + 0.5rem) 100%, calc(100% - var(---end) + 0.5rem) 0);
+  clip-path: polygon(
+    calc(var(---start) - 0.5rem) 0,
+    0 0,
+    0 100%,
+    calc(var(---start) - 0.5rem) 100%,
+    calc(var(---start) - 0.5rem) 0,
+    calc(100% - var(---end) + 0.5rem) 0,
+    100% 0,
+    100% 100%,
+    calc(100% - var(---end) + 0.5rem) 100%,
+    calc(100% - var(---end) + 0.5rem) 0
+  );
 }
 
 .slider:has(> [disabled])::before {
@@ -161,12 +177,14 @@
   opacity: 0 !important;
   inset: 0 auto auto calc(100% - var(---end));
   border-radius: 2rem;
-  transition: top var(--speed2) ease, opacity var(--speed2) ease;
+  transition:
+    top var(--speed2) ease,
+    opacity var(--speed2) ease;
   transform: translate(-50%, -50%) !important;
   padding: 0.75rem 1rem;
 }
 
-[dir=rtl] .slider > .tooltip {
+[dir='rtl'] .slider > .tooltip {
   transform: translate(-50%, -50%) scaleX(-1) !important;
 }
 
@@ -175,7 +193,7 @@
   transform: translate(50%, -50%) !important;
 }
 
-[dir=rtl] .slider > .tooltip + .tooltip {
+[dir='rtl'] .slider > .tooltip + .tooltip {
   transform: translate(50%, -50%) scaleX(-1) !important;
 }
 

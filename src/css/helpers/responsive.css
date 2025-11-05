@@ -26,7 +26,7 @@
   }
 }
 
-/* Medium (840px - 1199px) */ 
+/* Medium (840px - 1199px) */
 @media screen and (min-width: 905px) and (max-width: 1199px) {
   .xs:not(.md),
   .sm:not(.md),
@@ -34,7 +34,7 @@
   .xl:not(.md),
   .xxl:not(.md) {
     display: none !important;
-  }       
+  }
 }
 
 /* Large (1240px - 1439px) */

@@ -104,6 +104,8 @@
   border-color: transparent !important;
 }
 
-:is(nav, .row, dialog.max, header.fixed, footer.fixed, menu > a, menu.max, table, .tabs):not(.round) {
+:is(nav, .row, dialog.max, header.fixed, footer.fixed, menu > a, menu.max, table, .tabs):not(
+  .round
+) {
   border-radius: 0;
 }
